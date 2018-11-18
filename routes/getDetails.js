@@ -38,7 +38,7 @@ router.get('/*', function(req, res, next) {
 
     config.find().toArray(function(err, results_config) {
       if (results_config[languageSystem].opens) {
-        menu.find().toArray(function(err, results_menu) {
+        menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu) {
           tovar.find({AI: parseInt(searchData)}).toArray(function(err, results_tovar) {
             tovar_comments.find({tovar_AI: parseInt(searchData)}).toArray(function(err, results_comments) {
               users_session.find({email: req.session.user}).toArray(function(err, results_users_session) {

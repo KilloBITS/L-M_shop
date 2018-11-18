@@ -40,7 +40,7 @@ router.get('/', function(req, res, next){
          config.find().toArray(function(err, results_config){
            if(results_config[languageSystem].opens){
 
-             menu.find().toArray(function(err, results_menu ){
+             menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
 
                res.render('auth.ejs',{
                  conf: results_config[languageSystem],

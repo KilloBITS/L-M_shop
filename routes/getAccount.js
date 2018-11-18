@@ -34,7 +34,7 @@ router.get('/', function(req, res, next){
          config.find().toArray(function(err, results_config){
            users_session.find({email: req.session.user}).toArray(function(err, results_users_session){
              if(results_config[languageSystem].opens){
-               menu.find().toArray(function(err, results_menu ){
+               menu.sort({ isEnded: 1 }).find().toArray(function(err, results_menu ){
                  payments.find( { id: { $in: results_users_session[0].payments } }).toArray(function(err, results_payments ){
                    tovar.find( { AI: { $in: results_users_session[0].desires } }).toArray(function(err, results_desires ){
                      res.render('account.ejs',{

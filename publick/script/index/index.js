@@ -38,13 +38,16 @@ var Index = {
     $(".menuBTN").hover(function() {
       try {
         $("." + Index.ML + ",.opensMenu").hide();
+
+        Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+        if (Index.ML != undefined) {
+          $("." + Index.ML + ",.opensMenu").show();
+        }
+        
       } catch (e) {
         console.warn('Есть небольшой конфликт, но это не критично')
       }
-      Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
-      if (Index.ML != undefined) {
-        $("." + Index.ML + ",.opensMenu").show();
-      }
+
     }, function(e) {
       Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
       $(".opensMenu").hover(function() {}, function(e) {
