@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/account/style.css">
+	<link rel="stylesheet" type="text/css" href="/style/account/style.min.css">
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/maskinput.js"></script>
+  <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/account/acc.js"></script>
+</head>
+<body>
+
+<div class="spn_hol" style="/* display: none; */">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+
+<div class="top">
+	<div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+    </div>
+		<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+	</div>
+	<div class="topLine twoLine">
+		<div class="menuBlock">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length > 1){ %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+        <% } else { %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+        <% } %>
+      <% } %>
+		</div>
+	</div>
+
+	<div class="opensMenu">
+  <% for(var i = 0; i < menu.length; i++) { %>
+    <% if(menu[i].podlink.length > 1){ %>
+      <div class="menu_data <%= menu[i].ml %>">
+  			<div class="menu_title"><%= menu[i].name %></div>
+  			<div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
+  			</div>
+  			<div class="menuRight"></div>
+  		</div>
+    <% } %>
+  <% } %>
+	</div>
+</div>
+<!-- -->
+<div class="content">
+  <% if( user.phone === null ){ %>
+    <div class="noNumMessage">
+      У вас не подтвержден номер телефона, некоторые функции ограничены.<br>
+      <small>(Пожалуйста подтвердите номер телефона)</small>
+    </div>
+  <% } %>
+
+  <div class="account_block">
+    <div class="top_account">
+      <div class="ava_block <% if( user.phone === null ){ %>  disabled  <% } %>">
+        <div class="avatarka" id="ava" style="background-image: url(../../../data/avatars/<%= user.ava %>)"></div>
+        <input type="file" id="tFile" style="display: none;">
+        <div class="uploadAva"></div>
+      </div>
+      <div class="user_menu">
+        <div class="UserNameAcc">
+          <b><%= user.nick %></b>
+          (<%= user.name %>) <br>
+          <small><%= user.email %></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="data_block">
+    <div class="data_menu <% if( user.phone === null ){ %>  disabled  <% } %>">
+      <div class="set_btn" opmenu="myPays">Покупки</div>
+      <div class="set_btn" opmenu="myDesires">Мои желания</div>
+      <div class="set_btn" opmenu="mySetting">Настройки</div>
+    </div>
+    <div class="data_user_content <% if( user.phone === null ){ %>  noNumber  <% } %>">
+      <% if( user.phone === null ){ %>
+      <div class="number_modal">
+        <form action="/setNumbers" method="GET" enctype="application/json">
+          <h1>Подтверждение номера телефона</h1>
+          <p>(Введите и сохраните ваш номер телефона)</p>
+          <input type="text" name="phoneNumber" value="" id="phoneNumMask" placeholder="Введите номер телефона">
+          <input type="submit" value="Сохранить">
+        </form>
+      </div>
+      <% } %>
+      <div class="MyBlock" id="myPays" style="display:block;">
+        <div class="container">
+          <% if(payments_user && payments_user.length > 0){ %>
+            <div class="line">
+            <% for(var i = 0; i < payments_user.length; i++) { %>
+                <div class="tileline">
+                  <div class="placeTitle">Заказ № <%= payments_user[i].id %> </div>
+                  <div class="placeType">
+                    <div class="type<%= user.payments[i].payType %>"></div>
+                    <div class="dost<%= user.payments[i].dostType %>"></div>
+                  </div>
+                  <a href="/delivery?<%= payments_user[i].id %>" target="_blank"> <div class="placeList">Посмотреть чек</div> </a>
+                  <div class="placeDate"><%= payments_user[i].today %></div>
+
+                  <% if(payments_user[i].status === 0) { %>
+                    <div class="placeStatus">Заказ в обработке</div>
+                  <% } else { %>
+                    <div class="placeStatus">Товар отправлен</div>
+                    <div class="TTH"><%= payments_user[i].TTH %></div>
+                    <div class="details_TTH">
+
+                    </div>
+                    <script>
+                    var CCC = {
+                      "apiKey": "<%= conf.NEW_POST_API %>",
+                      "modelName": "TrackingDocument",
+                      "calledMethod": "getStatusDocuments",
+                      "methodProperties": {
+                          "Documents": [
+                              {
+                                  "DocumentNumber": "<%= payments_user[i].TTH %>",
+                                  "Phone":""
+                              }
+                          ]
+                      }
+
+                    };
+
+                    $(function() {
+                      var settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": "https://api.novaposhta.ua/v2.0/json/",
+                        "method": "POST",
+                        "headers": {
+                          "content-type": "application/json",
+                        },
+                        "processData": false,
+                        "data": JSON.stringify(CCC)
+                      }
+
+                      $.ajax(settings).done(function (response) {                   
+                        $(".details_TTH").html('<b>'+response.data[0].Status+'</b>')
+                      });
+                    });
+                    </script>
+                  <% } %>
+
+
+                </div>
+            <% } %>
+            </div>
+          <% } else { %>
+              <div class="noNewsMessage">
+                У вас нет покупок.
+              </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="MyBlock" id="myDesires">
+
+        <% if(desires_user && desires_user.length > 0){ %>
+          <% for(var i = 0; i < desires_user.length; i++) { %>
+            <div class="desires_box">
+              <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>)"></div>
+              <div class="desires_title"><%= desires_user[i].title %></div>
+              <div class="desires_image" style="background-image: url(../../../data/tovar/<%= desires_user[i].image %>)"></div>
+              <a href="/details?tov=<%= desires_user[i].AI %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
+            </div>
+          <% } %>
+        <% } else { %>
+            <div class="noNewsMessage">
+              У вас нет желаний
+            </div>
+        <% } %>
+
+
+
+
+
+      </div>
+      <div class="MyBlock" id="mySetting">
+        <div class="setting_line proc50">
+          <span>Изменить e-mail</span>
+          <input type="text" name="email" placeholder="введите новый email адресс">
+          <div class="buttonSetting">Сохранить</div>
+        </div>
+
+        <div class="setting_line proc50">
+          <span>Изменить Номер телефона</span>
+          <input type="text" name="number" placeholder="введите новый номер">
+          <div class="buttonSetting">Сохранить</div>
+        </div>
+
+        <div class="setting_line">
+          <span>Старый пароль</span>
+          <input type="password" name="passwordOld"  placeholder="Введите старый пароль">
+          <span>Новый пароль</span>
+          <input type="password" name="passwordNew"  placeholder="Введите новый пароль">
+          <span>Повторите пароль</span>
+          <input type="password" name="passwordNew2" placeholder="Повторите пароль">
+          <div class="buttonSetting">Сохранить</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
+</div>
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+          <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+            <a href="<%= conf.socials[i].link %>"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="pageMessages"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px) {
+  .rating {
+      border: none;
+      float: left;
+      position: absolute;
+      z-index: 999;
+      right: 5px;
+      top: auto;
+      bottom: 0;
+  }
+  .comments {
+      margin: 50px auto 0;
+      max-width: 90%;
+      padding: 0 0px 24px 0px;
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title><%= title %></title>
+  <!-- <%= title %> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/oplata/oplata.css">
+	<link rel="stylesheet" type="text/css" href="/style/oplata/oplata.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+	<script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/maskinput.js"></script>
+	<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="script/oplata/oplata.js"></script>
+  <script type="text/javascript" src="script/global.js"></script>
+</head>
+<body>
+
+  <div class="spn_hol" style="/* display: none; */">
+      <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+      </div>
+  </div>
+
+
+<div class="top">
+  <div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+    </div>
+    <div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+    <div class="topNavBlockOfBtm">
+      <% if(sessionUser !== undefined){ %>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
+      <% } else { %>
+        <a href="/login"><div class="logInBlock"></div></a>
+      <% } %>
+      <div class="basketBlock">
+        <span>0</span>
+      </div>
+    </div>
+  </div>
+  <div class="topLine twoLine">
+    <div class="menuBlock">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length > 1){ %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+        <% } else { %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+        <% } %>
+      <% } %>
+    </div>
+  </div>
+  <div class="opensMenu">
+  <% for(var i = 0; i < menu.length; i++) { %>
+    <% if(menu[i].podlink.length > 1){ %>
+      <div class="menu_data <%= menu[i].ml %>">
+        <div class="menu_title"><%= menu[i].name %></div>
+        <div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
+        </div>
+        <div class="menuRight"></div>
+      </div>
+    <% } %>
+  <% } %>
+  </div>
+</div>
+
+<div class="content">
+<div class="title_head">
+  <%= conf.dostavka_info %>
+</div>
+<div class="OPLATA_TITLE"><%= conf.oplata_title %></div>
+<ul class="cards">
+  <% for(var i = 0; i < conf.oplata.length; i++) { %>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= conf.oplata[i].img %>)"></div>
+        <div class="card__content">
+          <div class="card__title"><%= conf.oplata[i].title %></div>
+          <p class="card__text"><%= conf.oplata[i].text %></p>
+        </div>
+      </div>
+    </li>
+  <% } %>
+</ul>
+<div class="OPLATA_TITLE"><%= conf.dostavka_title %></div>
+<ul class="cards">
+  <% for(var i = 0; i < conf.dostavka.length; i++) { %>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= conf.dostavka[i].img %>)"></div>
+        <div class="card__content">
+          <div class="card__title"><%= conf.dostavka[i].title %></div>
+          <p class="card__text"><%= conf.dostavka[i].text %></p>
+          <% if(i === 0){ %>
+            <div class="NP_modal">
+
+            </div>
+
+            <div class="searchNPLine">
+              <input type="text" id="TTHNP" placeholder="Введите ТТН">
+              <input type="text" id="TTHPN" placeholder="Введите номер телефона">
+              <input type="button" id="TTHPSEND">
+            </div>
+
+            <style type="text/css">
+              .NP_modal{
+
+              }
+
+              .searchNPLine{
+
+              }
+              #TTHNP,#TTHPN{
+                width: 100%;
+                height: 30px;
+                padding-left: 10px;
+                border: 1px solid silver;
+                border-radius: 4px;
+                margin-top: 5px;
+              }
+              #TTHPSEND{
+                background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ4NS4yMTMgNDg1LjIxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg1LjIxMyA0ODUuMjEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3MS44ODIsNDA3LjU2N0wzNjAuNTY3LDI5Ni4yNDNjLTE2LjU4NiwyNS43OTUtMzguNTM2LDQ3LjczNC02NC4zMzEsNjQuMzIxbDExMS4zMjQsMTExLjMyNCAgICBjMTcuNzcyLDE3Ljc2OCw0Ni41ODcsMTcuNzY4LDY0LjMyMSwwQzQ4OS42NTQsNDU0LjE0OSw0ODkuNjU0LDQyNS4zMzQsNDcxLjg4Miw0MDcuNTY3eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNjMuOTA5LDE4MS45NTVDMzYzLjkwOSw4MS40NzMsMjgyLjQ0LDAsMTgxLjk1NiwwQzgxLjQ3NCwwLDAuMDAxLDgxLjQ3MywwLjAwMSwxODEuOTU1czgxLjQ3MywxODEuOTUxLDE4MS45NTUsMTgxLjk1MSAgICBDMjgyLjQ0LDM2My45MDYsMzYzLjkwOSwyODIuNDM3LDM2My45MDksMTgxLjk1NXogTTE4MS45NTYsMzE4LjQxNmMtNzUuMjUyLDAtMTM2LjQ2NS02MS4yMDgtMTM2LjQ2NS0xMzYuNDYgICAgYzAtNzUuMjUyLDYxLjIxMy0xMzYuNDY1LDEzNi40NjUtMTM2LjQ2NWM3NS4yNSwwLDEzNi40NjgsNjEuMjEzLDEzNi40NjgsMTM2LjQ2NSAgICBDMzE4LjQyNCwyNTcuMjA4LDI1Ny4yMDYsMzE4LjQxNiwxODEuOTU2LDMxOC40MTZ6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTc1LjgxNywxODEuOTU1aDMwLjMyMmMwLTQxLjgwMywzNC4wMTQtNzUuODE0LDc1LjgxNi03NS44MTRWNzUuODE2QzEyMy40MzgsNzUuODE2LDc1LjgxNywxMjMuNDM3LDc1LjgxNywxODEuOTU1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+                width: 100%;
+                height: 30px;
+                padding-left: 10px;
+                border: 1px solid #d84731;
+                border-radius: 4px;
+                margin-top: 5px;
+                background-color: #d95449;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 20px;
+              }
+            </style>
+
+            <script>
+            var CCC = {
+              "apiKey": "<%= conf.NEW_POST_API %>",
+              "modelName": "TrackingDocument",
+              "calledMethod": "getStatusDocuments",
+              "methodProperties": {
+                  "Documents": [
+                      {
+                          "DocumentNumber": "",
+                          "Phone":""
+                      }
+                  ]
+              }
+            };
+            $("#TTHPSEND").click(function(){
+              CCC.methodProperties.Documents[0].DocumentNumber = $("#TTHNP").val();
+              CCC.methodProperties.Documents[0].Phone = $("#TTHPN").val();
+              var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.novaposhta.ua/v2.0/json/",
+                "method": "POST",
+                "headers": {
+                  "content-type": "application/json",
+                },
+                "processData": false,
+                "data": JSON.stringify(CCC)
+              }
+
+              $.ajax(settings).done(function (response) {
+                $(".NP_modal").html('<b>'+response.data[0].Status+'</b>')
+              });
+            });
+            </script>
+          <% } %>
+        </div>
+      </div>
+    </li>
+  <% } %>
+</ul>
+
+<div class="vector_head"></div>
+</div>
+
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+          <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+            <a href="<%= conf.socials[i].link %>"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="basketDATA">
+  <div id="bas">
+    <div class="basket_close"></div>
+    <div class="backet_load" style="background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+    <div class="basket_tovar">
+      <div class="BSK"></div>
+      <div class="NEXT_pay_bas">Заполнить данные</div>
+    </div>
+    <div class="basket_info">
+      <form action="/payment" enctype="application/json" type="get" name="paymentForm" novalidate>
+        <input type="text" name="JSON_Tovar" id="JSTOVAR" style="display: none;">
+        <p class="input-container">
+          <input type="text" name="name" id="input-PaymentName" class="login-input" autocomplete="off" required>
+          <label for="input-PaymentName" unselectable="on">Имя</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="foname" id="input-PaymentFourname" class="login-input" required>
+          <label for="input-PaymentFourname" unselectable="on">Фамилия</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="FamName" id="input-PaymentFamName" class="login-input" required>
+          <label for="input-PaymentFamName" unselectable="on">Отчество</label>
+        </p>
+
+        <p class="input-container">
+          <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
+          <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
+        </p>
+
+
+          <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required>
+            <option value="0">Самовывоз</option>
+            <option value="1">Доставка курьером</option>
+            <option value="2">Доставка Новой Почтой</option>
+            <option value="3" disabled>Доставка УкрПочтой</option>
+          </select>
+
+          <p class="input-container" id="CityOfDost">
+            <input type="text" name="city" id="input-PaymentCity" class="login-input" required>
+            <label for="input-PaymentCity" unselectable="on">Город</label>
+          </p>
+
+          <p class="input-container" id="CityOfPostNP">
+            <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" required>
+            <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
+          </p>
+
+          <p class="input-container" id="CityOfPostUl">
+            <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" required>
+            <label for="input-PaymentUlica" unselectable="on">Улица</label>
+          </p>
+
+          <p class="input-container min50" id="CityOfPostD">
+            <input type="text" name="dom" id="input-PaymentDom" class="login-input" required>
+            <label for="input-PaymentDom" unselectable="on">Дом</label>
+          </p>
+
+          <p class="input-container min50" id="CityOfPostK">
+            <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" required>
+            <label for="input-PaymentKV" unselectable="on">Квартира №</label>
+          </p>
+
+          <button class="bubbly-button" onclick="">Подтвердить заказ</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

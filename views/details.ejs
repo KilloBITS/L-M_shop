@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title><%= tovarArr[0].title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/details/details.css">
+  <link rel="stylesheet" type="text/css" href="/style/details/details.min.css">
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/maskinput.js"></script>
+  <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/details/details.js"></script>
+</head>
+<body>
+
+  <div class="spn_hol" style="/* display: none; */">
+      <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+      </div>
+  </div>
+
+
+<div class="top">
+	<div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+    </div>
+		<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+		<div class="topNavBlockOfBtm">
+			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
+      <% if(sessionUser !== undefined){ %>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
+      <% } else { %>
+        <a href="/login"><div class="logInBlock"></div></a>
+      <% } %>
+			<div class="basketBlock">
+        <span>0</span>
+      </div>
+
+		</div>
+	</div>
+	<div class="topLine twoLine">
+		<div class="menuBlock">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length > 1){ %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+        <% } else { %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+        <% } %>
+      <% } %>
+		</div>
+	</div>
+
+	<div class="opensMenu">
+  <% for(var i = 0; i < menu.length; i++) { %>
+    <% if(menu[i].podlink.length > 1){ %>
+      <div class="menu_data <%= menu[i].ml %>">
+  			<div class="menu_title"><%= menu[i].name %></div>
+  			<div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
+  			</div>
+  			<div class="menuRight"></div>
+  		</div>
+    <% } %>
+  <% } %>
+	</div>
+</div>
+
+<div class="content tovar">
+
+    <div class="container">
+      <div class="grid product">
+        <% if(tovarArr[0].sale[0]){ %>
+          <div class="sale">
+            <span>Скидка</span>
+            <span><%= tovarArr[0].sale[1] %> %</span>
+          </div>
+        <% } %>
+        <div class="column-xs-12 column-md-6">
+          <div class="product-gallery">
+            <div class="product-image">
+              <div class="blockOfNavBtn">
+                <% if(sessionUser !== undefined){ %>
+                  <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[0].AI %>">
+                    <span><%= conf.big_btn[0] %></span>
+                  </div>
+                  <div class="BIG_BTN addToSravnenie">
+                    <span><%= conf.big_btn[1] %></span>
+                  </div>
+                <% } %>
+              </div>
+              <img class="active" src="../../../data/tovar/<%= tovarArr[0].image %>">
+              <fieldset class="rating">
+                  <input type="radio" id="star5_<%= 0 %>" name="rating_<%= 0 %>" value="5" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star5_<%= 0 %>" title="Awesome - 5 stars"></label>
+                  <input type="radio" id="star5_<%= 0 %>" name="rating_<%= 0 %>" value="4.5" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star5_<%= 0 %>" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4_<%= 0 %>" name="rating_<%= 0 %>" value="4" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star4_<%= 0 %>" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star4_<%= 0 %>" name="rating_<%= 0 %>" value="3.5" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star4_<%= 0 %>" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3_<%= 0 %>" name="rating_<%= 0 %>" value="3" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star3_<%= 0 %>" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star3_<%= 0 %>" name="rating_<%= 0 %>" value="2.5" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star3_<%= 0 %>" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star3_<%= 0 %>" name="rating_<%= 0 %>" value="2" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star2_<%= 0 %>" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star2_<%= 0 %>" name="rating_<%= 0 %>" value="1.5" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star2_<%= 0 %>" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1_<%= 0 %>" name="rating_<%= 0 %>" value="1" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star1_<%= 0 %>" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="star0_<%= 0 %>" name="rating_<%= 0 %>" value="0" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star0_<%= 0 %>" title="Sucks big time - 0.5 stars"></label>
+
+                  <script>
+                    $("#star"+<%= tovarArr[0].popular %>+"_<%= 0 %>").attr("checked","checked")
+                  </script>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="column-xs-12 column-md-6">
+          <h1><%= tovarArr[0].title %></h1>
+          <% if(tovarArr[0].sale[0]){ %>
+            <h2 style="text-decoration: line-through"><%= tovarArr[0].price %> Грн</h2>
+            <h3 style="color: red"><%= parseInt(tovarArr[0].price - tovarArr[0].price / 100 * parseInt(tovarArr[0].sale[1])) %> Грн</h3>
+          <% } else { %>
+            <h2><%= tovarArr[0].price %> Грн</h2>
+          <% } %>
+
+          <div class="description">
+            <p><%= tovarArr[0].text %></p>
+          </div>
+          <button class="add-to-cart"onclick="Details.setBasket(<%= tovarArr[0].AI %>)"><%= conf.toBasket %></button>
+        </div>
+      </div>
+      <div class="grid related-products">
+        <div class="column-xs-12">
+          <h3><%= conf.detailsTovar.recomended %></h3>
+        </div>
+
+        <% for(var i = 0; i < rec.length; i++) { %>
+
+            <div class="column-xs-12 column-md-4">
+              <a href="/details?tov=<%= rec[i].AI %>">
+              <img src="../../../data/tovar/<%= rec[i].image %>">
+              <h4><%= rec[i].title %></h4>
+              <% if(rec[i].sale[0]){ %>
+                <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>
+                <p class="price2" style="color: red"><%= parseInt(rec[i].price - rec[i].price / 100 * parseInt(rec[i].sale[1])) %> Грн</p>
+              <% } else { %>
+                <p class="price"><%= rec[i].price %> Грн</p>
+              <% } %>
+              </a>
+            </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="comments">
+      <div class="comments_title"><%= conf.detailsTovar.comments %></div>
+    		<div class="comment-wrap">
+          <% if(sessionUser !== undefined){ %>
+            <div class="comment-block">
+                <textarea name="" id="commentsText" tov_AI="<%= tovarArr[0].AI %>" cols="30" rows="3" placeholder="Add comment..."></textarea>
+                <div class="setComments"></div>
+            </div>
+          <% } else { %>
+            <div class="comment-block">
+                <div class="no_comment">Для того чтобы вы могли оставлять комментарии вам нужно <a href="/login">зарегистрироватся</a> или <a href="/login">войти</a> в свой аккаунт</div>
+            </div>
+          <% } %>
+    		</div>
+        <% if( comment.length > 0 ){ %>
+          <% for(var i = 0; i < comment.length; i++) { %>
+            <div class="comment-wrap">
+        				<div class="comment-block">
+        						<p class="comment-text"><%= comment[i].text %></p>
+        						<div class="bottom-comment">
+        								<div class="comment-date"><%= comment[i].author %></div>
+        						</div>
+        				</div>
+        		</div>
+          <% } %>
+
+        <% } %>
+    </div>
+  </div>
+
+
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+          <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+            <a href="<%= conf.socials[i].link %>"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="pageMessages"></div>
+<div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+<div id="basketDATA">
+  <div id="bas">
+    <div class="basket_close"></div>
+    <div class="backet_load" style="background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+    <div class="basket_tovar">
+      <div class="BSK"></div>
+      <div class="NEXT_pay_bas">Заполнить данные</div>
+    </div>
+    <div class="basket_info">
+      <form action="/payment" enctype="application/json" type="get" name="paymentForm" novalidate>
+        <input type="text" name="JSON_Tovar" id="JSTOVAR" style="display: none;">
+        <p class="input-container">
+          <input type="text" name="name" id="input-PaymentName" class="login-input" autocomplete="off" required>
+          <label for="input-PaymentName" unselectable="on">Имя</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="foname" id="input-PaymentFourname" class="login-input" required>
+          <label for="input-PaymentFourname" unselectable="on">Фамилия</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="FamName" id="input-PaymentFamName" class="login-input" required>
+          <label for="input-PaymentFamName" unselectable="on">Отчество</label>
+        </p>
+
+        <p class="input-container">
+          <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
+          <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
+        </p>
+
+
+          <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required>
+            <option value="0">Самовывоз</option>
+            <option value="1">Доставка курьером</option>
+            <option value="2">Доставка Новой Почтой</option>
+            <option value="3" disabled>Доставка УкрПочтой</option>
+          </select>
+
+          <p class="input-container" id="CityOfDost">
+            <input type="text" name="city" id="input-PaymentCity" class="login-input" required>
+            <label for="input-PaymentCity" unselectable="on">Город</label>
+          </p>
+
+          <p class="input-container" id="CityOfPostNP">
+            <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" required>
+            <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
+          </p>
+
+          <p class="input-container" id="CityOfPostUl">
+            <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" required>
+            <label for="input-PaymentUlica" unselectable="on">Улица</label>
+          </p>
+
+          <p class="input-container min50" id="CityOfPostD">
+            <input type="text" name="dom" id="input-PaymentDom" class="login-input" required>
+            <label for="input-PaymentDom" unselectable="on">Дом</label>
+          </p>
+
+          <p class="input-container min50" id="CityOfPostK">
+            <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" required>
+            <label for="input-PaymentKV" unselectable="on">Квартира №</label>
+          </p>
+
+          <button class="bubbly-button" onclick="">Подтвердить заказ</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

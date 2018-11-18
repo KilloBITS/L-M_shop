@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title><%= title %></title>
+  <meta name="interkassa-verification" content="d5bda7c3a24b31397b2e2123665f4ecf" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/index/style.css">
+	<link rel="stylesheet" type="text/css" href="/style/index/style.min.css">
+
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="script/global.js"></script>
+	<script type="text/javascript" src="script/index/index.js"></script>
+</head>
+<body>
+  <div class="spn_hol" style="/* display: none; */">
+      <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+      </div>
+  </div>
+
+<% if(conf.inDevelopers){ %>
+<div class="global-modal global-modal-show">
+   <div class="overlay"></div>
+   <div class="global-modal_contents modal-transition">
+    <div class="global-modal-header">
+      <span class="mobile-close"> X </span>
+      <h3> <span> Внимание! Магазин </span>  <b>L&M Shop</b> <br> <span> Сейчас на стадии разработки и тестирования</span></h3>
+    </div>
+    <div class="global-modal-body">
+      <div class="content-left">
+        <p>
+          Если вы нашли "ошибку" или же столкнулись с какой то проблемой сообщите нам.
+        </p>
+        <a href="/contacts"class="btn-green-flat">Сообщить</a>
+      </div>
+      <div class="content-right">
+       <p> Некоторые товары могут не соответствовать реальным<br>
+         <small>(так как мы тестируем все наши сервисы)</small>
+         <br>
+         а так же они могут отстутствовать вобще
+       </p>
+     </div>
+   </div>
+ </div>
+</div>
+
+<script>
+  var globalModal = $('.global-modal');
+    $( ".btn-green-flat-trigger" ).on( "click", function(e) {
+      e.preventDefault();
+      $( globalModal ).toggleClass('global-modal-show');
+    });
+    $( ".overlay" ).on( "click", function() {
+      $( globalModal ).toggleClass('global-modal-show');
+    });
+    $( ".global-modal_close" ).on( "click", function() {
+      $( globalModal ).toggleClass('global-modal-show');
+    });
+    $(".mobile-close").on("click", function(){
+      $( globalModal ).toggleClass('global-modal-show');
+    });
+</script>
+
+<% } %>
+	<div class="top">
+		<div class="topLine oneLine">
+      <div class="topNavMobMenuOfBtm">
+        <div class="menu-wrapper">
+          <div class="hamburger-menu"></div>
+        </div>
+      </div>
+			<!-- <a href="index.html"> -->
+				<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+			<!-- </a> -->
+			<div class="topNavBlockOfBtm">
+        <a href="/shop" class="indexBtnToShop"> <%= conf.BTN_TOSHOP %> </a>
+
+        <% if(sessionUser !== undefined){ %>
+          <a href="/profile"><div class="userAccountInBlock"></div></a>
+        <% } else { %>
+          <a href="/login"><div class="logInBlock"></div></a>
+        <% } %>
+
+
+				<div class="searchBlock">
+					<div class="searchLine">
+						<input type="text" name="searchTOP" class="searchBlockVal" id="SEARCH" placeholder="Поиск">
+					</div>
+
+				</div>
+        <div class="search_result">
+          <div class="search_title">Поиск (Найдено: 100)</div>
+          <div class="search_data">
+            <div class="search_object">
+              <div class="search_min_img"></div>
+              <div class="search_min_title"></div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+		<div class="topLine twoLine">
+			<div class="menuBlock">
+        <% for(var i = 0; i < menu.length; i++) { %>
+          <% if(menu[i].podlink.length >= 1 && menu[i].podlink[0] !== "/"){ %>
+						<a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+	        <% } else { %>
+	          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+          <% } %>
+        <% } %>
+			</div>
+		</div>
+		<div class="opensMenu">
+    <% for(var i = 0; i < menu.length; i++) { %>
+      <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
+        <div class="menu_data <%= menu[i].ml %>">
+    			<div class="menu_title"><%= menu[i].name %></div>
+    			<div class="menuLeft">
+            <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+              <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+            <% } %>
+    			</div>
+    			<div class="menuRight"></div>
+    		</div>
+      <% } %>
+    <% } %>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="header block">
+      <div class="nextSliderBtn">></div>
+      <div class="prevSliderBtn"><</div>
+			<div class="slider-container">
+			  <div class="slider-control left inactive"></div>
+			  <div class="slider-control right"></div>
+			  <ul class="slider-pagi"></ul>
+			  <div class="slider">
+          <% for(var i = 0; i < slides.length; i++) { %>
+					<% if(i <= 0){ %>
+						<div class="slide slide-<%= i %> active">
+					<% } else { %>
+						<div class="slide slide-<%= i %>">
+					<% } %>
+  			      <div class="slide__bg" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
+  			      <div class="slide__content">
+  			        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+  			          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+  			        </svg>
+  			        <div class="slide__text">
+  			          <h2 class="slide__text-heading"><%= slides[i].slideName %></h2>
+  			          <p class="slide__text-desc"><%= slides[i].slideText %></p>
+  			          <a class="slide__text-link" href="<%= slides[i].slideLink %>">Перейти</a>
+  			        </div>
+  			      </div>
+  			    </div>
+          <% } %>
+			  </div>
+			</div></div>
+		<div class="data block">
+			<div class="mainDLG">
+				<div class="mainTitleDLG"><%= conf.news_tovar[0] %></div>
+				<div class="mainTextDLG"><%= conf.news_tovar[1] %></div>
+			</div>
+
+			<div class="carousel-wrapper">
+			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
+
+          <% for(var i = 0; i < newtovar.length; i++){ %>
+            <div class="carousel-cell">
+              <h3> <%= newtovar[i].title %> </h3>
+              <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
+              <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
+            </div>
+            <% } %>
+			  </div>
+			</div>
+
+			<div class="mainBTN_block" style="background: #ffc9df">
+				<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
+			</div>
+
+			<div class="mainDLG" style="background: #ffc9df;">
+				<div class="mainTitleDLG"><%= conf.about[0] %></div>
+				<div class="mainTextDLG"><%= conf.about[1] %></div>
+			</div>
+
+			<div class="mainBTN_block">
+				<a href="<%= conf.about[2].btnLink %>"><div class="mainBTN"><%= conf.about[2].btnTitle %></div></a>
+        <div class="zub_lineB" style=""></div>
+			</div>
+    </div>
+		<div class="news block">
+
+<div class="container">
+	<div class="mainDLG">
+		<div class="mainTitleDLG"><%= conf.news %></div>
+	</div>
+
+	<% for(var i = 0; i < news.length; i++) { %>
+	  <div class="column">
+	    <div class="post-module">
+	      <div class="thumbnail">
+	        <div class="date">
+	          <div class="day"><%= news[i].date.split('.')[0] %></div>
+	          <div class="month"><%= news[i].date.split('.')[1] %></div>
+	        </div><img src="../../../data/news/<%= news[i].img %>"/>
+	      </div>
+	      <div class="post-content">
+	        <div class="category"><%= news[i].minName %></div>
+	        <h1 class="title"><%= news[i].title %></h1>
+	        <p class="description"><%= news[i].text %></p>
+	        <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 Комментариев</a></span></div>
+	      </div>
+	    </div>
+	  </div>
+	<% } %>
+</div>
+		</div>
+		<div class="contact block">
+      <div class="zub_line"></div>
+			<div class="mainDLG">
+				<div class="mainTitleDLG"><%= conf.contact[0] %></div>
+				<div class="mainTextDLG"><%= conf.contact[1] %></div>
+			</div>
+			<form class="cf">
+			  <div class="half left cf">
+			    <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
+			    <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
+			    <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+			  </div>
+			  <div class="half right cf">
+			    <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
+			  </div>
+			  <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
+			</form>
+    </div>
+	</div>
+	<div class="siteMap">
+		<div class="mapmap">
+			<div class="LBB">
+				<% for(var i = 0; i < menu.length; i++) { %>
+						<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+        <% } %>
+			</div>
+			<div class="CBB">
+				<div class="vectorLogo"></div>
+				<div class="copiright"><%= conf.copiright %></div>
+        <div class="socials">
+          <% for(var i = 0; i < conf.socials.length; i++) { %>
+              <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+          <% } %>
+        </div>
+				<div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+			</div>
+			<div class="RBB">
+				<div class="adressLineMap"><%= conf.phoneTitle %></div>
+				<a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+				<div class="adressLineMap"></div>
+        <div class="adressLineMap"><%= conf.emailTitle %></div>
+				<a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+        <div class="adressLineMap"></div>
+        <div class="adressLineMap">
+          <div class="lang" id="ua" title="Українська версія"></div>
+          <div class="lang" id="ru" title="Русская версия"></div>
+        </div>
+			</div>
+		</div>
+	</div>
+  <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+  <div id="pageMessages"></div>
+</body>
+</html>

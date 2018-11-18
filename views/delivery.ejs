@@ -1,0 +1,168 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" href="/style/delivery/delivery.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <title>Товарный чек</title>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+</head>
+<body bgcolor="#333D46" id="toCheck">
+  <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td bgcolor="#333D46" height="2" align="center" valign="top" style="color: #333D46; font-size:1px; line-height:1px; font-family: 'Didact Gothic', sans-serif;">Trip Total: $18.34 | Want to leave a tip? |
+      </td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" bgcolor="#333D46" width="100%">
+    <tr>
+      <td align="center" style="padding: 22px 20px 17px 14px">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="460" align="center">
+              <table cellpadding="0" cellspacing="0" width="100%" style="    font-family: 'Didact Gothic', sans-serif;">
+                <tr>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" bgcolor="#F4F5F5" width="100%">
+    <tr>
+      <td align="center" style="padding:32px 20px 40px">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="460">
+              <table cellpadding="0" cellspacing="0" width="100%" style="    font-family: 'Didact Gothic', sans-serif; text-align:center;">
+                <tr>
+                  <td style="color:#EA0B8C;font-size:32px;line-height:34px;font-weight:700;">Товарный чек</td>
+                </tr>
+                <tr>
+                  <td style="color:#000000;font-size:16px;line-height:22px;padding:16px 0 36px; text-align:center;">
+                    Данный чек подтверждает покупку в нашем магазине.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" bgcolor="#F4F5F5" width="100%">
+    <tr>
+      <td align="center">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="520" align="center" bgcolor="#ffffff">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="460">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td align="center" style="padding:0 20px;border-bottom: 1px solid #f2f4f5;">
+                          <table cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif;">
+                            <tr>
+                              <td style="color:#2d394f;font-size:18px;line-height:24px;font-weight:700;text-align:center;padding:32px 0 0">Чек</td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="padding:8px 0 16px">
+                                <table cellpadding="0" cellspacing="0">
+                                  <tr valign="top">
+                                    <td valign="top" style="    font-family: 'Didact Gothic', sans-serif;color:#333D47;font-size:40px;line-height:42px; letter-spacing: -1px;"><%= data.summa %> ГРН</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="color:#a3a3a3;font-size:14px;line-height:22px;text-align:center;padding:0 0 32px;"><%= data.today %></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border-bottom: 1px solid #f2f4f5;padding:12px 20px 22px">
+                          <table border="0" cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif; text-align:center" width="100%">
+                            <tr valign="top">
+                              <td valign="top" style="color:#333D46;font-size:14px;line-height:18px;text-align:left;padding:0 4px 0 0;font-weight:600;">Доставка:  </td>
+                              <td valign="top" width="350" style="padding:0 0 10px 0">
+                                <table cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif; text-align:right">
+                                  <tr>
+                                    <td style="color:#a3a3a3;font-size:14px;line-height:18px;padding:0 0 4px"> <%= data.dostavka %> </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr valign="top">
+                              <td valign="top" width="320" style="padding:0 0 10px 0">
+                                <table cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif; text-align:right">
+                                  <tr>
+                                    <td style="color:#a3a3a3;font-size:14px;line-height:18px;padding:0 0 4px"><%= data.adress %></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border-bottom: 1px solid #f2f4f5;padding:32px 20px">
+                          <table cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif; text-align:left" width="100%">
+
+                            <% for(var i = 0; i < data.tovars.length; i++){ %>
+                              <tr valign="top">
+                                <td valign="top" width="320" style="color:#2d394f;font-size:14px;line-height:18px;padding:0 0 10px"><%= data.tovars[i].title %> <small>(x1)</small>:</td>
+                                <td valign="top" align="right" style="color:#2d394f;font-size:14px;line-height:18px"><%= data.tovars[i].price %> грн</td>
+                              </tr>
+                            <% } %>
+
+                            <tr valign="top">
+                              <td valign="top" width="320" style="color:#2d394f;font-size:14px;line-height:24px;font-weight:700;padding:0 0 10px">
+                                Загальна сумма:
+                                <br>
+                              </td>
+                              <td valign="top" width="320" style="    color: #2d394f;    font-size: 14px;    line-height: 24px;    font-weight: 700;    padding: 0 0 10px;     bottom: 10px;    right: 166px;    transform: rotate(32deg);  opacity: 0.4;">
+                                <img src="../../../image/stamp.png" width="150" height="150">
+                              </td>
+                              <td valign="top" align="right" style="color:#2d394f;font-size:18px;line-height:24px;font-weight:700"><%= data.summa %> ГРН</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <tr>
+          <td style="    font-family: 'Didact Gothic', sans-serif; color:#5f6a7c;font-size:14px;line-height:22px;text-align:center; padding: 20px 0 0;">
+            Дякуэмо за покупку!
+          </td>
+        </tr>
+        <table bgcolor="#F4F5F5" width="100%" cellpadding="0" cellspacing="0" style="padding: 10px 0;">
+          <tr>
+            <td>
+              <div class="toPostLink">
+                <span>Отправить вам на почту ?</span>
+                <input type="text" name="toMyPost" class="tomypost" placeholder="Введите ваш email адресс">
+                <input type="button" class="tobtnmypost" value="Отправить">
+              </div>
+            </td>
+          </tr>
+        </table>
+
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>ы

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/style/contacts/contacts.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/style/contacts/contacts.min.css"> -->
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script type="text/javascript" src="script/jquery.noisy.min.js"></script>
+
+
+	<script type="text/javascript" src="script/global.js"></script>
+  <!-- <script type="text/javascript" src="script/contacts/contacts.js"></script> -->
+</head>
+<body>
+<div class="top">
+	<div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+    </div>
+		<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+		<div class="topNavBlockOfBtm">
+      <% if(sessionUser !== undefined){ %>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
+      <% } else { %>
+        <a href="/login"><div class="logInBlock"></div></a>
+      <% } %>
+
+			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
+		</div>
+	</div>
+	<div class="topLine twoLine">
+		<div class="menuBlock">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length > 1){ %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+        <% } else { %>
+          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+        <% } %>
+      <% } %>
+		</div>
+	</div>
+
+	<div class="opensMenu">
+  <% for(var i = 0; i < menu.length; i++) { %>
+    <% if(menu[i].podlink.length > 1){ %>
+      <div class="menu_data <%= menu[i].ml %>">
+  			<div class="menu_title"><%= menu[i].name %></div>
+  			<div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
+  			</div>
+  			<div class="menuRight"></div>
+  		</div>
+    <% } %>
+  <% } %>
+	</div>
+</div>
+
+<div class="content">
+
+
+  <div class="contact block">
+    <div class="mainDLG">
+      <div class="mainTitleDLG"><%= conf.contact[0] %></div>
+      <div class="mainTextDLG"><%= conf.contact[1] %></div>
+    </div>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
+        <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
+        <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
+      </div>
+      <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
+    </form>
+  </div>
+
+  <div class="container_map">
+  <div id="map_container"></div>
+  <div id="map"></div>
+</div>
+
+
+</div>
+
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+          <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+            <a href="<%= conf.socials[i].link %>"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="pageMessages"></div>
+</body>
+</html>
