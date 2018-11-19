@@ -7,6 +7,21 @@
   body{
       margin-top: 60px;
   }
+
+
+
+  .countersB{
+    display: inline-block;
+    float: left;
+    margin: 6px;
+    color: #f98eb9;
+    text-align: center;
+  }
+
+  .snow__item{
+      display: none;
+  }
+
   .topNavMobMenuOfBtm{
     display: block;
     position: absolute;
@@ -210,6 +225,71 @@
   .slide__text {
       padding-bottom: 50px;
       height: auto;
+  }
+  .prevSliderBtn, .nextSliderBtn{
+    display: none;
+  }
+  .carousel-wrapper .carousel .carousel-cell.is-selected{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .carousel-wrapper .carousel .carousel-cell {
+      padding: 10px;
+      background-color: #FFFFFF;
+      width: 58%;
+      height: auto;
+      min-width: 140px;
+      margin: 0 20px;
+      transition: transform 500ms ease;
+      border: 1px solid silver;
+      border-radius: 6px;
+      box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57);
+      height: 230px;
+      overflow: hidden;
+  }
+  .flickity-prev-next-button {
+      position: absolute;
+      top: 50%;
+      width: 28px;
+      height: 44px;
+      border: none;
+      background: #fff;
+      background: rgb(243, 243, 243);
+      cursor: pointer;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border: 1px solid silver;
+  }
+
+  .flickity-prev-next-button.next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+  }
+  .flickity-prev-next-button.previous {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+    border-left: .0;
+  }
+  .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .slide__text-heading {
+    margin-bottom: 8px;
+  }
+
+  .fox, .tree{
+    display: none;
+  }
+  .counters_conent{
+    width: fit-content;
+    margin: auto;
+  }
+
+  .post-module .post-content .category {
+    background: rgb(235, 41, 42);
+    border-radius: 0px 5px 5px 0;
   }
 
 }

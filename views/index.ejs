@@ -20,63 +20,107 @@
 	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="/script/TweenMax.min.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
 	<script type="text/javascript" src="script/index/index.js"></script>
 </head>
 <body>
-  <div class="spn_hol" style="/* display: none; */">
+
+
+  <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
+  <div class="effect <%= effectData.className %>">
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+    <div class="snow__item"></div>
+  <% } else { %>
+    <% if(effectData !== undefined && effectData.name === "Leaves"){ %>
+    <div class="effect" id="leaves">
+      <script type="text/javascript">
+        var falling = true;
+
+        var total = 30;
+        var container = document.getElementById("leaves"),	w = window.innerWidth , h = window.innerHeight;
+
+        for (i=0; i<total; i++){
+         var Div = document.createElement('div');
+         TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
+         container.appendChild(Div);
+         animm(Div);
+        }
+
+        function animm(elm){
+         TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
+         TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
+         TweenMax.to(elm,R(2,8),{rotationX:R(0,360),rotationY:R(0,360),repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
+        };
+
+        function R(min,max) {return min+Math.random()*(max-min)};
+      </script>
+    <% } else { %>
+    <div class="effect">
+    <% } %>
+  <% } %>
+
+    <div class="spn_hol">
       <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
       </div>
-  </div>
-
-<% if(conf.inDevelopers){ %>
-<div class="global-modal global-modal-show">
-   <div class="overlay"></div>
-   <div class="global-modal_contents modal-transition">
-    <div class="global-modal-header">
-      <span class="mobile-close"> X </span>
-      <h3> <span> Внимание! Магазин </span>  <b>L&M Shop</b> <br> <span> Сейчас на стадии разработки и тестирования</span></h3>
     </div>
-    <div class="global-modal-body">
-      <div class="content-left">
-        <p>
-          Если вы нашли "ошибку" или же столкнулись с какой то проблемой сообщите нам.
-        </p>
-        <a href="/contacts"class="btn-green-flat">Сообщить</a>
-      </div>
-      <div class="content-right">
-       <p> Некоторые товары могут не соответствовать реальным<br>
-         <small>(так как мы тестируем все наши сервисы)</small>
-         <br>
-         а так же они могут отстутствовать вобще
-       </p>
-     </div>
-   </div>
- </div>
-</div>
 
-<script>
-  var globalModal = $('.global-modal');
-    $( ".btn-green-flat-trigger" ).on( "click", function(e) {
+    <% if(conf.inDevelopers){ %>
+    <div class="global-modal global-modal-show">
+      <div class="overlay"></div>
+      <div class="global-modal_contents modal-transition">
+        <div class="global-modal-header">
+          <span class="mobile-close"> X </span>
+          <h3>
+            <span> Внимание! Магазин </span>
+            <b>L&M Shop</b>
+            <br>
+            <span> Сейчас на стадии разработки и тестирования</span>
+          </h3>
+        </div>
+        <div class="global-modal-body">
+          <div class="content-left">
+            <p>Если вы нашли "ошибку" или же столкнулись с какой то проблемой сообщите нам.</p>
+            <a href="/contacts"class="btn-green-flat">Сообщить</a>
+          </div>
+          <div class="content-right">
+            <p> Некоторые товары могут не соответствовать реальным<br>
+              <small>(так как мы тестируем все наши сервисы)</small>
+              <br>
+              а так же они могут отстутствовать вобще
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var globalModal = $('.global-modal');
+      $( ".btn-green-flat-trigger" ).on( "click", function(e) {
       e.preventDefault();
       $( globalModal ).toggleClass('global-modal-show');
-    });
-    $( ".overlay" ).on( "click", function() {
+      });
+      $( ".overlay" ).on( "click", function() {
       $( globalModal ).toggleClass('global-modal-show');
-    });
-    $( ".global-modal_close" ).on( "click", function() {
+      });
+      $( ".global-modal_close" ).on( "click", function() {
       $( globalModal ).toggleClass('global-modal-show');
-    });
-    $(".mobile-close").on("click", function(){
+      });
+      $(".mobile-close").on("click", function(){
       $( globalModal ).toggleClass('global-modal-show');
-    });
-</script>
-
-<% } %>
+      });
+    </script>
+    <% } %>
 	<div class="top">
 		<div class="topLine oneLine">
       <div class="topNavMobMenuOfBtm">
@@ -84,24 +128,18 @@
           <div class="hamburger-menu"></div>
         </div>
       </div>
-			<!-- <a href="index.html"> -->
-				<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
-			<!-- </a> -->
+			<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
 			<div class="topNavBlockOfBtm">
         <a href="/shop" class="indexBtnToShop"> <%= conf.BTN_TOSHOP %> </a>
-
         <% if(sessionUser !== undefined){ %>
-          <a href="/profile"><div class="userAccountInBlock"></div></a>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
         <% } else { %>
-          <a href="/login"><div class="logInBlock"></div></a>
+        <a href="/login"><div class="logInBlock"></div></a>
         <% } %>
-
-
 				<div class="searchBlock">
 					<div class="searchLine">
 						<input type="text" name="searchTOP" class="searchBlockVal" id="SEARCH" placeholder="Поиск">
 					</div>
-
 				</div>
         <div class="search_result">
           <div class="search_title">Поиск (Найдено: 100)</div>
@@ -132,7 +170,7 @@
     			<div class="menu_title"><%= menu[i].name %></div>
     			<div class="menuLeft">
             <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-              <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
             <% } %>
     			</div>
     			<div class="menuRight"></div>
@@ -174,13 +212,11 @@
 			</div></div>
 		<div class="data block">
 			<div class="mainDLG">
-				<div class="mainTitleDLG"><%= conf.news_tovar[0] %></div>
-				<div class="mainTextDLG"><%= conf.news_tovar[1] %></div>
+				<div class="mainTitleDLG" style="color: #f98eb9"><%= conf.news_tovar[0] %></div>
+				<div class="mainTextDLG" style="color: #f98eb9"><%= conf.news_tovar[1] %></div>
 			</div>
-
 			<div class="carousel-wrapper">
 			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
-
           <% for(var i = 0; i < newtovar.length; i++){ %>
             <div class="carousel-cell">
               <h3> <%= newtovar[i].title %> </h3>
@@ -190,72 +226,103 @@
             <% } %>
 			  </div>
 			</div>
-
 			<div class="mainBTN_block" style="background: #ffc9df">
 				<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
 			</div>
-
-			<div class="mainDLG" style="background: #ffc9df;">
+			<div class="mainDLG" style="background: #ffc9df;     color: white;">
 				<div class="mainTitleDLG"><%= conf.about[0] %></div>
 				<div class="mainTextDLG"><%= conf.about[1] %></div>
 			</div>
-
 			<div class="mainBTN_block">
 				<a href="<%= conf.about[2].btnLink %>"><div class="mainBTN"><%= conf.about[2].btnTitle %></div></a>
         <div class="zub_lineB" style=""></div>
 			</div>
     </div>
 		<div class="news block">
-
-<div class="container">
-	<div class="mainDLG">
-		<div class="mainTitleDLG"><%= conf.news %></div>
-	</div>
-
-	<% for(var i = 0; i < news.length; i++) { %>
-	  <div class="column">
-	    <div class="post-module">
-	      <div class="thumbnail">
-	        <div class="date">
-	          <div class="day"><%= news[i].date.split('.')[0] %></div>
-	          <div class="month"><%= news[i].date.split('.')[1] %></div>
-	        </div><img src="../../../data/news/<%= news[i].img %>"/>
-	      </div>
-	      <div class="post-content">
-	        <div class="category"><%= news[i].minName %></div>
-	        <h1 class="title"><%= news[i].title %></h1>
-	        <p class="description"><%= news[i].text %></p>
-	        <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 Комментариев</a></span></div>
-	      </div>
-	    </div>
-	  </div>
-	<% } %>
-</div>
-		</div>
-		<div class="contact block">
-      <div class="zub_line"></div>
-			<div class="mainDLG">
-				<div class="mainTitleDLG"><%= conf.contact[0] %></div>
-				<div class="mainTextDLG"><%= conf.contact[1] %></div>
-			</div>
-			<form class="cf">
-			  <div class="half left cf">
-			    <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
-			    <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
-			    <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
-			  </div>
-			  <div class="half right cf">
-			    <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
-			  </div>
-			  <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
-			</form>
+      <div class="container">
+        <div class="mainDLG">
+          <div class="mainTitleDLG"><%= conf.news %></div>
+        </div>
+        <% for(var i = 0; i < news.length; i++) { %>
+        <div class="column">
+          <div class="post-module">
+            <div class="thumbnail">
+              <div class="date">
+                <div class="day"><%= news[i].date.split('.')[0] %></div>
+                <div class="month"><%= news[i].date.split('.')[1] %></div>
+              </div><img src="../../../data/news/<%= news[i].img %>"/>
+            </div>
+            <div class="post-content">
+              <div class="category"><%= news[i].minName %></div>
+              <h1 class="title"><%= news[i].title %></h1>
+              <p class="description"><%= news[i].text %></p>
+              <div class="post-meta">
+                <span class="comments">
+                  <i class="fa fa-comments"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
     </div>
-	</div>
+    <div class="counters block">
+      <div class="counters_conent">
+        <div class="countersB">
+          <div class="counters_icon" id="buyers"></div>
+          <div class="counters_text">Покупателей</div>
+          <div class="counters_length">0</div>
+        </div>
+        <div class="countersB">
+          <div class="counters_icon" id="products"></div>
+          <div class="counters_text">Товаров</div>
+          <div class="counters_length">0</div>
+        </div>
+        <div class="countersB">
+          <div class="counters_icon" id="purchases"></div>
+          <div class="counters_text">Покупок</div>
+          <div class="counters_length">0</div>
+        </div>
+        <div class="countersB">
+          <div class="counters_icon" id="discounts"></div>
+          <div class="counters_text">Скидок</div>
+          <div class="counters_length">0</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact block">
+      <div class="zub_line"></div>
+      <div class="mainDLG">
+      	<div class="mainTitleDLG"><%= conf.contact[0] %></div>
+      	<div class="mainTextDLG"><%= conf.contact[1] %></div>
+      </div>
+      <form class="cf">
+        <div class="half left cf">
+          <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
+          <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
+          <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+        </div>
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
+        </div>
+        <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
+      </form>
+    </div>
+  </div>
 	<div class="siteMap">
+    <% if(effectData !== undefined && effectData.name === "Snow"){ %>
+    <div class="tree">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/tree.svg" width="200px">
+    </div>
+    <div class="fox">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/critters.svg" width="200px">
+    </div>
+    <% } %>
 		<div class="mapmap">
 			<div class="LBB">
 				<% for(var i = 0; i < menu.length; i++) { %>
-						<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+				<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
         <% } %>
 			</div>
 			<div class="CBB">
@@ -263,7 +330,7 @@
 				<div class="copiright"><%= conf.copiright %></div>
         <div class="socials">
           <% for(var i = 0; i < conf.socials.length; i++) { %>
-              <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+          <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
           <% } %>
         </div>
 				<div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
@@ -279,10 +346,18 @@
           <div class="lang" id="ua" title="Українська версія"></div>
           <div class="lang" id="ru" title="Русская версия"></div>
         </div>
+        <div class="certificated">
+          <div class="certificate" id="byVisa"></div>
+          <div class="certificate" id="byMasterCard"></div>
+        </div>
 			</div>
 		</div>
 	</div>
-  <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+  <div class='back-to-top' id='back-to-top' title='Back to top'>
+    <i class='fa fa-chevron-up'></i>
+  </div>
   <div id="pageMessages"></div>
+</div>
+
 </body>
 </html>

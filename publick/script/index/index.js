@@ -1,6 +1,7 @@
 'use strict';
 var Index = {
   ML: "",
+  getCounters: true,
   DESIGHN: function() {
     $(".searchBlock").hover(function() {
       $(".searchLine").css({
@@ -9,7 +10,6 @@ var Index = {
     });
 
     $("#SEARCH").on("keyup", function() {
-      console.log($("#SEARCH").val());
       if ($("#SEARCH").val().length > 3) {
         $(".search_result").fadeIn(150);
         $.post("/search", {
@@ -43,7 +43,7 @@ var Index = {
         if (Index.ML != undefined) {
           $("." + Index.ML + ",.opensMenu").show();
         }
-        
+
       } catch (e) {
         console.warn('Есть небольшой конфликт, но это не критично')
       }
@@ -178,15 +178,38 @@ var Index = {
     $(".prevSliderBtn").click(function(){
       navigateLeft();
     });
-
-
+    
     $(document).on("click", ".slider-pagi__elem", function() {
       curSlide = $(this).data("page");
       changeSlides();
     });
-
-
-
+    var STC;
+    $(document).scroll(function (event) {
+    var scroll = $(document).scrollTop();
+        if(scroll >= 1000 && Index.getCounters){
+          Index.getCounters = false;
+          $.post('/counters', function(res){
+            $(".counters_length:eq(0)").html(parseInt(res.a - (res.a / 4)))
+            $(".counters_length:eq(1)").html(parseInt(res.b - (res.b / 4)))
+            $(".counters_length:eq(2)").html(parseInt(res.c - (res.c / 4)))
+            $(".counters_length:eq(3)").html(parseInt(res.d - (res.d / 4)))
+            STC = setInterval(function(){
+              if(parseInt($(".counters_length:eq(0)").html()) < res.a){
+                $(".counters_length:eq(0)").html( parseInt($(".counters_length:eq(0)").html()) + 1)
+              }
+              if(parseInt($(".counters_length:eq(1)").html()) < res.b){
+                $(".counters_length:eq(1)").html( parseInt($(".counters_length:eq(1)").html()) + 1)
+              }
+              if(parseInt($(".counters_length:eq(2)").html()) < res.c){
+                $(".counters_length:eq(2)").html( parseInt($(".counters_length:eq(2)").html()) + 1)
+              }
+              if(parseInt($(".counters_length:eq(3)").html()) < res.d){
+                $(".counters_length:eq(3)").html( parseInt($(".counters_length:eq(3)").html()) + 1)
+              }
+            }, 10);
+          });
+        }
+    });
   },
   INIT: function() {
     Index.DESIGHN();

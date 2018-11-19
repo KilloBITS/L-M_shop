@@ -31,6 +31,7 @@ router.get('/', function(req, res, next){
       const tovar  = db.collection("tovar");
       const titles_page = db.collection("titles_page");
       const counters = db.collection("counters");
+      const effect = db.collection("effect");
 
       if(err) return console.log(err);
 
@@ -53,37 +54,41 @@ router.get('/', function(req, res, next){
                slider.find().toArray(function(err, results_slider ){
                  news.find().toArray(function(err, results_news ){
                    tovar.find().sort({ AI: -1 }).limit(5).toArray(function(err, results_tovar ){
-                      //counters
-                      var ipuser = req.connection.remoteAddress.replace(/[^.\d]+/g,"");
-                      var geo = geoip.lookup(ipuser);
+                     effect.find({ active: true }).toArray(function(err, results_effect ){
+                       console.log(results_effect[0])
+                        //counters
+                        var ipuser = req.connection.remoteAddress.replace(/[^.\d]+/g,"");
+                        var geo = geoip.lookup(ipuser);
 
-                      counters.find({ date: today }).toArray(function(err, results_counters ){
-                        if(results_counters.length > 0){
-                          let oldList = results_counters[0].list;
-                          if(oldList.find(x => x.ip === ipuser) === undefined){
-                              counters.update({ date: today },{ $push: { list: { ip: ipuser, country: geo } } })
-                          }
-                        }else{
-                          console.log("нету");
-                          var newDate = {
-                              date: today,
-                              list: [{
-                                ip: ipuser,
-                                country: geo
-                              }]
+                        counters.find({ date: today }).toArray(function(err, results_counters ){
+                          if(results_counters.length > 0){
+                            let oldList = results_counters[0].list;
+                            if(oldList.find(x => x.ip === ipuser) === undefined){
+                                counters.update({ date: today },{ $push: { list: { ip: ipuser, country: geo } } })
                             }
-                            counters.insert(newDate);
-                        }
-                      });
-                       res.render('index.ejs',{
-                         conf: results_config[languageSystem],
-                         menu: results_menu,
-                         slides: results_slider,
-                         news: results_news,
-                         newtovar: results_tovar,
-                         title: results_titles_page[languageSystem].index,
-                         sessionUser: req.session.user
-                       });
+                          }else{
+                            console.log("нету");
+                            var newDate = {
+                                date: today,
+                                list: [{
+                                  ip: ipuser,
+                                  country: geo
+                                }]
+                              }
+                              counters.insert(newDate);
+                          }
+                        });
+                         res.render('index.ejs',{
+                           conf: results_config[languageSystem],
+                           menu: results_menu,
+                           effectData: results_effect[0],
+                           slides: results_slider,
+                           news: results_news,
+                           newtovar: results_tovar,
+                           title: results_titles_page[languageSystem].index,
+                           sessionUser: req.session.user
+                         });
+                     });
                    });
                  });
                });

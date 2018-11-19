@@ -8,9 +8,11 @@ var USER = {
     });
     $(".set_btn").click(function(){
       var atribut = $(this).attr("opmenu");
-      console.log(atribut);
-      $(".MyBlock").hide(0);
-      $("#"+atribut).show(300);
+      if(atribut !== undefined){
+        console.log(atribut);
+        $(".MyBlock").hide(0);
+        $("#"+atribut).show(300);
+      }
     });
     $("#phoneNumMask").mask("+38(099) 999-9999");
     $(".searchBlock").hover(function() {

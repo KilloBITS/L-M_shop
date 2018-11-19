@@ -152,7 +152,7 @@
       <div class="copiright"><%= conf.copiright %></div>
       <div class="socials">
         <% for(var i = 0; i < conf.socials.length; i++) { %>
-            <a href="<%= conf.socials[i].link %>"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+            <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
         <% } %>
       </div>
       <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
@@ -168,9 +168,14 @@
         <div class="lang" id="ua" title="Українська версія"></div>
         <div class="lang" id="ru" title="Русская версия"></div>
       </div>
+      <div class="certificated">
+        <div class="certificate" id="byVisa"></div>
+        <div class="certificate" id="byMasterCard"></div>
+      </div>
     </div>
   </div>
 </div>
+
 <div id="pageMessages"></div>
 </body>
 </html>

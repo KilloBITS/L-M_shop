@@ -12,7 +12,7 @@ var updateAva = (req, res, next) => {
   if (global.isAdminParse(req)) //&& req.session.admin && req.session.user !== undefined
   {
     var base64Data = req.body.n.replace(/^data:image\/(png|gif|jpeg|jpg);base64,/,'');
-    require("fs").writeFile("./publick/image/vernissageLogo.png", base64Data, 'base64', function(err) {
+    require("fs").writeFile("./publick/image/Logo.png", base64Data, 'base64', function(err) {
       console.log(err);
       res.send({code:500, img: req.body.n})
     });

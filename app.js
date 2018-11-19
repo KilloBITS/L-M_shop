@@ -52,7 +52,6 @@ app.use('/panel', panel);
 
 app.get('*', get404);
 
-
 const search = require('./controllers/controllerSearch');
 app.post('/search', search);
 
@@ -83,7 +82,8 @@ app.post('/updateAvaUser', updateAvaUser);
 const addToJelaniya = require('./controllers/controllerProfile');
 app.post('/addToJelaniya', addToJelaniya);
 
-
+const counters = require('./controllers/controllerCounters');
+app.post('/counters', counters);
 /*ADMIN*/
 //парсим админа
 const parseAdmin = require('./controllers/admin/controllerIsAdmin');
@@ -151,7 +151,7 @@ app.listen(80, function(){
   global.baseName = 'LM_SHOP';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
-  console.warn('STARTED VERNISSAGE SERVER ON PORT: 80');
+  console.warn('STARTED LM_SHOP SERVER ON PORT: 80');
 });
 
 // var options = {
