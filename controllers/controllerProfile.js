@@ -51,8 +51,4 @@ var addToJelaniya = (req, res, next) => {
 };
 router.post('/addToJelaniya', addToJelaniya, function(req, res, next){});
 
-
-
-addToJelaniya
-
 module.exports = router;

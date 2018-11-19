@@ -147,11 +147,11 @@ const bot = require('./controllers/bot/controllerBot');
 app.post('/to-yuliadMessage', bot);
 
 
-app.listen(80, function(){
+app.listen(4111, function(){
   global.baseName = 'LM_SHOP';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
-  console.warn('STARTED LM_SHOP SERVER ON PORT: 80');
+  console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
 });
 
 // var options = {
