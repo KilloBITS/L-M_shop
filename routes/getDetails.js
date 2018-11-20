@@ -59,7 +59,8 @@ router.get('/*', function(req, res, next) {
                     comment: results_comments,
                     rec: results_recTovar,
                     sessionUser: req.session.user,
-                    users_data: uSession
+                    users_data: uSession,
+                    isAdm: req.session.admin
                   })
                   client.close();
                 });

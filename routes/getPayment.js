@@ -111,7 +111,8 @@ router.get('/', function(req, res, next){
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{
              res.render('close.ejs',{
-               conf: results_config[languageSystem]
+               conf: results_config[languageSystem],
+               isAdm: req.session.admin
              })
            }
          });
@@ -144,12 +145,14 @@ router.get('/', function(req, res, next){
                  sessionUser: req.session.user,
                  datadata: data,
                  signaturedata: signature,
+                 isAdm: req.session.admin
                })
                client.close();
              });
            }else{
              res.render('close.ejs',{
-               conf: results_config[languageSystem]
+               conf: results_config[languageSystem],
+               isAdm: req.session.admin
              })
            }
          });

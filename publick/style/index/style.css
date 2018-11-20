@@ -151,6 +151,7 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 .block{
 	display: inline-block;
 	width: 100%;
+  position: relative;
 }
 
 .header{

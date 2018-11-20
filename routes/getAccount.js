@@ -44,7 +44,8 @@ router.get('/', function(req, res, next){
                        sessionUser: req.session.user,
                        user: results_users_session[0],
                        payments_user: results_payments,
-                       desires_user: results_desires
+                       desires_user: results_desires,
+                       isAdm: req.session.admin
                      })
                      client.close();
                    });

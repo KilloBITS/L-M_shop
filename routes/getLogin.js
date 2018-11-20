@@ -45,14 +45,16 @@ router.get('/', function(req, res, next){
                res.render('auth.ejs',{
                  conf: results_config[languageSystem],
                  menu: results_menu,
-                 title: results_titles_page[languageSystem].auth
+                 title: results_titles_page[languageSystem].auth,
+                 isAdm: req.session.admin
                });
                client.close();
 
              });
            }else{
              res.render('close.ejs',{
-               conf: results_config[languageSystem]
+               conf: results_config[languageSystem],
+               isAdm: req.session.admin
              })
            }
          });

@@ -26,12 +26,10 @@
 	<script type="text/javascript" src="script/index/index.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
-
 </head>
 <body>
-
-
   <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
   <div class="effect <%= effectData.className %>">
     <div class="snow__item"></div>
@@ -191,6 +189,9 @@
       <div class="nextSliderBtn">></div>
       <div class="prevSliderBtn"><</div>
 			<div class="slider-container">
+        <% if(isAdm){ %>
+          <div class="edited_admin" title="Добавить слайд" id="newSlide"></div>
+        <% } %>
 			  <div class="slider-control left inactive"></div>
 			  <div class="slider-control right"></div>
 			  <ul class="slider-pagi"></ul>
@@ -254,6 +255,9 @@
     </div>
 		<div class="news block">
       <div class="container">
+        <% if(isAdm){ %>
+          <div class="edited_admin" title="Добавить новость" id="newNews"></div>
+        <% } %>
         <div class="mainDLG">
           <div class="mainTitleDLG"><%= conf.news %></div>
         </div>

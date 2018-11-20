@@ -1778,6 +1778,7 @@ form input, form textarea {
   z-index: 100500;
   border: 1px solid #5d5d5d;
   border-radius: 4px;
+  max-width: 688px;
 }
 .global-modal-header{
   border-bottom: 1px solid #ccc;

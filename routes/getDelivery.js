@@ -13,7 +13,8 @@ router.get('/*', function(req, res, next){
 
      payments.find({id: DA}).toArray(function(err, results_payments){
        res.render('delivery.ejs',{
-         data: results_payments[0]
+         data: results_payments[0],
+         isAdm: req.session.admin
        })
      });
   });

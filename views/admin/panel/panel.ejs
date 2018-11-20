@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>панель управления</title>
+  <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -33,8 +34,6 @@
 
   <script src="/panel/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/panel/bower_components/jquery-ui/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
-
 
   <style type="text/css">
     .pageOfPanel {
@@ -76,11 +75,11 @@
   <div class="wrapper">
     <header class="main-header">
       <!-- Logo -->
-      <a href="/" class="logo">
+      <a href="/panel" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>L</b>M</span>
+        <span class="logo-mini"><b>V</b>A</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>L&M</b>Admin</span>
+        <span class="logo-lg"><b>VERNISSAGE</b>Admin</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -260,6 +259,7 @@
               <li class="miniClick"><a href="#"><i class="fa fa-circle-o"></i> Статистика </a></li>
               <li class="miniClick"><a href="#"><i class="fa fa-circle-o"></i> Настройки сайта </a></li>
               <li class="miniClick"><a href="#"><i class="fa fa-circle-o"></i> Настройки меню </a></li>
+              <li class="miniClick"><a href="#"><i class="fa fa-circle-o"></i> Новости </a></li>
             </ul>
           </li>
 
@@ -587,7 +587,7 @@
               <div class="box-header with-border">
                 <h3 class="box-title">Настройка логотипа</h3>
               </div>
-
+              <form role="form">
                 <div class="box-body">
                   <div class="form-group" id="eits">
                     <!-- <label for="exampleInputPassword1">Логотип</label> -->
@@ -598,7 +598,7 @@
                 <div class="box-footer">
                   <button type="submit" class="btn btn-block btn-success btn-sm image_pic" onclick="$('#newLogotype').click()">Выберите изображение</button>
                 </div>
-
+              </form>
             </div>
 
             <div class="box box-primary">
@@ -681,30 +681,7 @@
               <ul class="nav nav-tabs" id="to-do">
                 <% for(var i = 0; i < menu.length; i++){ %>
                   <li class="task"><a href="#tab_<%= i %>" data-toggle="tab"><%= menu[i].name %></a></li>
-                <% } %>
-
-                <script>
-                  dragula([
-                    document.getElementById("to-do"),
-                  ]);
-
-                  removeOnSpill: false
-                    .on("drag", function(el) {
-                      el.className.replace("ex-moved", "");
-                    })
-                    .on("drop", function(el) {
-                      el.className += "ex-moved";
-                    })
-                    .on("over", function(el, container) {
-                      container.className += "ex-over";
-                    })
-                    .on("out", function(el, container) {
-                      container.className.replace("ex-over", "");
-                    });
-
-                </script>
-
-
+                <% } %>              
                 <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
                 <div class="li_vipadayka">
                   <div id="newCategory" onclick="ADMIN.NEW_CATEGORY()">Создать категорию</div>
@@ -793,10 +770,21 @@
           </div>
         </section>
       </div>
-      <!-- Локализация главной страницы -->
+      <!-- Новости -->
+      <div class="pageOfPanel">
+        <section class="content">
+          <div class="col-md-6">
+
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </section>
+      </div>
+      <!-- настройки главной страницы -->
       <div class="pageOfPanel">
         <section class="content-header">
-          <h1>Локализация главной страницы</h1>
+          <h1>Настройки главной страницы</h1>
         </section>
         <section class="content">
           <div class="col-md-6">
@@ -900,10 +888,10 @@
           <button type="button" class="btn btn-block btn-success btn-lg saveLocal" id="globalDataSave" onclick="ADMIN.SAVE_LOCAL_INDEX()">Сохранить</button>
         </section>
       </div>
-      <!-- Локализация страницы товары -->
+      <!-- настройки страницы товары -->
       <div class="pageOfPanel">
         <section class="content-header">
-          <h1>Локализация страницы "Товары"</h1>
+          <h1>Настройки страницы "Товары"</h1>
         </section>
         <section class="content">
           <div class="col-md-6">
@@ -946,11 +934,14 @@
             </div>
 
           </div>
-          <button type="button" class="btn btn-block btn-success btn-lg saveLocal" id="globalDataSave" onclick="ADMIN.SAVE_LOCAL_TOVAR()">Сохранить</button>
+          <button type="button" class="btn btn-block btn-success btn-lg saveLocal" id="globalDataSave2" onclick="ADMIN.SAVE_LOCAL_TOVAR()">Сохранить</button>
         </section>
       </div>
-      <!-- Локализация страницы оплата и доставка -->
+      <!-- настройки страницы оплата и доставка -->
       <div class="pageOfPanel">
+        <section class="content-header">
+          <h1>Настройки страницы "Оплата и доставка"</h1>
+        </section>
         <section class="content">
           <div class="col-md-12">
             <div class="box box-primary">
@@ -1025,11 +1016,7 @@
                 </form>
               </div>
             </div>
-
-
           </div>
-
-
 
           <div class="col-md-6">
             <div class="box box-primary">
@@ -1050,8 +1037,6 @@
               </div>
             </div>
 
-
-
             <div class="box box-primary">
               <div class="box-header with-border">
                 <h3 class="box-title"><%= conf.dostavka[1].title %></h3>
@@ -1069,8 +1054,6 @@
                 </form>
               </div>
             </div>
-
-
 
             <div class="box box-primary">
               <div class="box-header with-border">
@@ -1090,6 +1073,7 @@
               </div>
             </div>
           </div>
+          <button type="button" class="btn btn-block btn-success btn-lg saveLocal" id="globalDataSave2" onclick="ADMIN.SAVE_LOCAL_INDEX()">Сохранить</button>
         </section>
       </div>
 
@@ -1293,10 +1277,29 @@
                       </td>
                       <td class="NOTMOBILE">
                         <%= users[i].email %>
-                        <div class="sendUserMessage" mail="<%= users[i].email %>"></div>
+                        <div class="sendUserMessage" mail="<%= users[i].email %>" onclick="ADMIN.SEND_USER_MESSAGE('<%= users[i].email %>')"></div>
                       </td>
                       <td class="NOTMOBILE">
-                        <%= users[i].phone %>
+                        <%= users[i].phone_number %>
+                        <div class="type_operator_<%= i %>"></div>
+                        <script>
+                        var test_str = "<%= users[i].phone_number %>";
+                        var start_pos = test_str.indexOf('(') + 1;
+                        var end_pos = test_str.indexOf(')',start_pos);
+                        var text_to_get = test_str.substring(start_pos,end_pos);
+
+                        switch(text_to_get){
+                          case "066": $(".type_operator_<%= i %>").addClass("mts").attr("title","VODAFONE"); break;
+                          case "099": $(".type_operator_<%= i %>").addClass("mts").attr("title","VODAFONE"); break;
+                          case "050": $(".type_operator_<%= i %>").addClass("mts").attr("title","VODAFONE"); break;
+                          case "063": $(".type_operator_<%= i %>").addClass("Life").attr("title","LIFECELL"); break;
+                          case "073": $(".type_operator_<%= i %>").addClass("Life").attr("title","LIFECELL"); break;
+                          case "097": $(".type_operator_<%= i %>").addClass("Kievstar").attr("title","Киевстар"); break;
+                          case "098": $(".type_operator_<%= i %>").addClass("Kievstar").attr("title","Киевстар"); break;
+                          case "067": $(".type_operator_<%= i %>").addClass("Kievstar").attr("title","Киевстар"); break;
+                          default: console.log("none"); break;
+                        }
+                        </script>
                       </td>
                       <td class="NOTMOBILE">
                         <%= users[i].secret %>
@@ -1319,6 +1322,9 @@
                       <td class="NOTMOBILE">
                         <a class="btn btn-app" title="Заблокировать" onclick="ADMIN.BANNED(<%= users[i].AI %>)">
                           <i class="fa fa-remove"></i>
+                        </a>
+                        <a class="btn btn-app" title="Редактировать" onclick="ADMIN.EDIT_USER(<%= users[i].AI %>)">
+                          <i class="fa fa-edit"></i>
                         </a>
                       </td>
                   <% } %>

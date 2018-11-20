@@ -5373,11 +5373,13 @@ table.text-center, table.text-center td, table.text-center th {
 
 .BIG_LOADER{
   position: fixed;
-  background: #0000009c;
+  background: rgba(255, 255, 255, 0.75) url(../../../image/loaders/load0.gif);
   z-index: 99999999999;
   width: 100%;
   height: 100%;
-  display: none;
+  /* display: none; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .loader{
@@ -5397,4 +5399,105 @@ table.text-center, table.text-center td, table.text-center th {
 
 .modal-backdrop{
   display: none;
+}
+
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle;
+  list-style-type: none;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /* margin: 0.4rem; */
+  height: 4rem;
+  border: #ffffff 1px solid;
+  border-radius: 0.2rem;
+  cursor: move;
+  text-align: center;
+  vertical-align: middle;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+.ex-moved{
+  cursor: move;
+}
+
+.newTypesInput{
+  margin: 5px 0 10px 0;
+  border: 1px solid silver;
+  height: 35px;
+  border-radius: 5px;
+  width: calc(100% / 3 - 5px);
+}
+
+.disClass{
+  cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: silver;
+  color: rgba(0, 0, 0, 0.57);
+  padding-left: 10px;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI2OC43MjUgMjY4LjcyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjY4LjcyNSAyNjguNzI1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnIGlkPSJFZGl0Ij4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik0xNjEuMzU5LDU2LjMzN2MtNy4wNDEtNy4wNDktMTguNDU4LTcuMDQ5LTI1LjQ5OCwwbC02LjM3NCw2LjM4MSAgIGwtODkuMjQzLDg5LjMzN2wwLjAyMywwLjAyM2wtMi44MTIsMi44MmMwLDAtOC45NjgsOS4wMzItMjkuMjE2LDc0LjM5OWMtMC4xNDIsMC40NTctMC4yODMsMC45MTEtMC40MjYsMS4zNzQgICBjLTAuMzYxLDEuMTcxLTAuNzI2LDIuMzYxLTEuMDk0LDMuNTY3Yy0wLjMyNiwxLjA2Ni0wLjY1NiwyLjE1NC0wLjk4NywzLjI0OWMtMC4yNzksMC45MjMtMC41NTYsMS44MzYtMC44MzksMi43NzkgICBjLTAuNjQyLDIuMTQtMS4yOTIsNC4zMTgtMS45NTUsNi41NjdjLTEuNDU1LDQuOTM3LTUuMDA5LDE2LjA3LTAuOTksMjAuMWMzLjg3LDMuODgyLDE1LjEyLDAuNDY3LDIwLjA0My0wLjk5MyAgIGMyLjIzMi0wLjY2Miw0LjM5NS0xLjMxMSw2LjUxOS0xLjk1MmMwLjk4MS0wLjI5NiwxLjkzMi0wLjU4NiwyLjg5MS0wLjg3OGMxLjAzMS0wLjMxNCwyLjA1Ny0wLjYyNiwzLjA2Mi0wLjkzNSAgIGMxLjI2OS0wLjM5LDIuNTItMC43NzUsMy43NS0xLjE1N2MwLjM2Ny0wLjExNCwwLjcyNy0wLjIyNywxLjA5MS0wLjM0YzYyLjE5Mi0xOS4zNjUsNzMuMzU3LTI4LjQ1Myw3NC4yODUtMjkuMjg0ICAgYzAuMDA3LTAuMDA1LDAuMDA3LTAuMDA1LDAuMDEyLTAuMDFjMC4wMzktMC4wMzYsMC4wNjYtMC4wNiwwLjA2Ni0wLjA2bDIuODc5LTIuODg2bDAuMTkzLDAuMTkzbDg5LjI0NS04OS4zMzdsLTAuMDAxLTAuMDAxICAgbDYuMzc0LTYuMzgxYzcuMDQxLTcuMDQ4LDcuMDQxLTE4LjQ3NiwwLTI1LjUyNUwxNjEuMzU5LDU2LjMzN3ogTTEwMy4zOTksMjE5Ljc4MmMtMC4wNzgsMC4wNTMtMC4xODQsMC4xMjItMC4yOTYsMC4xOTMgICBjLTAuMDYyLDAuMDQtMC4xMzcsMC4wODctMC4yMTEsMC4xMzNjLTAuMDc1LDAuMDQ3LTAuMTU3LDAuMDk4LTAuMjQ0LDAuMTUxYy0wLjA3NywwLjA0Ny0wLjE1NywwLjA5NS0wLjI0MywwLjE0NyAgIGMtMi45NjksMS43NzctMTEuNjgyLDYuMzYyLTMyLjgyOCwxNC4wMTdjLTIuNDcxLDAuODk0LTUuMTYyLDEuODQyLTcuOTgxLDIuODE5bC0zMC4wNi0zMC4wOTFjMC45OC0yLjg0LDEuOTI5LTUuNTUxLDIuODI2LTguMDQxICAgYzcuNjM4LTIxLjIzNSwxMi4yMTktMjkuOTc0LDEzLjk4Ni0zMi45MzljMC4wNDMtMC4wNzEsMC4wODItMC4xMzYsMC4xMjEtMC4yYzAuMDYyLTAuMTAyLDAuMTItMC4xOTcsMC4xNzQtMC4yODQgICBjMC4wNDMtMC4wNjksMC4wODgtMC4xNDEsMC4xMjYtMC4yYzAuMDcxLTAuMTExLDAuMTQtMC4yMTcsMC4xOTMtMC4yOTZsMi4yLTIuMjA2bDU0LjQ4NSw1NC41NDJMMTAzLjM5OSwyMTkuNzgyeiBNMjYzLjM1MSw1Ni4zMzcgICBsLTUwLjk5Ny01MS4wNWMtNy4wNDEtNy4wNDgtMTguNDU2LTcuMDQ4LTI1LjQ5OCwwbC0xMi43NDgsMTIuNzYzYy03LjA0MSw3LjA0OC03LjA0MSwxOC40NzYsMCwyNS41MjRsNTAuOTk2LDUxLjA1ICAgYzcuMDQsNy4wNDgsMTguNDU3LDcuMDQ4LDI1LjQ5OCwwbDEyLjc0OS0xMi43NjJDMjcwLjM5Miw3NC44MTMsMjcwLjM5Miw2My4zODUsMjYzLjM1MSw1Ni4zMzd6IiBmaWxsPSIjNmQ2ZDZkIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) 9px;
+  background-size: 16px;
+}
+.newCatError{
+  color: black;
+  position: absolute;
+  bottom: 117px;
+  z-index: 1;
+}
+
+.NOTMOBILE{
+  position: relative;
+}
+
+.sendUserMessage{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: calc(50% - 10px);
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUxMS42MDksMTk3LjYwMWMtMC4wMDEtMC43Ny0wLjE3My0xLjkzMy0wLjQ3Mi0yLjYwM2MtMC43ODctMi44NTQtMi41MzYtNS40NjEtNS4xNTQtNy4yODFsLTczLjI5Mi01MC45NDhWODIuMTUzICAgIGMwLTcuMjQtNS44NzItMTMuMTEyLTEzLjExMi0xMy4xMTJIMzM1LjI2bC03MS43NDMtNDkuODc4Yy00LjQ4NC0zLjEyMS0xMC40MzctMy4xMzQtMTQuOTM1LTAuMDI2bC03Mi4yMDYsNDkuOTA0SDkyLjQyNiAgICBjLTcuMjQyLDAtMTMuMTEyLDUuODcyLTEzLjExMiwxMy4xMTJ2NTMuOTczTDUuNjY2LDE4Ny4wMjdjLTMuNjIzLDIuNTA0LTUuNTgzLDYuNTA3LTUuNjQ1LDEwLjYgICAgQzAuMDE3LDE5Ny43MDQsMCwxOTcuNzc3LDAsMTk3Ljg1N2wwLjM5MSwyODQuMjM1YzAuMDA1LDMuNDc3LDEuMzkxLDYuODEsMy44NTIsOS4yNjZjMi40NTgsMi40NTEsNS43ODgsMy44MjcsOS4yNiwzLjgyNyAgICBjMC4wMDcsMCwwLjAxMiwwLDAuMDE4LDBsNDg1LjM4NS0wLjY2N2M3LjI0LTAuMDEsMTMuMTA0LTUuODg5LDEzLjA5NC0xMy4xM0w1MTEuNjA5LDE5Ny42MDF6IE00MzIuNjksMTY4LjcwOGw0MS44OTgsMjkuMTE4ICAgIGwtNDEuODk4LDI5LjEyOFYxNjguNzA4eiBNMjU2LjAxNSw0NS44ODRsMzMuMzEsMjMuMTU2aC02Ni44MTJMMjU2LjAxNSw0NS44ODR6IE0xMDUuNTM4LDk1LjI2NWgzMDAuOTI4djE0OS45MjFMMzA1LjQzLDMxNS40MjggICAgbC00MS4xOTQtMzEuOTU0Yy0wLjA2NC0wLjA1LTAuMTE5LTAuMDgxLTAuMTgxLTAuMTI2Yy00LjYwNC0zLjQ1NC0xMS4xMTYtMy41ODEtMTUuODk0LDAuMTI2bC00MS40OTMsMzIuMTg1bC0xMDEuMTMtNjkuODkzICAgIFY5NS4yNjV6IE03OS4zMTQsMTY4LjAwM3Y1OS42NGwtNDMuMTQ2LTI5LjgxOUw3OS4zMTQsMTY4LjAwM3ogTTI2LjI1OCwyMjIuODY3bDE1OC42NjksMTA5LjY1NUwyNi41NzgsNDU1LjM0NkwyNi4yNTgsMjIyLjg2N3ogICAgIE01MS44NzUsNDY4LjkwOWwyMDQuMzI0LTE1OC40ODRsMjAzLjU5MSwxNTcuOTIzTDUxLjg3NSw0NjguOTA5eiBNMzI3LjE0NCwzMzIuMjcxbDE1OC4yNzYtMTEwLjAzNmwwLjMyLDIzMy4wNTkgICAgTDMyNy4xNDQsMzMyLjI3MXoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNDQuNzcsMTQ3LjcxM0gxNjcuMjM0Yy03LjI0LDAtMTMuMTEyLDUuODcyLTEzLjExMiwxMy4xMTJzNS44NzIsMTMuMTEyLDEzLjExMiwxMy4xMTJIMzQ0Ljc3ICAgIGM3LjI0MiwwLDEzLjExMi01Ljg3MiwxMy4xMTItMTMuMTEyUzM1Mi4wMTIsMTQ3LjcxMywzNDQuNzcsMTQ3LjcxM3oiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNDQuNzcsMjE1Ljg5NUgxNjcuMjM0Yy03LjI0LDAtMTMuMTEyLDUuODcyLTEzLjExMiwxMy4xMTJjMCw3LjI0LDUuODcyLDEzLjExMiwxMy4xMTIsMTMuMTEySDM0NC43NyAgICBjNy4yNDIsMCwxMy4xMTItNS44NzIsMTMuMTEyLTEzLjExMkMzNTcuODgyLDIyMS43NjcsMzUyLjAxMiwyMTUuODk1LDM0NC43NywyMTUuODk1eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+  background-size: contain;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.mts,.Life,.Kievstar{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  top: calc(50% - 10px);
+  background-size: contain;
+  cursor: help;
+}
+.mts{
+  background-image: url(https://cdn0.iconfinder.com/data/icons/circle-icons/128/vodafone.png);
+}
+
+.Life{
+  background-image: url(https://raw.githubusercontent.com/dukei/any-balance-providers/aad1468296bea5a2eaa4b30bd1f10219898da144/providers/ab-cell-life-ukr/icon.png);
+}
+
+.Kievstar{
+  background-image: url(https://raw.githubusercontent.com/dukei/any-balance-providers/41bee3fa727df598c590707e5878abb1f94b6db1/providers/ab-cell-kyivstar/icon.png);
+}
+
+#globalDataSave, #globalDataSave2{
+  position: absolute;
+  width: 130px;
+  right: 20px;
+  top: 54px;
 }

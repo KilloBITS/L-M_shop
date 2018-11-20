@@ -35,7 +35,8 @@ router.get('/', function(req, res, next){
                conf: results_config[languageSystem],
                menu: results_menu,
                title: results_titles_page[languageSystem].contacts,
-               sessionUser: req.session.user
+               sessionUser: req.session.user,
+               isAdm: req.session.admin
              })
              client.close();
            });

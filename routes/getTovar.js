@@ -70,7 +70,8 @@ router.get('/*', function(req, res, next){
                      title: results_titles_page[languageSystem].tovar,
                      sessionUser: req.session.user,
                      users_data: uSession,
-                     offLength: results_tovar.length
+                     offLength: results_tovar.length,
+                     isAdm: req.session.admin
                    })
                    client.close();
                  });
@@ -83,7 +84,8 @@ router.get('/*', function(req, res, next){
                      title: results_titles_page[languageSystem].tovar,
                      sessionUser: req.session.user,
                      users_data: uSession,
-                     offLength: results_tovar.length
+                     offLength: results_tovar.length,
+                     isAdm: req.session.admin
                    })
                    client.close();
                  });
@@ -92,7 +94,8 @@ router.get('/*', function(req, res, next){
            });
          }else{
            res.render('close.ejs',{
-             conf: results_config[languageSystem]
+             conf: results_config[languageSystem],
+             isAdm: req.session.admin
            })
          }
        });
