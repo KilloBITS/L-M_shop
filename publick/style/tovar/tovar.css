@@ -27,7 +27,7 @@ a{
     max-width: none;
 }
 .content{
-  /* width: fit-content; */
+  width: fit-content;
   width: -moz-fit-content;
   background: white;
   margin: auto;

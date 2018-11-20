@@ -331,7 +331,7 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 }
 
 .content {
-    /* max-width: 1024px; */
+    max-width: 1024px;
     width: 100%;
     margin: auto;
     background: white;
