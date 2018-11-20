@@ -86,7 +86,8 @@ router.get('/', function(req, res, next){
                            news: results_news,
                            newtovar: results_tovar,
                            title: results_titles_page[languageSystem].index,
-                           sessionUser: req.session.user
+                           sessionUser: req.session.user,
+                           isAdm: req.session.admin
                          });
                      });
                    });
