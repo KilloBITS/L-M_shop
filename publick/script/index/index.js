@@ -65,7 +65,7 @@ var Index = {
       animating = false,
       animTime = 500,
       autoSlideTimeout,
-      autoSlideDelay = 6000,
+      autoSlideDelay = 15000,
       $pagination = $(".slider-pagi");
 
     function createBullets() {
@@ -178,7 +178,7 @@ var Index = {
     $(".prevSliderBtn").click(function(){
       navigateLeft();
     });
-    
+
     $(document).on("click", ".slider-pagi__elem", function() {
       curSlide = $(this).data("page");
       changeSlides();

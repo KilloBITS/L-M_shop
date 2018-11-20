@@ -81,11 +81,11 @@
 </div>
 
 <div class="content">
-<div class="title_head">
+<div class="title_head max1024">
   <%= conf.dostavka_info %>
 </div>
-<div class="OPLATA_TITLE"><%= conf.oplata_title %></div>
-<ul class="cards">
+<div class="OPLATA_TITLE  max1024"><%= conf.oplata_title %></div>
+<ul class="cards  max1024">
   <% for(var i = 0; i < conf.oplata.length; i++) { %>
     <li class="cards__item">
       <div class="card">
@@ -98,8 +98,8 @@
     </li>
   <% } %>
 </ul>
-<div class="OPLATA_TITLE"><%= conf.dostavka_title %></div>
-<ul class="cards">
+<div class="OPLATA_TITLE  max1024"><%= conf.dostavka_title %></div>
+<ul class="cards  max1024">
   <% for(var i = 0; i < conf.dostavka.length; i++) { %>
     <li class="cards__item">
       <div class="card">

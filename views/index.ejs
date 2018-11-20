@@ -102,7 +102,9 @@
             </p>
           </div>
         </div>
+        <div class="sosulki"></div>
       </div>
+
     </div>
     <script>
       var globalModal = $('.global-modal');
@@ -217,16 +219,24 @@
 			</div>
 			<div class="carousel-wrapper">
 			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <% if(newtovar.length > 0){ %>
           <% for(var i = 0; i < newtovar.length; i++){ %>
+          <div class="carousel-cell">
+            <h3> <%= newtovar[i].title %> </h3>
+            <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
+            <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
+          </div>
+          <% } %>
+          <% } else { %>
             <div class="carousel-cell">
               <h3> <%= newtovar[i].title %> </h3>
               <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
               <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
             </div>
-            <% } %>
+          <% } %>
 			  </div>
 			</div>
-			<div class="mainBTN_block" style="background: #ffc9df">
+			<div class="mainBTN_block" style="background: #ffc9df;     padding-top: 20px;">
 				<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
 			</div>
 			<div class="mainDLG" style="background: #ffc9df;     color: white;">

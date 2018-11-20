@@ -879,6 +879,7 @@ p {
   margin: 34px auto 0;
   max-width: 100%;
   padding: 30px;
+  max-width: 1024px;
 }
 
 .comment-wrap {

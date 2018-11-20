@@ -86,13 +86,37 @@
 
 <div class="content tovar">
 
-    <div class="container">
+    <div class="container" style="max-width: 1024px;">
       <div class="grid product">
-        <% if(tovarArr[0].sale[0]){ %>
-          <div class="sale">
-            <span>Скидка</span>
-            <span><%= tovarArr[0].sale[1] %> %</span>
-          </div>
+        <% if(tovarArr[0].sale[0] && (tovarArr[0].sale[0] === 'true')){ %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 5){ %>
+            <div class="ribbon">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 10){ %>
+            <div class="ribbon ribbon--purple">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 15){ %>
+            <div class="ribbon  ribbon--blue">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 20){ %>
+            <div class="ribbon  ribbon--green">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 30){ %>
+            <div class="ribbon  ribbon--yellow">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 40){ %>
+            <div class="ribbon  ribbon--orange">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
+
+          <% if(parseInt(tovarArr[0].sale[1]) == 50){ %>
+            <div class="ribbon  ribbon--red">Скидка <%= tovarArr[0].sale[1] %> %</div>
+          <% } %>
         <% } %>
         <div class="column-xs-12 column-md-6">
           <div class="product-gallery">
@@ -230,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-  
+
 <div id="pageMessages"></div>
 <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
 <div id="basketDATA">

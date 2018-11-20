@@ -8,7 +8,10 @@
       margin-top: 60px;
   }
 
-
+  .header {
+      height: 260px;
+      position: relative;
+  }
 
   .countersB{
     display: inline-block;
@@ -162,13 +165,14 @@
   }
   .content {
     width: 100%;
+    border: 0;
   }
   .tovar {
     width: 100%;
   }
 
   .logotype {
-    width: 200px;
+    width: 140px;
     height: 60px;
   }
 

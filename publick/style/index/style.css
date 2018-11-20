@@ -172,7 +172,7 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
   font-family: cursive;
   cursor: pointer;
   color: silver;
-  /* opacity: 0.6; */
+  display: none;
   transition: 0.2s;
 }
 
@@ -244,9 +244,11 @@ svg {
   left: 50%;
   bottom: 10px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 0;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .slider-pagi__elem {
   position: relative;
@@ -426,6 +428,7 @@ svg {
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 7px 23px 20px;
   border-radius: 5px;
+  display: none;
 }
 @media (max-width: 991px) {
   .slide__text {
@@ -564,15 +567,15 @@ h3 {
 }
 .carousel-wrapper .carousel .carousel-cell {
   padding: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 20%;
   height: auto;
   min-width: 140px;
   margin: 0 20px;
   transition: transform 500ms ease;
-  border: 1px solid silver;
-  border-radius: 6px;
-  box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57);
+    border: 2px solid #ffc9df;
+  border-radius: 3px;
+  /* box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57); */
   height: 230px;
   overflow: hidden;
 }
@@ -608,6 +611,19 @@ h3 {
   transform: translate(-50%);
   opacity: 0;
   transition: opacity 300ms ease 300ms;
+}
+.flickity-prev-next-button {
+    position: absolute;
+    top: calc(100% + 20px);
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    background: hsla(0,0%,100%,.75);
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .carousel-wrapper .carousel .carousel-cell .price sup {
   top: 2px;

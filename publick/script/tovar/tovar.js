@@ -240,6 +240,28 @@ var Index = {
      if(BASKET.indexOf(ind.toString()) === -1){
        BASKET.push(ind.toString());
        localStorage.setItem("VernissageBasket", BASKET);
+
+       var URL = $(".list-group-image:eq("+btn+")").attr('src');
+       var neAnimation = document.createElement('div');
+       neAnimation.className = 'neAnimation';
+       neAnimation.style.left = $(".list-group-image:eq("+btn+")").offset().left + 'px';
+       neAnimation.style.top = $(".list-group-image:eq("+btn+")").offset().top + 'px';
+       neAnimation.style.width = $(".list-group-image:eq("+btn+")").width() + 'px';
+       neAnimation.style.height = $(".list-group-image:eq("+btn+")").height()  + 'px';
+       neAnimation.style.backgroundImage = 'url('+URL+')';
+       $('body').append(neAnimation);
+
+       setTimeout(function(){
+         neAnimation.style.left = $(".basketBlock").offset().left + 'px';
+         neAnimation.style.top = $(".basketBlock").offset().top + 'px';
+         neAnimation.style.width = '30px';
+         neAnimation.style.height = '30px';
+         setTimeout(function(){
+           $(neAnimation).fadeOut(300)
+         },350);
+       },500);
+
+
        $(".basketBlock span").html(BASKET.length);
        $(".getSuccess:eq("+btn+")").fadeIn(300);
 
