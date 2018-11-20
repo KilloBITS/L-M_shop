@@ -690,7 +690,7 @@
               <div class="tab-content" id="TTTTT">
                 <% for(var i = 0; i < menu.length; i++){ %>
                   <div class="tab-pane " id="tab_<%= i %>">
-                    <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== '/'){ %>
+                    <% if(menu[i].podlink.length >= 1 && menu[i].podlink[0] !== '/'){ %>
                       <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
                         <div class="box box-primary collapsed-box">
                           <div class="box-header with-border">
