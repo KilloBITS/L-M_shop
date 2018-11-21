@@ -248,6 +248,9 @@ var ADMIN = {
         ADMIN.EDIT_TYPE = res.tovar_ru[0].types;
 
         $("#tPrice").val(res.tovar_ru[0].price);
+        $("#tPostavka").val(res.tovar_ru[0].postavka);
+        $("#tIncrement").val(res.tovar_ru[0].tIncrement);
+
         if(res.tovar_ru[0].sale[0]){
           $("#tSaleEnabled").attr("checked",true);
           $("#tSale").val(res.tovar_ru[0].sale[1]).removeAttr("disabled");
