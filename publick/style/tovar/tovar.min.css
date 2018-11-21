@@ -228,7 +228,8 @@
       font-weight: bold;
   }
   .thumbnail {
-      height: 585px;
+      height: auto;
+      margin-bottom: 12px;
   }
 
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
@@ -252,10 +253,6 @@
     margin-right: 10px;
     margin: auto;
     float: inherit;
-  }
-  .item.grid-group-item .thumbnail
-  {
-      margin-bottom: 0px;
   }
 
   .item.grid-group-item .caption {

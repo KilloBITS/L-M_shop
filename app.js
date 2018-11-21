@@ -146,7 +146,7 @@ app.post('/addNewType', MENU_Controll);
 const bot = require('./controllers/bot/controllerBot');
 app.post('/to-yuliadMessage', bot);
 
-// fs.readFile('zhenskie-rubashki.json', 'utf8', function(err, contents) {
+// fs.readFile('kurtki-i-palta.json', 'utf8', function(err, contents) {
 //     var tovars = JSON.parse(contents).yml_catalog.shop.offers.offer;
 //     console.log(JSON.parse(contents).yml_catalog.shop.offers.offer.length);
 //     var i = 0;
@@ -165,7 +165,7 @@ app.post('/to-yuliadMessage', bot);
 //                   NEW_TOVAR.title = tovars[i].name;
 //                   NEW_TOVAR.availability = true;
 //                   NEW_TOVAR.category = 4,
-//                   NEW_TOVAR.types = 'zhenskie-rubashki';
+//                   NEW_TOVAR.types = 'kurtki-i-palta';
 //                   NEW_TOVAR.popular = 5;
 //                   NEW_TOVAR.AI = i;
 //

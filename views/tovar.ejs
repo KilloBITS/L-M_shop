@@ -109,6 +109,11 @@
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
+
+          <a href="/details?tov=<%= tovarArr[i].AI %>">
+
+
+
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
               <div class="thumbnail">
                 <% if(tovarArr[i].sale[0] && (tovarArr[i].sale[0] === 'true')){ %>
@@ -162,27 +167,15 @@
 
                     <fieldset class="rating">
                         <input type="radio" id="star5_<%= i %>" name="rating_<%= i %>" value="5" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star5_<%= i %>" title="Awesome - 5 stars"></label>
-
                         <input type="radio" id="star4_<%= i %>" name="rating_<%= i %>" value="4" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star4_<%= i %>" title="Pretty good - 4 stars"></label>
-
                         <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="3" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star3_<%= i %>" title="Meh - 3 stars"></label>
-
                         <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="2" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star2_<%= i %>" title="Kinda bad - 2 stars"></label>
-
                         <input type="radio" id="star1_<%= i %>" name="rating_<%= i %>" value="1" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star1_<%= i %>" title="Sucks big time - 1 star"></label>
-
-
                         <script>
                           $("#star"+<%= tovarArr[i].popular %>+"_<%= i %>").attr("checked","checked")
                         </script>
                     </fieldset>
                       <h4 class="group inner list-group-item-heading"><%= tovarArr[i].title %></h4>
-                      <p class="group inner list-group-item-text">
-                        <%= tovarArr[i].text %>
-                        <div class="shadow">
-                          <a class="toDetails" href="/details?tov=<%= tovarArr[i].AI %>"><%= conf.btnDetails %></a>
-                        </div>
-                      </p>
                       <div class="row">
                           <div class="col-xs-12 col-md-6">
                             <% if(tovarArr[i].sale[0]){ %>
@@ -206,6 +199,7 @@
               </div>
           </div>
           <% } %>
+          </a>
         <% } %>
       </div>
 

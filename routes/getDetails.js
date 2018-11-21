@@ -51,7 +51,7 @@ router.get('/*', function(req, res, next) {
                   recomendedTovar.push(randomInteger(0, 20))
                 }
 
-                tovar.find({AI: {$in: recomendedTovar}}).toArray(function(err, results_recTovar) {
+                tovar.find({AI: {$in: recomendedTovar}}).limit(3).toArray(function(err, results_recTovar) {
                   res.render('details.ejs', {
                     conf: results_config[languageSystem],
                     menu: results_menu,

@@ -161,7 +161,7 @@
 		<div class="topLine twoLine">
 			<div class="menuBlock">
         <% for(var i = 0; i < menu.length; i++) { %>
-          <% if(menu[i].podlink.length >= 1 && menu[i].podlink[0] !== "/"){ %>
+          <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
 						<a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
 	        <% } else { %>
 	          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
@@ -228,11 +228,12 @@
 			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
           <% if(newtovar.length > 0){ %>
             <% for(var i = 0; i < newtovar.length; i++){ %>
-            <div class="carousel-cell">
-              <h3> <%= newtovar[i].title %> </h3>
-              <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
-              <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
-            </div>
+            <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>">
+              <div class="carousel-cell">
+                <h3> <%= newtovar[i].title %> </h3>
+                <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].image %>)"></div> <!--../../../data/tovar/-->
+              </div>
+            </a>
             <% } %>
           <% } else { %>
             <div class="carousel-cell">

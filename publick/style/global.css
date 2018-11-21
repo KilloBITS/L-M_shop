@@ -2912,5 +2912,6 @@ a:focus, a:hover {
   background-size: contain;
 }
 .lead {
-    font-weight: bold;
+  font-weight: bold;
+  color: black;
 }
