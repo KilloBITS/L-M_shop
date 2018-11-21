@@ -227,18 +227,18 @@
 			<div class="carousel-wrapper">
 			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
           <% if(newtovar.length > 0){ %>
-          <% for(var i = 0; i < newtovar.length; i++){ %>
-          <div class="carousel-cell">
-            <h3> <%= newtovar[i].title %> </h3>
-            <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
-            <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
-          </div>
-          <% } %>
-          <% } else { %>
+            <% for(var i = 0; i < newtovar.length; i++){ %>
             <div class="carousel-cell">
               <h3> <%= newtovar[i].title %> </h3>
               <a class="more" href="/details?tov=<%= newtovar[i].AI %>">Посмотреть товар</a>
               <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image %>)"></div>
+            </div>
+            <% } %>
+          <% } else { %>
+            <div class="carousel-cell">
+              <h3> У нас пока-что нет товаров </h3>
+              <a class="more" href="/"></a>
+              <div class="backCaruselImage" style="background-image: url()"></div>
             </div>
           <% } %>
 			  </div>
@@ -369,6 +369,7 @@
         <div class="certificated">
           <div class="certificate" id="byVisa"></div>
           <div class="certificate" id="byMasterCard"></div>
+          <div class="certificate" id="byYandex"></div>
         </div>
 			</div>
 		</div>
