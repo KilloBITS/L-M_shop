@@ -146,6 +146,61 @@ app.post('/addNewType', MENU_Controll);
 const bot = require('./controllers/bot/controllerBot');
 app.post('/to-yuliadMessage', bot);
 
+// fs.readFile('zhenskie-rubashki.json', 'utf8', function(err, contents) {
+//     var tovars = JSON.parse(contents).yml_catalog.shop.offers.offer;
+//     console.log(JSON.parse(contents).yml_catalog.shop.offers.offer.length);
+//     var i = 0;
+//
+//     mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
+//       const db = client.db(global.baseName);
+//       const tovar  = db.collection("tovar");
+//       if(err) return console.log(err);
+//
+//       setInterval(function(){
+//         try {
+//           tovar.find({title: tovars[i].name}).toArray(function(err, results_tovar ){
+//             if(results_tovar.length === 0){
+//                 try {
+//                   var NEW_TOVAR = new Object();
+//                   NEW_TOVAR.title = tovars[i].name;
+//                   NEW_TOVAR.availability = true;
+//                   NEW_TOVAR.category = 4,
+//                   NEW_TOVAR.types = 'zhenskie-rubashki';
+//                   NEW_TOVAR.popular = 5;
+//                   NEW_TOVAR.AI = i;
+//
+//
+//                   if(tovars[i].picture[0] !== 'h'){
+//                     console.log("PIC !== H");
+//                       NEW_TOVAR.image = tovars[i].picture[0];
+//                   }else{
+//                     console.log("PIC ================= H");
+//                       NEW_TOVAR.image = tovars[i].picture;
+//                   }
+//
+//                   NEW_TOVAR.sale = [false, 0];
+//                   NEW_TOVAR.param =  tovars[i].param;
+//                   NEW_TOVAR.postavka = 'BEREZKA';
+//                   NEW_TOVAR.tIncrement =  tovars[i]._id;
+//                   NEW_TOVAR.price = tovars[i].price
+//                   tovar.insertOne(NEW_TOVAR);
+//                   console.log('Добавлено :' + i + "/" + JSON.parse(contents).yml_catalog.shop.offers.offer.length);
+//               } catch (e) {
+//                 console.log("Tovar "+i + " ERROR")
+//               }
+//             } else {
+//               console.log('Такой товар уже есть');
+//             }
+//           });
+//         } catch (e) {
+//           console.log("Tovar "+i + " ERROR")
+//         }
+//
+//         i = i + 1;
+//       },100)
+//
+//     });
+// });
 
 app.listen(4111, function(){
   global.baseName = 'LM_SHOP';

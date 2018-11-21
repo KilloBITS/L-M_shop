@@ -66,7 +66,7 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 10px 5px 22px 5px;
-  height: 600px;
+  height: 480px;
   position: relative;
   overflow: hidden;
 }
@@ -74,10 +74,11 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
 .thumbnail .caption {
   padding: 9px;
   color: #333;
-  position: relative;
+  position: absolute;
   bottom: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: hsla(0, 0%, 100%, 0.69);
   border-top: 1px solid #dddddd;
+  width: 100%;
 }
 
 .thumbnail .caption .toDetails{
@@ -206,13 +207,16 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
 }
 
 .list-group-item-heading {
-    margin-top: 0;
-    margin-bottom: 5px;
-    white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 5px;
+  /* white-space: nowrap; */
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
 }
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    max-height: 450px;
+    max-height: 100%;
 }
 
 .getSuccess{
@@ -382,14 +386,15 @@ fieldset, label { margin: 0; padding: 0; }
 
 .shadow{
   width: 100%;
-  height: 34px;
-  background: rgba(255, 255, 255, 0.65);
+  height: 38px;
+  background: rgb(255, 255, 255);
   /* position: absolute; */
   bottom: 0;
-  margin-top: -44px;
+  margin-top: -54px;
   z-index: 9;
   position: relative;
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(255, 255, 255));
+  border-radius: 5px;
 }
 .blockOfNavBtn{
   left: 7px;

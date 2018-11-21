@@ -135,7 +135,7 @@
                   </div>
                 <% } %>
               </div>
-              <img class="active" src="../../../data/tovar/<%= tovarArr[0].image %>">
+              <img class="active" src="<%= tovarArr[0].image %>"> <!-- ../../../data/tovar/ -->
               <fieldset class="rating">
                   <input type="radio" id="star5_<%= 0 %>" name="rating_<%= 0 %>" value="5" /><label class = "full" tovid="<%= tovarArr[0].AI %>" for="star5_<%= 0 %>" title="Awesome - 5 stars"></label>
                   <input type="radio" id="star5_<%= 0 %>" name="rating_<%= 0 %>" value="4.5" /><label class="half" tovid="<%= tovarArr[0].AI %>" for="star5_<%= 0 %>" title="Pretty good - 4.5 stars"></label>
@@ -179,7 +179,7 @@
 
             <div class="column-xs-12 column-md-4">
               <a href="/details?tov=<%= rec[i].AI %>">
-              <img src="../../../data/tovar/<%= rec[i].image %>">
+              <img src="<%= rec[i].image %>"> <!-- ../../../data/tovar/ -->
               <h4><%= rec[i].title %></h4>
               <% if(rec[i].sale[0]){ %>
                 <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>

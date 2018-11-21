@@ -239,9 +239,10 @@
     color: #fff;
     background-color: #dd127b;
     border-color: #c51671;
-    width: calc(100% - 30px);
+    width: 120px;
     padding: 5px 30px;
     margin-top: 0;
+    bottom: -2px;
 }
 .thumbnail:hover .list-group-image{
   transform: scale(1);
@@ -258,9 +259,9 @@
   }
 
   .item.grid-group-item .caption {
-      padding: 9px 9px 0px 9px;
-      position: absolute;
-      bottom: 50px;
+    padding: 9px 9px 0px 9px;
+        position: absolute;
+        bottom: 0px;
   }
 
   .item.grid-group-item:before, .item.grid-group-item:after

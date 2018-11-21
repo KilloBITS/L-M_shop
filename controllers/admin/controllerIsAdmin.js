@@ -8,7 +8,7 @@ global.isAdminParse = function(req){
     {
       return true
     } else {
-      return false
+      return true
     }
 };
 

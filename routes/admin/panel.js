@@ -35,6 +35,7 @@ router.get('/', function(req, res, next){
           const categories  = db.collection("categories");
           const users  = db.collection("users");
           const titles_page  = db.collection("titles_page");
+          const suppliers  = db.collection("suppliers");
 
           const counters = db.collection("counters");
           if(err) return console.log(err);
@@ -51,24 +52,27 @@ router.get('/', function(req, res, next){
                            counters.find().toArray(function(err, results_counters ){
                              titles_page.find().toArray(function(err, results_titles_page ){
                                menuuk.find().sort({ isEnded: 1 }).toArray(function(err, results_menuuk ){
-                                 res.render('admin/panel/panel.ejs',{  //admin/panel/panel.ejs
-                                   conf: results_config[0],
-                                   confua: results_config[1],
-                                   menu: results_menu,
-                                   menuuk: results_menuuk,
-                                   slides: results_slider,
-                                   news: results_news,
-                                   tovar: results_tovar,
-                                   tovaruk: results_tovaruk,
-                                   type: results_types,
-                                   categorie: results_categories,
-                                   users: results_users,
-                                   counters: results_counters,
-                                   online: global.online,
-                                   titles: results_titles_page,
-                                   user: req.session.user
-                                 })
-                                 client.close();
+                                 suppliers.find().sort({ isEnded: 1 }).toArray(function(err, results_suppliers ){
+                                   res.render('admin/panel/panel.ejs',{  //admin/panel/panel.ejs
+                                     conf: results_config[0],
+                                     confua: results_config[1],
+                                     menu: results_menu,
+                                     menuuk: results_menuuk,
+                                     slides: results_slider,
+                                     news: results_news,
+                                     tovar: results_tovar,
+                                     tovaruk: results_tovaruk,
+                                     type: results_types,
+                                     categorie: results_categories,
+                                     users: results_users,
+                                     counters: results_counters,
+                                     online: global.online,
+                                     titles: results_titles_page,
+                                     user: req.session.user,
+                                     suppliersData: results_suppliers
+                                   })
+                                   client.close();
+                                 });
                                });
                              });
                            });

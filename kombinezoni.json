@@ -1,0 +1,5470 @@
+{
+	"yml_catalog": {
+		"shop": {
+			"name": "Berezka",
+			"company": "Berezkashop",
+			"url": "https://berezkashop.in.ua/",
+			"categories": {
+				"category": {
+					"_id": "22",
+					"__text": "Комбинезоны|Ромперы"
+				}
+			},
+			"offers": {
+				"offer": [
+					{
+						"name": "Велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "429",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/284/0715431001505479284.jpg",
+							"https://berezkashop.in.ua/assets/images/items/284/0715629001505479284.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0284",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "7831",
+						"_group_id": "284",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый комбинезон с молнией",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/347/0605638001505815050.jpg",
+							"https://berezkashop.in.ua/assets/images/items/347/0605756001505815050.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Молния</li>\r\n <li>Боковые карманы</li>\r\n <li>Свободный крой</li>\r\n <li>Ткань: замш на дайвинге&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0374",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "7934",
+						"_group_id": "347",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый комбинезон с молнией",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/348/0860269001505815173.jpg",
+							"https://berezkashop.in.ua/assets/images/items/348/0860392001505815173.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Молния</li>\r\n <li>Боковые карманы</li>\r\n <li>Свободный крой</li>\r\n <li>Ткань: замш на дайвинге&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0349",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "7936",
+						"_group_id": "348",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "429",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/476/0868561001510512261.jpg",
+							"https://berezkashop.in.ua/assets/images/items/476/0870017001510512261.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0476",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "7832",
+						"_group_id": "476",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "429",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/477/0167897001510512352.jpg",
+							"https://berezkashop.in.ua/assets/images/items/477/0168566001510512352.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0476",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "7833",
+						"_group_id": "477",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "429",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/478/0546321001510512578.jpg",
+							"https://berezkashop.in.ua/assets/images/items/478/0547133001510512578.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0478",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "7834",
+						"_group_id": "478",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый комбинезон с молнией",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/348/0860269001505815173.jpg",
+							"https://berezkashop.in.ua/assets/images/items/348/0860392001505815173.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Молния</li>\r\n <li>Боковые карманы</li>\r\n <li>Свободный крой</li>\r\n <li>Ткань: замш на дайвинге&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0349-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "7937",
+						"_group_id": "348",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1078/0289884001521059134.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1078/0292156001521059134.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1078/0295291001521059134.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1078-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "7402",
+						"_group_id": "1078",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1231/0325251001521234211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1231/0327845001521234211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1231/0330251001521234211.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1231",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "7372",
+						"_group_id": "1231",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1078/0289884001521059134.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1078/0292156001521059134.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1078/0295291001521059134.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1078",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "7401",
+						"_group_id": "1078",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1232/0045693001521234453.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1232/0048047001521234453.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1232/0051487001521234453.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1232-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "7396",
+						"_group_id": "1232",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1231/0325251001521234211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1231/0327845001521234211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1231/0330251001521234211.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1241-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "7373",
+						"_group_id": "1231",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1232/0045693001521234453.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1232/0048047001521234453.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1232/0051487001521234453.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1232",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "7395",
+						"_group_id": "1232",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1233/0625003001521235348.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1233/0628360001521235348.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1233/0631366001521235348.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1232-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "7400",
+						"_group_id": "1233",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кружевной комбинезон",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1233/0625003001521235348.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1233/0628360001521235348.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1233/0631366001521235348.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1232",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "7399",
+						"_group_id": "1233",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер из люрекса с оборками и запахом на груди",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1235/0323021001521236182.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1235/0325745001521236182.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1235/0329344001521236182.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж люрекс</li>\r\n <li>Запах</li>\r\n <li>Пояс на резинке</li>\r\n <li>С оборками</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1235",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "7415",
+						"_group_id": "1235",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер из люрекса с оборками и запахом на груди",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1236/0760380001521236418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1236/0762792001521236418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1236/0766159001521236418.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж люрекс</li>\r\n <li>Запах</li>\r\n <li>Пояс на резинке</li>\r\n <li>С оборками</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1236-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "7414",
+						"_group_id": "1236",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер из люрекса с оборками и запахом на груди",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1236/0760380001521236418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1236/0762792001521236418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1236/0766159001521236418.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж люрекс</li>\r\n <li>Запах</li>\r\n <li>Пояс на резинке</li>\r\n <li>С оборками</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1236",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "7413",
+						"_group_id": "1236",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер из люрекса с оборками и запахом на груди",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1235/0323021001521236182.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1235/0325745001521236182.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1235/0329344001521236182.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж люрекс</li>\r\n <li>Запах</li>\r\n <li>Пояс на резинке</li>\r\n <li>С оборками</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1235-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "7416",
+						"_group_id": "1235",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый комбинезон с молнией",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/347/0605638001505815050.jpg",
+							"https://berezkashop.in.ua/assets/images/items/347/0605756001505815050.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Молния</li>\r\n <li>Боковые карманы</li>\r\n <li>Свободный крой</li>\r\n <li>Ткань: замш на дайвинге&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0374-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "7935",
+						"_group_id": "347",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с запахом на груди из софт-ангоры",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1388/0855687001524735969.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1388/0884381001524735971.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: софт-ангора</p> "
+						},
+						"vendorCode": "1388",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Сиреневый"
+							}
+						],
+						"_id": "9697",
+						"_group_id": "1388",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с запахом на груди из софт-ангоры",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1389/0307815001524736056.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1389/0796307001524736059.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: ангора- софт</p> "
+						},
+						"vendorCode": "1389-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "9708",
+						"_group_id": "1389",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с запахом на груди из софт-ангоры",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1389/0307815001524736056.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1389/0796307001524736059.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: ангора- софт</p> "
+						},
+						"vendorCode": "1389",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "9707",
+						"_group_id": "1389",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с LUX кружева",
+						"currencyId": "UAH",
+						"price": "638",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1431/0312977001524811647.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1431/0665795001524811655.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Размер: универсал С/М</span><br /><span>Ткань: дорогое французское кружево</span></p>\r\n"
+						},
+						"vendorCode": "1431",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11339",
+						"_group_id": "1431",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с запахом на груди из софт-ангоры",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1388/0855687001524735969.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1388/0884381001524735971.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: софт-ангора</p> "
+						},
+						"vendorCode": "1388-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Сиреневый"
+							}
+						],
+						"_id": "9698",
+						"_group_id": "1388",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Льняной ромпер с молнией на груди",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1787/0507733001527794974.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1787/0509363001527794974.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: лен&nbsp;</p> "
+						},
+						"vendorCode": "1787",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "14121",
+						"_group_id": "1787",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с принтом и открытыми плечами",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1811/0485492001528136376.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1811/0486823001528136376.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: коттон</p> "
+						},
+						"vendorCode": "1811",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "14245",
+						"_group_id": "1811",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с запахом декорированный искусственным жемчугом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1818/0532329001528138357.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1818/0533282001528138357.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1818/0533974001528138357.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп шифон</p> "
+						},
+						"vendorCode": "1818",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "14275",
+						"_group_id": "1818",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и шортами в полоску",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1931/0319438001528919219.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1931/0333383001528919219.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "1931-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "15551",
+						"_group_id": "1931",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией и ярким узором",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1932/0258656001528919630.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1932/0287020001528919630.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1932",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "14992",
+						"_group_id": "1932",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией и ярким узором",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1932/0258656001528919630.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1932/0287020001528919630.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1931-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "14993",
+						"_group_id": "1932",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией в розовую полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1936/0051895001528920514.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1936/0061012001528920514.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1936",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "15540",
+						"_group_id": "1936",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией в розовую полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1936/0051895001528920514.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1936/0061012001528920514.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1936-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "15541",
+						"_group_id": "1936",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в полоску с присборенной талией",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1939/0097343001528921624.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1939/0113673001528921624.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1939-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15017",
+						"_group_id": "1939",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в полоску с присборенной талией",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1939/0097343001528921624.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1939/0113673001528921624.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "1939",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15016",
+						"_group_id": "1939",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с принтом в котики",
+						"currencyId": "UAH",
+						"price": "429",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2001/0689554001529825544.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2001/0697570001529825544.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2001/0703261001529825544.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: костюмка барби&nbsp;</p> "
+						},
+						"vendorCode": "2001",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15460",
+						"_group_id": "2001",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и цветочным шортами",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2008/0918869001529833135.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2008/0928225001529833135.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2008",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15484",
+						"_group_id": "2008",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и шортами в полоску",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1931/0319438001528919219.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1931/0333383001528919219.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "1931",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "15550",
+						"_group_id": "1931",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и цветочным шортами",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2008/0918869001529833135.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2008/0928225001529833135.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2008-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15485",
+						"_group_id": "2008",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с геометрическим рисунком",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2011/0525430001529834244.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2011/0535790001529834244.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2011/0546201001529834244.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2011",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15494",
+						"_group_id": "2011",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с геометрическим рисунком",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2011/0525430001529834244.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2011/0535790001529834244.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2011/0546201001529834244.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2011-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15495",
+						"_group_id": "2011",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с цветочным рисунком",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2012/0318484001529834323.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2012/0328661001529834323.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2012",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17050",
+						"_group_id": "2012",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в разнотонную полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2013/0602653001529834363.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2013/0611851001529834363.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2013",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17048",
+						"_group_id": "2013",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с летним принтом",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2014/0454830001529834501.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2014/0465552001529834501.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2014/0474271001529834501.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2014",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17046",
+						"_group_id": "2014",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон на бретельках с летним принтом",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2015/0731233001529834589.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2015/0739603001529834589.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2015",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17044",
+						"_group_id": "2015",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией в мятную полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2024/0339514001529835791.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2024/0348306001529835791.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2024",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "15538",
+						"_group_id": "2024",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с присборенной талией в мятную полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2024/0339514001529835791.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2024/0348306001529835791.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2024-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "15539",
+						"_group_id": "2024",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и шортами в розовую полоску",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2026/0821179001529932807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2026/0827776001529932807.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2026-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "15549",
+						"_group_id": "2026",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и шортами в розовую полоску",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2026/0821179001529932807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2026/0827776001529932807.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2026",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "15548",
+						"_group_id": "2026",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и цветочным рисунком на шортах",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2027/0003133001529932931.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2027/0010765001529932931.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2027/0015959001529932931.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2027-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15555",
+						"_group_id": "2027",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер с гипюровым верхом и цветочным рисунком на шортах",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2027/0003133001529932931.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2027/0010765001529932931.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2027/0015959001529932931.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: гипюр , софт, трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "2027",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "15554",
+						"_group_id": "2027",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер в полоску с запахом на груди",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2037/0852707001530012633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2037/0860736001530012633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2037/0867798001530012633.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп костюмка</p> "
+						},
+						"vendorCode": "2037-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17024",
+						"_group_id": "2037",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер в полоску с запахом на груди",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "0",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2037/0852707001530012633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2037/0860736001530012633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2037/0867798001530012633.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп костюмка</p> "
+						},
+						"vendorCode": "2037",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17023",
+						"_group_id": "2037",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон на бретельках в полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2045/0151059001530125787.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2045/0161061001530125787.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2045/0170287001530125787.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: хлопок</p> "
+						},
+						"vendorCode": "2045",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17019",
+						"_group_id": "2045",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Однотонный ромпер на бретелях",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2069/0656312001530353298.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2069/0664496001530353298.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2069/0672572001530353298.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп-костюмка&nbsp;</p> "
+						},
+						"vendorCode": "2069-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "15796",
+						"_group_id": "2069",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Однотонный ромпер на бретелях",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2069/0656312001530353298.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2069/0664496001530353298.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2069/0672572001530353298.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп-костюмка&nbsp;</p> "
+						},
+						"vendorCode": "2069",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "15795",
+						"_group_id": "2069",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный ромпер с запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2102/0786850001530636166.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2102/0795973001530636166.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2102-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "16301",
+						"_group_id": "2102",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный ромпер с запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2102/0786850001530636166.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2102/0795973001530636166.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2102",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "16300",
+						"_group_id": "2102",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный ромпер в полоску",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2173/0818998001530876819.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2173/0832326001530876819.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2173",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "16298",
+						"_group_id": "2173",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный ромпер в полоску",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2173/0818998001530876819.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2173/0832326001530876819.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2173-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "16299",
+						"_group_id": "2173",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый ромпер в полоску с запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2174/0652114001530876996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2174/0664742001530876996.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2174-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "16305",
+						"_group_id": "2174",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый ромпер в полоску с запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2174/0652114001530876996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2174/0664742001530876996.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2174",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "16304",
+						"_group_id": "2174",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Розовый ромпер в полоску и запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2175/0394675001530877088.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2175/0471792001530877088.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2175/0494376001530877088.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2175",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "16310",
+						"_group_id": "2175",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Розовый ромпер в полоску и запахом на груди",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2175/0394675001530877088.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2175/0471792001530877088.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2175/0494376001530877088.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2175-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "16311",
+						"_group_id": "2175",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Джинсовый ромпер с принтом в звездочки",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2214/0310314001531125629.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2214/0319826001531125629.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2214/0328121001531125629.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: джинс</p> "
+						},
+						"vendorCode": "2214",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "16494",
+						"_group_id": "2214",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер в геометрический рисунок с запахом на груди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2225/0506218001531481955.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2225/0514116001531481955.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2225/0520677001531481955.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2225",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "16690",
+						"_group_id": "2225",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер в геометрический рисунок с запахом на груди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2225/0506218001531481955.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2225/0514116001531481955.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2225/0520677001531481955.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2225-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "16691",
+						"_group_id": "2225",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон на бретельках в полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2045/0151059001530125787.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2045/0161061001530125787.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2045/0170287001530125787.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: хлопок</p> "
+						},
+						"vendorCode": "2045-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17020",
+						"_group_id": "2045",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон на бретельках с летним принтом",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2015/0731233001529834589.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2015/0739603001529834589.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2015-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17045",
+						"_group_id": "2015",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с летним принтом",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2014/0454830001529834501.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2014/0465552001529834501.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2014/0474271001529834501.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2014-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17047",
+						"_group_id": "2014",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в разнотонную полоску",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2013/0602653001529834363.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2013/0611851001529834363.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2013-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17049",
+						"_group_id": "2013",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с цветочным рисунком",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2012/0318484001529834323.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2012/0328661001529834323.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: креп</p> "
+						},
+						"vendorCode": "2012-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Цветы"
+							}
+						],
+						"_id": "17051",
+						"_group_id": "2012",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон на бретельках с геометрическим рисунком",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2278/0207059001532087261.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2278/0215346001532087261.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2278",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "17157",
+						"_group_id": "2278",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Хлопковый ромпер в полоску с оборкой и открытыми плечами",
+						"currencyId": "UAH",
+						"price": "407",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2299/0668344001532341550.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2299/0675091001532341550.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2299/0683805001532341550.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: хлопок&nbsp;</p> "
+						},
+						"vendorCode": "2299",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17276",
+						"_group_id": "2299",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Шелковый комбинезон с рюшами цвета хаки",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2302/0423897001532345409.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2302/0433262001532345409.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2302/0444473001532345409.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2302/0454318001532345409.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2302/0463377001532345409.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк армани&nbsp;</p> "
+						},
+						"vendorCode": "2302",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "23004",
+						"_group_id": "2302",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый комбинезон с запахом",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2304/0935825001532345792.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2304/0952068001532345792.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2304/0960337001532345792.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2304",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17298",
+						"_group_id": "2304",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в полоску с запахом",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2305/0183805001532346065.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2305/0192631001532346065.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2305/0201423001532346065.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: летняя костюмка</p> "
+						},
+						"vendorCode": "2305",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17303",
+						"_group_id": "2305",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Льняной комбинезон в полоску с запахом",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2306/0515369001532345971.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2306/0524950001532345971.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: лен&nbsp;</p> "
+						},
+						"vendorCode": "2306",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "17302",
+						"_group_id": "2306",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Розовый шелковый комбинезон с рюшами",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2322/0641908001532428749.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2322/0661436001532428749.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2322/0681282001532428749.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2322/0689066001532428749.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк армани&nbsp;</p> "
+						},
+						"vendorCode": "2322",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "17410",
+						"_group_id": "2322",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный шелковый комбинезон с рюшами",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2323/0545310001532428836.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2323/0553890001532428836.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2323/0563192001532428836.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк армани&nbsp;</p> "
+						},
+						"vendorCode": "2323",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "17412",
+						"_group_id": "2323",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый шелковый комбинезон с рюшами",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2324/0818608001532428906.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2324/0827636001532428906.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк армани&nbsp;</p> "
+						},
+						"vendorCode": "2324",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17414",
+						"_group_id": "2324",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон с запахом и принтом в птицы",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2468/0013682001533813294.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2468/0077027001533813294.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2468/0977566001533813293.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2468",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "18452",
+						"_group_id": "2468",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый ромпер на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2517/0171209001534137562.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2517/0172162001534137562.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2517/0172969001534137562.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2517/0173789001534137562.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2517",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "18781",
+						"_group_id": "2517",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Джинсовый ромпер на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "561",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2518/0485141001534137861.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2518/0486080001534137861.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2518/0487135001534137861.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: джинс</p> "
+						},
+						"vendorCode": "2518",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "18780",
+						"_group_id": "2518",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер в полоску на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2522/0352014001534146252.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2522/0353151001534146252.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2522/0354038001534146252.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2522",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "18795",
+						"_group_id": "2522",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Ромпер цвета бутылки на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2523/0678494001534146370.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2523/0679690001534146370.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2523/0680528001534146370.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2523/0681541001534146370.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2523",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "18810",
+						"_group_id": "2523",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный ромпер на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2527/0606812001534146967.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2527/0607733001534146967.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2527/0608520001534146967.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2527",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "18812",
+						"_group_id": "2527",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый комбинезон на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2528/0605392001534147130.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2528/0606357001534147130.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2528/0607139001534147130.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2528",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "18815",
+						"_group_id": "2528",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый комбинезон на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2529/0563362001534147249.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2529/0564349001534147249.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2529",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "18817",
+						"_group_id": "2529",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2530/0883225001534148072.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2530/0884177001534148072.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2530",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "18820",
+						"_group_id": "2530",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в тропический принт на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2531/0659456001534148334.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2531/0660674001534148334.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: хлопок</p> "
+						},
+						"vendorCode": "2531",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "18823",
+						"_group_id": "2531",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Джинсовый комбинезон на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2532/0917975001534148457.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2532/0918953001534148457.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2532/0919855001534148457.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: джинс</p> "
+						},
+						"vendorCode": "2532",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "18825",
+						"_group_id": "2532",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в полоску на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2537/0173029001534149230.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2537/0174135001534149230.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюм-лето</p> "
+						},
+						"vendorCode": "2537",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "18837",
+						"_group_id": "2537",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Изумрудный комбинезон на пуговицах с пояском",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2538/0079666001534149342.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2538/0080537001534149342.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2538/0081532001534149342.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2538/0082464001534149342.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп-костюмка</p> "
+						},
+						"vendorCode": "2538",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "18839",
+						"_group_id": "2538",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон с запахом на груди",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2568/0509951001534231781.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2568/0510946001534231781.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2568",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "18961",
+						"_group_id": "2568",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Голубой комбинезон с запахом на груди",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2569/0969567001534231871.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2569/0970595001534231871.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2569",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "18963",
+						"_group_id": "2569",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый комбинезон с запахом на груди",
+						"currencyId": "UAH",
+						"price": "462",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2578/0980240001534239225.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2578/0981319001534239225.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2578/0982161001534239225.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: софт</p> "
+						},
+						"vendorCode": "2578",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "18993",
+						"_group_id": "2578",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Шелковый комбинезон в разнотонную полоску с запахом на груди -1",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2662/0150575001534338021.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2662/0151742001534338021.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2662/0152893001534338021.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк-армани&nbsp;</p> "
+						},
+						"vendorCode": "2662",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "19517",
+						"_group_id": "2662",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Шелковый комбинезон в разнотонную полоску с запахом на груди -2",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2663/0482133001534338143.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2663/0483346001534338143.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2663/0484344001534338143.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: шелк-армани&nbsp;</p> "
+						},
+						"vendorCode": "2663",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Полоска"
+							}
+						],
+						"_id": "20291",
+						"_group_id": "2663",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Мятный комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2769/0477962001535450404.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2769/0479573001535450404.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2769/0481016001535450404.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2769",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "20150",
+						"_group_id": "2769",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Мятный комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2769/0477962001535450404.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2769/0479573001535450404.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2769/0481016001535450404.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2769-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "20151",
+						"_group_id": "2769",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2770/0429716001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0430747001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0431528001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0432457001535450690.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2770-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20155",
+						"_group_id": "2770",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2770/0429716001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0430747001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0431528001535450690.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2770/0432457001535450690.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2770",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20154",
+						"_group_id": "2770",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Персиковый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2771/0799422001535450744.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2771/0800479001535450744.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2771/0801380001535450744.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2771",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Персиковый"
+							}
+						],
+						"_id": "20160",
+						"_group_id": "2771",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Персиковый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2771/0799422001535450744.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2771/0800479001535450744.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2771/0801380001535450744.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2771-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Персиковый"
+							}
+						],
+						"_id": "20161",
+						"_group_id": "2771",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2772/0350266001535450837.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2772/0351370001535450837.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2772/0352204001535450837.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2772-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20165",
+						"_group_id": "2772",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2772/0350266001535450837.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2772/0351370001535450837.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2772/0352204001535450837.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2772",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20164",
+						"_group_id": "2772",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-зеленый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2773/0654898001535450909.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2773/0655977001535450909.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2773/0656852001535450909.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2773",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20526",
+						"_group_id": "2773",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон с запахом и лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2776/0129526001535452767.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2776/0130639001535452767.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2776/0131485001535452767.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "2776",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20194",
+						"_group_id": "2776",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый комбинезон с запахом и лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2777/0841601001535452908.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2777/0842870001535452908.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "2777",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "20196",
+						"_group_id": "2777",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон цвета хаки с запахом и лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2778/0631174001535452979.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2778/0632251001535452979.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2778/0633171001535452979.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "2778",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22989",
+						"_group_id": "2778",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый комбинезон с запахом и лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2779/0683315001535453109.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2779/0684513001535453109.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2779/0685409001535453109.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2779/0686201001535453109.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "2779",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20201",
+						"_group_id": "2779",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный комбинезон с запахом и красными лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "4",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2780/0202895001535453250.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2780/0203996001535453250.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2780/0204917001535453250.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "2780",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20206",
+						"_group_id": "2780",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в клетку с запахом и красными лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "3",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2781/0658639001535453388.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2781/0659779001535453388.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2781/0660718001535453388.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2781/0661736001535453388.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотажная костюмка</span></p> "
+						},
+						"vendorCode": "2781",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Клетка"
+							}
+						],
+						"_id": "20205",
+						"_group_id": "2781",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2806/0578696001535657950.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2806/0580651001535657950.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2806/0582185001535657950.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2806-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20521",
+						"_group_id": "2806",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2807/0617878001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0619109001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0619975001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0621039001535658292.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2807",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20375",
+						"_group_id": "2807",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2806/0578696001535657950.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2806/0580651001535657950.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2806/0582185001535657950.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2806",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20520",
+						"_group_id": "2806",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2807/0617878001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0619109001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0619975001535658292.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2807/0621039001535658292.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2807-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20376",
+						"_group_id": "2807",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2808/0669809001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0671043001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0672050001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0672858001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0673834001535658597.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2808-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20380",
+						"_group_id": "2808",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2808/0669809001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0671043001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0672050001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0672858001535658597.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2808/0673834001535658597.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2808",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20379",
+						"_group_id": "2808",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2809/0038507001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0039673001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0040658001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0041555001535658694.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2809",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "20385",
+						"_group_id": "2809",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый кружевной элегантный комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2809/0038507001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0039673001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0040658001535658694.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2809/0041555001535658694.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Французкое кружево</li>\r\n <li>Глубокий V образный вырез&nbsp;&nbsp;</li>\r\n <li>Длиные&nbsp; рукава</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2809-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "20386",
+						"_group_id": "2809",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый ромпер с запахом на груди из люрекса",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2817/0554848001535711836.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2817/0556029001535711836.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: люрекс</p> "
+						},
+						"vendorCode": "2817-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "20424",
+						"_group_id": "2817",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый ромпер с запахом на груди из люрекса",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2817/0554848001535711836.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2817/0556029001535711836.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: люрекс</p> "
+						},
+						"vendorCode": "2817",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "20423",
+						"_group_id": "2817",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серебристый ромпер с запахом на груди из люрекса",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "16",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2818/0799865001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0800950001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0801959001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0802970001535711983.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: люрекс</p> "
+						},
+						"vendorCode": "2818",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "20518",
+						"_group_id": "2818",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серебристый ромпер с запахом на груди из люрекса",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2818/0799865001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0800950001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0801959001535711983.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2818/0802970001535711983.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: люрекс</p> "
+						},
+						"vendorCode": "2818-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "20519",
+						"_group_id": "2818",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-зеленый комбинезон с присборенной талией и футболкой в комплекте",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2773/0654898001535450909.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2773/0655977001535450909.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2773/0656852001535450909.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:&nbsp;<span>креп-костюмка + трикотаж</span></p>\r\n"
+						},
+						"vendorCode": "2773-1",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20527",
+						"_group_id": "2773",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Изумрудный велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2934/0981929001536069167.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2934/0983084001536069167.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2934",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "21045",
+						"_group_id": "2934",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2935/0189734001536069237.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2935/0191006001536069237.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2935/0192144001536069237.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2935",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "21047",
+						"_group_id": "2935",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2936/0410301001536069421.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2936/0411425001536069421.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2936",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "21049",
+						"_group_id": "2936",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2937/0073470001536069482.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2937/0074650001536069482.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2937/0075644001536069482.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий велюр</li>\r\n <li>Пояс на завязках</li>\r\n <li>Молнии на коленях&nbsp;</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2937",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "21051",
+						"_group_id": "2937",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный комбинезон в полоску с запахом на груди -1",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3189/0861791001538568337.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3189/0863106001538568337.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: трикотаж</p> "
+						},
+						"vendorCode": "3189",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "22475",
+						"_group_id": "3189",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный комбинезон в полоску с запахом на груди -2",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3190/0469295001538568569.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3190/0470593001538568569.jpg"
+						],
+						"description": {
+							"__cdata": " <p>ткань: трикотаж</p> "
+						},
+						"vendorCode": "3190",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "22477",
+						"_group_id": "3190",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комбинезон в клетку с запахом и лампасами",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3191/0496315001538568717.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3191/0497743001538568717.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3191/0499102001538568717.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж</span></p> "
+						},
+						"vendorCode": "3191",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Клетка"
+							}
+						],
+						"_id": "22479",
+						"_group_id": "3191",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон бордового цвета с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3368/0271862001539600650.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3368/0274013001539600650.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3368/0274919001539600650.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3368",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "23671",
+						"_group_id": "3368",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон цвета хаки с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3359/0843499001539596899.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3359/0844569001539596899.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3359",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "23623",
+						"_group_id": "3359",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон темно-зеленого цвета с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3360/0634432001539597172.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3360/0635535001539597172.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3360/0636562001539597172.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3360/0637646001539597172.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3360",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "23627",
+						"_group_id": "3360",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон красного цвета с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3361/0415395001539597345.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3361/0416515001539597345.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3361/0417491001539597345.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3361/0418477001539597345.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3361",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "23668",
+						"_group_id": "3361",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон зеленого цвета в горошек с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "561",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3365/0268084001539598682.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3365/0269512001539598682.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3365/0270752001539598682.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3365",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "24191",
+						"_group_id": "3365",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон черного цвета в горошек с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "561",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3366/0814843001539599633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3366/0816144001539599633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3366/0817211001539599633.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3366",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "23642",
+						"_group_id": "3366",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон черного цвета с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3369/0687169001539601272.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3369/0688215001539601272.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3369",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "23673",
+						"_group_id": "3369",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный комбинезон бордового цвета в горошек с рюшами на груди",
+						"currencyId": "UAH",
+						"price": "561",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3444/0765761001539865867.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3444/0767157001539865867.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3444/0768327001539865867.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3444/0769463001539865867.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: креп-костюмка</span></p> "
+						},
+						"vendorCode": "3444",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "24192",
+						"_group_id": "3444",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3598/0853096001541022099.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3598/0854388001541022099.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3598/0855400001541022099.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3598",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "25367",
+						"_group_id": "3598",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с лацканами",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3514/0587076001540041793.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3514/0588263001540041793.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3514/0589310001540041793.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: костюмка&nbsp;</span></p> "
+						},
+						"vendorCode": "3514",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Сиреневый"
+							}
+						],
+						"_id": "24707",
+						"_group_id": "3514",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с лацканами -2",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3515/0293709001540042266.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3515/0294985001540042266.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: костюмка&nbsp;</span></p> "
+						},
+						"vendorCode": "3515",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "24709",
+						"_group_id": "3515",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3599/0137038001541022210.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3599/0138462001541022210.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3599/0139576001541022210.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3599",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "27561",
+						"_group_id": "3599",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3600/0343907001541022578.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3600/0345173001541022578.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3600/0346274001541022578.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3600/0347597001541022578.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3600",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "25371",
+						"_group_id": "3600",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Горчичный меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3681/0599840001541157807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3681/0601172001541157807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3681/0602341001541157807.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3681",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Коричневый"
+							}
+						],
+						"_id": "25955",
+						"_group_id": "3681",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3950/0570910001542388425.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3950/0571567001542388425.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3950",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "27558",
+						"_group_id": "3950",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-серый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3951/0016900001542388668.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3951/0017557001542388668.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3951",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "27559",
+						"_group_id": "3951",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3952/0166398001542388823.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3952/0167092001542388823.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3952/0167668001542388823.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3952",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "27557",
+						"_group_id": "3952",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-серый меланжевый комбинезон с вырезом на спинке",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3953/0468222001542389067.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3953/0468835001542389067.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: ангора -софт</span></p> "
+						},
+						"vendorCode": "3953",
+						"categoryId": {
+							"_portal_id": "331",
+							"__text": "22"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "27562",
+						"_group_id": "3953",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с рукавами из сетки добби",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3989/0311317001542558583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3989/0312006001542558583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3989/0312629001542558583.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп костюмка + сетка добби&nbsp;</p> "
+						},
+						"vendorCode": "3989",
+						"categoryId": [
+							"22",
+							{
+								"_portal_id": "331",
+								"__text": "27"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "27886",
+						"_group_id": "3989",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный бордовый комбинезон с рукавами из сетки добби",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3991/0864610001542577904.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3991/0865535001542577904.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп костюмка + сетка добби&nbsp;</p> "
+						},
+						"vendorCode": "3991",
+						"categoryId": [
+							"22",
+							{
+								"_portal_id": "331",
+								"__text": "27"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "27887",
+						"_group_id": "3991",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с рукавами из сетки с вышивкой",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3993/0821613001542578179.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3993/0822343001542578179.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3993/0822949001542578179.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп костюмка + сетка с вышивкой</p> "
+						},
+						"vendorCode": "3993",
+						"categoryId": [
+							"22",
+							{
+								"_portal_id": "331",
+								"__text": "27"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "27898",
+						"_group_id": "3993",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с рукавами из сетки с вышивкой",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/4011/0853338001542582401.jpg",
+							"https://berezkashop.in.ua/assets/images/items/4011/0854021001542582401.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп костюмка + сетка с вышивкой</p> "
+						},
+						"vendorCode": "4011",
+						"categoryId": [
+							"22",
+							{
+								"_portal_id": "331",
+								"__text": "27"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "28071",
+						"_group_id": "4011",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Элегантный комбинезон с рукавами из сетки с вышивкой",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/4013/0985603001542582652.jpg",
+							"https://berezkashop.in.ua/assets/images/items/4013/0986272001542582652.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: креп костюмка + сетка с вышивкой</p> "
+						},
+						"vendorCode": "4013",
+						"categoryId": [
+							"22",
+							{
+								"_portal_id": "331",
+								"__text": "27"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "28080",
+						"_group_id": "4013",
+						"_available": "true",
+						"_selling_type": "r"
+					}
+				]
+			}
+		},
+		"_date": "2018-11-21 19:21:38"
+	}
+}

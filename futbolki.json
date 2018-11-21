@@ -1,0 +1,1799 @@
+{
+	"yml_catalog": {
+		"shop": {
+			"name": "Berezka",
+			"company": "Berezkashop",
+			"url": "https://berezkashop.in.ua/",
+			"categories": {
+				"category": {
+					"_id": "105",
+					"__text": "Футболки"
+				}
+			},
+			"offers": {
+				"offer": [
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1218/0736056001521225124.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1218/0738461001521225124.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1218/0741139001521225124.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1218-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17494",
+						"_group_id": "1218",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1240/0756915001521261430.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1240",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17500",
+						"_group_id": "1240",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1241/0609604001521261582.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1241-1",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "17499",
+						"_group_id": "1241",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1241/0609604001521261582.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1241",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "17498",
+						"_group_id": "1241",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1242/0405514001521261640.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1242-1",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "17497",
+						"_group_id": "1242",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1242/0405514001521261640.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1242",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "17496",
+						"_group_id": "1242",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1221/0363963001521225386.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1221/0366022001521225386.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1221/0368254001521225386.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1221-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17528",
+						"_group_id": "1221",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1221/0363963001521225386.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1221/0366022001521225386.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1221/0368254001521225386.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1221-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17529",
+						"_group_id": "1221",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1216/0396118001521221859.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1216/0398768001521221859.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1216/0401024001521221859.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1216-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17473",
+						"_group_id": "1216",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1216/0396118001521221859.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1216/0398768001521221859.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1216/0401024001521221859.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1216-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17474",
+						"_group_id": "1216",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1217/0345861001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0348366001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0351207001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0353798001521224996.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1217-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17459",
+						"_group_id": "1217",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1217/0345861001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0348366001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0351207001521224996.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1217/0353798001521224996.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1217-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17460",
+						"_group_id": "1217",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1219/0837411001521225226.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1219/0839818001521225226.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1219/0842447001521225226.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1219-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17487",
+						"_group_id": "1219",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1220/0164721001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0166811001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0168609001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0181598001521225318.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1220-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17480",
+						"_group_id": "1220",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1222/0225475001521225473.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1222/0227521001521225473.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1222/0229439001521225473.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1222-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17521",
+						"_group_id": "1222",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1222/0225475001521225473.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1222/0227521001521225473.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1222/0229439001521225473.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1222-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17522",
+						"_group_id": "1222",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с ярким принтом",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1565/0009620001525788004.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1565/0011665001525788004.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1565/0014468001525788004.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:</p>\r\n <p>верх - габардин</p>\r\n <p>низ - креп костюмка</p>\r\n"
+						},
+						"vendorCode": "1565-3",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17533",
+						"_group_id": "1565",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с ярким принтом",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1565/0009620001525788004.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1565/0011665001525788004.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1565/0014468001525788004.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:</p>\r\n <p>верх - габардин</p>\r\n <p>низ - креп костюмка</p>\r\n"
+						},
+						"vendorCode": "1565-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17534",
+						"_group_id": "1565",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с ярким принтом",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1568/0057450001525809164.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1568/0071413001525809164.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1568/0630111001525809170.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:</p>\r\n <p>верх - габардин</p>\r\n <p>низ - креп костюмка</p>\r\n"
+						},
+						"vendorCode": "1568-3",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17550",
+						"_group_id": "1568",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с ярким принтом",
+						"currencyId": "UAH",
+						"price": "572",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1568/0057450001525809164.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1568/0071413001525809164.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1568/0630111001525809170.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>ткань:</p>\r\n <p>верх - габардин</p>\r\n <p>низ - креп костюмка</p>\r\n"
+						},
+						"vendorCode": "1568-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17551",
+						"_group_id": "1568",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Бордовые шорты + футболка в цветочный принт",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1662/0898176001526470299.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1662/0899270001526470299.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1662-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17545",
+						"_group_id": "1662",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Шорты цвета хаки + футболка в принт с котиками",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1663/0609914001526470394.jpg",
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1663-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22995",
+						"_group_id": "1663",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Персиковые шорты + футболка в клетку",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1844/0890594001528191080.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1844/0891790001528191080.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка габардин + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1844-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Персиковый"
+							}
+						],
+						"_id": "17574",
+						"_group_id": "1844",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Темно-зеленые шорты + футболка в принт с башенками",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1883/0505416001528618864.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1883/0506576001528618864.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1883-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "17569",
+						"_group_id": "1883",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Темно-зеленые шорты + футболка в принт с башенками",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "18",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1883/0505416001528618864.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1883/0506576001528618864.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1883-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "17568",
+						"_group_id": "1883",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Шорты цвета хаки + футболка в принт с котиками",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1663/0609914001526470394.jpg",
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1663-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22996",
+						"_group_id": "1663",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1215/0771943001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0774122001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0776167001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0777977001521221265.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1215-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17466",
+						"_group_id": "1215",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1215/0771943001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0774122001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0776167001521221265.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1215/0777977001521221265.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1215-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17467",
+						"_group_id": "1215",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1220/0164721001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0166811001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0168609001521225318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1220/0181598001521225318.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1220-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17481",
+						"_group_id": "1220",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1219/0837411001521225226.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1219/0839818001521225226.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1219/0842447001521225226.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1219-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17488",
+						"_group_id": "1219",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1218/0736056001521225124.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1218/0738461001521225124.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1218/0741139001521225124.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1218-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17495",
+						"_group_id": "1218",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой в виде дольки арбуза",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/1240/0756915001521261430.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий трикотаж-вискоза</li>\r\n <li>Круглый ворот</li>\r\n <li>Отделка нашивкой</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1240-1",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "17501",
+						"_group_id": "1240",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1223/0441769001521225525.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1223/0443989001521225525.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1223-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17507",
+						"_group_id": "1223",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Суженные книзу брюки с поясом и футболкой с аппликацией",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1223/0441769001521225525.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1223/0443989001521225525.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Классическая талия</li>\r\n <li>Съемный пояс</li>\r\n <li>Карманы</li>\r\n <li>Суженные книзу штанины</li>\r\n <li>Аппликация</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1223-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "17508",
+						"_group_id": "1223",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Бордовые шорты + футболка в цветочный принт",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1662/0898176001526470299.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1662/0899270001526470299.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1662-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17546",
+						"_group_id": "1662",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черные шорты + футболка в орнамент",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "17",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1653/0436870001526391132.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1653/0437572001526391132.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + трикотаж</p> "
+						},
+						"vendorCode": "1653-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "17556",
+						"_group_id": "1653",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черные шорты + футболка в орнамент",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "17",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1653/0436870001526391132.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1653/0437572001526391132.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + трикотаж</p> "
+						},
+						"vendorCode": "1653-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "17557",
+						"_group_id": "1653",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: шорты + футболка в цветочный принт",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1661/0945264001526470142.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1661/0946420001526470142.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1661-6",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17562",
+						"_group_id": "1661",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: шорты + футболка в цветочный принт",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1661/0945264001526470142.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1661/0946420001526470142.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1661-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "17563",
+						"_group_id": "1661",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Персиковые шорты + футболка в клетку",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1844/0890594001528191080.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1844/0891790001528191080.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: костюмка габардин + штапель&nbsp;</p> "
+						},
+						"vendorCode": "1844-7",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Персиковый"
+							}
+						],
+						"_id": "17575",
+						"_group_id": "1844",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с совой",
+						"currencyId": "UAH",
+						"price": "110",
+						"quantity_in_stock": "0",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2328/0124319001532513321.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2328/0139061001532513321.jpg"
+						],
+						"description": {
+							"__cdata": " <ul>\r\n <li>&nbsp;ткань: дайвиг&nbsp;</li>\r\n </ul> "
+						},
+						"vendorCode": "2338",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "18868",
+						"_group_id": "2328",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка в клетку с принтом на спинке",
+						"currencyId": "UAH",
+						"price": "143",
+						"quantity_in_stock": "2",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: коттон + дайвинг&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2376",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Клетка"
+							}
+						],
+						"_id": "18021",
+						"_group_id": "2376",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Легкая блузка в геометрический принт",
+						"currencyId": "UAH",
+						"price": "99",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2409/0157552001533632976.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: штапель&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2409",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "18126",
+						"_group_id": "2409",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -1",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2739/0080361001534926100.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2739",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "19940",
+						"_group_id": "2739",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -2",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2740/0914329001534926362.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2740",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "19939",
+						"_group_id": "2740",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -3",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2741/0975529001534926511.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2741",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19943",
+						"_group_id": "2741",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -5",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2743/0117584001534926723.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2743",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "19948",
+						"_group_id": "2743",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -6",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2744/0488039001534926802.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2744",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "19950",
+						"_group_id": "2744",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -7",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2745/0146837001534926862.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2745",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19952",
+						"_group_id": "2745",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -8",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2746/0545322001534926911.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2746",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Мятный"
+							}
+						],
+						"_id": "19954",
+						"_group_id": "2746",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -9",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2747/0504647001534926986.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2747",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19956",
+						"_group_id": "2747",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -10",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2748/0162592001534927073.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2748",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "19958",
+						"_group_id": "2748",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -11",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2749/0324833001534927138.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2749",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19960",
+						"_group_id": "2749",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Футболка с нашивкой -12",
+						"currencyId": "UAH",
+						"price": "198",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2750/0367763001534927189.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>ткань: вискоза&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2750",
+						"categoryId": {
+							"_portal_id": "35404",
+							"__text": "105"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "19962",
+						"_group_id": "2750",
+						"_available": "true",
+						"_selling_type": "r"
+					}
+				]
+			}
+		},
+		"_date": "2018-11-21 19:18:13"
+	}
+}

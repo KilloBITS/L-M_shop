@@ -37,8 +37,8 @@ router.get('/', function(req, res, next){
   }
 
   //раззчет бонуса
-  var vernissageCoin = (parseInt(sum) / 100);
-  if(vernissageCoin > 1){
+  var lmCoin = (parseInt(sum) / 100);
+  if(lmCoin > 1){
     //обработка бонуса
   }
 

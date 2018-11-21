@@ -1145,11 +1145,16 @@
                     <input type="text" id="tSale" class="form-control" placeholder="Процент скидки (10, 20, 30, 40, 50)">
                   </div>
 
-                  <div class="form-group" style="float: right; width: calc(50% - 5px)">
+                  <div class="form-group" style="float: right; width: calc(50% - 5px)">results_suppliers
                     <label>Поставщик</label>
-                    <input type="text" id="tPostavka" class="form-control" placeholder="Введите поставщика">
+                    <select id="tPostavka" class="form-control">
+                    <option value="none" disabled selected>Выберите категорию</option>
+                    <% for(var i = 0; i < suppliersData.length; i++){ %>
+                        <option value="<%= suppliersData[i].name %>"><%= suppliersData[i].name %></option>
+                    <% } %>
+                    </select>
                   </div>
-                  
+
                   <div class="form-group">
                     <label>Изображение товара</label>
                     <button type="button" class="btn btn-block btn-warning btn-lg" id="selected_tov_image" onclick="$('#tFile').click()" style="    position: relative;"><img id="tImageDemo"> Выбрать изображение</button>
