@@ -147,7 +147,10 @@
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
-                  <img class="group list-group-image" src="<%= tovarArr[i].image %>" alt="" /> <!-- ../../../data/tovar/ -->
+
+                    <img class="group list-group-image" src="<%= tovarArr[i].image[0] %>" alt="" />
+
+                   <!-- ../../../data/tovar/ -->
                   <div class="caption">
                     <div class="blockOfNavBtn">
                       <% if(sessionUser !== undefined){ %>
@@ -211,8 +214,9 @@
 
     <% if(offLength > 24){ %>
       <div id="pagination"></div>
+
       <script>
-        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), 1));
+        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage) %>));
       </script>
     <% } %>
 	</div>

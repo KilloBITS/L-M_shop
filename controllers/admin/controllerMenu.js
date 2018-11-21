@@ -40,7 +40,7 @@ var addCategory = (req, res, next) => {
            let newMenuUk = {
              name: req.body.cat_name_ua,
              podlink: ["/"],
-             glink: req.body.test_url,
+             glink: req.body.test_url + '&page=0',
              categories: parseInt(next),
              edited: true,
              index: parseInt(results_menu2[0].index) + 1
@@ -49,7 +49,7 @@ var addCategory = (req, res, next) => {
            let newMenuRu = {
              name: req.body.cat_name_ru,
              podlink: ["/"],
-             glink: req.body.test_url,
+             glink: req.body.test_url + '&page=0',
              categories: parseInt(next),
              edited: true,
              index: parseInt(results_menu2[0].index)+1
@@ -128,9 +128,9 @@ var addNewType = (req, res, next) => {
 
          if(results_config[0].podlink[0] === "/"){
            results_config[0].podlink.splice(0, 1);
-           results_config[0].podlink.push({pname: req.body.catData[0].name, plink:"/shop?c="+results_config[0].categories+","+req.body.catData[2].enType ,types: req.body.catData[2].enType});
+           results_config[0].podlink.push({pname: req.body.catData[0].name, plink:"/shop?c="+results_config[0].categories+","+req.body.catData[2].enType + '&page=0' ,types: req.body.catData[2].enType});
          }else{
-           results_config[0].podlink.push({pname: req.body.catData[0].name, plink:"/shop?c="+results_config[0].categories+","+req.body.catData[2].enType ,types: req.body.catData[2].enType});
+           results_config[0].podlink.push({pname: req.body.catData[0].name, plink:"/shop?c="+results_config[0].categories+","+req.body.catData[2].enType + '&page=0' ,types: req.body.catData[2].enType});
          }
 
          menu.update({index: parseInt(req.body.ind)}, { $set : { podlink: results_config[0].podlink  }});
@@ -139,9 +139,9 @@ var addNewType = (req, res, next) => {
 
           if(results_configuk[0].podlink[0] === "/"){
             results_configuk[0].podlink.splice(0, 1);
-            results_configuk[0].podlink.push({pname: req.body.catData[1].name, plink:"/shop?c="+results_configuk[0].categories+","+req.body.catData[2].enType ,types: req.body.catData[2].enType});
+            results_configuk[0].podlink.push({pname: req.body.catData[1].name, plink:"/shop?c="+results_configuk[0].categories+","+req.body.catData[2].enType + '&page=0' ,types: req.body.catData[2].enType});
           }else{
-            results_configuk[0].podlink.push({pname: req.body.catData[1].name, plink:"/shop?c="+results_configuk[0].categories+","+req.body.catData[2].enType ,types: req.body.catData[2].enType});
+            results_configuk[0].podlink.push({pname: req.body.catData[1].name, plink:"/shop?c="+results_configuk[0].categories+","+req.body.catData[2].enType + '&page=0' ,types: req.body.catData[2].enType});
           }
 
           menuuk.update({index: parseInt(req.body.ind)}, {$set : { podlink: results_configuk[0].podlink}});

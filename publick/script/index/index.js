@@ -189,24 +189,29 @@ var Index = {
         if(scroll >= 1000 && Index.getCounters){
           Index.getCounters = false;
           $.post('/counters', function(res){
-            $(".counters_length:eq(0)").html(parseInt(res.a - (res.a / 4)))
-            $(".counters_length:eq(1)").html(parseInt(res.b - (res.b / 4)))
-            $(".counters_length:eq(2)").html(parseInt(res.c - (res.c / 4)))
-            $(".counters_length:eq(3)").html(parseInt(res.d - (res.d / 4)))
-            STC = setInterval(function(){
-              if(parseInt($(".counters_length:eq(0)").html()) < res.a){
-                $(".counters_length:eq(0)").html( parseInt($(".counters_length:eq(0)").html()) + 1)
-              }
-              if(parseInt($(".counters_length:eq(1)").html()) < res.b){
-                $(".counters_length:eq(1)").html( parseInt($(".counters_length:eq(1)").html()) + 1)
-              }
-              if(parseInt($(".counters_length:eq(2)").html()) < res.c){
-                $(".counters_length:eq(2)").html( parseInt($(".counters_length:eq(2)").html()) + 1)
-              }
-              if(parseInt($(".counters_length:eq(3)").html()) < res.d){
-                $(".counters_length:eq(3)").html( parseInt($(".counters_length:eq(3)").html()) + 1)
-              }
-            }, 10);
+            $(".counters_length:eq(0)").html(417)
+            $(".counters_length:eq(1)").html(res.b)
+            $(".counters_length:eq(2)").html(385)
+            $(".counters_length:eq(3)").html(res.d / 4)
+
+            // $(".counters_length:eq(0)").html(parseInt(res.a - (res.a / 4)))
+            // $(".counters_length:eq(1)").html(parseInt(res.b - (res.b / 4)))
+            // $(".counters_length:eq(2)").html(parseInt(res.c - (res.c / 4)))
+            // $(".counters_length:eq(3)").html(parseInt(res.d - (res.d / 4)))
+            // STC = setInterval(function(){
+            //   if(parseInt($(".counters_length:eq(0)").html()) < res.a){
+            //     $(".counters_length:eq(0)").html( parseInt($(".counters_length:eq(0)").html()) + 1)
+            //   }
+            //   if(parseInt($(".counters_length:eq(1)").html()) < res.b){
+            //     $(".counters_length:eq(1)").html( parseInt($(".counters_length:eq(1)").html()) + 1)
+            //   }
+            //   if(parseInt($(".counters_length:eq(2)").html()) < res.c){
+            //     $(".counters_length:eq(2)").html( parseInt($(".counters_length:eq(2)").html()) + 1)
+            //   }
+            //   if(parseInt($(".counters_length:eq(3)").html()) < res.d){
+            //     $(".counters_length:eq(3)").html( parseInt($(".counters_length:eq(3)").html()) + 1)
+            //   }
+            // }, 10);
           });
         }
     });

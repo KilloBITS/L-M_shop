@@ -1,13 +1,18 @@
 'use strict';
 var BASKET = [];
+var toPage;
 // let pages = 666;
 function createPagination(pages, page) {
+  console.log(pages)
+  console.log(page)
+  toPage = page;
   let str = '<ul>';
   let active;
   let pageCutLow = page - 1;
   let pageCutHigh = page + 1;
   if (page > 1) {
     str += '<li class="page-item previous no"><a onclick="createPagination('+pages+', '+(page-1)+')"><<</a></li>';
+
   }
   if (pages < 6) {
     for (let p = 1; p <= pages; p++) {
@@ -62,6 +67,14 @@ function createPagination(pages, page) {
   document.getElementById('pagination').innerHTML = str;
   return str;
 }
+
+$(document).ready(function(){
+  $(".page-item ").click(function(){
+    // var indexVal = $(this).childNodes
+    // console.log(indexVal)
+    location.href = location.href.split('&')[0] + '&page='+toPage;
+  });
+});
 
 var Index = {
    UPDATE_BASCET: function(){

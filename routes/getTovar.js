@@ -25,6 +25,16 @@ router.get('/*', function(req, res, next){
     searchData = DA[1].split(',');
   }
 
+  var page = req.url.split('page=')[1];
+
+  if(parseInt(page) === 0){
+    var otTovar = 0;
+    var doTovar = 24;
+  }else{
+    var otTovar = 24 * page;
+    var doTovar = otTovar + 24;
+  }
+
   mongoClient.connect(global.baseIP, function(err, client){
     const db = client.db(global.baseName);
     const config = db.collection("config");
@@ -58,20 +68,22 @@ router.get('/*', function(req, res, next){
                  let FILTER = {
                    category: parseInt(searchData[0])
                  };
+
                  if(searchData.length >= 2 ){
-                   FILTER.types = searchData[1];
+                   FILTER.types = searchData[1].split('&')[0];
                  }
 
                  tovar.find(FILTER).sort({ AI: -1 }).toArray(function(err, results_tovar ){
                    res.render('tovar.ejs',{
                      conf: results_config[languageSystem],
                      menu: results_menu,
-                     tovarArr: results_tovar.slice(0, 24),
+                     tovarArr: results_tovar.slice(otTovar, doTovar),
                      title: results_titles_page[languageSystem].tovar,
                      sessionUser: req.session.user,
                      users_data: uSession,
                      offLength: results_tovar.length,
-                     isAdm: req.session.admin
+                     isAdm: req.session.admin,
+                     isPage: page
                    })
                    client.close();
                  });
@@ -80,12 +92,13 @@ router.get('/*', function(req, res, next){
                    res.render('tovar.ejs',{
                      conf: results_config[languageSystem],
                      menu: results_menu,
-                     tovarArr: results_tovar.slice(0, 24),
+                     tovarArr: results_tovar.slice(otTovar, doTovar),
                      title: results_titles_page[languageSystem].tovar,
                      sessionUser: req.session.user,
                      users_data: uSession,
                      offLength: results_tovar.length,
-                     isAdm: req.session.admin
+                     isAdm: req.session.admin,
+                     isPage: page
                    })
                    client.close();
                  });
