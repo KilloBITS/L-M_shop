@@ -5501,3 +5501,12 @@ table.text-center, table.text-center td, table.text-center th {
   right: 20px;
   top: 54px;
 }
+
+
+#selected_tov_image img{
+  position: absolute;
+  max-width: 45px;
+  max-height: 45px;
+  top: 0;
+  left: 10px;
+}

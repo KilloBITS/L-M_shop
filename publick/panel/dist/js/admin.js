@@ -210,7 +210,9 @@ var ADMIN = {
         category: parseInt($("#tCategories").val()),
         types: $("#tType").val(),
         text: $("#tText").val(),
-        sale: [$("#tSaleEnabled").is(':checked'), $("#tSale").val()]
+        sale: [$("#tSaleEnabled").is(':checked'), $("#tSale").val()],
+        postavka: $("#tPostavka").val(),
+        tIncrement: $("#tIncrement").val(),
       };
 
       let save_data_ua = {
@@ -219,7 +221,9 @@ var ADMIN = {
         category: parseInt($("#tCategories").val()),
         types: $("#tType").val(),
         text: $("#tText_ua").val(),
-        sale: [$("#tSaleEnabled").is(':checked'), $("#tSale").val()]
+        sale: [$("#tSaleEnabled").is(':checked'), $("#tSale").val()],
+        postavka: $("#tPostavka").val(),
+        tIncrement: $("#tIncrement").val()
       };
 
       var url = '/setAdmTovar';
@@ -477,8 +481,7 @@ var ADMIN = {
               var reader = new FileReader();
               reader.onload = function (e) {
                   ADMIN.GLOBAL_FILE = e.target.result;
-                  $("#tImageDemo").attr("src",ADMIN.GLOBAL_FILE)
-                  // $("#tImageDemo").css({"background-image":" url("+ADMIN.GLOBAL_FILE+")"});
+                  $("#tImageDemo").attr("src", ADMIN.GLOBAL_FILE)
               };
               reader.readAsDataURL(this.files[0]);
           }

@@ -65,6 +65,8 @@ var createUA = function(data, ai){
     NEW_TOVAR_UA.AI = ai;
     NEW_TOVAR_UA.image = "tov"+ai+".jpg";
     NEW_TOVAR_UA.sale = data.sale;
+    NEW_TOVAR_UA.postavka = data.postavka;
+    NEW_TOVAR_UA.tIncrement = data.tIncrement;
     tovaruk.insertOne(NEW_TOVAR_UA);
   });
 };
@@ -81,6 +83,8 @@ var createRU = function(data, ai){
     NEW_TOVAR.AI = ai;
     NEW_TOVAR.image = "tov"+ai+".jpg";
     NEW_TOVAR.sale = data.sale;
+    NEW_TOVAR.postavka = data.postavka;
+    NEW_TOVAR.tIncrement = data.tIncrement;
     tovar.insertOne(NEW_TOVAR);
   });
 };

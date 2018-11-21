@@ -4,6 +4,12 @@
       margin: auto;
   }
 }
+@media (min-width: 1200px){
+  .col-lg-4 {
+      width: 33.333333333333333333333333333333333333%;
+  }
+}
+
 @media screen and (max-width: 936px) {
   .menuBTN {
     font-size: 14px;
@@ -229,10 +235,7 @@
       background-color: #fff;
       margin-bottom: 10px;
   }
-  .item.grid-group-item:nth-of-type(odd):hover,.item.grid-group-item:hover
-  {
-    background: #ececec;
-  }
+
   .lead {
       margin-bottom: 12px;
       font-size: 16px;
@@ -267,10 +270,7 @@
   {
       padding: 9px 9px 0px 9px;
   }
-  .item.grid-group-item:nth-of-type(odd)
-  {
-      background: #eeeeee;
-  }
+
 
   .item.grid-group-item:before, .item.grid-group-item:after
   {

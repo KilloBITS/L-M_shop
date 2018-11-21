@@ -219,10 +219,7 @@
       background-color: #fff;
       margin-bottom: 10px;
   }
-  .item.grid-group-item:nth-of-type(odd):hover,.item.grid-group-item:hover
-  {
-    background: #ececec;
-  }
+
   .lead {
       margin-bottom: 12px;
       font-size: 16px;
@@ -230,19 +227,25 @@
       line-height: 1.4;
       font-weight: bold;
   }
+  .thumbnail {
+      height: 585px;
+  }
 
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    max-height: 200px;
+    max-height: 490px;
   }
 
   .btn-success {
     color: #fff;
     background-color: #dd127b;
     border-color: #c51671;
-    width: 100%;
-    margin-bottom: 10px;
+    width: calc(100% - 30px);
+    padding: 5px 30px;
+    margin-top: 0;
 }
-
+.thumbnail:hover .list-group-image{
+  transform: scale(1);
+}
   .item.grid-group-item .list-group-image
   {
     margin-right: 10px;
@@ -253,13 +256,11 @@
   {
       margin-bottom: 0px;
   }
-  .item.grid-group-item .caption
-  {
+
+  .item.grid-group-item .caption {
       padding: 9px 9px 0px 9px;
-  }
-  .item.grid-group-item:nth-of-type(odd)
-  {
-      background: #eeeeee;
+      position: absolute;
+      bottom: 50px;
   }
 
   .item.grid-group-item:before, .item.grid-group-item:after
@@ -296,9 +297,7 @@
   .item.grid-group-item:nth-of-type(odd) {
       background: #ffffff;
   }
-  .item.grid-group-item:hover{
-    background: #ececec;
-  }
+
 
   .btn-group{
     display: none;

@@ -66,10 +66,11 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 10px 5px 22px 5px;
-  height: 385px;
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
+
 .thumbnail .caption {
   padding: 9px;
   color: #333;
@@ -211,7 +212,7 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
 }
 
 .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    max-height: 230px;
+    max-height: 450px;
 }
 
 .getSuccess{
@@ -324,8 +325,8 @@ ul li.active a {
 
 .water_icon{
   position: absolute;
-  width: 180px;
-  height: 60px;
+  width: 90px;
+  height: 40px;
   background-image: url(../../../image/Logo.png);
   background-size: contain;
   background-repeat: no-repeat;

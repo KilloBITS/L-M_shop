@@ -54,8 +54,7 @@ router.get('/', function(req, res, next){
                slider.find().toArray(function(err, results_slider ){
                  news.find().toArray(function(err, results_news ){
                    tovar.find().sort({ AI: -1 }).limit(5).toArray(function(err, results_tovar ){
-                     effect.find({ active: true }).toArray(function(err, results_effect ){
-                       console.log(results_effect[0])
+                     effect.find({ active: true }).toArray(function(err, results_effect ){                    
                         //counters
                         var ipuser = req.connection.remoteAddress.replace(/[^.\d]+/g,"");
                         var geo = geoip.lookup(ipuser);

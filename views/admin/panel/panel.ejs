@@ -1103,16 +1103,21 @@
                 </div>
                 <div class="modal-body">
 
-                  <div class="form-group">
+                  <div class="form-group" style="float: left; width: calc(50% - 5px)">
                     <label>Название товара на руском</label>
                     <input type="text" id="tName" class="form-control" placeholder="Введите название товара на Русском">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="float: right; width: calc(50% - 5px)">
                     <label>название товара на украинском</label>
                     <input type="text" id="tName_ua" class="form-control" placeholder="Введите название товара на Украинском">
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group" style="float: left; width: calc(50% - 5px)">
+                    <label>ID Товара</label>
+                    <input type="text" id="tIncrement" class="form-control" placeholder="Идентификатор товара">
+                  </div>
+
+                  <div class="form-group" style="float: right; width: calc(50% - 5px)">
                     <label>Цена</label>
                     <input type="text" id="tPrice" class="form-control" placeholder="Цена товара">
                   </div>
@@ -1133,15 +1138,21 @@
                     <select id="tType" class="form-control"></select>
                   </div>
 
-                  <div class="form-group" style="position: relative">
+
+                  <div class="form-group" style="position: relative; float: left; width: calc(50% - 5px)">
                     <label>Скидка</label>
                     <input type="checkbox" id="tSaleEnabled">
-                    <input type="text" id="tSale" class="form-control" placeholder="Процент скидки">
+                    <input type="text" id="tSale" class="form-control" placeholder="Процент скидки (10, 20, 30, 40, 50)">
                   </div>
 
+                  <div class="form-group" style="float: right; width: calc(50% - 5px)">
+                    <label>Поставщик</label>
+                    <input type="text" id="tPostavka" class="form-control" placeholder="Введите поставщика">
+                  </div>
+                  
                   <div class="form-group">
                     <label>Изображение товара</label>
-                    <button type="button" class="btn btn-block btn-warning btn-lg" id="selected_tov_image" onclick="$('#tFile').click()">Выбрать изображение</button>
+                    <button type="button" class="btn btn-block btn-warning btn-lg" id="selected_tov_image" onclick="$('#tFile').click()" style="    position: relative;"><img id="tImageDemo"> Выбрать изображение</button>
                     <input type="file" name="file" id="tFile">
                   </div>
 
