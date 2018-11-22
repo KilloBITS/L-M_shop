@@ -98,9 +98,12 @@
 	<div class="topfilters"></div>
 	<div class="leftfilters"></div>
 	<div class="tovar_data">
-		<div class="container">
+    <div class="container">
       <div class="well well-sm">
+        <div class="filtersBtn activeFilter"></div>
+        <div class="filters">
 
+        </div>
         <!-- <div class="btn-group">
             <a href="#" id="list" class="btn btn-default btn-sm"></a>
             <a href="#" id="grid" class="btn btn-default btn-sm"></a>
@@ -109,52 +112,38 @@
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
-
           <a href="/details?tov=<%= tovarArr[i].AI %>">
-
-
-
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
               <div class="thumbnail">
+                <div class="isView"></div>
                 <% if(tovarArr[i].sale[0] && (tovarArr[i].sale[0] === 'true')){ %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 5){ %>
                     <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 10){ %>
                     <div class="ribbon ribbon--purple">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 15){ %>
                     <div class="ribbon  ribbon--blue">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 20){ %>
                     <div class="ribbon  ribbon--green">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 30){ %>
                     <div class="ribbon  ribbon--yellow">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 40){ %>
                     <div class="ribbon  ribbon--orange">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-
                   <% if(parseInt(tovarArr[i].sale[1]) == 50){ %>
                     <div class="ribbon  ribbon--red">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
-
-                    <img class="group list-group-image" src="<%= tovarArr[i].image[0] %>" alt="" />
-
-                   <!-- ../../../data/tovar/ -->
+                  <img class="group list-group-image" src="<%= tovarArr[i].image[0] %>" alt="" />
                   <div class="caption">
                     <div class="blockOfNavBtn">
                       <% if(sessionUser !== undefined){ %>
-
                         <% if( users_data[0].desires.indexOf(tovarArr[i].AI) === -1){ %>
                           <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[i].AI %>">
                         <% } else { %>
@@ -167,7 +156,6 @@
                         </div>
                       <% } %>
                     </div>
-
                     <fieldset class="rating">
                         <input type="radio" id="star5_<%= i %>" name="rating_<%= i %>" value="5" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star5_<%= i %>" title="Awesome - 5 stars"></label>
                         <input type="radio" id="star4_<%= i %>" name="rating_<%= i %>" value="4" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star4_<%= i %>" title="Pretty good - 4 stars"></label>
@@ -214,12 +202,12 @@
 
     <% if(offLength > 24){ %>
       <div id="pagination"></div>
-
       <script>
-        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage) %>));
+        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage)+1 %>));
       </script>
     <% } %>
-	</div>
+  </div>
+  </div>
 </div>
 
 <div class="siteMap">

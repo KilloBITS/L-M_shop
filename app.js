@@ -45,8 +45,6 @@ app.use('/profile', account);
 app.use('/setNumbers*', setNumbers);
 app.use('/delivery*', delivery);
 
-
-
 const panel = require('./routes/admin/panel');
 app.use('/panel', panel);
 

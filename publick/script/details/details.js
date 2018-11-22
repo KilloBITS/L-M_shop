@@ -61,6 +61,14 @@ var Details = {
     });
   },
   DESIGHN: function(){
+    $(".imageD").click(function(){
+      var index = $(".imageD").index(this);
+      var imdData = $(".imageD:eq("+index+")").attr('image-data');
+      $(".imageTov").removeClass('ac');
+      $(".imageTov:eq("+index+")").addClass('ac');
+      console.log(imdData)
+      $("#tovarImage").attr('src', imdData)
+    });
     $(".setComments").click(function(){
       $.post('/newComment',{text: $("#commentsText").val(), tovai: $("#commentsText").attr("tov_AI") }, function(res){
         console.log(res);

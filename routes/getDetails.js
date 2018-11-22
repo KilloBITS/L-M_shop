@@ -2,14 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
-function randomInteger(min, max) {
-  var rand = min - 0.5 + Math.random() * (max - min + 1)
-  rand = Math.round(rand);
-  return rand;
-}
 
 router.get('/*', function(req, res, next) {
-  var languageSystem, langMenu, recomendedTovar = [];
+  var languageSystem, langMenu;
   if (req.cookies.vernissageLang === undefined) {
     languageSystem = 0;
     langMenu = 'menu';
@@ -47,11 +42,8 @@ router.get('/*', function(req, res, next) {
                 } else {
                   var uSession = false;
                 }
-                for (let i = 0; i < 3; i++) {
-                  recomendedTovar.push(randomInteger(0, 20))
-                }
 
-                tovar.find({AI: {$in: recomendedTovar}}).limit(3).toArray(function(err, results_recTovar) {
+                tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, results_recTovar) {
                   res.render('details.ejs', {
                     conf: results_config[languageSystem],
                     menu: results_menu,

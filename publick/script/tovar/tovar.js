@@ -140,6 +140,16 @@ var Index = {
      });
    },
    DESIGHN: function(){
+     $(".filtersBtn").click(function(){
+       if($(".filtersBtn").hasClass('activeFilter')){
+         $(".filtersBtn").removeClass('activeFilter');
+         $(".filters").slideToggle();
+       }else{
+         $(".filtersBtn").addClass('activeFilter');
+         $(".filters").slideToggle();
+       }
+     });
+
      $(".half,.full").click(function(){
        var tovID = $(this).attr("tovid");
        var setStar = $(this).attr("for").split('_')[0].replace(/[^-0-9]/gim,'');
