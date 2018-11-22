@@ -995,6 +995,7 @@ form textarea {
   left: 0;
   padding: 5px 0;
   opacity: 0.5;
+  margin: 0;
 }
 
 .is-selected h3{
@@ -1197,4 +1198,15 @@ a.indexBtnToShop{
   background: url(http://www.clipartqueen.com/image-files/red-lobed-fall-clipart-leaf.png);
   background-size: 100% 100%;
   z-index: 2;
+}
+
+.newTov{
+  position: absolute;
+  background-image: url(../../../image/new.png);
+  width: 47px;
+  height: 46px;
+  z-index: 1;
+  background-size: contain;
+  right: -2px;
+  top: 0;
 }

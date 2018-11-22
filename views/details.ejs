@@ -87,37 +87,76 @@
   <% } %>
 	</div>
 </div>
-
+<div id="modalSizes">
+  <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="closeTableSizes" data-dismiss="modal"></button>
+                <div class="modal-title">Таблица размеров женской одежды</div>
+            </div>
+            <div class="modal-body">
+              <table class="size-table">
+                <thead>
+                <tr><th>Размер</th><th>Размер</th><th>Объем груди, см</th><th>Объем талии, см</th><th>Объем бедер, см</th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td data-th="Размер">S</td>
+                <td data-th="Размер">42</td>
+                <td data-th="Объем груди, см">84-86</td>
+                <td data-th="Объем талии, см">66</td>
+                <td data-th="Объем бедер, см">85-90</td>
+                </tr>
+                <tr>
+                <td data-th="Размер">M</td>
+                <td data-th="Размер">44</td>
+                <td data-th="Объем груди, см">86-90</td>
+                <td data-th="Объем талии, см">70</td>
+                <td data-th="Объем бедер, см">90-94</td>
+                </tr>
+                <tr>
+                <td data-th="Размер">L</td>
+                <td data-th="Размер">46</td>
+                <td data-th="Объем груди, см">90-95</td>
+                <td data-th="Объем талии, см">74</td>
+                <td data-th="Объем бедер, см">94-98</td>
+                </tr>
+                <tr>
+                <td data-th="Размер" colspan="2">ONE-SIZE S/M</td>
+                <td data-th="Объем груди, см"></td>
+                <td data-th="Объем талии, см" colspan="2"><span>Подходит на размеры S-M</span></td>
+                </tr>
+                <tr>
+                <td data-th="Размер" colspan="2"><span>ONE-SIZE M/L</span></td>
+                <td data-th="Объем груди, см"></td>
+                <td data-th="Объем талии, см" colspan="2"><span><span>Подходит на размеры M-L</span></span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+</div>
 <div class="content tovar">
-
     <div class="container" style="max-width: 1024px;">
       <div class="grid product">
         <% if(tovarArr[0].sale[0] && (tovarArr[0].sale[0] === 'true')){ %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 5){ %>
             <div class="ribbon">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 10){ %>
             <div class="ribbon ribbon--purple">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 15){ %>
             <div class="ribbon  ribbon--blue">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 20){ %>
             <div class="ribbon  ribbon--green">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 30){ %>
             <div class="ribbon  ribbon--yellow">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 40){ %>
             <div class="ribbon  ribbon--orange">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
-
           <% if(parseInt(tovarArr[0].sale[1]) == 50){ %>
             <div class="ribbon  ribbon--red">Скидка <%= tovarArr[0].sale[1] %> %</div>
           <% } %>
@@ -176,6 +215,16 @@
           <% } %>
 
           <div class="description">
+            <div class="sizeOfTovar">
+              <div class="selectSize">
+                <div class="sizeBTN" id="Size_S">S</div>
+                <div class="sizeBTN size_a" id="Size_M">M</div>
+                <div class="sizeBTN" id="Size_L">L</div>
+              </div>
+              <div class="btnTableSizes">Таблица размеров</div>
+            </div>
+            <div class="text_line">Производитель:<span><%= tovarArr[0].postavka %></span></div>
+            <div class="text_line">Описание:</div>
             <%= tovarArr[0].descriptin %>
           </div>
           <button class="add-to-cart"onclick="Details.setBasket(<%= tovarArr[0].AI %>)"><%= conf.toBasket %></button>

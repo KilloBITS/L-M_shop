@@ -61,6 +61,24 @@ var Details = {
     });
   },
   DESIGHN: function(){
+    $(".sizeBTN").click(function(){
+      // let id = $(this).attr('id')
+      // console.log(id);
+      $(".sizeBTN").removeClass('size_a');
+      $(this).addClass('size_a');      
+    });
+    $(".btnTableSizes").click(function(){
+      $(".content.tovar").css({
+        "filter":"blur(5px) grayscale(100%)"
+      });
+      $("#modalSizes").fadeIn(300);
+    });
+    $("#closeTableSizes").click(function(){
+      $(".content.tovar").css({
+        "filter":"blur(0px) grayscale(0%)"
+      });
+      $("#modalSizes").fadeOut(300);
+    });
     $(".imageD").click(function(){
       var index = $(".imageD").index(this);
       var imdData = $(".imageD:eq("+index+")").attr('image-data');
