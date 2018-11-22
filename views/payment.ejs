@@ -68,44 +68,28 @@
     <div class="topLine twoLine">
       <div class="menuBlock">
         <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length > 1){ %>
-        <a href="<%= menu[i].glink %>">
-          <div class="menuBTN" menu-link="<%= menu[i].ml %>">
-            <%= menu[i].name %>
-            <!-- <div class="arrow_bottom"></div> -->
-          </div>
-        </a>
-        <% } else { %>
-        <a href="<%= menu[i].glink %>">
-          <div class="menuBTN">
-            <%= menu[i].name %>
-          </div>
-        </a>
-        <% } %>
+          <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+            <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+          <% } else { %>
+            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+          <% } %>
         <% } %>
       </div>
     </div>
-
     <div class="opensMenu">
-      <% for(var i = 0; i < menu.length; i++) { %>
-      <% if(menu[i].podlink.length > 1){ %>
-      <div class="menu_data <%= menu[i].ml %>">
-        <div class="menu_title">
-          <%= menu[i].name %>
+    <% for(var i = 0; i < menu.length; i++) { %>
+      <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
+        <div class="menu_data <%= menu[i].ml %>">
+          <div class="menu_title"><%= menu[i].name %></div>
+          <div class="menuLeft">
+            <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+            <% } %>
+          </div>
+          <div class="menuRight"></div>
         </div>
-        <div class="menuLeft">
-          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-          <a href="<%= menu[i].podlink[il].plink %>">
-            <div class="punktMenu">•
-              <%= menu[i].podlink[il].pname %>
-            </div>
-          </a>
-          <% } %>
-        </div>
-        <div class="menuRight"></div>
-      </div>
       <% } %>
-      <% } %>
+    <% } %>
     </div>
   </div>
 

@@ -42,7 +42,6 @@ router.get('/*', function(req, res, next){
     const menu  = db.collection(langMenu);
     const users_session = db.collection("users");
 
-
     if(languageSystem === 0){
       var tovar  = db.collection("tovar");
     }else{
@@ -55,7 +54,6 @@ router.get('/*', function(req, res, next){
        config.find().toArray(function(err, results_config){
          if(results_config[languageSystem].opens){
            menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
-
              users_session.find({email: req.session.user}).toArray(function(err, results_users_session ){
                if(results_users_session.length > 0){
                  var uSession = results_users_session;
@@ -63,45 +61,52 @@ router.get('/*', function(req, res, next){
                  var uSession = false;
                }
 
+               tovar.distinct("title").then(function(result) {
+                 //фильт уникальных
+               });
 
                if(DA[0] !== "/"){
-                 let FILTER = {
-                   category: parseInt(searchData[0])
-                 };
+                  let FILTER = {
+                    category: parseInt(searchData[0]),
+                    title: { $all: result }
+                  };
 
-                 if(searchData.length >= 2 ){
-                   FILTER.types = searchData[1].split('&')[0];
-                 }
+                  if(searchData.length >= 2 ){
+                    FILTER.types = searchData[1].split('&')[0];
+                  }
 
-                 tovar.find(FILTER).sort({ AI: -1 }).toArray(function(err, results_tovar ){
-                   res.render('tovar.ejs',{
-                     conf: results_config[languageSystem],
-                     menu: results_menu,
-                     tovarArr: results_tovar.slice(otTovar, doTovar),
-                     title: results_titles_page[languageSystem].tovar,
-                     sessionUser: req.session.user,
-                     users_data: uSession,
-                     offLength: results_tovar.length,
-                     isAdm: req.session.admin,
-                     isPage: page
-                   })
-                   client.close();
-                 });
+                  tovar.find(FILTER).sort({ AI: -1 }).toArray(function(err, results_tovar ){
+                    res.render('tovar.ejs',{
+                      conf: results_config[languageSystem],
+                      menu: results_menu,
+                      tovarArr: results_tovar.slice(otTovar, doTovar),
+                      title: results_titles_page[languageSystem].tovar,
+                      sessionUser: req.session.user,
+                      users_data: uSession,
+                      offLength: results_tovar.length,
+                      isAdm: req.session.admin,
+                      isPage: page
+                    })
+                    client.close();
+                  });
                }else{
-                 tovar.find().sort({ AI: -1 }).toArray(function(err, results_tovar ){
-                   res.render('tovar.ejs',{
-                     conf: results_config[languageSystem],
-                     menu: results_menu,
-                     tovarArr: results_tovar.slice(otTovar, doTovar),
-                     title: results_titles_page[languageSystem].tovar,
-                     sessionUser: req.session.user,
-                     users_data: uSession,
-                     offLength: results_tovar.length,
-                     isAdm: req.session.admin,
-                     isPage: page
-                   })
-                   client.close();
-                 });
+
+                    tovar.find({ title: { $all: result } }).sort({ AI: -1 }).toArray(function(err, results_tovar ){
+                      res.render('tovar.ejs',{
+                        conf: results_config[languageSystem],
+                        menu: results_menu,
+                        tovarArr: results_tovar.slice(otTovar, doTovar),
+                        title: results_titles_page[languageSystem].tovar,
+                        sessionUser: req.session.user,
+                        users_data: uSession,
+                        offLength: results_tovar.length,
+                        isAdm: req.session.admin,
+                        isPage: page
+                      })
+                      client.close();
+                    });
+
+
                }
              });
            });
