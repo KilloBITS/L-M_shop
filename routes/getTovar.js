@@ -90,23 +90,20 @@ router.get('/*', function(req, res, next){
                     client.close();
                   });
                }else{
-
-                    tovar.find({ title: { $all: result } }).sort({ AI: -1 }).toArray(function(err, results_tovar ){
-                      res.render('tovar.ejs',{
-                        conf: results_config[languageSystem],
-                        menu: results_menu,
-                        tovarArr: results_tovar.slice(otTovar, doTovar),
-                        title: results_titles_page[languageSystem].tovar,
-                        sessionUser: req.session.user,
-                        users_data: uSession,
-                        offLength: results_tovar.length,
-                        isAdm: req.session.admin,
-                        isPage: page
-                      })
-                      client.close();
-                    });
-
-
+                tovar.find().sort({ AI: -1 }).toArray(function(err, results_tovar ){
+                  res.render('tovar.ejs',{
+                    conf: results_config[languageSystem],
+                    menu: results_menu,
+                    tovarArr: results_tovar.slice(otTovar, doTovar),
+                    title: results_titles_page[languageSystem].tovar,
+                    sessionUser: req.session.user,
+                    users_data: uSession,
+                    offLength: results_tovar.length,
+                    isAdm: req.session.admin,
+                    isPage: page
+                  })
+                  client.close();
+                });
                }
              });
            });
