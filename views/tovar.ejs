@@ -195,10 +195,20 @@
     </div>
 
     <% if(offLength > 24){ %>
-      <div id="pagination"></div>
-      <script>
+      <div id="pagination">
+        <div class="pageBTN PREW_PAGE"><</div>
+        <div class="pageBTN PAGE_ACTIVE">1</div>
+        <div class="pageBTN">2</div>
+        <div class="pageBTN">3</div>
+        <div class="pageBTN">4</div>
+        <div class="pageBTN">5</div>
+        <div class="pageBTN">...</div>
+        <div class="pageBTN">145</div>
+        <div class="pageBTN NEXT_PAGE">></div>
+      </div>
+      <!-- <script>
         $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage) %>));
-      </script>
+      </script> -->
     <% } %>
   </div>
   </div>

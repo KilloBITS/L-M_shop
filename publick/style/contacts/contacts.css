@@ -347,3 +347,7 @@ svg { visibility: hidden }
     display: none;
   }
 }
+
+.container_partners{
+  min-height: 600px;
+}
