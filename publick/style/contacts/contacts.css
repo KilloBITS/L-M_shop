@@ -295,19 +295,16 @@ form textarea {
     margin-bottom: 0;
   }
 }
-/* Clearfix */
+
 .cf:before,
 .cf:after {
   content: " ";
-  /* 1 */
   display: table;
-  /* 2 */
 }
 
 .cf:after {
   clear: both;
 }
-
 
 svg { visibility: hidden }
 
@@ -350,4 +347,5 @@ svg { visibility: hidden }
 
 .container_partners{
   min-height: 600px;
+  padding-top: 50px;
 }
