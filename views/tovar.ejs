@@ -197,7 +197,7 @@
     <% if(offLength > 24){ %>
       <div id="pagination"></div>
       <script>
-        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage)+1 %>));
+        $("#pagination").html(createPagination(Math.ceil(<%= offLength / 24 %>), <%= parseInt(isPage) %>));
       </script>
     <% } %>
   </div>

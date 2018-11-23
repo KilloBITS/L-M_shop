@@ -27,7 +27,7 @@ router.get('/*', function(req, res, next){
 
   var page = req.url.split('page=')[1];
 
-  if(parseInt(page) === 0){
+  if(parseInt(page) === 1){
     var otTovar = 0;
     var doTovar = 24;
   }else{
@@ -61,50 +61,59 @@ router.get('/*', function(req, res, next){
                  var uSession = false;
                }
 
-               tovar.distinct("title").then(function(result) {
-                 //фильт уникальных
-               });
 
-               if(DA[0] !== "/"){
+
+               // if(DA[0] !== "/"){
                   let FILTER = {
-                    category: parseInt(searchData[0]),
-                    title: { $all: result }
+                    category: parseInt(searchData[0])
                   };
 
                   if(searchData.length >= 2 ){
                     FILTER.types = searchData[1].split('&')[0];
                   }
 
-                  tovar.find(FILTER).sort({ AI: -1 }).toArray(function(err, results_tovar ){
-                    res.render('tovar.ejs',{
-                      conf: results_config[languageSystem],
-                      menu: results_menu,
-                      tovarArr: results_tovar.slice(otTovar, doTovar),
-                      title: results_titles_page[languageSystem].tovar,
-                      sessionUser: req.session.user,
-                      users_data: uSession,
-                      offLength: results_tovar.length,
-                      isAdm: req.session.admin,
-                      isPage: page
-                    })
-                    client.close();
+                  tovar.distinct("group_id").then(function(OriginTovarGI) {
+                    // console.log(OriginTovarGI)
+                    console.log(OriginTovarGI.length)
+                    console.log(tovar.aggregate("group_id"))
+
+                    tovar.find( { group_id : { $in : OriginTovarGI } }, FILTER ).sort( { AI: -1 } ).toArray(function(err, results_tovar ){
+                      console.log(results_tovar.length)
+                      res.render('tovar.ejs',{
+                        conf: results_config[languageSystem],
+                        menu: results_menu,
+                        tovarArr: results_tovar.slice(otTovar, doTovar),
+                        title: results_titles_page[languageSystem].tovar,
+                        sessionUser: req.session.user,
+                        users_data: uSession,
+                        offLength: results_tovar.length,
+                        isAdm: req.session.admin,
+                        isPage: page
+                      })
+                      client.close();
+                    });
+
                   });
-               }else{
-                tovar.find().sort({ AI: -1 }).toArray(function(err, results_tovar ){
-                  res.render('tovar.ejs',{
-                    conf: results_config[languageSystem],
-                    menu: results_menu,
-                    tovarArr: results_tovar.slice(otTovar, doTovar),
-                    title: results_titles_page[languageSystem].tovar,
-                    sessionUser: req.session.user,
-                    users_data: uSession,
-                    offLength: results_tovar.length,
-                    isAdm: req.session.admin,
-                    isPage: page
-                  })
-                  client.close();
-                });
-               }
+
+                  // tovar.find(FILTER).sort({ AI: -1 }).toArray(function(err, results_tovar ){
+                  //
+                  // });
+               // }else{
+               //  tovar.find().sort({ AI: -1 }).toArray(function(err, results_tovar ){
+               //    res.render('tovar.ejs',{
+               //      conf: results_config[languageSystem],
+               //      menu: results_menu,
+               //      tovarArr: results_tovar.slice(otTovar, doTovar),
+               //      title: results_titles_page[languageSystem].tovar,
+               //      sessionUser: req.session.user,
+               //      users_data: uSession,
+               //      offLength: results_tovar.length,
+               //      isAdm: req.session.admin,
+               //      isPage: page
+               //    })
+               //    client.close();
+               //  });
+               // }
              });
            });
          }else{
