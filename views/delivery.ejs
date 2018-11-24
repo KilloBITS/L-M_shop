@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="/style/delivery/delivery.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   <title>Товарный чек</title>
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
@@ -59,11 +62,11 @@
       </td>
     </tr>
   </table>
-  <table cellpadding="0" cellspacing="0" bgcolor="#F4F5F5" width="100%">
+  <table cellpadding="0" cellspacing="0" bgcolor="#F4F5F5" width="100%" >
     <tr>
       <td align="center">
         <table cellpadding="0" cellspacing="0">
-          <tr>
+          <tr id="saveCheck">
             <td width="520" align="center" bgcolor="#ffffff">
               <table cellpadding="0" cellspacing="0">
                 <tr>
@@ -153,6 +156,27 @@
         <table bgcolor="#F4F5F5" width="100%" cellpadding="0" cellspacing="0" style="padding: 10px 0;">
           <tr>
             <td>
+              <script type="text/javascript">
+                function savePDF(){
+                  var doc = new jsPDF("p", "mm", "a5");
+                  var width = doc.internal.pageSize.getWidth();
+                  var height = doc.internal.pageSize.getHeight();
+                  html2canvas(document.querySelector("#saveCheck")).then(canvas => {
+                  	canvas.id = "savingCheckToPDF";
+                      document.body.appendChild(canvas);
+                  	doc.addImage(canvas, 'JPEG', 0, 0, width, height);
+                  	doc.save('htmlsss.pdf');
+                      $('#savingCheckToPDF').remove()
+                  });
+                }
+
+                function toMain(){
+                  window.location.href = '/'
+                }
+              </script>
+              <div id="saveCheck" onclick="savePDF()" style="cursor: pointer; position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; right: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Скачать чек</div>
+              <div id="backToShop" onclick="toMain()" style="position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; left: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Назад к покупкам</div>
+
               <div class="toPostLink">
                 <span>Отправить вам на почту ?</span>
                 <input type="text" name="toMyPost" class="tomypost" placeholder="Введите ваш email адресс">
@@ -166,6 +190,7 @@
       </td>
     </tr>
   </table>
+
 
 </body>
 

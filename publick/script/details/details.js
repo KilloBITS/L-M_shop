@@ -15,7 +15,7 @@ var Details = {
         $(".basket_tovar .BSK").append(newDiv)
 
         var minBasImg = document.createElement("div");
-        minBasImg.style.backgroundImage = "url(../../../data/tovar/"+tovar.tovar[i].image+")";
+        minBasImg.style.backgroundImage = "url("+tovar.tovar[i].image[0]+")";
         minBasImg.className = "minBasImg";
 
         var minBasTitle = document.createElement("div");
@@ -65,7 +65,7 @@ var Details = {
       // let id = $(this).attr('id')
       // console.log(id);
       $(".sizeBTN").removeClass('size_a');
-      $(this).addClass('size_a');      
+      $(this).addClass('size_a');
     });
     $(".btnTableSizes").click(function(){
       $(".content.tovar").css({
@@ -122,6 +122,7 @@ var Details = {
      $('.menu-wrapper').on('click', function() {
        $('.hamburger-menu').toggleClass('animate');
        $('.twoLine').toggleClass('openMenuClass');
+       $(".menu_data").hide();
      })
      $( ".menuBTN" ).hover(function() {
        try{

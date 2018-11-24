@@ -3,6 +3,17 @@ var Index = {
   ML: "",
   getCounters: true,
   DESIGHN: function() {
+    $(window).scroll(function(){
+      $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+
+    if($(window).width() < 800){
+      $(".header").height($(window).height() - 50 + 'px')
+    }else{
+      $(".header").height($(window).height() - 120 + 'px')
+    }
+
+
     $(".searchBlock").hover(function() {
       $(".searchLine").css({
         "width": "170px"
@@ -33,20 +44,21 @@ var Index = {
     $('.menu-wrapper').on('click', function() {
       $('.hamburger-menu').toggleClass('animate');
       $('.twoLine').toggleClass('openMenuClass');
+      $(".menu_data").hide();
     })
 
     $(".menuBTN").hover(function() {
       try {
         $("." + Index.ML + ",.opensMenu").hide();
-
+      } catch (e) {
+        console.warn('Есть небольшой конфликт, но это не критично')
+      }
         Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
         if (Index.ML != undefined) {
           $("." + Index.ML + ",.opensMenu").show();
         }
 
-      } catch (e) {
-        console.warn('Есть небольшой конфликт, но это не критично')
-      }
+
 
     }, function(e) {
       Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
@@ -223,4 +235,45 @@ var Index = {
 
 $(document).ready(() => {
   Index.INIT();
+
+  // (function($) {
+  //   $.fn.visible = function(partial) {
+  //
+  //     var $t = $(this),
+  //       $w = $(window),
+  //       viewTop = $w.scrollTop(),
+  //       viewBottom = viewTop + $w.height(),
+  //       _top = $t.offset().top,
+  //       _bottom = _top + $t.height(),
+  //       compareTop = partial === true ? _bottom : _top,
+  //       compareBottom = partial === true ? _top : _bottom;
+  //
+  //     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  //
+  //   };
+  //
+  // })(jQuery);
+  //
+  // var win = $(window);
+  //
+  // var allMods = $(".post");
+  //
+  // function nekaFunkcija(klasa) {
+  //   allMods.each(function(i, el) {
+  //     var el = $(el);
+  //     if (el.visible(true)) {
+  //       el.addClass(klasa);
+  //     }
+  //   });
+  // }
+  //
+  // nekaFunkcija("already-visible");
+  //
+  // win.scroll(function(event) {
+  //   nekaFunkcija("come-in");
+  // });
+  //
+  // win.resize(function(event) {
+  //   nekaFunkcija("come-in");
+  // });
 });

@@ -78,6 +78,13 @@ $(document).ready(() => {
   setTimeout(() => {
     $(".spn_hol").fadeOut(500);
   }, 1500);
+
+  $(document).scroll(function(){
+    console.log('ass');
+    $('.menu_data').hide();
+    $('.hamburger-menu').removeClass('animate');
+    $('.twoLine').removeClass('openMenuClass');
+  });
 });
 
 
@@ -166,6 +173,7 @@ $(function() {
     var stickyTop = $('#sidecontent3').offset().top;
     var stickyHeight = $('#sidecontent3').height();
     $(window).scroll(function() {
+
       var limit = $('#footer-wrapper').offset().top - stickyHeight - 20;
       var windowTop = $(window).scrollTop();
       if (stickyTop < windowTop) {

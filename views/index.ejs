@@ -9,6 +9,7 @@
 
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
@@ -26,6 +27,7 @@
 	<script type="text/javascript" src="/script/TweenMax.min.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
 	<script type="text/javascript" src="script/index/index.js"></script>
+
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -160,13 +162,13 @@
 		</div>
 		<div class="topLine twoLine">
 			<div class="menuBlock">
-        <% for(var i = 0; i < menu.length; i++) { %>
-          <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-						<a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
-	        <% } else { %>
-	          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+          <% for(var i = 0; i < menu.length; i++) { %>
+            <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+  						<div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+  	        <% } else { %>
+  	          <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+            <% } %>
           <% } %>
-        <% } %>
 			</div>
 		</div>
 		<div class="opensMenu">
@@ -187,150 +189,160 @@
 	</div>
 
 	<div class="content">
-		<div class="header block">
+    <div class="header block">
       <div class="nextSliderBtn">></div>
       <div class="prevSliderBtn"><</div>
-			<div class="slider-container">
+      <div class="slider-container">
         <% if(isAdm){ %>
-          <div class="edited_admin" title="Добавить слайд" id="newSlide"></div>
+        <div class="edited_admin" title="Добавить слайд" id="newSlide"></div>
         <% } %>
-			  <div class="slider-control left inactive"></div>
-			  <div class="slider-control right"></div>
-			  <ul class="slider-pagi"></ul>
-			  <div class="slider">
-          <% for(var i = 0; i < slides.length; i++) { %>
-					<% if(i <= 0){ %>
-						<div class="slide slide-<%= i %> active">
-					<% } else { %>
-						<div class="slide slide-<%= i %>">
-					<% } %>
-  			      <div class="slide__bg" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
-  			      <div class="slide__content">
-  			        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-  			          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-  			        </svg>
-  			        <div class="slide__text">
-  			          <h2 class="slide__text-heading"><%= slides[i].slideName %></h2>
-  			          <p class="slide__text-desc"><%= slides[i].slideText %></p>
-  			          <a class="slide__text-link" href="<%= slides[i].slideLink %>">Перейти</a>
-  			        </div>
-  			      </div>
-  			    </div>
-          <% } %>
-			  </div>
-			</div></div>
-		<div class="data block">
-			<div class="mainDLG">
-				<div class="mainTitleDLG" style="color: #f98eb9"><%= conf.news_tovar[0] %></div>
-				<div class="mainTextDLG" style="color: #f98eb9"><%= conf.news_tovar[1] %></div>
-			</div>
-			<div class="carousel-wrapper">
-			  <div class="carousel" data-flickity='{ "wrapAround": true }'>
-          <% if(newtovar.length > 0){ %>
-            <% for(var i = 0; i < newtovar.length; i++){ %>
-            <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>">
-              <div class="carousel-cell">
-                <div class="newTov"></div>
-                <h3> <%= newtovar[i].title %> </h3>
-                <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].image[0] %>)"></div> <!--../../../data/tovar/-->
-              </div>
-            </a>
-            <% } %>
+        <div class="slider-control left inactive"></div>
+        <div class="slider-control right"></div>
+        <ul class="slider-pagi"></ul>
+        <div class="slider">
+        <% for(var i = 0; i < slides.length; i++) { %>
+          <% if(i <= 0){ %>
+          <div class="slide slide-<%= i %> active">
           <% } else { %>
-            <div class="carousel-cell">
-              <h3> У нас пока-что нет товаров </h3>
-              <a class="more" href="/"></a>
-              <div class="backCaruselImage" style="background-image: url(../../../image/notTovar.jpg)"></div>
-            </div>
+          <div class="slide slide-<%= i %>">
           <% } %>
-			  </div>
-			</div>
-			<div class="mainBTN_block" style="background: #ffc9df;     padding-top: 20px;">
-				<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
-			</div>
-			<div class="mainDLG" style="background: #ffc9df;     color: white;">
-				<div class="mainTitleDLG"><%= conf.about[0] %></div>
-				<div class="mainTextDLG"><%= conf.about[1] %></div>
-			</div>
-			<div class="mainBTN_block">
-				<a href="<%= conf.about[2].btnLink %>"><div class="mainBTN"><%= conf.about[2].btnTitle %></div></a>
-        <div class="zub_lineB" style=""></div>
-			</div>
-    </div>
-		<div class="news block">
-      <div class="container">
-        <% if(isAdm){ %>
-          <div class="edited_admin" title="Добавить новость" id="newNews"></div>
-        <% } %>
-        <div class="mainDLG">
-          <div class="mainTitleDLG"><%= conf.news %></div>
-        </div>
-        <% for(var i = 0; i < news.length; i++) { %>
-        <div class="column">
-          <div class="post-module">
-            <div class="thumbnail">
-              <div class="date">
-                <div class="day"><%= news[i].date.split('.')[0] %></div>
-                <div class="month"><%= news[i].date.split('.')[1] %></div>
-              </div><img src="../../../data/news/<%= news[i].img %>"/>
-            </div>
-            <div class="post-content">
-              <div class="category"><%= news[i].minName %></div>
-              <h1 class="title"><%= news[i].title %></h1>
-              <p class="description"><%= news[i].text %></p>
-              <div class="post-meta">
-                <span class="comments">
-                  <i class="fa fa-comments"></i>
-                </span>
-              </div>
+          <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
+          <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading"><%= slides[i].slideName %></h2>
+              <p class="slide__text-desc"><%= slides[i].slideText %></p>
+              <a class="slide__text-link" href="<%= slides[i].slideLink %>">Перейти</a>
             </div>
           </div>
         </div>
         <% } %>
       </div>
-    </div>
-    <div class="counters block">
-      <div class="counters_conent">
-        <div class="countersB">
-          <div class="counters_icon" id="buyers"></div>
-          <div class="counters_text">Покупателей</div>
-          <div class="counters_length">0</div>
-        </div>
-        <div class="countersB">
-          <div class="counters_icon" id="products"></div>
-          <div class="counters_text">Товаров</div>
-          <div class="counters_length">0</div>
-        </div>
-        <div class="countersB">
-          <div class="counters_icon" id="purchases"></div>
-          <div class="counters_text">Покупок</div>
-          <div class="counters_length">0</div>
-        </div>
-        <div class="countersB">
-          <div class="counters_icon" id="discounts"></div>
-          <div class="counters_text">Скидок</div>
-          <div class="counters_length">0</div>
-        </div>
       </div>
+      <div class="headerArrow">
+
+        <div class="arrowsss bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+      </div>
+      </div>
+
     </div>
-    <div class="contact block">
-      <div class="zub_line"></div>
+
+	<div class="data block">
+		<div class="mainDLG">
+			<div class="mainTitleDLG post" style="color: #f98eb9"><%= conf.news_tovar[0] %></div>
+			<div class="mainTextDLG post" style="color: #f98eb9"><%= conf.news_tovar[1] %></div>
+		</div>
+		<div class="carousel-wrapper">
+		  <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <% if(newtovar.length > 0){ %>
+          <% for(var i = 0; i < newtovar.length; i++){ %>
+          <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>">
+            <div class="carousel-cell">
+              <div class="newTov"></div>
+              <h3> <%= newtovar[i].title %> </h3>
+              <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].image[0] %>)"></div> <!--../../../data/tovar/-->
+            </div>
+          </a>
+          <% } %>
+        <% } else { %>
+          <div class="carousel-cell">
+            <h3> У нас пока-что нет товаров </h3>
+            <a class="more" href="/"></a>
+            <div class="backCaruselImage" style="background-image: url(../../../image/notTovar.jpg)"></div>
+          </div>
+        <% } %>
+		  </div>
+		</div>
+		<div class="mainBTN_block" style="background: #ffc9df;     padding-top: 20px;">
+			<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
+		</div>
+		<div class="mainDLG" style="background: #ffc9df;     color: white;">
+			<div class="mainTitleDLG post"><%= conf.about[0] %></div>
+			<div class="mainTextDLG post"><%= conf.about[1] %></div>
+		</div>
+		<div class="mainBTN_block">
+			<a href="<%= conf.about[2].btnLink %>"><div class="mainBTN"><%= conf.about[2].btnTitle %></div></a>
+      <div class="zub_lineB" style=""></div>
+		</div>
+  </div>
+	<div class="news block">
+    <div class="container">
+      <% if(isAdm){ %>
+        <div class="edited_admin" title="Добавить новость" id="newNews"></div>
+      <% } %>
       <div class="mainDLG">
-      	<div class="mainTitleDLG"><%= conf.contact[0] %></div>
-      	<div class="mainTextDLG"><%= conf.contact[1] %></div>
+        <div class="mainTitleDLG"><%= conf.news %></div>
       </div>
-      <form class="cf">
-        <div class="half left cf">
-          <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
-          <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
-          <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+      <% for(var i = 0; i < news.length; i++) { %>
+      <div class="column post">
+        <div class="post-module">
+          <div class="thumbnail">
+            <div class="date">
+              <div class="day"><%= news[i].date.split('.')[0] %></div>
+              <div class="month"><%= news[i].date.split('.')[1] %></div>
+            </div><img src="../../../data/news/<%= news[i].img %>"/>
+          </div>
+          <div class="post-content">
+            <div class="category"><%= news[i].minName %></div>
+            <h1 class="title"><%= news[i].title %></h1>
+            <p class="description"><%= news[i].text %></p>
+            <div class="post-meta">
+              <span class="comments">
+                <i class="fa fa-comments"></i>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="half right cf">
-          <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
-        </div>
-        <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
-      </form>
+      </div>
+      <% } %>
     </div>
+  </div>
+  <div class="counters block">
+    <div class="counters_conent">
+      <div class="countersB post">
+        <div class="counters_icon" id="buyers"></div>
+        <div class="counters_text">Покупателей</div>
+        <div class="counters_length">0</div>
+      </div>
+      <div class="countersB post">
+        <div class="counters_icon" id="products"></div>
+        <div class="counters_text">Товаров</div>
+        <div class="counters_length">0</div>
+      </div>
+      <div class="countersB post">
+        <div class="counters_icon" id="purchases"></div>
+        <div class="counters_text">Покупок</div>
+        <div class="counters_length">0</div>
+      </div>
+      <div class="countersB post">
+        <div class="counters_icon" id="discounts"></div>
+        <div class="counters_text">Скидок</div>
+        <div class="counters_length">0</div>
+      </div>
+    </div>
+  </div>
+  <div class="contact block">
+    <div class="zub_line"></div>
+    <div class="mainDLG post">
+    	<div class="mainTitleDLG"><%= conf.contact[0] %></div>
+    	<div class="mainTextDLG"><%= conf.contact[1] %></div>
+    </div>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
+        <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
+        <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
+      </div>
+      <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
+    </form>
+  </div>
+
   </div>
 	<div class="siteMap">
     <% if(effectData !== undefined && effectData.name === "Snow"){ %>

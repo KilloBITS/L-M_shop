@@ -91,7 +91,7 @@ var Index = {
          $(".basket_tovar .BSK").append(newDiv)
          summa = summa + parseFloat(tovar.tovar[i].price);
          var minBasImg = document.createElement("div");
-         minBasImg.style.backgroundImage = "url(../../../data/tovar/"+tovar.tovar[i].image+")";
+         minBasImg.style.backgroundImage = "url("+tovar.tovar[i].image[0]+")";
          minBasImg.className = "minBasImg";
 
          var minBasTitle = document.createElement("div");
@@ -216,6 +216,7 @@ var Index = {
      $('.menu-wrapper').on('click', function() {
        $('.hamburger-menu').toggleClass('animate');
        $('.twoLine').toggleClass('openMenuClass');
+       $(".menu_data").hide();
      })
 
      $( ".menuBTN" ).hover(function() {

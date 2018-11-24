@@ -64,7 +64,7 @@
     <div class="menuBlock">
       <% for(var i = 0; i < menu.length; i++) { %>
         <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+          <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
         <% } else { %>
           <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
         <% } %>
@@ -110,26 +110,27 @@
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
               <div class="thumbnail">
                 <div class="isView"></div>
-                <% if(tovarArr[i].sale[0] && (tovarArr[i].sale[0] === 'true')){ %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 5){ %>
+
+                <% if(tovarArr[i].sale[0]){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 5){ %>
                     <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 10){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 10){ %>
                     <div class="ribbon ribbon--purple">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 15){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 15){ %>
                     <div class="ribbon  ribbon--blue">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 20){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 20){ %>
                     <div class="ribbon  ribbon--green">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 30){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 30){ %>
                     <div class="ribbon  ribbon--yellow">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 40){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 40){ %>
                     <div class="ribbon  ribbon--orange">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) == 50){ %>
+                  <% if(parseInt(tovarArr[i].sale[1]) === 50){ %>
                     <div class="ribbon  ribbon--red">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                 <% } %>

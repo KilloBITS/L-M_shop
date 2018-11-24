@@ -95,10 +95,6 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
     cursor: pointer;
 }
 
-
-
-
-
 .logInBlock:hover{
 	opacity: 0.8;
 }
@@ -109,7 +105,6 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
     position: absolute;
     border-bottom: 1px solid rgba(192, 192, 192, 0.39);
     box-shadow: 0px 6px 14px -6px rgba(123, 11, 69, 0.38);
-    z-index: 100;
     display: none;
 }
 
@@ -140,23 +135,22 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
     margin-bottom: 15px;
 }
 .menuRight{}
-.punktMenu{
-    width: 100%;
-    padding: 5px 0px 3px 10px;
-    color: #dd127b;
-    font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;
-    cursor: pointer;
-}
+
 
 .block{
-	display: inline-block;
-	width: 100%;
+  display: inline-block;
+  width: 100%;
   position: relative;
+  background: white;
 }
 
 .header{
-  height: 542px;
+  height: 670px;
   position: relative;
+  border-bottom: 3px solid rgba(255, 201, 223, 0.23);
+  max-width: 1024px;
+  margin: auto;
+  display: block;
 }
 
 .prevSliderBtn,.nextSliderBtn{
@@ -512,8 +506,7 @@ svg {
 
 
 .data{
-	margin-top: -4px;
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .mainDLG{
@@ -576,7 +569,7 @@ h3 {
   transition: transform 500ms ease;
   border: 2px solid #ffc9df;
   border-radius: 3px;
-  /* box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57); */
+  max-width: 210px;
   height: 230px;
   overflow: hidden;
   border-bottom: 3px solid white;
@@ -946,16 +939,16 @@ form textarea {
 }
 
 .news {
-  margin-top: 30px;
   padding-bottom: 20px;
+  padding-top: 30px;
   color: #f98eb9;
 }
 
 .contact {
-    background: #ffc9df;
-    padding-top: 15px;
-    position: relative;
-    color: white;
+  background: #ffc9df;
+  padding-top: 15px;
+  position: relative;
+  color: white;
 }
 
 .backCaruselImage{
@@ -1045,17 +1038,14 @@ a.indexBtnToShop{
 }
 
 .counters{
-  /* height: 160px; */
-  /* background-image: url(https://media.istockphoto.com/vectors/online-shop-seamless-background-vector-id668056842); */
   background-attachment: fixed;
   background-size: 200px;
   background-position: center;
-  /* box-shadow: inset 0px 15px 28px -14px black; */
   padding: 0;
   margin: 0;
   margin-bottom: 0px;
   background-color: #ffffff;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .counters_conent{
@@ -1209,4 +1199,99 @@ a.indexBtnToShop{
   background-size: contain;
   right: -2px;
   top: 0;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+
+.headerArrow{
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  height: 28px;
+  z-index: 999;
+}
+
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+.below {
+  height: 100vh;
+}
+i {
+  display: block;
+  color: #fff;
+}
+.arrowsss {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px; /*change with size of arrow to make sit on bottom */
+/*   background-image: url(); */
+/*   background-size: contain; */
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.fa-5x {
+  font-size: 50px;
+  color: #ffc9df;
+}
+
+.back-to-top{
+    background-image: none;
 }

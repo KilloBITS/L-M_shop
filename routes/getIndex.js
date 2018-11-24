@@ -53,11 +53,17 @@ router.get('/', function(req, res, next){
              menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
                slider.find().toArray(function(err, results_slider ){
                  news.find().toArray(function(err, results_news ){
-                   tovar.find().sort({ AI: -1 }).limit(5).toArray(function(err, results_tovar ){
+                   tovar.find().sort({ AI: -1 }).limit(10).toArray(function(err, results_tovar ){
                      effect.find({ active: true }).toArray(function(err, results_effect ){
                         //counters
-                        var ipuser = req.connection.remoteAddress.replace(/[^.\d]+/g,"");
-                        var geo = geoip.lookup(ipuser);
+                        try {
+                          var ipuser = req.connection.remoteAddress.replace(/[^.\d]+/g,"");
+                          var geo = geoip.lookup(ipuser);
+                        } catch(e){
+                          var ipuser = 'Не удалось определить юзера';
+                          var geo = 'Не удалось определить юзера';
+                        }
+
 
                         counters.find({ date: today }).toArray(function(err, results_counters ){
                           if(results_counters.length > 0){

@@ -17,6 +17,12 @@
 }
 
 @media screen and (max-width: 800px) {
+  .min{
+    display: block;
+  }
+  .max{
+    display: none;
+  }
   #list,#grid{display: none;}
   body{
       margin-top: 60px;

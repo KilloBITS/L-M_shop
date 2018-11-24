@@ -119,21 +119,32 @@
       padding-bottom: 30px;
       text-align: center;
   }
+  .slide__bg {
+    background-size: cover;
+  }
   .menuBTN {
       display: inline-block;
-      padding: 5px 10px;
       cursor: pointer;
-      font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;
+      font-family: 'Didact Gothic', sans-serif;
       transition: 0.3s;
       color: black;
       font-size: 18px;
+      float: initial;
+      width: 100%;
+      text-align: left;
+      padding: 10px 24px;
   }
-  .menuBTN{
-    float: initial;
+  .punktMenu {
     width: 100%;
-    text-align: left;
+    padding: 8px 0px 5px 24px;
+    color: #780943;
+    font-family: 'Didact Gothic', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 18px;
+    float: left;
+    display: inline-block;
   }
-
   .hamburger-menu:before {
     content: "";
     position: absolute;
@@ -257,12 +268,9 @@
       width: 28px;
       height: 44px;
       border: none;
-      background: #fff;
-      background: rgb(243, 243, 243);
       cursor: pointer;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
-      border: 1px solid silver;
   }
 
   .flickity-prev-next-button.next {
@@ -295,5 +303,6 @@
     background: rgb(235, 41, 42);
     border-radius: 0px 5px 5px 0;
   }
+
 
 }

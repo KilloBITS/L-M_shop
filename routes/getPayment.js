@@ -77,7 +77,7 @@ router.get('/', function(req, res, next){
              NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
              NEW_ZAKAZ.today = today;
              NEW_ZAKAZ.summa = sum;
-             NEW_ZAKAZ.bonus = vernissageCoin;
+             NEW_ZAKAZ.bonus = lmCoin;
              NEW_ZAKAZ.status = 0;
              NEW_ZAKAZ.TTH = null;
              NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);

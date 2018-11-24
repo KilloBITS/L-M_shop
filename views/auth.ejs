@@ -47,7 +47,7 @@
     <div class="menuBlock">
       <% for(var i = 0; i < menu.length; i++) { %>
         <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <a href="<%= menu[i].glink %>"><div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div></a>
+          <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
         <% } else { %>
           <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
         <% } %>
