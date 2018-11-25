@@ -45,7 +45,7 @@ router.get('/', function(req, res, next){
         const db = client.db(global.baseName);
         const users = db.collection("users");
         users.find({email: req.session.user}).toArray(function(err, results_users){
-          var curCoin = results_users.LM_COIN + parseInt(lmCoin);
+          var curCoin = results_users[0].LM_COIN + parseInt(lmCoin);
           users.update( { email: req.session.user }, { $set : { LM_COIN: curCoin } });
         });
       });
