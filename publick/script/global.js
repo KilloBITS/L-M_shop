@@ -49,7 +49,7 @@ var Global = {
     })
 
     $(".addToJelaniya").click(function(){
-      $.post('/addToJelaniya',{numObj: $(this).attr('tovAI')},(res) => {
+      $.post('/addToJelaniya',{numObj: $(this).attr('tovAI')}, function(res) {
         $(this).css({
           "background-image":"url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU3Ljk5OSA1Ny45OTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU3Ljk5OSA1Ny45OTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNTYuNDE3LDIxLjgxNmMtMi4wMzcsMi4wODktMjMuNDc5LDIyLjUxLTIzLjQ3OSwyMi41MUMzMS44NSw0NS40NDEsMzAuNDI0LDQ2LDI4Ljk5OSw0NiAgIGMtMS40MjgsMC0yLjg1NC0wLjU1OS0zLjkzOS0xLjY3NGMwLDAtMjEuNDQxLTIwLjQyMS0yMy40OC0yMi41MWMtMi4wMzctMi4wOS0yLjE3Ni01Ljg0OCwwLTguMDc4ICAgYzIuMTc0LTIuMjI5LDUuMjExLTIuNDA2LDcuODc5LDBsMTkuNTQsMTguNzM1bDE5LjUzOS0xOC43MzVjMi42Ny0yLjQwNiw1LjcwNS0yLjIyOSw3Ljg3OSwwICAgQzU4LjU5NSwxNS45NjksNTguNDU2LDE5LjcyNyw1Ni40MTcsMjEuODE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)"
         });
@@ -79,9 +79,9 @@ var Global = {
   }
 };
 
-$(document).ready(() => {
+$(document).ready(function() {
   Global.BTN();
-  setTimeout(() => {
+  setTimeout(function() {
     $(".spn_hol").fadeOut(500);
   }, 1500);
 

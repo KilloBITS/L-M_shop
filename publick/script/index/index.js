@@ -233,7 +233,7 @@ var Index = {
   }
 }
 
-$(document).ready(() => {
+$(document).ready(function() {
   Index.INIT();
 
   // (function($) {
