@@ -218,20 +218,21 @@ app.post('/to-yuliadMessage', bot);
 //     });
 // });
 
-// app.listen(4111, function(){
-//   global.baseName = 'LM_SHOP';
-//   global.baseIP = 'mongodb://localhost:27017/';
-//   global.online = 0;
-//   console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
-// });
-
-global.baseName = 'LM_SHOP';
-global.baseIP = 'mongodb://localhost:27017/';
-global.online = 0;
-console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
+app.listen(4111, function(){
+  global.baseName = 'LM_SHOP';
+  global.baseIP = 'mongodb://localhost:27017/';
+  global.online = 0;
+  console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
+});
+// 
+// global.baseName = 'LM_SHOP';
+// global.baseIP = 'mongodb://localhost:27017/';
+// global.online = 0;
+// console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
 
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
 };
+
 https.createServer(options, app).listen(443);
