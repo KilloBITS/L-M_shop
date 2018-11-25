@@ -41,10 +41,14 @@ router.get('/', function(req, res, next){
   if(lmCoin > 1){
     //обработка бонуса
     if (req.session && req.session.user !== undefined){
-      users.find({email: req.session.user}).toArray(function(err, results_users){
-        var curCoin = results_users.LM_COIN + lmCoin;
-        users.update({email: req.session.user},{ $set : { LM_COIN: curCoin}});
+      mongoClient.connect(global.baseIP, function(err, client){
+        const users = db.collection("users");
+        users.find({email: req.session.user}).toArray(function(err, results_users){
+          var curCoin = results_users.LM_COIN + lmCoin;
+          users.update({email: req.session.user},{ $set : { LM_COIN: curCoin}});
+        });
       });
+
     }
   }
 
@@ -84,6 +88,7 @@ router.get('/', function(req, res, next){
              NEW_ZAKAZ.today = today;
              NEW_ZAKAZ.summa = sum;
              NEW_ZAKAZ.bonus = lmCoin;
+             NEW_ZAKAZ.PAYS = 'Оплата при получении';
              NEW_ZAKAZ.status = 0;
              NEW_ZAKAZ.TTH = null;
              NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
@@ -127,6 +132,83 @@ router.get('/', function(req, res, next){
 
 
   }else{//если оплата картой
+    mongoClient.connect(global.baseIP, function(err, client){
+        const db = client.db(global.baseName);
+        const config = db.collection("config");
+        const menu  = db.collection(langMenu);
+        const titles_page = db.collection("titles_page");
+        const payments = db.collection("payments");
+        const users = db.collection("users");
+
+        if(err) return console.log(err);
+        titles_page.find().toArray(function(err, results_titles_page){
+          config.find().toArray(function(err, results_config){
+           if(results_config[languageSystem].opens){
+             var today = new Date();
+             var dd = today.getDate();
+             var mm = today.getMonth()+1; //January is 0!
+             var yyyy = today.getFullYear();
+
+             if(dd<10) {
+             dd = '0'+dd
+             }
+
+             if(mm<10) {
+             mm = '0'+mm
+             }
+
+             today = mm + '/' + dd + '/' + yyyy;
+
+             var NEW_ZAKAZ = {};
+             NEW_ZAKAZ.number = req.query.phoneNum;
+             NEW_ZAKAZ.id =  makeid();
+             NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
+             NEW_ZAKAZ.today = today;
+             NEW_ZAKAZ.summa = sum;
+             NEW_ZAKAZ.bonus = lmCoin;
+             NEW_ZAKAZ.status = 0;
+             NEW_ZAKAZ.TTH = null;
+             NEW_ZAKAZ.PAYS = 'Одидает оплаты';
+             NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
+
+             if(parseInt(req.query.dosttype) === 0){ //Самовывоз
+               NEW_ZAKAZ.dostavka = "Самовывоз";
+               NEW_ZAKAZ.adress = "Самовывоз";
+             }
+
+             if(parseInt(req.query.dosttype) === 1){ //Курьером
+               NEW_ZAKAZ.dostavka = "Доставка курьером";
+               NEW_ZAKAZ.adress = 'Город:' + "Львов" + ', Улица:' + req.query.ulica + ', Дом:' + req.query.dom + ', Квартира:' + req.query.kvartira;
+             }
+             if(parseInt(req.query.dosttype) === 2){ //
+               NEW_ZAKAZ.dostavka = "Доставка новой почтой";
+               NEW_ZAKAZ.adress = 'Город:' + req.query.city + ', Отделение:' + req.query.npnum;
+             }
+             if(parseInt(req.query.dosttype) === 3){ //Укр почтой
+
+             }
+             payments.insertOne(NEW_ZAKAZ);
+
+             if (req.session && req.session.user !== undefined){
+               users.find({email: req.session.user}).toArray(function(err, results_users){
+                 results_users[0].payments.push(NEW_ZAKAZ.id);
+                 users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
+               });
+             }
+
+
+             res.redirect("/delivery?"+NEW_ZAKAZ.id);
+           }else{
+             res.render('close.ejs',{
+               conf: results_config[languageSystem],
+               isAdm: req.session.admin
+             })
+           }
+         });
+       });
+    });
+
+
     const pKey = "T9l51qLSTrMPTZDfDC7R3mneNT6cAU2MRYM3meOn";
     var json_string = {public_key:"i40058369372", version:"3", action:"pay", amount:"1", currency:"UAH", description:"test", order_id: makeid()};
     var data = btoa(JSON.stringify(json_string));

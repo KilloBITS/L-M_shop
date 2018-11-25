@@ -223,12 +223,10 @@
       </div>
       </div>
       <div class="headerArrow">
-
         <div class="arrowsss bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
       </div>
-      </div>
-
     </div>
+  </div>
 
 	<div class="data block">
 		<div class="mainDLG">
@@ -239,7 +237,7 @@
 		  <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <% if(newtovar.length > 0){ %>
           <% for(var i = 0; i < newtovar.length; i++){ %>
-          <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>">
+          <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].vendorCode %>">
             <div class="carousel-cell">
               <div class="newTov"></div>
               <h3> <%= newtovar[i].title %> </h3>

@@ -309,15 +309,13 @@
           <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
         </p>
         <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required placeholder="Доставка">
-          <option value="0">Самовывоз</option>
-          <option value="1">Доставка курьером</option>
           <option value="2">Доставка Новой Почтой</option>
           <option value="3" disabled>Доставка УкрПочтой</option>
         </select>
 
         <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата">
-          <option value="0" selected>Оплата наличными</option>
-          <option value="1" disabled>Оплата картой</option>
+          <option value="0" disabled>Оплата наличными</option>
+          <option value="1" selected>Оплата картой</option>
         </select>
         <div class="warnMsg">(Оплата картой сейчас недоступна, приносим наши извинения, мы работаем над этим).</div>
 
