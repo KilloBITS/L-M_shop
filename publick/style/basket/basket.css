@@ -2,6 +2,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
+@font-face {
+    font-family: 'Didact Gothic';
+    src: url('../DidactGothic.ttf');
+}
+
 html,
 html a {
   -webkit-font-smoothing: antialiased;

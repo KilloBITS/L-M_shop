@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Didact Gothic';
+    src: url('../DidactGothic.ttf');
+}
 
 .payment-title {
     width: 100%;
