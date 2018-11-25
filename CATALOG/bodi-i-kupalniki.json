@@ -1,0 +1,3596 @@
+{
+	"yml_catalog": {
+		"shop": {
+			"name": "Berezka",
+			"company": "Berezkashop",
+			"url": "https://berezkashop.in.ua/",
+			"categories": {
+				"category": {
+					"_id": "25",
+					"__text": "Боди|Купальники"
+				}
+			},
+			"offers": {
+				"offer": [
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "319",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/593/0742398001513896115.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0593",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "7686",
+						"_group_id": "593",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "319",
+						"quantity_in_stock": "9",
+						"picture": "https://berezkashop.in.ua/assets/images/items/594/0031415001513896354.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0594",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "7687",
+						"_group_id": "594",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "5",
+						"picture": "https://berezkashop.in.ua/assets/images/items/595/0110609001513896424.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0595",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12182",
+						"_group_id": "595",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/596/0753108001513896474.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0596",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "7692",
+						"_group_id": "596",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "7",
+						"picture": "https://berezkashop.in.ua/assets/images/items/597/0115222001513896528.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0597",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12181",
+						"_group_id": "597",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/598/0771792001525889797.jpg",
+							"https://berezkashop.in.ua/assets/images/items/598/0909148001513897085.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0598",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12188",
+						"_group_id": "598",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/599/0496207001525889718.jpg",
+							"https://berezkashop.in.ua/assets/images/items/599/0808334001513897146.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок&nbsp; морской принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0599",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12187",
+						"_group_id": "599",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/600/0635854001525889609.jpg",
+							"https://berezkashop.in.ua/assets/images/items/600/0674352001525889609.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок&nbsp;арт поп принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0600",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12185",
+						"_group_id": "600",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "341",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/601/0584034001513897305.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок&nbsp;с цветочным принтом</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0601",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "1969",
+						"_group_id": "601",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "341",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/602/0636505001513897402.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0602",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "1972",
+						"_group_id": "602",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/603/0178411001525889839.jpg",
+							"https://berezkashop.in.ua/assets/images/items/603/0462251001513897464.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0603",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12189",
+						"_group_id": "603",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бикини-топ с принтом и молнией",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/604/0065038001525889905.jpg",
+							"https://berezkashop.in.ua/assets/images/items/604/0520384001513897517.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Эластичная ткань, которая подходит для плавания</li>\r\n <li>Рисунок принт&nbsp;</li>\r\n <li>Высокий вырез</li>\r\n <li>Декоротивная молния</li>\r\n <li>Нерегулируемые бретельки</li>\r\n <li>Машинная стирка</li>\r\n <li>84% полиамид, 16% эластан</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0604",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12190",
+						"_group_id": "604",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1477/0199877001524823026.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1477/0369387001524823015.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1477/0861184001524823017.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1477",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11187",
+						"_group_id": "1477",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "17",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1478/0657736001524823085.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1478/0714664001524823087.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1478",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11186",
+						"_group_id": "1478",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1479/0124718001524823133.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1479/0535371001524823135.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1479",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11185",
+						"_group_id": "1479",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1480/0020892001524823244.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1480/0157038001524823236.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1480",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11184",
+						"_group_id": "1480",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1481/0533090001524823318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1481/0986365001524823320.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1481",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11183",
+						"_group_id": "1481",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "16",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1482/0762217001524823373.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1482/0869757001524823375.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1482",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11182",
+						"_group_id": "1482",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1483/0339992001524823458.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1483/0559299001524823465.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1483/0973625001524823468.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: дайвинг<br />Размер: универсал С/М</p> "
+						},
+						"vendorCode": "1483",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11181",
+						"_group_id": "1483",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1484/0473758001524823739.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1484/0761006001524823747.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: дайвинг<br />Размер: универсал С/М</p> "
+						},
+						"vendorCode": "1484",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11178",
+						"_group_id": "1484",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "18",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1485/0027264001524823822.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1485/0080848001524823811.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: дайвинг<br />Размер: универсал С/М</p> "
+						},
+						"vendorCode": "1485",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11180",
+						"_group_id": "1485",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1486/0072159001524823914.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1486/0211410001524823909.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: дайвинг<br />Размер: универсал С/М</p> "
+						},
+						"vendorCode": "1486",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11172",
+						"_group_id": "1486",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "16",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1488/0111063001524824089.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1488/0157633001524824086.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: дайвинг<br />Размер: универсал С/М</p> "
+						},
+						"vendorCode": "1488",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11170",
+						"_group_id": "1488",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Сдельный купальный с нашивкой",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1489/0606656001524824248.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1489/0909376001524824250.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Ткань: дайвинг + неопреновая подкладка <br />Размер: С/М</p>\r\n"
+						},
+						"vendorCode": "1489",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11166",
+						"_group_id": "1489",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Сдельный купальный с нашивкой",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1490/0283691001524824297.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1490/0335732001524824322.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Ткань: дайвинг + неопреновая подкладка <br />Размер: С/М</p>\r\n"
+						},
+						"vendorCode": "1490",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11165",
+						"_group_id": "1490",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "18",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1491/0048791001524824418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1491/0223588001524824411.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Размер: универсал. S/М<br />(впереди есть неопреновая подкладка)<br />Ткань: дайвинг</p>\r\n"
+						},
+						"vendorCode": "1491",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11164",
+						"_group_id": "1491",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Сдельный купальный с нашивкой",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1492/0035861001524824513.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1492/0978046001524824514.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Ткань: дайвинг + неопреновая подкладка <br />Размер: С/М</p>\r\n"
+						},
+						"vendorCode": "1492",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11162",
+						"_group_id": "1492",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Сдельный купальный с нашивкой",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1493/0048861001524824554.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1493/0314545001524824557.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p>Ткань: дайвинг + неопреновая подкладка <br />Размер: С/М</p>\r\n"
+						},
+						"vendorCode": "1493",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11161",
+						"_group_id": "1493",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1495/0604089001524824978.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1495/0748570001524824980.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Размер: универсал. S/М</span><br /><span>(впереди есть неопреновая подкладка)</span><br /><span>Ткань: дайвинг</span></p>\r\n"
+						},
+						"vendorCode": "1495",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11135",
+						"_group_id": "1495",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "15",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1496/0406079001524825182.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1496/0570610001524825179.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Размер: универсал. S/М</span><br /><span>(впереди есть неопреновая подкладка)</span><br /><span>Ткань: дайвинг</span></p>\r\n"
+						},
+						"vendorCode": "1496",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11163",
+						"_group_id": "1496",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1497/0232942001524825214.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1497/0234772001524825216.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Размер: универсал. S/М</span><br /><span>(впереди есть неопреновая подкладка)</span><br /><span>Ткань: дайвинг</span></p>\r\n"
+						},
+						"vendorCode": "1497",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11140",
+						"_group_id": "1497",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Стильный купальник с ярким принтом",
+						"currencyId": "UAH",
+						"price": "363",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1498/0396831001524825242.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1498/0576440001524825244.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Размер: универсал. S/М</span><br /><span>(впереди есть неопреновая подкладка)</span><br /><span>Ткань: дайвинг</span></p>\r\n"
+						},
+						"vendorCode": "1498",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11141",
+						"_group_id": "1498",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1554/0505642001524901638.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1554/0552188001524901646.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1554/0563472001524901641.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1554",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "10555",
+						"_group_id": "1554",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "18",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1555/0402307001524901717.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1555/0730852001524901712.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1555/0830819001524901723.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1555",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12891",
+						"_group_id": "1555",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1556/0052863001524901850.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1556/0246949001524901841.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1556/0530064001524901823.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1556",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12892",
+						"_group_id": "1556",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "17",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1557/0398141001524901939.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1557/0460094001524901920.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1557/0686198001524901933.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1557",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12893",
+						"_group_id": "1557",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "18",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1558/0351320001524902001.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1558/0355932001524902027.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1558/0396815001524902030.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1558",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12894",
+						"_group_id": "1558",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "16",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1559/0258377001524902164.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1559/0503814001524902167.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1559/0561108001524902185.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1559",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12895",
+						"_group_id": "1559",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1560/0109175001524902282.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1560/0572113001524902256.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1560/0948495001524902287.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1560",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12896",
+						"_group_id": "1560",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1561/0148253001524902349.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1561/0221871001524902366.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1561/0394472001524902362.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1561",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12897",
+						"_group_id": "1561",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1562/0221511001524902409.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1562/0894894001524902413.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1562/0937800001524902417.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1562",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12898",
+						"_group_id": "1562",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "19",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1563/0086287001524902464.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1563/0912245001524902468.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1563",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "12899",
+						"_group_id": "1563",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Купальник с чашками",
+						"currencyId": "UAH",
+						"price": "418",
+						"quantity_in_stock": "20",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1564/0520408001525443133.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1564/0527446001525443133.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1564/0651996001525443440.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: трикотаж&nbsp;</span><br /><span>Размер: универсал С/М</span></p>\r\n <div id=\"pv_desc\" class=\"pv_right_block\">\r\n <div class=\"pv_cant_edit pv_desc_cont\">( в комплекте 2 трусиков )</div>\r\n </div>\r\n"
+						},
+						"vendorCode": "1564",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "11383",
+						"_group_id": "1564",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "319",
+						"quantity_in_stock": "0",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1569/0125318001525809737.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1569/0136329001525809737.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1569",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12161",
+						"_group_id": "1569",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Слитный купальник с принтом поп-арт",
+						"currencyId": "UAH",
+						"price": "319",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/1570/0589460001525810426.jpg",
+							"https://berezkashop.in.ua/assets/images/items/1570/0595777001525810426.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Специальная ткань с принтом</li>\r\n <li>Округлый вырез</li>\r\n <li>Крой с закрытыми ягодицами</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "1570",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "12163",
+						"_group_id": "1570",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Сдельный купальник с вышивкой",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "5",
+						"description": {
+							"__cdata": " "
+						},
+						"vendorCode": "1576",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "12184",
+						"_group_id": "1576",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый боди с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2651/0787712001534331291.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2651/0788810001534331291.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2651/0789793001534331291.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж кукуруза</span></p> "
+						},
+						"vendorCode": "2651",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "19441",
+						"_group_id": "2651",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный боди с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2652/0673446001534331444.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2652/0674659001534331444.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2652/0675489001534331444.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2652/0676348001534331444.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж кукуруза</span></p> "
+						},
+						"vendorCode": "2652",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19443",
+						"_group_id": "2652",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный боди с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2653/0272800001534331500.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2653/0274124001534331500.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2653/0274957001534331500.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж кукуруза</span></p> "
+						},
+						"vendorCode": "2653",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "19445",
+						"_group_id": "2653",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый боди с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2655/0085230001534331558.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2655/0086453001534331558.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж кукуруза</span></p> "
+						},
+						"vendorCode": "2655",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "19448",
+						"_group_id": "2655",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2880/0573653001535970359.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2880/0575242001535970359.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2880/0576500001535970359.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + креп шифон</span></span></p>\r\n"
+						},
+						"vendorCode": "2880-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "20746",
+						"_group_id": "2880",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2880/0573653001535970359.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2880/0575242001535970359.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2880/0576500001535970359.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + креп шифон</span></span></p>\r\n"
+						},
+						"vendorCode": "2880-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "20747",
+						"_group_id": "2880",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2979/0723267001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0724520001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0725613001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0726708001536835926.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2979-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "23810",
+						"_group_id": "2979",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2980/0184379001536836086.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2980/0185706001536836086.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2980/0187106001536836086.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2980",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21604",
+						"_group_id": "2980",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2981/0858549001536836196.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2981/0859831001536836196.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2981/0860933001536836196.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2981",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21602",
+						"_group_id": "2981",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2998/0450176001536842644.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2998/0451441001536842644.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "2998",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21567",
+						"_group_id": "2998",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2998/0450176001536842644.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2998/0451441001536842644.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "2998-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21568",
+						"_group_id": "2998",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2999/0136667001536842789.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2999/0137776001536842789.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "2999-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "21576",
+						"_group_id": "2999",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3000/0485831001536842878.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3000/0487126001536842878.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3000-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "21580",
+						"_group_id": "3000",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2999/0136667001536842789.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2999/0137776001536842789.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "2999",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "21575",
+						"_group_id": "2999",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3000/0485831001536842878.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3000/0487126001536842878.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3000",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "21579",
+						"_group_id": "3000",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3001/0842358001536843479.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3001/0843590001536843479.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3001-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21584",
+						"_group_id": "3001",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3001/0842358001536843479.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3001/0843590001536843479.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3001",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21583",
+						"_group_id": "3001",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3002/0027429001536843527.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3002/0028598001536843527.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3002-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "21588",
+						"_group_id": "3002",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3002/0027429001536843527.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3002/0028598001536843527.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3002",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "21587",
+						"_group_id": "3002",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди с высокой горловиной цвета хаки",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3003/0826104001536843580.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3003/0827468001536843580.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3003",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22987",
+						"_group_id": "3003",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3004/0678041001536843641.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3004/0679343001536843641.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3004/0680379001536843641.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3004-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "21596",
+						"_group_id": "3004",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый боди с высокой горловиной",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3004/0678041001536843641.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3004/0679343001536843641.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3004/0680379001536843641.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3004",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "21595",
+						"_group_id": "3004",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Белый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2981/0858549001536836196.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2981/0859831001536836196.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2981/0860933001536836196.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2981-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21603",
+						"_group_id": "2981",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бежевый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2980/0184379001536836086.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2980/0185706001536836086.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2980/0187106001536836086.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2980-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21605",
+						"_group_id": "2980",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2979/0723267001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0724520001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0725613001536835926.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2979/0726708001536835926.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "2979",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "23809",
+						"_group_id": "2979",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3048/0649297001537015108.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3048/0650518001537015108.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + шелк</span></span></p>\r\n"
+						},
+						"vendorCode": "3048-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22141",
+						"_group_id": "3048",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску -3",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3049/0704628001537015239.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3049/0705975001537015239.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3049-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22153",
+						"_group_id": "3049",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди с леопардовым принтом",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3050/0325998001537015392.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3050/0327375001537015392.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3050/0328379001537015392.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3050-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22171",
+						"_group_id": "3050",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди с леопардовым принтом",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3050/0325998001537015392.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3050/0327375001537015392.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3050/0328379001537015392.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3050-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22172",
+						"_group_id": "3050",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в полоску",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3051/0323104001537015518.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3051/0324344001537015518.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3051/0325524001537015518.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж +&nbsp; шелк</span></span></p>\r\n"
+						},
+						"vendorCode": "3051-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22147",
+						"_group_id": "3051",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в полоску",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3051/0323104001537015518.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3051/0324344001537015518.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3051/0325524001537015518.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж +&nbsp; шелк</span></span></p>\r\n"
+						},
+						"vendorCode": "3051-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22148",
+						"_group_id": "3051",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в полоску -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3052/0954695001537015871.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3052/0955923001537015871.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + креп-шифон&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3052-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "21910",
+						"_group_id": "3052",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в полоску -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3052/0954695001537015871.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3052/0955923001537015871.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + креп-шифон&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3052-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "21911",
+						"_group_id": "3052",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в горошек",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3053/0233303001537016071.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3053/0234491001537016071.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3053/0235598001537016071.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж + креп-костюмка</span></span></p>\r\n"
+						},
+						"vendorCode": "3053-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "21922",
+						"_group_id": "3053",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и боди с запахом в горошек",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3053/0233303001537016071.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3053/0234491001537016071.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3053/0235598001537016071.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж + креп-костюмка</span></span></p>\r\n"
+						},
+						"vendorCode": "3053-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "21923",
+						"_group_id": "3053",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и белый боди с запахом в горошек",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3054/0188147001537016318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3054/0189514001537016318.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж + креп- шифон</span></span></p>\r\n"
+						},
+						"vendorCode": "3054-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "22160",
+						"_group_id": "3054",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш и белый боди с запахом в горошек",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3054/0188147001537016318.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3054/0189514001537016318.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж + креп- шифон</span></span></p>\r\n"
+						},
+						"vendorCode": "3054-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "22159",
+						"_group_id": "3054",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди с леопардовым принтом -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3055/0754063001537016493.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3055/0755326001537016493.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3055-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22165",
+						"_group_id": "3055",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди цвета хаки с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3060/0073196001537017395.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3060/0074445001537017395.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3060/0075386001537017395.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3060",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22979",
+						"_group_id": "3060",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди цвета марсал с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3061/0315124001537017572.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3061/0316322001537017572.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3061-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "21974",
+						"_group_id": "3061",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди цвета марсал с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3061/0315124001537017572.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3061/0316322001537017572.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3061",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "21973",
+						"_group_id": "3061",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди серого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3062/0768116001537017693.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3062/0769418001537017693.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3062/0770491001537017693.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3062-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "21978",
+						"_group_id": "3062",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди серого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3062/0768116001537017693.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3062/0769418001537017693.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3062/0770491001537017693.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3062",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "21977",
+						"_group_id": "3062",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди лило-бежевого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3063/0934202001537017890.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3063/0935378001537017890.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3063-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21982",
+						"_group_id": "3063",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди лило-бежевого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3063/0934202001537017890.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3063/0935378001537017890.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3063",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "21981",
+						"_group_id": "3063",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди белого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3064/0861363001537018009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3064/0862527001537018009.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3064-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21986",
+						"_group_id": "3064",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди белого цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3064/0861363001537018009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3064/0862527001537018009.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3064",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "21985",
+						"_group_id": "3064",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди красного цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3065/0420756001537018125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3065/0421955001537018125.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3065-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "21990",
+						"_group_id": "3065",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди красного цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3065/0420756001537018125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3065/0421955001537018125.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3065",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "21989",
+						"_group_id": "3065",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди черного цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3066/0210133001537018211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3066/0211414001537018211.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3066-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "21994",
+						"_group_id": "3066",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди черного цвета с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3066/0210133001537018211.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3066/0211414001537018211.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3066",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "21993",
+						"_group_id": "3066",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3048/0649297001537015108.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3048/0650518001537015108.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + шелк</span></span></p>\r\n"
+						},
+						"vendorCode": "3048-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22142",
+						"_group_id": "3048",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди в полоску -3",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3049/0704628001537015239.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3049/0705975001537015239.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3049-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22154",
+						"_group_id": "3049",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Черная юбка карандаш с боди с леопардовым принтом -2",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3055/0754063001537016493.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3055/0755326001537016493.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;<span>Ткань: трикотаж + софт</span></span></p>\r\n"
+						},
+						"vendorCode": "3055-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "22166",
+						"_group_id": "3055",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди цвета хаки с высокой горловиной и лампасами",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3060/0073196001537017395.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3060/0074445001537017395.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3060/0075386001537017395.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3060-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22980",
+						"_group_id": "3060",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Боди с высокой горловиной цвета хаки",
+						"currencyId": "UAH",
+						"price": "374",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3003/0826104001536843580.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3003/0827468001536843580.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань: трикотаж</p> "
+						},
+						"vendorCode": "3003-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "22988",
+						"_group_id": "3003",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3396/0922296001539617016.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3396/0923497001539617016.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3396/0924761001539617016.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "3396",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "27160",
+						"_group_id": "3396",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Голубой кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3908/0761636001542313804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3908/0762631001542313804.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "3908-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "27163",
+						"_group_id": "3908",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Голубой кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3908/0761636001542313804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3908/0762631001542313804.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "3908",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "27162",
+						"_group_id": "3908",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый кружевной боди",
+						"currencyId": "UAH",
+						"price": "385",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3396/0922296001539617016.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3396/0923497001539617016.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3396/0924761001539617016.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань:&nbsp;гипюр и трикотаж - дайвинг&nbsp;</span></p>\r\n"
+						},
+						"vendorCode": "3396-1",
+						"categoryId": {
+							"_portal_id": "31205",
+							"__text": "25"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "27161",
+						"_group_id": "3396",
+						"_available": "true",
+						"_selling_type": "r"
+					}
+				]
+			}
+		},
+		"_date": "2018-11-21 19:31:10"
+	}
+}

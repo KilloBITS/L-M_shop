@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const fs = require('fs');
 const mongoClient = require("mongodb").MongoClient;
+const request = require("request");
 const app = express();
 
 app.use(session({
@@ -20,21 +21,6 @@ app.use(bParser.json());
 app.use(express.static(__dirname + '/publick/'));
 app.use(cookieParser());
 app.use(bParser.raw({limit: '50mb'}));
-
-// Add headers
-app.use(function (req, res, next) {
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    // Pass to next layer of middleware
-    next();
-});
 
 //routes pages
 const index = require('./routes/getIndex');
@@ -167,72 +153,77 @@ app.post('/to-yuliadMessage', bot);
 
 //
 // //
-// var NNM = 'shtany-zhenskie';
+// var NNM = './CATALOG/life_of_style2';
 // fs.readFile(NNM+'.json', 'utf8', function(err, contents) {
-//     var tovars = JSON.parse(contents).yml_catalog.shop.offers.offer;
-//     console.log(JSON.parse(contents).yml_catalog.shop.offers.offer.length);
-//     var i = 0;
-//
-//     mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
-//       const db = client.db(global.baseName);
-//       const tovar  = db.collection("tovar");
-//       if(err) return console.log(err);
-//
-//       setInterval(function(){
-//         try {
-//           tovar.find( { vendorCode: tovars[i].vendorCode } ).toArray(function(err, results_tovar ){
-//             console.log(results_tovar.length)
-//             if(results_tovar.length === 0){
-//               console.log('Такого товара еще нет');
-//               try{
-//                 var NEW_TOVAR = new Object();
-//                 NEW_TOVAR.title = tovars[i].name;
-//                 NEW_TOVAR.availability = true;
-//                 NEW_TOVAR.category = 5,
-//                 NEW_TOVAR.types = NNM;
-//                 NEW_TOVAR.popular = 5;
-//                 NEW_TOVAR.AI = i;
-//
-//                 if(tovars[i].picture[0] !== 'h'){
-//                   // console.log("PIC !== H");
-//                     NEW_TOVAR.image = [];
-//                     for(let o = 0; o < tovars[i].picture.length; o++){
-//                       NEW_TOVAR.image.push(tovars[i].picture[o]);
-//                     }
-//                 }else{
-//                   // console.log("PIC ================= H");
-//                     NEW_TOVAR.image.push(tovars[i].picture);
-//                 }
-//
-//                 NEW_TOVAR.descriptin = tovars[i].description.__cdata
-//                 NEW_TOVAR.sale = [false, 0];
-//                 NEW_TOVAR.param =  tovars[i].param;
-//                 NEW_TOVAR.postavka = 'BEREZKA';
-//                 NEW_TOVAR.group_id =  tovars[i]._group_id;
-//                 NEW_TOVAR.tIncrement =  tovars[i]._id;
-//                 NEW_TOVAR.vendorCode = tovars[i].vendorCode
-//                 NEW_TOVAR.price = tovars[i].price;
-//                 tovar.insertOne(NEW_TOVAR);
-//                 console.log('Добавлено :' + i + "/" + JSON.parse(contents).yml_catalog.shop.offers.offer.length);
-//               } catch(e){
-//                 console.log("КАКАЯ ТО ОШИБКА")
-//               }
+//     // var tovars = JSON.parse(contents);
+//     console.log(JSON.parse(contents));
 //
 //
-//
-//             }else{
-//               console.log('Такой товар уже есть')
-//             }
-//           });
-//         } catch (e) {
-//           console.log("Tovar "+i + " ERROR")
-//         }
-//
-//         i = i + 1;
-//       },1000)
-//     });
+
+    // var i = 0;
+
+    // mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
+    //   const db = client.db(global.baseName);
+    //   const tovar  = db.collection("tovar");
+    //   if(err) return console.log(err);
+    //
+    //   setInterval(function(){
+    //     try {
+    //       tovar.find( { vendorCode: tovars[i].vendorCode } ).toArray(function(err, results_tovar ){
+    //         console.log(results_tovar.length)
+    //         if(results_tovar.length === 0){
+    //           console.log('Такого товара еще нет');
+    //           try{
+    //             var NEW_TOVAR = new Object();
+    //             NEW_TOVAR.title = tovars[i].name;
+    //             NEW_TOVAR.availability = true;
+    //             NEW_TOVAR.category = 5,
+    //             NEW_TOVAR.types = NNM;
+    //             NEW_TOVAR.popular = 5;
+    //             NEW_TOVAR.AI = i;
+    //
+    //             if(tovars[i].picture[0] !== 'h'){
+    //               // console.log("PIC !== H");
+    //                 NEW_TOVAR.image = [];
+    //                 for(let o = 0; o < tovars[i].picture.length; o++){
+    //                   NEW_TOVAR.image.push(tovars[i].picture[o]);
+    //                 }
+    //             }else{
+    //               // console.log("PIC ================= H");
+    //                 NEW_TOVAR.image.push(tovars[i].picture);
+    //             }
+    //
+    //             NEW_TOVAR.descriptin = tovars[i].description.__cdata
+    //             NEW_TOVAR.sale = [false, 0];
+    //             NEW_TOVAR.param =  tovars[i].param;
+    //             NEW_TOVAR.postavka = 'BEREZKA';
+    //             NEW_TOVAR.group_id =  tovars[i]._group_id;
+    //             NEW_TOVAR.tIncrement =  tovars[i]._id;
+    //             NEW_TOVAR.vendorCode = tovars[i].vendorCode
+    //             NEW_TOVAR.price = tovars[i].price;
+    //             tovar.insertOne(NEW_TOVAR);
+    //             console.log('Добавлено :' + i + "/" + JSON.parse(contents).yml_catalog.shop.offers.offer.length);
+    //           } catch(e){
+    //             console.log("КАКАЯ ТО ОШИБКА")
+    //           }
+    //
+    //
+    //
+    //         }else{
+    //           console.log('Такой товар уже есть')
+    //         }
+    //       });
+    //     } catch (e) {
+    //       console.log("Tovar "+i + " ERROR")
+    //     }
+    //
+    //     i = i + 1;
+    //   },1000)
+    // });
 // });
 
+
+//
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
@@ -243,7 +234,35 @@ app.listen(4111, function(){
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
+
+
+  // // var i = 0;
+  // var noFolder = [];
+  // mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
+  //   const db = client.db(global.baseName);
+  //     const tovar  = db.collection("tovar");
+  //     if(err) return console.log(err);
+  //
+  //     tovar.find().toArray(function(err, results_tovar ){
+  //
+  //     // setInterval(function(){
+  //     for(var i = 0; i < results_tovar.length; i++){
+  //       var testName = results_tovar[i].image[0].substr(46).split('/');
+  //
+  //       var dir = 'publick/data/tovar/'+testName[0];
+  //       if (!fs.existsSync(dir)){
+  //         console.log('такой папки нет: ' + testName[0])
+  //         noFolder.push(testName[0]);
+  //         fs.mkdirSync(dir);
+  //       }
+  //       console.log(i);
+  //       // i = i +1;
+  //     // }, 50);
+  //     }
+  //       console.log(noFolder)
+  //   });
+  // });
+
+
+
 });
-
-
-https.createServer(options, app).listen(4112);

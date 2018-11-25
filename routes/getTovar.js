@@ -20,10 +20,10 @@ router.get('/*', function(req, res, next){
 
     if(parseInt(page) === 1){
       var otTovar = 0;
-      var doTovar = 24;
+      var doTovar = 18;
     }else{
-      var otTovar = 24 * page;
-      var doTovar = otTovar + 24;
+      var otTovar = 18 * page;
+      var doTovar = otTovar + 18;
     }
 
     mongoClient.connect(global.baseIP, function(err, client){
@@ -62,21 +62,13 @@ router.get('/*', function(req, res, next){
                     }
 
                     tovar.find( FILTER ).sort( { AI: -1 } ).toArray(function(err, results_tovar ){
-                      var page_length = parseInt(results_tovar.length / 24);
+                      var page_length = parseInt(results_tovar.length / 18);
                       var current_page = page;
-                      console.log('/shop?c='+searchData[0]+','+searchData[1].split('&')[0])
-                      console.log(results_tovar.length)
-                      var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 24, totalResult: results_tovar.length});
+                      // console.log('/shop?c='+searchData[0]+','+searchData[1].split('&')[0])
+                      // console.log(results_tovar.length)
+                      var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length});
                       var p = paginator.getPaginationData();
-                      res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
-                      // Request methods you wish to allow
-                      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-                      // Request headers you wish to allow
-                      res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-                      // Set to true if you need the website to include cookies in the requests sent
-                      // to the API (e.g. in case you use sessions)
-                      res.setHeader('Access-Control-Allow-Credentials', true);
-                      
+
                       res.render('tovar.ejs',{
                         conf: results_config[languageSystem],
                         menu: results_menu,

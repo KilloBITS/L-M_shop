@@ -1,0 +1,3887 @@
+{
+	"yml_catalog": {
+		"shop": {
+			"name": "Berezka",
+			"company": "Berezkashop",
+			"url": "https://berezkashop.in.ua/",
+			"categories": {
+				"category": {
+					"_id": "24",
+					"__text": "Спортивные костюмы"
+				}
+			},
+			"offers": {
+				"offer": [
+					{
+						"name": "Черный велюровый костюм с молниями",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/281/0600639001534233425.jpg",
+							"https://berezkashop.in.ua/assets/images/items/281/0601749001534233425.jpg",
+							"https://berezkashop.in.ua/assets/images/items/281/0602614001534233425.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Молния на груди</li>\r\n <li>Мягкий велюр</li>\r\n <li>Круглый вырез</li>\r\n <li>Облегающие манжеты</li>\r\n <li>Свободная нижняя кромка</li>\r\n <li>Классический крой, точное</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0281",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "18974",
+						"_group_id": "281",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-серый костюм с отделкой из пайеток",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/282/0013373001534242206.jpg",
+							"https://berezkashop.in.ua/assets/images/items/282/0014402001534242206.jpg",
+							"https://berezkashop.in.ua/assets/images/items/282/0015468001534242206.jpg",
+							"https://berezkashop.in.ua/assets/images/items/282/0016495001534242206.jpg",
+							"https://berezkashop.in.ua/assets/images/items/282/0019218001534242206.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Отделка из пайеток&nbsp;</li>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Ткань: трикотаж ангора&nbsp;</li>\r\n <li>Длинный рукав</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0282",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "19063",
+						"_group_id": "282",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/308/0748151001505807720.jpg",
+							"https://berezkashop.in.ua/assets/images/items/308/0748302001505807720.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0308-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "6675",
+						"_group_id": "308",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/309/0867810001505807856.jpg",
+							"https://berezkashop.in.ua/assets/images/items/309/0867944001505807856.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0309-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "4507",
+						"_group_id": "309",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/311/0664102001505808070.jpg",
+							"https://berezkashop.in.ua/assets/images/items/311/0664241001505808070.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0311-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "4503",
+						"_group_id": "311",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/312/0439588001505808167.jpg",
+							"https://berezkashop.in.ua/assets/images/items/312/0439781001505808167.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0312",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "4504",
+						"_group_id": "312",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый костюм декорированный молниями",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/335/0352570001505812807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/335/0352784001505812807.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Молния на груди</li>\r\n <li>Замш на дайвинге&nbsp;</li>\r\n <li>Круглый вырез</li>\r\n <li>Облегающие манжеты</li>\r\n <li>Свободная нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0335-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "7925",
+						"_group_id": "335",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Суженные книзу джоггеры с джемпером",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/441/0286131001506334059.jpg",
+							"https://berezkashop.in.ua/assets/images/items/441/0286314001506334059.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Затягивающийся шнурок на талии</li>\r\n <li>Боковые карманы</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Открытые плечи</li>\r\n <li>Отворот</li>\r\n <li>Длинные рукава</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0441-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "6673",
+						"_group_id": "441",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Суженные книзу джоггеры с джемпером",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/443/0442346001506334341.jpg",
+							"https://berezkashop.in.ua/assets/images/items/443/0442483001506334341.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Затягивающийся шнурок на талии</li>\r\n <li>Боковые карманы</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Открытые плечи</li>\r\n <li>Отворот</li>\r\n <li>Длинные рукава</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0443-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "8005",
+						"_group_id": "443",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Замшевый костюм декорированный молниями",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/335/0352570001505812807.jpg",
+							"https://berezkashop.in.ua/assets/images/items/335/0352784001505812807.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Молния на груди</li>\r\n <li>Замш на дайвинге&nbsp;</li>\r\n <li>Круглый вырез</li>\r\n <li>Облегающие манжеты</li>\r\n <li>Свободная нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0335",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "7924",
+						"_group_id": "335",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Обтягивающий спортивный костюм из велюра",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/927/0510865001520251470.jpg",
+							"https://berezkashop.in.ua/assets/images/items/927/0512930001520251470.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Обтягивающий свитшот</li>\r\n <li>Выгодно подчеркивает достоинства</li>\r\n <li>Круглый вырез</li>\r\n <li>Джоггеры скинни</li>\r\n <li>Плотно прилегают к телу</li>\r\n <li>Эластичный пояс</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0927",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "4193",
+						"_group_id": "927",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Обтягивающий спортивный костюм из синего велюра",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/928/0504882001520251727.jpg",
+							"https://berezkashop.in.ua/assets/images/items/928/0506982001520251727.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Обтягивающий свитшот</li>\r\n <li>Выгодно подчеркивает достоинства</li>\r\n <li>Круглый вырез</li>\r\n <li>Джоггеры скинни</li>\r\n <li>Плотно прилегают к телу</li>\r\n <li>Эластичный пояс</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0928",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "4192",
+						"_group_id": "928",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Обтягивающий спортивный костюм из черного велюра",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/929/0803178001520251812.jpg",
+							"https://berezkashop.in.ua/assets/images/items/929/0805348001520251812.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Обтягивающий свитшот</li>\r\n <li>Выгодно подчеркивает достоинства</li>\r\n <li>Круглый вырез</li>\r\n <li>Джоггеры скинни</li>\r\n <li>Плотно прилегают к телу</li>\r\n <li>Эластичный пояс</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0929",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "4194",
+						"_group_id": "929",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Обтягивающий спортивный костюм из черного велюра",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/930/0966064001520252008.jpg",
+							"https://berezkashop.in.ua/assets/images/items/930/0968018001520252008.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Обтягивающий свитшот</li>\r\n <li>Выгодно подчеркивает достоинства</li>\r\n <li>Круглый вырез</li>\r\n <li>Джоггеры скинни</li>\r\n <li>Плотно прилегают к телу</li>\r\n <li>Эластичный пояс</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0930",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "4191",
+						"_group_id": "930",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Обтягивающий спортивный костюм из мраморного велюра",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "4",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/931/0402186001520252133.jpg",
+							"https://berezkashop.in.ua/assets/images/items/931/0404620001520252133.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Обтягивающий свитшот</li>\r\n <li>Выгодно подчеркивает достоинства</li>\r\n <li>Круглый вырез</li>\r\n <li>Джоггеры скинни</li>\r\n <li>Плотно прилегают к телу</li>\r\n <li>Эластичный пояс</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0931",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "4190",
+						"_group_id": "931",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/309/0867810001505807856.jpg",
+							"https://berezkashop.in.ua/assets/images/items/309/0867944001505807856.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0309",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "4506",
+						"_group_id": "309",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/311/0664102001505808070.jpg",
+							"https://berezkashop.in.ua/assets/images/items/311/0664241001505808070.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0311",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "4502",
+						"_group_id": "311",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/312/0439588001505808167.jpg",
+							"https://berezkashop.in.ua/assets/images/items/312/0439781001505808167.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0312-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "4505",
+						"_group_id": "312",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/990/0275293001520840783.jpg",
+							"https://berezkashop.in.ua/assets/images/items/990/0277502001520840783.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0990",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "19020",
+						"_group_id": "990",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серебристый велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/991/0346423001520840999.jpg",
+							"https://berezkashop.in.ua/assets/images/items/991/0348374001520840999.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0991",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серебристый"
+							}
+						],
+						"_id": "19021",
+						"_group_id": "991",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Розовый велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/992/0356168001520841066.jpg",
+							"https://berezkashop.in.ua/assets/images/items/992/0358413001520841066.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0992",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "19022",
+						"_group_id": "992",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "539",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/308/0748151001505807720.jpg",
+							"https://berezkashop.in.ua/assets/images/items/308/0748302001505807720.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: трикотаж</li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0308",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "6674",
+						"_group_id": "308",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Суженные книзу джоггеры с джемпером",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/441/0286131001506334059.jpg",
+							"https://berezkashop.in.ua/assets/images/items/441/0286314001506334059.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Затягивающийся шнурок на талии</li>\r\n <li>Боковые карманы</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Открытые плечи</li>\r\n <li>Отворот</li>\r\n <li>Длинные рукава</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0441",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "6672",
+						"_group_id": "441",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Суженные книзу джоггеры с джемпером",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/443/0442346001506334341.jpg",
+							"https://berezkashop.in.ua/assets/images/items/443/0442483001506334341.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Затягивающийся шнурок на талии</li>\r\n <li>Боковые карманы</li>\r\n <li>Эластичные манжеты</li>\r\n <li>Классический крой</li>\r\n <li>Открытые плечи</li>\r\n <li>Отворот</li>\r\n <li>Длинные рукава</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0443",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бирюзовый"
+							}
+						],
+						"_id": "8004",
+						"_group_id": "443",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Яркий спортивный костюм",
+						"currencyId": "UAH",
+						"price": "495",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2201/0230380001530881583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2201/0241564001530881583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2201/0253337001530881583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2201/0266110001530881583.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2201/0333681001530881583.jpg"
+						],
+						"description": {
+							"__cdata": " <ul>\r\n <li>ткань: дайвинг&nbsp;</li>\r\n </ul> "
+						},
+						"vendorCode": "2201",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет"
+							}
+						],
+						"_id": "16428",
+						"_group_id": "2201",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм из трикотаж ангоры с молнией",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2560/0935676001534167889.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2560/0936754001534167889.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2560/0937723001534167889.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2560/0938614001534167889.jpg"
+						],
+						"description": {
+							"__cdata": " <ul>\r\n <li>ткань: трикотаж Ангора</li>\r\n </ul> "
+						},
+						"vendorCode": "2560",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "18926",
+						"_group_id": "2560",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм из трикотаж ангоры с молнией",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2561/0459374001534168013.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2561/0460519001534168013.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2561/0461441001534168013.jpg"
+						],
+						"description": {
+							"__cdata": " <ul>\r\n <li>ткань: трикотаж Ангора</li>\r\n </ul> "
+						},
+						"vendorCode": "2561",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "18928",
+						"_group_id": "2561",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Костюм из трикотаж ангоры с молнией",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2563/0189238001534168176.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2563/0190309001534168176.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2563/0191259001534168176.jpg"
+						],
+						"description": {
+							"__cdata": " <ul>\r\n <li>ткань: трикотаж Ангора</li>\r\n </ul> "
+						},
+						"vendorCode": "2563",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Дизайнерский"
+							}
+						],
+						"_id": "18932",
+						"_group_id": "2563",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Изумрудный велюровый комбинезон на завязках",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2567/0490972001534231212.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2567/0492126001534231212.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2567",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "19070",
+						"_group_id": "2567",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Велюровый костюм декорированный кружевом",
+						"currencyId": "UAH",
+						"price": "473",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2570/0044864001534231968.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2570/0045952001534231968.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2570/0046805001534231968.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: Мягкий мраморный велюр</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2570",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "18990",
+						"_group_id": "2570",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный костюм с отделкой из пайеток",
+						"currencyId": "UAH",
+						"price": "627",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2572/0444345001534232532.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2572/0445459001534232532.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>отделка из пайеток&nbsp;</li>\r\n <li>ткань:&nbsp;<span>трикотаж двунитка&nbsp;</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2572",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "18969",
+						"_group_id": "2572",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый велюровый костюм с молниями",
+						"currencyId": "UAH",
+						"price": "550",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2575/0970619001534233525.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2575/0971808001534233525.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2575/0972739001534233525.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Молния на груди</li>\r\n <li>Мягкий велюр</li>\r\n <li>Круглый вырез</li>\r\n <li>Облегающие манжеты</li>\r\n <li>Свободная нижняя кромка</li>\r\n <li>Классический крой, точное</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2575",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "18976",
+						"_group_id": "2575",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Розовый велюровый костюм декорированный кружевом",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2577/0934461001534238522.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2577/0935485001534238522.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2577/0936332001534238522.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Ткань: Мягкий мраморный велюр</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2577",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "18989",
+						"_group_id": "2577",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2582/0422926001534240207.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2582/0423921001534240207.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2582/0424773001534240207.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2582",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "19071",
+						"_group_id": "2582",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Серый костюм с отделкой из пайеток",
+						"currencyId": "UAH",
+						"price": "605",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2588/0471133001534242288.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2588/0472225001534242288.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2588/0474028001534242288.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Отделка из пайеток&nbsp;</li>\r\n <li>Круглый вырез&nbsp;</li>\r\n <li>Ткань: трикотаж ангора&nbsp;</li>\r\n <li>Длинный рукав</li>\r\n <li>Классический крой</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2588",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "19066",
+						"_group_id": "2588",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Голубой велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2589/0596428001534242510.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2589/0598720001534242510.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2589/0599542001534242510.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2589/0600562001534242510.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2589",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Голубой"
+							}
+						],
+						"_id": "19076",
+						"_group_id": "2589",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый велюровый комбинезон",
+						"currencyId": "UAH",
+						"price": "506",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2590/0273140001534243633.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2590/0274292001534243633.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкий мраморный велюр</li>\r\n <li>Эластичный пояс и&nbsp; манжеты</li>\r\n <li>Однотонная модель&nbsp;</li>\r\n <li>Длиные рукава</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2590",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "19075",
+						"_group_id": "2590",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-серый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2874/0142942001535965622.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2874/0144144001535965622.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2874/0145148001535965622.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2874-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "20701",
+						"_group_id": "2874",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-серый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2874/0142942001535965622.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2874/0144144001535965622.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2874/0145148001535965622.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2874",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Темно-серый"
+							}
+						],
+						"_id": "20700",
+						"_group_id": "2874",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2875/0816856001535965711.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2875",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20710",
+						"_group_id": "2875",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2876/0337729001535965804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2876/0338980001535965804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2876/0339941001535965804.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2876-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20709",
+						"_group_id": "2876",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2876/0337729001535965804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2876/0338980001535965804.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2876/0339941001535965804.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2876",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20708",
+						"_group_id": "2876",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": "https://berezkashop.in.ua/assets/images/items/2875/0816856001535965711.jpg",
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2875-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20711",
+						"_group_id": "2875",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-зеленый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "11",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2877/0392326001535967434.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2877/0393457001535967434.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2877/0394370001535967434.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2877-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20715",
+						"_group_id": "2877",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Темно-зеленый костюм с цветочной вышивкой",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "12",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2877/0392326001535967434.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2877/0393457001535967434.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2877/0394370001535967434.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li><span>Ткань: французский трикотаж</span></li>\r\n <li>Без подкладки</li>\r\n <li>Круглый ворот&nbsp;</li>\r\n <li>Отделка цветочной вышивкой</li>\r\n <li>Карманы</li>\r\n <li>Трикотажные манжеты и нижняя кромка</li>\r\n <li>Классический крой</li>\r\n <li>Машинная стирка</li>\r\n <li>100% полиэстер</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2877",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20714",
+						"_group_id": "2877",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2886/0540672001535971886.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2886/0541794001535971886.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2886/0542760001535971886.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2886",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "20761",
+						"_group_id": "2886",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2886/0540672001535971886.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2886/0541794001535971886.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2886/0542760001535971886.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2886-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "20762",
+						"_group_id": "2886",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2887/0414732001535972002.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2887/0415819001535972002.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2887/0416768001535972002.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2887-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20766",
+						"_group_id": "2887",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2887/0414732001535972002.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2887/0415819001535972002.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2887/0416768001535972002.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2887",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20765",
+						"_group_id": "2887",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2888/0355646001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0356875001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0357830001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0358816001535972049.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2888-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "20770",
+						"_group_id": "2888",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный спортивный костюм с лампасами и капюшоном",
+						"currencyId": "UAH",
+						"price": "517",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2888/0355646001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0356875001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0357830001535972049.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2888/0358816001535972049.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span>Ткань: дайвинг</span><br /><span><br /></span></p>\r\n"
+						},
+						"vendorCode": "2888",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "20769",
+						"_group_id": "2888",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2897/0458891001535977736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2897/0460109001535977736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2897/0461710001535977736.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2897",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20834",
+						"_group_id": "2897",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2897/0458891001535977736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2897/0460109001535977736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2897/0461710001535977736.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2897-1",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "20835",
+						"_group_id": "2897",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2898/0353929001535977879.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2898/0355090001535977879.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2898/0356137001535977879.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2898",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20842",
+						"_group_id": "2898",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2898/0353929001535977879.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2898/0355090001535977879.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2898/0356137001535977879.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2898-1",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "20843",
+						"_group_id": "2898",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2899/0758621001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0759910001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0761974001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0762948001535977944.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2899",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20846",
+						"_group_id": "2899",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Зеленый велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2899/0758621001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0759910001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0761974001535977944.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2899/0762948001535977944.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2899-1",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Зеленый"
+							}
+						],
+						"_id": "20847",
+						"_group_id": "2899",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2900/0029849001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0031074001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0032266001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0033252001535978030.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2900-1",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "20851",
+						"_group_id": "2900",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Синий велюровый костюм с полосками по бокам",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2900/0029849001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0031074001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0032266001535978030.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2900/0033252001535978030.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Контрастная полоска сбоку</li>\r\n <li>Облегающий крой</li>\r\n <li>Мягкий велюр</li>\r\n <li><span>Облегающие манжеты</span></li>\r\n <li><span>Юбка карандаш&nbsp;</span></li>\r\n <li><span>Класический крой</span></li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2900",
+						"categoryId": [
+							"24",
+							{
+								"_portal_id": "30107",
+								"__text": "92"
+							}
+						],
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Синий"
+							}
+						],
+						"_id": "20850",
+						"_group_id": "2900",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный женский костюм в клетку",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3097/0121028001537449616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3097/0133830001537449616.jpg"
+						],
+						"description": {
+							"__cdata": " <p><span>Ткань: трикотаж</span></p> "
+						},
+						"vendorCode": "3097",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Клетка"
+							}
+						],
+						"_id": "22175",
+						"_group_id": "3097",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный красный костюм на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "1",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3210/0760823001538572547.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3210/0762098001538572547.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3210/0763349001538572547.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3210",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "22550",
+						"_group_id": "3210",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм цвета хаки на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3211/0664273001538572739.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3211/0665464001538572739.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3211/0666494001538572739.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3211-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "24853",
+						"_group_id": "3211",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм на флисе с нашивкой",
+						"currencyId": "UAH",
+						"price": "715",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3212/0818764001538572867.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3212/0820077001538572867.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3212-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "22549",
+						"_group_id": "3212",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм на флисе с нашивкой",
+						"currencyId": "UAH",
+						"price": "715",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3212/0818764001538572867.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3212/0820077001538572867.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3212",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "22548",
+						"_group_id": "3212",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный красный костюм на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3210/0760823001538572547.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3210/0762098001538572547.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3210/0763349001538572547.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3210-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "22551",
+						"_group_id": "3210",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный светло-розовый костюм на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3213/0060453001538573371.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3213/0061601001538573371.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3213-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "22555",
+						"_group_id": "3213",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный светло-розовый костюм на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3213/0060453001538573371.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3213/0061601001538573371.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3213",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "22554",
+						"_group_id": "3213",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм цвета хаки на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3211/0664273001538572739.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3211/0665464001538572739.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3211/0666494001538572739.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3211",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "24852",
+						"_group_id": "3211",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Бордовый костюм из стеганного трикотажа косички",
+						"currencyId": "UAH",
+						"price": "528",
+						"quantity_in_stock": "9",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3344/0168515001539342512.jpg",
+						"description": {
+							"__cdata": " <p><span>Ткань: стёганый трикотаж</span></p> "
+						},
+						"vendorCode": "3344",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "23485",
+						"_group_id": "3344",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм горчичного цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3554/0727458001540202998.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3554/0728714001540202998.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3554/0729732001540202998.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3554-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Желтый"
+							}
+						],
+						"_id": "24855",
+						"_group_id": "3554",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм горчичного цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3554/0727458001540202998.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3554/0728714001540202998.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3554/0729732001540202998.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3554",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Желтый"
+							}
+						],
+						"_id": "24854",
+						"_group_id": "3554",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм серого цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3555/0216069001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0217445001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0218458001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0855213001540203130.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3555-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "24859",
+						"_group_id": "3555",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм серого цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3555/0216069001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0217445001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0218458001540203125.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3555/0855213001540203130.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3555",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "24858",
+						"_group_id": "3555",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм цвета сливы на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3556/0474231001540203246.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3556/0475395001540203246.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3556/0476348001540203246.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3556-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Баклажан"
+							}
+						],
+						"_id": "28408",
+						"_group_id": "3556",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм на флисе с нашивкой",
+						"currencyId": "UAH",
+						"price": "638",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3614/0968785001541073346.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3614/0970170001541073346.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3614/0971593001541073346.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: двунитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3614",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "25634",
+						"_group_id": "3614",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм на флисе с нашивкой",
+						"currencyId": "UAH",
+						"price": "638",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3614/0968785001541073346.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3614/0970170001541073346.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3614/0971593001541073346.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: двунитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3614-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Серый"
+							}
+						],
+						"_id": "25635",
+						"_group_id": "3614",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый худи на флисе горчичного цвета с полосами на рукавах",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "6",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3584/0300229001540292570.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3584/0301564001540292570.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3584/0302803001540292570.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3584",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Коричневый"
+							}
+						],
+						"_id": "25306",
+						"_group_id": "3584",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый черный худи на флисе с полосами на рукавах",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3583/0684238001540292202.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3583/0685484001540292202.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3583/0686536001540292202.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3583",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "25304",
+						"_group_id": "3583",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый худи на флисе сливового цвета с полосами на рукавах",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3585/0939278001540292696.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3585/0940588001540292696.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3585/0941791001540292696.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3585/0942900001540292696.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3585",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Баклажан"
+							}
+						],
+						"_id": "25313",
+						"_group_id": "3585",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый красный худи на флисе с полосами на рукавах",
+						"currencyId": "UAH",
+						"price": "451",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3586/0277271001540295598.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3586/0278909001540295598.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3586/0280254001540295598.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3586",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "25316",
+						"_group_id": "3586",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -1",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3756/0039809001541265819.jpg",
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3756",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "26347",
+						"_group_id": "3756",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -2",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3757/0228743001541265962.jpg",
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3757",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "26349",
+						"_group_id": "3757",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -3",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3758/0798807001541266001.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3758/0800006001541266001.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3758/0800891001541266001.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3758",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Желтый"
+							}
+						],
+						"_id": "26351",
+						"_group_id": "3758",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -4",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3759/0207950001541266042.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3759/0209178001541266042.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3759",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Персиковый"
+							}
+						],
+						"_id": "26353",
+						"_group_id": "3759",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -5",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3760/0102263001541266106.jpg",
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3760",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бежевый"
+							}
+						],
+						"_id": "26355",
+						"_group_id": "3760",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Укороченный худи с принтом -6",
+						"currencyId": "UAH",
+						"price": "396",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3761/0393733001541266170.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3761/0394862001541266170.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: дайвинг&nbsp;</span></span></p>\r\n"
+						},
+						"vendorCode": "3761",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Сиреневый"
+							}
+						],
+						"_id": "26357",
+						"_group_id": "3761",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Красный спортивный костюм",
+						"currencyId": "UAH",
+						"price": "440",
+						"quantity_in_stock": "1",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3831/0560178001541765223.jpg",
+						"description": {
+							"__cdata": "\r\n<p>плотный стрейчевый эластин ,лампасы выполнены из стрейчевого мерцающего люрекса ,так же костюм декорирован фирменной вышивкой цвета SILVER.</p>\r\n"
+						},
+						"vendorCode": "3831",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "26713",
+						"_group_id": "3831",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Черный спортивный костюм",
+						"currencyId": "UAH",
+						"price": "275",
+						"quantity_in_stock": "0",
+						"picture": "https://berezkashop.in.ua/assets/images/items/3833/0047446001541765498.jpg",
+						"description": {
+							"__cdata": " <p>ткань: трикотаж&nbsp;</p> "
+						},
+						"vendorCode": "3833",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "26718",
+						"_group_id": "3833",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм белого цвета с нашивкой",
+						"currencyId": "UAH",
+						"price": "715",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3876/0621458001542050531.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3876/0622086001542050531.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3876/0622634001542050531.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3876-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "26966",
+						"_group_id": "3876",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм белого цвета с нашивкой",
+						"currencyId": "UAH",
+						"price": "715",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3876/0621458001542050531.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3876/0622086001542050531.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3876/0622634001542050531.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3876",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Белый"
+							}
+						],
+						"_id": "26965",
+						"_group_id": "3876",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3877/0340969001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0341580001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0342045001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0342520001542050736.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3877",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "26987",
+						"_group_id": "3877",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм черного цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3879/0078124001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0078724001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0079186001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0079651001542051418.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3879-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "26984",
+						"_group_id": "3879",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3877/0340969001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0341580001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0342045001542050736.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3877/0342520001542050736.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3877-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "26988",
+						"_group_id": "3877",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -2",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3878/0176836001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0177452001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0177929001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0178434001542051200.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3878-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Желтый"
+							}
+						],
+						"_id": "26976",
+						"_group_id": "3878",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -2",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3878/0176836001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0177452001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0177929001542051200.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3878/0178434001542051200.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3878",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Желтый"
+							}
+						],
+						"_id": "26975",
+						"_group_id": "3878",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм черного цвета на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "7",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3879/0078124001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0078724001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0079186001542051418.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3879/0079651001542051418.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3879",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "26983",
+						"_group_id": "3879",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм цвета сливы на флисе",
+						"currencyId": "UAH",
+						"price": "671",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3556/0474231001540203246.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3556/0475395001540203246.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3556/0476348001540203246.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3556",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Баклажан"
+							}
+						],
+						"_id": "28407",
+						"_group_id": "3556",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -3",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3880/0401416001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0402073001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0402635001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0403150001542051616.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3880",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "26993",
+						"_group_id": "3880",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -3",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3880/0401416001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0402073001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0402635001542051616.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3880/0403150001542051616.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3880-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "26994",
+						"_group_id": "3880",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -4",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3881/0033381001542051738.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3881/0033965001542051738.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3881/0034567001542051738.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3881",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Баклажан"
+							}
+						],
+						"_id": "27025",
+						"_group_id": "3881",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -2",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3883/0627445001542056911.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3883/0628059001542056911.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3883/0628527001542056911.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3883",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "27015",
+						"_group_id": "3883",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -3",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3884/0487489001542057009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3884/0488094001542057009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3884/0488600001542057009.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3884",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "27013",
+						"_group_id": "3884",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -4",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3885/0746949001542057105.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3885/0747559001542057105.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3885/0748018001542057105.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3885",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "27019",
+						"_group_id": "3885",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -3",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3884/0487489001542057009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3884/0488094001542057009.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3884/0488600001542057009.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3884-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "27014",
+						"_group_id": "3884",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -2",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3883/0627445001542056911.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3883/0628059001542056911.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3883/0628527001542056911.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3883-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Хаки"
+							}
+						],
+						"_id": "27016",
+						"_group_id": "3883",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3886/0482188001542057281.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3886/0482817001542057281.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3886/0483323001542057281.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3886-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "27022",
+						"_group_id": "3886",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3886/0482188001542057281.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3886/0482817001542057281.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3886/0483323001542057281.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3886",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "27021",
+						"_group_id": "3886",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Трикотажный спортивный костюм с полосками -4",
+						"currencyId": "UAH",
+						"price": "616",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3885/0746949001542057105.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3885/0747559001542057105.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3885/0748018001542057105.jpg"
+						],
+						"description": {
+							"__cdata": " <p>Ткань трикотаж двунитка</p> "
+						},
+						"vendorCode": "3885-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Красный"
+							}
+						],
+						"_id": "27020",
+						"_group_id": "3885",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -5",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3887/0723446001542057375.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3887/0724087001542057375.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3887/0724615001542057375.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3887-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "27028",
+						"_group_id": "3887",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -5",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "5",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3887/0723446001542057375.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3887/0724087001542057375.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3887/0724615001542057375.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3887",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE S/M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "27027",
+						"_group_id": "3887",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Теплый трикотажный костюм в стиле колор блок -4",
+						"currencyId": "UAH",
+						"price": "693",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/3881/0033381001542051738.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3881/0033965001542051738.jpg",
+							"https://berezkashop.in.ua/assets/images/items/3881/0034567001542051738.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<p><span><span>Ткань: трикотаж трехнитка на флисе</span></span></p>\r\n"
+						},
+						"vendorCode": "3881-1",
+						"categoryId": {
+							"_portal_id": "30107",
+							"__text": "24"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "ONE-SIZE M/L"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Баклажан"
+							}
+						],
+						"_id": "27026",
+						"_group_id": "3881",
+						"_available": "true",
+						"_selling_type": "r"
+					}
+				]
+			}
+		},
+		"_date": "2018-11-24 18:28:10"
+	}
+}

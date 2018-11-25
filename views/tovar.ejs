@@ -104,7 +104,7 @@
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
-          <a href="/details?tov=<%= tovarArr[i].vendorCode %>">
+          <a href="/details?tov=<%= tovarArr[i].vendorCode %>&<%= tovarArr[i].types %>">
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
               <div class="thumbnail">
                 <div class="vendor"><%= tovarArr[i].vendorCode %></div>
@@ -134,7 +134,9 @@
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
-                  <img class="group list-group-image" src="<%= tovarArr[i].image[0] %>" alt="" crossOrigin="anonimous" />
+
+                  <img class="group list-group-image" src="../../../../../tovar/<%= tovarArr[i].image[0] %>" alt="" crossOrigin="anonimous" />
+                  
                   <div class="caption">
                     <div class="blockOfNavBtn">
                       <% if(sessionUser !== undefined){ %>

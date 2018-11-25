@@ -173,7 +173,7 @@
                   </div>
                 <% } %>
               </div>
-              <img class="active" id="tovarImage" src="<%= tovarArr[0].image[0] %>"> <!-- ../../../data/tovar/ -->
+              <img class="active" id="tovarImage" src="../../../data/tovar/<%= tovarArr[0].image[0] %>"> <!-- ../../../data/tovar/ -->
               <% if(tovarArr[0].image.length > 1){ %>
               <div class="arrL"><</div>
               <div class="arrR">></div>
@@ -182,11 +182,11 @@
                 <% for(var i = 0; i < tovarArr[0].image.length; i++) { %>
                   <% if(i === 0){ %>
                     <div class="imageTov ac">
-                      <div class="imageD" image-data="<%= tovarArr[0].image[i] %>" style="background-image: url(<%= tovarArr[0].image[i] %>)"></div>
+                      <div class="imageD" image-data="../../../data/tovar/<%= tovarArr[0].image[i] %>" style="background-image: url(../../../data/tovar/<%= tovarArr[0].image[i] %>)"></div>
                     </div>
                   <% } else { %>
                     <div class="imageTov">
-                      <div class="imageD" image-data="<%= tovarArr[0].image[i] %>" style="background-image: url(<%= tovarArr[0].image[i] %>)"></div>
+                      <div class="imageD" image-data="../../../data/tovar/<%= tovarArr[0].image[i] %>" style="background-image: url(../../../data/tovar/<%= tovarArr[0].image[i] %>)"></div>
                     </div>
                   <% } %>
                 <% } %>
@@ -294,7 +294,7 @@
         <% for(var i = 0; i < rec.length; i++) { %>
             <div class="column-xs-12 column-md-4">
               <a href="/details?tov=<%= rec[i].AI %>">
-              <img src="<%= rec[i].image[0] %>"> <!-- ../../../data/tovar/ -->
+              <img src="../../../data/tovar/<%= rec[i].image[0] %>&<%= rec[i].types %>"> <!-- ../../../data/tovar/ -->
               <h4><%= rec[i].title %></h4>
               <% if(rec[i].sale[0]){ %>
                 <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>

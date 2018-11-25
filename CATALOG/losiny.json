@@ -1,0 +1,282 @@
+{
+	"yml_catalog": {
+		"shop": {
+			"name": "Berezka",
+			"company": "Berezkashop",
+			"url": "https://berezkashop.in.ua/",
+			"categories": {
+				"category": {
+					"_id": "99",
+					"__text": "Лосины, леггинсы"
+				}
+			},
+			"offers": {
+				"offer": [
+					{
+						"name": "Кожаные леггинсы с завышенной талией и вырезами на коленях",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/675/0644205001518266678.jpg",
+							"https://berezkashop.in.ua/assets/images/items/675/0646024001518266678.jpg",
+							"https://berezkashop.in.ua/assets/images/items/675/0647842001518266678.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0675-1",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Золотой"
+							}
+						],
+						"_id": "16529",
+						"_group_id": "675",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Виниловые лосины с вырезами",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/676/0158211001518266816.jpg",
+							"https://berezkashop.in.ua/assets/images/items/676/0160101001518266816.jpg",
+							"https://berezkashop.in.ua/assets/images/items/676/0161882001518266816.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0676-1",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "16523",
+						"_group_id": "676",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Виниловые лосины с вырезами",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/676/0158211001518266816.jpg",
+							"https://berezkashop.in.ua/assets/images/items/676/0160101001518266816.jpg",
+							"https://berezkashop.in.ua/assets/images/items/676/0161882001518266816.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0676",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Розовый"
+							}
+						],
+						"_id": "16522",
+						"_group_id": "676",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Кожаные леггинсы с завышенной талией и вырезами на коленях",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "8",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/675/0644205001518266678.jpg",
+							"https://berezkashop.in.ua/assets/images/items/675/0646024001518266678.jpg",
+							"https://berezkashop.in.ua/assets/images/items/675/0647842001518266678.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0675",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Золотой"
+							}
+						],
+						"_id": "16528",
+						"_group_id": "675",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Бордовые замшевые леггинсы и майка с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "594",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2057/0533697001530347278.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2057/0541766001530347278.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2057/0551052001530347278.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкая на ощупь искусственная замша</li>\r\n <li>С добавлением эластичных волокон для большего комфорта</li>\r\n <li>Завышенная талия</li>\r\n <li>Эластичный пояс</li>\r\n <li>Застежка молния&nbsp;</li>\r\n <li>Облегающий крой</li>\r\n <li>Блуза- шелк Армани&nbsp;</li>\r\n <li>Оборки&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2057-5",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "16521",
+						"_group_id": "2057",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Комплект: Бордовые замшевые леггинсы и майка с двойной оборкой",
+						"currencyId": "UAH",
+						"price": "594",
+						"quantity_in_stock": "10",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/2057/0533697001530347278.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2057/0541766001530347278.jpg",
+							"https://berezkashop.in.ua/assets/images/items/2057/0551052001530347278.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Мягкая на ощупь искусственная замша</li>\r\n <li>С добавлением эластичных волокон для большего комфорта</li>\r\n <li>Завышенная талия</li>\r\n <li>Эластичный пояс</li>\r\n <li>Застежка молния&nbsp;</li>\r\n <li>Облегающий крой</li>\r\n <li>Блуза- шелк Армани&nbsp;</li>\r\n <li>Оборки&nbsp;</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "2057-4",
+						"categoryId": {
+							"_portal_id": "332",
+							"__text": "20"
+						},
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Бордовый"
+							}
+						],
+						"_id": "16520",
+						"_group_id": "2057",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Молодежные леггинсы из черной эко-кожи с вырезами",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/677/0137155001518266925.jpg",
+							"https://berezkashop.in.ua/assets/images/items/677/0139054001518266925.jpg",
+							"https://berezkashop.in.ua/assets/images/items/677/0140789001518266925.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0677",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "S"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "16530",
+						"_group_id": "677",
+						"_available": "true",
+						"_selling_type": "r"
+					},
+					{
+						"name": "Молодежные леггинсы из черной эко-кожи с вырезами",
+						"currencyId": "UAH",
+						"price": "352",
+						"quantity_in_stock": "9",
+						"picture": [
+							"https://berezkashop.in.ua/assets/images/items/677/0137155001518266925.jpg",
+							"https://berezkashop.in.ua/assets/images/items/677/0139054001518266925.jpg",
+							"https://berezkashop.in.ua/assets/images/items/677/0140789001518266925.jpg"
+						],
+						"description": {
+							"__cdata": "\r\n<ul>\r\n <li>Завышенная талия</li>\r\n <li>Облегающий крой штанин</li>\r\n <li>Растегивающие вырезы&nbsp;</li>\r\n <li>100% полиуретан (эко-кожа)</li>\r\n </ul>\r\n"
+						},
+						"vendorCode": "0677-1",
+						"categoryId": "99",
+						"country": "Украина",
+						"vendor": "Berezka",
+						"param": [
+							{
+								"_name": "Размер",
+								"__text": "M"
+							},
+							{
+								"_name": "Цвет",
+								"__text": "Черный"
+							}
+						],
+						"_id": "16531",
+						"_group_id": "677",
+						"_available": "true",
+						"_selling_type": "r"
+					}
+				]
+			}
+		},
+		"_date": "2018-11-21 19:04:27"
+	}
+}

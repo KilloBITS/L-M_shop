@@ -5,21 +5,11 @@ const mongoClient = require("mongodb").MongoClient;
 
 router.get('/*', function(req, res, next) {
   var languageSystem, langMenu;
-  // if (req.cookies.vernissageLang === undefined) {
-    languageSystem = 0;
-    langMenu = 'menu';
-  // } else {
-  //   if (req.cookies.vernissageLang === 'ua') {
-  //     languageSystem = 1;
-  //     langMenu = 'menu-uk';
-  //   } else {
-  //     languageSystem = 0;
-  //     langMenu = 'menu';
-  //   }
-  // }
+      languageSystem = 0;
+      langMenu = 'menu';
 
   var DA = req.url.split('=');
-  var searchData = DA[1].split(',');
+  var searchData = DA[1].split('&');
 
   mongoClient.connect(global.baseIP, function(err, client) {
     const db = client.db(global.baseName);
@@ -34,7 +24,7 @@ router.get('/*', function(req, res, next) {
     config.find().toArray(function(err, results_config) {
       if (results_config[languageSystem].opens) {
         menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu) {
-          tovar.find({ vendorCode: searchData[0] }).toArray(function(err, results_tovar) {
+          tovar.find({ vendorCode: searchData[0], types: searchData[1] }).toArray(function(err, results_tovar) {
             console.log(searchData[0])
             console.log(results_tovar)
             tovar_comments.find({tovar_AI: parseInt(results_tovar[0].vendorCode)}).toArray(function(err, results_comments) {
