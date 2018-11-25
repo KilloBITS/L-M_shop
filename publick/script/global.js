@@ -86,7 +86,6 @@ $(document).ready(function() {
   }, 1500);
 
   $(document).scroll(function(){
-    console.log('ass');
     $('.menu_data').hide();
     $('.hamburger-menu').removeClass('animate');
     $('.twoLine').removeClass('openMenuClass');

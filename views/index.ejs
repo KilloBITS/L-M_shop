@@ -230,10 +230,11 @@
 
 	<div class="data block">
 		<div class="mainDLG">
-			<div class="mainTitleDLG post" style="color: #f98eb9"><%= conf.news_tovar[0] %></div>
-			<div class="mainTextDLG post" style="color: #f98eb9"><%= conf.news_tovar[1] %></div>
+			<div class="mainTitleDLG post" style="color: #f98eb9">Представляем вам наши новые товары</div>
+			<div class="mainTextDLG post" style="color: #f98eb9">Баша наших товаров постоянно пополняется чем то новым, мы уверенны что вы найдете что то для себя</div>
 		</div>
-		<div class="carousel-wrapper">
+
+    <div class="carousel-wrapper">
 		  <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <% if(newtovar.length > 0){ %>
           <% for(var i = 0; i < newtovar.length; i++){ %>
@@ -254,25 +255,37 @@
         <% } %>
 		  </div>
 		</div>
+
 		<div class="mainBTN_block" style="background: #ffc9df;     padding-top: 20px;">
-			<a href="<%= conf.news_tovar[2].btnLink %>"><div class="mainBTN"><%= conf.news_tovar[2].btnTitle %></div></a>
+			<a href="/"><div class="mainBTN">Посмотреть больше товаров</div></a>
 		</div>
+
 		<div class="mainDLG" style="background: #ffc9df;     color: white;">
-			<div class="mainTitleDLG post"><%= conf.about[0] %></div>
-			<div class="mainTextDLG post"><%= conf.about[1] %></div>
+			<div class="mainTitleDLG post">В кратце о нас</div>
+			<div class="mainTextDLG post">
+        "<b>Lady & Man Shop</b>" - Огромный магазин одежды и аксессуаров.
+        На данный момент у нас большая сеть клиентов и покупателей и она постоянно растет.
+        На рынке мы недавно но за это время добились доверия многих покупателей.
+        И для того, чтобы девушки и женщины имели возможность купить красивые украшения и аксессуары по лучшей цене,
+        мы открыли интернет-магазин. Мы постоянно совершенствуем функционал сайта,
+        стараемся учитывать все пожелания наших покупателей, чтобы сделать его более удобным для Вас.
+      </div>
 		</div>
+
 		<div class="mainBTN_block">
-			<a href="<%= conf.about[2].btnLink %>"><div class="mainBTN"><%= conf.about[2].btnTitle %></div></a>
+			<a href="/"><div class="mainBTN">Детальнее</div></a>
       <div class="zub_lineB" style=""></div>
 		</div>
+
   </div>
+
 	<div class="news block">
     <div class="container">
       <% if(isAdm){ %>
         <div class="edited_admin" title="Добавить новость" id="newNews"></div>
       <% } %>
       <div class="mainDLG">
-        <div class="mainTitleDLG"><%= conf.news %></div>
+        <div class="mainTitleDLG">Наши новости</div>
       </div>
       <% for(var i = 0; i < news.length; i++) { %>
       <div class="column post">
@@ -325,8 +338,8 @@
   <div class="contact block">
     <div class="zub_line"></div>
     <div class="mainDLG post">
-    	<div class="mainTitleDLG"><%= conf.contact[0] %></div>
-    	<div class="mainTextDLG"><%= conf.contact[1] %></div>
+    	<div class="mainTitleDLG">У вас есть пожелание или замечание ?</div>
+    	<div class="mainTextDLG">Напишите нам, мы всегда рады ваши сообщениям</div>
     </div>
     <form class="cf">
       <div class="half left cf">

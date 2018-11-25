@@ -100,10 +100,6 @@
         <div class="filters">
 
         </div>
-        <!-- <div class="btn-group">
-            <a href="#" id="list" class="btn btn-default btn-sm"></a>
-            <a href="#" id="grid" class="btn btn-default btn-sm"></a>
-        </div> -->
       </div>
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
@@ -138,7 +134,7 @@
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
-                  <img class="group list-group-image" src="<%= tovarArr[i].image[0] %>" alt="" />
+                  <img class="group list-group-image" src="../../../data/tovar/<%= tovarArr[i].image[0] %>" alt="" />
                   <div class="caption">
                     <div class="blockOfNavBtn">
                       <% if(sessionUser !== undefined){ %>
