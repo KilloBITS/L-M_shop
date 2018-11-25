@@ -123,16 +123,16 @@
     background-size: cover;
   }
   .menuBTN {
-      display: inline-block;
-      cursor: pointer;
-      font-family: 'Didact Gothic', sans-serif;
-      transition: 0.3s;
-      color: black;
-      font-size: 18px;
-      float: initial;
-      width: 100%;
-      text-align: left;
-      padding: 10px 24px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Didact Gothic', sans-serif;
+    transition: 0.3s;
+    color: black;
+    font-size: 18px;
+    float: initial;
+    width: 100%;
+    text-align: left;
+    padding: 10px 24px;
   }
   .punktMenu {
     width: 100%;
