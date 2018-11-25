@@ -135,6 +135,7 @@ var Index = {
          $(minBasLength).append(inplen)
        }
        $(".allSum").html(summa + ' ГРН');
+       $(".bubbly-button").html('');
        $(".bubbly-button").html($(".bubbly-button").html() + " на сумму: " + summa + ' ГРН');
 
        $(".backet_load").hide();

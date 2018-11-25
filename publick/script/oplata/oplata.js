@@ -7,15 +7,17 @@ var Oplata = {
       $("#basketDATA").fadeIn(300);
       $("body").css({"overflow":"hidden"});
       $.post('/getbasket',{data:BASKET},function(tovar){
-         $("#JSTOVAR").val(JSON.stringify(tovar.tovar));
-         $("#input-PaymentPhone").mask("+38(099) 999-9999");
+        console.log(tovar)
+        $("#JSTOVAR").val(JSON.stringify(tovar.tovar));
+        $("#input-PaymentPhone").mask("+38(099) 999-9999");
+        var summa = 0;
         for(let i = 0; i < tovar.tovar.length; i++){
           var newDiv = document.createElement("div");
           newDiv.className = "basket_doc";
           $(".basket_tovar .BSK").append(newDiv)
-
+          summa = summa + parseFloat(tovar.tovar[i].price);
           var minBasImg = document.createElement("div");
-          minBasImg.style.backgroundImage = "url(../../../data/tovar/"+tovar.tovar[i].image+")";
+          minBasImg.style.backgroundImage = "url("+tovar.tovar[i].image[0]+")";
           minBasImg.className = "minBasImg";
 
           var minBasTitle = document.createElement("div");
@@ -57,6 +59,10 @@ var Oplata = {
           inplen.value = 1;
           $(minBasLength).append(inplen)
         }
+        $(".allSum").html(summa + ' ГРН');
+        $(".bubbly-button").html('');
+        $(".bubbly-button").html($(".bubbly-button").html() + " на сумму: " + summa + ' ГРН');
+
         $(".backet_load").hide();
       });
     },

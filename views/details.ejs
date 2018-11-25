@@ -382,17 +382,20 @@
 
 <div id="pageMessages"></div>
 <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+
 <div id="basketDATA">
   <div id="bas">
     <div class="basket_close"></div>
     <div class="backet_load" style="background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
     <div class="basket_tovar">
+      <div class="allSum">0.00 ГРН</div>
       <div class="BSK"></div>
       <div class="NEXT_pay_bas">Заполнить данные</div>
     </div>
     <div class="basket_info">
       <form action="/payment" enctype="application/json" type="get" name="paymentForm" novalidate>
         <input type="text" name="JSON_Tovar" id="JSTOVAR" style="display: none;">
+
         <p class="input-container">
           <input type="text" name="name" id="input-PaymentName" class="login-input" autocomplete="off" required>
           <label for="input-PaymentName" unselectable="on">Имя</label>
@@ -405,50 +408,47 @@
           <input type="text" name="FamName" id="input-PaymentFamName" class="login-input" required>
           <label for="input-PaymentFamName" unselectable="on">Отчество</label>
         </p>
-
         <p class="input-container">
           <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
           <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
         </p>
+        <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required placeholder="Доставка">
+          <option value="2">Доставка Новой Почтой</option>
+          <option value="3" disabled>Доставка УкрПочтой</option>
+        </select>
 
+        <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата">
+          <option value="0" disabled>Оплата наличными</option>
+          <option value="1" selected>Оплата картой</option>
+        </select>
+        <div class="warnMsg">(Оплата картой сейчас недоступна, приносим наши извинения, мы работаем над этим).</div>
 
-          <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required>
-            <option value="0">Самовывоз</option>
-            <option value="1">Доставка курьером</option>
-            <option value="2">Доставка Новой Почтой</option>
-            <option value="3" disabled>Доставка УкрПочтой</option>
-          </select>
-
-          <p class="input-container" id="CityOfDost">
-            <input type="text" name="city" id="input-PaymentCity" class="login-input" required>
-            <label for="input-PaymentCity" unselectable="on">Город</label>
-          </p>
-
-          <p class="input-container" id="CityOfPostNP">
-            <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" required>
-            <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
-          </p>
-
-          <p class="input-container" id="CityOfPostUl">
-            <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" required>
-            <label for="input-PaymentUlica" unselectable="on">Улица</label>
-          </p>
-
-          <p class="input-container min50" id="CityOfPostD">
-            <input type="text" name="dom" id="input-PaymentDom" class="login-input" required>
-            <label for="input-PaymentDom" unselectable="on">Дом</label>
-          </p>
-
-          <p class="input-container min50" id="CityOfPostK">
-            <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" required>
-            <label for="input-PaymentKV" unselectable="on">Квартира №</label>
-          </p>
-
-          <button class="bubbly-button" onclick="">Подтвердить заказ</button>
+        <p class="input-container" id="CityOfDost">
+          <input type="text" name="city" id="input-PaymentCity" class="login-input" required>
+          <label for="input-PaymentCity" unselectable="on">Город</label>
+        </p>
+        <p class="input-container" id="CityOfPostNP">
+          <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" required>
+          <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
+        </p>
+        <p class="input-container" id="CityOfPostUl">
+          <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" required>
+          <label for="input-PaymentUlica" unselectable="on">Улица</label>
+        </p>
+        <p class="input-container min50" id="CityOfPostD">
+          <input type="text" name="dom" id="input-PaymentDom" class="login-input" required>
+          <label for="input-PaymentDom" unselectable="on">Дом</label>
+        </p>
+        <p class="input-container min50" id="CityOfPostK">
+          <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" required>
+          <label for="input-PaymentKV" unselectable="on">Квартира №</label>
+        </p>
+        <button class="bubbly-button" onclick="">Подтвердить заказ</button>
       </form>
-
     </div>
   </div>
 </div>
+
+
 </body>
 </html>
