@@ -231,6 +231,4 @@ app.listen(4111, function(){
 });
 
 
-https.createServer(options, (req, res) => {
-  console.warn('STARTED HTTPS LM_SHOP SERVER ON PORT: 411');
-}).listen(4112);
+https.createServer(options, app).listen(4112);
