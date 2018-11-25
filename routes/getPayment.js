@@ -42,6 +42,7 @@ router.get('/', function(req, res, next){
     //обработка бонуса
     if (req.session && req.session.user !== undefined){
       mongoClient.connect(global.baseIP, function(err, client){
+        const db = client.db(global.baseName);
         const users = db.collection("users");
         users.find({email: req.session.user}).toArray(function(err, results_users){
           var curCoin = results_users.LM_COIN + lmCoin;
