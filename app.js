@@ -224,7 +224,7 @@ app.listen(4111, function(){
   global.online = 0;
   console.warn('STARTED LM_SHOP SERVER ON PORT: 4111');
 });
-// 
+//
 // global.baseName = 'LM_SHOP';
 // global.baseIP = 'mongodb://localhost:27017/';
 // global.online = 0;
@@ -235,4 +235,7 @@ var options = {
   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
 };
 
-https.createServer(options, app).listen(443);
+https.createServer(options, (req, res) => {
+  res.writeHead(200);
+  res.end('hello world\n');
+}).listen(8000);
