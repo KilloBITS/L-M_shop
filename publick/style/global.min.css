@@ -17,6 +17,17 @@
 }
 
 @media screen and (max-width: 800px) {
+  .punktMenu {
+      width: 100%;
+      padding: 3px 0px 1px 24px;
+      color: #780943;
+      font-family: 'Didact Gothic', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 18px;
+      float: left;
+      display: inline-block;
+  }
   .certificated {
     margin-top: 10px;
     height: 30px;
@@ -135,14 +146,16 @@
       text-align: center;
   }
   .menuBTN {
-      display: inline-block;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;
-      transition: 0.3s;
-      /* float: left; */
-      color: black;
-      font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Didact Gothic', sans-serif;
+    transition: 0.3s;
+    color: black;
+    font-size: 18px;
+    float: initial;
+    width: 100%;
+    text-align: left;
+    padding: 2px 24px;
   }
   .menuBTN{
     float: initial;
