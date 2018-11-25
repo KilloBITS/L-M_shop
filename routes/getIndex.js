@@ -9,18 +9,18 @@ router.use(cookieParser());
 
 router.get('/', function(req, res, next){
   var languageSystem, langMenu;
-  if(req.cookies.vernissageLang === undefined){
+  // if(req.cookies.vernissageLang === undefined){
     languageSystem = 0;
     langMenu = 'menu';
-  }else{
-    if(req.cookies.vernissageLang === 'ua'){
-      languageSystem = 1;
-      langMenu = 'menu-uk';
-    }else{
-      languageSystem = 0;
-      langMenu = 'menu';
-    }
-  }
+  // }else{
+  //   if(req.cookies.vernissageLang === 'ua'){
+  //     languageSystem = 1;
+  //     langMenu = 'menu-uk';
+  //   }else{
+  //     languageSystem = 0;
+  //     langMenu = 'menu';
+  //   }
+  // }
 
   mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
       const db = client.db(global.baseName);
@@ -53,7 +53,7 @@ router.get('/', function(req, res, next){
              menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
                slider.find().toArray(function(err, results_slider ){
                  news.find().toArray(function(err, results_news ){
-                   tovar.find().sort({ AI: -1 }).limit(10).toArray(function(err, results_tovar ){
+                  tovar.aggregate([{$sample: {size: 12}}]).toArray(function(err, results_recTovar) {
                      effect.find({ active: true }).toArray(function(err, results_effect ){
                         //counters
                         try {
@@ -89,7 +89,7 @@ router.get('/', function(req, res, next){
                            effectData: results_effect[0],
                            slides: results_slider,
                            news: results_news,
-                           newtovar: results_tovar,
+                           newtovar: results_recTovar,
                            title: results_titles_page[languageSystem].index,
                            sessionUser: req.session.user,
                            isAdm: req.session.admin

@@ -262,13 +262,14 @@ a:hover {
   height: 60px;
   width: fit-content;
   margin: auto;
+  position: relative;
 }
 
-.pageBTN{
+.paginator a{
   display: inline-block;
   float: left;
-  width: 40px;
   height: 40px;
+  width: 40px;
   background-color: #af4d4d;
   margin: 2px;
   text-align: center;
@@ -278,6 +279,7 @@ a:hover {
   border-radius: 3px;
   cursor: pointer;
   transition: 0.3s;
+  padding: 0 11px;
 }
 
 .PREW_PAGE{
@@ -287,12 +289,19 @@ a:hover {
 .NEXT_PAGE{
 
 }
-
-.PAGE_ACTIVE{
-
+.paginator-current-report{
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
 }
 
-.pageBTN:hover{
+.paginator .paginator-current{
+  background-color: #832525;
+}
+
+.paginator a:hover{
   background-color: #7d3232;
 }
 .PAGE_ACTIVE:hover{
@@ -484,4 +493,10 @@ fieldset, label { margin: 0; padding: 0; }
 
 .filtersBtn.activeFilter{
   background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQwMi41NzcgNDAyLjU3NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDAyLjU3NyA0MDIuNTc3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwMC44NTgsMTEuNDI3Yy0zLjI0MS03LjQyMS04Ljg1LTExLjEzMi0xNi44NTQtMTEuMTM2SDE4LjU2NGMtNy45OTMsMC0xMy42MSwzLjcxNS0xNi44NDYsMTEuMTM2ICAgYy0zLjIzNCw3LjgwMS0xLjkwMywxNC40NjcsMy45OTksMTkuOTg1bDE0MC43NTcsMTQwLjc1M3YxMzguNzU1YzAsNC45NTUsMS44MDksOS4yMzIsNS40MjQsMTIuODU0bDczLjA4NSw3My4wODMgICBjMy40MjksMy42MTQsNy43MSw1LjQyOCwxMi44NTEsNS40MjhjMi4yODIsMCw0LjY2LTAuNDc5LDcuMTM1LTEuNDNjNy40MjYtMy4yMzgsMTEuMTQtOC44NTEsMTEuMTQtMTYuODQ1VjE3Mi4xNjZMMzk2Ljg2MSwzMS40MTMgICBDNDAyLjc2NSwyNS44OTUsNDA0LjA5MywxOS4yMzEsNDAwLjg1OCwxMS40Mjd6IiBmaWxsPSIjYmYyYTYzIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.vendor{
+  position: absolute;
+  right: 4px;
+  color: #ff00bf;
 }

@@ -78,11 +78,11 @@ var Oplata = {
        $("#basketDATA").fadeOut(300);
      });
 
-     $('.menu-wrapper').on('click', function() {
-       $('.hamburger-menu').toggleClass('animate');
-       $('.twoLine').toggleClass('openMenuClass');
-       $(".menu_data").hide();
-     })
+     // $('.menu-wrapper').on('click', function() {
+     //   $('.hamburger-menu').toggleClass('animate');
+     //   $('.twoLine').toggleClass('openMenuClass');
+     //   $(".menu_data").hide();
+     // })
 
     $( ".menuBTN" ).hover(function() {
       try{

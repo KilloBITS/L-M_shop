@@ -43,6 +43,7 @@
     "nexmo": "^2.4.0",
     "nodemailer": "^4.6.8",
     "os": "^0.1.1",
+    "pagination": "^0.4.6",
     "sha1": "^1.1.1",
     "socket.io": "^2.1.1",
     "tunnel-ssh": "^4.1.4",

@@ -42,6 +42,12 @@ var Global = {
     });
   },
   BTN: function(){
+    $('.menu-wrapper').on('click', function() {
+      $('.hamburger-menu').toggleClass('animate');
+      $('.twoLine').toggleClass('openMenuClass');
+      $(".menu_data").hide();
+    })
+
     $(".addToJelaniya").click(function(){
       $.post('/addToJelaniya',{numObj: $(this).attr('tovAI')},(res) => {
         $(this).css({

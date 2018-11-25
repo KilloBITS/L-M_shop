@@ -9,18 +9,18 @@ router.get('/', function(req, res, next){
     res.redirect('/');
   }else{
     var languageSystem, langMenu;
-    if(req.cookies.vernissageLang === undefined){
+    // if(req.cookies.vernissageLang === undefined){
       languageSystem = 0;
       langMenu = 'menu';
-    }else{
-      if(req.cookies.vernissageLang === 'ua'){
-        languageSystem = 1;
-        langMenu = 'menu-uk';
-      }else{
-        languageSystem = 0;
-        langMenu = 'menu';
-      }
-    }
+    // }else{
+    //   if(req.cookies.vernissageLang === 'ua'){
+    //     languageSystem = 1;
+    //     langMenu = 'menu-uk';
+    //   }else{
+    //     languageSystem = 0;
+    //     langMenu = 'menu';
+    //   }
+    // }
 
     var searchData;
     var DA = req.url.split('=');

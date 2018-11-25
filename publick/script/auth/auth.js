@@ -50,11 +50,11 @@ var AUTH = {
     $(".searchBlock").hover(function(){
       $(".searchLine").css({"width":"170px"});
     });
-    $('.menu-wrapper').on('click', function() {
-      $('.hamburger-menu').toggleClass('animate');
-      $('.twoLine').toggleClass('openMenuClass');
-      $(".menu_data").hide();
-    })
+    // $('.menu-wrapper').on('click', function() {
+    //   $('.hamburger-menu').toggleClass('animate');
+    //   $('.twoLine').toggleClass('openMenuClass');
+    //   $(".menu_data").hide();
+    // })
     $( ".menuBTN" ).hover(function() {
      try{
        $("."+ML+",.opensMenu").hide();

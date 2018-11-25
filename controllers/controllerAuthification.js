@@ -75,6 +75,7 @@ router.post('/create_accaunt', function(req, res, next){
           NEW_USER.ava = "";
           NEW_USER.desires = [];
           NEW_USER.payments = [];
+          NEW_USER.LM_COIN = 100;
           users.insertOne(NEW_USER);
           req.session.user = req.body.newEmail;
           req.session.admin = false;

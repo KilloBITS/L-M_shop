@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/style/global.css">
+    <link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
+    <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/script/jquery-ui.js"></script>
+    <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/global.js"></script>
+    <% if(isAdm){ %>
+      <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+      <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+    <% } %>
+
+    <style type="text/css">
+      .col-md-12 {
+        width: 100%;
+        float: none;
+        background: white;
+        padding: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+    	<div class="topLine oneLine">
+        <div class="topNavMobMenuOfBtm">
+          <div class="menu-wrapper">
+            <div class="hamburger-menu"></div>
+          </div>
+        </div>
+    		<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+    		<div class="topNavBlockOfBtm">
+    			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
+          <% if(sessionUser !== undefined){ %>
+            <a href="/profile"><div class="userAccountInBlock"></div></a>
+          <% } else { %>
+            <a href="/login"><div class="logInBlock"></div></a>
+          <% } %>
+    			<div class="basketBlock">
+            <span>0</span>
+          </div>
+
+    		</div>
+    	</div>
+      <div class="topLine twoLine">
+        <div class="menuBlock">
+          <% for(var i = 0; i < menu.length; i++) { %>
+            <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+              <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+            <% } else { %>
+              <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+            <% } %>
+          <% } %>
+        </div>
+      </div>
+      <div class="opensMenu">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
+          <div class="menu_data <%= menu[i].ml %>">
+            <div class="menu_title"><%= menu[i].name %></div>
+            <div class="menuLeft">
+              <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+              <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+              <% } %>
+            </div>
+            <div class="menuRight"></div>
+          </div>
+        <% } %>
+      <% } %>
+      </div>
+    </div>
+
+    <div class="container content">
+<p>
+</p>
+<p>
+ <span style="font-size: 13pt;">Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Интернет-магазин «Lady & Man Shop», расположенный по адресу - ladyman.club, может получить о Пользователе во время использования сайта Интернет-магазина, программ и продуктов Интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1 В настоящей Политике конфиденциальности используются следующие термины: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.1. «Администрация сайта Интернет-магазина (далее – Администрация сайта) » – уполномоченные сотрудники на управления сайтом, действующие от имени интернет-магазина Lady & Man Shop, которые организуют и осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия или операции, совершаемые с персональными данными. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных). </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Администратором или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.5. «Пользователь сайта Интернет-магазина Lady & Man Shop» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	2. ОБЩИЕ ПОЛОЖЕНИЯ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	2.1. Использование Пользователем сайта Интернет-магазина означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта Интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	2.3.Настоящая Политика конфиденциальности применяется только к сайту Интернет-магазина Lady & Man Shop. Интернет-магазин не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте Интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта Интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;"> </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;"> </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта интернет-магазина по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет по запросу Администрации сайта при регистрации на сайте интернет-магазина или при оформлении заказа для приобретения Товара. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения регистрационной формы на Сайте интернет-магазина Lady & Man Shop в разделе о регистрации и включают в себя следующую информацию: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2.1. ФИО Пользователя; </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2.2. контактный телефон Пользователя; </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2.3. адрес электронной почты (e-mail); </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2.4. адрес доставки Товара; </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.2.5. место жительство Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.3. Интернет-магазин защищает Данные, которые автоматически передаются в процессе просмотра рекламных блоков и при посещении страниц, на которых установлен статистический скрипт системы ("пиксель"): </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<ul>
+	<li><span style="font-size: 13pt;">IP адрес;</span></li>
+	<li><span style="font-size: 13pt;">информация из cookies;</span></li>
+	<li><span style="font-size: 13pt;">информация о браузере (или иной программе, которая осуществляет доступ к показу рекламы);</span></li>
+	<li><span style="font-size: 13pt;">время доступа;</span></li>
+	<li><span style="font-size: 13pt;">адрес страницы, на которой расположен рекламный блок;</span></li>
+	<li><span style="font-size: 13pt;">реферер (адрес предыдущей страницы).</span></li>
+</ul>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта Интернет-магазина, требующим авторизации. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.3.2. Интернет-магазин осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем, для контроля законности проводимых финансовых платежей. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	3.4. Любая иная персональная информация, неоговоренная выше (история покупок, используемые браузеры и операционные системы и т.д.), подлежит надежному хранению и нераспространению, за исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;"> </span><span style="font-size: 13pt;"><br>
+ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1. Персональные данные Пользователя Администрация сайта интернет-магазина может использовать в целях: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.1. Идентификации Пользователя, зарегистрированного на сайте Интернет-магазина, для оформления заказа и (или) заключения Договора купли-продажи товара дистанционным способом с Интернет-магазином&nbsp;Lady & Man Shop. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования Сайта интернет-магазина, оказания услуг, обработка запросов и заявок от Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.6. Создания учетной записи для совершения покупок, если Пользователь дал согласие на создание учетной записи. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.7. Уведомления Пользователя Сайта интернет-магазина о состоянии Заказа. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.8. Обработки и получения платежей, подтверждения налога или налоговых льгот Пользователем. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием Сайта интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений, информации о ценах, новостной рассылки и иных сведений от имени Интернет-магазина или от имени партнеров Интернет-магазина. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.11. Осуществления рекламной деятельности с согласия Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	4.1.12. Предоставления доступа Пользователю на сайты или сервисы партнеров Интернет-магазина с целью получения продуктов, обновлений и услуг. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим лицам, в частности, курьерским службам, организациями почтовой связи, операторам электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного на Сайте интернет-магазина «Lady & Man Shop», включая доставку Товара. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти Украины только по основаниям и в порядке, установленным законодательством Украины. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.4. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об утрате или разглашении персональных данных. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	5.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6. ОБЯЗАТЕЛЬСТВА СТОРОН </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.1. Пользователь обязан: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.1.1. Предоставить информацию о персональных данных, необходимую для пользования Сайтом интернет-магазина&nbsp;</span>Lady & Man Shop.
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной информации. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.2. Администрация сайта обязана: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики конфиденциальности. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7. ОТВЕТСТВЕННОСТЬ СТОРОН </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством Украины,&nbsp;за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт ответственность, если данная конфиденциальная информация: </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7.2.1. Стала публичным достоянием до её утраты или разглашения. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	7.2.3. Была разглашена с согласия Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	8. РАЗРЕШЕНИЕ СПОРОВ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта Интернет-магазина и Администрацией сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании спора). </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	8.2 .Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет заявителя претензии о результатах рассмотрения претензии. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Украины. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется действующее законодательство Украины. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте интернет-магазина, если иное не предусмотрено новой редакцией Политики конфиденциальности. </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать в раздел "</span>КОНТАКТЫ".
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;"> </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	9.4. Действующая Политика конфиденциальности размещена на странице по адресу "ladyman.club/privacy_policy".</span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;"> </span>
+</p>
+ <span style="font-size: 13pt;"> </span>
+<p>
+ <span style="font-size: 13pt;">
+	&nbsp;</span>
+</p></div>
+
+
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+      <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+      <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
+      <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
+      <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+        <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <!-- <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div> -->
+      <div class="certificated">
+        <div class="certificate" id="byVisa"></div>
+        <div class="certificate" id="byMasterCard"></div>
+        <div class="certificate" id="byYandex"></div>
+        <div class="certificate" id="byFondy"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

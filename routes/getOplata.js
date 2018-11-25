@@ -6,18 +6,18 @@ const mongoClient = require("mongodb").MongoClient;
 
 router.get('/', function(req, res, next){
   var languageSystem, langMenu;
-  if(req.cookies.vernissageLang === undefined){
+  // if(req.cookies.vernissageLang === undefined){
     languageSystem = 0;
     langMenu = 'menu';
-  }else{
-    if(req.cookies.vernissageLang === 'ua'){
-      languageSystem = 1;
-      langMenu = 'menu-uk';
-    }else{
-      languageSystem = 0;
-      langMenu = 'menu';
-    }
-  }
+  // }else{
+  //   if(req.cookies.vernissageLang === 'ua'){
+  //     languageSystem = 1;
+  //     langMenu = 'menu-uk';
+  //   }else{
+  //     languageSystem = 0;
+  //     langMenu = 'menu';
+  //   }
+  // }
 
   mongoClient.connect(global.baseIP, function(err, client){
       const db = client.db(global.baseName);

@@ -82,6 +82,7 @@ var Index = {
      $("#basketDATA").fadeIn(300);
      $("body").css({"overflow":"hidden"});
      $.post('/getbasket',{data:BASKET},function(tovar){
+       console.log(tovar)
        $("#JSTOVAR").val(JSON.stringify(tovar.tovar));
        $("#input-PaymentPhone").mask("+38(099) 999-9999");
        var summa = 0;
@@ -213,11 +214,11 @@ var Index = {
          });
      });
 
-     $('.menu-wrapper').on('click', function() {
-       $('.hamburger-menu').toggleClass('animate');
-       $('.twoLine').toggleClass('openMenuClass');
-       $(".menu_data").hide();
-     })
+     // $('.menu-wrapper').on('click', function() {
+     //   $('.hamburger-menu').toggleClass('animate');
+     //   $('.twoLine').toggleClass('openMenuClass');
+     //   $(".menu_data").hide();
+     // })
 
      $( ".menuBTN" ).hover(function() {
        try{
@@ -262,7 +263,7 @@ var Index = {
    },
    setBasket: function(ind, btn){
      if(BASKET.indexOf(ind.toString()) === -1){
-       BASKET.push(ind.toString());
+       BASKET.push(ind);
        localStorage.setItem("VernissageBasket", BASKET);
 
        var URL = $(".list-group-image:eq("+btn+")").attr('src');

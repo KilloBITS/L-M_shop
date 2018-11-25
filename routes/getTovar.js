@@ -2,21 +2,12 @@
 const express = require('express');
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
+const pagination = require('pagination');
 
 router.get('/*', function(req, res, next){
     var languageSystem, langMenu;
-    if(req.cookies.vernissageLang === undefined){
-      languageSystem = 0;
-      langMenu = 'menu';
-    }else{
-      if(req.cookies.vernissageLang === 'ua'){
-        languageSystem = 1;
-        langMenu = 'menu-uk';
-      }else{
-        languageSystem = 0;
-        langMenu = 'menu';
-      }
-    }
+    languageSystem = 0;
+    langMenu = 'menu';
 
     var searchData;
     var DA = req.url.split('=');
@@ -60,42 +51,42 @@ router.get('/*', function(req, res, next){
                  }else{
                    var uSession = false;
                  }
+                  try {
+                    let FILTER = {
+                      category: parseInt(searchData[0]),
+                    };
 
-                    try {
-                      let FILTER = {
-                        category: parseInt(searchData[0])
-                      };
 
-
-                      if(searchData.length >= 2 ){
-                        FILTER.types = searchData[1].split('&')[0];
-                      }
-
-                      // tovar.distinct("group_id").then(function(OriginTovarGI) {
-                        // console.log(OriginTovarGI)
-                        // console.log(OriginTovarGI.length)
-                        // console.log(tovar.aggregate("group_id"))
-
-                        tovar.find( FILTER ).sort( { AI: -1 } ).toArray(function(err, results_tovar ){
-                          console.log(results_tovar.length)
-                          res.render('tovar.ejs',{
-                            conf: results_config[languageSystem],
-                            menu: results_menu,
-                            tovarArr: results_tovar.slice(otTovar, doTovar),
-                            title: results_titles_page[languageSystem].tovar,
-                            sessionUser: req.session.user,
-                            users_data: uSession,
-                            offLength: results_tovar.length,
-                            isAdm: req.session.admin,
-                            isPage: page
-                          })
-                          client.close();
-                        });
-                    } catch (e){
-                      res.render('404.ejs',{
-                        isAdm: req.session.admin
-                      })
+                    if(searchData.length >= 2 ){
+                      FILTER.types = searchData[1].split('&')[0];
                     }
+
+                    tovar.find( FILTER ).sort( { AI: -1 } ).toArray(function(err, results_tovar ){
+                      var page_length = parseInt(results_tovar.length / 24);
+                      var current_page = page;
+                      console.log('/shop?c='+searchData[0]+','+searchData[1].split('&')[0])
+                      console.log(results_tovar.length)
+                      var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 24, totalResult: results_tovar.length});
+                      var p = paginator.getPaginationData();
+                      res.render('tovar.ejs',{
+                        conf: results_config[languageSystem],
+                        menu: results_menu,
+                        tovarArr: results_tovar.slice(otTovar, doTovar),
+                        title: results_titles_page[languageSystem].tovar,
+                        sessionUser: req.session.user,
+                        users_data: uSession,
+                        offLength: results_tovar.length,
+                        isAdm: req.session.admin,
+                        isPage: page,
+                        paginate: p
+                      })
+                      client.close();
+                    });
+                  } catch (e){
+                    res.render('404.ejs',{
+                      isAdm: req.session.admin
+                    })
+                  }
                });
              });
            }else{
@@ -107,8 +98,6 @@ router.get('/*', function(req, res, next){
          });
        });
     });
-
-
 });
 
 module.exports = router;

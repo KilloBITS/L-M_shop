@@ -7,7 +7,7 @@ const bParser = require('body-parser');
 router.post('/getbasket', function(req, res, next){
   var arrayTovar = [];
   for(let i = 0; i < req.body.data.length; i++){
-    arrayTovar.push(parseInt(req.body.data[i]));
+    arrayTovar.push(req.body.data[i]);
   }
 
   mongoClient.connect(global.baseIP, function(err, client){
@@ -17,7 +17,7 @@ router.post('/getbasket', function(req, res, next){
     if(err) return console.log(err);
 
     console.log(arrayTovar)
-     tovar.find({AI:  { $in: arrayTovar } }).toArray(function(err, results_tovar ){
+     tovar.find({vendorCode:  { $in: req.body.data } }).toArray(function(err, results_tovar ){
        res.send({code: 500, tovar: results_tovar});
        client.close();
      });

@@ -5,18 +5,18 @@ const mongoClient = require("mongodb").MongoClient;
 
 router.get('/*', function(req, res, next) {
   var languageSystem, langMenu;
-  if (req.cookies.vernissageLang === undefined) {
+  // if (req.cookies.vernissageLang === undefined) {
     languageSystem = 0;
     langMenu = 'menu';
-  } else {
-    if (req.cookies.vernissageLang === 'ua') {
-      languageSystem = 1;
-      langMenu = 'menu-uk';
-    } else {
-      languageSystem = 0;
-      langMenu = 'menu';
-    }
-  }
+  // } else {
+  //   if (req.cookies.vernissageLang === 'ua') {
+  //     languageSystem = 1;
+  //     langMenu = 'menu-uk';
+  //   } else {
+  //     languageSystem = 0;
+  //     langMenu = 'menu';
+  //   }
+  // }
 
   var DA = req.url.split('=');
   var searchData = DA[1].split(',');
@@ -34,8 +34,10 @@ router.get('/*', function(req, res, next) {
     config.find().toArray(function(err, results_config) {
       if (results_config[languageSystem].opens) {
         menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu) {
-          tovar.find({AI: parseInt(searchData)}).toArray(function(err, results_tovar) {
-            tovar_comments.find({tovar_AI: parseInt(searchData)}).toArray(function(err, results_comments) {
+          tovar.find({ vendorCode: searchData[0] }).toArray(function(err, results_tovar) {
+            console.log(searchData[0])
+            console.log(results_tovar)
+            tovar_comments.find({tovar_AI: parseInt(results_tovar[0].vendorCode)}).toArray(function(err, results_comments) {
               users_session.find({email: req.session.user}).toArray(function(err, results_users_session) {
                 if (results_users_session.length > 0) {
                   var uSession = results_users_session;

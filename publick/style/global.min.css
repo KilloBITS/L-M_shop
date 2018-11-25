@@ -17,6 +17,14 @@
 }
 
 @media screen and (max-width: 800px) {
+  .certificated {
+    margin-top: 10px;
+    height: 30px;
+    cursor: default;
+    width: fit-content;
+    margin: auto;
+    margin-top: 23px;
+  }
   .min{
     display: block;
   }

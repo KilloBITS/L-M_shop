@@ -17,18 +17,18 @@ function makeid() {
 
 router.get('/', function(req, res, next){
   var languageSystem, langMenu;
-  if(req.cookies.vernissageLang === undefined){
+  // if(req.cookies.vernissageLang === undefined){
     languageSystem = 0;
     langMenu = 'menu';
-  }else{
-    if(req.cookies.vernissageLang === 'ua'){
-      languageSystem = 1;
-      langMenu = 'menu-uk';
-    }else{
-      languageSystem = 0;
-      langMenu = 'menu';
-    }
-  }
+  // }else{
+  //   if(req.cookies.vernissageLang === 'ua'){
+  //     languageSystem = 1;
+  //     langMenu = 'menu-uk';
+  //   }else{
+  //     languageSystem = 0;
+  //     langMenu = 'menu';
+  //   }
+  // }
 
   //расчет общей суммы
   var sum = 0;
@@ -40,6 +40,12 @@ router.get('/', function(req, res, next){
   var lmCoin = (parseInt(sum) / 100);
   if(lmCoin > 1){
     //обработка бонуса
+    if (req.session && req.session.user !== undefined){
+      users.find({email: req.session.user}).toArray(function(err, results_users){
+        var curCoin = results_users.LM_COIN + lmCoin;
+        users.update({email: req.session.user},{ $set : { LM_COIN: curCoin}});
+      });
+    }
   }
 
   if(parseInt(req.query.oplatatype) === 0)
