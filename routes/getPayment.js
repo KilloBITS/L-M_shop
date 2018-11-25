@@ -151,11 +151,11 @@ router.get('/', function(req, res, next){
              var yyyy = today.getFullYear();
 
              if(dd<10) {
-             dd = '0'+dd
+               dd = '0'+dd
              }
 
              if(mm<10) {
-             mm = '0'+mm
+               mm = '0'+mm
              }
 
              today = mm + '/' + dd + '/' + yyyy;
@@ -196,7 +196,6 @@ router.get('/', function(req, res, next){
                  users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
                });
              }
-
 
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{
