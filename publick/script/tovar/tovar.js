@@ -78,6 +78,12 @@ $(document).ready(function(){
 
 var Index = {
    UPDATE_BASCET: function(){
+
+     $("#CityOfDost,#CityOfPostNP").fadeIn(300);
+     $("#input-PaymentCity").val("").attr("disabled",false);
+     $("#CityOfDost label").show();
+
+     
      $('.basket_doc').remove();
      $("#basketDATA").fadeIn(300);
      $("body").css({"overflow":"hidden"});
