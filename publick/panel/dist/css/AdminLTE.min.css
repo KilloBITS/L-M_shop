@@ -5510,3 +5510,12 @@ table.text-center, table.text-center td, table.text-center th {
   top: 0;
   left: 10px;
 }
+
+.ViewImage{
+  width: 100px;
+  height: 140px;
+  background-size: cover;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 3px;
+}

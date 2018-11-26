@@ -1,5 +1,5 @@
 var ADMIN = {
-  GLOBAL_FILE: "",
+  GLOBAL_FILE: [],
   NEW_TOVAR: false,
   EDIT_TYPE: '',
   EDIT_AI_SELECT: 0,
@@ -228,13 +228,13 @@ var ADMIN = {
 
       var url = '/setAdmTovar';
 
-      // $.post(url,{ru:save_data, ua:save_data_ua, file: ADMIN.GLOBAL_FILE, te: ADMIN.NEW_TOVAR, ai:ADMIN.EDIT_AI_SELECT},function(res){
+      $.post(url,{ru:save_data, ua:save_data_ua, file: ADMIN.GLOBAL_FILE, te: ADMIN.NEW_TOVAR, ai:ADMIN.EDIT_AI_SELECT},function(res){
           ADMIN.CANCEL();
           ADMIN.CONSOLE_TO_MESSAGE('res');
           $("#example1 tbody").prepend('<tr class="tovar-ai-1 odd" role="row"> <td class="sorting_1"> NEW </td> <td> ' + save_data.title + ' <small> <div class="miniTitleNameIcon"></div> </small> </td> <td class="NOTMOBILE"> ' + save_data.price + ' UAH </td> <td class="tovar_active NOTMOBILE" style="background-color: #169814; text-align: center; color: white"> Товар активен <div class="visibility_off" title="Выключить товар" onclick="ADMIN.TOVAR_VISIBILITY(false, 1); $(this).parent().css({"background-color": "#981414"}).removeClass("tovar_active").addClass("tovar_none_active")"></div> </td> <td class=""> <a class="btn btn-app" title="Редактировать" onclick="ADMIN.EDIT_TOVAR(1)"> <i class="fa fa-edit"></i> </a> <a class="btn btn-app" title="Удалить" onclick="ADMIN.TOVAR_REMOVE(1)"> <i class="fa fa-ban"></i> </a> </td> </tr>');
 
           $('#modal-info').modal('hide')
-      // });
+      });
   },
   EDIT_TOVAR: function(ai){
 
@@ -463,32 +463,24 @@ var ADMIN = {
     $('.treeview:eq('+0+') .treeview-menu').show();
     $('.miniClick:eq('+0+')').click().addClass("active");
     $('.pageOfPanel:eq('+0+')').addClass("pageActive");
-    // if(localStorage.getItem("vernissage_treeview") && localStorage.getItem("vernissage_treeview") >= 0){
-    //    $('.treeview:eq('+parseInt(localStorage.getItem("vernissage_treeview"))+')').addClass("menu-open");
-    //    $('.treeview:eq('+parseInt(localStorage.getItem("vernissage_treeview"))+') .treeview-menu').show();
-    //    $('.miniClick:eq('+parseInt(localStorage.getItem("vernissage_miniClick"))+')').click().addClass("active");
-    //    $('.pageOfPanel:eq('+parseInt(localStorage.getItem("vernissage_miniClick"))+')').addClass("pageActive");
-    //
-    // }
     /*Для загрузки изображений в товары*/
       file = document.getElementById('tFile');
       file.addEventListener('change', function () {
-        // $("#tImageDemo").css({"background-image":" url(../../../image/loaders/load.gif)"});
         $("#tImageDemo").attr("src","../../../image/loaders/load.gif")
-          var fullPath = file.value;
-          var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-          var filename = fullPath.substring(startIndex);
-          if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-              filename = filename.substring(1);
+          function setupReader(file){
+            var name = file.name;
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              ADMIN.GLOBAL_FILE.push(e.target.result);
+              var viewImage = document.createElement('div');
+              viewImage.className = 'ViewImage';
+              viewImage.style.backgroundImage = 'url('+e.target.result+')'
+              $('#formInage').append(viewImage);
+            };
+            reader.readAsDataURL(file);
           }
-
-          if (this.files && this.files[0]) {
-              var reader = new FileReader();
-              reader.onload = function (e) {
-                  ADMIN.GLOBAL_FILE = e.target.result;
-                  $("#tImageDemo").attr("src", ADMIN.GLOBAL_FILE)
-              };
-              reader.readAsDataURL(this.files[0]);
+          for (var i = 0; i < this.files.length; i++) {
+              setupReader(this.files[i]);
           }
       }, false);
     /*Для загрузки новой аватарки*/

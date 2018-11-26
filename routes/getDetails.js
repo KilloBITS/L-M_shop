@@ -24,10 +24,10 @@ router.get('/*', function(req, res, next) {
     config.find().toArray(function(err, results_config) {
       if (results_config[languageSystem].opens) {
         menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu) {
-          tovar.find({ vendorCode: searchData[0], types: searchData[1] }).toArray(function(err, results_tovar) {
+          tovar.find({ AI: parseInt(searchData[0]), types: searchData[1] }).toArray(function(err, results_tovar) {
             console.log(searchData[0])
             console.log(results_tovar)
-            tovar_comments.find({tovar_AI: parseInt(results_tovar[0].vendorCode)}).toArray(function(err, results_comments) {
+            tovar_comments.find({tovar_AI: parseInt(results_tovar[0].AI)}).toArray(function(err, results_comments) {
               users_session.find({email: req.session.user}).toArray(function(err, results_users_session) {
                 if (results_users_session.length > 0) {
                   var uSession = results_users_session;

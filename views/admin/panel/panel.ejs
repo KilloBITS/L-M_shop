@@ -1038,7 +1038,7 @@
               </div>
             </div>
 
-      
+
           </div>
           <button type="button" class="btn btn-block btn-success btn-lg saveLocal" id="globalDataSave2" onclick="ADMIN.SAVE_LOCAL_INDEX()">Сохранить</button>
         </section>
@@ -1122,10 +1122,11 @@
                     </select>
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group" id="formInage">
                     <label>Изображение товара</label>
-                    <button type="button" class="btn btn-block btn-warning btn-lg" id="selected_tov_image" onclick="$('#tFile').click()" style="    position: relative;"><img id="tImageDemo"> Выбрать изображение</button>
-                    <input type="file" name="file" id="tFile">
+
+                    <button type="button" class="btn btn-block btn-warning btn-lg" id="selected_tov_image" onclick="$('#tFile').click()" style="position: relative;"><img id="tImageDemo"> Выбрать изображение</button>
+                    <input type="file" name="file" id="tFile" required multiple>
                   </div>
 
                   <div class="form-group">

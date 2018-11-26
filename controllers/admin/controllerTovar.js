@@ -4,6 +4,7 @@ const router = express.Router();
 const cookieParser = require('cookie-parser');
 const mongoClient = require("mongodb").MongoClient;
 const bParser = require('body-parser');
+const fs = require('fs');
 
 router.use(cookieParser());
 
@@ -46,14 +47,20 @@ var delAdmTovar = (req, res, next) => {
   }
 };
 
-var createFile = function(file,AI){
-  var base64Data = file.replace(/^data:image\/(png|gif|jpeg|jpg);base64,/,'');
-  require("fs").writeFile("./publick/data/tovar/tov"+AI+".jpg", base64Data, 'base64', function(err) {
-    console.log(err);
-  });
+var createFile = function(file, AI){
+  var dir = './publick/data/tovar/'+AI;
+  if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+  }
+   for(let i = 0; i < file.length; i++){
+     var base64Data = file[i].replace(/^data:image\/(png|gif|jpeg|jpg);base64,/,'');
+     require("fs").writeFile(dir + "/"+i+".jpg", base64Data, 'base64', function(err) {
+       console.log(err);
+     });
+   }
 };
 
-var createUA = function(data, ai){
+var createUA = function(data, ai, l){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovaruk  = db.collection("tovar-uk");
@@ -67,11 +74,19 @@ var createUA = function(data, ai){
     NEW_TOVAR_UA.sale = data.sale;
     NEW_TOVAR_UA.postavka = data.postavka;
     NEW_TOVAR_UA.tIncrement = data.tIncrement;
+
+    var imageArray = [];
+    for(let i = 0; i < l; i++){
+      imageArray.push(ai + '/' + i + ".jpg");
+    }
+
+    NEW_TOVAR_UA.image = imageArray;
+
     tovaruk.insertOne(NEW_TOVAR_UA);
   });
 };
 
-var createRU = function(data, ai){
+var createRU = function(data, ai, l){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovar  = db.collection("tovar");
@@ -81,10 +96,17 @@ var createRU = function(data, ai){
     NEW_TOVAR.category = parseInt(NEW_TOVAR.category),
     NEW_TOVAR.popular = 5;
     NEW_TOVAR.AI = ai;
-    NEW_TOVAR.image = "tov"+ai+".jpg";
     NEW_TOVAR.sale = data.sale;
     NEW_TOVAR.postavka = data.postavka;
     NEW_TOVAR.tIncrement = data.tIncrement;
+
+    var imageArray = [];
+    for(let i = 0; i < l; i++){
+      imageArray.push(ai + '/' + i + ".jpg");
+    }
+
+    NEW_TOVAR.image = imageArray;
+
     tovar.insertOne(NEW_TOVAR);
   });
 };
@@ -143,10 +165,9 @@ var setAdmTovar = (req, res, next) => {
           var NEXT_AI = 1;
         }
 
-
         if(mainData.te === "true"){
-          createUA(mainData.ua, NEXT_AI);
-          createRU(mainData.ru, NEXT_AI);
+          createUA(mainData.ua, NEXT_AI, mainData.file.length);
+          createRU(mainData.ru, NEXT_AI, mainData.file.length);
           createFile(mainData.file, NEXT_AI);
         }else{
           updateUA(mainData.ua, mainData.ai);

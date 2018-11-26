@@ -104,7 +104,7 @@
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
-          <a href="/details?tov=<%= tovarArr[i].vendorCode %>&<%= tovarArr[i].types %>">
+          <a href="/details?tov=<%= tovarArr[i].AI %>&<%= tovarArr[i].types %>">
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
               <div class="thumbnail">
                 <div class="vendor"><%= tovarArr[i].vendorCode %></div>
@@ -136,7 +136,7 @@
                   <div class="water_icon"></div>
 
                   <img class="group list-group-image" src="../../../data/tovar/<%= tovarArr[i].image[0] %>" alt=""/>
-                  
+
                   <div class="caption">
                     <div class="blockOfNavBtn">
                       <% if(sessionUser !== undefined){ %>
@@ -173,7 +173,7 @@
                             <% } %>
                           </div>
                           <div class="col-xs-12 col-md-6">
-                              <a class="btn btn-success" onclick="Index.setBasket('<%= tovarArr[i].vendorCode %>', <%= i %>)"><%= conf.toBasket %></a>
+                              <a class="btn btn-success" onclick="Index.setBasket('<%= tovarArr[i].AI %>', <%= i %>)"><%= conf.toBasket %></a>
                           </div>
                       </div>
                   </div>
