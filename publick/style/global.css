@@ -98,7 +98,7 @@ body{
 .logotype{
 	width: 220px;
   height: 100px;
-  background-image: url(../../../image/vernissageLogo.png);
+  background-image: url(../../../image/LOGOTYPE.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2806,6 +2806,7 @@ a:focus, a:hover {
   right: 0;
   top: -16px;
   z-index: 1;
+  padding: 10px 5px;
 }
 .ribbon:after {
   content: "";

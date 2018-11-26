@@ -74,7 +74,7 @@ var createUA = function(data, ai, l){
     NEW_TOVAR_UA.sale = data.sale;
     NEW_TOVAR_UA.postavka = data.postavka;
     NEW_TOVAR_UA.tIncrement = data.tIncrement;
-
+    NEW_TOVAR_UA.sizes = data.sizes;
     var imageArray = [];
     for(let i = 0; i < l; i++){
       imageArray.push(ai + '/' + i + ".jpg");
@@ -99,6 +99,7 @@ var createRU = function(data, ai, l){
     NEW_TOVAR.sale = data.sale;
     NEW_TOVAR.postavka = data.postavka;
     NEW_TOVAR.tIncrement = data.tIncrement;
+    NEW_TOVAR.sizes = data.sizes;
 
     var imageArray = [];
     for(let i = 0; i < l; i++){

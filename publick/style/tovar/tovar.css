@@ -71,7 +71,7 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0;
-  /* height: 480px; */
+  height: 480px;
   position: relative;
   overflow: hidden;
   border: 0;

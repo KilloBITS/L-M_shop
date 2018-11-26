@@ -45,7 +45,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype" style="background-image: url(../../../image/<%= conf.site_logo %>)"></div>
+		<div class="logotype"></div>
 		<div class="topNavBlockOfBtm">
 			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
       <% if(sessionUser !== undefined){ %>
@@ -207,7 +207,7 @@
         </div>
         <div class="column-xs-12 column-md-6">
           <h1><%= tovarArr[0].title %></h1>
-          <% if(tovarArr[0].sale[0]){ %>
+          <% if(tovarArr[0].sale[0] === 'true'){ %>
             <h2 style="text-decoration: line-through"><%= tovarArr[0].price %> Грн</h2>
             <h3 style="color: red"><%= parseInt(tovarArr[0].price - tovarArr[0].price / 100 * parseInt(tovarArr[0].sale[1])) %> Грн</h3>
           <% } else { %>
@@ -217,20 +217,32 @@
           <div class="description">
             <div class="sizeOfTovar">
               <div class="selectSize">
-                <div class="sizeBTN" id="Size_S">S</div>
-                <div class="sizeBTN size_a" id="Size_M">M</div>
-                <div class="sizeBTN" id="Size_L">L</div>
+                <% for(var iS = 0; iS < tovarArr[0].sizes.length; iS++){ %>
+                  <% if(iS === 0){ %>
+                      <div class="sizeBTN size_a"><%= tovarArr[0].sizes[iS] %></div>
+                  <% }else{%>
+                      <div class="sizeBTN"><%= tovarArr[0].sizes[iS] %></div>
+                  <% } %>
+
+                <% } %>
               </div>
               <div class="btnTableSizes">Таблица размеров</div>
             </div>
             <div class="text_line">Производитель:<span><%= tovarArr[0].postavka %></span></div>
             <div class="text_line">Описание:</div>
-            <div class="noneText"><%= tovarArr[0].descriptin %></div>
+            <div class="noneText"><%= tovarArr[0].text %></div>
             <script type="text/javascript">
             // var text = ; //.replace(/aaa/g, '');
             $('.description').append($('.noneText').text())
             </script>
 
+            <div class="group_block">
+              <% if(!tovarArr[0].group_id){ %>
+                111
+              <% }else{ %>
+                <%= tovarArr[0].group_id %>
+              <% } %>
+            </div>
           </div>
           <button class="add-to-cart"onclick="Details.setBasket('<%= tovarArr[0].vendorCode %>')">Добавить в корзину</button>
         </div>
@@ -293,10 +305,10 @@
 
         <% for(var i = 0; i < rec.length; i++) { %>
             <div class="column-xs-12 column-md-4">
-              <a href="/details?tov=<%= rec[i].AI %>">
-              <img src="../../../data/tovar/<%= rec[i].image[0] %>&<%= rec[i].types %>"> <!-- ../../../data/tovar/ -->
+              <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].types %>">
+              <img src="../../../data/tovar/<%= rec[i].image[0] %>"> <!-- ../../../data/tovar/ -->
               <h4><%= rec[i].title %></h4>
-              <% if(rec[i].sale[0]){ %>
+              <% if(rec[i].sale[0] === 'true'){ %>
                 <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>
                 <p class="price2" style="color: red"><%= parseInt(rec[i].price - rec[i].price / 100 * parseInt(rec[i].sale[1])) %> Грн</p>
               <% } else { %>

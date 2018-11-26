@@ -61,7 +61,7 @@ router.get('/*', function(req, res, next){
                       FILTER.types = searchData[1].split('&')[0];
                     }
 
-                    tovar.find( FILTER ).sort( { AI: -1 } ).toArray(function(err, results_tovar ){
+                    tovar.find( FILTER ).sort( { AI: 1 } ).toArray(function(err, results_tovar ){
                       var page_length = parseInt(results_tovar.length / 18);
                       var current_page = page;
                       // console.log('/shop?c='+searchData[0]+','+searchData[1].split('&')[0])
