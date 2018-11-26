@@ -9,8 +9,8 @@ var Index = {
 
     if($(window).width() < 800){
       $(".header").height($(window).height() - 50 + 'px')
-    }else{
-      $(".header").height($(window).height() - 120 + 'px')
+    // }else{
+    //   $(".header").height($(window).height() - 120 + 'px')
     }
 
 
@@ -204,7 +204,7 @@ var Index = {
             $(".counters_length:eq(0)").html(417)
             $(".counters_length:eq(1)").html(res.b)
             $(".counters_length:eq(2)").html(385)
-            $(".counters_length:eq(3)").html(res.d / 4)
+            $(".counters_length:eq(3)").html(res.d)
 
             // $(".counters_length:eq(0)").html(parseInt(res.a - (res.a / 4)))
             // $(".counters_length:eq(1)").html(parseInt(res.b - (res.b / 4)))
