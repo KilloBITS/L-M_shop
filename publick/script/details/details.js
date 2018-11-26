@@ -1,6 +1,7 @@
 'use strict';
 var BASKET = [];
 
+
 var Details = {
   UPDATE_BASCET: function(){
 
@@ -8,7 +9,7 @@ var Details = {
     $("#input-PaymentCity").val("").attr("disabled",false);
     $("#CityOfDost label").show();
 
-    
+
     $('.basket_doc').remove();
     $("#basketDATA").fadeIn(300);
     $("body").css({"overflow":"hidden"});
@@ -74,6 +75,20 @@ var Details = {
 
   },
   DESIGHN: function(){
+
+    var amount = document.getElementsByClassName('current-amount');
+    var changes = document.getElementsByTagName('i');
+    function changeAmount() {
+      if(this.className.includes('minus') && amount[0].textContent > 0) {
+        amount[0].textContent--;
+      }else if(this.className.includes('plus')) {
+        amount[0].textContent++;
+      }
+    }
+    for(var i = 0; i < 2; i++) {
+      changes[i].addEventListener('click', changeAmount, false);
+    }
+    
     $(".sizeBTN").click(function(){
       // let id = $(this).attr('id')
       // console.log(id);
