@@ -232,8 +232,7 @@
             <div class="text_line">Описание:</div>
             <div class="noneText"><%= tovarArr[0].text %></div>
             <script type="text/javascript">
-            // var text = ; //.replace(/aaa/g, '');
-            $('.description').append($('.noneText').text())
+            $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
             </script>
 
             <div class="group_block">
