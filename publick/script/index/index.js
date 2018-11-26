@@ -26,7 +26,7 @@ var Index = {
         $.post("/search", {
           name: $("#SEARCH").val()
         }, function(result) {
-          console.log(result);
+          console.log(JSON.parse(result.searchResult));
         });
       } else {
         $(".search_result").fadeOut(150);

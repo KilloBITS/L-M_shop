@@ -206,8 +206,7 @@
       display: inline-block;
   }
   .LBB {
-      float: initial;
-      text-align: center;
+    display: none;
   }
   .RBB {
       float: initial;

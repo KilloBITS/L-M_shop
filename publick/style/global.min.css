@@ -17,6 +17,20 @@
 }
 
 @media screen and (max-width: 800px) {
+  .menuBTN{
+    display: block;
+  }
+  .spinner {
+    position: absolute;
+    top: calc(50% + 50px);
+    margin-top: -12px;
+    left: 50%;
+    margin-left: -35px;
+    height: 24px;
+    width: 70px;
+    text-align: center;
+    display: block;
+  }
   .punktMenu {
       width: 100%;
       padding: 3px 0px 1px 24px;

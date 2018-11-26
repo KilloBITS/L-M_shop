@@ -14,13 +14,11 @@ var searchFunction = (req, res, next) => {
 
       if(err) return console.log(err);
 
-      tovar.find( { title: { $in: [req.body.name] } }).toArray(function(err, results){
+      tovar.find( { title: { $in: {$regex: req.body.name} } }).toArray(function(err, results){
         console.log(results);
-        if(results[0] !== undefined){
+       
             res.send({code:500, searchResult: JSON.stringify(results)})
-        }else{
-          res.send({code:430})
-        }
+
         client.close();
       });
     });

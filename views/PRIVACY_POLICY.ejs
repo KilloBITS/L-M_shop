@@ -56,7 +56,12 @@
         <div class="menuBlock">
           <% for(var i = 0; i < menu.length; i++) { %>
             <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-              <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+              <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
+                <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
+              <% }else{%>
+                <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+              <% } %>
+
             <% } else { %>
               <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
             <% } %>
