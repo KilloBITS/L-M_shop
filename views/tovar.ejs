@@ -207,12 +207,12 @@
                 'LAST' : '>>',
                 'CURRENT_PAGE_REPORT' : 'Показано от {FromResult} до {ToResult} из {TotalResult} товаров'
             };
-            var paginator = new pagination.ItemPaginator({prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 24, totalResult: <%= paginate.totalResult %>, translator : function(str) {
+            var paginator = new pagination.ItemPaginator({prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: <%= paginate.totalResult %>, translator : function(str) {
                   return translations[str];
               }
             });
             var html = paginator.render();
-            var paginator = pagination.create('search', {prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 24, totalResult: <%= paginate.totalResult %>, translator : function(str) {
+            var paginator = pagination.create('search', {prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: <%= paginate.totalResult %>, translator : function(str) {
                   return translations[str];
               }
             });
