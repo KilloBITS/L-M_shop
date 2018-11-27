@@ -117,7 +117,7 @@
                 <div class="vendor"><%= tovarArr[i].vendorCode %></div>
                 <div class="isView"></div>
 
-                <% if(tovarArr[i].sale[0] === 'true' || tovarArr[i].sale[1] !== ''){ %>
+                <% if(tovarArr[i].sale[0] === 'true' && tovarArr[i].sale[1] !== ''){ %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 5){ %>
                     <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
