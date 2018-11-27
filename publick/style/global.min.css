@@ -51,7 +51,7 @@
       cursor: pointer;
       white-space: nowrap;
       font-size: 18px;
-      float: left;
+      /* float: left; */
       display: inline-block;
   }
   .certificated {
@@ -157,7 +157,7 @@
   .hamburger-menu {
     position: relative;
     transform: translateY(21px);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(214, 140, 170);
     transition: all 0ms 300ms;
   }
   .hamburger-menu.animate {
@@ -194,7 +194,7 @@
     position: absolute;
     left: 0;
     bottom: 19px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(214, 140, 170);
     transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -203,7 +203,7 @@
     position: absolute;
     left: 0;
     top: 18px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(214, 140, 170);
     transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 

@@ -354,7 +354,8 @@ a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   top: 5px;
-  opacity: 0.1;
+  left: 3px;
+  opacity: 1;
   z-index: 1;
 }
 
@@ -473,15 +474,14 @@ fieldset, label { margin: 0; padding: 0; }
 }
 
 .well {
-    margin-bottom: 0px;
-    padding: 12px 0px 23px 00px;
+  padding: 10px 0px 8px 0px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
 }
 
 .filters{
   width: 100%;
   height: 150px;
-  background: #ffffff;
-  border: 1px solid silver;
   margin-top: 10px;
   display: none;
 }

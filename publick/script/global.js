@@ -44,8 +44,9 @@ var Global = {
   BTN: function(){
     $('.menu-wrapper').on('click', function() {
       $('.hamburger-menu').toggleClass('animate');
-      $('.twoLine').toggleClass('openMenuClass');
+      // $('.twoLine').toggleClass('openMenuClass');
       $(".menu_data").hide();
+      $(".twoLine").slideToggle();
     })
 
     $(".addToJelaniya").click(function(){
@@ -86,11 +87,12 @@ $(document).ready(function() {
     $(".spn_hol").css({"transform": "scale(5)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
   }, 1500);
 
-  $(document).scroll(function(){
-    $('.menu_data').hide();
-    $('.hamburger-menu').removeClass('animate');
-    $('.twoLine').removeClass('openMenuClass');
-  });
+  // $(document).scroll(function(){
+  //   $('.menu_data').hide();
+  //   $('.hamburger-menu').removeClass('animate');
+  //   $('.twoLine').removeClass('openMenuClass');
+  //   $(".twoLine").click();
+  // });
 });
 
 

@@ -1601,7 +1601,7 @@ p.min50{
   left: 0;
   right: 0;
   bottom: 0;
-  background: #fff url(../../../image/LMLogo2.png);
+  background: #fff url(../../../image/LOGOTYPE.jpg);
   z-index: 99999999;
   opacity: 1;
   -webkit-transition: all 1s;
@@ -1609,9 +1609,8 @@ p.min50{
   -o-transition: all 1s;
   transition: all 1s;
   background-repeat: no-repeat;
-  background-position: center 30%;
+  background-position: center calc(50% - 60px);
   opacity: 1.8;
-  background-size: 800px;
 }
 
 @-webkit-keyframes bouncedelay {
