@@ -195,7 +195,7 @@ var Index = {
     $.post('/counters', function(res){
       $(".counters_length:eq(0)").html(417)
       $(".counters_length:eq(1)").html(res.b)
-      $(".counters_length:eq(1)").html(res.b)
+      $(".counters_length:eq(3)").html(res.b)
       $(".counters_length:eq(2)").html(385)
       $("#products2").html(res.b)
     });
