@@ -2892,6 +2892,6 @@ a:focus, a:hover {
   opacity: 0.7;
 }
 
-.menuBTN{
-  /* display: none; */
+.menuBTN div, .pLinkIcon{
+  display: none;
 }
