@@ -294,7 +294,7 @@
       <div class="NEXT_pay_bas">Заполнить данные</div>
     </div>
     <div class="basket_info">
-      <form action="/payment" enctype="application/json" type="get" name="paymentForm" novalidate>
+      <form action="/payment" enctype="application/json" type="get" name="paymentForm" >
         <input type="text" name="JSON_Tovar" id="JSTOVAR" style="display: none;">
 
         <p class="input-container">
@@ -313,35 +313,35 @@
           <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
           <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
         </p>
-        <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required placeholder="Доставка">
+        <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" placeholder="Доставка" required>
           <option value="2">Доставка Новой Почтой</option>
           <option value="3" disabled>Доставка УкрПочтой</option>
         </select>
 
-        <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата">
+        <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата" required>
           <option value="0" disabled>Оплата наличными</option>
           <option value="1" selected>Оплата картой</option>
         </select>
         <div class="warnMsg">(Оплата картой сейчас недоступна, приносим наши извинения, мы работаем над этим).</div>
 
         <p class="input-container" id="CityOfDost">
-          <input type="text" name="city" id="input-PaymentCity" class="login-input" required>
+          <input type="text" name="city" id="input-PaymentCity" class="login-input" >
           <label for="input-PaymentCity" unselectable="on">Город</label>
         </p>
         <p class="input-container" id="CityOfPostNP">
-          <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" required>
+          <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" >
           <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
         </p>
         <p class="input-container" id="CityOfPostUl">
-          <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" required>
+          <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" >
           <label for="input-PaymentUlica" unselectable="on">Улица</label>
         </p>
         <p class="input-container min50" id="CityOfPostD">
-          <input type="text" name="dom" id="input-PaymentDom" class="login-input" required>
+          <input type="text" name="dom" id="input-PaymentDom" class="login-input" >
           <label for="input-PaymentDom" unselectable="on">Дом</label>
         </p>
         <p class="input-container min50" id="CityOfPostK">
-          <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" required>
+          <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" >
           <label for="input-PaymentKV" unselectable="on">Квартира №</label>
         </p>
         <button class="bubbly-button" onclick="">Подтвердить заказ</button>
