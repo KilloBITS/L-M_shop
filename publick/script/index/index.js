@@ -9,8 +9,6 @@ var Index = {
 
     if($(window).width() < 800){
       $(".header").height($(window).height() - 50 + 'px')
-    // }else{
-    //   $(".header").height($(window).height() - 120 + 'px')
     }
 
 
@@ -40,12 +38,6 @@ var Index = {
         });
       }
     });
-
-    // $('.menu-wrapper').on('click', function() {
-    //   $('.hamburger-menu').toggleClass('animate');
-    //   $('.twoLine').toggleClass('openMenuClass');
-    //   $(".menu_data").hide();
-    // })
 
     $(".menuBTN").hover(function() {
       try {
@@ -196,37 +188,19 @@ var Index = {
       changeSlides();
     });
     var STC;
-    $(document).scroll(function (event) {
-    var scroll = $(document).scrollTop();
-        if(scroll >= 1000 && Index.getCounters){
-          Index.getCounters = false;
-          $.post('/counters', function(res){
-            $(".counters_length:eq(0)").html(417)
-            $(".counters_length:eq(1)").html(res.b)
-            $(".counters_length:eq(2)").html(385)
-            $(".counters_length:eq(3)").html(res.d)
-
-            // $(".counters_length:eq(0)").html(parseInt(res.a - (res.a / 4)))
-            // $(".counters_length:eq(1)").html(parseInt(res.b - (res.b / 4)))
-            // $(".counters_length:eq(2)").html(parseInt(res.c - (res.c / 4)))
-            // $(".counters_length:eq(3)").html(parseInt(res.d - (res.d / 4)))
-            // STC = setInterval(function(){
-            //   if(parseInt($(".counters_length:eq(0)").html()) < res.a){
-            //     $(".counters_length:eq(0)").html( parseInt($(".counters_length:eq(0)").html()) + 1)
-            //   }
-            //   if(parseInt($(".counters_length:eq(1)").html()) < res.b){
-            //     $(".counters_length:eq(1)").html( parseInt($(".counters_length:eq(1)").html()) + 1)
-            //   }
-            //   if(parseInt($(".counters_length:eq(2)").html()) < res.c){
-            //     $(".counters_length:eq(2)").html( parseInt($(".counters_length:eq(2)").html()) + 1)
-            //   }
-            //   if(parseInt($(".counters_length:eq(3)").html()) < res.d){
-            //     $(".counters_length:eq(3)").html( parseInt($(".counters_length:eq(3)").html()) + 1)
-            //   }
-            // }, 10);
-          });
-        }
+    // $(document).scroll(function (event) {
+    // var scroll = $(document).scrollTop();
+    //     if(scroll >= 1000 && Index.getCounters){
+    //       Index.getCounters = false;
+    $.post('/counters', function(res){
+      $(".counters_length:eq(0)").html(417)
+      $(".counters_length:eq(1)").html(res.b)
+      $(".counters_length:eq(3)").html(res.d)
+      $(".counters_length:eq(2)").html(385)
+      $("#products2").html(res.b)
     });
+    //     }
+    // });
   },
   INIT: function() {
     Index.DESIGHN();
