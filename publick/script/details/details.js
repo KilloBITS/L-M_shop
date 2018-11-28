@@ -65,7 +65,7 @@ var Details = {
         $(minBasLength).append(inplen)
       }
       $(".allSum").html(summa + ' ГРН');
-      $(".bubbly-button").html($(".bubbly-button").html() + " на сумму: " + summa + ' ГРН');
+      $(".bubbly-button").html("Оплатить товар на сумму: " + summa + ' ГРН');
 
       $(".backet_load").hide();
     });
