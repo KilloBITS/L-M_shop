@@ -230,5 +230,9 @@
     left: 10px;
     width: calc(100% - 20px);
   }
+  .desires_box {
+    width: 100%;
+    height: 360px;
+  }
 
 }
