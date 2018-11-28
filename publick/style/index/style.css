@@ -1962,7 +1962,6 @@ i {
   -webkit-align-items: center;
   -webkit-justify-content: flex-end;
   position: relative;
-  /* background-color: #fff; */
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
   position: absolute;
