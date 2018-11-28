@@ -4,6 +4,12 @@
   }
 }
 @media screen and (max-width: 800px) {
+  #ballance {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding-right: 44px;
+  }
   body{
       margin-top: 60px;
   }
