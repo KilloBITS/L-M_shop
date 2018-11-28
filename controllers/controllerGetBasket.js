@@ -16,9 +16,23 @@ router.post('/getbasket', function(req, res, next){
 
     if(err) return console.log(err);
 
-    console.log(arrayTovar)
-     tovar.find({vendorCode:  { $in: req.body.data } }).toArray(function(err, results_tovar ){
-       res.send({code: 500, tovar: results_tovar});
+      // console.log(req.body.data)
+      var result = arrayTovar.map(function (x) {
+        return parseInt(x, 10);
+      });
+      var integerDataArray = result;
+     tovar.find( { AI: { $in:  integerDataArray } } ).toArray(function(err, results_tovar ){
+       var newArrayPush = [];
+
+       for(let id = 0; id < integerDataArray.length; id++){
+         for(let ir = 0; ir < results_tovar.length; ir++){
+           if(parseInt(results_tovar[ir].AI) === integerDataArray[id]){
+             newArrayPush.push(results_tovar[ir]);
+           }
+         }
+       }
+
+       res.send({code: 500, tovar: newArrayPush});
        client.close();
      });
   });
