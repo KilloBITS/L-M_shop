@@ -4,11 +4,9 @@ var BASKET = [];
 
 var Details = {
   UPDATE_BASCET: function(){
-
     $("#CityOfDost,#CityOfPostNP").fadeIn(300);
     $("#input-PaymentCity").val("").attr("disabled",false);
     $("#CityOfDost label").show();
-
 
     $('.basket_doc').remove();
     $("#basketDATA").fadeIn(300);
@@ -88,7 +86,7 @@ var Details = {
     for(var i = 0; i < 2; i++) {
       changes[i].addEventListener('click', changeAmount, false);
     }
-    
+
     $(".sizeBTN").click(function(){
       // let id = $(this).attr('id')
       // console.log(id);

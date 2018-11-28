@@ -1417,7 +1417,7 @@ button:hover {
   letter-spacing: -1px;
   margin: 0;
 }
-input {
+/* input {
   width: 60%; height: 50px;
   margin: 50px;
   border: none;
@@ -1435,4 +1435,4 @@ input:hover {
   color: #474850;
   width: 65%; height: 60px;
   outline: none;
-}
+} */
