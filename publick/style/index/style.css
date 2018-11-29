@@ -1448,6 +1448,7 @@ i {
   background-repeat: no-repeat;
   background-position: 5px 7px;
   background-size: 18px;
+  z-index: 10
 }
 
 .ucv-a2-panel {
