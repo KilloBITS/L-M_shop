@@ -276,5 +276,53 @@
   .ucv-b4-panel{
     display: none;
   }
-
+  .videoBlock {
+    height: 600px;
+  }
+  .videoBlock video {
+    display: none;
+  }
+  .insta_logo {
+    background-image: url(../../../image/insta.png);
+    width: 166px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    margin: auto;
+    margin-top: 0px;
+    position: relative;
+  }
+  .insta_logo span {
+    position: absolute;
+    right: -24px;
+    font-size: 12px;
+    font-weight: bold;
+    top: -3px;
+  }
+  .carouselInsta {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    max-height: 470px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .carousel-item__info{
+    display: none;
+  }
+  .carousel-item__image {
+    width: 100%;
+  }
+  .carousel-item__image video {
+    display: block;
+    width: inherit;
+    max-width: 100%;
+    filter: blur(0px);
+    z-index: 0;
+    max-height: 420px;
+    position: relative;
+  }
 }
