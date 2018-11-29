@@ -2739,6 +2739,15 @@ a:focus, a:hover {
   z-index: 2;
 }
 
+.white_zub{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-image: url(../../image/zub2.png);
+  background-repeat-y: no-repeat;
+  top: -30px;
+}
+
 .certificated{
   margin-top: 10px;
   height: 30px;
