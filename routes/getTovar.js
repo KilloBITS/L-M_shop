@@ -60,7 +60,7 @@ router.get('/*', function(req, res, next){
                       FILTER.types = searchData[1].split('&')[0];
                     }
 
-                    tovar.find( FILTER ).sort( { tIncrement: 1 } ).toArray(function(err, results_tovar ){
+                    tovar.find( FILTER ).sort( { tIncrement: -1 } ).toArray(function(err, results_tovar ){
                       var current_page = page;
 
                       var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length-1});
