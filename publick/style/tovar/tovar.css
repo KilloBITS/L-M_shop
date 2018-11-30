@@ -297,12 +297,8 @@ a:hover {
 .NEXT_PAGE{
 
 }
-.paginator-current-report{
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  white-space: nowrap;
+.paginator-current-report {
+    display: none;
 }
 
 .paginator .paginator-current{
