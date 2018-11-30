@@ -169,10 +169,7 @@
       width: 100%;
       display: inline-block;
   }
-  .LBB {
-      float: initial;
-      text-align: center;
-  }
+
   .RBB {
       float: initial;
       text-align: center;
@@ -300,6 +297,9 @@
   }
   #tovarBanner{
     display: none;
+  }
+  .LBB {
+      display: none;
   }
 
 }

@@ -5,4 +5,7 @@
   .form-cont {
     width: 100%;
   }
+  .LBB {
+      display: none;
+  }
 }

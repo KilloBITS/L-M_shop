@@ -170,9 +170,6 @@
       width: 100%;
       display: inline-block;
   }
-  .LBB {
-    display: none;
-  }
   .RBB {
       float: initial;
       text-align: center;
@@ -324,5 +321,8 @@
     z-index: 0;
     max-height: 420px;
     position: relative;
+  }
+  .LBB {
+      display: none;
   }
 }

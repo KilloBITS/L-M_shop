@@ -11,8 +11,10 @@
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+
   <link rel="stylesheet" type="text/css" href="/style/global.css">
 	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+
   <link rel="stylesheet" type="text/css" href="/style/tovar/tovar.css">
 	<link rel="stylesheet" type="text/css" href="/style/tovar/tovar.min.css">
 
@@ -103,7 +105,10 @@
 	<div class="tovar_data">
     <div class="container">
       <div id="tovarBanner">
-        <img src="../../../data/banners/<%= topBanner %>"> <!-- container_PLATYA.jpg -->
+        <% if(topBanner !== ""){ %>
+          <img src="../../../data/banners/<%= topBanner %>"> <!-- container_PLATYA.jpg -->
+        <% } %>
+
       </div>
       <div class="well well-sm">
         <div class="filtersBtn activeFilter"></div>

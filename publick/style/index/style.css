@@ -2046,7 +2046,7 @@ i {
 
 
 .carousel-item--2 .carousel-item__image{
-  background-image: url('../../../data/instagram/oneImage.jpg');
+  /* background-image: url('../../../data/instagram/oneImage.jpg'); */
 }
 
 .carousel-item--3 .carousel-item__image{
@@ -2058,7 +2058,7 @@ i {
 }
 
 .carousel-item--5 .carousel-item__image{
-  /* background-image: url('../../../data/instagram/ourImage.jpg'); */
+  background-image: url('../../../data/instagram/ourImage.jpg');
 }
 
 .carousel-item__image video{
