@@ -508,5 +508,7 @@ fieldset, label { margin: 0; padding: 0; }
 
 #tovarBanner{
   width: 100%;
-  height: 300px;
+}
+#tovarBanner img{
+  max-width: 100%;
 }
