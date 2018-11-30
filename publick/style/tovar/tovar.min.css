@@ -295,9 +295,10 @@
   .item.grid-group-item:nth-of-type(odd) {
       background: #ffffff;
   }
-
-
   .btn-group{
+    display: none;
+  }
+  #tovarBanner{
     display: none;
   }
 

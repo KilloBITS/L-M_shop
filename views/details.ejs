@@ -216,8 +216,8 @@
         <div class="column-xs-12 column-md-6">
           <h1><%= tovarArr[0].title %></h1>
           <% if(tovarArr[0].sale[0] === 'true'){ %>
-            <h2 style="text-decoration: line-through"><%= tovarArr[0].price %> Грн</h2>
-            <h3 style="color: red"><%= parseInt(tovarArr[0].price - tovarArr[0].price / 100 * parseInt(tovarArr[0].sale[1])) %> Грн</h3>
+            <h2 style="text-decoration: line-through">Старая цена: <%= tovarArr[0].price %> Грн</h2>
+            <h3 style="color: red">Новая цена: <%= parseInt(tovarArr[0].price - tovarArr[0].price / 100 * parseInt(tovarArr[0].sale[1])) %> Грн</h3>
           <% } else { %>
             <h2><%= tovarArr[0].price %> Грн</h2>
           <% } %>
