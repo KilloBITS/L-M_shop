@@ -63,7 +63,7 @@ router.get('/*', function(req, res, next){
                     tovar.find( FILTER ).sort( { AI: 1 } ).toArray(function(err, results_tovar ){
                       var current_page = page;
 
-                      var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length});
+                      var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length-1});
 
                       var p = paginator.getPaginationData();
                       console.log(results_tovar.length)
