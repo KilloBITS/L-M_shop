@@ -181,6 +181,9 @@
                   </div>
                 <% } %>
               </div>
+              <% if(isAdm){ %>
+                <div class="visible_length" title="Количевство просмотров">Просмотров: <%= tovarArr[0].visual %></div>
+              <% } %>
               <img class="active" id="tovarImage" src="../../../data/tovar/<%= tovarArr[0].image[0] %>"> <!-- ../../../data/tovar/ -->
               <% if(tovarArr[0].image.length > 1){ %>
               <div class="arrL"><</div>

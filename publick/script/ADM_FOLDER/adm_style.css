@@ -16,3 +16,9 @@
 .edited_admin:hover{
   opacity: 0.8;
 }
+
+.visible_length{
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
