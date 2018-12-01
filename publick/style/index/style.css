@@ -1290,7 +1290,7 @@ a.indexBtnToShop {
   display: block;
   position: absolute;
   width: 100%;
-  bottom: 10px;
+  bottom: 74px;
   height: 28px;
   z-index: 999;
 }
@@ -2144,4 +2144,16 @@ i {
 
 .half input{
   color: black
+}
+
+
+.lightning_new_year{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -32px;
+  /* background: rebeccapurple; */
+  background-image: url(../../../image/light_blick.gif);
+  background-size: contain;
+  background-repeat-y: no-repeat;
 }
