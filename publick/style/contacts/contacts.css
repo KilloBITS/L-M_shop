@@ -351,6 +351,61 @@ svg { visibility: hidden }
 }
 
 .container_partners{
-  min-height: 600px;
   padding-top: 50px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.block_left,.block_right{
+  display: inline-grid;
+  width: calc(50% - 2px);
+  padding: 32px 46px;
+  font-size: 20px;
+}
+
+.block_left{
+    text-align: left;
+}
+
+.block_right{
+    text-align: left;
+}
+
+
+.container_partnersNum{
+  background: #ffc9df;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.number_send_block{
+  max-width: 1024px;
+  margin: auto;
+}
+
+.number_phone{
+  border: 0;
+  outline: 0;
+  width: calc(100% - 154px);
+  display: inline-block;
+  height: 40px;
+  padding-left: 10px;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#setNumber{
+  width: 150px;
+  display: inline-block;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }

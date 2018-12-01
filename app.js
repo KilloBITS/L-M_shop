@@ -144,86 +144,9 @@ app.post('/removecategory', MENU_Controll);
 //Добавить тип
 app.post('/addNewType', MENU_Controll);
 
-
-
 const bot = require('./controllers/bot/controllerBot');
 app.post('/to-yuliadMessage', bot);
-//
-// // // //
 
-//
-// //
-// var NNM = './CATALOG/life_of_style2';
-// fs.readFile(NNM+'.json', 'utf8', function(err, contents) {
-//     // var tovars = JSON.parse(contents);
-//     console.log(JSON.parse(contents));
-//
-//
-
-    // var i = 0;
-
-    // mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
-    //   const db = client.db(global.baseName);
-    //   const tovar  = db.collection("tovar");
-    //   if(err) return console.log(err);
-    //
-    //   setInterval(function(){
-    //     try {
-    //       tovar.find( { vendorCode: tovars[i].vendorCode } ).toArray(function(err, results_tovar ){
-    //         console.log(results_tovar.length)
-    //         if(results_tovar.length === 0){
-    //           console.log('Такого товара еще нет');
-    //           try{
-    //             var NEW_TOVAR = new Object();
-    //             NEW_TOVAR.title = tovars[i].name;
-    //             NEW_TOVAR.availability = true;
-    //             NEW_TOVAR.category = 5,
-    //             NEW_TOVAR.types = NNM;
-    //             NEW_TOVAR.popular = 5;
-    //             NEW_TOVAR.AI = i;
-    //
-    //             if(tovars[i].picture[0] !== 'h'){
-    //               // console.log("PIC !== H");
-    //                 NEW_TOVAR.image = [];
-    //                 for(let o = 0; o < tovars[i].picture.length; o++){
-    //                   NEW_TOVAR.image.push(tovars[i].picture[o]);
-    //                 }
-    //             }else{
-    //               // console.log("PIC ================= H");
-    //                 NEW_TOVAR.image.push(tovars[i].picture);
-    //             }
-    //
-    //             NEW_TOVAR.descriptin = tovars[i].description.__cdata
-    //             NEW_TOVAR.sale = [false, 0];
-    //             NEW_TOVAR.param =  tovars[i].param;
-    //             NEW_TOVAR.postavka = 'BEREZKA';
-    //             NEW_TOVAR.group_id =  tovars[i]._group_id;
-    //             NEW_TOVAR.tIncrement =  tovars[i]._id;
-    //             NEW_TOVAR.vendorCode = tovars[i].vendorCode
-    //             NEW_TOVAR.price = tovars[i].price;
-    //             tovar.insertOne(NEW_TOVAR);
-    //             console.log('Добавлено :' + i + "/" + JSON.parse(contents).yml_catalog.shop.offers.offer.length);
-    //           } catch(e){
-    //             console.log("КАКАЯ ТО ОШИБКА")
-    //           }
-    //
-    //
-    //
-    //         }else{
-    //           console.log('Такой товар уже есть')
-    //         }
-    //       });
-    //     } catch (e) {
-    //       console.log("Tovar "+i + " ERROR")
-    //     }
-    //
-    //     i = i + 1;
-    //   },1000)
-    // });
-// });
-
-
-//
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
@@ -235,33 +158,14 @@ app.listen(4111, function(){
   global.online = 0;
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
 
+  mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
+    const db = client.db(global.baseName);
+    const tovar  = db.collection("tovar");
+    if(err) return console.log(err);
 
-  // // var i = 0;
-  // var noFolder = [];
-  // mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
-  //   const db = client.db(global.baseName);
-  //     const tovar  = db.collection("tovar");
-  //     if(err) return console.log(err);
-  //
-  //     tovar.find().toArray(function(err, results_tovar ){
-  //
-  //     // setInterval(function(){
-  //     for(var i = 0; i < results_tovar.length; i++){
-  //       var testName = results_tovar[i].image[0].substr(46).split('/');
-  //
-  //       var dir = 'publick/data/tovar/'+testName[0];
-  //       if (!fs.existsSync(dir)){
-  //         console.log('такой папки нет: ' + testName[0])
-  //         noFolder.push(testName[0]);
-  //         fs.mkdirSync(dir);
-  //       }
-  //       console.log(i);
-  //       // i = i +1;
-  //     // }, 50);
-  //     }
-  //       console.log(noFolder)
-  //   });
-  // });
+    tovar.updateMany({}, {$set: {visual: 0}})
+  });
+
 
 
 

@@ -49,7 +49,7 @@ router.get('/', function(req, res, next){
           users.update( { email: req.session.user }, { $set : { LM_COIN: curCoin } });
         });
       });
-
+      
     }
   }
 
@@ -118,7 +118,6 @@ router.get('/', function(req, res, next){
                  users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
                });
              }
-
 
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{

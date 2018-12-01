@@ -487,12 +487,23 @@ var ADMIN = {
               viewImage.className = 'ViewImage';
               viewImage.style.backgroundImage = 'url('+e.target.result+')'
               $('#formInage').append(viewImage);
+
+              var delImage = document.createElement("div");
+              delImage.className = 'deleteImage';
+              delImage.onclick = function(){
+                var indexura = $(this).index(this);
+                ADMIN.GLOBAL_FILE.splice(indexura, 1);
+                $(this).parent().remove();
+              };
+              $(viewImage).append(delImage);
             };
             reader.readAsDataURL(file);
           }
           for (var i = 0; i < this.files.length; i++) {
               setupReader(this.files[i]);
           }
+
+          file.value ='';
       }, false);
     /*Для загрузки новой аватарки*/
       newLogotype = document.getElementById('newLogotype');
