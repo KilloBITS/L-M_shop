@@ -37,7 +37,7 @@ router.get('/*', function(req, res, next) {
 
                 tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, results_recTovar) {
 
-                  tovar.updateMany({ AI: parseInt(searchData[0]), types: searchData[1] }, {visual: parseInt(results_tovar[0].visual) + 1 })
+                  tovar.update({ AI: parseInt(searchData[0]) }, {$set : {visual: parseInt(results_tovar[0].visual) + 1} })
 
                   res.render('details.ejs', {
                     conf: results_config[languageSystem],
