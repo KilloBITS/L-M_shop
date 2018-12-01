@@ -336,6 +336,11 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
   white-space: nowrap;
 }
 
+.punktMenu:hover{
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 .content {
     /* max-width: 1024px; */
     width: 100%;
