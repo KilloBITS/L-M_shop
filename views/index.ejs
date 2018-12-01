@@ -38,6 +38,8 @@
 <body>
   <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
   <div class="effect <%= effectData.className %>">
+
+    <!-- <div class="snow__item"></div>
     <div class="snow__item"></div>
     <div class="snow__item"></div>
     <div class="snow__item"></div>
@@ -45,8 +47,7 @@
     <div class="snow__item"></div>
     <div class="snow__item"></div>
     <div class="snow__item"></div>
-    <div class="snow__item"></div>
-    <div class="snow__item"></div>
+    <div class="snow__item"></div> -->
   <% } else { %>
     <% if(effectData !== undefined && effectData.name === "Leaves"){ %>
     <div class="effect" id="leaves">
@@ -181,6 +182,9 @@
           <% } %>
         <% } %>
 			</div>
+      <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
+        <div class="lightning_new_year"></div>
+      <% } %>
 		</div>
 		<div class="opensMenu">
     <% for(var i = 0; i < menu.length; i++) { %>

@@ -1524,6 +1524,7 @@ form textarea {
 
 #phoneNumMask{
   text-align: center;
+  border: 1px solid silver;
 }
 
 .noNumber{

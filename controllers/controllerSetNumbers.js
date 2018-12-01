@@ -14,7 +14,7 @@ router.get('/',function(req, res, next){
 
     users.find({phone: req.query.phoneNumber}).toArray(function(err, results_usersEmail ){
       if(results_usersEmail.length === 0){
-        users.update({ email: req.session.user },{$set: { phone: req.query.phoneNumber } });
+        users.update({ email: req.session.user },{$set: { phone_number: req.query.phoneNumber } });
         // res.send({code: 500});
         res.redirect('/profile');
       }else{

@@ -87,7 +87,7 @@
 </div>
 <!-- -->
 <div class="content">
-  <% if( user.phone === null ){ %>
+  <% if( user.phone_number === null ){ %>
     <div class="noNumMessage">
       У вас не подтвержден номер телефона, некоторые функции ограничены.<br>
       <small>(Пожалуйста подтвердите номер телефона)</small>
@@ -96,7 +96,7 @@
 
   <div class="account_block">
     <div class="top_account">
-      <div class="ava_block <% if( user.phone === null ){ %>  disabled  <% } %>">
+      <div class="ava_block <% if( user.phone_number === null ){ %>  disabled  <% } %>">
         <div class="avatarka" id="ava" style="background-image: url(../../../data/avatars/<%= user.AI %>.jpg)"></div>
         <input type="file" id="tFile" style="display: none;">
         <div class="uploadAva"></div>
@@ -115,7 +115,6 @@
                 1 LM-Coin = 1 Гривна
                 <br><br>
                 LM-Coin можно использовать при покупке свыше 1500 Гривен.
-
               </span>
             </div>
           </div>
@@ -135,7 +134,7 @@
 
     </div>
     <div class="data_user_content <% if( user.phone === null ){ %>  noNumber  <% } %>">
-      <% if( user.phone === null ){ %>
+      <% if( user.phone_number === null ){ %>
       <div class="number_modal">
         <form action="/setNumbers" method="GET" enctype="application/json">
           <h1>Подтверждение номера телефона</h1>
