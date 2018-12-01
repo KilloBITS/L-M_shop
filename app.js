@@ -163,7 +163,6 @@ app.listen(4111, function(){
     const tovar  = db.collection("tovar");
     if(err) return console.log(err);
 
-    tovar.updateMany({}, {$set: {visual: 0}})
   });
 
 
