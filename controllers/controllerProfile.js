@@ -16,7 +16,7 @@ var updateAvaUser = (req, res, next) => {
       users.find({email: req.session.user}).toArray(function(err, results){
         if(results[0] !== undefined){
           var base64Data = req.body.newAva.replace(/^data:image\/(png|gif|jpeg|jpg);base64,/,'');
-          require("fs").writeFile("./publick/data/avatars/" + results[0].ava, base64Data, 'base64', function(err) {
+          require("fs").writeFile("./publick/data/avatars/" + results[0].AI + ".jpg", base64Data, 'base64', function(err) {
             res.send({code:500, img: req.body.n})
           });
         }else{

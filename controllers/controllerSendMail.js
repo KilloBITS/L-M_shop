@@ -1,31 +1,31 @@
-'use strict';
-const express = require('express');
+"use strict";
+const express = require("express");
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
-        user: 'vernissage.developer@gmail.com',
-        pass: 'kakabuba666'
+        user: "message.from.the.site.lm@gmail.com",
+        pass: "makaron1488"
     }
 });
 
-function mailOptions(a, b, c, d) {
-    this.from = a, //'riznik.comment@gmail.com',
-    this.to = b, //'mr.kalinuk@gmail.com',
-    this.subject = c, //'Sending Email using Node.js',
-    this.text = d;//'That was easy!';
-}
-
-router.post('/sendMessage', function(req, res, next){
+router.post("/sendMessage", function(req, res, next){
   console.log(req.body)
-  let ml = new mailOptions('vernissage.developer@gmail.com', 'vernissage-shop@ukr.net', req.body.myTheme, req.body.message + " [Моя почта для ответа: " +req.body.myEmail + "]");
-  transporter.sendMail(ml, function (error, info) {
 
-    res.send({code:500, msg: 'Сообщение отправлено'});
+  let mailOptions = {
+        from: "message.from.the.site.lm@gmail.com", // sender address
+        to: "lm.store.shop@gmail.com", // list of receivers
+        subject: req.body.myTheme + "ОТ " + req.body.MyName, // Subject line
+        text:  req.body.message + "["+req.body.myEmail+"]", // plain text body
+        // html: SHABLON_MESSAGE // html body
+    };
 
+  // let ml = new mailOptions("message.from.the.site.lm@gmail.com", "lm.store.shop@gmail.com", req.body.myTheme, SHABLON_MESSAGE + "]");
+  transporter.sendMail(mailOptions, function (error, info) {
+    res.send({code:500, msg: "Сообщение отправлено"});
   });
 });
 
