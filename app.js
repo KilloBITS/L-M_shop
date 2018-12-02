@@ -9,11 +9,19 @@ const fs = require('fs');
 const mongoClient = require("mongodb").MongoClient;
 const request = require("request");
 const app = express();
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
 
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    store: new MongoStore({
+        url: 'mongodb://localhost:27017/LM_SHOP'
+    }),
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
+    }
 }));
 //project libs use
 app.use(bParser.urlencoded({limit: '50mb'}));
@@ -49,6 +57,14 @@ app.use('/setNumbers*', setNumbers);
 app.use('/delivery*', delivery);
 app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
+app.get('/logout', function(req, res) {
+    // req.logout();
+    // req.session = null;
+    req.session.destroy(function(err) {
+      // cannot access session here
+    })
+    res.redirect('/');
+});
 
 const panel = require('./routes/admin/panel');
 app.use('/panel', panel);
@@ -157,15 +173,42 @@ app.listen(4111, function(){
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
-
-  mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
-    const db = client.db(global.baseName);
-    const tovar  = db.collection("tovar");
-    if(err) return console.log(err);
-
-  });
+});
 
 
+const TelegramBot = require('node-telegram-bot-api');
 
+// replace the value below with the Telegram token you receive from @BotFather
+const token = '787774114:AAFy7_6RBnbwPJqJjaDG7t08-Ih_54ns1PQ';
+
+// Create a bot that uses 'polling' to fetch new updates
+const botTelega = new TelegramBot(token, {polling: true});
+
+// Matches "/echo [whatever]"
+botTelega.onText(/\/echo (.+)/, (msg, match) => {
+  // 'msg' is the received Message from Telegram
+  // 'match' is the result of executing the regexp above on the text content
+  // of the message
+
+  const chatId = msg.chat.id;
+  const resp = match[1]; // the captured "whatever"
+
+  // send back the matched "whatever" to the chat
+  botTelega.sendMessage(chatId, resp);
+});
+
+// Listen for any kind of message. There are different kinds of
+// messages.
+botTelega.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  console.log(msg.text)
+
+  switch(msg.text){
+    case '/getparcelstatus': botTelega.sendMessage(chatId, 'ыыыы') ;break;
+    case '/getmyparcel':  botTelega.sendMessage(chatId, 'ыыыы') ;break;
+    case '/start':  botTelega.sendMessage(chatId, 'Здравствуйте! Вас приветствует бот Lady & Man Shop.\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы') ;break;
+    default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
+  }
+  // send a message to the chat acknowledging receipt of their message
 
 });

@@ -1687,6 +1687,7 @@ color: red;
   background-repeat: no-repeat;
   background-position: right bottom;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .desires_box{
