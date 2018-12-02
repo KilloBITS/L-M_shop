@@ -5266,7 +5266,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .form-group {
     margin-bottom: 15px;
-    position: relative;
+    /* position: relative; */
 }
 
 #tSaleEnabled{
@@ -5537,5 +5537,5 @@ table.text-center, table.text-center td, table.text-center th {
 
 .form-group {
     margin-bottom: 0px;
-    position: relative;
+    /* position: relative; */
 }
