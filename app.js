@@ -11,7 +11,7 @@ const request = require("request");
 const app = express();
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
-require('./controllers/telegram/telegaBOT');
+
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
     resave: true,
@@ -172,5 +172,7 @@ app.listen(4111, function(){
   global.baseName = 'LM_SHOP';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
+  
+  require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
 });
