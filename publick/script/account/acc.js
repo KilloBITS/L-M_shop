@@ -3,6 +3,7 @@ var USER = {
   ML: "",
   GLOBAL_FILE: '',
   DESIGHN: function() {
+
     $(".uploadAva").click(function(){
       $("#tFile").click();
     });

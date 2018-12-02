@@ -4,6 +4,7 @@ const router = express.Router();
 const btoa = require('btoa');
 const sha1 = require('sha1');
 const mongoClient = require("mongodb").MongoClient;
+const TelegramBot = require('node-telegram-bot-api');
 // const url = "mongodb://localhost:27017/"; //url from mongoDB dataBase
 function makeid() {
   var text = "";
@@ -13,6 +14,17 @@ function makeid() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return text;
+}
+
+var adminIDs = [404616351, 602865793];
+var SendToTelega = function(ZAKAZ_TO_TELEGA){
+  const token = '787774114:AAFy7_6RBnbwPJqJjaDG7t08-Ih_54ns1PQ';
+  const botTelega = new TelegramBot(token, {polling: true});
+  var dataTelPay = 'Новый заказ!\n\nНомер телефона: '+ZAKAZ_TO_TELEGA.number+'\nID Заказа: '+ZAKAZ_TO_TELEGA.id+'\nФИО заказчика'+ZAKAZ_TO_TELEGA.FIO+'\nДата заказа: '+ZAKAZ_TO_TELEGA.today+'\nСумма заказа: '+ZAKAZ_TO_TELEGA.summa+'\nПолучено бонусов: '+ZAKAZ_TO_TELEGA.bonus+'\nТип оплаты: '+ZAKAZ_TO_TELEGA.PAYS+'\nСтатус заказа: '+'Новый'+'\nПосмотреть чек заказа: '+ 'http://ladyman.club/delivery?'+ZAKAZ_TO_TELEGA.id;
+
+  for(let i = 0; i < adminIDs.length; i++){
+      botTelega.sendMessage(adminIDs[i], dataTelPay);
+  }
 }
 
 router.get('/', function(req, res, next){
@@ -49,10 +61,11 @@ router.get('/', function(req, res, next){
           users.update( { email: req.session.user }, { $set : { LM_COIN: curCoin } });
         });
       });
-      
+
     }
   }
 
+  // var ZAKAZ_TO_TELEGA = null;
   if(parseInt(req.query.oplatatype) === 0)
   { //если оплата налом
     mongoClient.connect(global.baseIP, function(err, client){
@@ -89,7 +102,7 @@ router.get('/', function(req, res, next){
              NEW_ZAKAZ.today = today;
              NEW_ZAKAZ.summa = sum;
              NEW_ZAKAZ.bonus = lmCoin;
-             NEW_ZAKAZ.PAYS = 'Оплата при получении';
+             NEW_ZAKAZ.PAYS = 'Оплата картой';
              NEW_ZAKAZ.status = 0;
              NEW_ZAKAZ.TTH = null;
              NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
@@ -118,7 +131,8 @@ router.get('/', function(req, res, next){
                  users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
                });
              }
-
+             SendToTelega(NEW_ZAKAZ);
+             // ZAKAZ_TO_TELEGA = NEW_ZAKAZ;
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{
              res.render('close.ejs',{
@@ -196,6 +210,7 @@ router.get('/', function(req, res, next){
                });
              }
 
+             SendToTelega(NEW_ZAKAZ);
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{
              res.render('close.ejs',{
