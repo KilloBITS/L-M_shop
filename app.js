@@ -204,8 +204,8 @@ botTelega.on('message', (msg) => {
   console.log(msg.text)
 
   switch(msg.text){
-    case '/getparcelstatus': botTelega.sendMessage(chatId, 'ыыыы') ;break;
-    case '/getmyparcel':  botTelega.sendMessage(chatId, 'ыыыы') ;break;
+    case '/getparcelstatus': botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(') ;break;
+    case '/getmyparcel':  botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(') ;break;
     case '/start':  botTelega.sendMessage(chatId, 'Здравствуйте! Вас приветствует бот Lady & Man Shop.\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы') ;break;
     default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
   }
