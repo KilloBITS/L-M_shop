@@ -65,9 +65,13 @@ router.get('/*', function(req, res, next){
                     banners.find().toArray(function(err, banner ){
                       tovar.find( FILTER ).sort( { AI: 1 } ).toArray(function(err, results_tovar ){
 
-                        console.log(results_tovar.length);
-                        console.log(results_tovar.slice(otTovar, doTovar).length);
-
+                        // console.log(results_tovar.length);
+                        // console.log(results_tovar.slice(otTovar, doTovar).length);
+                        if(results_tovar.length < 18){
+                          var arrayOfTovars = results_tovar.slice(otTovar, doTovar);
+                        }else{
+                          var arrayOfTovars = results_tovar;
+                        }
 
                         var current_page = page;
                         var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length-1});
@@ -76,7 +80,7 @@ router.get('/*', function(req, res, next){
                         res.render('tovar.ejs',{
                           conf: results_config[languageSystem],
                           menu: results_menu,
-                          tovarArr: results_tovar.slice(otTovar, doTovar),
+                          tovarArr: arrayOfTovars,
                           title: results_titles_page[languageSystem].tovar,
                           sessionUser: req.session.user,
                           users_data: uSession,
