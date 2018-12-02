@@ -22,7 +22,7 @@ router.get('/*', function(req, res, next){
       var otTovar = 0;
       var doTovar = 18;
     }else{
-      var otTovar = 18 * parseInt(page)-1;
+      var otTovar = 18 * (parseInt(page)-1);
       var doTovar = otTovar + 18;
     }
 
@@ -64,6 +64,11 @@ router.get('/*', function(req, res, next){
 
                     banners.find().toArray(function(err, banner ){
                       tovar.find( FILTER ).sort( { AI: 1 } ).toArray(function(err, results_tovar ){
+
+                        console.log(results_tovar.length);
+                        console.log(results_tovar.slice(otTovar, doTovar).length);
+
+
                         var current_page = page;
                         var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length-1});
                         var p = paginator.getPaginationData();
