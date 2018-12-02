@@ -8,9 +8,9 @@ var Index = {
       $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
     });
 
-    // if($(window).width() < 800){
+    if($(window).width() < 800){
       $(".header").height($(window).height() - 50 + 'px')
-    // }
+    }
 
 
     $(".searchBlock").hover(function() {
