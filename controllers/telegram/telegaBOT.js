@@ -33,9 +33,3 @@ botTelega.on('message', (msg) => {
   }
   // send a message to the chat acknowledging receipt of their message
 });
-
-//404616351
-//'Новый заказ!\n\nНомер телефона: '+NEW_ZAKAZ.number+'\nID Заказа: '+NEW_ZAKAZ.id+'\nФИО заказчика'+NEW_ZAKAZ.FIO+'\nДата заказа: '+NEW_ZAKAZ.today+'\nСумма заказа: '+NEW_ZAKAZ.summa+'\nПолучено бонусов: '+NEW_ZAKAZ.bonus+'\nТип оплаты: '+NEW_ZAKAZ.PAYS+'\nСтатус заказа: '+'Новый'+'\nПосмотреть чек заказа: '+ 'http://ladyman.club/delivery?'+NEW_ZAKAZ.id
-var payment = function(id, data){
-  botTelega.sendMessage(id, data);
-}
