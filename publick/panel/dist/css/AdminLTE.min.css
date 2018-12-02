@@ -5534,3 +5534,8 @@ table.text-center, table.text-center td, table.text-center th {
   background-position: center;
   border-radius: 0 0 0 10px;
 }
+
+.form-group {
+    margin-bottom: 0px;
+    position: relative;
+}
