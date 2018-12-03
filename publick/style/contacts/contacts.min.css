@@ -1,12 +1,19 @@
-@font-face {
-    font-family: 'Didact Gothic';
-    src: url('../DidactGothic.ttf');
-}
-
-@media screen and (max-width: 936px) {
-  .menuBTN {
-    font-size: 14px;
+@media screen and (max-width: 800px) {
+  .block_left, .block_right {
+      display: inline-grid;
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 20px;
+      text-align: center;
   }
+  .block_left {
+    text-align: center;
+  }
+  .LBB {
+    display: none;
+  }
+
+
 }
 @media screen and (max-width: 800px) {
   body{
@@ -105,7 +112,7 @@
   form {
       max-width: 600px;
       text-align: center;
-      margin: 0px auto 0px;
+      margin: 0px auto 20px;
   }
 
   .hamburger-menu.animate {

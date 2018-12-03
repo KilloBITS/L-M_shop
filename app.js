@@ -44,6 +44,7 @@ const setNumbers = require('./controllers/controllerSetNumbers');
 const delivery = require('./routes/getDelivery');
 const termsofuse = require('./routes/getTermsofuse');
 const pp = require('./routes/getPrivacyPolicy');
+const dap = require('./routes/getDAP');
 
 app.use('/', index);
 app.use('/shop*', tovar);
@@ -57,6 +58,7 @@ app.use('/setNumbers*', setNumbers);
 app.use('/delivery*', delivery);
 app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
+app.use('/discounts-and-promotions', dap);
 app.get('/logout', function(req, res) {
     // req.logout();
     // req.session = null;
@@ -103,6 +105,9 @@ app.post('/addToJelaniya', addToJelaniya);
 
 const counters = require('./controllers/controllerCounters');
 app.post('/counters', counters);
+
+const stock = require('./controllers/controllerStock');
+app.post('/getStock', stock);
 /*ADMIN*/
 //парсим админа
 const parseAdmin = require('./controllers/admin/controllerIsAdmin');

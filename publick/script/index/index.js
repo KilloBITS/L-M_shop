@@ -1,4 +1,3 @@
-
 'use strict';
 var Index = {
   ML: "",
@@ -212,12 +211,6 @@ $(document).ready(function() {
   Index.INIT();
 });
 
-
-
-/*
- 2017 Julian Garnier
- Released under the MIT license
-*/
 setTimeout(function(){
   $(function(){
   $('.carousel-item').eq(0).addClass('active');
@@ -243,16 +236,14 @@ setTimeout(function(){
       slide=total - 1;
       current=total - 1;
     }
-           $('.carousel-item').eq(prev).removeClass('active');
-           $('.carousel-item').eq(slide).addClass('active');
-      setTimeout(function(){
-
-      },800);
-
-
-
-    console.log('current '+current);
-    console.log('prev '+prev);
+   $('.carousel-item').eq(prev).removeClass('active');
+   $('.carousel-item').eq(slide).addClass('active');
   }
 });
 },1000);
+
+var getStockFunc = function(id){
+  $.post('/getStock',{num: id},(res) => {
+    console.log(res);
+  });
+}

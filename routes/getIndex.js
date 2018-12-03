@@ -50,7 +50,7 @@ router.get('/', function(req, res, next){
        titles_page.find().toArray(function(err, results_titles_page){
          config.find().toArray(function(err, results_config){
            if(results_config[languageSystem].opens){
-             menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
+             menu.find().sort({ index: 1 }).toArray(function(err, results_menu ){
                slider.find().toArray(function(err, results_slider ){
                  news.find().toArray(function(err, results_news ){
                   tovar.aggregate([{$sample: {size: 12}}]).toArray(function(err, results_recTovar) {
@@ -61,7 +61,7 @@ router.get('/', function(req, res, next){
                           var geo = geoip.lookup(ipuser);
                         } catch(e){
                           var ipuser = 'Не удалось определить юзера';
-                          var geo = 'Не удалось определить юзера';
+                          var geo = 'Не удалось определить локацию';
                         }
 
 
