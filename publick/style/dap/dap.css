@@ -1,7 +1,158 @@
+.stock_container{
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.stock_block{
+  width: calc(50% - 12px);
+  background-size: cover;
+  background: #fff5f5;
+  display: inline-block;
+  margin: 5px;
+  /* border: 1px solid rgba(255, 0, 0, 0.16); */
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px 1px #ff00bf;
+  position: relative;
+  height: 115px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.bigBonus{
+  width: calc(100% - 10px);
+  height: 246px;
+}
+
+.stock_block:hover .promo{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.stock_name{
+  font-size: 55px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 22px;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.stock_name span{
+  font-size: 14px;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  color: white;
+  z-index: 10;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.stock_name h2{
+  margin: 0;
+  text-shadow: 1px 1px 12px black;
+  color: white;
+  z-index: 10;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.timeOfUse_stock{
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  right: 12px;
+  font-size: 30px;
+  z-index: 10;
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.timeOfUse_stock b{
+  text-shadow: 1px 1px 1px #000000;
+  z-index: 10;
+}
+
+.timeOfUse_stock time{
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  top: -20px;
+  z-index: 10;
+}
+
+.promo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 1;
+  opacity: 0;
+}
+
+.details_stock{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.27);
+  color: white;
+  z-index: 10;
+}
+
+.details{
+  display: none;
+}
+
+.bant{
+  background-image: url(http://pngimg.com/uploads/bow/bow_PNG10095.png);
+  position: absolute;
+  width: 124px;
+  height: 100px;
+  background-size: contain;
+  z-index: 10;
+  transform: rotate(-45deg);
+  left: -40px;
+  top: -25px;
+}
+
+.bigBonus .stock_name{
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bigBonus .stock_name span{
+    font-size: 19px;
+}
+
 .stock{
   background: #ffffff;
   width: 100%;
   padding-top: 30px;
+}
+
+.Promotion_Rules{
+padding-bottom: 25px;
+}
+
+.line{
+  max-width: 1024px;
+      margin: auto;
+      width: 100%;
+      font-size: 19px;
+}
+
+.center{
+font-size: 24px;
+}
+.pod{
+    padding-left: 16px;
 }
 
 .blog-slider {
@@ -266,4 +417,94 @@
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
    right: 70px;
    left: auto;
+}
+
+
+
+/****/
+@media screen and (max-width: 800px) {
+  .mainTitleDLG, .mainTextDLG {
+    padding-bottom: 0px;
+  }
+
+  .Promotion_Rules {
+    padding: 13px;
+    padding-bottom: 25px;
+  }
+  .timeOfUse_stock {
+    top: auto;
+    bottom: 10px;
+    right: 6px;
+    font-size: 18px;
+  }
+  .stock_name {
+    font-size: 40px;
+    top: 40px;
+    transform: translate(0, -50%);
+    left: 12px;
+  }
+  .bigBonus .stock_name {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    line-height: 31px;
+    text-align: center;
+  }
+  .bigBonus .stock_name span {
+    font-size: 43px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 0);
+    bottom: -98px;
+    top: auto;
+    text-shadow: 0px 0px 20px wheat;
+    /* width: 100%; */
+    background: #282932;
+  }
+
+  .stock_block {
+    width: calc(100% - 10px);
+  }
+.siteMap {
+    height: auto;
+}
+.mapmap {
+    height: auto;
+}
+.LBB, .CBB, .RBB {
+    width: 100%;
+    display: inline-block;
+}
+.RBB {
+    float: initial;
+    text-align: center;
+}
+.LBB {
+    display: none;
+}
+.mainTextDLG{
+  font-size: 16px;
+}
+.punktMapMenu {
+    width: 48%;
+    display: inherit;
+    text-align: center;
+    border-bottom:0;
+}
+.adressLineMap {
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    min-width: 0;
+    margin: 0 auto;
+}
+.container .column {
+    width: 100%;
+    padding: 0 8px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
 }

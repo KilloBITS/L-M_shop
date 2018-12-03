@@ -30,7 +30,7 @@ router.get('/', function(req, res, next){
      titles_page.find().toArray(function(err, results_titles_page){
        config.find().toArray(function(err, results_config){
          if(results_config[languageSystem].opens){
-           menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu ){
+           menu.find().sort({ index: 1 }).toArray(function(err, results_menu ){
              res.render('terms_of_use.ejs',{
                conf: results_config[languageSystem],
                menu: results_menu,

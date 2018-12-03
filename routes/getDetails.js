@@ -23,7 +23,7 @@ router.get('/*', function(req, res, next) {
 
     config.find().toArray(function(err, results_config) {
       if (results_config[languageSystem].opens) {
-        menu.find().sort({ isEnded: 1 }).toArray(function(err, results_menu) {
+        menu.find().sort({ index: 1 }).toArray(function(err, results_menu) {
           tovar.find({ AI: parseInt(searchData[0]), types: searchData[1] }).toArray(function(err, results_tovar) {
             console.log(searchData[0])
             console.log(results_tovar)
