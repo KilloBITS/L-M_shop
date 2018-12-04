@@ -1,4 +1,27 @@
+var ML = "";
 $(document).ready(function(){
+
+      $(".menuBTN").hover(function() {
+        try {
+          $("." + ML + ",.opensMenu").hide();
+        } catch (e) {
+          console.warn('Есть небольшой конфликт, но это не критично')
+        }
+          ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+          if (ML != undefined) {
+            $("." + ML + ",.opensMenu").show();
+          }
+
+
+
+      }, function(e) {
+        ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+        $(".opensMenu").hover(function() {}, function(e) {
+          $("." + ML + ",.opensMenu").hide();
+        });
+      });
+
+
     $modal = $('.modal-frame');
     $overlay = $('.modal-overlay');
 
@@ -283,15 +306,14 @@ function anim(){
 	webgl.draw( gl.LINES );
 }
 anim();
-// 
-// window.addEventListener( 'resize', function(){
 //
-// 	w = c.width = window.innerWidth;
-// 	h = c.height = window.innerHeight;
-//
-// 	gl.viewport( 0, 0, w, h );
-// 	gl.uniform2f( webgl.resUniformLoc, w, h );
-// })
+window.addEventListener('resize', function() {
+  w = c.width = $(".bigBonus:eq(0)").width()
+  h = c.height = $(".bigBonus:eq(0)").height()
+
+  gl.viewport(0, 0, w, h);
+  gl.uniform2f(webgl.resUniformLoc, w, h);
+})
 window.addEventListener( 'click', function( e ){
 	var firework = new Firework();
 	firework.x = e.clientX;

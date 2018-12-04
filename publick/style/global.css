@@ -360,13 +360,9 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 }
 
 .content {
-    /* max-width: 1024px; */
     width: 100%;
     margin: auto;
     background: white;
-    /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); */
-    border-left: 2px solid #ffc9df;
-    border-right: 2px solid #ffc9df;
 }
 
 
