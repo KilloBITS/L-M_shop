@@ -89,6 +89,10 @@ $(document).ready(function() {
     $(".spn_hol").css({"transform": "scale(5)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
   }, 1500);
 
+});
+
+
+
 function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {
   var iconMap = {
     info: "fa fa-info-circle",
