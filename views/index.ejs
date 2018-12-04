@@ -14,14 +14,10 @@
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
-
-  <!-- <link rel="stylesheet" type="text/css" href="/style/green.css"> -->
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/index/style.css">
   <link rel="stylesheet" type="text/css" href="/style/index/style.min.css">
-
 
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
@@ -30,11 +26,8 @@
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
 	<script type="text/javascript" src="/script/TweenMax.min.js"></script>
   <script type="text/javascript" src="/script/global.js"></script>
-
-  <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/5317d67d660658b254000454/js/webflow.js?2f83b8326cc4c8f7327b5dba30444a37"></script>
-
+  <script type="text/javascript" src="/script/webflow.js"></script>
 	<script type="text/javascript" src="script/index/index.js"></script>
-
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -57,10 +50,8 @@
     <div class="effect" id="leaves">
       <script type="text/javascript">
         var falling = true;
-
         var total = 30;
         var container = document.getElementById("leaves"),	w = window.innerWidth , h = window.innerHeight;
-
         for (i=0; i<total; i++){
          var Div = document.createElement('div');
          TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});

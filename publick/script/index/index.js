@@ -11,7 +11,6 @@ var Index = {
       $(".header").height($(window).height() - 50 + 'px')
     }
 
-
     $(".searchBlock").hover(function() {
       $(".searchLine").css({
         "width": "170px"

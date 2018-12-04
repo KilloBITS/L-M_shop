@@ -1,4 +1,4 @@
-
+'use strict';
 var Global = {
   changeTypeDost: function(t){
     $("#CityOfDost,#CityOfPostNP,#CityOfPostUl,#CityOfPostD,#CityOfPostK").fadeOut(130)
