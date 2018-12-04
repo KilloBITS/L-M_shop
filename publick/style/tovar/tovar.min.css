@@ -252,6 +252,7 @@
     min-width: 100%;
     max-height: none;
     float: inherit;
+    min-height: 300px;
   }
 
   .item.grid-group-item .caption {
