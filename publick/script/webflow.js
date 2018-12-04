@@ -8,9 +8,8 @@
  * ----------------------------------------------------------------------
  */
 
-if ( typeof noGlobal === strundefined ) {
-    window.jQuery = window.$ = jQuery;
-}
+window.jQuery = window.$ = jQuery;
+
 
 var Webflow = {
   w: Webflow

@@ -249,6 +249,8 @@
   {
     margin-right: 10px;
     margin: auto;
+    min-width: 100%;
+    max-height: none;
     float: inherit;
   }
 
