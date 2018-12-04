@@ -1,5 +1,7 @@
 'use strict';
 var BASKET = [];
+var toPage;
+
 
 var Index = {
    UPDATE_BASCET: function(){
