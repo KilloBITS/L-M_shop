@@ -89,25 +89,6 @@ $(document).ready(function() {
     $(".spn_hol").css({"transform": "scale(5)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
   }, 1500);
 
-  new Promise(function(resolve, reject) {
-      const permissionResult = Notification.requestPermission(function(result) {
-        // Поддержка устаревшей версии с функцией обратного вызова.
-        resolve(result);
-      });
-
-      if (permissionResult) {
-        permissionResult.then(resolve, reject);
-      }
-    })
-    .then(function(permissionResult) {
-      if (permissionResult !== 'granted') {
-        throw new Error('Permission not granted.');
-      }
-    });
-});
-
-
-
 function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {
   var iconMap = {
     info: "fa fa-info-circle",
