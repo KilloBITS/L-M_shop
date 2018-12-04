@@ -283,15 +283,15 @@ function anim(){
 	webgl.draw( gl.LINES );
 }
 anim();
-
-window.addEventListener( 'resize', function(){
-
-	w = c.width = window.innerWidth;
-	h = c.height = window.innerHeight;
-
-	gl.viewport( 0, 0, w, h );
-	gl.uniform2f( webgl.resUniformLoc, w, h );
-})
+// 
+// window.addEventListener( 'resize', function(){
+//
+// 	w = c.width = window.innerWidth;
+// 	h = c.height = window.innerHeight;
+//
+// 	gl.viewport( 0, 0, w, h );
+// 	gl.uniform2f( webgl.resUniformLoc, w, h );
+// })
 window.addEventListener( 'click', function( e ){
 	var firework = new Firework();
 	firework.x = e.clientX;
