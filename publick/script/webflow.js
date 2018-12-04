@@ -1282,7 +1282,12 @@ window.tram = function(a) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], a)
   } else if (typeof exports === 'object') {
-    module.exports = a(require('jquery'))
+    try {
+      module.exports = a(require('jquery'))
+    } catch (e) {
+      console.log(e);
+    }
+
   } else {
     a(jQuery)
   }
