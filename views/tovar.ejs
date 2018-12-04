@@ -119,8 +119,8 @@
         <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
           <a href="/details?tov=<%= tovarArr[i].AI %>&<%= tovarArr[i].types %>">
-          <div class="item  col-xs-4 col-lg-4 grid-group-item" data-ix="fade-in-heading">
-              <div class="thumbnail">
+          <div class="item  col-xs-4 col-lg-4 grid-group-item">
+              <div class="thumbnail" data-ix="scale-on-scroll">
                 <div class="vendor"><%= tovarArr[i].vendorCode %></div>
                 <div class="isView"></div>
                 <% if(isAdm){ %>
