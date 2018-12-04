@@ -1,133 +1,305 @@
 $(document).ready(function(){
-  var swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade', //flip
-    // direction: 'horizontal',
-    loop: false,
-    mousewheel: {
-      invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-      el: '.blog-slider__pagination',
-      clickable: true,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+    $modal = $('.modal-frame');
+    $overlay = $('.modal-overlay');
+
+    /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+      if($modal.hasClass('state-leave')) {
+        $modal.removeClass('state-leave');
+      }
+    });
+
+    $('.close').on('click', function(){
+      $overlay.removeClass('state-show');
+      $modal.removeClass('state-appear').addClass('state-leave');
+    });
+
+    $('.open').on('click', function(){
+      var index = $(".open").index(this);
+      // switch(index){
+      //
+      // }
+      $('.phone').hide();
+      $('.phone,.modealData').hide();
+
+      if(index === 1){
+          $('.phone').show();
+      }
+      $('.modealData:eq('+index+')').show();
+      $overlay.addClass('state-show');
+      $modal.removeClass('state-leave').addClass('state-appear');
+    });
+
+
+    var gl = c.getContext( 'webgl', { preserveDrawingBuffer: true } )
+	,	w = c.width = $(".bigBonus:eq(0)").width()
+	,	h = c.height = $(".bigBonus:eq(0)").height()
+
+	,	webgl = {}
+	,	opts = {
+		projectileAlpha: .8,
+		projectileLineWidth: 1.3,
+		fireworkAngleSpan: .5,
+		baseFireworkVel: 3,
+		addedFireworkVel: 3,
+		gravity: .03,
+		lowVelBoundary: -.2,
+		xFriction: .995,
+		baseShardVel: 1,
+		addedShardVel: .2,
+		fireworks: 1000,
+		baseShardsParFirework: 10,
+		addedShardsParFirework: 10,
+		shardFireworkVelMultiplier: .3,
+		initHueMultiplier: 1/360,
+		runHueAdder: .1/360
+	}
+
+webgl.vertexShaderSource = `
+uniform int u_mode;
+uniform vec2 u_res;
+attribute vec4 a_data;
+varying vec4 v_color;
+
+vec3 h2rgb( float h ){
+	return clamp( abs( mod( h * 6. + vec3( 0, 4, 2 ), 6. ) - 3. ) -1., 0., 1. );
+}
+void clear(){
+	gl_Position = vec4( a_data.xy, 0, 1 );
+	v_color = vec4( 0, 0, 0, a_data.w );
+}
+void draw(){
+	gl_Position = vec4( vec2( 1, -1 ) * ( ( a_data.xy / u_res ) * 2. - 1. ), 0, 1 );
+	v_color = vec4( h2rgb( a_data.z ), a_data.w );
+}
+void main(){
+	if( u_mode == 0 )
+		draw();
+	else
+		clear();
+}
+`;
+webgl.fragmentShaderSource = `
+precision mediump float;
+varying vec4 v_color;
+
+void main(){
+	gl_FragColor = v_color;
+}
+`;
+
+webgl.vertexShader = gl.createShader( gl.VERTEX_SHADER );
+gl.shaderSource( webgl.vertexShader, webgl.vertexShaderSource );
+gl.compileShader( webgl.vertexShader );
+
+webgl.fragmentShader = gl.createShader( gl.FRAGMENT_SHADER );
+gl.shaderSource( webgl.fragmentShader, webgl.fragmentShaderSource );
+gl.compileShader( webgl.fragmentShader );
+
+webgl.shaderProgram = gl.createProgram();
+gl.attachShader( webgl.shaderProgram, webgl.vertexShader );
+gl.attachShader( webgl.shaderProgram, webgl.fragmentShader );
+
+gl.linkProgram( webgl.shaderProgram );
+gl.useProgram( webgl.shaderProgram );
+
+webgl.dataAttribLoc = gl.getAttribLocation( webgl.shaderProgram, 'a_data' );
+webgl.dataBuffer = gl.createBuffer();
+
+gl.enableVertexAttribArray( webgl.dataAttribLoc );
+gl.bindBuffer( gl.ARRAY_BUFFER, webgl.dataBuffer );
+gl.vertexAttribPointer( webgl.dataAttribLoc, 4, gl.FLOAT, false, 0, 0 );
+
+webgl.resUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_res' );
+webgl.modeUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_mode' );
+
+gl.viewport( 0, 0, w, h );
+gl.uniform2f( webgl.resUniformLoc, w, h );
+
+gl.blendFunc( gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA );
+gl.enable( gl.BLEND );
+
+gl.lineWidth( opts.projectileLineWidth );
+
+webgl.data = [];
+
+webgl.clear = function(){
+
+	gl.uniform1i( webgl.modeUniformLoc, 1 );
+	var a = .1;
+	webgl.data = [
+		-1, -1, 0, a,
+		 1, -1, 0, a,
+		-1,  1, 0, a,
+		-1,  1, 0, a,
+		 1, -1, 0, a,
+		 1,  1, 0, a
+	];
+	webgl.draw( gl.TRIANGLES );
+	gl.uniform1i( webgl.modeUniformLoc, 0 );
+	webgl.data.length = 0;
+}
+webgl.draw = function( glType ){
+
+	gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( webgl.data ), gl.STATIC_DRAW );
+	gl.drawArrays( glType, 0, webgl.data.length / 4 );
+}
+
+var	fireworks = []
+	,	tick = 0
+	,	sins = []
+	,	coss = []
+	,	maxShardsParFirework = opts.baseShardsParFirework + opts.addedShardsParFirework
+	,	tau = 6.283185307179586476925286766559;
+
+for( var i = 0; i < maxShardsParFirework; ++i ){
+	sins[ i ] = Math.sin( tau * i / maxShardsParFirework );
+	coss[ i ] = Math.cos( tau * i / maxShardsParFirework );
+}
+
+function Firework(){
+	this.reset();
+	this.shards = [];
+	for( var i = 0; i < maxShardsParFirework; ++i )
+		this.shards.push( new Shard( this ) );
+}
+Firework.prototype.reset = function(){
+
+	var angle = -Math.PI / 2 + ( Math.random() - .5 )* opts.fireworkAngleSpan
+		,	vel = opts.baseFireworkVel + opts.addedFireworkVel * Math.random();
+
+	this.mode = 0;
+	this.vx = vel * Math.cos( angle );
+	this.vy = vel * Math.sin( angle );
+
+	this.x = Math.random() * w;
+	this.y = h;
+
+	this.hue = tick * opts.initHueMultiplier;
+
+}
+Firework.prototype.step = function(){
+
+	if( this.mode === 0 ){
+
+		var ph = this.hue
+			,	px = this.x
+			,	py = this.y;
+
+		this.hue += opts.runHueAdder;
+
+		this.x += this.vx *= opts.xFriction;
+		this.y += this.vy += opts.gravity;
+
+		webgl.data.push(
+			px, py, ph, opts.projectileAlpha * .2,
+			this.x, this.y, this.hue, opts.projectileAlpha * .2 );
+
+		if( this.vy >= opts.lowVelBoundary ){
+			this.mode = 1;
+
+			this.shardAmount = opts.baseShardsParFirework + opts.addedShardsParFirework * Math.random() | 0;
+
+			var baseAngle = Math.random() * tau
+				,	x = Math.cos( baseAngle )
+				,	y = Math.sin( baseAngle )
+				,	sin = sins[ this.shardAmount ]
+				,	cos = coss[ this.shardAmount ];
+
+			for( var i = 0; i < this.shardAmount; ++i ){
+
+				var vel = opts.baseShardVel + opts.addedShardVel * Math.random();
+				this.shards[ i ].reset( x * vel, y * vel )
+				var X = x;
+				x = x * cos - y * sin;
+				y = y * cos + X * sin;
+			}
+		}
+
+	} else if( this.mode === 1 ) {
+
+		this.ph = this.hue
+		this.hue += opts.runHueAdder;
+
+		var allDead = true;
+		for( var i = 0; i < this.shardAmount; ++i ){
+			var shard = this.shards[ i ];
+			if( !shard.dead ){
+				shard.step();
+				allDead = false;
+			}
+		}
+
+		if( allDead )
+			this.reset();
+	}
+
+}
+function Shard( parent ){
+	this.parent = parent;
+}
+Shard.prototype.reset = function( vx, vy ){
+	this.x = this.parent.x;
+	this.y = this.parent.y;
+	this.vx = this.parent.vx * opts.shardFireworkVelMultiplier + vx;
+	this.vy = this.parent.vy * opts.shardFireworkVelMultiplier + vy;
+	this.starty = this.y;
+	this.dead = false;
+	this.tick = 1;
+}
+Shard.prototype.step = function(){
+
+	this.tick += .05;
+
+	var px = this.x
+		,	py = this.y;
+
+	this.x += this.vx *= opts.xFriction;
+	this.y += this.vy += opts.gravity;
+
+	var proportion = 1 - ( this.y - this.starty ) / ( h - this.starty );
+
+	webgl.data.push(
+		px, py, this.parent.ph, opts.projectileAlpha / this.tick,
+		this.x, this.y, this.parent.hue, opts.projectileAlpha / this.tick );
+
+	if( this.y > h )
+		this.dead = true;
+}
+
+function anim(){
+
+	window.requestAnimationFrame( anim )
+
+	webgl.clear();
+
+	++tick;
+
+	if( fireworks.length < opts.fireworks )
+		fireworks.push( new Firework );
+
+	fireworks.map( function( firework ){ firework.step(); } );
+
+	webgl.draw( gl.LINES );
+}
+anim();
+
+window.addEventListener( 'resize', function(){
+
+	w = c.width = window.innerWidth;
+	h = c.height = window.innerHeight;
+
+	gl.viewport( 0, 0, w, h );
+	gl.uniform2f( webgl.resUniformLoc, w, h );
+})
+window.addEventListener( 'click', function( e ){
+	var firework = new Firework();
+	firework.x = e.clientX;
+	firework.y = e.clientY;
+	firework.vx = 0;
+	firework.vy = 0;
+	fireworks.push( firework );
 });
 
 
-jQuery(document).ready(function(){
-
-
-	var modalTriggerBts = $('a[data-type="cd-modal-trigger"]'),
-		coverLayer = $('.cd-cover-layer');
-
-	var duration = 600,
-		epsilon = (1000 / 60 / duration) / 4,
-		firstCustomMinaAnimation = bezier(.63,.35,.48,.92, epsilon);
-
-	modalTriggerBts.each(function(){
-		initModal($(this));
-	});
-
-	function initModal(modalTrigger) {
-		var modalTriggerId =  modalTrigger.attr('id'),
-			modal = $('.cd-modal[data-modal="'+ modalTriggerId +'"]'),
-			svgCoverLayer = modal.children('.cd-svg-bg'),
-			paths = svgCoverLayer.find('path'),
-			pathsArray = [];
-		//存储Snap对象
-		pathsArray[0] = Snap('#'+paths.eq(0).attr('id')),
-		pathsArray[1] = Snap('#'+paths.eq(1).attr('id')),
-		pathsArray[2] = Snap('#'+paths.eq(2).attr('id'));
-
-		//存储路径'd'属性值
-		var pathSteps = [];
-		pathSteps[0] = svgCoverLayer.data('step1');
-		pathSteps[1] = svgCoverLayer.data('step2');
-		pathSteps[2] = svgCoverLayer.data('step3');
-		pathSteps[3] = svgCoverLayer.data('step4');
-		pathSteps[4] = svgCoverLayer.data('step5');
-		pathSteps[5] = svgCoverLayer.data('step6');
-
-		//打开模态窗口
-		modalTrigger.on('click', function(event){
-			event.preventDefault();
-			modal.addClass('modal-is-visible');
-			coverLayer.addClass('modal-is-visible');
-			animateModal(pathsArray, pathSteps, duration, 'open');
-		});
-
-		//关闭模态窗口
-		modal.on('click', '.modal-close', function(event){
-			event.preventDefault();
-			modal.removeClass('modal-is-visible');
-			coverLayer.removeClass('modal-is-visible');
-			animateModal(pathsArray, pathSteps, duration, 'close');
-		});
-	}
-
-	function animateModal(paths, pathSteps, duration, animationType) {
-		var path1 = ( animationType == 'open' ) ? pathSteps[1] : pathSteps[0],
-			path2 = ( animationType == 'open' ) ? pathSteps[3] : pathSteps[2],
-			path3 = ( animationType == 'open' ) ? pathSteps[5] : pathSteps[4];
-		paths[0].animate({'d': path1}, duration, firstCustomMinaAnimation);
-		paths[1].animate({'d': path2}, duration, firstCustomMinaAnimation);
-		paths[2].animate({'d': path3}, duration, firstCustomMinaAnimation);
-	}
-
-	function bezier(x1, y1, x2, y2, epsilon){
-		//https://github.com/arian/cubic-bezier
-		var curveX = function(t){
-			var v = 1 - t;
-			return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
-		};
-
-		var curveY = function(t){
-			var v = 1 - t;
-			return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
-		};
-
-		var derivativeCurveX = function(t){
-			var v = 1 - t;
-			return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
-		};
-
-		return function(t){
-
-			var x = t, t0, t1, t2, x2, d2, i;
-
-			// 首先尝试牛顿方法的几次迭代 - 通常非常快。
-			for (t2 = x, i = 0; i < 8; i++){
-				x2 = curveX(t2) - x;
-				if (Math.abs(x2) < epsilon) return curveY(t2);
-				d2 = derivativeCurveX(t2);
-				if (Math.abs(d2) < 1e-6) break;
-				t2 = t2 - x2 / d2;
-			}
-
-			t0 = 0, t1 = 1, t2 = x;
-
-			if (t2 < t0) return curveY(t0);
-			if (t2 > t1) return curveY(t1);
-
-			//回归可靠性的二分法。
-			while (t0 < t1){
-				x2 = curveX(t2);
-				if (Math.abs(x2 - x) < epsilon) return curveY(t2);
-				if (x > x2) t0 = t2;
-				else t1 = t2;
-				t2 = (t1 - t0) * .5 + t0;
-			}
-
-			// 失败
-			return curveY(t2);
-
-		};
-	};
 });

@@ -36,35 +36,122 @@
   <% } %>
 </head>
 <body>
-<div class="cd-cover-layer"></div> <!-- 覆盖层 -->
-  <!-- SVG -->
-<div class="cd-modal" data-modal="modal-trigger">
-  <div class="cd-svg-bg"
-  data-step1="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z"
-  data-step2="M33.8,690l-188.2-300.3c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1L959.6,110c0.1,0.1,0,0.3-0.1,0.3 L34.1,690.1C34,690.2,33.9,690.1,33.8,690z"
-  data-step3="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z"
-  data-step4="M-329.3,504.3l-272.5-435c-0.1-0.1,0-0.3,0.1-0.3l925.4-579.8c0.1-0.1,0.3,0,0.3,0.1l272.5,435c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-329,504.5-329.2,504.5-329.3,504.3z"
-  data-step5="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z"
-  data-step6="M476.4,1013.4L205,580.3c-0.1-0.1,0-0.3,0.1-0.3L1130.5,0.2c0.1-0.1,0.3,0,0.3,0.1l271.4,433.1c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C476.6,1013.6,476.5,1013.5,476.4,1013.4z">
-    <svg height="100%" width="100%" preserveAspectRatio="none" viewBox="0 0 800 500">
-      <path id="cd-changing-path-1" d="M-59.9,540.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L864.8-41c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L-59.5,540.6 C-59.6,540.7-59.8,540.7-59.9,540.5z"/>
-      <path id="cd-changing-path-2" d="M-465.1,287.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L459.5-294c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3 l-925.4,579.8C-464.9,287.7-465,287.7-465.1,287.5z"/>
-      <path id="cd-changing-path-3" d="M341.1,797.5l-0.9-1.4c-0.1-0.1,0-0.3,0.1-0.3L1265.8,216c0.1-0.1,0.3,0,0.3,0.1l0.9,1.4c0.1,0.1,0,0.3-0.1,0.3L341.5,797.6 C341.4,797.7,341.2,797.7,341.1,797.5z"/>
-    </svg>
-  </div>
+<div class="modal-frame">
+  <div class="modal">
+		    <div class="modal-inset">
+      			<div class="button close"><i class="fa fa-close"></i></div>
+            <div class="modal-body">
+              <div class="phone">
+                <div class="mobile">
+                  <div class="volume"></div>
+                  <div class="bixby"></div>
+                  <div class="power"></div>
+                  <div class="chassis">
+                    <div class="earpiece"></div>
+                    <div class="camera"></div>
+                    <div class="body">
+                      <div class="screen">
+                        <div class="left-glare"></div>
+                        <div class="right-glare"></div>
+                        <div class="header">
+                          <div class="notifs"><i class="icon ion-logo-instagram"></i><i class="ion-md-heart"></i><i class="ion-ios-paper-plane"></i></div>
+                          <div class="stats">
+                            <div class="wifi"></div>
+                            <div class="signal"></div>
+                            <div class="batt"></div>
+                          </div>
+                        </div>
+                        <div class="content_phone">
+                          <div class="widget">
+                            <div class="location">London</div>
+                            <div class="time">10:08 </div>
+                            <div class="date">Sat, May 12</div>
+                          </div>
+                        </div>
+                        <div class="footer">
+                          <div class="icons">
+                            <div class="icon"></div>
+                            <div class="icon"></div>
+                            <div class="icon"></div>
+                            <div class="icon"></div>
+                            <div class="icon"></div>
+                          </div>
+                          <div class="buttons">
+                            <div class="apps"></div>
+                            <div class="home"></div>
+                            <div class="back"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  <div class="cd-modal-content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
-    </p>
+              <div class="modealData">
+                <h3 class="title">Акция "2019"</h3>
+                <p class="text">
+                  Толоко то конца года, товаров на сумму <b>2019</b> гривен и получите подарок или скидку (на выбор).
+                  <b>
+                    <br><br>
+                    Условия:
+                  </b>
+                  <br>
+                  - Быть <a href="/login">зарегистрировнным</a> у нас на сайте.<br>
+                  - Купить товаров на сумму 2019 гривен и большн.<br>
+                </p>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
-    </p>
-  </div> <!-- 模态框内容 -->
+                <p class="ps">**Оффициальная акция проводится до 31:12:2019 23:59:59</p>
+              </div>
 
-  <a href="#0" class="modal-close">Close</a>
-</div> <!-- 关闭图标 -->
+			        <div class="modealData" style="float: right">
+                <h3 class="title">Акция "Ре_Постик"</h3>
+                <p class="text">
+                  Толоко то конца года, успейте выполнить 2 простых условия и вы получите <b>100</b> гривен на свои покупки.
+                  <b>
+                    <br><br>
+                    Условия:
+                  </b>
+                  <br>
+                  - <a href="/login">Зарегистрироваться</a> у нас на сайте.<br>
+                  - Создать "историю" в инстаграмме и отметить нас.<br>
+                  - После выполнения условий сообщить в ЛС нашей страницы инстаграм.
+                </p>
+
+                <p class="ps">**Оффициальная акция проводится до 31:12:2019 23:59:59</p>
+              </div>
+
+
+
+              <div class="modealData">
+                <h3 class="title">Бонусы</h3>
+                <p class="text">
+                  Припокупке товаров вы получаете бонусы, которые вы можете использовать в будущих покупках.
+
+                  <br>
+                  - Быть <a href="/login">зарегистрировнным</a> у нас на сайте.<br>
+
+                  <br>
+                  Чем больше сумма покупки тем больше бонусов вы получаете.
+                </p>
+
+                <p class="ps">**Система бонусов работает без ограничения по времени</p>
+              </div>
+
+              <div class="modealData">
+                <h3 class="title">Программа накопления</h3>
+                <p class="text">
+                  Накапливайте баллы и выбирайте подарки!<br>
+                  <p class="ps">(Чтоб расплатится бонусными баллами сумма покупки должна привышать 2500 грн)</p>
+                </p>
+
+                <p class="ps">**Программа накопления работает без ограничения по времени</p>
+              </div>
+      			</div>
+    		</div>
+  	</div>
+</div>
+<div class="modal-overlay"></div>
 
 <div class="top">
 	<div class="topLine oneLine">
@@ -128,14 +215,17 @@
   </div>
 
   <div class="stock_container">
-
     <div class="stock_block bigBonus" style="background-image: url(https://i2.wp.com/rainbowrules.com/wp-content/uploads/2018/01/new-years-sale.jpg?fit=1899%2C1270&ssl=1); color: white;">
+      <canvas id="c"></canvas>
       <div class="promo"></div>
       <div class="stock_name"><span>2019</span>Новогодние скидки</div>
       <div class="timeOfUse_stock">До <b>31.12.2018</b><time>23:59</time></div>
-      <div class="details_stock">Детальнее</div>
-      <div class="details">
-        надо описание надо надо надо надо надо
+      <div class="sale_btn">
+        Посмотреть товары
+      </div>
+
+      <div class="tag tag--pink">
+        <span class="tag-label">SALE</span>
       </div>
     </div>
 
@@ -144,20 +234,19 @@
       <div class="promo"></div>
       <div class="stock_name"><span>Акция</span>2019</div>
       <div class="timeOfUse_stock">До <b>31.12.2018</b><time>23:59</time></div>
-      <div class="details_stock">Детальнее</div>
-      <div class="details">
-        надо описание надо надо надо надо надо
-      </div>
+      <div class="details_stock open">Детальнее</div>
     </div>
 
     <div class="stock_block" style="background-image: url(https://media.boingboing.net/wp-content/uploads/2018/05/cool-background1.png);">
+      <div class="item">
+        <div class="polaroid"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/hqcMtrF.jpg" width="80">
+          <div class="caption">By Luke Pamer</div>
+        </div>
+      </div>
       <div class="promo"></div>
       <div class="stock_name"><span>Акция</span>Ре-Постик</div>
       <div class="timeOfUse_stock">До <b>31.12.2018</b><time>23:59</time></div>
-      <div class="details_stock">Детальнее</div>
-      <div class="details">
-        надо описание надо надо надо надо надо
-      </div>
+      <div class="details_stock open">Детальнее</div>
     </div>
 
 
@@ -166,10 +255,7 @@
       <div class="promo"></div>
       <div class="stock_name">Бонусы</div>
       <div class="timeOfUse_stock"><b>Все время</b></div>
-      <div class="details_stock">Детальнее</div>
-      <div class="details">
-        надо описание надо надо надо надо надо
-      </div>
+      <div class="details_stock open">Детальнее</div>
     </div>
 
 
@@ -180,13 +266,8 @@
         <h2>Накопления</h2>
       </div>
       <div class="timeOfUse_stock"><b>Все время</b></div>
-      <div class="details_stock">Детальнее</div>
-      <div class="details">
-        надо описание надо надо надо надо надо
-      </div>
+      <div class="details_stock open">Детальнее</div>
     </div>
-    <div class="line" style="color: red; text-align: center">Времмено нет описания акций и конкурсов, но мы работаем над этим. Приносим наши извинения!</div>
-
   </div>
 
   <div class=" stock">
@@ -200,55 +281,8 @@
       <div class="line">4. Принимать участие в конкурсах и акционных предложениях имеют право только лица достигшие 16+ лет.</div>
       <div class="line">5. Принимая участиe в том или ином конкурсе вы автоматически разрешаете администрации магазина обрабатывать ваши личные данные.</div>
     </div>
-
-    <!-- <div class="blog-slider">
-      <div class="blog-slider__wrp swiper-wrapper">
-
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="../../../data/stock/1.jpg" alt="">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code">Акция</span>
-            <div class="blog-slider__title">2019</div>
-            <div class="blog-slider__text">Покупайте товары и получайте подарки.</div>
-            <a href="#0" class="cd-btn" id="modal-trigger" data-type="cd-modal-trigger">Детальнее</a>
-          </div>
-        </div>
-
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg" alt="">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code">26 December 2019</span>
-            <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#0" class="cd-btn" id="modal-trigger" data-type="cd-modal-trigger">Детальнее</a>
-          </div>
-        </div>
-
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg" alt="">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"></span>
-            <div class="blog-slider__title">Программа лояльности</div>
-            <div class="blog-slider__text">Покупайте товары и зарабатывайте балы.</div>
-            <a href="#0" class="cd-btn" id="modal-trigger" data-type="cd-modal-trigger">Детальнее</a>
-          </div>
-        </div>
-      </div>
-      <div class="blog-slider__pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div> -->
   </div>
-
 </div>
-
-
 
 <div class="siteMap">
   <div class="mapmap">
@@ -290,8 +324,6 @@
     </div>
   </div>
 </div>
-
-
 <div id="pageMessages"></div>
 </body>
 </html>

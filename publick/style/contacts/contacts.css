@@ -371,6 +371,24 @@ svg { visibility: hidden }
     text-align: left;
 }
 
+.block_right li{
+  background-image: url(http://chudozero.ru/wp-content/uploads/2017/08/galochka.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 6px;
+  padding-left: 26px;
+}
+
+.containerPartnersData{
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.container_partnersList{
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
 
 .container_partnersNum{
   background: #ffc9df;
@@ -408,4 +426,5 @@ svg { visibility: hidden }
   background-color: red;
   color: white;
   cursor: pointer;
+  border: 0;
 }
