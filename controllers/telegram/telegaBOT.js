@@ -19,15 +19,32 @@ botTelega.onText(/\/echo (.+)/, (msg, match) => {
   botTelega.sendMessage(chatId, resp);
 });
 
+
+var getparcelstatus = function(){
+  botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(')
+};
+
+var getmyparcel = function(){
+  botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(')
+};
+
+var makeanorder = function(){
+  botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(')
+};
+
+var start = function(){
+  botTelega.sendMessage(chatId, 'Здравствуйте! Вас приветствует бот Lady & Man Shop.\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
+};
+
 botTelega.on('message', (msg) => {
   const chatId = msg.chat.id;
   console.log(msg)
 
   switch(msg.text){
-    case '/getparcelstatus': botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(') ;break;
-    case '/getmyparcel':  botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(') ;break;
-    case '/makeanorder':  botTelega.sendMessage(chatId, 'Я пока что еще не могу оформлять заказы, но я быстро учусь :(') ;break;
-    case '/start':  botTelega.sendMessage(chatId, 'Здравствуйте! Вас приветствует бот Lady & Man Shop.\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы') ;break;
+    case '/getparcelstatus':  getparcelstatus();break;
+    case '/getmyparcel':  makeanorder();break;
+    case '/makeanorder':  makeanorder();break;
+    case '/start':  start(); break;
     default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
   }
   // send a message to the chat acknowledging receipt of their message

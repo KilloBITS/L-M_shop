@@ -59,6 +59,19 @@ router.post('/create_accaunt', function(req, res, next){
     users.find({email: req.body.newEmail}).toArray(function(err, results_usersEmail ){
       if(results_usersEmail.length === 0){
         users.find().sort({AI:-1}).limit(1).toArray(function(err, results_users ){
+
+          var today = new Date();
+          var dd = today.getDate();
+          var mm = today.getMonth()+1;
+          var yyyy = today.getFullYear();
+          if(dd<10) {
+              dd = '0'+dd
+          }
+          if(mm<10) {
+              mm = '0'+mm
+          }
+          today = mm + '-' + dd + '-' + yyyy;
+
           var mainData = req.body;
           var NEXT_AI = results_users[0].AI + 1;
           var NEW_USER = {};
@@ -76,6 +89,7 @@ router.post('/create_accaunt', function(req, res, next){
           NEW_USER.desires = [];
           NEW_USER.payments = [];
           NEW_USER.LM_COIN = 100;
+          NEW_USER.regiter_date = today;
           users.insertOne(NEW_USER);
           req.session.user = req.body.newEmail;
           req.session.admin = false;

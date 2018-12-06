@@ -60,8 +60,6 @@ app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.get('/logout', function(req, res) {
-    // req.logout();
-    // req.session = null;
     req.session.destroy(function(err) {
       // cannot access session here
     })

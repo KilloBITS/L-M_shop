@@ -60,7 +60,7 @@ var createFile = function(file, AI){
    }
 };
 
-var createUA = function(data, ai, l){
+var createUA = function(data, ai, dateCreate){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovaruk  = db.collection("tovar-uk");
@@ -76,6 +76,7 @@ var createUA = function(data, ai, l){
     NEW_TOVAR_UA.tIncrement = data.tIncrement;
     NEW_TOVAR_UA.sizes = data.sizes;
     NEW_TOVAR_UA.visual = 0;
+    NEW_TOVAR_UA.Create_date = dateCreate;
     var imageArray = [];
     for(let i = 0; i < l; i++){
       imageArray.push(ai + '/' + i + ".jpg");
@@ -87,7 +88,7 @@ var createUA = function(data, ai, l){
   });
 };
 
-var createRU = function(data, ai, l){
+var createRU = function(data, ai, dateCreate){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovar  = db.collection("tovar");
@@ -102,6 +103,7 @@ var createRU = function(data, ai, l){
     NEW_TOVAR.tIncrement = data.tIncrement;
     NEW_TOVAR.sizes = data.sizes;
     NEW_TOVAR.visual = 0;
+    NEW_TOVAR.Create_date = dateCreate;
     var imageArray = [];
     for(let i = 0; i < l; i++){
       imageArray.push(ai + '/' + i + ".jpg");
@@ -167,9 +169,21 @@ var setAdmTovar = (req, res, next) => {
           var NEXT_AI = 1;
         }
 
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1;
+        var yyyy = today.getFullYear();
+        if(dd<10) {
+            dd = '0'+dd
+        }
+        if(mm<10) {
+            mm = '0'+mm
+        }
+        today = mm + '-' + dd + '-' + yyyy;
+
         if(mainData.te === "true"){
-          createUA(mainData.ua, NEXT_AI, mainData.file.length);
-          createRU(mainData.ru, NEXT_AI, mainData.file.length);
+          createUA(mainData.ua, NEXT_AI, mainData.file.length, today);
+          createRU(mainData.ru, NEXT_AI, mainData.file.length, today);
           createFile(mainData.file, NEXT_AI);
         }else{
           updateUA(mainData.ua, mainData.ai);
