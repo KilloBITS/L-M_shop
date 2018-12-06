@@ -1,8 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
-
 // replace the value below with the Telegram token you receive from @BotFather
 const token = '787774114:AAFy7_6RBnbwPJqJjaDG7t08-Ih_54ns1PQ';
-
 // Create a bot that uses 'polling' to fetch new updates
 const botTelega = new TelegramBot(token, {polling: true});
 // global.telegram_bot = botTelega;
@@ -11,14 +9,11 @@ botTelega.onText(/\/echo (.+)/, (msg, match) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-
   const chatId = msg.chat.id;
   const resp = match[1]; // the captured "whatever"
-
   // send back the matched "whatever" to the chat
   botTelega.sendMessage(chatId, resp);
 });
-
 
 var getparcelstatus = function(){
   botTelega.sendMessage(chatId, 'Я пока что еще в разработке :(')
@@ -47,5 +42,4 @@ botTelega.on('message', (msg) => {
     case '/start':  start(); break;
     default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
   }
-  // send a message to the chat acknowledging receipt of their message
 });
