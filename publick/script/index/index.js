@@ -48,9 +48,6 @@ var Index = {
         if (Index.ML != undefined) {
           $("." + Index.ML + ",.opensMenu").show();
         }
-
-
-
     }, function(e) {
       Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
       $(".opensMenu").hover(function() {}, function(e) {
