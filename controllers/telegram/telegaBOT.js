@@ -31,15 +31,15 @@ var start = function(){
   botTelega.sendMessage(chatId, 'Здравствуйте! Вас приветствует бот Lady & Man Shop.\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
 };
 
-botTelega.on('message', (msg) => {
-  const chatId = msg.chat.id;
-  console.log(msg)
-
-  switch(msg.text){
-    case '/getparcelstatus':  getparcelstatus();break;
-    case '/getmyparcel':  makeanorder();break;
-    case '/makeanorder':  makeanorder();break;
-    case '/start':  start(); break;
-    default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
-  }
+// botTelega.on('message', (msg) => {
+//   const chatId = msg.chat.id;
+//   console.log(msg)
+//
+//   switch(msg.text){
+//     case '/getparcelstatus':  getparcelstatus(msg);break;
+//     case '/getmyparcel':  makeanorder(msg);break;
+//     case '/makeanorder':  makeanorder(msg);break;
+//     case '/start':  start(msg); break;
+//     default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
+//   }
 });
