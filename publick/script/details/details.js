@@ -195,4 +195,199 @@ var Details = {
 
 $(document).ready(() => {
   Details.INIT();
+
+
+
+  var mycode = function() {
+  var newImage = new Image();
+  newImage.onload = function(){
+    console.log(newImage.width)
+    // $('#canvas').attr('width',newImage.width);
+    // $('#canvas').attr('height',newImage.height);
+
+  }
+  newImage.src = $('#kitchenSmall').attr('src');
+
+
+  var pad = scrawl.pad.canvas,
+    base = scrawl.cell[pad.base],
+    display = scrawl.cell[pad.display],
+    canvas = scrawl.canvas[pad.name],
+    actionCell,
+    hitCell,
+    hitGroup,
+    magnifier,
+    moveMagnifier,
+    border = 200,
+    here, ratioX, ratioY, x, y,
+    offsetX, offsetY,
+    currentPin = false,
+    choke = true,
+    anim;
+
+  scrawl.getImagesByClass('demopic');
+
+  pad.makeCurrent();
+
+  actionCell = pad.addNewCell({
+    name: 'demo10_actionCell',
+    width: (base.actualWidth + border) * 2,
+    height: (base.actualHeight + border) * 2,
+    shown: false
+  });
+
+  hitCell = pad.addNewCell({
+    name: 'demo10_hitCell',
+    width: base.actualWidth,
+    height: base.actualHeight,
+    showOrder: 2
+  });
+  hitGroup = scrawl.makeGroup({
+    name: 'demo10_pins',
+    cell: hitCell.name
+  });
+
+  scrawl.makePicture({
+    name: 'demo10_actionBackground',
+    source: 'kitchenLarge',
+    copyWidth: '100%',
+    copyHeight: '100%',
+    pasteWidth: base.actualWidth * 2,
+    pasteHeight: base.actualHeight * 2,
+    startX: 'center',
+    startY: 'center',
+    handleX: 'center',
+    handleY: 'center',
+    group: 'demo10_actionCell',
+    order: 0
+  });
+
+  scrawl.makePicture({
+    name: 'demo10_background',
+    source: 'kitchenSmall',
+    width: '100%',
+    height: '100%',
+    globalCompositeOperation: 'destination-over',
+    order: 2
+  });
+
+  magnifier = scrawl.makePicture({
+    name: 'demo10_magnifier',
+    source: 'demo10_actionCell',
+    copyWidth: base.actualWidth * 2 * 0.15,
+    copyHeight: base.actualHeight * 2 * 0.3,
+    width: '30%',
+    height: '60%',
+    handleX: 'center',
+    handleY: 'center',
+    pivot: 'demo10_magnifierStencil',
+    globalCompositeOperation: 'source-in',
+    order: 1
+  });
+
+  scrawl.makeWheel({
+    name: 'demo10_magnifierStencil',
+    pivot: 'mouse',
+    radius: '15%',
+    fillStyle: 'black',
+    order: 0
+  }).clone({
+    name: 'demo10_magnifierOutline',
+    pivot: 'demo10_magnifierStencil',
+    method: 'draw',
+    lineWidth: 2,
+    strokeStyle: 'red',
+    order: 3
+  });
+
+
+
+  moveMagnifier = function(e) {
+    var testPin;
+    if (e.force) {
+      pad.render();
+    } else {
+      here = pad.getMouse();
+      if (choke && here.active && !isNaN(here.x)) {
+        ratioX = base.actualWidth / display.actualWidth;
+        ratioY = base.actualHeight / display.actualHeight;
+        x = Math.floor(here.x * ratioX * 2) + border;
+        y = Math.floor(here.y * ratioY * 2) + border;
+        offsetX = magnifier.get('width') / 2;
+        offsetY = magnifier.get('height') / 2;
+        magnifier.set({
+          copyX: x - offsetX,
+          copyY: y - offsetY
+        });
+        testPin = hitGroup.getEntityAt(here);
+        if (testPin) {
+          if (currentPin && currentPin.name !== testPin.name) {
+            currentPin.set({
+              scale: 1
+            });
+            scrawl.entity[currentPin.name + 'Label'].set({
+              visibility: false
+            });
+          }
+          testPin.set({
+            scale: 2
+          });
+          scrawl.entity[testPin.name + 'Label'].set({
+            visibility: true
+          });
+          currentPin = testPin;
+        } else {
+          if (currentPin) {
+            currentPin.set({
+              scale: 1
+            });
+            scrawl.entity[currentPin.name + 'Label'].set({
+              visibility: false
+            });
+            currentPin = false;
+          }
+        }
+        pad.render(here);
+        choke = false;
+      }
+    }
+  };
+
+  var myanimation = function() {
+    choke = true;
+  };
+
+  anim = scrawl.makeAnimation({
+    name: 'panel10_animation',
+    fn: myanimation
+  });
+
+  scrawl.addListener(['move'], function(e) {
+    moveMagnifier(e);
+  }, canvas);
+
+  scrawl.addListener(['down', 'enter'], function() {
+    pad.setDisplayOffsets();
+    anim.run();
+  }, canvas);
+
+  scrawl.addListener(['up', 'leave'], function() {
+    anim.halt();
+  }, canvas);
+
+  pad.render();
+}
+
+scrawl.loadExtensions({
+  minified: true,
+  path: 'https://scrawl.rikweb.org.uk/min_5-0-0/',
+  extensions: ['images', 'wheel', 'phrase'],
+  callback: function() {
+    window.addEventListener('load', function() {
+      scrawl.init();
+      mycode();
+    }, false);
+  },
+});
+
 });

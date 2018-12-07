@@ -184,6 +184,15 @@
               <% if(isAdm){ %>
                 <div class="visible_length" title="Количевство просмотров">Просмотров: <%= tovarArr[0].visual %></div>
               <% } %>
+
+
+              <canvas id="canvas" width="500" height="650"></canvas>
+
+              <div class="hidden">
+                <img id="kitchenSmall" class="active demopic" src="../../../data/tovar/<%= tovarArr[0].image[0] %>" />
+                <img id="kitchenLarge" class="active demopic" src="../../../data/tovar/<%= tovarArr[0].image[0] %>" />
+              </div>
+              <script src="https://scrawl.rikweb.org.uk/min_5-0-0/scrawlCore-min.js"></script>
               <img class="active" id="tovarImage" src="../../../data/tovar/<%= tovarArr[0].image[0] %>"> <!-- ../../../data/tovar/ -->
               <% if(tovarArr[0].image.length > 1){ %>
               <div class="arrL"><</div>
@@ -239,16 +248,16 @@
               </div>
               <div class="btnTableSizes">Таблица размеров</div>
             </div>
-            <div class="text_line">Производитель:<span><%= tovarArr[0].postavka %></span></div>
-            <div class="text_line">Описание:</div>
+            <div class="text_line" id="PROIZVOD">Производитель:<span><%= tovarArr[0].postavka %></span></div>
+            <div class="text_line" id="OPISANIE">Описание:</div>
             <div class="noneText"><%= tovarArr[0].text %></div>
             <script type="text/javascript">
-            $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
+              $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
             </script>
 
             <div class="group_block">
               <% if(!tovarArr[0].group_id){ %>
-                111
+
               <% }else{ %>
                 <%= tovarArr[0].group_id %>
               <% } %>

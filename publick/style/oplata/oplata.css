@@ -85,8 +85,7 @@ img {
 
 .card {
   background-color: white;
-  border-radius: 0.25rem;
-  /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -102,6 +101,7 @@ img {
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
+  background-color: #ffc9df;
 }
 .card__image {
   background-position: center center;
@@ -116,6 +116,7 @@ img {
   transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  display: none;
 }
 .card__image::before {
   content: "";

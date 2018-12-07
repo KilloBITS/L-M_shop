@@ -73,6 +73,20 @@
   .LBB {
       display: none;
   }
+  .LBB, .CBB, .RBB {
+    width: 100%;
+  }
+
+  #canvas{
+    display: none;
+  }
+
+  .hidden{
+    display: none;
+  }
+  #tovarImage{
+    display: block;
+  }
 
 }
 /* media queries */

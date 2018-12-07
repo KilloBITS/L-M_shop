@@ -2047,6 +2047,10 @@ i {
   background-image: url('../../../data/instagram/ourImage.jpg');
 }
 
+.carousel-item--6 .carousel-item__image{
+  background-image: url('../../../data/instagram/karina.jpg');
+}
+
 .carousel-item__image video{
   width: inherit;
   max-width: 100%;

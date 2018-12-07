@@ -12,6 +12,7 @@ botTelega.onText(/\/echo (.+)/, (msg, match) => {
   botTelega.sendMessage(chatId, resp);
 });
 
+var shablonOfViewTowar = ['покажи мне мои покупки', 'как там мои покупки', 'покажи мои заказы', 'как там мои покупки', 'как там мои заказы', 'статус моих заказов', 'статус заказов', 'статус моих покупок', 'статус покупок', 'мои товары', 'мой заказ', 'заказ', 'что я заказывал', 'покажите что я заказывал', 'заказы', 'мои заказы'];
 
 botTelega.on('message', (msg) => {
   // console.log(msg);
@@ -42,19 +43,36 @@ botTelega.on('message', (msg) => {
     });
   }
 
-  if(ParseString.indexOf('покажи мне мои заказы') !== -1){ //показать заказы
+  if(shablonOfViewTowar.indexOf(ParseString) !== -1){ //показать заказы
     mongoClient.connect(global.baseIP, function(err, client){
         const db = client.db(global.baseName);
         const users_session = db.collection("users");
+        const payments = db.collection("payments");
         if(err) return console.log(err);
         users_session.find({TELEGA_ID:  msg.from.id}).toArray(function(err, usersDara){
           if(usersDara.length > 0){
             if(usersDara[0].payments.length !== 0){
-              for(let i = 0; i < usersDara[0].payments.length; i++){
-                  var PayTovar = '';
-                  PayTovar += 'Дата покупки: ' + usersDara[0].payments[i].date;
-                  botTelega.sendMessage(chatId, PayTovar)
-              }
+              botTelega.sendMessage(chatId, 'Вот что мне удалось найти');
+              payments.find( { id: { $in: usersDara[0].payments } }).toArray(function(err, results_payments ){
+
+                for(let i = 0; i < results_payments.length; i++){
+                    var PayTovar = '';
+                    PayTovar += 'Заказ №' + (parseInt(i)+1) + ' ('+ results_payments[i].id +')' + '\n';
+                    PayTovar += 'Детали заказа:\n';
+                    PayTovar += 'Дата покупки: ' + results_payments[i].today + '\n';
+                    PayTovar += 'ФИО получателя: ' + results_payments[i].FIO + '\n';
+                    PayTovar += 'Сумма покупки: ' + results_payments[i].summa + ' Грн\n';
+                    PayTovar += 'Полученно бонусов: ' + results_payments[i].bonus + ' Грн\n';
+                    PayTovar += 'Статус оплаты: ' + results_payments[i].PAYS + '\n';
+                    PayTovar += 'Тип Доставки: ' + results_payments[i].dostavka + '\n';
+                    PayTovar += 'Адрес доставки: ' + results_payments[i].adress + '\n';
+                    switch(results_payments[i].adress){
+                      case 0: PayTovar += 'Статус заказа: Заказ в обработке\n';break;
+                      case 1: PayTovar += 'Статус заказа: Заказ передан в службу доставки.\n ТТН - '+ results_payments[i].TTH;break;
+                    }
+                    botTelega.sendMessage(chatId, PayTovar);
+                }
+              });
             }else{
                 botTelega.sendMessage(chatId, 'Увы но у вас еще нет покупок)')
             }
@@ -64,12 +82,4 @@ botTelega.on('message', (msg) => {
         })
       });
   }
-
-  // switch(msg.text){
-  //   case '/getparcelstatus':  getparcelstatus(msg);break;
-  //   case '/getmyparcel':  makeanorder(msg);break;
-  //   case '/makeanorder':  makeanorder(msg);break;
-  //   case '/start':  start(msg); break;
-  //   default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
-  // }
 });
