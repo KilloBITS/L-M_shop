@@ -42,4 +42,4 @@ var start = function(){
 //     case '/start':  start(msg); break;
 //     default: botTelega.sendMessage(chatId, 'Данная команда недоступна!\n\nДоступные команды:\n• /getparcelstatus - статус моих заказов\n• /getmyparcel - Показать мои заказы');
 //   }
-});
+// });
