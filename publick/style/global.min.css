@@ -454,5 +454,13 @@
   form input, form textarea {
       width: 100%;
   }
-
+  .circle {
+      width: 55px;
+      height: 55px;
+      border: 1px solid #fff;
+  }
+  .chat-title {
+    padding: 20px 60px 15px 10px !important;
+    text-align: right;
+  }
 }

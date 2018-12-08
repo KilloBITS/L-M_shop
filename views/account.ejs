@@ -103,6 +103,9 @@
       </div>
       <div class="user_menu">
         <div class="UserNameAcc">
+          <% if( user.official ){ %>
+            <div class="offocial"></div>
+          <% } %>
           <b><%= user.nick %></b>
           (<%= user.name %>) <br>
           <small><%= user.email %></small>
@@ -117,7 +120,13 @@
                 LM-Coin можно использовать при покупке свыше 2500 Гривен.
               </span>
             </div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 72%;"></div>
+              <div class="progress_start">0</div>
+              <div class="progress_end">1000</div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -128,6 +137,10 @@
       <div class="set_btn" opmenu="myPays">Покупки</div>
       <div class="set_btn" opmenu="myDesires">Мои желания</div>
       <div class="set_btn" opmenu="mySetting">Настройки</div>
+      <% if( user.official ){ %>
+        <div class="set_btn myTovars" opmenu="myTovars">Мои товары</div>
+      <% } %>
+
       <% if(user.isAdmin){ %>
         <a href="/panel" target="_blank"> <div class="set_btn">Панель управления</div> </a>
       <% } %>
@@ -157,15 +170,31 @@
                   </div>
                   <a href="/delivery?<%= payments_user[i].id %>" target="_blank"> <div class="placeList">Посмотреть чек</div> </a>
                   <div class="placeDate"><%= payments_user[i].today %></div>
+                  <div class="otpravka_line">
+                    <div class="line_point onePoint">
+                      <div class="pointImage1 current"></div>
+                    </div>
+                    <div class="line_point twoPoint">
+                      <div class="pointImage2"></div>
+                    </div>
+                    <div class="line_point threePoint">
+                      <div class="pointImage3"></div>
+                    </div>
+                    <div class="line_point fourPoint">
+                      <div class="pointImage4"></div>
+                    </div>
+                    <div class="line_point fivePoint">
+                      <div class="pointImage5"></div>
+                    </div>
+                  </div>
 
+                  <div class="cancel_zakaz"></div>
                   <% if(payments_user[i].status === 0) { %>
                     <div class="placeStatus">Заказ в обработке</div>
                   <% } else { %>
                     <div class="placeStatus">Товар отправлен</div>
                       <div class="TTH"><%= payments_user[i].TTH %></div>
-                      <div class="details_TTH">
-
-                      </div>
+                      <div class="details_TTH"></div>
                     <script>
                     var CCC = {
                       "apiKey": "<%= conf.NEW_POST_API %>",

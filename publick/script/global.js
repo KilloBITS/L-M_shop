@@ -224,6 +224,9 @@ var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
 $(document).ready(function(){
+  $('.close_chat').click(function(){
+    $(".avenue-messenger").hide();
+  });
   $('.container-call').click(function(){
     $(".avenue-messenger").toggle();
     if(i === 0){
