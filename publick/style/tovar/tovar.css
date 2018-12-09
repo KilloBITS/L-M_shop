@@ -63,6 +63,7 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
   color: red;
   margin: 0;
   margin-top: -18px;
+  float: none;
 }
 .thumbnail
 {

@@ -2909,6 +2909,7 @@ a:focus, a:hover {
 .lead {
   font-weight: bold;
   color: black;
+  float: none;
 }
 
 
