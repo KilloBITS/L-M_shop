@@ -192,19 +192,11 @@ app.listen(4111, function(){
   require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
     //
-    // mongoClient.connect(global.baseIP, function(err, client){
-    //   const db = client.db(global.baseName);
-    //   var tovar  = db.collection("tovar");
-    //   var i = 1
-    //   setInterval(function(){
-    //     tovar.find({AI: i}).toArray(function(err, results_tovar ){
-    //       console.log(parseInt(results_tovar[0].price))
-    //       // tovar.update({AI: i},{ $set : { price: parseInt(results_tovar[0].price)+20 }});
-    //     });
-    //     console.log(i)
-    //     i++
-    //   }, 200);
-    // });
+    mongoClient.connect(global.baseIP, function(err, client){
+      const db = client.db(global.baseName);
+      var tovar  = db.collection("tovar");
+       tovar.updateMany({}, {$set: {creator : 'admin'}})
+    });
   //
   // const from = 'Lady & Man club'
   // const to = '+380662377206'
