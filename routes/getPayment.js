@@ -18,13 +18,13 @@ function makeid() {
 
 var adminIDs = [404616351, 602865793];
 var SendToTelega = function(ZAKAZ_TO_TELEGA){
-  // const token = '787774114:AAFy7_6RBnbwPJqJjaDG7t08-Ih_54ns1PQ';
-  // const botTelega = new TelegramBot(token, {polling: true});
-  // var dataTelPay = 'Новый заказ!\n\nНомер телефона: '+ZAKAZ_TO_TELEGA.number+'\nID Заказа: '+ZAKAZ_TO_TELEGA.id+'\nФИО заказчика'+ZAKAZ_TO_TELEGA.FIO+'\nДата заказа: '+ZAKAZ_TO_TELEGA.today+'\nСумма заказа: '+ZAKAZ_TO_TELEGA.summa+'\nПолучено бонусов: '+ZAKAZ_TO_TELEGA.bonus+'\nТип оплаты: '+ZAKAZ_TO_TELEGA.PAYS+'\nСтатус заказа: '+'Новый'+'\nПосмотреть чек заказа: '+ 'http://ladyman.club/delivery?'+ZAKAZ_TO_TELEGA.id;
-  //
-  // for(let i = 0; i < adminIDs.length; i++){
-  //     botTelega.sendMessage(adminIDs[i], dataTelPay);
-  // }
+  const token = '787774114:AAFy7_6RBnbwPJqJjaDG7t08-Ih_54ns1PQ';
+  const botTelega = new TelegramBot(token, {polling: true});
+  var dataTelPay = 'Новый заказ!\n\nНомер телефона: '+ZAKAZ_TO_TELEGA.number+'\nID Заказа: '+ZAKAZ_TO_TELEGA.id+'\nФИО заказчика'+ZAKAZ_TO_TELEGA.FIO+'\nДата заказа: '+ZAKAZ_TO_TELEGA.today+'\nСумма заказа: '+ZAKAZ_TO_TELEGA.summa+'\nПолучено бонусов: '+ZAKAZ_TO_TELEGA.bonus+'\nТип оплаты: '+ZAKAZ_TO_TELEGA.PAYS+'\nСтатус заказа: '+'Новый'+'\nПосмотреть чек заказа: '+ 'http://ladyman.club/delivery?'+ZAKAZ_TO_TELEGA.id;
+
+  for(let i = 0; i < adminIDs.length; i++){
+      botTelega.sendMessage(adminIDs[i], dataTelPay);
+  }
 }
 
 router.get('/', function(req, res, next){
