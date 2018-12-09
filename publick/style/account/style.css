@@ -2006,7 +2006,7 @@ div.current{
 
 .progress_start{
   position: absolute;
-  z-index: 20;
+  z-index: 1;
   left: 0;
   font-size: 12px;
 }
