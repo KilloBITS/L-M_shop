@@ -47,7 +47,7 @@ router.get('/*', function(req, res, next){
                   try {
                     banners.find().toArray(function(err, banner ){
 
-                      tovar.find( { sale: { $all : ["true"] } } ).sort( { sale: [1] }  ).toArray(function(err, results_tovar ){
+                      tovar.find( { sale: { $all : ["true"] } } ).toArray(function(err, results_tovar ){
                         // console.log(results_tovar)
 
                         // console.log(otTovar)
