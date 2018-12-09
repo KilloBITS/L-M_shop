@@ -11,12 +11,14 @@ router.get('/*', function(req, res, next){
 
     var page = req.url.split('page=')[1];
 
+    console.log(page)
+
     if(parseInt(page) === 1){
       var otTovar = 0;
-      var doTovar = 18;
+      var doTovar = 24;
     }else{
-      var otTovar = 18 * (parseInt(page)-1);
-      var doTovar = otTovar + 18;
+      var otTovar = 24 * (parseInt(page)-1);
+      var doTovar = otTovar + 24;
     }
 
     mongoClient.connect(global.baseIP, function(err, client){
@@ -50,9 +52,9 @@ router.get('/*', function(req, res, next){
                         // console.log(otTovar)
                         // console.log(doTovar)
                         var current_page = page;
-                        var paginator = new pagination.SearchPaginator({prelink: '/stock&'+req.url.split('&')[1], current: page, rowsPerPage: 18, totalResult: results_tovar.length-1});
+                        var paginator = new pagination.SearchPaginator({prelink: '/stock?', current: page, rowsPerPage: 24, totalResult: results_tovar.length-1});
                         var p = paginator.getPaginationData();
-
+                        console.log(p)
                         res.render('stock.ejs',{
                           conf: results_config[languageSystem],
                           menu: results_menu,
