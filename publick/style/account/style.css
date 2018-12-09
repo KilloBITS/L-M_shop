@@ -1726,8 +1726,8 @@ color: red;
 
 
 .desires_box{
-  width: calc(100% / 4 - 10px);
-  height: 270px;
+  /* width: calc(100% / 4 - 10px); */
+  /* height: 270px; */
   background: white;
   display: inline-block;
   margin: 3px;
@@ -1735,6 +1735,8 @@ color: red;
   border-radius: 3px;
   cursor: pointer;
   position: relative;
+  float: left;
+  max-width: 200px;
 }
 
 .desires_title{

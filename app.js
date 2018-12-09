@@ -33,6 +33,7 @@ app.use(bParser.raw({limit: '50mb'}));
 //routes pages
 const index = require('./routes/getIndex');
 const tovar = require('./routes/getTovar');
+const getStock = require('./routes/getStock');
 const get404 = require('./routes/get404');
 const login = require('./routes/getLogin');
 const oplata = require('./routes/getOplata');
@@ -48,6 +49,7 @@ const dap = require('./routes/getDAP');
 
 app.use('/', index);
 app.use('/shop*', tovar);
+app.use('/stock*', getStock);
 app.use('/login', login);
 app.use('/oplata', oplata);
 app.use('/details', details);
