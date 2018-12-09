@@ -36,6 +36,21 @@ body {
   z-index: 10;
 }
 
+.userlogoutInBlock{
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwNS42NjQsMjQzLjczOWwtNTQuNzgzLTM4LjYyMmMtOS45MjYtNi45OTctMjMuNjQ1LDAuMTI4LTIzLjY0NSwxMi4yNnYyMy42MjJIMTY0LjE5NiAgICBjLTguMjg0LDAtMTUuMDAxLDYuNzE2LTE1LjAwMSwxNS4wMDFTMTU1LjkxMiwyNzEsMTY0LjE5NiwyNzFoMjYzLjAzOHYyMy42MjFjMCwxMi4yMTIsMTMuNzkyLDE5LjIwNCwyMy42NDQsMTIuMjZsNTQuNzgzLTM4LjYyMiAgICBDNTE0LjAyNywyNjIuMzY1LDUxNC4xOTYsMjQ5Ljc2Nyw1MDUuNjY0LDI0My43Mzl6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMwLjQ3MSwzNTIuMzE3Yy03LjE2OS00LjE0Ni0xNi4zNDctMS42OTgtMjAuNDk2LDUuNDc0Yy0zNS4yMzYsNjAuOTE2LTEwMS4xMDMsMTAxLjgxMS0xNzYuMzcyLDEwMS44MTEgICAgYy0xMTIuMjY2LDAtMjAzLjYwMi05MS4zMzYtMjAzLjYwMi0yMDMuNjAyUzEyMS4zMzcsNTIuMzk4LDIzMy42MDMsNTIuMzk4Yzc1LjMxOSwwLDE0MS4xNTYsNDAuOTMzLDE3Ni4zNzEsMTAxLjgwOSAgICBjNC4xNDgsNy4xNzIsMTMuMzI4LDkuNjE5LDIwLjQ5Niw1LjQ3NGM3LjE3MS00LjE0OCw5LjYyMS0xMy4zMjUsNS40NzQtMjAuNDk2QzM5NS40MTgsNjkuMTI3LDMxOS43MjksMjIuMzk3LDIzMy42MDMsMjIuMzk3ICAgIEMxMDQuNDksMjIuMzk3LDAsMTI2Ljg3NiwwLDI1NmMwLDEyOS4xMTMsMTA0LjQ3OSwyMzMuNjAzLDIzMy42MDMsMjMzLjYwM2M4Ni4xNjMsMCwxNjEuODMzLTQ2Ljc2MywyMDIuMzQyLTExNi43OSAgICBDNDQwLjA5MiwzNjUuNjQyLDQzNy42NDIsMzU2LjQ2Niw0MzAuNDcxLDM1Mi4zMTd6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
 .topNavMobMenuOfBtm {
   display: none;
 }
@@ -1393,16 +1408,17 @@ form textarea {
 .noNumMessage,.noNewsMessage {
   text-align: center;
   padding: 10px 0;
-  background: #f9c8c8;
+  background: #f8f9c8;
   width: calc(100% - 20px);
   margin: auto;
   background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDM1IDM1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNSAzNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik0yNS4zMDIsMEg5LjY5OGMtMS4zLDAtMi4zNjQsMS4wNjMtMi4zNjQsMi4zNjR2MzAuMjcxQzcuMzM0LDMzLjkzNiw4LjM5OCwzNSw5LjY5OCwzNWgxNS42MDQgICBjMS4zLDAsMi4zNjQtMS4wNjIsMi4zNjQtMi4zNjRWMi4zNjRDMjcuNjY2LDEuMDYzLDI2LjYwMiwwLDI1LjMwMiwweiBNMTUuMDA0LDEuNzA0aDQuOTkyYzAuMTU4LDAsMC4yODYsMC4xMjgsMC4yODYsMC4yODcgICBjMCwwLjE1OC0wLjEyOCwwLjI4Ni0wLjI4NiwwLjI4NmgtNC45OTJjLTAuMTU4LDAtMC4yODYtMC4xMjgtMC4yODYtMC4yODZDMTQuNzE4LDEuODMyLDE0Ljg0NiwxLjcwNCwxNS4wMDQsMS43MDR6IE0xNy41LDMzLjgxOCAgIGMtMC42NTMsMC0xLjE4Mi0wLjUyOS0xLjE4Mi0xLjE4M3MwLjUyOS0xLjE4MiwxLjE4Mi0xLjE4MnMxLjE4MiwwLjUyOCwxLjE4MiwxLjE4MlMxOC4xNTMsMzMuODE4LDE3LjUsMzMuODE4eiBNMjYuMDIxLDMwLjYyNSAgIEg4Ljk3OVYzLjc0OWgxNy4wNDJWMzAuNjI1eiIgZmlsbD0iI2YzZjNlYSIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
-  border: 1px solid #dcaeae;
+  border: 1px solid #e2e3b0;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: 44px;
   background-position: 5px;
   cursor: pointer;
+  position: relative;
 }
 .noNewsMessage{
   background-image: none;
@@ -1436,6 +1452,7 @@ form textarea {
   left: 0;
   background-size: cover;
   background-position: center;
+  border-radius: 4px;
 }
 
 .uploadAva {
@@ -1995,7 +2012,109 @@ div.current{
 }
 .progress_end{
   position: absolute;
-  z-index: 20;
+  z-index: 1;
   right: 0;
   font-size: 12px;
+}
+
+.goToShop{
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 16px);
+  /* padding: 5px 45px; */
+  transform: translate(-50%, 0);
+  /* background: red; */
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.css-button {
+  border: 1px solid #d5402b;
+  height: 36px;
+  width: 218px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+}
+
+p.css-button-text {
+  width: 100%;
+  position: absolute;
+  line-height: 33px;
+  color: red;
+}
+
+.css-button-inner {
+  height: 51px;
+  width: 265px;
+  position: relative;
+  left: -4px;
+  top: -1px;
+  border: 1px solid #d5402b;
+  background-color: #d5402b;
+  text-align: center;
+  -webkit-transform: skew(-42deg) translate(300px,0);
+  -moz-transform: skew(-42deg) translate(300px,0);
+  -o-transform: skew(-42deg) translate(300px,0);
+  transform: skew(-42deg) translate(300px,0);
+  -webkit-animation-name: buttonx-out;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-name: buttonx-out;
+  -moz-animation-duration: .7s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: buttonx-out;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reset-skew {
+  -moz-transform: skew(40deg);
+  -o-transform: skew(40deg);
+  transform: skew(40deg);
+}
+
+.css-button:hover > .css-button-inner {
+  -webkit-animation-name: buttonx-in;
+  -webkit-animation-duration: .6s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-name: buttonx-in;
+  -moz-animation-duration: .6s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: buttonx-in;
+  animation-duration: .6s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transform: skew(-42deg) translate(-20px, -0px);
+  -o-transform: skew(-42deg) translate(-20px, -0px);
+  transform: skew(-42deg) translate(-20px, -0px);
+}
+
+@keyframes buttonx-in {
+    from {transform:skew(-42deg) translate(-300px, 0);}
+    to {transform:skew(-42deg) translate(-20px, -0px);}
+}
+
+@keyframes buttonx-out {
+    from {transform: skew(-42deg) translate(0, 0);}
+    to {transform: skew(-42deg) translate(300px, -0px);}
+}
+
+@-webkit-keyframes buttonx-in {
+    from {transform:skew(-42deg) translate(-300px, 0);}
+    to {transform:skew(-42deg) translate(-20px, -0px);}
+}
+
+@-webkit-keyframes buttonx-out {
+    from {transform: skew(-42deg) translate(0, 0);}
+    to {transform: skew(-42deg) translate(300px, -0px);}
 }

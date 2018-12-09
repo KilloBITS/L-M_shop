@@ -38,6 +38,10 @@
       margin: auto;
       margin-bottom: 15px;
   }
+  .LengthOfBalset{
+    height: auto;
+  }
+  
   .add-to-cart {
     position: relative;
     display: inline-block;
@@ -54,13 +58,14 @@
     transition: color 0.3s ease;
     letter-spacing: 0.0625rem;
     width: 89%;
+    margin-top: 12px;
   }
   .text_line {
     width: 100%;
     float: left;
     text-align: left;
     margin-top: 5px;
-    padding-left: 5px;
+    /* padding-left: 5px; */
     padding-bottom: 10px;
   }
   .container {

@@ -22,9 +22,8 @@
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   <script type="text/javascript" src="script/jquery.noisy.min.js"></script>
+  <script type="text/javascript" src="/script/maskinput.js"></script>
   <script type="text/javascript" src="script/contacts/contacts.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
   <% if(isAdm){ %>
@@ -133,6 +132,7 @@
   </div>
 
   <div class="container_partnersNum">
+    <div class="loadersNEW" id="loaderNumber"></div>
     <div class="zub_line"></div>
     <div class="mainDLG" style="color: white;">
       <div class="mainTitleDLG">Хотите сотрудничать ?</div>
@@ -140,7 +140,7 @@
     </div>
 
     <div class="number_send_block">
-      <input type="text" class="number_phone" placeholder="Ваш номер телефона">
+      <input type="text" class="number_phone" id="phoneNumMask" placeholder="Ваш номер телефона">
       <button id="setNumber">Отправить номер</button>
     </div>
     <div class="zub_lineB"></div>
@@ -152,7 +152,7 @@
     </div>
 
     <div class="containerPartnersData">
-      <a href="#" target="_blank">
+      <a href="https://novaposhta.ua/" target="_blank">
         <img src="../../../data/partners/np.svg" height="80">
       </a>
     </div>

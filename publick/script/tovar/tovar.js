@@ -74,6 +74,20 @@ var Index = {
      });
    },
    DESIGHN: function(){
+
+
+$(document).ready(function(){
+
+  $(".dropdown").click(function(){
+    $(".menu").toggleClass("showMenu");
+      $(".menu > li").click(function(){
+        $(".dropdown > p").html($(this).html());
+          $(".menu").removeClass("showMenu");
+      });
+  });
+
+});
+
      $(".filtersBtn").click(function(){
        if($(".filtersBtn").hasClass('activeFilter')){
          $(".filtersBtn").removeClass('activeFilter');

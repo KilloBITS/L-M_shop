@@ -490,6 +490,7 @@ fieldset, label { margin: 0; padding: 0; }
   background-position: center;
   cursor: pointer;
   transition: 0.3s;
+  background-repeat: no-repeat;
 }
 
 .filtersBtn:hover{
@@ -511,4 +512,119 @@ fieldset, label { margin: 0; padding: 0; }
 }
 #tovarBanner img{
   max-width: 100%;
+}
+
+.paginator-last,.paginator-next{
+  display: none;
+}
+
+
+.dropholder{
+  /* width: 300px; */
+  height: 34px;
+  /* margin: 100px auto; */
+  /* padding: 0px 0 0 16px; */
+  border-radius: 4px;
+  font: 18px arial;
+  color: #000;
+  /* position: relative; */
+  box-sizing: border-box;
+  border: 1px solid rgba(209, 209, 209, 0.59);
+  /* animation: move 3s ease-in-out infinite; */
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 5px;
+}
+.dropholder:hover, .dropholder:hover:after{
+  animation-play-state:paused;
+}
+
+p{
+  float: left;
+  line-height: 32px;
+}
+.dropdown > p{
+  font-size:16px;
+}
+.dropdown, .dropholder{
+    background: linear-gradient(#ffe4f100 ,#ffffff00);
+}
+.dropdown{
+  /* margin-left: 20px; */
+  float: left;
+  width: 200px;
+  padding: 0 0 0 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  height: 32px;
+  /* border-left: 1px solid #d1d1d1; */
+  position: relative;
+}
+
+.dropdown:after{
+  content: "▾";
+  font-size: 28px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  display: block;
+  color: #dd127b;
+}
+
+.menu{
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 228px;
+  cursor: pointer;
+  opacity: 0;
+  transform-style: preserve-3d;
+  transform: rotatey(180deg) rotateX(5deg) translatey(100px);
+  backface-visibility: hidden;
+  background: linear-gradient(#ffffff ,#ffffff);
+  border: 2px solid #dadada;
+  border-radius: 4px;
+  transition: all 0.8s;
+  z-index: 5;
+  overflow: hidden;
+}
+.menu li{
+  padding: 8px 0px;
+  border-bottom: 1px dotted #fff;
+  color: #000000;
+  transition: all 0.3s;
+}
+.menu li:hover{
+  background:#61ccfd;
+  padding-left:20px;
+}
+.menu li:last-child{
+  border:none;
+}
+
+.showMenu{
+   opacity:1;
+  transform:rotateX(0deg) translatey(0px);
+}
+li > i{
+  float: left;
+  padding-top: 0;
+  padding-right: 0;
+}
+p > i{
+ position: relative;
+ top:2px;
+}
+i{
+  opacity: 0.7;
+}
+@keyframes move{
+  0%, 100%{transform:translateY(-10px);}
+  50%{transform:translateY(0);}
+}
+
+@keyframes moveShadow{
+  0%,100%{transform:translateY(10px);opacity:0.4;}
+  50%{transform:translateY(0);opacity:1;}
 }

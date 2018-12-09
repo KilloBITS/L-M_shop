@@ -59,6 +59,7 @@ app.use('/delivery*', delivery);
 app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
+
 app.get('/logout', function(req, res) {
     req.session.destroy(function(err) {
       // cannot access session here
@@ -106,6 +107,11 @@ app.post('/counters', counters);
 
 const stock = require('./controllers/controllerStock');
 app.post('/getStock', stock);
+
+const newPartnersNumber =  require('./controllers/controllerPartners');
+app.post('/newPartnersNumber', newPartnersNumber);
+
+
 /*ADMIN*/
 //парсим админа
 const parseAdmin = require('./controllers/admin/controllerIsAdmin');
@@ -183,7 +189,7 @@ app.listen(4111, function(){
   global.online = 0;
   require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
-    // 
+    //
     // mongoClient.connect(global.baseIP, function(err, client){
     //   const db = client.db(global.baseName);
     //   var tovar  = db.collection("tovar");

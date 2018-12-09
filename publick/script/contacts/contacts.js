@@ -1,5 +1,12 @@
 var ML;
 $(document).ready(function(){
+  $("#setNumber").click(function(){
+    $('#loaderNumber').fadeIn(300);
+    $.post('/newPartnersNumber',{number: $("#phoneNumMask").val()}, function(res){
+      $('#loaderNumber').fadeOut(300);
+    });
+  });
+  $("#phoneNumMask").mask("+38(099) 999-9999");
   $( ".menuBTN" ).hover(function() {
     try{
       $("."+ ML+",.opensMenu").hide();

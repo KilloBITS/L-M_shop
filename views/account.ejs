@@ -49,6 +49,9 @@
       </div>
     </div>
 		<div class="logotype"></div>
+    <div class="topNavBlockOfBtm">
+      <a href="/logout"><div class="userlogoutInBlock" title="Выход"></div></a>
+    </div>
 	</div>
   <div class="topLine twoLine">
     <div class="menuBlock">
@@ -121,7 +124,7 @@
               </span>
             </div>
             <div class="progress">
-              <div class="progress-bar" style="width: 72%;"></div>
+              <div class="progress-bar" style="width: <%= parseInt(user.LM_COIN) / 10 %>%"></div>
               <div class="progress_start">0</div>
               <div class="progress_end">1000</div>
             </div>
@@ -238,6 +241,18 @@
           <% } else { %>
               <div class="noNewsMessage">
                 У вас нет покупок.
+                <div class="goToShop">
+
+                  <div class="css-button">
+                    <p class="css-button-text">Перейти в каталог</p>
+                    <div class="css-button-inner">
+                      <div class="reset-skew">
+                        <p class="css-button-inner-text" style="line-height: 31px;">Перейти в каталог</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
           <% } %>
         </div>
