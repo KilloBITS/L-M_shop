@@ -36,6 +36,7 @@ router.get('/', function(req, res, next){
           const users  = db.collection("users");
           const titles_page  = db.collection("titles_page");
           const suppliers  = db.collection("suppliers");
+          const payments  = db.collection("payments");
 
           const counters = db.collection("counters");
           if(err) return console.log(err);
@@ -53,25 +54,28 @@ router.get('/', function(req, res, next){
                              titles_page.find().toArray(function(err, results_titles_page ){
                                menuuk.find().sort({ isEnded: 1 }).toArray(function(err, results_menuuk ){
                                  suppliers.find().sort({ isEnded: 1 }).toArray(function(err, results_suppliers ){
-                                   res.render('admin/panel/panel.ejs',{  //admin/panel/panel.ejs
-                                     conf: results_config[0],
-                                     confua: results_config[1],
-                                     menu: results_menu,
-                                     menuuk: results_menuuk,
-                                     slides: results_slider,
-                                     news: results_news,
-                                     tovar: results_tovar,
-                                     tovaruk: results_tovaruk,
-                                     type: results_types,
-                                     categorie: results_categories,
-                                     users: results_users,
-                                     counters: results_counters,
-                                     online: global.online,
-                                     titles: results_titles_page,
-                                     user: req.session.user,
-                                     suppliersData: results_suppliers
-                                   })
-                                   client.close();
+                                   payments.find().sort({ isEnded: 1 }).toArray(function(err, results_payments ){
+                                     res.render('admin/panel/panel.ejs',{  //admin/panel/panel.ejs
+                                       conf: results_config[0],
+                                       confua: results_config[1],
+                                       menu: results_menu,
+                                       menuuk: results_menuuk,
+                                       slides: results_slider,
+                                       news: results_news,
+                                       tovar: results_tovar,
+                                       tovaruk: results_tovaruk,
+                                       type: results_types,
+                                       categorie: results_categories,
+                                       users: results_users,
+                                       counters: results_counters,
+                                       online: global.online,
+                                       titles: results_titles_page,
+                                       user: req.session.user,
+                                       suppliersData: results_suppliers,
+                                       payments: results_payments
+                                     })
+                                     client.close();
+                                   });
                                  });
                                });
                              });

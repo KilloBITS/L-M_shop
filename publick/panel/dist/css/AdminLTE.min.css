@@ -5539,3 +5539,11 @@ table.text-center, table.text-center td, table.text-center th {
     margin-bottom: 0px;
     /* position: relative; */
 }
+
+.miniPayFIO{
+
+}
+
+.payLine{
+  border-bottom: 1px solid silver;
+}

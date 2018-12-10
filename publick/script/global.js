@@ -86,7 +86,7 @@ var Global = {
 $(document).ready(function() {
   Global.BTN();
   setTimeout(function() {
-    $(".spn_hol").css({"transform": "scale(5)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
+    $(".spn_hol").css({"transform": "scale(3)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
   }, 1500);
 
 });

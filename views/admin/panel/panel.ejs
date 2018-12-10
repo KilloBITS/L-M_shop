@@ -280,7 +280,7 @@
 
           <li class="miniClick"><a href="#"><i class="fa fa-cubes"></i> <span>Управление товарами</span></a></li>
           <li class="miniClick"><a href="#"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
-          <li class="miniClick"><a href="#"><i class="fa fa-comments"></i> <span>Сообщения</span></a></li>
+          <li class="miniClick"><a href="#"><i class="fa fa-comments"></i> <span>Заказы</span></a></li>
           <li class="miniClick"><a href="#"><i class="fa fa-cog"></i> <span>Система</span></a></li>
 
         </ul>
@@ -1327,22 +1327,58 @@
       <!-- настройка связи -->
       <div class="pageOfPanel">
         <section class="content">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="box box-primary">
               <div class="box-header with-border">
-                <h3 class="box-title">Настройки связи</h3>
+                <h3 class="box-title">Список заказов</h3>
               </div>
               <div class="box-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label>Email для обратной связи</label>
-                    <input type="text" class="form-control" id="ShopEmail" value="<%= conf.email %>" placeholder="Enter ...">
+
+
+
+                <% for(var p = 0; p < payments.length; p++) { %>
+
+                <div class="col-md-3">
+                  <div class="box box-warning box-solid">
+                    <div class="box-header with-border">
+                      <h3 class="box-title"><%= payments[p].id %></h3>
+                      <div class="miniPayFIO"><%= payments[p].FIO %></div>
+
+                      <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                      </div>
+                      <!-- /.box-tools -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body" style="">
+                      <div class="payLine"><%= payments[p].number %></div>
+                      <div class="payLine"><%= payments[p].today %></div>
+                      <div class="payLine"><%= payments[p].summa %> Грн</div>
+                      <div class="payLine"><%= payments[p].bonus %> бонус</div>
+
+                      <% if(parseInt(payments[p].status) === 0){ %>
+                        <div class="payLine">Новый</div>
+                      <% } %>
+
+                      <% if(parseInt(payments[p].status) === 1){ %>
+                        <div class="payLine">В обработке</div>
+                      <% } %>
+                      <div class="payLine"><%= payments[p].PAYS %></div>
+                      <div class="payLine"><%= payments[p].dostavka %></div>
+                      <div class="payLine"><%= payments[p].adress %></div>
+                    </div>
+                    <!-- /.box-body -->
                   </div>
-                  <div class="form-group">
-                    <label>Номер для связи</label>
-                    <input type="text" class="form-control" id="ShopNumber" value="<%= conf.number %>" placeholder="Enter ...">
-                  </div>
-                </form>
+                  <!-- /.box -->
+                </div>
+
+                <% } %>
+
+
+
+
+
               </div>
             </div>
           </div>
