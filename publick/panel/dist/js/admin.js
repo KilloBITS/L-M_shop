@@ -237,6 +237,7 @@ var ADMIN = {
     var url = '/setAdmTovar';
 
     $.post(url,{ru:save_data, ua:save_data_ua, file: ADMIN.GLOBAL_FILE, te: ADMIN.NEW_TOVAR, ai:ADMIN.EDIT_AI_SELECT},function(res){
+      if(res.code === 500){
         ADMIN.CANCEL();
         ADMIN.CONSOLE_TO_MESSAGE('res');
         $("#example1 tbody").prepend('<tr class="tovar-ai-1 odd" role="row"> <td class="sorting_1"> NEW </td> <td> ' + save_data.title + ' <small> <div class="miniTitleNameIcon"></div> </small> </td> <td class="NOTMOBILE"> ' + save_data.price + ' UAH </td> <td class="tovar_active NOTMOBILE" style="background-color: #169814; text-align: center; color: white"> Товар активен <div class="visibility_off" title="Выключить товар" onclick="ADMIN.TOVAR_VISIBILITY(false, 1); $(this).parent().css({"background-color": "#981414"}).removeClass("tovar_active").addClass("tovar_none_active")"></div> </td> <td class=""> <a class="btn btn-app" title="Редактировать" onclick="ADMIN.EDIT_TOVAR(1)"> <i class="fa fa-edit"></i> </a> <a class="btn btn-app" title="Удалить" onclick="ADMIN.TOVAR_REMOVE(1)"> <i class="fa fa-ban"></i> </a> </td> </tr>');
@@ -245,6 +246,11 @@ var ADMIN = {
         $('#tName, #tName_ua ,#tIncrement ,#tPrice ,#tSale ,#tText ,#tText_ua').val('');
         $('.ViewImage').remove();
         $('#modal-info').modal('hide')
+      }else{
+        alert(res.message);
+        ADMIN.CONSOLE_TO_MESSAGE('res');
+      }
+
     });
   },
   EDIT_TOVAR: function(ai){

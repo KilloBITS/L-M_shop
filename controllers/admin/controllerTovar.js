@@ -182,18 +182,25 @@ var setAdmTovar = (req, res, next) => {
         }
         today = mm + '-' + dd + '-' + yyyy;
 
-        if(mainData.te === "true"){
-          createUA(mainData.ua, NEXT_AI, mainData.file.length, today);
-          createRU(mainData.ru, NEXT_AI, mainData.file.length, today);
-          createFile(mainData.file, NEXT_AI);
-        }else{
-          updateUA(mainData.ua, mainData.ai);
-          updateRU(mainData.ru, mainData.ai);
-          if(mainData.file.length > 20){
-            updateFile(mainData.file, mainData.ai);
+        try{
+          if(mainData.te === "true"){
+            createUA(mainData.ua, NEXT_AI, mainData.file.length, today);
+            createRU(mainData.ru, NEXT_AI, mainData.file.length, today);
+            createFile(mainData.file, NEXT_AI);
+          }else{
+            updateUA(mainData.ua, mainData.ai);
+            updateRU(mainData.ru, mainData.ai);
+            if(mainData.file.length > 20){
+              updateFile(mainData.file, mainData.ai);
+            }
           }
+          res.send({code: 500});
+        }catch(e){
+          console.log(e);
+          res.send({code: 450, message: 'КАКАЯ ТО БЛЯТЬ ОШИБКА!!! ЗОВИ ИГОРЯ!!!'});
         }
-        res.send({code: 500});
+
+
       });
     });
   }else{
