@@ -429,3 +429,7 @@ svg { visibility: hidden }
   cursor: pointer;
   border: 0;
 }
+
+.containerPartnersData img{
+  margin: 20px;
+}
