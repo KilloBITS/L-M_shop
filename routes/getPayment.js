@@ -145,7 +145,7 @@ router.get('/', function(req, res, next){
     });
 
 
-  }else{//если оплата картой
+  }else{//если оплата переводом на карту
     mongoClient.connect(global.baseIP, function(err, client){
         const db = client.db(global.baseName);
         const config = db.collection("config");
@@ -182,7 +182,7 @@ router.get('/', function(req, res, next){
              NEW_ZAKAZ.bonus = lmCoin;
              NEW_ZAKAZ.status = 0;
              NEW_ZAKAZ.TTH = null;
-             NEW_ZAKAZ.PAYS = 'Одидает оплаты';
+             NEW_ZAKAZ.PAYS = 'Ожидает оплаты';
              NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
 
              if(parseInt(req.query.dosttype) === 0){ //Самовывоз

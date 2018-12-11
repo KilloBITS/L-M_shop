@@ -1265,6 +1265,7 @@ a.indexBtnToShop {
   background-size: contain;
   right: -2px;
   top: 0;
+  background-position: -1px;
 }
 
 .flickity-prev-next-button .arrow {

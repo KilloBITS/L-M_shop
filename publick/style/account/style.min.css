@@ -234,5 +234,39 @@
   .LBB {
       display: none;
   }
-
+  .otpravka_line {
+    position: absolute;
+    width: calc(100% - 158px);
+    height: 2px;
+    background: #bb0000;
+    left: 3px;
+    top: -8px;
+    box-shadow: 3px 2px 0px 0px rgba(236, 0, 89, 0.39);
+  }
+  .line_point div {
+    position: absolute;
+    top: -21px;
+    left: -4px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+  .details_TTH {
+    right: 7px;
+    top: 14px;
+    font-size: 12px;
+    padding: 4px 15px;
+    background: silver;
+    width: fit-content;
+    margin: auto;
+    margin-top: 12px;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #8c8c8c;
+    border-bottom: 0;
+    transition: 0.3s;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+  }
 }

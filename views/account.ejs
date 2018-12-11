@@ -174,9 +174,10 @@
                   </div>
                   <a href="/delivery?<%= payments_user[i].id %>" target="_blank"> <div class="placeList">Посмотреть чек</div> </a>
                   <div class="placeDate"><%= payments_user[i].today %></div>
+                  <div class="placePAYS"><%= payments_user[i].PAYS %></div>
                   <div class="otpravka_line">
                     <div class="line_point onePoint">
-                      <div class="pointImage1 current"></div>
+                      <div class="pointImage1"></div>
                     </div>
                     <div class="line_point twoPoint">
                       <div class="pointImage2"></div>
@@ -195,50 +196,95 @@
                   <div class="cancel_zakaz"></div>
                   <% if(payments_user[i].status === 0) { %>
                     <div class="placeStatus">Заказ в обработке</div>
-                  <% } else { %>
-                    <div class="placeStatus">Товар отправлен</div>
-                      <div class="TTH"><%= payments_user[i].TTH %></div>
-                      <div class="details_TTH"></div>
-                    <script>
-                    var CCC = {
-                      "apiKey": "<%= conf.NEW_POST_API %>",
-                      "modelName": "TrackingDocument",
-                      "calledMethod": "getStatusDocuments",
-                      "methodProperties": {
-                          "Documents": [
-                              {
-                                  "DocumentNumber": "<%= payments_user[i].TTH %>",
-                                  "Phone":""
-                              }
-                          ]
-                      }
-
-                    };
-
-                    $(function() {
-                      var settings = {
-                        "async": true,
-                        "crossDomain": true,
-                        "url": "https://api.novaposhta.ua/v2.0/json/",
-                        "method": "POST",
-                        "headers": {
-                          "content-type": "application/json",
-                        },
-                        "processData": false,
-                        "data": JSON.stringify(CCC)
-                      }
-
-                      $.ajax(settings).done(function (response) {
-                        $(".details_TTH").html('<b>'+response.data[0].Status+'</b>')
-                      });
-                    });
-                    </script>
                   <% } %>
 
+                  <% if(payments_user[i].status === 0) { %>
+                    <div class="placeStatus">Товар укомплектован</div>
+                  <% } %>
 
+                  <% if(payments_user[i].status === 2) { %>
+                    <div class="placeStatus">Товар отправлен</div>
+                    <div class="TTH"><%= payments_user[i].TTH %></div>
+                    <div class="details_TTH"></div>
+                  <% } %>
+
+                  <% if(payments_user[i].status === 3) { %>
+                    <div class="placeStatus" style="color: red;">заказ отменен</div>
+                  <% } %>
                 </div>
             <% } %>
             </div>
+            <script>
+            const MyPhone = "<%= user.phone_number %>".replace(/[^0-9.]/g,'')
+            var CCC = {
+              "apiKey": "<%= conf.NEW_POST_API %>",
+              "modelName": "TrackingDocument",
+              "calledMethod": "getStatusDocuments",
+              "methodProperties": {
+                  "Documents": [
+                    <% for(var it = 0; it < payments_user.length; it++) { %>
+                      <% if(payments_user[it].status === 2) { %>
+                        {
+                            "DocumentNumber": "<%= payments_user[it].TTH %>",
+                            "Phone":MyPhone
+                        },
+                      <% } %>
+                    <% } %>
+                  ]
+              }
+
+            };
+
+            $(function() {
+              var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.novaposhta.ua/v2.0/json/",
+                "method": "POST",
+                "headers": {
+                  "content-type": "application/json",
+                },
+                "processData": false,
+                "data": JSON.stringify(CCC)
+              }
+
+              $.ajax(settings).done(function (response) {
+                console.log(response);
+                for(let i = 0; i < response.data.length; i++){
+                  if(parseInt(response.data[i].StatusCode) == 1){
+                    $(".otpravka_line:eq("+i+") .line_point:eq(1) div").addClass('current');
+                  }
+
+                  if(parseInt(response.data[i].StatusCode) == 4 && parseInt(response.data[i].StatusCode) == 41 && parseInt(response.data[i].StatusCode) == 5){
+                    $(".otpravka_line:eq("+i+") .line_point:eq(2) div").addClass('current');
+                  }
+
+                  if(parseInt(response.data[i].StatusCode) == 6){
+                    $(".otpravka_line:eq("+i+") .line_point:eq(3) div").addClass('current');
+                  }
+
+                  if(parseInt(response.data[i].StatusCode) == 7 && parseInt(response.data[i].StatusCode) == 8){
+                    $(".otpravka_line:eq("+i+") .line_point:eq(4) div").addClass('current');
+                  }
+
+
+
+
+                  if(parseInt(response.data[i].StatusCode) < 9){
+                    $(".details_TTH:eq("+i+")").html('<b>'+response.data[i].Status+'</b>');
+                  }else{
+                    $(".details_TTH:eq("+i+")").html('<b>'+response.data[i].Status+'</b>');
+                    var zo = document.createElement('div');
+                    zo.className = 'otrimanoData';
+                    zo.innerHTML = 'Заказ получен :)';
+                    $(".tileline:eq("+i+")").addClass("otrimano").append(zo);
+
+                  }
+
+                }
+              });
+            });
+            </script>
           <% } else { %>
               <div class="noNewsMessage">
                 У вас нет покупок.

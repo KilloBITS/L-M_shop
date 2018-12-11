@@ -1574,12 +1574,12 @@ color: red;
 .tileline{
   text-align: center;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   border: 1px solid #dd127b;
   color: #03254a;
   margin: 60px 0;
   position: relative;
-  background: linear-gradient(-53deg, #ffffff 79%,#0a0a0ade 80%,#a5003d 40%,#f7005e 98%);;
+  background: linear-gradient(-53deg, #ffffff 79%,#0a0a0ade 80%,#a5003d 40%,#f7005e 98%);
   min-height: 46px;
   margin-top: 34px;
 }
@@ -1623,9 +1623,9 @@ color: red;
 }
 .TTH{
   position: absolute;
-    right: 7px;
-    top: 0;
-    font-size: 12px;
+  right: 14px;
+  top: 0;
+  font-size: 12px;
 }
 .placeDate{
   position: absolute;
@@ -1635,6 +1635,16 @@ color: red;
   opacity: 1;
   color: white;
 }
+
+.placePAYS{
+  position: absolute;
+  left: 6px;
+  top: 16px;
+  font-size: 14px;
+  opacity: 1;
+  color: #d8ff00;
+}
+
 .placeStatus{
   position: absolute;
   right: -1px;
@@ -1828,10 +1838,20 @@ color: red;
 
 
 .details_TTH{
-  position: absolute;
   right: 7px;
   top: 14px;
   font-size: 14px;
+  padding: 4px 15px;
+  background: silver;
+  width: fit-content;
+  margin: auto;
+  margin-top: 12px;
+  border-radius: 15px 15px 0 0;
+  border: 1px solid #8c8c8c;
+  border-bottom: 0;
+  transition: 0.3s;
+  color: black;
+  text-shadow: 1px 1px 1px white;
 }
 
 #ballance{
@@ -2119,4 +2139,35 @@ p.css-button-text {
 @-webkit-keyframes buttonx-out {
     from {transform: skew(-42deg) translate(0, 0);}
     to {transform: skew(-42deg) translate(300px, -0px);}
+}
+.otrimano{
+  filter: grayscale(100%)
+}
+
+.otrimano div{
+  filter: blur(3px) grayscale(100%);
+  transition: 0.3s;
+}
+
+.otrimano:hover{
+    filter: grayscale(0%)
+}
+.otrimano:hover div{
+  transition: 0.3s;
+  filter: blur(0px) grayscale(0%);
+}
+
+.otrimano:hover .otrimanoData{
+  opacity: 0
+}
+
+div.otrimanoData{
+  filter: blur(0px) grayscale(0%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 7px 30px;
 }
