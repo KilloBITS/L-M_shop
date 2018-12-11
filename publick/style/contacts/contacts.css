@@ -354,6 +354,7 @@ svg { visibility: hidden }
   padding-top: 50px;
   max-width: 1024px;
   margin: auto;
+  padding-bottom: 30px;
 }
 
 .block_left,.block_right{

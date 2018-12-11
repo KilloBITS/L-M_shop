@@ -254,7 +254,6 @@ var ADMIN = {
     });
   },
   EDIT_TOVAR: function(ai){
-
     ADMIN.NEW_TOVAR = false;
     ADMIN.EDIT_AI_SELECT = parseInt(ai);
       $('#modal-info').modal('show')

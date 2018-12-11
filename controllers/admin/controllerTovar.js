@@ -64,28 +64,42 @@ var createUA = function(data, ai, l, dateCreate){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovaruk  = db.collection("tovar-uk");
+    const LOGS = db.collection("LOGS");
     if(err) return console.log(err);
-    var NEW_TOVAR_UA = data;
-    NEW_TOVAR_UA.availability = true;
-    NEW_TOVAR_UA.category = parseInt(NEW_TOVAR_UA.category),
-    NEW_TOVAR_UA.popular = 5;
-    NEW_TOVAR_UA.AI = ai;
-    NEW_TOVAR_UA.image = "tov"+ai+".jpg";
-    NEW_TOVAR_UA.sale = data.sale;
-    NEW_TOVAR_UA.postavka = data.postavka;
-    NEW_TOVAR_UA.tIncrement = data.tIncrement;
-    NEW_TOVAR_UA.sizes = data.sizes;
-    NEW_TOVAR_UA.visual = 0;
-    // NEW_TOVAR_UA.Create_date = dateCreate;
-    var imageArray = [];
+    try {
+      var NEW_TOVAR_UA = data;
+      NEW_TOVAR_UA.availability = true;
+      NEW_TOVAR_UA.category = parseInt(NEW_TOVAR_UA.category),
+      NEW_TOVAR_UA.popular = 5;
+      NEW_TOVAR_UA.AI = ai;
+      NEW_TOVAR_UA.image = "tov"+ai+".jpg";
+      NEW_TOVAR_UA.sale = data.sale;
+      NEW_TOVAR_UA.postavka = data.postavka;
+      NEW_TOVAR_UA.tIncrement = data.tIncrement;
+      NEW_TOVAR_UA.sizes = data.sizes;
+      NEW_TOVAR_UA.visual = 0;
+      NEW_TOVAR_UA.Create_date = dateCreate;
+      var imageArray = [];
+      for(var i = 0; i < l; i++){
+        imageArray.push(ai + '/' + i + ".jpg");
+      }
+      NEW_TOVAR_UA.image = imageArray;
+      tovaruk.insertOne(NEW_TOVAR_UA);
 
-    for(var i = 0; i < l; i++){
-      imageArray.push(ai + '/' + i + ".jpg");
+      var NEW_LOGS = {};
+      NEW_LOGS.date = dateCreate;
+      NEW_LOGS.type = 'Добавлен новый товар';
+      NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR_UA.AI;
+      LOGS.insertOne(NEW_LOGS);
+    } catch (e) {
+      var NEW_LOGS = {};
+      NEW_LOGS.date = dateCreate;
+      NEW_LOGS.type = 'Ошибка добавления товара!';
+      NEW_LOGS.text = e;
+      LOGS.insertOne(NEW_LOGS);
     }
 
-    NEW_TOVAR_UA.image = imageArray;
 
-    tovaruk.insertOne(NEW_TOVAR_UA);
   });
 };
 
@@ -93,26 +107,40 @@ var createRU = function(data, ai, l, dateCreate){
   mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
     const db = client.db(global.baseName);
     const tovar  = db.collection("tovar");
+    const LOGS = db.collection("LOGS");
     if(err) return console.log(err);
-    var NEW_TOVAR = data;
-    NEW_TOVAR.availability = true;
-    NEW_TOVAR.category = parseInt(NEW_TOVAR.category),
-    NEW_TOVAR.popular = 5;
-    NEW_TOVAR.AI = ai;
-    NEW_TOVAR.sale = data.sale;
-    NEW_TOVAR.postavka = data.postavka;
-    NEW_TOVAR.tIncrement = data.tIncrement;
-    NEW_TOVAR.sizes = data.sizes;
-    NEW_TOVAR.visual = 0;
-    // NEW_TOVAR.Create_date = dateCreate;
-    var imageArray = [];
-    for(var i = 0; i < l; i++){
-      imageArray.push(ai + '/' + i + ".jpg");
+    try {
+      var NEW_TOVAR = data;
+      NEW_TOVAR.availability = true;
+      NEW_TOVAR.category = parseInt(NEW_TOVAR.category),
+      NEW_TOVAR.popular = 5;
+      NEW_TOVAR.AI = ai;
+      NEW_TOVAR.sale = data.sale;
+      NEW_TOVAR.postavka = data.postavka;
+      NEW_TOVAR.tIncrement = data.tIncrement;
+      NEW_TOVAR.sizes = data.sizes;
+      NEW_TOVAR.visual = 0;
+      NEW_TOVAR.Create_date = dateCreate;
+      var imageArray = [];
+      for(var i = 0; i < l; i++){
+        imageArray.push(ai + '/' + i + ".jpg");
+      }
+      NEW_TOVAR.image = imageArray;
+      tovar.insertOne(NEW_TOVAR);
+
+      var NEW_LOGS = {};
+      NEW_LOGS.date = dateCreate;
+      NEW_LOGS.type = 'Добавлен новый товар';
+      NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR_UA.AI;
+      LOGS.insertOne(NEW_LOGS);
+    } catch (e) {
+      var NEW_LOGS = {};
+      NEW_LOGS.date = dateCreate;
+      NEW_LOGS.type = 'Ошибка добавления товара!';
+      NEW_LOGS.text = e;
+      LOGS.insertOne(NEW_LOGS);
     }
 
-    NEW_TOVAR.image = imageArray;
-
-    tovar.insertOne(NEW_TOVAR);
   });
 };
 

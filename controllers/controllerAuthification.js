@@ -25,6 +25,7 @@ router.post('/auth', function(req, res, next){
     mongoClient.connect(global.baseIP, function(err, client){
       const db = client.db(global.baseName);
       const users = db.collection("users");
+      const LOGS = db.collection("LOGS");
       if(err) return console.log(err);
       users.find({email: req.body.login}).toArray(function(err, results_users){
         if((results_users.length !== 0) && (req.body.login === results_users[0].email && req.body.password === results_users[0].password)) {
@@ -32,6 +33,12 @@ router.post('/auth', function(req, res, next){
           req.session.admin = results_users[0].isAdmin;
           global.online = global.online + 1;
           res.send({code:500});
+
+          var NEW_LOGS = {};
+          NEW_LOGS.date = today;
+          NEW_LOGS.type = 'Авторизация пользователя';
+          NEW_LOGS.text = 'Авторизация: '+results_users[0].split('@')[0];
+          LOGS.insertOne(NEW_LOGS);
         }else{
           res.send({code:450, message: msg[languageSystem]});
         }
@@ -54,6 +61,7 @@ router.post('/create_accaunt', function(req, res, next){
   mongoClient.connect(global.baseIP, function(err, client){
     const db = client.db(global.baseName);
     const users = db.collection("users");
+    const LOGS = db.collection("LOGS");
     if(err) return console.log(err);
 
     users.find({email: req.body.newEmail}).toArray(function(err, results_usersEmail ){
@@ -71,6 +79,12 @@ router.post('/create_accaunt', function(req, res, next){
               mm = '0'+mm
           }
           today = mm + '-' + dd + '-' + yyyy;
+
+          var NEW_LOGS = {};
+          NEW_LOGS.date = today;
+          NEW_LOGS.type = 'Новый пользователь';
+          NEW_LOGS.text = 'Зарегистрирован новый пользователь: '+req.body.newEmail.split('@')[0];
+          LOGS.insertOne(NEW_LOGS);
 
           var mainData = req.body;
           var NEXT_AI = results_users[0].AI + 1;

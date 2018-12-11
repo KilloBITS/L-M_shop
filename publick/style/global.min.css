@@ -463,4 +463,9 @@
     padding: 20px 60px 15px 10px !important;
     text-align: right;
   }
+  .LBB, .CBB, .RBB {
+    width: 100%;
+    display: inline-block;
+    font-family: 'Didact Gothic', sans-serif;
+  }
 }

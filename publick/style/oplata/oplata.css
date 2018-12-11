@@ -91,8 +91,8 @@ img {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  border: 1px solid #dedede;
-  border-top: 3px solid #d84744;
+  border: 1px solid #ffb7b5;
+  border-top: 3px solid #fdcac9;
 }
 .card:hover .card__image {
   -webkit-filter: contrast(100%);
@@ -103,7 +103,7 @@ img {
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
-  background-color: #ffc9df;
+  background: #ffc9df url(../../../image/body.jpg);
 }
 .card__image {
   background-position: center center;

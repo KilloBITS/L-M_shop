@@ -123,7 +123,7 @@
       width: -moz-fit-content;
       margin: 0 auto;
       font-size: 26px;
-      padding-bottom: 30px;
+      padding-bottom: 0px;
       text-align: center;
   }
   .slide__bg {
@@ -340,4 +340,32 @@
       right: 70px;
       left: 10px;
   }
+  .number_phone {
+    border: 0;
+    outline: 0;
+    width: calc(100% - 20px);
+    margin: 0 0 0 10px;
+    height: 40px;
+    padding-left: 10px;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 8px 0 0;
+  }
+  #setNumber {
+    width: calc(100% - 20px);
+    display: inline-block;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    margin: 0 0 0 10px;
+    border-radius: 0 0 8px 8px;
+  }
+
 }
