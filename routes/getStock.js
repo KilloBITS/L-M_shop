@@ -6,8 +6,19 @@ const pagination = require('pagination');
 
 router.get('/*', function(req, res, next){
     var languageSystem, langMenu;
-    languageSystem = 0;
-    langMenu = 'menu';
+
+    if(req.cookies.pageLang === undefined){
+      languageSystem = "locale";
+      langMenu = "menu";
+    }else{
+      if(req.cookies.pageLang === 'ua'){
+        languageSystem = "locale-ua";
+        langMenu = "menu-ua";
+      }else{
+        languageSystem = "locale";
+        langMenu = "menu";
+      }
+    }
 
     var page = req.url.split('page=')[1];
 

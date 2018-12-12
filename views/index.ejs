@@ -284,8 +284,8 @@
 
 	<div class="data block">
 		<div class="mainDLG">
-			<div class="mainTitleDLG post" style="color: #f98eb9">Представляем вам наши новые товары</div>
-			<div class="mainTextDLG post" style="color: #f98eb9">База наших товаров постоянно пополняется чем-то новым, мы уверенны что вы найдете что то для себя</div>
+			<div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.title1[0] %></div>
+			<div class="mainTextDLG post" style="color: #f98eb9"><%= locale.title1[1] %></div>
 		</div>
 
     <div class="carousel-wrapper">
@@ -311,18 +311,13 @@
 		</div>
 
 		<div class="mainBTN_block" style="background: #ffc9df; padding-top: 20px;">
-			<a href="/"><div  data-ix="scale-on-scroll" class="mainBTN">Посмотреть больше товаров</div></a>
+			<a href="<%= locale.title1[2].link %>"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.title1[2].title %></div></a>
 		</div>
 
 		<div class="mainDLG" style="background: #ffc9df; color: #333333;">
-			<div class="mainTitleDLG post"  data-ix="scale-on-scroll">Вкратце о нас</div>
+			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.title2[0] %></div>
 			<div class="mainTextDLG post" data-ix="scale-on-scroll">
-        "<b>Lady & Man Shop</b>" - Огромный магазин одежды и аксессуаров.
-        На данный момент у нас большая сеть клиентов и покупателей и она постоянно растет.
-        На рынке мы недавно но за это время добились доверия многих покупателей.
-        И для того, чтобы девушки и женщины имели возможность купить красивые украшения и аксессуары по лучшей цене,
-        мы открыли интернет-магазин. Мы постоянно совершенствуем функционал сайта,
-        стараемся учитывать все пожелания наших покупателей, чтобы сделать его более удобным для Вас.
+        <%= locale.title2[1] %>
       </div>
       <div class="ucv-b4-panel">
         <div class="ucv-b4-wrapper">
@@ -353,7 +348,7 @@
 		</div>
 
 		<div class="mainBTN_block">
-			<a href="/"><div class="mainBTN"  data-ix="scale-on-scroll">Детальнее</div></a>
+			<a href="<%= locale.title2[2].link %>"><div class="mainBTN"  data-ix="scale-on-scroll"><%= locale.title2[2].title %></div></a>
       <div class="zub_lineB" style=""></div>
 		</div>
 
@@ -471,7 +466,7 @@
         <div class="edited_admin" title="Добавить новость" id="newNews"></div>
       <% } %>
       <div class="mainDLG">
-        <div class="mainTitleDLG" style="    margin-bottom: 22px;">Наши новости</div>
+        <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.title5[0] %></div>
       </div>
       <% for(var i = 0; i < news.length; i++) { %>
       <div class="column post"  data-ix="scale-on-scroll">
@@ -501,22 +496,22 @@
     <div class="counters_conent">
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="buyers"></div>
-        <div class="counters_text">Покупателей</div>
+        <div class="counters_text"><%= locale.title4[0] %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="products"></div>
-        <div class="counters_text">Товаров</div>
+        <div class="counters_text"><%= locale.title4[1] %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="purchases"></div>
-        <div class="counters_text">Покупок</div>
+        <div class="counters_text"><%= locale.title4[2] %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="discounts"></div>
-        <div class="counters_text">Скидок</div>
+        <div class="counters_text"><%= locale.title4[3] %></div>
         <div class="counters_length">0</div>
       </div>
     </div>
@@ -525,8 +520,8 @@
   <div class="contact block">
     <div class="zub_line"></div>
     <div class="mainDLG post">
-    	<div class="mainTitleDLG"  data-ix="scale-on-scroll">У вас есть пожелание или замечание ?</div>
-    	<div class="mainTextDLG"  data-ix="scale-on-scroll-delay-300">Напишите нам, мы всегда рады ваши сообщениям</div>
+    	<div class="mainTitleDLG"  data-ix="scale-on-scroll"><%= locale.title3[0] %></div>
+    	<div class="mainTextDLG"  data-ix="scale-on-scroll-delay-300"><%= locale.title3[1] %></div>
     </div>
     <form class="cf">
       <div class="half left cf">
@@ -563,7 +558,7 @@
 			</div>
 			<div class="CBB">
 				<div class="vectorLogo"></div>
-				<div class="copiright"><%= conf.copiright %></div>
+				<div class="copiright"><%= global.copiright %></div>
         <div class="socials">
           <% for(var i = 0; i < conf.socials.length; i++) { %>
           <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
@@ -578,10 +573,10 @@
         <div class="adressLineMap"><%= conf.emailTitle %></div>
 				<a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
         <div class="adressLineMap"></div>
-        <!-- <div class="adressLineMap">
+        <div class="adressLineMap">
           <div class="lang" id="ua" title="Українська версія"></div>
           <div class="lang" id="ru" title="Русская версия"></div>
-        </div> -->
+        </div>
         <div class="certificated">
           <div class="certificate" id="byVisa"></div>
           <div class="certificate" id="byMasterCard"></div>

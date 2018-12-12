@@ -72,7 +72,7 @@ var Global = {
       $('.basket_info').show(300);
     });
     $(".lang").click(function(){
-      document.cookie = "vernissageLang="+$(this).attr("id");
+      document.cookie = "pageLang="+$(this).attr("id");
       location.reload();
     });
     if($("body").width() > 800){

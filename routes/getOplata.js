@@ -6,18 +6,19 @@ const mongoClient = require("mongodb").MongoClient;
 
 router.get('/', function(req, res, next){
   var languageSystem, langMenu;
-  // if(req.cookies.vernissageLang === undefined){
-    languageSystem = 0;
-    langMenu = 'menu';
-  // }else{
-  //   if(req.cookies.vernissageLang === 'ua'){
-  //     languageSystem = 1;
-  //     langMenu = 'menu-uk';
-  //   }else{
-  //     languageSystem = 0;
-  //     langMenu = 'menu';
-  //   }
-  // }
+
+  if(req.cookies.pageLang === undefined){
+    languageSystem = "locale";
+    langMenu = "menu";
+  }else{
+    if(req.cookies.pageLang === 'ua'){
+      languageSystem = "locale-ua";
+      langMenu = "menu-ua";
+    }else{
+      languageSystem = "locale";
+      langMenu = "menu";
+    }
+  }
 
   mongoClient.connect(global.baseIP, function(err, client){
       const db = client.db(global.baseName);
@@ -28,12 +29,12 @@ router.get('/', function(req, res, next){
 
      titles_page.find().toArray(function(err, results_titles_page){
        config.find().toArray(function(err, results_config){
-         if(results_config[languageSystem].opens){
+         if(results_config[0].opens){
            menu.find().sort({index: 1 }).toArray(function(err, results_menu ){
              res.render('oplata.ejs',{
-               conf: results_config[languageSystem],
+               conf: results_config[0],
                menu: results_menu,
-               title: results_titles_page[languageSystem].oplata,
+               title: results_titles_page[0].oplata,
                sessionUser: req.session.user,
                isAdm: req.session.admin
              })
@@ -41,7 +42,7 @@ router.get('/', function(req, res, next){
            });
          }else{
            res.render('close.ejs',{
-             conf: results_config[languageSystem],
+             conf: results_config[0],
              isAdm: req.session.admin
            })
          }

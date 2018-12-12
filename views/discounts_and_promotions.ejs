@@ -293,7 +293,7 @@
     </div>
     <div class="CBB">
       <div class="vectorLogo"></div>
-      <div class="copiright"><%= conf.copiright %></div>
+      <div class="copiright"><%= global.copiright %></div>
       <div class="socials">
         <% for(var i = 0; i < conf.socials.length; i++) { %>
         <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
@@ -308,10 +308,10 @@
       <div class="adressLineMap"><%= conf.emailTitle %></div>
       <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
       <div class="adressLineMap"></div>
-      <!-- <div class="adressLineMap">
+      <div class="adressLineMap">
         <div class="lang" id="ua" title="Українська версія"></div>
         <div class="lang" id="ru" title="Русская версия"></div>
-      </div> -->
+      </div>
       <div class="certificated">
         <div class="certificate" id="byVisa"></div>
         <div class="certificate" id="byMasterCard"></div>

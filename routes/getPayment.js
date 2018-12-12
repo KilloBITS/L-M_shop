@@ -29,18 +29,19 @@ var SendToTelega = function(ZAKAZ_TO_TELEGA){
 
 router.get('/', function(req, res, next){
   var languageSystem, langMenu;
-  // if(req.cookies.vernissageLang === undefined){
-    languageSystem = 0;
-    langMenu = 'menu';
-  // }else{
-  //   if(req.cookies.vernissageLang === 'ua'){
-  //     languageSystem = 1;
-  //     langMenu = 'menu-uk';
-  //   }else{
-  //     languageSystem = 0;
-  //     langMenu = 'menu';
-  //   }
-  // }
+
+  if(req.cookies.pageLang === undefined){
+    languageSystem = "locale";
+    langMenu = "menu";
+  }else{
+    if(req.cookies.pageLang === 'ua'){
+      languageSystem = "locale-ua";
+      langMenu = "menu-ua";
+    }else{
+      languageSystem = "locale";
+      langMenu = "menu";
+    }
+  }
 
   //расчет общей суммы
   var sum = 0;
