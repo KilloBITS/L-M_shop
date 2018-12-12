@@ -9,10 +9,11 @@ router.use(cookieParser());
 
 router.post('/auth', function(req, res, next){
   var msg = ['Неверный логин или пароль','Невірно введені данні'];
-  if(req.cookies.vernissageLang === undefined){
+
+  if(req.cookies.pageLang === undefined){
     var languageSystem = 0;
   }else{
-    if(req.cookies.vernissageLang === 'ua'){
+    if(req.cookies.pageLang === 'ua'){
       var languageSystem = 1;
     }else{
       var languageSystem = 0;
