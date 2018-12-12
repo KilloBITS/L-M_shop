@@ -47,7 +47,7 @@ router.get('/*', function(req, res, next){
 
        titles_page.find().toArray(function(err, results_titles_page){
          config.find().toArray(function(err, results_config){
-           if(results_config[languageSystem].opens){
+           if(results_config[0].opens){
              menu.find().sort({ index: 1 }).toArray(function(err, results_menu ){
                users_session.find({email: req.session.user}).toArray(function(err, results_users_session ){
                  if(results_users_session.length > 0){
@@ -68,10 +68,10 @@ router.get('/*', function(req, res, next){
                         var p = paginator.getPaginationData();
                         console.log(p)
                         res.render('stock.ejs',{
-                          conf: results_config[languageSystem],
+                          conf: results_config[0],
                           menu: results_menu,
                           tovarArr: results_tovar.slice(otTovar, doTovar),
-                          title: results_titles_page[languageSystem].tovar,
+                          title: results_titles_page[0].tovar,
                           sessionUser: req.session.user,
                           users_data: uSession,
                           offLength: results_tovar.length,

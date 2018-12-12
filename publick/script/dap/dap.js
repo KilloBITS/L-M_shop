@@ -42,11 +42,11 @@ $(document).ready(function(){
       // switch(index){
       //
       // }
-      $('.phone').hide();
+      // $('.phone').hide();
       $('.phone,.modealData').hide();
 
       if(index === 1){
-          $('.phone').show();
+          // $('.phone').show();
       }
       $('.modealData:eq('+index+')').show();
       $overlay.addClass('state-show');
