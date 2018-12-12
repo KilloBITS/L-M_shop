@@ -56,8 +56,7 @@ router.get('/', function(req, res, next){
                                  suppliers.find().sort({ isEnded: 1 }).toArray(function(err, results_suppliers ){
                                    payments.find().sort({ isEnded: 1 }).toArray(function(err, results_payments ){
                                      res.render('admin/panel/panel.ejs',{  //admin/panel/panel.ejs
-                                       conf: results_config[0],
-                                       confua: results_config[1],
+                                       conf: results_config[0],                                       
                                        menu: results_menu,
                                        menuuk: results_menuuk,
                                        slides: results_slider,

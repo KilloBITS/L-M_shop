@@ -707,18 +707,12 @@
                                 <input type="text" class="form-control RU_PIC" id="" value="<%= menu[i].podlink[il].pname %>" placeholder="Enter ...">
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group has-warning">
-                                <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Название на Украинском</label>
-                                <input type="text" class="form-control UA_PIC" id="" value="<%= menuuk[i].podlink[il].pname %>" placeholder="Enter ...">
-                              </div>
-                            </div>
                             <div class="form-group has-warning">
                               <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> Ссылка</label>
                               <input type="text" class="form-control" id="" value="<%= menu[i].podlink[il].plink %>" placeholder="Вводится автоматически" disabled>
                             </div>
 
-                            <button type="button" class="btn btn-block btn-danger btn-sm" onclick="ADMIN.REMOVE_TYPE(<%= menu[i].index %>, '<%= menu[i].podlink[il].pname %>','<%= menuuk[i].podlink[il].pname %>')">Удалить тип</button>
+                            <button type="button" class="btn btn-block btn-danger btn-sm" onclick="ADMIN.REMOVE_TYPE(<%= menu[i].index %>, '<%= menu[i].podlink[il].pname %>')">Удалить тип</button>
                           </div>
                         </div>
                       <% } %>
@@ -810,10 +804,6 @@
                     <label>Заголовок блока на Русском</label>
                     <input type="text" class="form-control RU_PIC" id="newsB_titleNEW_ru" value="<%= conf.news %>" placeholder="Enter ...">
                   </div>
-                  <div class="form-group">
-                    <label>Заголовок блока на Украинском</label>
-                    <input type="text" class="form-control UA_PIC" id="newsB_titleNEW_ua" value="<%= confua.news %>" placeholder="Enter ...">
-                  </div>
                 </form>
               </div>
             </div>
@@ -891,10 +881,7 @@
                     <label>на Русском</label>
                     <input type="text" class="form-control RU_PIC" id="btn_shopDetails" value="<%= conf.btnDetails %>" placeholder="Enter ...">
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <input type="text" class="form-control UA_PIC" id="btn_shopDetails_ua" value="<%= confua.btnDetails %>" placeholder="Enter ...">
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -911,10 +898,7 @@
                     <label>на Русском</label>
                     <input type="text" class="form-control RU_PIC" id="btn_shopbas" value="<%= conf.toBasket %>" placeholder="Enter ...">
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <input type="text" class="form-control UA_PIC" id="btn_shopbas_ua" value="<%= confua.toBasket %>" placeholder="Enter ...">
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -940,10 +924,7 @@
                     <label>на Русском</label>
                     <textarea class="form-control RU_PIC" rows="3" placeholder="Enter ..."><%= conf.dostavka_info %></textarea>
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <textarea class="form-control UA_PIC" rows="3" placeholder="Enter ..."><%= confua.dostavka_info %></textarea>
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -960,10 +941,7 @@
                     <label>на Русском</label>
                     <textarea class="form-control RU_PIC" rows="3" placeholder="Enter ..."><%= conf.oplata[0].text %></textarea>
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <textarea class="form-control UA_PIC" rows="3" placeholder="Enter ..."><%= confua.oplata[0].text %></textarea>
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -978,10 +956,7 @@
                     <label>на Русском</label>
                     <textarea class="form-control RU_PIC" rows="3" placeholder="Enter ..."><%= conf.dostavka[0].text %></textarea>
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <textarea class="form-control UA_PIC" rows="3" placeholder="Enter ..."><%= confua.dostavka[0].text %></textarea>
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -998,10 +973,7 @@
                     <label>на Русском</label>
                     <textarea class="form-control RU_PIC" rows="3" placeholder="Enter ..."><%= conf.oplata[1].text %></textarea>
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <textarea class="form-control UA_PIC" rows="3" placeholder="Enter ..."><%= confua.oplata[1].text %></textarea>
-                  </div>
+
                 </form>
               </div>
             </div>
@@ -1016,10 +988,7 @@
                     <label>на Русском</label>
                     <textarea class="form-control RU_PIC" rows="3" placeholder="Enter ..."><%= conf.dostavka[1].text %></textarea>
                   </div>
-                  <div class="form-group">
-                    <label>на Украинском</label>
-                    <textarea class="form-control UA_PIC" rows="3" placeholder="Enter ..."><%= confua.dostavka[1].text %></textarea>
-                  </div>
+                  
                 </form>
               </div>
             </div>
