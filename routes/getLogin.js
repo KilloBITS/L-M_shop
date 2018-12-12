@@ -39,14 +39,14 @@ router.get('/', function(req, res, next){
 
        titles_page.find().toArray(function(err, results_titles_page){
          config.find().toArray(function(err, results_config){
-           if(results_config[languageSystem].opens){
+           if(results_config[0].opens){
 
              menu.find().sort({ index: 1}).toArray(function(err, results_menu ){
 
                res.render('auth.ejs',{
-                 conf: results_config[languageSystem],
+                 conf: results_config[0],
                  menu: results_menu,
-                 title: results_titles_page[languageSystem].auth,
+                 title: results_titles_page[0].auth,
                  isAdm: req.session.admin
                });
                client.close();
@@ -54,7 +54,7 @@ router.get('/', function(req, res, next){
              });
            }else{
              res.render('close.ejs',{
-               conf: results_config[languageSystem],
+               conf: results_config[0],
                isAdm: req.session.admin
              })
            }
