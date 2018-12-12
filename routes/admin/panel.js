@@ -26,11 +26,11 @@ router.get('/', function(req, res, next){
           const db = client.db(global.baseName);
           const config = db.collection("config");
           const menu  = db.collection("menu");
-          const menuuk  = db.collection("menu-ua");
+          const menuuk  = db.collection("menu-uk");
           const slider  = db.collection("slider");
           const news  = db.collection("news");
           const tovar  = db.collection("tovar");
-          const tovaruk  = db.collection("tovar-uk");
+          const tovaruk  = db.collection("tovar-ua");
           const types  = db.collection("types");
           const categories  = db.collection("categories");
           const users  = db.collection("users");
