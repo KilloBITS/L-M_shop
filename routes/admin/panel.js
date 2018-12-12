@@ -15,7 +15,7 @@ router.get('/', function(req, res, next){
       }else{
         if(req.cookies.vernissageLang === 'ua'){
           languageSystem = 1;
-          langMenu = 'menu-uk';
+          langMenu = 'menu-ua';
         }else{
           languageSystem = 0;
           langMenu = 'menu';
