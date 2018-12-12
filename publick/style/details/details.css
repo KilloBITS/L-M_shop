@@ -1501,7 +1501,8 @@ canvas{
 }
 
 .nottovarColors{
-  margin: 20px;
+  width: fit-content;
+  margin: 20px auto;
 }
 
 #white,.white{
