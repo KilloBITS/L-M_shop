@@ -9,11 +9,11 @@ router.get('/', function(req, res, next){
   if (req.session && req.session.admin && req.session.user !== undefined) //&& req.session.admin && req.session.user !== undefined
     {
       var languageSystem, langMenu;
-      if(req.cookies.vernissageLang === undefined){
+      if(req.cookies.pageLang === undefined){
         languageSystem = 0;
         langMenu = 'menu';
       }else{
-        if(req.cookies.vernissageLang === 'ua'){
+        if(req.cookies.pageLang === 'ua'){
           languageSystem = 1;
           langMenu = 'menu-ua';
         }else{
