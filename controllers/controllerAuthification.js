@@ -35,10 +35,22 @@ router.post('/auth', function(req, res, next){
           global.online = global.online + 1;
           res.send({code:500});
 
+          var today = new Date();
+          var dd = today.getDate();
+          var mm = today.getMonth()+1;
+          var yyyy = today.getFullYear();
+          if(dd<10) {
+              dd = '0'+dd
+          }
+          if(mm<10) {
+              mm = '0'+mm
+          }
+          today = mm + '-' + dd + '-' + yyyy;
+
           var NEW_LOGS = {};
           NEW_LOGS.date = today;
           NEW_LOGS.type = 'Авторизация пользователя';
-          NEW_LOGS.text = 'Авторизация: '+results_users[0].split('@')[0];
+          NEW_LOGS.text = 'Авторизация: '+results_users[0];
           LOGS.insertOne(NEW_LOGS);
         }else{
           res.send({code:450, message: msg[languageSystem]});
