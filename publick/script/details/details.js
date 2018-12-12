@@ -186,28 +186,10 @@ var Details = {
    }
 }
 
-$(document).ready(() => {
-  Details.INIT();
 
-  $(".imageD").click(function(){
-    var index = $(".imageD").index(this);
-    var imdData = $(".imageD:eq("+index+")").attr('image-data');
-    $(".imageTov").removeClass('ac');
-    $(".imageTov:eq("+index+")").addClass('ac');
-    console.log(imdData)
-    $("#tovarImage").attr('src', imdData);
-  });
 
+var createAnimCanvasDetails = function(){
   var mycode = function() {
-  var newImage = new Image();
-  newImage.onload = function(){
-    console.log(newImage.width)
-    // $('#canvas').attr('width',newImage.width);
-    // $('#canvas').attr('height',newImage.height);
-
-  }
-  newImage.src = $('#kitchenSmall').attr('src');
-
 
   var pad = scrawl.pad.canvas,
     base = scrawl.cell[pad.base],
@@ -378,18 +360,49 @@ $(document).ready(() => {
   pad.render();
 }
 
-scrawl.loadExtensions({
-  minified: true,
-  path: 'https://scrawl.rikweb.org.uk/min_5-0-0/',
-  extensions: ['images', 'wheel', 'phrase'],
-  callback: function() {
-    window.addEventListener('load', function() {
-      scrawl.init();
-      mycode();
-    }, false);
-  },
-});
+  scrawl.loadExtensions({
+    minified: true,
+    path: 'https://scrawl.rikweb.org.uk/min_5-0-0/',
+    extensions: ['images', 'wheel', 'phrase'],
+    callback: function() {
+      window.addEventListener('load', function() {
+        console.log('scrawl load');
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        scrawl.init();
+        mycode();
+      }, false);
+    },
+  });
+}
 
+$(document).ready(() => {
+  Details.INIT();
 
+  $(".imageD").click(function(){
+    var index = $(".imageD").index(this);
+    var imdData = $(".imageD:eq("+index+")").attr('image-data');
+    $(".imageTov").removeClass('ac');
+    $(".imageTov:eq("+index+")").addClass('ac');
+    $("#tovarImage").attr('src', imdData);
 
+    var img1 = document.createElement('img');
+    var img2 = document.createElement('img');
+
+    img1.className = 'active demopic';
+    img2.className = 'active demopic';
+
+    img1.id = 'kitchenSmall';
+    img2.id = 'kitchenLarge';
+
+    $('.hidden').append(img1);
+    $('.hidden').append(img2);
+
+    $("#kitchenSmall").attr('src', imdData);
+    $("#kitchenLarge").attr('src', imdData);
+    createAnimCanvasDetails();
+  });
+
+  createAnimCanvasDetails();
 });

@@ -161,6 +161,9 @@ app.post('/SetStatusVisibile', setStatusVisibiles);
 
 const maxAImenu = require('./controllers/admin/controllerMenu');
 app.post('/maxAImenu', maxAImenu);
+
+const controllerSetColor = require('./controllers/admin/controllerSetColor');
+app.post('/tovarSetColor', controllerSetColor);
 //добавить категорию меню
 
 /** Уплавление меню (категориями) **/

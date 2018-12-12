@@ -24,3 +24,14 @@ runOnKeys(function() {
     window.location.href = "/panel";
   }
 },"Q".charCodeAt(0),"A".charCodeAt(0));
+
+
+function seTovarColor(e, i){
+  var color = $(e).attr('id');
+  $('.spn_hol').attr('style','').show();
+  $.post('/tovarSetColor',{colors: color, id: i},function(res){
+      console.log(res);
+      $(".spn_hol").css({"transform": "scale(3)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
+      $('.colActive').removeClass('white red green blue magenta purple bezheviy yellow black rozov polosat').addClass(color);
+  });
+}

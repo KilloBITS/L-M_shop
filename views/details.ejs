@@ -287,17 +287,19 @@
 
           <% if(isAdm){ %>
             <div class="setColorBlock">
-              <div class="colorTovar" id="white"></div>
-              <div class="colorTovar" id="red"></div>
-              <div class="colorTovar" id="green"></div>
-              <div class="colorTovar" id="blue"></div>
-              <div class="colorTovar" id="green"></div>
-              <div class="colorTovar" id="purple"></div>
-              <div class="colorTovar" id="bezheviy"></div>
-              <div class="colorTovar" id="yellow"></div>
-              <div class="colorTovar" id="black"></div>
-              <div class="colorTovar" id="polosat"></div>
-              <div class="colorTovar" id="rozov"></div>
+              <div class="adminColorPanel">
+                <div class="colorTovar" id="white" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="red" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="green" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="blue" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="green" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="purple" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="bezheviy" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="yellow" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="black" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="polosat" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+                <div class="colorTovar" id="rozov" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)"></div>
+              </div>
             </div>
           <% } %>
         </div>
@@ -311,6 +313,9 @@
             <a href="https://vk.com/share.php?url=http://ladyman.club/details?tov=<%= tovarArr[0].AI %>&title=<%= tovarArr[0].title %>&image=<%= tovarArr[0].image[0] %>" target="_blank"><li class="whatsapp"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li></a>
           </ul>
         </div>
+
+        <a href="/details?tov=<%= parseInt(tovarArr[0].AI)-1 %>&bluzki"><div class="NextPrewTovar" id="prewTovar"></div></a>
+        <a href="/details?tov=<%= parseInt(tovarArr[0].AI)+1 %>&bluzki"><div class="NextPrewTovar" id="nextTovar"></div></a>
       </div>
       <div id="product-pd" class="tab-pane fade in active">
         <table border="0" style="margin-left: auto; margin-right: auto; width: 837px; height: 138px;" cellpadding="1">
