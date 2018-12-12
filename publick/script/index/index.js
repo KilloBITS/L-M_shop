@@ -223,11 +223,7 @@ setTimeout(function(){
       current = current- 1;
       setSlide(prev, current);
     });
-    setInterval(function(){
-      var next=current;
-      current= current+1;
-      setSlide(next, current);
-    },5000);
+    
     function setSlide(prev, next){
       var slide= current;
       if(next>total-1){
