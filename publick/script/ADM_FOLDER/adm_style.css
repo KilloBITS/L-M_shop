@@ -27,3 +27,19 @@
   padding: 2px 10px;
   border-radius: 4px;
 }
+
+.setColorBlock{
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+
+.colorTovar{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #afafaf;
+  cursor: pointer;
+  border-radius: 34px;
+  box-shadow: 1px 1px 1px 1px black;
+}

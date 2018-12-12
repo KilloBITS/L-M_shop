@@ -1477,3 +1477,63 @@ canvas{
 .oldPrice{
   opacity: 0.6;
 }
+
+.TovarColor{
+  margin-bottom: 50px;
+}
+
+.colors{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 5px;
+  border: 2px solid rgb(62, 62, 63);
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: inset 0px 0px 20px 0px black;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.colActive{
+  border: 2px solid rgb(255, 0, 0);
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4OC44NzggNDg4Ljg3OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg4Ljg3OCA0ODguODc4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPHBvbHlnb24gcG9pbnRzPSIxNDMuMjk0LDM0MC4wNTggNTAuODM3LDI0Ny42MDIgMCwyOTguNDM5IDEyMi4wMDksNDIwLjQ0NyAxMjIuMTQ5LDQyMC4zMDYgICAgIDE0NC40MjMsNDQyLjU4IDQ4OC44NzgsOTguMTIzIDQzNy4wNTUsNDYuMjk4ICAgIiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.nottovarColors{
+  margin: 20px;
+}
+
+#white,.white{
+  background-color: white;
+}
+#red,.red{
+  background-color: red;
+}
+#green,.green{
+  background-color: green;
+}
+#blue,.blue{
+  background-color: blue;
+}
+#magenta,.magenta{
+  background-color: magenta;
+}
+#purple,.purple{
+  background-color: purple;
+}
+#bezheviy,.bezheviy{
+  background-color: beige;
+}
+#yellow,.yellow{
+  background-color: yellow;
+}
+#black,.black{
+  background-color: black;
+}
+#rozov,.rozov{
+  background-color: #bf95c2;
+}
+#polosat,.polosat{
+  background-image: url(../../../data/colors/polosat.jpg);
+}
