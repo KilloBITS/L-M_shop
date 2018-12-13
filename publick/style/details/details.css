@@ -1590,3 +1590,6 @@ canvas{
 #brown,.brown{
   background-color: brown;
 }
+#kletka,.kletka{
+    background-image: url(../../../data/colors/kletka.jpg);
+}
