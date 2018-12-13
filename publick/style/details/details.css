@@ -1565,6 +1565,9 @@ canvas{
 #rozov,.rozov{
   background-color: #bf95c2;
 }
+#gold,.gold{
+  background-color: gold;
+}
 #polosat,.polosat{
   background-image: url(../../../data/colors/polosat.jpg);
 }
