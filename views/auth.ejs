@@ -11,17 +11,18 @@
   <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-
   <link rel="stylesheet" type="text/css" href="/style/global.css">
 	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/auth/auth.css">
 	<link rel="stylesheet" type="text/css" href="/style/auth/auth.min.css">
+
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/auth/auth.js"></script>
@@ -83,24 +84,11 @@
   <div class="main-box">
     <div class="slider-cont">
       <div class="signup-slider">
-        <!-- <div class="img-txt">
-        <div class="img-layer"></div>
-         <h1>The hardest part of starting up is starting out for you.</h1>
-          <img src="../../../image/auth_sliders/1.jpg"/>
-        </div> -->
         <div class="img-txt">
-          <!-- <div class="img-layer"></div>
-          <h1>We understand you and your business, We have the right solutions for you.</h1> -->
           <img src="../../../image/auth_sliders/2.jpg"/>
         </div>
-        <!-- <div class="img-txt">
-          <div class="img-layer"></div>
-          <h1>Join US Now!</h1>
-          <img src="../../../image/auth_sliders/3.jpg"/>
-        </div> -->
       </div>
     </div>
-
 
     <div class="form-cont">
       <div class="top-buttons">
@@ -112,6 +100,12 @@
         </button>
       </div>
       <div class="form form-signup">
+        <div class="register_socials">
+          <div class="socials_title_log">Регистрация через соц. сеть</div>
+          <div class="socialAccount faceboock"></div>
+          <div class="socialAccount google"></div>
+          <div class="socialAccount instagram"></div>
+        </div>
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
         <div class="aForm" action="#">
@@ -122,11 +116,14 @@
           <input type="text"
                  placeholder="<%= conf.auth_local[8] %>" id="newEmail">
           <lable><%= conf.auth_local[1] %></lable>
-          <input type="password"
-                 placeholder="<%= conf.auth_local[9] %>" id="newPass">
+          <input type="password" placeholder="<%= conf.auth_local[9] %>" id="newPass">
           <p class="terms">
-            <input type="checkbox" id="checkPrav">
-            <a href="/termsofuse" target="_blank" class="lined-link"><%= conf.auth_local[10] %></a>
+
+            <div class="checkedsBlocked" style="font-size:.65em">
+              <label class="check-switch"><input id="checkPrav" type="checkbox" /><div class="track"><div class="knob"></div></div></label>
+              <div class="checkText"><%= conf.auth_local[10] %></div>
+            </div>
+
           </p>
           <input type="submit" class="form-btn" value="<%= conf.auth_local[11] %>" onclick="AUTH.POST_REGISTER()"/>
           <a href="#" class="lined-link to-signin-link" style="white-space: pre"><%= conf.auth_local[12] %></a>
@@ -134,6 +131,12 @@
       </div>
 
       <div class="form form-signin">
+        <div class="auch_socials">
+          <div class="socials_title_log">Авторизация через соц. сеть</div>
+          <div class="socialAccount faceboock"></div>
+          <div class="socialAccount google"></div>
+          <div class="socialAccount instagram"></div>
+        </div>
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
         <div class="aForm">
