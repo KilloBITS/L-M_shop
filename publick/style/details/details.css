@@ -1578,7 +1578,9 @@ canvas{
   background-image: url(../../../data/colors/all.png);
   background-size: contain;
 }
-
 #silver,.silver{
   background-image: url(../../../data/colors/silver.jpg);
+}
+#siren,.siren{
+  background-color: #bb97bb;
 }
