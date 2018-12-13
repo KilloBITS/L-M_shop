@@ -17,6 +17,29 @@ var getCounters = (req, res, next) => {
        if(err) return console.log(err);
        tovar.update({ AI: parseInt(req.body.id) },{$set: {color: req.body.colors}});
        tovaruk.update({ AI: parseInt(req.body.id) },{$set: {color: req.body.colors}});
+
+
+       var today = new Date();
+       var dd = today.getDate();
+       var mm = today.getMonth()+1;
+       var yyyy = today.getFullYear();
+       if(dd<10) {
+           dd = '0'+dd
+       }
+       if(mm<10) {
+           mm = '0'+mm
+       }
+       today = mm + '-' + dd + '-' + yyyy;
+
+       var NEW_LOGS = {};
+       NEW_LOGS.date = today;
+       NEW_LOGS.type = 'Изменение цвета товара';
+       NEW_LOGS.user = req.session.user;
+       NEW_LOGS.text = 'Товар: '+parseInt(req.body.id);
+       NEW_LOGS.setColor = req.body.colors;
+       LOGS.insertOne(NEW_LOGS);
+
+
        res.send({code: 500, message: 'Цвет успешно изменен'})
       });
     }else{
