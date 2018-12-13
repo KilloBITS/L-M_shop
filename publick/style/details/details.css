@@ -1568,3 +1568,6 @@ canvas{
 #polosat,.polosat{
   background-image: url(../../../data/colors/polosat.jpg);
 }
+#bord,.bord{
+  background-color: #800306;
+}

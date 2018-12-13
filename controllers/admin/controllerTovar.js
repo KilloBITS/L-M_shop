@@ -87,14 +87,14 @@ var createUA = function(data, ai, l, dateCreate){
 
       var NEW_LOGS = {};
       NEW_LOGS.date = dateCreate;
-      NEW_LOGS.type = 'Добавлен новый товар';
+      NEW_LOGS.type = 'Добавлен новый товар UA';
       NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR_UA.AI;
       LOGS.insertOne(NEW_LOGS);
     } catch (e) {
       var NEW_LOGS = {};
       NEW_LOGS.date = dateCreate;
-      NEW_LOGS.type = 'Ошибка добавления товара!';
-      NEW_LOGS.text = e;
+      NEW_LOGS.type = 'Ошибка добавления товара UA!';
+      NEW_LOGS.text = e.toString();
       LOGS.insertOne(NEW_LOGS);
     }
 
@@ -129,14 +129,14 @@ var createRU = function(data, ai, l, dateCreate){
 
       var NEW_LOGS = {};
       NEW_LOGS.date = dateCreate;
-      NEW_LOGS.type = 'Добавлен новый товар';
+      NEW_LOGS.type = 'Добавлен новый товар RU';
       NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR.AI;
       LOGS.insertOne(NEW_LOGS);
     } catch (e) {
       var NEW_LOGS = {};
       NEW_LOGS.date = dateCreate;
-      NEW_LOGS.type = 'Ошибка добавления товара!';
-      NEW_LOGS.text = e;
+      NEW_LOGS.type = 'Ошибка добавления товара RU!';
+      NEW_LOGS.text = e.toString();
       LOGS.insertOne(NEW_LOGS);
     }
 
