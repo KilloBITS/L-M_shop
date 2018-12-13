@@ -74,7 +74,7 @@ router.get('/*', function(req, res, next){
 
 
                     banners.find().toArray(function(err, banner ){
-                      tovar.find( FILTER ).sort( { AI: 1 } ).toArray(function(err, results_tovar ){
+                      tovar.find( FILTER ).sort( { tIncrement: -1 } ).toArray(function(err, results_tovar ){
 
                         // console.log(results_tovar.length);
                         // console.log(results_tovar.slice(otTovar, doTovar).length);
