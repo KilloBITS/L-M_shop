@@ -387,22 +387,22 @@ $(document).ready(() => {
     $(".imageTov:eq("+index+")").addClass('ac');
     $("#tovarImage").attr('src', imdData);
 
-    var img1 = document.createElement('img');
-    var img2 = document.createElement('img');
-
-    img1.className = 'active demopic';
-    img2.className = 'active demopic';
-
-    img1.id = 'kitchenSmall';
-    img2.id = 'kitchenLarge';
-
-    $('.hidden').append(img1);
-    $('.hidden').append(img2);
-
-    $("#kitchenSmall").attr('src', imdData);
-    $("#kitchenLarge").attr('src', imdData);
-    createAnimCanvasDetails();
+    // var img1 = document.createElement('img');
+    // var img2 = document.createElement('img');
+    //
+    // img1.className = 'active demopic';
+    // img2.className = 'active demopic';
+    //
+    // img1.id = 'kitchenSmall';
+    // img2.id = 'kitchenLarge';
+    //
+    // $('.hidden').append(img1);
+    // $('.hidden').append(img2);
+    // 
+    // $("#kitchenSmall").attr('src', imdData);
+    // $("#kitchenLarge").attr('src', imdData);
+    // createAnimCanvasDetails();
   });
 
-  createAnimCanvasDetails();
+  // createAnimCanvasDetails();
 });

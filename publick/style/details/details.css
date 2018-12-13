@@ -1462,7 +1462,7 @@ canvas{
 }
 
 #tovarImage{
-  display: none;
+  /* display: none; */
 }
 
 .salePrice{
