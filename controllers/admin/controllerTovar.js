@@ -72,7 +72,6 @@ var createUA = function(data, ai, l, dateCreate){
       NEW_TOVAR_UA.category = parseInt(NEW_TOVAR_UA.category),
       NEW_TOVAR_UA.popular = 5;
       NEW_TOVAR_UA.AI = ai;
-      NEW_TOVAR_UA.image = "tov"+ai+".jpg";
       NEW_TOVAR_UA.sale = data.sale;
       NEW_TOVAR_UA.postavka = data.postavka;
       NEW_TOVAR_UA.tIncrement = data.tIncrement;
@@ -131,7 +130,7 @@ var createRU = function(data, ai, l, dateCreate){
       var NEW_LOGS = {};
       NEW_LOGS.date = dateCreate;
       NEW_LOGS.type = 'Добавлен новый товар';
-      NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR_UA.AI;
+      NEW_LOGS.text = 'Добавлен новый товар: '+ NEW_TOVAR.AI;
       LOGS.insertOne(NEW_LOGS);
     } catch (e) {
       var NEW_LOGS = {};
