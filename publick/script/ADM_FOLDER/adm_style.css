@@ -30,10 +30,12 @@
 
 .setColorBlock{
   position: absolute;
-  bottom: 60px;
+  top: 60px;
   border-top: 1px solid silver;
   border-bottom: 1px solid silver;
   padding: 3px 0 3px 6px;
+  width: 120px;
+  right: -220px;
 }
 
 .openerColorPanel{

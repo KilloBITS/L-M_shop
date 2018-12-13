@@ -1576,7 +1576,8 @@ canvas{
 }
 #allColor,.allColor{
   background-image: url(../../../data/colors/all.png);
-  background-size: contain;
+  background-size: 48px;
+  background-position: center;
 }
 #silver,.silver{
   background-image: url(../../../data/colors/silver.jpg);
