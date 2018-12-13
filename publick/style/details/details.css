@@ -1571,3 +1571,6 @@ canvas{
 #bord,.bord{
   background-color: #800306;
 }
+#allColor,.allColor{
+  background-image: url(../../../data/colors/all.png);
+}
