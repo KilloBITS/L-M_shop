@@ -1593,3 +1593,6 @@ canvas{
 #kletka,.kletka{
     background-image: url(../../../data/colors/kletka.jpg);
 }
+#baklajan,.baklajan{
+  background-color: #3d1628;
+}
