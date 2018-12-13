@@ -14,6 +14,7 @@ var getCounters = (req, res, next) => {
        const db = client.db(global.baseName);
        const tovar  = db.collection("tovar");
        const tovaruk  = db.collection("tovar-uk");
+       const LOGS = db.collection("LOGS");
        if(err) return console.log(err);
        tovar.update({ AI: parseInt(req.body.id) },{$set: {color: req.body.colors}});
        tovaruk.update({ AI: parseInt(req.body.id) },{$set: {color: req.body.colors}});
