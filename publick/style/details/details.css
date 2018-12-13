@@ -1573,4 +1573,5 @@ canvas{
 }
 #allColor,.allColor{
   background-image: url(../../../data/colors/all.png);
+  background-size: contain;
 }
