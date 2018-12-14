@@ -284,7 +284,7 @@
                   <% if(groupArr[i].color === tovarArr[0].color){ %>
                     <div class="colors <%= tovarArr[0].color %> colActive"></div>
                   <% }else{ %>
-                    <a href="/details?tov=<%= parseInt(groupArr[i].AI) %>&platya"><div class="colors <%= tovarArr[0].color %>"></div></a>
+                    <a href="/details?tov=<%= parseInt(groupArr[i].AI) %>&platya"><div class="colors <%= groupArr[i].color %>"></div></a>
                   <% } %>
 
                 <% } %>
