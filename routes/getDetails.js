@@ -59,7 +59,6 @@ router.get('/*', function(req, res, next) {
                       var TovGroup = [];
                     }
 
-                    console.log(results_tovar[0].group)
                     res.render('details.ejs', {
                       conf: results_config[0],
                       menu: results_menu,

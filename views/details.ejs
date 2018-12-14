@@ -278,13 +278,17 @@
             <div class="TovarColor">
               <div class="colorTitle">Цвет</div>
               <% if(groupArr.length > 0){ %>
+
                 <% for(var i = 0; i < groupArr.length; i++){ %>
+
                   <% if(groupArr[i].color === tovarArr[0].color){ %>
                     <div class="colors <%= tovarArr[0].color %> colActive"></div>
                   <% }else{ %>
-                    <a href="/details?tov=<%= parseInt(groupArr[i].AI)-1 %>&platya"><div class="colors <%= tovarArr[0].color %>"></div></a>
+                    <a href="/details?tov=<%= parseInt(groupArr[i].AI) %>&platya"><div class="colors <%= tovarArr[0].color %>"></div></a>
                   <% } %>
+
                 <% } %>
+
               <% }else{ %>
                 <div class="colors <%= tovarArr[0].color %> colActive"></div>
               <% } %>
