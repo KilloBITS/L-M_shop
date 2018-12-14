@@ -37,8 +37,6 @@ router.get('/*', function(req, res, next) {
       if (results_config[0].opens) {
         menu.find().sort({ index: 1 }).toArray(function(err, results_menu) {
           tovar.find({ AI: parseInt(searchData[0]), types: searchData[1] }).toArray(function(err, results_tovar) {
-            console.log(searchData[0])
-            console.log(results_tovar)
             tovar_comments.find({tovar_AI: parseInt(results_tovar[0].AI)}).toArray(function(err, results_comments) {
               users_session.find({email: req.session.user}).toArray(function(err, results_users_session) {
                 if (results_users_session.length > 0) {
@@ -52,17 +50,30 @@ router.get('/*', function(req, res, next) {
                   tovar.update({ AI: parseInt(searchData[0]) }, {$set : {visual: parseInt(results_tovar[0].visual) + 1} })
                   tovar_uk.update({ AI: parseInt(searchData[0]) }, {$set : {visual: parseInt(results_tovar[0].visual) + 1} })
 
-                  res.render('details.ejs', {
-                    conf: results_config[0],
-                    menu: results_menu,
-                    tovarArr: results_tovar,
-                    comment: results_comments,
-                    rec: results_recTovar,
-                    sessionUser: req.session.user,
-                    users_data: uSession,
-                    isAdm: req.session.admin
-                  })
-                  client.close();
+
+                  tovar.find({ group: results_tovar[0].group }).toArray(function(err, results_group) {
+
+                    if(results_tovar[0].group !== undefined){
+                      var TovGroup = results_group;
+                    }else{
+                      var TovGroup = [];
+                    }
+
+                    console.log(results_tovar[0].group)
+                    res.render('details.ejs', {
+                      conf: results_config[0],
+                      menu: results_menu,
+                      tovarArr: results_tovar,
+                      comment: results_comments,
+                      rec: results_recTovar,
+                      sessionUser: req.session.user,
+                      users_data: uSession,
+                      isAdm: req.session.admin,
+                      groupArr: TovGroup
+                    })
+                    client.close();
+                  });
+
                 });
               });
             });

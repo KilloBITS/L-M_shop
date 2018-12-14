@@ -277,7 +277,18 @@
           <% if(tovarArr[0].color !== undefined) { %>
             <div class="TovarColor">
               <div class="colorTitle">Цвет</div>
-              <a href="#"><div class="colors <%= tovarArr[0].color %> colActive"></div></a>
+              <% if(groupArr.length > 0){ %>
+                <% for(var i = 0; i < groupArr.length; i++){ %>
+                  <% if(groupArr[i].color === tovarArr[0].color){ %>
+                    <div class="colors <%= tovarArr[0].color %> colActive"></div>
+                  <% }else{ %>
+                    <a href="/details?tov=<%= parseInt(groupArr[i].AI)-1 %>&platya"><div class="colors <%= tovarArr[0].color %>"></div></a>
+                  <% } %>
+                <% } %>
+              <% }else{ %>
+                <div class="colors <%= tovarArr[0].color %> colActive"></div>
+              <% } %>
+
             </div>
           <% }else{ %>
             <div class="nottovarColors">нету других цветов</div>
@@ -307,9 +318,17 @@
                 <div class="colorTovar" id="brown" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)" title="Коричневое"></div>
                 <div class="colorTovar" id="kletka" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)" title="Клетчастое"></div>
                 <div class="colorTovar" id="baklajan" onclick="seTovarColor(this, <%= tovarArr[0].AI %>)" title="Баклажан"></div>
-
-
               </div>
+            </div>
+
+            <div class="setGroupByTovar">
+              <select id="selectedGroup">
+
+              </select>
+              <div class="newGroup">Новая группа</div>
+              <div class="groupButton">Сохранить</div>
+
+
             </div>
           <% } %>
         </div>

@@ -164,6 +164,9 @@ app.post('/maxAImenu', maxAImenu);
 
 const controllerSetColor = require('./controllers/admin/controllerSetColor');
 app.post('/tovarSetColor', controllerSetColor);
+
+const tovarSetGroup = require('./controllers/admin/controllerGroup');
+app.post('/tovarSetGroup', tovarSetGroup);
 //добавить категорию меню
 
 /** Уплавление меню (категориями) **/

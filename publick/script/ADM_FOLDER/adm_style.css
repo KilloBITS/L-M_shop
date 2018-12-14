@@ -62,3 +62,21 @@
 .adminColorPanel{
 
 }
+
+
+.setGroupByTovar{
+  position: absolute;
+  right: -170px;
+}
+
+#selectedGroup{
+  width: 120px;
+}
+
+.newGroup{
+    cursor: pointer;
+}
+
+.groupButton{
+    cursor: pointer;
+}
