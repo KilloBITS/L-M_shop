@@ -1156,7 +1156,7 @@ a.indexBtnToShop {
 }
 
 .snow__item {
-  position: absolute;
+  position: fixed;
   width: 5px;
   height: 5px;
   margin: auto;

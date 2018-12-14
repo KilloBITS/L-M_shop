@@ -130,6 +130,7 @@
 .bigBonus .stock_name{
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 0px #ff0d72;
 }
 
 .bigBonus .stock_name span{
