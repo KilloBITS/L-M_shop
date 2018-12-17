@@ -46,6 +46,7 @@ const delivery = require('./routes/getDelivery');
 const termsofuse = require('./routes/getTermsofuse');
 const pp = require('./routes/getPrivacyPolicy');
 const dap = require('./routes/getDAP');
+const map = require('./routes/getSiteOfMap');
 
 app.use('/', index);
 app.use('/shop*', tovar);
@@ -61,6 +62,7 @@ app.use('/delivery*', delivery);
 app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
+app.use('/site_of_map', map);
 
 app.get('/logout', function(req, res) {
     req.session.destroy(function(err) {
@@ -179,6 +181,10 @@ app.post('/addNewType', MENU_Controll);
 
 const bot = require('./controllers/bot/controllerBot');
 app.post('/to-yuliadMessage', bot);
+
+
+
+
 
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),

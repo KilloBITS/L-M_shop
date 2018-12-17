@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Карта сайта</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/map/style.css">
+	<link rel="stylesheet" type="text/css" href="/style/map/style.min.css">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"> -->
+	<script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/maskinput.js"></script>
+	<script type="text/javascript" src="script/oplata/oplata.js"></script>
+  <script type="text/javascript" src="script/global.js"></script>
+  <% if(isAdm){ %>
+    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <% } %>
+</head>
+<body>
+  <div class="spn_hol" style="/* display: none; */">
+      <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+      </div>
+  </div>
+
+
+<div class="top">
+  <div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
+      </div>
+    </div>
+    <div class="logotype"></div>
+    <div class="topNavBlockOfBtm">
+      <% if(sessionUser !== undefined){ %>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
+      <% } else { %>
+        <a href="/login"><div class="logInBlock"></div></a>
+      <% } %>
+      <div class="basketBlock">
+        <span>0</span>
+      </div>
+    </div>
+  </div>
+  <div class="topLine twoLine">
+    <div class="menuBlock">
+      <% for(var i = 0; i < menu.length; i++) { %>
+        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
+            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
+          <% }else{%>
+            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+          <% } %>
+        <% } else { %>
+          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
+            <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
+          <% }else{%>
+            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+          <% } %>
+        <% } %>
+      <% } %>
+    </div>
+  </div>
+  <div class="opensMenu">
+  <% for(var i = 0; i < menu.length; i++) { %>
+    <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
+      <div class="menu_data <%= menu[i].ml %>">
+        <div class="menu_title"><%= menu[i].name %></div>
+        <div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+          <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
+        </div>
+        <div class="menuRight"></div>
+      </div>
+    <% } %>
+  <% } %>
+  </div>
+</div>
+
+<div class="content">
+  <div class="map_content">
+    <% for(var i = 0; i < menu.length; i++) { %>
+      <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+
+          <div class="mapPoint bigLinePoint"><%= menu[i].name %></div>
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+            <a href="<%= menu[i].podlink[il].plink %>">
+              <div class="mapPoint2">• <%= menu[i].podlink[il].pname %> </div>
+            </a>
+          <% } %>
+
+      <% } else { %>
+
+        <a href="<%= menu[i].glink %>" class="bigLinePoint">
+          <div class="mapPoint"><%= menu[i].name %></div>
+        </a>
+
+
+      <% } %>
+    <% } %>
+  </div>
+</div>
+
+<div class="siteMap">
+  <div class="mapmap">
+    <div class="LBB">
+      <% for(var i = 0; i < menu.length; i++) { %>
+      <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+      <% } %>
+      <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
+      <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
+      <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
+    </div>
+    <div class="CBB">
+      <div class="vectorLogo"></div>
+      <div class="copiright"><%= conf.copiright %></div>
+      <div class="socials">
+        <% for(var i = 0; i < conf.socials.length; i++) { %>
+        <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
+        <% } %>
+      </div>
+      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
+    </div>
+    <div class="RBB">
+      <div class="adressLineMap"><%= conf.phoneTitle %></div>
+      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap"><%= conf.emailTitle %></div>
+      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
+      <div class="adressLineMap"></div>
+      <div class="adressLineMap">
+        <div class="lang" id="ua" title="Українська версія"></div>
+        <div class="lang" id="ru" title="Русская версия"></div>
+      </div>
+      <div class="certificated">
+        <div class="certificate" id="byVisa"></div>
+        <div class="certificate" id="byMasterCard"></div>
+        <div class="certificate" id="byYandex"></div>
+        <div class="certificate" id="byFondy"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="basketDATA">
+  <div id="bas">
+    <div class="basket_close"></div>
+    <div class="backet_load" style="background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+    <div class="basket_tovar">
+      <div class="allSum">0.00 ГРН</div>
+      <div class="BSK"></div>
+      <div class="NEXT_pay_bas">Заполнить данные</div>
+    </div>
+    <div class="basket_info">
+      <form action="/payment" enctype="application/json" type="get" name="paymentForm" >
+        <input type="text" name="JSON_Tovar" id="JSTOVAR" style="display: none;">
+
+        <p class="input-container">
+          <input type="text" name="name" id="input-PaymentName" class="login-input" autocomplete="off" required>
+          <label for="input-PaymentName" unselectable="on">Имя</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="foname" id="input-PaymentFourname" class="login-input" required>
+          <label for="input-PaymentFourname" unselectable="on">Фамилия</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="FamName" id="input-PaymentFamName" class="login-input" required>
+          <label for="input-PaymentFamName" unselectable="on">Отчество</label>
+        </p>
+        <p class="input-container">
+          <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
+          <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
+        </p>
+        <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" required placeholder="Доставка">
+          <option value="2">Доставка Новой Почтой</option>
+          <option value="3" disabled>Доставка УкрПочтой</option>
+        </select>
+
+        <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата">
+          <option value="0" disabled>Оплата наличными</option>
+          <option value="1" selected>Оплата картой</option>
+        </select>
+        <div class="warnMsg">(Оплата картой сейчас недоступна, приносим наши извинения, мы работаем над этим).</div>
+
+        <p class="input-container" id="CityOfDost">
+          <input type="text" name="city" id="input-PaymentCity" class="login-input" >
+          <label for="input-PaymentCity" unselectable="on">Город</label>
+        </p>
+        <p class="input-container" id="CityOfPostNP">
+          <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" >
+          <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
+        </p>
+        <p class="input-container" id="CityOfPostUl">
+          <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" >
+          <label for="input-PaymentUlica" unselectable="on">Улица</label>
+        </p>
+        <p class="input-container min50" id="CityOfPostD">
+          <input type="text" name="dom" id="input-PaymentDom" class="login-input" >
+          <label for="input-PaymentDom" unselectable="on">Дом</label>
+        </p>
+        <p class="input-container min50" id="CityOfPostK">
+          <input type="text" name="kvartira" id="input-PaymentKV" class="login-input" >
+          <label for="input-PaymentKV" unselectable="on">Квартира №</label>
+        </p>
+        <button class="bubbly-button" onclick="">Подтвердить заказ</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.map_content{
+  max-width: 1024px;
+  margin: auto;
+  padding: 40px 0 40px 0;
+  text-decoration: none;
+}
+.punktMapMenu,.LBB a{
+  text-decoration: none;
+}
+
+.LBB a:hover{
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.mapPoint,.mapPoint2{
+    color: black;
+    font-size: 18px;
+}
+
+.mapPoint{
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: 1px solid silver;
+  color: white;
+  text-align: center;
+  height: 20px;
+  line-height: 0px;
+}
+
+
+.mapPoint2{
+    padding-left: 22px;
+}
+
+.map_content a{
+  width: calc(50% - 2px);
+  display: inline-block;
+}
+
+a.bigLinePoint{
+  width: 100%;
+  background-color: #ff72bb;
+  color: white;
+}
+.mapPoint.bigLinePoint{
+  width: 100%;
+  background-color: #ff72bb;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+}
