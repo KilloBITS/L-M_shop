@@ -116,7 +116,8 @@
     <li class="cards__item">
       <div class="card">
         <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= conf.dostavka[i].img %>)"></div>
-        <div class="card__content">
+        <div class="card__content dost" id="dost_<%= i %>">
+          <div class="noneDAta"></div>
           <div class="card__title"><%= conf.dostavka[i].title %></div>
           <p class="card__text"><%= conf.dostavka[i].text %></p>
           <% if(i === 0){ %>

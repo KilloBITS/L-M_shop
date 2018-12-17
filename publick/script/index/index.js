@@ -3,6 +3,23 @@ var Index = {
   ML: "",
   getCounters: true,
   DESIGHN: function() {
+
+    $('.buttonGallery').on('click',function(){
+
+      if($(this).attr('data-click-state') == 1) {
+        $(this).attr('data-click-state', 0);
+        $(this).html('Слайдер')
+        $('.carouselInsta').fadeOut(300);
+        $('.galleryInsta').fadeIn(300);
+      } else {
+        $(this).attr('data-click-state', 1)
+        $(this).html('Галерея')
+        $('.carouselInsta').fadeIn(300);
+        $('.galleryInsta').fadeOut(300);
+      }
+
+    });
+
     $(window).scroll(function(){
       $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
     });
@@ -223,7 +240,7 @@ setTimeout(function(){
       current = current- 1;
       setSlide(prev, current);
     });
-    
+
     function setSlide(prev, next){
       var slide= current;
       if(next>total-1){
