@@ -4,6 +4,8 @@ var Index = {
   getCounters: true,
   DESIGHN: function() {
 
+    lightGallery(document.getElementById('lightgallery'))
+    
     $('.buttonGallery').on('click',function(){
 
       if($(this).attr('data-click-state') == 1) {
