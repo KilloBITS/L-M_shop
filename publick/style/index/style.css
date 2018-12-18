@@ -2648,7 +2648,6 @@ i {
   border: 1px dashed rgba(0, 0, 0, 0.19);
 }
 
-
 .galleryInsta{
   display: none;
   overflow: scroll;
@@ -2657,11 +2656,6 @@ i {
   height: calc(100% - 133px);
   overflow-x: hidden;
 }
-
-
-
-
-
 
 .small {
   font-size: 11px;
