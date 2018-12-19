@@ -2874,3 +2874,26 @@ i {
 .demo-gallery.dark > ul > li a {
   border: 3px solid #04070a;
 }
+
+
+.slide-button{
+  box-shadow: -5px -5px 0px -3px white, -5px -5px 0px 0px rgba(255, 0, 107, 0.4);
+  position: absolute;
+  left: 50%;
+  z-index: 1000;
+  background: white;
+  bottom: 150px;
+  padding: 10px 50px;
+  color: #ff97c2;
+  font-size: 22px;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  border: 3px solid #ff97c2;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.slide-button:hover{
+  background-color: #ff97c2;
+  color: white;
+}

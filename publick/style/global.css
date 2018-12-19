@@ -1633,6 +1633,7 @@ p.min50{
   background-repeat: no-repeat;
   background-position: center calc(50% - 60px);
   opacity: 1.8;
+  background-size: 300px;
 }
 
 @-webkit-keyframes bouncedelay {

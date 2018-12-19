@@ -266,7 +266,11 @@
           <% } %>
           <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
           <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
-          <div class="slide__content">
+
+          <div class="slide-button">
+            <%= slides[i].slideName %>
+          </div>
+          <!-- <div class="slide__content">
             <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
               <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
             </svg>
@@ -275,7 +279,7 @@
               <p class="slide__text-desc"><%= slides[i].slideText %></p>
               <a class="slide__text-link" href="<%= slides[i].slideLink %>">Перейти</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <% } %>
       </div>
