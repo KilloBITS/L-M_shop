@@ -5,7 +5,7 @@ var Index = {
   DESIGHN: function() {
 
     lightGallery(document.getElementById('lightgallery'))
-    
+
     $('.buttonGallery').on('click',function(){
 
       if($(this).attr('data-click-state') == 1) {
@@ -28,6 +28,8 @@ var Index = {
 
     if($(window).width() < 800){
       $(".header").height($(window).height() - 50 + 'px')
+    }else{
+      $(".header").height($(window).height() - 150 + 'px')
     }
 
     $(".searchBlock").hover(function() {

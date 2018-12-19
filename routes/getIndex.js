@@ -88,6 +88,7 @@ router.get('/', function(req, res, next){
 
                         locale.find({page:'index'}).toArray(function(err, results_locale ){
                           locale.find({page:'global'}).toArray(function(err, results_global ){
+                            // res.render('index.ejs',{
                             res.render('index.ejs',{
                               conf: results_config[0],
                               menu: results_menu,
