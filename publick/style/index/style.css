@@ -151,7 +151,7 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 .header {
   height: 763px;
   position: relative;
-  border-bottom: 3px solid rgba(255, 201, 223, 0.23);
+  /* border-bottom: 3px solid rgba(255, 201, 223, 0.23); */
   /* max-width: 1024px; */
   margin: auto;
   display: block;
@@ -413,7 +413,7 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  /* display: none; */
 }
 
 .slide__overlay {
@@ -457,7 +457,7 @@ svg {
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 7px 23px 20px;
   border-radius: 3px;
-  display: none;
+  /* display: none; */
 }
 
 @media (max-width: 991px) {
@@ -479,9 +479,9 @@ svg {
 
 .slide__text-heading {
   font-family: 'Didact Gothic', sans-serif;
-  "Polar", Helvetica, Arial, sans-serif;
   font-size: 22px;
   margin-bottom: 2rem;
+  color: #ffd830;
 }
 
 @media (max-width: 991px) {
@@ -500,7 +500,6 @@ svg {
 @media (max-width: 991px) {
   .slide__text-desc {
     font-size: 15px;
-    /* display: none; */
   }
 }
 
@@ -516,11 +515,17 @@ svg {
   perspective: 1000px;
   color: white;
   text-decoration: none;
+  margin: auto;
+  width: calc(100% - 15px);
+  text-align: center;
+}
+a:focus, a:hover {
+    color: #000000;
+    text-decoration: underline;
 }
 
 @media (max-width: 991px) {
   .slide__text-link {
-    /* display: none; */
     padding: 0;
   }
 }
