@@ -1365,7 +1365,7 @@ i {
 
 .fa-5x {
   font-size: 50px;
-  color: #ff0068;
+  color: #ffffff;
 }
 
 .back-to-top {
@@ -2877,18 +2877,17 @@ i {
 
 
 .slide-button{
-  box-shadow: -5px -5px 0px -3px white, -5px -5px 0px 0px rgba(255, 0, 107, 0.4);
   position: absolute;
   left: 50%;
   z-index: 1000;
-  background: white;
+  background: #ffffff00;
   bottom: 150px;
   padding: 10px 50px;
-  color: #ff97c2;
+  color: #ffffff;
   font-size: 22px;
   transform: translate(-50%, 0);
   cursor: pointer;
-  border: 3px solid #ff97c2;
+  border: 3px solid #fffefe;
   font-weight: bold;
   transition: 0.3s;
 }

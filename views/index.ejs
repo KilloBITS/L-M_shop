@@ -267,9 +267,11 @@
           <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
           <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
 
-          <div class="slide-button">
-            <%= slides[i].slideName %>
-          </div>
+          <a href="<%= slides[i].slideLink %>" target="_blank">
+            <div class="slide-button">
+              <%= slides[i].slideName %>
+            </div>
+          </a>
           <!-- <div class="slide__content">
             <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
               <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
