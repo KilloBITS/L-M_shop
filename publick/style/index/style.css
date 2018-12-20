@@ -2879,14 +2879,14 @@ i {
   position: absolute;
   left: 50%;
   z-index: 1000;
-  background: #ffffff00;
+  background: #ffffff;
   bottom: 150px;
   padding: 10px 50px;
-  color: #ffffff;
+  color: #d58caa;
   font-size: 22px;
   transform: translate(-50%, 0);
   cursor: pointer;
-  border: 3px solid #fffefe;
+  border: 3px solid #d58caa;
   font-weight: bold;
   transition: 0.3s;
 }
