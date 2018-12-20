@@ -3,13 +3,6 @@
     src: url('../DidactGothic.ttf');
 }
 
-@media screen and (min-width: 1200px) {
-  .header {
-    max-width: 1284px;
-  }
-}
-
-
 @media screen and (max-width: 936px) {
   .menuBTN {
     font-size: 14px;

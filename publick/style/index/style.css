@@ -151,8 +151,6 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 .header {
   height: 763px;
   position: relative;
-  /* border-bottom: 3px solid rgba(255, 201, 223, 0.23); */
-  max-width: 1024px;
   margin: auto;
   display: block;
 }
@@ -598,8 +596,8 @@ h3 {
   transition: transform 500ms ease;
   /* border: 2px solid #ffc9df; */
   border-radius: 3px;
-  max-width: 210px;
-  height: 230px;
+  max-width: 230px;
+  height: 300px;
   overflow: hidden;
   border-bottom: 3px solid white;
 }
@@ -959,7 +957,7 @@ form textarea {
 }
 
 .container .column {
-  width: 50%;
+  width: 33%;
   padding: 0 8px;
   -webkti-box-sizing: border-box;
   -moz-box-sizing: border-box;

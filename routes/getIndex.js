@@ -54,7 +54,7 @@ router.get('/', function(req, res, next){
            if(results_config[0].opens){
              menu.find().sort({ index: 1 }).toArray(function(err, results_menu ){
                slider.find().toArray(function(err, results_slider ){
-                 news.find().toArray(function(err, results_news ){
+                 news.find().sort({ index: -1 }).toArray(function(err, results_news ){
                   tovar.aggregate([{$sample: {size: 12}}]).toArray(function(err, results_recTovar) {
                      effect.find({ active: true }).toArray(function(err, results_effect ){
                         //counters
