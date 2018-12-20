@@ -28,9 +28,11 @@ var Index = {
 
     if($(window).width() < 800){
       $(".header").height($(window).height() - 50 + 'px')
-    }else{
-      $(".header").height($(window).height() - 150 + 'px')
     }
+
+    // else{
+    //   $(".header").height($(window).height() - 150 + 'px')
+    // }
 
     $(".searchBlock").hover(function() {
       $(".searchLine").css({
