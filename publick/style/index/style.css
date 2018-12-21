@@ -1362,9 +1362,13 @@ i {
   animation: bounce 2s infinite;
 }
 
+#head_arrow{
+  cursor: pointer;
+}
+
 .fa-5x {
   font-size: 50px;
-  color: #ffffff;
+  color: #da4155;
 }
 
 .back-to-top {

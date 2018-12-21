@@ -266,7 +266,7 @@
           <% } %>
           <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
           <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
-
+          <div class="clockTimer"></div>
           <a href="<%= slides[i].slideLink %>" target="_blank">
             <div class="slide-button">
               <%= slides[i].slideName %>
@@ -287,7 +287,7 @@
       </div>
       </div>
       <div class="headerArrow">
-        <div class="arrowsss bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+        <div class="arrowsss bounce" id="head_arrow"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
       </div>
     </div>
   </div>

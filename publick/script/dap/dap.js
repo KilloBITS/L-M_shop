@@ -1,6 +1,6 @@
 var ML = "";
 $(document).ready(function(){
-
+      
       $(".menuBTN").hover(function() {
         try {
           $("." + ML + ",.opensMenu").hide();
