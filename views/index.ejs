@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css">
+  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
@@ -654,7 +655,15 @@
       <div class="half right cf">
         <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
       </div>
-      <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)">
+
+      <div class="send-button" id="input-submit">
+        <span class="text">Отправить</span>
+        <span class="icon-wrapper">
+          <span class="icon-1 ion-paper-airplane"></span>
+          <span class="icon-2 ion-checkmark"></span>
+        </span>
+      </div>
+      <!-- <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)"> -->
     </form>
     <!-- <div class="zub_lineB"></div> -->
   </div>
