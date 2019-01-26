@@ -238,13 +238,17 @@
           <div class="description">
             <div class="sizeOfTovar">
               <div class="selectSize">
-                <% for(var iS = 0; iS < tovarArr[0].sizes.length; iS++){ %>
-                  <% if(iS === 0){ %>
-                      <div class="sizeBTN size_a"><%= tovarArr[0].sizes[iS] %></div>
-                  <% }else{%>
-                      <div class="sizeBTN"><%= tovarArr[0].sizes[iS] %></div>
-                  <% } %>
+                <% if(tovarArr[0].sizes !== null){ %>
+                  <% for(var iS = 0; iS < tovarArr[0].sizes.length; iS++){ %>
+                    <% if(iS === 0){ %>
+                        <div class="sizeBTN size_a"><%= tovarArr[0].sizes[iS] %></div>
+                    <% }else{%>
+                        <div class="sizeBTN"><%= tovarArr[0].sizes[iS] %></div>
+                    <% } %>
 
+                  <% } %>
+                <% } else { %>
+                    <div class="sizeBTN size_a">Все размеры</div>
                 <% } %>
               </div>
               <div class="btnTableSizes">Таблица размеров</div>
