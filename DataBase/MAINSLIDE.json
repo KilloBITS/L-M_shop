@@ -1,2 +1,2 @@
-{"_id":{"$oid":"5bbf6af459b2ab09dc96789b"},"slideName":"Перейти","slideImage":"1.jpg","slideLink":"https://www.instagram.com/ladyman_store/"}
-{"_id":{"$oid":"5bbf6cecca83c509dcc8cd36"},"slideName":"Каталог","slideImage":"2.jpg","slideLink":"/stock?page=1"}
+{"_id":{"$oid":"5bbf6af459b2ab09dc96789b"},"slideName":["Перейти","Перейти","Go"],"slideImage":"1.jpg","slideLink":"https://www.instagram.com/ladyman_store/"}
+{"_id":{"$oid":"5bbf6cecca83c509dcc8cd36"},"slideName":["Каталог","Каталог","Catalog"],"slideImage":"2.jpg","slideLink":"/stock?page=1"}
