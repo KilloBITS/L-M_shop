@@ -4,12 +4,6 @@ const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
 router.get('/', function(req, res, next){
-  switch(req.cookies.pageLang){
-    case 'ru': var numLangs = 0 ;break;
-    case 'ua': var numLangs = 1 ;break;
-    case 'en': var numLangs = 2 ;break;
-    default: var numLangs = 0;
-  }
   mongoClient.connect(global.baseIP, function(err, client){
     const db = client.db(global.baseName);
     const config = db.collection("CONFIG");
@@ -35,7 +29,7 @@ router.get('/', function(req, res, next){
                   menu: resMenu[0][global.parseLanguage(req)],
                   globalLocale:  resLocale[0][global.parseLanguage(req)],
                   contacts: resContacts[0],
-                  numLang: numLangs,
+                  numLang: global.parseNumLang(req),
                   config: resConfig[0],
                   payment: resPad[0][global.parseLanguage(req)].payment,
                   delivery: resPad[0][global.parseLanguage(req)].delivery,

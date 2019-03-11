@@ -8,20 +8,6 @@ const geoip = require('geoip-lite');
 router.use(cookieParser());
 
 router.get('/', function(req, res, next){
-  var languageSystem, langMenu;
-
-  if(req.cookies.pageLang === undefined){
-    languageSystem = "locale";
-    langMenu = "menu";
-  }else{
-    if(req.cookies.pageLang === 'ua'){
-      languageSystem = "locale-ua";
-      langMenu = "menu-ua";
-    }else{
-      languageSystem = "locale";
-      langMenu = "menu";
-    }
-  }
 
   mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
       const db = client.db(global.baseName);

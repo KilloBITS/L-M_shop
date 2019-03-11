@@ -34,7 +34,8 @@ router.get('/', function(req, res, next){
                     menu: resMenu[0][global.parseLanguage(req)],
                     globalLocale:  resLocale[0][global.parseLanguage(req)],
                     contacts: resContacts[0],
-                    /*олько для индекса*/
+                    numLang: global.parseNumLang(req),
+                    /*Только для индекса*/
                     slides: resMainslide,
                     newtovar: resTovar,
                     news: resNews[0][global.parseLanguage(req)]

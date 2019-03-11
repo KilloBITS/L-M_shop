@@ -1,128 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Условия пользования</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/style/global.css">
-    <link rel="stylesheet" type="text/css" href="/style/global.min.css">
+<head>
+  <meta charset="utf-8">
+  <title>Условия пользования</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
 
-    <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/script/jquery-ui.js"></script>
-    <script type="text/javascript" src="/script/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script/global.js"></script>
-    <% if(isAdm){ %>
-      <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-      <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
-    <% } %>
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="/script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script/global.js"></script>
+  <% if(isAdm){ %>
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <% } %>
 
-    <style type="text/css">
-      .col-md-12 {
-        width: 100%;
-        float: none;
-        background: white;
-        padding: 70px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="top">
-    	<div class="topLine oneLine">
-        <div class="topNavMobMenuOfBtm">
-          <div class="menu-wrapper">
-            <div class="hamburger-menu"></div>
-          </div>
-        </div>
-    		<div class="logotype"></div>
-    		<div class="topNavBlockOfBtm">
-    			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
-          <% if(sessionUser !== undefined){ %>
-            <a href="/profile"><div class="userAccountInBlock"></div></a>
-          <% } else { %>
-            <a href="/login"><div class="logInBlock"></div></a>
-          <% } %>
-    			<div class="basketBlock">
-            <span>0</span>
-          </div>
-
-    		</div>
-    	</div>
-      <div class="topLine twoLine">
-        <div class="menuBlock">
-          <% for(var i = 0; i < menu.length; i++) { %>
-            <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-              <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-                <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-              <% }else{%>
-                <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-              <% } %>
-
-            <% } else { %>
-              <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-                <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-              <% }else{%>
-                <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-              <% } %>
-            <% } %>
-          <% } %>
-        </div>
-      </div>
-      <div class="opensMenu">
-      <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-          <div class="menu_data <%= menu[i].ml %>">
-            <div class="menu_title"><%= menu[i].name %></div>
-            <div class="menuLeft">
-              <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-              <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-              <% } %>
-            </div>
-            <div class="menuRight"></div>
-          </div>
-        <% } %>
-      <% } %>
+  <style type="text/css">
+  .col-md-12 {
+    width: 100%;
+    float: none;
+    background: white;
+    padding: 70px;
+  }
+  p {
+    margin: 0 0 10px;
+    max-width: 1024px;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+   <div class="topLine oneLine">
+    <div class="topNavMobMenuOfBtm">
+      <div class="menu-wrapper">
+        <div class="hamburger-menu"></div>
       </div>
     </div>
+    <div class="logotype"></div>
+    <div class="topNavBlockOfBtm">
+     <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
+     <% if(sessionUser !== undefined){ %>
+     <a href="/profile"><div class="userAccountInBlock"></div></a>
+     <% } else { %>
+     <a href="/login"><div class="logInBlock"></div></a>
+     <% } %>
+     <div class="basketBlock">
+      <span>0</span>
+    </div>
+  </div>
+</div>
+<%- include ./includes/menu.ejs %>
+</div>
 
-    <div class="col-md-12 col-sm-12">
-			<p><span color="#9c9c94" style="color: #9c9c94;">Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> (далее – Интернет-магазин) с одной стороны и заказчик товаров (далее – Покупатель) с другой стороны обязуются соблюдать условия данного Соглашения.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">1. РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">1.1 Оформляя заказ на сайте <a href="ladyman.club">ladyman.club</a>, Покупатель соглашается с настоящими условиями.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">1.2 Личные данные Покупателя не предоставляются третьим лицам, но сохраняются для предоставления услуги продажи товаров, представленных на сайте&nbsp;<a href="ladyman.club">ladyman.club</a><br>Интернет-магазин оставляет за собой право использовать данную информацию в маркетинговых целях (анализ данных о продажах товаров, анализ посещаемости сайта, электронная рассылка).</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">1.3 Регистрируясь на сайте&nbsp;<a href="ladyman.club">ladyman.club</a> Покупатель соглашается предоставить достоверную, точную информацию о себе и своих контактных данных.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">2. ПРИЁМ И ОБРАБОТКА ЗАКАЗОВ.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">2.1. Заказы принимаются посредством сайта&nbsp;<a href="ladyman.club">ladyman.club</a></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">2.2. Время приема звонков и обработки заказов:<br><br>Пн-Сб: 10:00 до 17:00<br>Вс: Выходной</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">2.3. После размещения заказа Покупатель получает сообщение на указанный при регистрации электронный адрес о том, что его заказ принят автоматической системой управления заказами, и в скором времени с ним свяжется представитель интернет-магазина для оформления заказа, проверки наличия заказываемых товаров, уточнения условий оплаты и доставки.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">2.4 Заказ не считается оформленным, если Покупатель не прошел этап подтверждения заказа с представителем интернет-магазина по телефону (в случае, если Покупатель не отвечает на звонок, находится вне зоны действия мобильной связи и т. д.).</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">3. ДОСТАВКА И ОПЛАТА.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">3.1 Условия оплаты и доставки товаров Покупателю регламентируются разделом "<a href="/oplata" target="_blank">Доставка и оплата</a>".</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">3.2 Покупатель понимает возможность возникновения ситуации, при которой на доставку потребуется более 5 рабочих дней (из-за особенностей работы службы доставки; большого <span style="color: #888888;">объема заказов и в связи с этим удлинение сроков оформления каждого заказа, и т. д.), или доставка будет вообще временно невозможна. При этом интернет-магазин&nbsp;<a href="ladyman.club"><span style="color: #888888;">ladyman.club</span></a></span></span><span style="color: #888888;">&nbsp;не берет на себя никаких обязательств по возмещению каких-либо убытков Покупателя, связанных с несвоевременной доставкой заказа. Если Покупателя не устраивают сроки доставки, он имеет право отказаться от заказа в день его оформления связавшись с оператором интернет-магазина&nbsp;<a href="ladyman.club"><span style="color: #888888;">ladyman.club</span></a></span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">4. ПРОВЕРКА ДОСТАВЛЕННОГО ТОВАРА.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">4.1 При получении заказа Покупатель должен проверить количество и качество получаемого товара.<br>Если при получении заказа Вы обнаружите несоответствующий заказу продукт, мы гарантируем Вам предоставить надлежащий товар за наш счет.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">5. СРОКИ ГАРАНТИИ.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">5.1 Ввиду того, что разные производители предоставляют на свой товар различные сроки гарантии, Покупатель при оформлении заказа должен уточнить у представителя интернет-магазина гарантийные сроки на приобретаемые товары во избежание недоразумений.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">5.2. Установленный производителем гарантийный срок исчисляется со дня получения товара Покупателем или отправки товара Покупателю через выбранную Покупателем службу доставки.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">6. УСЛОВИЯ СОГЛАШЕНИЯ.</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">6.1 Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> оставляет за собой право изменять условия данного Соглашения, при этом обо всех принципиальных изменениях в Соглашении интернет-магазин обязуется предупредить Покупателя по электронной почте, а Покупатель согласен получать от интернет-магазина сообщения такого рода.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">6.2 Интернет-магазин&nbsp;ladyman.club обязуется предоставлять в свободном доступе для Покупателя условия данного Соглашения на своем сайте.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">7. ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">7.1 Интернет-магазин&nbsp;ladyman.club в любое время без уведомления может вносить изменения в материалы и услуги, предоставляемые на этом сайте, а также в упомянутые в них продукты и цены.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">7.2 Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> ни при каких обстоятельствах не несет ответственности за любой ущерб (включая ущерб от потери прибыли, данных или от прерывания деловой активности), возникший вследствие использования или невозможности использования данного сайта.</span></p>
-        <p><span style="color: #000000;"><strong><span color="#9c9c94">8. ПРОГРАММА ЛОЯЛЬНОСТИ</span></strong></span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">8.1 Интернет-магазин&nbsp;ladyman.club предоставляет своим покупателям возможность зарабатывать баллы (далее - бонусы), которые можно использовать пре покупках согласно правил Интернет-магазина.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">8.2 Каждый зарегистрированный покупатель получает за свои покупки бонусные баллы которые отображаются в личном кабинете.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">8.3 Правила испозьвания бонусных баллов и их ценность устанавливаются администрацие и могут поменятся в любой момент.</span></p>
-        <p><span color="#9c9c94" style="color: #9c9c94;">8.4 Использование бонусов возможно только при том что общая сумма покупки составляет 2500 UAH и больше.</span></p>
-		</div>
-
-
-    <%- include ./includes/footer.ejs %>
-
-  </body>
+<div class="col-md-12 col-sm-12">
+  <h1 style="text-align: center;">Условия пользования</h1>
+  <p>
+    <span color="#9c9c94" style="color: #9c9c94;">Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> (далее – Интернет-магазин) с одной стороны и заказчик товаров (далее – Покупатель) с другой стороны обязуются соблюдать условия данного Соглашения.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">1. РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">1.1 Оформляя заказ на сайте <a href="ladyman.club">ladyman.club</a>, Покупатель соглашается с настоящими условиями.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">1.2 Личные данные Покупателя не предоставляются третьим лицам, но сохраняются для предоставления услуги продажи товаров, представленных на сайте&nbsp;<a href="ladyman.club">ladyman.club</a><br>Интернет-магазин оставляет за собой право использовать данную информацию в маркетинговых целях (анализ данных о продажах товаров, анализ посещаемости сайта, электронная рассылка).</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">1.3 Регистрируясь на сайте&nbsp;<a href="ladyman.club">ladyman.club</a> Покупатель соглашается предоставить достоверную, точную информацию о себе и своих контактных данных.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">2. ПРИЁМ И ОБРАБОТКА ЗАКАЗОВ.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">2.1. Заказы принимаются посредством сайта&nbsp;<a href="ladyman.club">ladyman.club</a></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">2.2. Время приема звонков и обработки заказов:<br><br>Пн-Сб: 10:00 до 17:00<br>Вс: Выходной</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">2.3. После размещения заказа Покупатель получает сообщение на указанный при регистрации электронный адрес о том, что его заказ принят автоматической системой управления заказами, и в скором времени с ним свяжется представитель интернет-магазина для оформления заказа, проверки наличия заказываемых товаров, уточнения условий оплаты и доставки.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">2.4 Заказ не считается оформленным, если Покупатель не прошел этап подтверждения заказа с представителем интернет-магазина по телефону (в случае, если Покупатель не отвечает на звонок, находится вне зоны действия мобильной связи и т. д.).</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">3. ДОСТАВКА И ОПЛАТА.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">3.1 Условия оплаты и доставки товаров Покупателю регламентируются разделом "<a href="/oplata" target="_blank">Доставка и оплата</a>".</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">3.2 Покупатель понимает возможность возникновения ситуации, при которой на доставку потребуется более 5 рабочих дней (из-за особенностей работы службы доставки; большого <span style="color: #888888;">объема заказов и в связи с этим удлинение сроков оформления каждого заказа, и т. д.), или доставка будет вообще временно невозможна. При этом интернет-магазин&nbsp;<a href="ladyman.club"><span style="color: #888888;">ladyman.club</span></a></span></span><span style="color: #888888;">&nbsp;не берет на себя никаких обязательств по возмещению каких-либо убытков Покупателя, связанных с несвоевременной доставкой заказа. Если Покупателя не устраивают сроки доставки, он имеет право отказаться от заказа в день его оформления связавшись с оператором интернет-магазина&nbsp;<a href="ladyman.club"><span style="color: #888888;">ladyman.club</span></a></span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">4. ПРОВЕРКА ДОСТАВЛЕННОГО ТОВАРА.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">4.1 При получении заказа Покупатель должен проверить количество и качество получаемого товара.<br>Если при получении заказа Вы обнаружите несоответствующий заказу продукт, мы гарантируем Вам предоставить надлежащий товар за наш счет.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">5. СРОКИ ГАРАНТИИ.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">5.1 Ввиду того, что разные производители предоставляют на свой товар различные сроки гарантии, Покупатель при оформлении заказа должен уточнить у представителя интернет-магазина гарантийные сроки на приобретаемые товары во избежание недоразумений.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">5.2. Установленный производителем гарантийный срок исчисляется со дня получения товара Покупателем или отправки товара Покупателю через выбранную Покупателем службу доставки.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">6. УСЛОВИЯ СОГЛАШЕНИЯ.</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">6.1 Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> оставляет за собой право изменять условия данного Соглашения, при этом обо всех принципиальных изменениях в Соглашении интернет-магазин обязуется предупредить Покупателя по электронной почте, а Покупатель согласен получать от интернет-магазина сообщения такого рода.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">6.2 Интернет-магазин&nbsp;ladyman.club обязуется предоставлять в свободном доступе для Покупателя условия данного Соглашения на своем сайте.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">7. ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">7.1 Интернет-магазин&nbsp;ladyman.club в любое время без уведомления может вносить изменения в материалы и услуги, предоставляемые на этом сайте, а также в упомянутые в них продукты и цены.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">7.2 Интернет-магазин&nbsp;<a href="ladyman.club">ladyman.club</a> ни при каких обстоятельствах не несет ответственности за любой ущерб (включая ущерб от потери прибыли, данных или от прерывания деловой активности), возникший вследствие использования или невозможности использования данного сайта.</span></p>
+    <p><span style="color: #000000;"><strong><span color="#9c9c94">8. ПРОГРАММА ЛОЯЛЬНОСТИ</span></strong></span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">8.1 Интернет-магазин&nbsp;ladyman.club предоставляет своим покупателям возможность зарабатывать баллы (далее - бонусы), которые можно использовать пре покупках согласно правил Интернет-магазина.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">8.2 Каждый зарегистрированный покупатель получает за свои покупки бонусные баллы которые отображаются в личном кабинете.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">8.3 Правила испозьвания бонусных баллов и их ценность устанавливаются администрацие и могут поменятся в любой момент.</span></p>
+    <p><span color="#9c9c94" style="color: #9c9c94;">8.4 Использование бонусов возможно только при том что общая сумма покупки составляет 2500 UAH и больше.</span>
+    </p>
+    <a href="/documents/TermsOfUse.pdf" target="_black">
+      <div class="downloadPdfFile">
+        Скачать PDF
+      </div>
+    </a>
+  </div>
+  <%- include ./includes/footer.ejs %>
+</body>
 </html>
