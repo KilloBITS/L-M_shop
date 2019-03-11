@@ -815,11 +815,11 @@ body .send-button {
   background-color: #c51162;
   height: 45px;
   border-radius: 2px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  /*box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);*/
   cursor: pointer;
   user-select: none;
   transition: transform 0.15s;
-  text-shadow: 1px 2px 1px rgba(77, 9, 36, 0.6);
+  /*text-shadow: 1px 2px 1px rgba(77, 9, 36, 0.6);*/
 }
 body .send-button .text {
   left: 10px;
@@ -830,7 +830,7 @@ body .send-button .text {
   font-family: "Roboto";
   font-weight: 700;
   color: #f8bbd0;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin: auto;
 }
 body .send-button .icon-wrapper {

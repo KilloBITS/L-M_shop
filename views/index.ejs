@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="wWRtd2X7z9M75zFAqoGxciFAQpCUnX4IMJUzNBaGmdk" />
   <meta charset="utf-8">
   <meta name="Description" content="Lady & Man - онлайн магазин недорогой, стильной и качественной одежды. Мы предлагаем огромный выбор товаров на любой вкус и праздник. Добавляем новые товары каждый день.">
-	<title>Lady & Man - магазин одежды</title>
+	<title><%= locale.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
@@ -45,93 +45,7 @@
   <% } %>
 </head>
 <body>
-  <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
-  <div class="effect <%= effectData.className %>">
-    <!-- <div class="snow__item"></div>
-    <div class="snow__item"></div>
-    <div class="snow__item"></div> -->
-  <% } else { %>
-    <% if(effectData !== undefined && effectData.name === "Leaves"){ %>
-    <div class="effect" id="leaves">
-      <script type="text/javascript">
-        var falling = true;
-        var total = 30;
-        var container = document.getElementById("leaves"),	w = window.innerWidth , h = window.innerHeight;
-        for (i=0; i<total; i++){
-         var Div = document.createElement('div');
-         TweenLite.set(Div,{attr:{class:'dot'},x:R(0,w),y:R(-200,-150),z:R(-200,200)});
-         container.appendChild(Div);
-         animm(Div);
-        }
-
-        function animm(elm){
-         TweenMax.to(elm,R(6,15),{y:h+100,ease:Linear.easeNone,repeat:-1,delay:-15});
-         TweenMax.to(elm,R(4,8),{x:'+=100',rotationZ:R(0,180),repeat:-1,yoyo:true,ease:Sine.easeInOut});
-         TweenMax.to(elm,R(2,8),{rotationX:R(0,360),rotationY:R(0,360),repeat:-1,yoyo:true,ease:Sine.easeInOut,delay:-5});
-        };
-
-        function R(min,max) {return min+Math.random()*(max-min)};
-      </script>
-    <% } else { %>
-    <div class="effect">
-    <% } %>
-  <% } %>
-
-    <div class="spn_hol">
-      <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-      </div>
-    </div>
-
-    <% if(conf.inDevelopers){ %>
-    <div class="global-modal global-modal-show">
-      <div class="overlay"></div>
-      <div class="global-modal_contents modal-transition">
-        <div class="global-modal-header">
-          <span class="mobile-close"> X </span>
-          <h3>
-            <span> Внимание! Магазин </span>
-            <b>L&M Shop</b>
-            <br>
-            <span> Сейчас на стадии разработки и тестирования</span>
-          </h3>
-        </div>
-        <div class="global-modal-body">
-          <div class="content-left">
-            <p>Если вы нашли "ошибку" или же столкнулись с какой то проблемой сообщите нам.</p>
-            <a href="/contacts"class="btn-green-flat">Сообщить</a>
-          </div>
-          <div class="content-right">
-            <p> Некоторые товары могут не соответствовать реальным<br>
-              <small>(так как мы тестируем все наши сервисы)</small>
-              <br>
-              а так же они могут отстутствовать вобще
-            </p>
-          </div>
-        </div>
-        <div class="sosulki"></div>
-      </div>
-
-    </div>
-    <script>
-      var globalModal = $('.global-modal');
-      $( ".btn-green-flat-trigger" ).on( "click", function(e) {
-      e.preventDefault();
-      $( globalModal ).toggleClass('global-modal-show');
-      });
-      $( ".overlay" ).on( "click", function() {
-      $( globalModal ).toggleClass('global-modal-show');
-      });
-      $( ".global-modal_close" ).on( "click", function() {
-      $( globalModal ).toggleClass('global-modal-show');
-      });
-      $(".mobile-close").on("click", function(){
-      $( globalModal ).toggleClass('global-modal-show');
-      });
-    </script>
-    <% } %>
+  <%- include ./includes/preloader.ejs %>
 	<div class="top">
 		<div class="topLine oneLine">
       <div class="topNavMobMenuOfBtm">
@@ -141,19 +55,19 @@
       </div>
 			<div class="logotype"></div>
 			<div class="topNavBlockOfBtm">
-        <a href="/shop" class="indexBtnToShop"> <%= conf.BTN_TOSHOP %> </a>
         <% if(sessionUser !== undefined){ %>
-        <a href="/profile"><div class="userAccountInBlock"></div></a>
+        <a href="/profile" title="<%= locale.profile %>"><div class="userAccountInBlock"></div></a>
         <% } else { %>
-        <a href="/login"><div class="logInBlock"></div></a>
+        <a href="/login" title="<%= locale.signin %>"><div class="logInBlock"></div></a>
         <% } %>
+
 				<div class="searchBlock">
 					<div class="searchLine">
-						<input type="text" name="searchTOP" class="searchBlockVal" id="SEARCH" placeholder="Поиск">
+						<input type="text" name="searchTOP" class="searchBlockVal" id="SEARCH" placeholder="<%= locale.search %>">
 					</div>
 				</div>
         <div class="search_result">
-          <div class="search_title">Поиск (Найдено: 100)</div>
+          <div class="search_title"><%= locale.found %> 0</div>
           <div class="search_data">
             <div class="search_object">
               <div class="search_min_img"></div>
@@ -163,102 +77,15 @@
         </div>
 			</div>
 		</div>
-		<div class="topLine twoLine">
-			<div class="menuBlock">
-        <% for(var i = 0; i < menu.length; i++) { %>
-          <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-            <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-              <div class="menuBTN" menu-link="<%= menu[i].ml %>" data-ix="fade-in-heading"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %> <div class="pLinkIcon"></div></div>
-            <% }else{%>
-              <div class="menuBTN" menu-link="<%= menu[i].ml %>" data-ix="fade-in-heading"><%= menu[i].name %> <div class="pLinkIcon"></div></div>
-            <% } %>
-
-	        <% } else { %>
-            <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-              <a href="<%= menu[i].glink %>"><div class="menuBTN" data-ix="fade-in-heading"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %>  <div class="pLinkIcon2"></div></div></a>
-            <% }else{%>
-              <a href="<%= menu[i].glink %>"><div class="menuBTN" data-ix="fade-in-heading"><%= menu[i].name %> <div class="pLinkIcon2"></div></div></a>
-            <% } %>
-          <% } %>
-        <% } %>
-			</div>
-      <% if(effectData !== undefined && (effectData.name === "Snow")){ %>
-        <div class="lightning_new_year">
-          <ul class="lightrope">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      <% } %>
-		</div>
-		<div class="opensMenu">
-    <% for(var i = 0; i < menu.length; i++) { %>
-      <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-        <div class="menu_data <%= menu[i].ml %>">
-    			<div class="menu_title"><%= menu[i].name %></div>
-    			<div class="menuLeft">
-            <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-            <% } %>
-    			</div>
-    			<div class="menuRight"></div>
-    		</div>
-      <% } %>
-    <% } %>
-		</div>
+		<%- include ./includes/menu.ejs %>
 	</div>
-
 	<div class="content">
     <div class="header block">
       <div class="nextSliderBtn">></div>
       <div class="prevSliderBtn"><</div>
       <div class="slider-container">
-        <% if(isAdm){ %>
-        <div class="edited_admin" title="Добавить слайд" id="newSlide"></div>
-        <% } %>
         <div class="slider-control left inactive"></div>
         <div class="slider-control right"></div>
-
         <div class="slider">
         <% for(var i = 0; i < slides.length; i++) { %>
           <% if(i <= 0){ %>
@@ -274,16 +101,6 @@
               <%= slides[i].slideName %>
             </div>
           </a>
-          <!-- <div class="slide__content">
-            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-            </svg>
-            <div class="slide__text">
-              <h2 class="slide__text-heading"><%= slides[i].slideName %></h2>
-              <p class="slide__text-desc"><%= slides[i].slideText %></p>
-              <a class="slide__text-link" href="<%= slides[i].slideLink %>">Перейти</a>
-            </div>
-          </div> -->
         </div>
         <% } %>
       </div>
@@ -296,8 +113,8 @@
 
 	<div class="data block">
 		<div class="mainDLG">
-			<div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.title1[0] %></div>
-			<div class="mainTextDLG post" style="color: #f98eb9"><%= locale.title1[1] %></div>
+			<div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.newgoods %></div>
+			<div class="mainTextDLG post" style="color: #f98eb9"><%= locale.newgoods2 %></div>
 		</div>
 
     <div class="carousel-wrapper">
@@ -314,7 +131,7 @@
           <% } %>
         <% } else { %>
           <div class="carousel-cell">
-            <h3> У нас пока-что нет товаров </h3>
+            <h3> <%= locale.notdata %> </h3>
             <a class="more" href="/"></a>
             <div class="backCaruselImage" style="background-image: url(../../../image/notTovar.jpg)"></div>
           </div>
@@ -323,13 +140,13 @@
 		</div>
 
 		<div class="mainBTN_block" style="background: #ffc9df; padding-top: 20px;">
-			<a href="<%= locale.title1[2].link %>"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.title1[2].title %></div></a>
+			<a href="/shopNews"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div></a>
 		</div>
 
 		<div class="mainDLG" style="background: #ffc9df; color: #333333;">
-			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.title2[0] %></div>
+			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
 			<div class="mainTextDLG post" data-ix="scale-on-scroll">
-        <%= locale.title2[1] %>
+        <%= locale.abouttext %>
       </div>
       <div class="ucv-b4-panel">
         <div class="ucv-b4-wrapper">
@@ -337,20 +154,40 @@
             <div class="ucv-b4-arrow-wrapper"  data-ix="scale-on-scroll">
               <div class="ucv-b4-image"><span class="ucv-b4-image-inner"> <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPGNpcmNsZSBjeD0iMzg2IiBjeT0iMjEwIiByPSIyMCIgZmlsbD0iIzAwMDAwMCIvPgoJCQk8cGF0aCBkPSJNNDMyLDQwaC0yNlYyMGMwLTExLjA0Ni04Ljk1NC0yMC0yMC0yMGMtMTEuMDQ2LDAtMjAsOC45NTQtMjAsMjB2MjBoLTkxVjIwYzAtMTEuMDQ2LTguOTU0LTIwLTIwLTIwICAgICBjLTExLjA0NiwwLTIwLDguOTU0LTIwLDIwdjIwaC05MFYyMGMwLTExLjA0Ni04Ljk1NC0yMC0yMC0yMHMtMjAsOC45NTQtMjAsMjB2MjBIODBDMzUuODg4LDQwLDAsNzUuODg4LDAsMTIwdjMxMiAgICAgYzAsNDQuMTEyLDM1Ljg4OCw4MCw4MCw4MGgxNTNjMTEuMDQ2LDAsMjAtOC45NTQsMjAtMjBjMC0xMS4wNDYtOC45NTQtMjAtMjAtMjBIODBjLTIyLjA1NiwwLTQwLTE3Ljk0NC00MC00MFYxMjAgICAgIGMwLTIyLjA1NiwxNy45NDQtNDAsNDAtNDBoMjV2MjBjMCwxMS4wNDYsOC45NTQsMjAsMjAsMjBzMjAtOC45NTQsMjAtMjBWODBoOTB2MjBjMCwxMS4wNDYsOC45NTQsMjAsMjAsMjBzMjAtOC45NTQsMjAtMjBWODBoOTEgICAgIHYyMGMwLDExLjA0Niw4Ljk1NCwyMCwyMCwyMGMxMS4wNDYsMCwyMC04Ljk1NCwyMC0yMFY4MGgyNmMyMi4wNTYsMCw0MCwxNy45NDQsNDAsNDB2MTE0YzAsMTEuMDQ2LDguOTU0LDIwLDIwLDIwICAgICBjMTEuMDQ2LDAsMjAtOC45NTQsMjAtMjBWMTIwQzUxMiw3NS44ODgsNDc2LjExMiw0MCw0MzIsNDB6IiBmaWxsPSIjMDAwMDAwIi8+CgkJCTxwYXRoIGQ9Ik0zOTEsMjcwYy02Ni43MiwwLTEyMSw1NC4yOC0xMjEsMTIxczU0LjI4LDEyMSwxMjEsMTIxczEyMS01NC4yOCwxMjEtMTIxUzQ1Ny43MiwyNzAsMzkxLDI3MHogTTM5MSw0NzIgICAgIGMtNDQuNjYzLDAtODEtMzYuMzM2LTgxLTgxczM2LjMzNy04MSw4MS04MWM0NC42NjMsMCw4MSwzNi4zMzYsODEsODFTNDM1LjY2Myw0NzIsMzkxLDQ3MnoiIGZpbGw9IiMwMDAwMDAiLz4KCQkJPHBhdGggZD0iTTQyMCwzNzFoLTl2LTIxYzAtMTEuMDQ2LTguOTU0LTIwLTIwLTIwYy0xMS4wNDYsMC0yMCw4Ljk1NC0yMCwyMHY0MWMwLDExLjA0Niw4Ljk1NCwyMCwyMCwyMGgyOSAgICAgYzExLjA0NiwwLDIwLTguOTU0LDIwLTIwQzQ0MCwzNzkuOTU0LDQzMS4wNDYsMzcxLDQyMCwzNzF6IiBmaWxsPSIjMDAwMDAwIi8+CgkJCTxjaXJjbGUgY3g9IjI5OSIgY3k9IjIxMCIgcj0iMjAiIGZpbGw9IiMwMDAwMDAiLz4KCQkJPGNpcmNsZSBjeD0iMjEyIiBjeT0iMjk3IiByPSIyMCIgZmlsbD0iIzAwMDAwMCIvPgoJCQk8Y2lyY2xlIGN4PSIxMjUiIGN5PSIyMTAiIHI9IjIwIiBmaWxsPSIjMDAwMDAwIi8+CgkJCTxjaXJjbGUgY3g9IjEyNSIgY3k9IjI5NyIgcj0iMjAiIGZpbGw9IiMwMDAwMDAiLz4KCQkJPGNpcmNsZSBjeD0iMTI1IiBjeT0iMzg0IiByPSIyMCIgZmlsbD0iIzAwMDAwMCIvPgoJCQk8Y2lyY2xlIGN4PSIyMTIiIGN5PSIzODQiIHI9IjIwIiBmaWxsPSIjMDAwMDAwIi8+CgkJCTxjaXJjbGUgY3g9IjIxMiIgY3k9IjIxMCIgcj0iMjAiIGZpbGw9IiMwMDAwMDAiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" style="width: 50px; height: 50px;"> </span></div>
               <div class="ucv-b4-arrow"><span class="ucv-b4-line"></span></div>
-              <div class="ucv-b4-text"><span class="ucv-b4-text-inner"> <span class="ucv-b4-number">1&nbsp; Месяц</span> опыт нашей работы в&nbsp;продаже одежды </span></div>
+              <div class="ucv-b4-text" id="aboutmin1"></div>
+              <textarea id="hidearea1" style="display: none;"><%= locale.aboutmin1 %></textarea>
+              <script type="text/javascript">
+                $('#aboutmin1').append($('#hidearea1').val());
+                $("#hidearea1").remove();
+              </script>
             </div>
             <div class="ucv-b4-arrow-wrapper"  data-ix="scale-on-scroll">
-              <div class="ucv-b4-text"><span class="ucv-b4-text-inner"> <span id="products2" class="ucv-b4-number">0</span> различных товаров в&nbsp;каталоге на&nbsp;сайте </span></div>
+              <div class="ucv-b4-text" id="aboutmin2"></div>
+             <textarea id="hidearea2" style="display: none;"><%= locale.aboutmin2 %></textarea>
+              <script type="text/javascript">
+                $('#aboutmin2').append($('#hidearea2').val());
+                $("#hidearea2").remove();
+              </script>
               <div class="ucv-b4-arrow ucv-b4-arrow-red"><span class="ucv-b4-line ucv-b4-line-bottom"></span></div>
               <div class="ucv-b4-image"><span class="ucv-b4-image-inner ucv-b4-image-inner-bot"> <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA0OTYuMDA5OSA0OTYiIHdpZHRoPSI2NHB4Ij48cGF0aCBkPSJtNDk0LjIzMDQ2OSA0NDkuNjk5MjE5LTY2LjYxMzI4MS0yMTIuODI0MjE5YzcuMzUxNTYyLTQuMTA5Mzc1IDEyLjM4MjgxMi0xMS44NzEwOTQgMTIuMzgyODEyLTIwLjg3MTA5NCAwLTkuNzY1NjI1LTUuODkwNjI1LTE4LjE2MDE1Ni0xNC4yODEyNS0yMS45MDIzNDRsMjAuMTM2NzE5LTgwLjU1MDc4MWMxLjQyMTg3NS01LjY3NTc4MSAyLjE0NDUzMS0xMS41MTU2MjUgMi4xNDQ1MzEtMTcuMzc4OTA2di02Ljc3MzQzN2MwLTE5LjU3ODEyNi0xMy43MDMxMjUtMzUuOTQ1MzEzLTMyLTQwLjIxODc1di00OS4xNzU3ODE3NWgtMTZ2NDguNTQ2ODc0NzVjLTE0LjIzNDM3NSAyLjI2OTUzMS0yNi4zMzU5MzggMTEuNzUtMzEuODI0MjE5IDI1LjQ3NjU2M2wtLjE3NTc4MS40NDkyMTgtLjE3NTc4MS0uNDQ5MjE4Yy01LjQ4ODI4MS0xMy43MjY1NjMtMTcuNTkzNzUtMjMuMjA3MDMyLTMxLjgyNDIxOS0yNS40NzY1NjN2LTQ4LjU0Njg3NDc1aC0xNnY0OS4xNjc5Njg3NWMtMTguMjk2ODc1IDQuMjgxMjUtMzIgMjAuNjQwNjI1LTMyIDQwLjIxODc1IDAgMTAuMzM1OTM3IDEuMjY5NTMxIDIwLjY3MTg3NSAzLjc4NTE1NiAzMC43MTg3NWwxOC40OTIxODggNzMuOTkyMTg3Yy04LjM5MDYyNSAzLjc0MjE4OC0xNC4yNzczNDQgMTIuMTM2NzE5LTE0LjI3NzM0NCAyMS45MDIzNDQgMCA5IDUuMDMxMjUgMTYuNzYxNzE5IDEyLjM4MjgxMiAyMC44NzEwOTRsLTY2LjYxNzE4NyAyMTIuODI0MjE5Yy00LjQyMTg3NSAxNC4xMzY3MTktLjQzNzUgMjkuMzcxMDkzIDEwLjQxMDE1NiAzOS43NjE3MTkuMDcwMzEzLjA3MDMxMi4xNTIzNDQuMTQ0NTMxLjIzMDQ2OS4yMDcwMzEgNC40ODgyODEgNC4xOTkyMTkgMTAuMzI4MTI1IDYuMzA0Njg3IDE2LjE2Nzk2OSA2LjMwNDY4NyA1LjkyOTY4NyAwIDExLjg1NTQ2OS0yLjE2Nzk2OCAxNi4zNjcxODctNi40OTYwOTRsMy4xNzk2ODgtMy4wMzkwNjJjMi44Nzg5MDYtMi43Njk1MzEgNy43MzQzNzUtMi43NjE3MTkgMTAuNjEzMjgxLS4wMDc4MTJsMy4xNzU3ODEgMy4wNDY4NzRjOS4wMzEyNSA4LjY1NjI1IDIzLjczMDQ2OSA4LjY1NjI1IDMyLjc2MTcxOSAwbDMuMTY3OTY5LTMuMDM5MDYyYzIuODc4OTA2LTIuNzY5NTMxIDcuNzM0Mzc1LTIuNzYxNzE5IDEwLjYxNzE4Ny0uMDA3ODEybDMuMTc1NzgxIDMuMDQ2ODc0YzkuMDMxMjUgOC42NTYyNSAyMy43MTg3NSA4LjY1NjI1IDMyLjc1IDBsMy4xNzU3ODItMy4wNDY4NzRjMi44NzEwOTQtMi43NTM5MDcgNy43MzgyODEtMi43NTM5MDcgMTAuNjA5Mzc1IDBsMy4xNzU3ODEgMy4wNDY4NzRjOS4wMjM0MzggOC42NzE4NzYgMjMuNzE4NzUgOC42NTYyNSAzMi43NSAwbDMuMTc1NzgxLTMuMDM5MDYyYzIuODgyODEzLTIuNzY5NTMxIDcuNzM4MjgxLTIuNzYxNzE5IDEwLjYxNzE4OC0uMDA3ODEybDMuMTc1NzgxIDMuMDQ2ODc0YzguOTYwOTM4IDguNTg1OTM4IDIzLjQ4ODI4MSA4LjY0ODQzOCAzMi41MjczNDQuMjA3MDMyLjA4MjAzMS0uMDc4MTI1LjE2Nzk2OC0uMTUyMzQ0LjI0MjE4Ny0uMjIyNjU2IDEwLjgzOTg0NC0xMC4zOTA2MjYgMTQuODMyMDMxLTI1LjYyNSAxMC4zOTg0MzgtMzkuNzYxNzE5em0tMTc0LjIzMDQ2OS0yMjUuNjk1MzEzYy00LjQxMDE1NiAwLTgtMy41ODIwMzEtOC04IDAtNC40MTQwNjIgMy41ODk4NDQtOCA4LThoOTZjNC40MDYyNSAwIDggMy41ODU5MzggOCA4IDAgNC40MTc5NjktMy41OTM3NSA4LTggOHptLTE2LTEzNC42MDU0NjhjMC0xNCAxMS4zOTA2MjUtMjUuMzk0NTMyIDI1LjM5MDYyNS0yNS4zOTQ1MzIgMTAuNDQ5MjE5IDAgMTkuNjk1MzEzIDYuMjY1NjI1IDIzLjU3ODEyNSAxNS45NjA5MzhsNy42MDU0NjkgMTkuMDA3ODEyYzEuMjE4NzUgMy4wMzkwNjMgNC4xNTIzNDMgNS4wMzEyNSA3LjQyNTc4MSA1LjAzMTI1IDMuMjY5NTMxIDAgNi4yMDcwMzEtMS45OTIxODcgNy40MjE4NzUtNS4wMzEyNWw3LjYwOTM3NS0xOS4wMDc4MTJjMy44Nzg5MDYtOS42OTUzMTMgMTMuMTM2NzE5LTE1Ljk2MDkzOCAyMy41NzQyMTktMTUuOTYwOTM4IDE0IDAgMjUuMzk0NTMxIDExLjM5NDUzMiAyNS4zOTQ1MzEgMjUuMzk0NTMydjYuNzczNDM3YzAgNC41NTQ2ODctLjU2MjUgOS4wOTc2NTYtMS42NjQwNjIgMTMuNTAzOTA2bC0yMC41ODU5MzggODIuMzI4MTI1aC04My41MDM5MDZsLTE4Ljk0MTQwNi03NS43NjU2MjVjLTIuMTk1MzEzLTguNzc3MzQzLTMuMzA0Njg4LTE3LjgwODU5My0zLjMwNDY4OC0yNi44Mzk4NDN6bS0yNi45NTMxMjUgMzg1LjQ3NjU2Mi0zLjE4MzU5NCAzLjA1MDc4MWMtMi44Nzg5MDYgMi43NTc4MTMtNy43MjY1NjIgMi43NTc4MTMtMTAuNjAxNTYyIDAtLjA1NDY4OC0uMDU4NTkzLS4xMTcxODgtLjExMzI4MS0uMTc1NzgxLS4xNjc5NjktNi4zMTI1LTYuMTYwMTU2LTguNjI4OTA3LTE1LjA1ODU5My02LjA1NDY4OC0yMy4yODEyNWw2Ny4xMjg5MDYtMjE0LjQ3MjY1NmgxMC4wNzgxMjVsLTQ1Ljc4OTA2MiAyMjguOTQ1MzEzYy00LjE3OTY4OC44Nzg5MDYtOC4xNTIzNDQgMi44MjQyMTktMTEuNDAyMzQ0IDUuOTI1Nzgxem00OS43MTA5MzcgMC0zLjE2Nzk2OCAzLjA1MDc4MWMtMi44Nzg5MDYgMi43NS03LjczNDM3NSAyLjc1LTEwLjYwNTQ2OSAwbC0zLjE4MzU5NC0zLjA1ODU5M2MtMS42NDA2MjUtMS41NjY0MDctMy41MTE3MTktMi43NTc4MTMtNS40NjQ4NDMtMy43NTc4MTNsNDYuMjIyNjU2LTIzMS4xMDU0NjloOS40NDE0MDZ2MjM1LjMzNTkzOGwtLjQ4ODI4MS0uNDY0ODQ0Yy05LjAxNTYyNS04LjY1MjM0NC0yMy43MTA5MzgtOC42NTIzNDQtMzIuNzUzOTA3IDB6bTk2LjI1NzgxMyAzLjA1MDc4MWMtMi44NzEwOTQgMi43NjU2MjUtNy43MTg3NSAyLjc1LTEwLjYwMTU2MyAwbC0zLjE4MzU5My0zLjA1ODU5M2MtOS4wMzEyNS04LjYzNjcxOS0yMy43MTg3NS04LjY0NDUzMi0zMi43NDIxODguMDA3ODEybC0uNDg4MjgxLjQ2NDg0NHYtMjM1LjMzNTkzOGg5LjQzNzVsNDYuMjI2NTYyIDIzMS4xMTMyODJjLTEuOTUzMTI0IDEtMy44MjQyMTggMi4xOTE0MDYtNS40NjQ4NDMgMy43Njk1MzF6bTQ5LjkwMjM0NC0uMTY3OTY5Yy0uMDYyNS4wNTQ2ODgtLjEyNS4xMTcxODgtLjE4MzU5NC4xNjc5NjktMi44Nzg5MDYgMi43NDIxODgtNy43MzQzNzUgMi43NDIxODgtMTAuNTk3NjU2IDBsLTMuMTgzNTk0LTMuMDU4NTkzYy0zLjI0MjE4Ny0zLjEwMTU2My03LjIyNjU2My01LjA0Njg3Ni0xMS40MDIzNDQtNS45MTc5NjlsLTQ1Ljc5Mjk2OS0yMjguOTQ1MzEzaDEwLjA4MjAzMmw2Ny4xMjg5MDYgMjE0LjQ4MDQ2OWMyLjU2NjQwNiA4LjIxNDg0NC4yNTM5MDYgMTcuMTEzMjgxLTYuMDUwNzgxIDIzLjI3MzQzN3ptMCAwIiBmaWxsPSIjMDAwMDAwIi8+PHBhdGggZD0ibTI3MC4zMDQ2ODggMTk2LjkyNTc4MWMxLjUxMTcxOC0xLjkzNzUgMi4wNTQ2ODctNC40NzI2NTYgMS40NTMxMjQtNi44NTU0NjlsLTMyLTEyOGMtLjYwNTQ2OC0yLjQzMzU5My0yLjMwODU5My00LjQzMzU5My00LjYwNTQ2OC01LjQxNzk2OGwtNTEuMTUyMzQ0LTIxLjkxNzk2OXYtMjYuNzMwNDY5YzAtNC40MjE4NzUtMy41ODU5MzgtNy45OTk5OTk3NS04LTcuOTk5OTk5NzVoLTgwYy00LjQxNzk2OSAwLTggMy41NzgxMjQ3NS04IDcuOTk5OTk5NzV2MjYuNzMwNDY5bC01MS4xNTIzNDQgMjEuOTE3OTY5Yy0yLjI5Njg3NS45ODQzNzUtNCAyLjk4NDM3NS00LjYwOTM3NSA1LjQxNzk2OGwtMzIgMTI4Yy0uNTk3NjU2IDIuMzkwNjI2LS4wNTQ2ODcgNC45MTc5NjkgMS40NTcwMzEgNi44NTU0NjkgMS41MTE3MTkgMS45NDE0MDcgMy44Mzk4NDQgMy4wNzgxMjUgNi4zMDQ2ODggMy4wNzgxMjVoNDBjMy41MjczNDQgMCA2LjY0ODQzOC0yLjMyMDMxMiA3LjY2NDA2Mi01LjcwMzEyNWwxMS4yOTY4NzYtMzcuNjQ4NDM3IDUuMDYyNSA3NS44Nzg5MDZjLjI3MzQzNyA0LjIxMDkzOCAzLjc2OTUzMSA3LjQ3MjY1NiA3Ljk3NjU2MiA3LjQ3MjY1NmgxMTJjNC4yMDcwMzEgMCA3LjcwMzEyNS0zLjI2MTcxOCA3Ljk4NDM3NS03LjQ3MjY1Nmw1LjA2MjUtNzUuODc4OTA2IDExLjI5Njg3NSAzNy42NDg0MzdjMS4wMDc4MTIgMy4zODI4MTMgNC4xMjg5MDYgNS43MDMxMjUgNy42NTYyNSA1LjcwMzEyNWg0MGMyLjQ2NDg0NCAwIDQuNzkyOTY5LTEuMTM2NzE4IDYuMzA0Njg4LTMuMDc4MTI1em0tMTM0LjMwNDY4OC02OC43MTA5MzctMjguNjQ4NDM4LTgwLjIxMDkzOGg1Ny4yOTY4NzZ6bS0zMi0xMTIuMjEwOTM4aDY0djE2aC02NHptLTYxLjk1MzEyNSAxNjhoLTIzLjgwMDc4MWwyOC41NTQ2ODctMTE0LjIwNzAzMSA0LjI5Mjk2OS0xLjgzMjAzMSAxMi41NzAzMTIgNDMuOTkyMTg3em0zNy45Mzc1LTcyLjUyNzM0NGMtLjAzMTI1LS41NTg1OTMtLjEzNjcxOS0xLjEyMTA5My0uMjg5MDYzLTEuNjY0MDYybC0xMy43NzczNDMtNDguMjE0ODQ0IDI1LjQxMDE1Ni0xMC44OTA2MjUgMzYuNjcxODc1IDEwMi42ODM1OTR2NzAuNjEzMjgxaC00MC41MTE3MTl6bTEwNC41MjczNDQgMTEyLjUyNzM0NGgtNDAuNTExNzE5di03MC42MTMyODFsMzYuNjcxODc1LTEwMi42ODM1OTQgMjUuNDA2MjUgMTAuODkwNjI1LTEzLjc3MzQzNyA0OC4yMDcwMzIuMTA5Mzc0LjAzMTI1Yy0uMTUyMzQzLjUzNTE1Ni0uMzY3MTg3IDEuMDU4NTkzLS4zOTg0MzcgMS42MzI4MTJ6bTQ1LjQ0MTQwNi00MC0yMS42MTcxODctNzIuMDU0Njg3IDEyLjU2NjQwNi00My45OTIxODggNC4yOTY4NzUgMS44Mzk4NDQgMjguNTUwNzgxIDExNC4yMDcwMzF6bTAgMCIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im0xOTIgMjU2LjAwMzkwNmgtMTEyYy00LjQxNzk2OSAwLTggMy41NzgxMjUtOCA4djIyNGMwIDQuNDI1NzgyIDMuNTgyMDMxIDggOCA4aDMyYzMuOTMzNTk0IDAgNy4yODkwNjItMi44NjMyODEgNy45MDIzNDQtNi43NWwxNi4wOTc2NTYtMTAxLjk1MzEyNSAxNi4wOTM3NSAxMDEuOTUzMTI1Yy42MTcxODggMy44ODY3MTkgMy45Njg3NSA2Ljc1IDcuOTA2MjUgNi43NWgzMmM0LjQxNDA2MiAwIDgtMy41NzQyMTggOC04di0yMjRjMC00LjQyMTg3NS0zLjU4NTkzOC04LTgtOHptLTggMjI0aC0xNy4xNjc5NjlsLTIyLjkzNzUtMTQ1LjI0NjA5NGMtLjYwNTQ2OS0zLjg5MDYyNC0zLjk2MDkzNy02Ljc1MzkwNi03Ljg5NDUzMS02Ljc1MzkwNi0zLjkzNzUgMC03LjI4OTA2MiAyLjg2MzI4Mi03LjkwNjI1IDYuNzUzOTA2bC0yMi45MjU3ODEgMTQ1LjI0NjA5NGgtMTcuMTY3OTY5di0yMDhoOTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPgo="> </span></div>
             </div>
             <div class="ucv-b4-arrow-wrapper"  data-ix="scale-on-scroll">
               <div class="ucv-b4-image"><span class="ucv-b4-image-inner"> <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTg3LjU3MiwxODYuODgxYy0zMi4yNjYtNzUuMjI1LTg3LjA5Ni0xMjkuOTM0LTE2Mi45NDktMTYyLjI4NUMzODYuNzExLDguNDI3LDM0Ni45OTIsMC4xNjgsMzA1LjQ5NywwLjE2OCAgICBjLTQxLjQ4OCwwLTgwLjkxNCw4LjE4MS0xMTguNzg0LDI0LjQyOEMxMTEuNDg4LDU2Ljg2MSw1Ni40MTUsMTExLjUzNSwyNC4wOTIsMTg2Ljg4MUM3Ljg5NSwyMjQuNjI5LDAsMjY0LjE3NiwwLDMwNS42NjQgICAgYzAsNDEuNDk2LDcuODk1LDgxLjM3MSwyNC4wOTIsMTE5LjEyN2MzMi4zMjMsNzUuMzQ2LDg3LjQwMywxMzAuMzQ4LDE2Mi42MjEsMTYyLjYyMWMzNy44NzcsMTYuMjQ3LDc3LjI5NSwyNC40MiwxMTguNzg0LDI0LjQyICAgIGM0MS40ODksMCw4MS4yMTQtOC4yNTksMTE5LjEyLTI0LjQyYzc1Ljg1My0zMi4zNTIsMTMwLjY4My04Ny40MDMsMTYyLjk1Ni0xNjIuNjIxQzYwMy44MTksMzg2LjkxNCw2MTIsMzQ3LjE2LDYxMiwzMDUuNjY0ICAgIEM2MTIsMjY0LjE3Niw2MDMuODI2LDIyNC43NTcsNTg3LjU3MiwxODYuODgxeiBNNTM4LjcyNCw0NDAuODUzYy0yNC4wMjEsNDEuMTk1LTU2LjkyOSw3My44NzYtOTguMzc1LDk4LjAzOSAgICBjLTQxLjE5NSwyNC4wMjEtODYuMzMyLDM2LjEzNS0xMzQuODQ1LDM2LjEzNWMtMzYuNDcsMC03MS4yNy03LjAyNC0xMDQuNC0yMS40MTVjLTMzLjEyOS0xNC4zODQtNjEuNzMzLTMzLjI5NC04NS42NjEtNTcuMjE1ICAgIGMtMjMuOTI4LTIzLjkyOC00Mi45NzMtNTIuODExLTU3LjIxNC04NS45OTdjLTE0LjE5OS0zMy4wNjUtMjEuMDgtNjguMjU4LTIxLjA4LTEwNC43MzVjMC00OC41MiwxMS45MjEtOTMuNDI4LDM1LjgwNy0xMzQuNTA5ICAgIGMyMy45NzEtNDEuMjMxLDU2Ljg4Ni03My45NDcsOTguMDM5LTk4LjA0YzQxLjE0Ni0yNC4wOTIsODUuOTktMzYuMTQyLDEzNC41MDItMzYuMTQyYzQ4LjUyLDAsOTMuNjQ5LDEyLjEyMSwxMzQuODQ1LDM2LjE0MiAgICBjNDEuNDQ2LDI0LjE2NCw3NC4yODMsNTYuODc5LDk4LjM3NSw5OC4wMzljMjQuMDkyLDQxLjE1MywzNi4xMzUsODUuOTksMzYuMTM1LDEzNC41MDkgICAgQzU3NC44NTIsMzU0LjE4NSw1NjIuODg4LDM5OS4zOTksNTM4LjcyNCw0NDAuODUzeiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxwYXRoIGQ9Ik0zMjQuOTA2LDMwMi45ODhWMTI5LjY1OWMwLTEwLjM3Mi05LjAzNy0xOC43MzgtMTkuNDEtMTguNzM4Yy05LjcwMSwwLTE4LjQwMyw4LjM2Ni0xOC40MDMsMTguNzM4djE3Ni4wMDUgICAgYzAsMC4zMzYsMC42NzEsMS42NzgsMC42NzEsMi42NzhjLTAuNjcxLDYuMDI0LDEuMDA3LDExLjA0Myw1LjAxOSwxNS4wNjJsMTAwLjA1MywxMDAuMDQ2YzYuNjk1LDYuNjk1LDE5LjA3Myw2LjY5NSwyNS43NjMsMCAgICBjNy42OTQtNy42OTUsNy4xODgtMTguODYsMC0yNi4wOTlMMzI0LjkwNiwzMDIuOTg4eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="> </span></div>
               <div class="ucv-b4-arrow"><span class="ucv-b4-line"></span></div>
-              <div class="ucv-b4-text"><span class="ucv-b4-text-inner"> <span class="ucv-b4-number">1&nbsp;час</span> время ответа на&nbsp;на ваши сообщения </span></div>
+              <div class="ucv-b4-text" id="aboutmin3"></div>
             </div>
+            <textarea id="hidearea3" style="display: none;"><%= locale.aboutmin3 %></textarea>
+              <script type="text/javascript">
+                $('#aboutmin3').append($('#hidearea3').val());
+                $("#hidearea3").remove();
+              </script>
             <div class="ucv-b4-arrow-wrapper"  data-ix="scale-on-scroll">
-              <div class="ucv-b4-text"><span class="ucv-b4-text-inner"> <span class="ucv-b4-number">95% </span> положительных отзывов от&nbsp;наших покупателей </span></div>
+              <div class="ucv-b4-text" id="aboutmin4"></div>
+              <textarea id="hidearea4" style="display: none;"><%= locale.aboutmin4 %></textarea>
+              <script type="text/javascript">
+                $('#aboutmin4').append($('#hidearea4').val());
+                $("#hidearea4").remove();
+              </script>
               <div class="ucv-b4-arrow ucv-b4-arrow-red"><span class="ucv-b4-line ucv-b4-line-bottom"></span></div>
               <div class="ucv-b4-image"><span class="ucv-b4-image-inner ucv-b4-image-inner-bot"> <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMSA1MTIuMDAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQwMi4xNzgsMjguOTg5QzM4NS41NDQsMTAuMjk1LDM2Mi40ODcsMCwzMzcuMjUzLDBjLTI4LjE2NiwwLTUyLjU4MSwxMy4zMTgtNzAuNjA2LDM4LjUxMyAgICBjLTEuMzUyLDEuODg5LTIuNjE2LDMuNzc4LTMuODAxLDUuNjQ4Yy0xLjE4NC0xLjg3MS0yLjQ0OC0zLjc1OS0zLjgtNS42NDhDMjQxLjAyLDEzLjMxOCwyMTYuNjA1LDAsMTg4LjQzOSwwICAgIGMtMjUuMjM0LDAtNDguMjkyLDEwLjI5NS02NC45MjUsMjguOTg4Yy0xNS43ODQsMTcuNzQtMjQuNDc4LDQxLjQ1Ni0yNC40NzgsNjYuNzc5YzAsMjcuNTE5LDEwLjY3OSw1Mi45MTIsMzMuNjA0LDc5LjkxNiAgICBjMjAuMDAzLDIzLjU2LDQ4LjY5NSw0Ny43NzcsODEuOTE5LDc1LjgxOWMxMi4yNzcsMTAuMzYzLDI0Ljk3MywyMS4wNzgsMzguNDY0LDMyLjc3MWMyLjgxOCwyLjQ0Miw2LjMyLDMuNjY0LDkuODIyLDMuNjY0ICAgIGMzLjUwMSwwLDcuMDAzLTEuMjIyLDkuODIyLTMuNjY0YzEzLjQ4OS0xMS42OSwyNi4xODMtMjIuNDA1LDM4LjQ2LTMyLjc2NmMyMS4zMzctMTguMDEsMzkuNzY0LTMzLjU2Myw1NS43NTUtNDguNjQ5ICAgIGMzMS4wNDYtMjkuMjkyLDU5Ljc3NC02Mi41MzksNTkuNzc0LTEwNy4wOUM0MjYuNjU2LDcwLjQ0NCw0MTcuOTYzLDQ2LjcyOSw0MDIuMTc4LDI4Ljk4OXogTTM0Ni4yOTksMTgxLjA0MSAgICBjLTE1LjM4NiwxNC41MTctMzMuNTIsMjkuODIyLTU0LjUxNyw0Ny41NDRjLTkuMzQxLDcuODgzLTE4LjkyMSwxNS45NjktMjguOTM2LDI0LjU1N2MtMTAuMDE3LTguNTg3LTE5LjYtMTYuNjc1LTI4Ljk0MS0yNC41NiAgICBjLTY1LjM5OS01NS4xOTktMTA0Ljg3NS04OC41MTctMTA0Ljg3NS0xMzIuODE0Yy0wLjAwMi0zNy40OTcsMjUuNTM4LTY1Ljc3Myw1OS40MDgtNjUuNzczYzE4LjA5NSwwLDMzLjQ4NCw4LjUxOCw0NS43MzksMjUuMzE3ICAgIGMxMC4wNTgsMTMuNzg2LDE0LjE4NywyOC4wNzgsMTQuMjE1LDI4LjE3NGMxLjgsNi40OTcsNy43MTIsMTAuOTk1LDE0LjQ1MywxMC45OTVzMTIuNjUzLTQuNDk4LDE0LjQ1My0xMC45OTUgICAgYzAuMTQ4LTAuNTM1LDE1LjMzLTUzLjQ5MSw1OS45NTUtNTMuNDkxYzMzLjg2OSwwLDU5LjQxLDI4LjI3Nyw1OS40MSw2NS43NzNDMzk2LjY2MywxMjIuOTM3LDM4Mi41NDIsMTQ2Ljg0NSwzNDYuMjk5LDE4MS4wNDF6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDY2Ljk1NCwzMDIuMDQ3Yy0xMi40NDEsMC0yNC40NDIsNS4yMjMtMzIuOTI1LDE0LjMyOWwtNDQuMDc3LDQ3LjMxOGMtNS42OTctMTguMzE2LTIyLjgwNS0zMS42NTMtNDIuOTcxLTMxLjY1M2gtNjkuMjggICAgYy05LjY5OSwwLTE5LjA1Mi0zLjUyOS0yNi4zMzQtOS45MzdjLTM5LjE2My0zNC40NjQtOTguMDI5LTM0Ljc2Ny0xMzcuNTY0LTAuOTUzYy04LjE1My0xMS41NDMtMjEuNTg3LTE5LjEwMy0zNi43NjMtMTkuMTAzICAgIEgxNS4wNTRjLTguMjgyLDAtMTQuOTk3LDYuNzE0LTE0Ljk5NywxNC45OTd2MTc5Ljk2YzAsOC4yODIsNi43MTQsMTQuOTk3LDE0Ljk5NywxNC45OTdINzcuMDQgICAgYzEzLjQ2OCwwLDI1LjU2NC01Ljk1NywzMy44MTYtMTUuMzY1bDguODgxLDIuNDk2YzMwLjM3OCw4LjUzOSw2MS43OCwxMi44NjgsOTMuMzM1LDEyLjg2OEgzNDYuOTggICAgYzMyLjg2NiwwLDY0LjI2MS0xNS42OTgsODMuOTgxLTQxLjk5MWw3MS45OTktOTUuOTk3YzAuMDAxLTAuMDAyLDAuMDAyLTAuMDA0LDAuMDA0LTAuMDA2YzUuODc1LTcuODM0LDguOTgtMTcuMTYsOC45OC0yNi45NzEgICAgQzUxMS45NDQsMzIyLjIyOSw0OTEuNzYxLDMwMi4wNDcsNDY2Ljk1NCwzMDIuMDQ3eiBNOTIuMDM3LDQ2Ny4wMWMwLDguMjY5LTYuNzI3LDE0Ljk5Ny0xNC45OTcsMTQuOTk3aC00Ni45OVYzMzIuMDRoNDYuOTkgICAgYzguMjY5LDAsMTQuOTk3LDYuNzI3LDE0Ljk5NywxNC45OTdWNDY3LjAxeiBNNDc4Ljk2NywzNTYuMDE0YzAsMC4wMDEtMC4wMDEsMC4wMDEtMC4wMDIsMC4wMDJsLTcxLjk5OCw5NS45OTkgICAgYy0xNC4wODYsMTguNzgxLTM2LjUxMSwyOS45OTMtNTkuOTg3LDI5Ljk5M0gyMTMuMDc1Yy0yOC44MTEsMC01Ny40ODMtMy45NTMtODUuMjE5LTExLjc0OWwtNS44NjUtMS42NDkgICAgYzAuMDE5LTAuNTMyLDAuMDQxLTEuMDYzLDAuMDQxLTEuNTk5VjM1My44MTZsMTAuNDUxLTkuMTk3YzI4LjI0LTI0Ljg1LDcwLjgzMS0yNC44NTIsOTkuMDczLDAgICAgYzEyLjc2MSwxMS4yMjksMjkuMTQ4LDE3LjQxMyw0Ni4xNDcsMTcuNDEzaDY5LjI4YzguMjY5LDAsMTQuOTk3LDYuNzI4LDE0Ljk5NywxNC45OTdjMCw4LjI2OS02LjcyNywxNC45OTctMTQuOTk3LDE0Ljk5NyAgICBIMjQwLjM5OGMtOC4yODIsMC0xNC45OTcsNi43MTQtMTQuOTk3LDE0Ljk5N3M2LjcxNCwxNC45OTcsMTQuOTk3LDE0Ljk5N2gxMTYuNjM0YzEyLjQ0MSwwLDI0LjQ0LTUuMjIxLDMyLjkyMS0xNC4zMjUgICAgbDY2LjAyMy03MC44NzZjMi44NzEtMy4wODIsNi43Ny00Ljc3OSwxMC45NzgtNC43NzljOC4yNjksMCwxNC45OTcsNi43MjcsMTQuOTk3LDE0Ljk5NyAgICBDNDgxLjk1MSwzNTAuMzA3LDQ4MC45MTksMzUzLjQxMSw0NzguOTY3LDM1Ni4wMTR6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg=="> </span></div>
             </div>
@@ -358,21 +195,16 @@
         </div>
       </div>
 		</div>
-
 		<div class="mainBTN_block">
-			<a href="<%= locale.title2[2].link %>"><div class="mainBTN"  data-ix="scale-on-scroll"><%= locale.title2[2].title %></div></a>
+			<a href="#"><div class="mainBTN"  data-ix="scale-on-scroll"><%= locale.details %></div></a>
       <div class="zub_lineB" style=""></div>
 		</div>
-
   </div>
-
   <div class="videoBlock block">
     <div class="container">
-
-      <div class="buttonGallery" data-click-state='1'>Галерея</div>
-
+      <div class="buttonGallery" data-click-state='1'><%= locale.gallery %></div>
       <div class="insta_logo"  data-ix="scale-on-scroll">
-        <span>Мы в инстаграмм</span>
+        <span><%= locale.myinsta %></span>
       </div>
       <div class="carouselInsta">
         <div class="carousel__nav">
@@ -387,7 +219,6 @@
             </svg>
           </span>
         </div>
-
         <div class="carousel-item carousel-item--1">
           <div class="carousel-item__image"></div>
           <div class="carousel-item__info">
@@ -399,7 +230,6 @@
             </div>
           </div>
         </div>
-
         <div class="carousel-item carousel-item--2">
           <div class="carousel-item__image">
             <video controls="controls">
@@ -415,7 +245,6 @@
             </div>
           </div>
         </div>
-
         <div class="carousel-item carousel-item--3">
           <div class="carousel-item__image"></div>
           <div class="carousel-item__info">
@@ -427,7 +256,6 @@
             </div>
           </div>
         </div>
-
         <div class="carousel-item carousel-item--4">
           <div class="carousel-item__image"></div>
           <div class="carousel-item__info">
@@ -439,7 +267,6 @@
               </div>
           </div>
         </div>
-
         <div class="carousel-item carousel-item--5">
           <div class="carousel-item__image"></div>
           <div class="carousel-item__info">
@@ -451,7 +278,6 @@
               </div>
           </div>
         </div>
-
         <div class="carousel-item carousel-item--6">
           <div class="carousel-item__image"></div>
           <div class="carousel-item__info">
@@ -463,135 +289,123 @@
               </div>
           </div>
         </div>
-
       </div>
-
       <div class="galleryInsta">
+        <div class="demo-gallery">
+          <ul id="lightgallery">
+            <li data-responsive="../../../data/instagram/1.jpg 375, ../../../data/instagram/1.jpg 480, ../../../data/instagram/1.jpg 800" data-src="../../../data/instagram/1.jpg"
+            data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/1.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="../../../data/instagram/2.jpg 375, ../../../data/instagram/2.jpg 480, ../../../data/instagram/2.jpg 800" data-src="../../../data/instagram/2.jpg"
+            data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/2.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="../../../data/instagram/3.jpg 375, ../../../data/instagram/3.jpg 480, ../../../data/instagram/3.jpg 800" data-src="../../../data/instagram/3.jpg"
+            data-sub-html="<h4>Sunset Serenity</h4><p>A gorgeous Sunset tonight captured at Coniston Water....</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/3.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
+            <li data-responsive="../../../data/instagram/4.jpg 375, ../../../data/instagram/3.jpg 480, ../../../data/instagram/4.jpg 800" data-src="../../../data/instagram/4.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/4.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+            <li data-responsive="../../../data/instagram/5.jpg 375, ../../../data/instagram/5.jpg 480, ../../../data/instagram/5.jpg 800" data-src="../../../data/instagram/5.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/5.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
-  <div class="demo-gallery">
-    <ul id="lightgallery">
-      <li data-responsive="../../../data/instagram/1.jpg 375, ../../../data/instagram/1.jpg 480, ../../../data/instagram/1.jpg 800" data-src="../../../data/instagram/1.jpg"
-      data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/1.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-      <li data-responsive="../../../data/instagram/2.jpg 375, ../../../data/instagram/2.jpg 480, ../../../data/instagram/2.jpg 800" data-src="../../../data/instagram/2.jpg"
-      data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/2.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-      <li data-responsive="../../../data/instagram/3.jpg 375, ../../../data/instagram/3.jpg 480, ../../../data/instagram/3.jpg 800" data-src="../../../data/instagram/3.jpg"
-      data-sub-html="<h4>Sunset Serenity</h4><p>A gorgeous Sunset tonight captured at Coniston Water....</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/3.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
+            <li data-responsive="../../../data/instagram/karina.jpg 375, ../../../data/instagram/karina.jpg 480, ../../../data/instagram/karina.jpg 800" data-src="../../../data/instagram/karina.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/karina.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
-      <li data-responsive="../../../data/instagram/4.jpg 375, ../../../data/instagram/3.jpg 480, ../../../data/instagram/4.jpg 800" data-src="../../../data/instagram/4.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/4.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-      <li data-responsive="../../../data/instagram/5.jpg 375, ../../../data/instagram/5.jpg 480, ../../../data/instagram/5.jpg 800" data-src="../../../data/instagram/5.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/5.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
+            <li data-responsive="../../../data/instagram/oneImage.jpg 375, ../../../data/instagram/oneImage.jpg 480, ../../../data/instagram/oneImage.jpg 800" data-src="../../../data/instagram/oneImage.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/oneImage.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
-      <li data-responsive="../../../data/instagram/karina.jpg 375, ../../../data/instagram/karina.jpg 480, ../../../data/instagram/karina.jpg 800" data-src="../../../data/instagram/karina.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/karina.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
+            <li data-responsive="../../../data/instagram/ourImage.jpg 375, ../../../data/instagram/ourImage.jpg 480, ../../../data/instagram/ourImage.jpg 800" data-src="../../../data/instagram/ourImage.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/ourImage.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
-      <li data-responsive="../../../data/instagram/oneImage.jpg 375, ../../../data/instagram/oneImage.jpg 480, ../../../data/instagram/oneImage.jpg 800" data-src="../../../data/instagram/oneImage.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/oneImage.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
+            <li data-responsive="../../../data/instagram/threeImage.jpg 375, ../../../data/instagram/threeImage.jpg 480, ../../../data/instagram/threeImage.jpg 800" data-src="../../../data/instagram/threeImage.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/threeImage.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
 
-      <li data-responsive="../../../data/instagram/ourImage.jpg 375, ../../../data/instagram/ourImage.jpg 480, ../../../data/instagram/ourImage.jpg 800" data-src="../../../data/instagram/ourImage.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/ourImage.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-
-      <li data-responsive="../../../data/instagram/threeImage.jpg 375, ../../../data/instagram/threeImage.jpg 480, ../../../data/instagram/threeImage.jpg 800" data-src="../../../data/instagram/threeImage.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/threeImage.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-
-      <li data-responsive="../../../data/instagram/twoImage.jpg 375, ../../../data/instagram/twoImage.jpg 480, ../../../data/instagram/twoImage.jpg 800" data-src="../../../data/instagram/twoImage.jpg"
-      data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-        <a href="">
-          <img class="img-responsive" src="../../../data/instagram/twoImage.jpg">
-          <div class="demo-gallery-poster">
-            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-          </div>
-        </a>
-      </li>
-
-
-
-    </ul>
-
-  </div>
+            <li data-responsive="../../../data/instagram/twoImage.jpg 375, ../../../data/instagram/twoImage.jpg 480, ../../../data/instagram/twoImage.jpg 800" data-src="../../../data/instagram/twoImage.jpg"
+            data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
+              <a href="">
+                <img class="img-responsive" src="../../../data/instagram/twoImage.jpg">
+                <div class="demo-gallery-poster">
+                  <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <a href="https://www.instagram.com/ladyman_store/" target="_blank" id="toInstagramm">@LADIMAN_STORE</a>
     </div>
-
     <div class="videoFilter"></div>
     <video autoplay muted loop>
       <source src="../../../video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
     </video>
   </div>
-
 	<div class="news block">
     <div class="white_zub"></div>
     <div class="container" style="max-width: 1024px;">
-      <% if(isAdm){ %>
-        <div class="edited_admin" title="Добавить новость" id="newNews"></div>
-      <% } %>
       <div class="mainDLG">
-        <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.title5[0] %></div>
+        <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.newstitle %></div>
       </div>
+      <% if(news.length >= 1){ %>
       <% for(var i = 0; i < news.length; i++) { %>
       <div class="column post"  data-ix="scale-on-scroll">
         <div class="post-module">
@@ -614,28 +428,29 @@
         </div>
       </div>
       <% } %>
+      <% } %>
     </div>
   </div>
   <div class="counters block">
     <div class="counters_conent">
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="buyers"></div>
-        <div class="counters_text"><%= locale.title4[0] %></div>
+        <div class="counters_text"><%= locale.buyers %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="products"></div>
-        <div class="counters_text"><%= locale.title4[1] %></div>
+        <div class="counters_text"><%= locale.products %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="purchases"></div>
-        <div class="counters_text"><%= locale.title4[2] %></div>
+        <div class="counters_text"><%= locale.purchases %></div>
         <div class="counters_length">0</div>
       </div>
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="discounts"></div>
-        <div class="counters_text"><%= locale.title4[3] %></div>
+        <div class="counters_text"><%= locale.discounts %></div>
         <div class="counters_length">0</div>
       </div>
     </div>
@@ -644,97 +459,30 @@
   <div class="contact block">
     <div class="zub_line"></div>
     <div class="mainDLG post">
-    	<div class="mainTitleDLG"  data-ix="scale-on-scroll"><%= locale.title3[0] %></div>
-    	<div class="mainTextDLG"  data-ix="scale-on-scroll-delay-300"><%= locale.title3[1] %></div>
+    	<div class="mainTitleDLG" data-ix="scale-on-scroll"><%= locale.mainmessage %></div>
+    	<div class="mainTextDLG" data-ix="scale-on-scroll-delay-300"><%= locale.mainmessagetxt %></div>
     </div>
     <form class="cf">
       <div class="half left cf">
-        <input type="text" name="MyName" id="input-name" placeholder="Ваше имя">
-        <input type="email" name="myEmail" id="input-email" placeholder="Ваш email">
-        <input type="text" name="myTheme" id="input-subject" placeholder="Тема сообщения">
+        <input type="text" name="MyName" id="input-name" placeholder="<%= locale.yourname %>">
+        <input type="email" name="myEmail" id="input-email" placeholder="<%= locale.email %>">
+        <input type="text" name="myTheme" id="input-subject" placeholder="<%= locale.messagesubject %>">
       </div>
       <div class="half right cf">
-        <textarea name="message" type="text" id="input-message" placeholder="Введите текст..."></textarea>
+        <textarea name="message" type="text" id="input-message" placeholder="<%= locale.entertext %>"></textarea>
       </div>
 
       <div class="send-button" id="input-submit">
-        <span class="text">Отправить</span>
+        <span class="text"><%= locale.tosend %></span>
         <span class="icon-wrapper">
           <span class="icon-1 ion-paper-airplane"></span>
           <span class="icon-2 ion-checkmark"></span>
         </span>
       </div>
-      <!-- <input type="submit" value="Отправить" id="input-submit" onclick="Global.message(event)"> -->
     </form>
-    <!-- <div class="zub_lineB"></div> -->
   </div>
-
   </div>
-	<div class="siteMap">
-    <% if(effectData !== undefined && effectData.name === "Snow"){ %>
-    <div class="tree">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/tree.svg" width="200px">
-    </div>
-    <div class="fox">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/critters.svg" width="200px">
-    </div>
-    <% } %>
-		<div class="mapmap">
-			<div class="LBB">
-				<% for(var i = 0; i < menu.length; i++) { %>
-				<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
-        <% } %>
-        <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
-        <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
-        <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
-			</div>
-			<div class="CBB">
-				<div class="vectorLogo"></div>
-				<div class="copiright"><%= global.copiright %></div>
-        <div class="socials">
-          <% for(var i = 0; i < conf.socials.length; i++) { %>
-          <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
-          <% } %>
-        </div>
-				<div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
-			</div>
-			<div class="RBB">
-				<div class="adressLineMap"><%= conf.phoneTitle %></div>
-				<a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
-				<div class="adressLineMap"></div>
-        <div class="adressLineMap"><%= conf.emailTitle %></div>
-				<a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
-        <div class="adressLineMap"></div>
-        <div class="adressLineMap">
-          <div class="lang" id="ua" title="Українська версія"></div>
-          <div class="lang" id="ru" title="Русская версия"></div>
-        </div>
-        <div class="certificated">
-          <div class="certificate" id="byVisa"></div>
-          <div class="certificate" id="byMasterCard"></div>
-          <div class="certificate" id="byYandex"></div>
-          <div class="certificate" id="byFondy"></div>
-        </div>
-
-        <!-- Yandex.Metrika counter -->
-        <script type="text/javascript" >
-           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-           ym(51732518, "init", {
-                id:51732518,
-                clickmap:true,
-                trackLinks:true,
-                accurateTrackBounce:true,
-                webvisor:true
-           });
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/51732518" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- /Yandex.Metrika counter -->
-			</div>
-		</div>
-	</div>
+  <%- include ./includes/footer.ejs %>
   <div class='back-to-top' id='back-to-top' title='Back to top'>
     <i class='fa fa-chevron-up'></i>
   </div>

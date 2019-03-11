@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title>Акции и бонусы</title>
+	<title><%= locale.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
@@ -16,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
 
   <link rel="stylesheet" type="text/css" href="/style/dap/dap.css">
-	<!-- <link rel="stylesheet" type="text/css" href="/style/dap/contacts.min.css"> -->
 
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
@@ -36,118 +35,13 @@
   <% } %>
 </head>
 <body>
-<div class="modal-frame">
-  <div class="modal">
-		    <div class="modal-inset">
-      			<div class="button close"><i class="fa fa-close"></i></div>
-            <div class="modal-body">
-              <div class="phone">
-                <div class="mobile">
-                  <div class="volume"></div>
-                  <div class="bixby"></div>
-                  <div class="power"></div>
-                  <div class="chassis">
-                    <div class="earpiece"></div>
-                    <div class="camera"></div>
-                    <div class="body">
-                      <div class="screen">
-                        <div class="left-glare"></div>
-                        <div class="right-glare"></div>
-                        <div class="header">
-                          <div class="notifs"><i class="icon ion-logo-instagram"></i><i class="ion-md-heart"></i><i class="ion-ios-paper-plane"></i></div>
-                          <div class="stats">
-                            <div class="wifi"></div>
-                            <div class="signal"></div>
-                            <div class="batt"></div>
-                          </div>
-                        </div>
-                        <div class="content_phone">
-                          <div class="widget">
-                            <div class="location">London</div>
-                            <div class="time">10:08 </div>
-                            <div class="date">Sat, May 12</div>
-                          </div>
-                        </div>
-                        <div class="footer">
-                          <div class="icons">
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                            <div class="icon"></div>
-                          </div>
-                          <div class="buttons">
-                            <div class="apps"></div>
-                            <div class="home"></div>
-                            <div class="back"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="modealData">
-                <h3 class="title">Акция "2019"</h3>
-                <p class="text">
-                  Только до конца года, купите товаров на сумму <b>2019</b> гривен и получите подарок или скидку (на выбор).
-                  <b>
-                    <br><br>
-                    Условия акции:
-                  </b>
-                  <br>
-                  - Быть <a href="/login">зарегистрировнным</a> у нас на сайте.<br>
-                  - Купить товаров на сумму 2019 гривен и больше.<br>
-                </p>
-                <p class="ps">**Оффициальная акция проводится до 31:12:2019 23:59:59</p>
-              </div>
-
-			        <div class="modealData">
-                <h3 class="title">Акция "Ре_Постик"</h3>
-                <p class="text">
-                  Только до конца года, успейте выполнить 2 простых условия и вы получите <b>100</b> бонусных гривен на ваши покупки.
-                  <b>
-                    <br><br>
-                    Условия акции:
-                  </b>
-                  <br>
-                  - <a href="/login">Зарегистрироваться</a> у нас на сайте.<br>
-                  - Создать "историю" в инстаграмме и отметить нас.<br>
-                  - После выполнения условий написать в ЛС на наш инстаграм.
-                </p>
-
-                <p class="ps">**Оффициальная акция проводится до 31:12:2019 23:59:59</p>
-              </div>
-
-              <div class="modealData">
-                <h3 class="title">Бонусы</h3>
-                <p class="text">
-                  При покупке любых товаров в нашем магазине вы получаете бонусы,
-                  которые вы можете использовать в будущих покупках.
-                  <br>
-                  - Быть <a href="/login">зарегистрировнным</a> у нас на сайте.<br>
-                  <br>
-                  Чем больше сумма покупки тем больше бонусов вы получаете.
-                </p>
-                <p class="ps">**Система бонусов работает без ограничения по времени</p>
-              </div>
-
-              <div class="modealData">
-                <h3 class="title">Программа накопления</h3>
-                <p class="text">
-                  Накапливайте баллы и выбирайте подарки!<br>
-                  1 балл = 1 гривна и чем больше у вас балов тем дороже подарок вы можете выбрать.
-                  <p class="ps">(Чтоб расплатится бонусными баллами сумма покупки должна привышать 2500 грн)</p>
-                </p>
-                <p class="ps">**Программа накопления работает без ограничения по времени</p>
-              </div>
-      			</div>
-    		</div>
-  	</div>
+<div class="spn_hol">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
 </div>
-<div class="modal-overlay"></div>
-
 <div class="top">
 	<div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -162,155 +56,60 @@
       <% } else { %>
         <a href="/login"><div class="logInBlock"></div></a>
       <% } %>
-
-			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
+			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
 		</div>
 	</div>
-  <div class="topLine twoLine">
-    <div class="menuBlock">
-      <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-          <% }else{%>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-          <% } %>
-        <% } else { %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-          <% }else{%>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-          <% } %>
-        <% } %>
-      <% } %>
-    </div>
-  </div>
-  <div class="opensMenu">
-    <% for(var i = 0; i < menu.length; i++) { %>
-      <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-        <div class="menu_data <%= menu[i].ml %>">
-          <div class="menu_title"><%= menu[i].name %></div>
-          <div class="menuLeft">
-            <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-            <% } %>
-          </div>
-          <div class="menuRight"></div>
-        </div>
-      <% } %>
-    <% } %>
-  </div>
+  <%- include ./includes/menu.ejs %>
 </div>
 
 <div class="content" style="padding-top: 30px;">
-
   <div class="mainDLG">
-    <div class="mainTitleDLG post" style="color: #f98eb9">Акции и бонусы</div>
-    <div class="mainTextDLG post" style="color: #f98eb9">Оффициальные акции сайта</div>
+    <div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.title %></div>
+    <div class="mainTextDLG post" style="color: #f98eb9"><%= locale.Officialsitepromotions %></div>
   </div>
-
-  <div class="stock_container">
-    <div class="stock_block bigBonus" style="background-image: url(https://i2.wp.com/rainbowrules.com/wp-content/uploads/2018/01/new-years-sale.jpg?fit=1899%2C1270&ssl=1); color: white;">
-      <canvas id="c"></canvas>
-      <div class="promo"></div>
-      <div class="stock_name"><span>2019</span>Зимние скидки</div>
-      <div class="timeOfUse_stock">До <b>25.02.2019</b><time>23:59</time></div>
-      <a href="/stock?page=1">
-        <div class="flex">
-          <a href="/stock?page=1" class="bttn">Посмотреть товары</a>
-        </div>
-      </a>
-    </div>
-
-    <div class="stock_block" style="background-image: url(https://happynewyearday.com/wp-content/uploads/2018/09/41112751_23843156645500149_2945328773043585024_n.png); color: white;">
-      <div class="promo"></div>
-      <div class="stock_name"><span>Акция</span>2019</div>
-      <div class="timeOfUse_stock"><b>Завершена</b></div>
-      <div class="details_stock open">Детальнее</div>
-    </div>
-
-    <div class="stock_block" style="background-image: url(https://media.boingboing.net/wp-content/uploads/2018/05/cool-background1.png);">
-      <div class="promo"></div>
-      <div class="stock_name"><span>Акция</span>Ре-Постик</div>
-      <div class="timeOfUse_stock">До <b>25.02.2019</b><time>23:59</time></div>
-      <div class="details_stock open">Детальнее</div>
-    </div>
-
-
-
-    <div class="stock_block" style="background-image: url(http://successful-bettors.com/wp-content/uploads/2018/04/%D0%91%D0%BE%D0%BD%D1%83%D1%81%D1%8B-%D0%B1%D1%83%D0%BA%D0%BC%D0%B5%D0%BA%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D1%82%D0%BE%D1%80.jpg);">
-      <div class="promo"></div>
-      <div class="stock_name">Бонусы</div>
-      <div class="timeOfUse_stock"><b>Все время</b></div>
-      <div class="details_stock open">Детальнее</div>
-    </div>
-
-
-    <div class="stock_block" style="background-image: url(https://hamleys.ru/frontend/static/img/loyalty/loyalty-banner.jpg)">
-      <div class="promo"></div>
-      <div class="stock_name">
-        <h2>Программа</h2>
-        <h2>Накопления</h2>
-      </div>
-      <div class="timeOfUse_stock"><b>Все время</b></div>
-      <div class="details_stock open">Детальнее</div>
-    </div>
+  <div class="stock_container">   
+    <% if(discounts.length > 0){ %>
+      <% for(var i = 0; i < discounts.length; i++){ %>
+        <% if(discounts[i].type === 'global'){ %>
+          <div class="stock_block bigBonus" style="background-image: url(https://i2.wp.com/rainbowrules.com/wp-content/uploads/2018/01/new-years-sale.jpg?fit=1899%2C1270&ssl=1); color: white;">
+            <canvas id="c"></canvas>
+            <div class="promo"></div>
+            <div class="stock_name"><%= discounts[i].title[parseInt(numLang)] %></div>
+            <% if(discounts[i].status){ %>
+            <div class="timeOfUse_stock">До <b><%= discounts[i].do %></b><time>23:59</time></div>
+            <% }else{ %>
+            <div class="timeOfUse_stock"><b><%= locale.completed %></b></div>
+            <% } %>
+            <a href="/stock?page=1">
+              <div class="flex">
+                <a href="/stock?page=1" class="bttn">Посмотреть товары</a>
+              </div>
+            </a>
+          </div>
+        <% }else{ %>
+          <div class="stock_block" style="background-image: url(https://happynewyearday.com/wp-content/uploads/2018/09/41112751_23843156645500149_2945328773043585024_n.png); color: white;">
+            <div class="promo"></div>
+            <div class="stock_name"><%= discounts[i].title[numLang] %></div>
+            <% if(discounts[i].status){ %>
+            <div class="timeOfUse_stock">До <b><%= discounts[i].do %></b><time>23:59</time></div>
+            <% }else{ %>
+            <div class="timeOfUse_stock"><b><%= locale.completed %></b></div>
+            <% } %>
+            <div class="details_stock open">Детальнее</div>
+          </div>
+        <% } %>
+      <% } %>
+    <% } %>  
   </div>
-
   <div class=" stock">
     <div class="Promotion_Rules">
-      <div class="line center">Правила проведения акций и конкурсов в магазине <a href="http://ladyman.club">ladyman.club</a></div>
-      <div class="line">1. Все ацкии и конкурсы описанные выше являются официальными и не именют никаких исключений.</div>
-      <div class="line">2. Условия конкурса могут быть изменены только до его начала.</div>
-      <div class="line">3. Конкурс может быть завершен досрочно если на то была причина.</div>
-      <div class="line pod">3.1. Чрезвычайная ситуация.</div>
-      <div class="line pod">3.2. Нарушение законодательства.</div>
-      <div class="line">4. Принимать участие в конкурсах и акционных предложениях имеют право только лица достигшие 16+ лет.</div>
-      <div class="line">5. Принимая участиe в том или ином конкурсе вы автоматически разрешаете администрации магазина обрабатывать ваши личные данные.</div>
+      <div class="line center"><%= locale.rules %> <a href="http://ladyman.club">ladyman.club</a></div>
+      <%= locale.rulesarr %>
     </div>
   </div>
 </div>
 
-<div class="siteMap">
-  <div class="mapmap">
-    <div class="LBB">
-      <% for(var i = 0; i < menu.length; i++) { %>
-      <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
-      <% } %>
-      <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
-      <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
-      <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
-    </div>
-    <div class="CBB">
-      <div class="vectorLogo"></div>
-      <div class="copiright"><%= global.copiright %></div>
-      <div class="socials">
-        <% for(var i = 0; i < conf.socials.length; i++) { %>
-        <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
-        <% } %>
-      </div>
-      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
-    </div>
-    <div class="RBB">
-      <div class="adressLineMap"><%= conf.phoneTitle %></div>
-      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
-      <div class="adressLineMap"></div>
-      <div class="adressLineMap"><%= conf.emailTitle %></div>
-      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
-      <div class="adressLineMap"></div>
-      <div class="adressLineMap">
-        <div class="lang" id="ua" title="Українська версія"></div>
-        <div class="lang" id="ru" title="Русская версия"></div>
-      </div>
-      <div class="certificated">
-        <div class="certificate" id="byVisa"></div>
-        <div class="certificate" id="byMasterCard"></div>
-        <div class="certificate" id="byYandex"></div>
-        <div class="certificate" id="byFondy"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<%- include ./includes/footer.ejs %>
 <div id="pageMessages"></div>
 </body>
 </html>

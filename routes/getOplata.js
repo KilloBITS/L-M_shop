@@ -2,52 +2,51 @@
 const express = require('express');
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
-// const url = "mongodb://localhost:27017/"; //url from mongoDB dataBase
 
 router.get('/', function(req, res, next){
-  var languageSystem, langMenu;
-
-  if(req.cookies.pageLang === undefined){
-    languageSystem = "locale";
-    langMenu = "menu";
-  }else{
-    if(req.cookies.pageLang === 'ua'){
-      languageSystem = "locale-ua";
-      langMenu = "menu-ua";
-    }else{
-      languageSystem = "locale";
-      langMenu = "menu";
-    }
+  switch(req.cookies.pageLang){
+    case 'ru': var numLangs = 0 ;break;
+    case 'ua': var numLangs = 1 ;break;
+    case 'en': var numLangs = 2 ;break;
+    default: var numLangs = 0;
   }
-
   mongoClient.connect(global.baseIP, function(err, client){
-      const db = client.db(global.baseName);
-      const config = db.collection("config");
-      const menu  = db.collection(langMenu);
-      const titles_page = db.collection("titles_page");
-      if(err) return console.log(err);
+    const db = client.db(global.baseName);
+    const config = db.collection("CONFIG");
+    const locale = db.collection("LOCALE");
+    const users = db.collection("USERS");
+    const menu = db.collection("MENU");
+    const contacts = db.collection("CONTACTS");
+    const discounts = db.collection("DISCOUNTS");
+    const pad = db.collection("PAYMENTANDDELIVERY");
 
-     titles_page.find().toArray(function(err, results_titles_page){
-       config.find().toArray(function(err, results_config){
-         if(results_config[0].opens){
-           menu.find().sort({index: 1 }).toArray(function(err, results_menu ){
-             res.render('oplata.ejs',{
-               conf: results_config[0],
-               menu: results_menu,
-               title: results_titles_page[0].oplata,
-               sessionUser: req.session.user,
-               isAdm: req.session.admin
-             })
-             client.close();
-           });
-         }else{
-           res.render('close.ejs',{
-             conf: results_config[0],
-             isAdm: req.session.admin
-           })
-         }
-       });
-     });
+    if(err) return console.log(err);
+
+    config.find().toArray(function(err, resConfig){
+      locale.find().toArray(function(err, resLocale){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){
+          menu.find().toArray(function(err, resMenu){
+            contacts.find().toArray(function(err, resContacts){
+              pad.find().toArray(function(err, resPad){
+                res.render('oplata.ejs',{
+                  isAdm: req.session.admin,
+                  sessionUser: resUsers[0],
+                  locale: resLocale[0][global.parseLanguage(req)].payment,
+                  menu: resMenu[0][global.parseLanguage(req)],
+                  globalLocale:  resLocale[0][global.parseLanguage(req)],
+                  contacts: resContacts[0],
+                  numLang: numLangs,
+                  config: resConfig[0],
+                  payment: resPad[0][global.parseLanguage(req)].payment,
+                  delivery: resPad[0][global.parseLanguage(req)].delivery,
+
+                });
+              });
+            });
+          }); 
+        }); 
+      }); 
+    });
   });
 });
 

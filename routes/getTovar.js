@@ -43,13 +43,8 @@ router.get('/*', function(req, res, next){
       const titles_page = db.collection("titles_page");
       const menu  = db.collection(langMenu);
       const users_session = db.collection("users");
-      const banners = db.collection("banners");
-
-      if(languageSystem === 0){
-        var tovar  = db.collection("tovar");
-      }else{
-        var tovar  = db.collection("tovar-uk");
-      }
+      const banners = db.collection("banners");      
+      const tovar  = db.collection("tovar");
 
       if(err) return console.log(err);
 
@@ -75,14 +70,6 @@ router.get('/*', function(req, res, next){
 
                     banners.find().toArray(function(err, banner ){
                       tovar.find( FILTER ).sort( { tIncrement: -1 } ).toArray(function(err, results_tovar ){
-
-                        // console.log(results_tovar.length);
-                        // console.log(results_tovar.slice(otTovar, doTovar).length);
-                        // if(results_tovar.length < 18){
-                        //   var arrayOfTovars = ;
-                        // }else{
-                        //   var arrayOfTovars = results_tovar;
-                        // }
 
                         var current_page = page;
                         var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: results_tovar.length-1});

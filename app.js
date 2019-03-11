@@ -30,6 +30,9 @@ app.use(express.static(__dirname + '/publick/'));
 app.use(cookieParser());
 app.use(bParser.raw({limit: '50mb'}));
 
+/* Global methods*/
+require('./controllers/system/controllerLanguage');
+
 //routes pages
 const index = require('./routes/getIndex');
 const tovar = require('./routes/getTovar');
@@ -65,14 +68,9 @@ app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
 
 app.get('/logout', function(req, res) {
-    req.session.destroy(function(err) {
-      // cannot access session here
-    })
+    req.session.destroy(function(err) {})
     res.redirect('/');
 });
-
-const panel = require('./routes/admin/panel');
-app.use('/panel', panel);
 
 app.get('*', get404);
 
@@ -115,73 +113,11 @@ app.post('/getStock', stock);
 const newPartnersNumber =  require('./controllers/controllerPartners');
 app.post('/newPartnersNumber', newPartnersNumber);
 
+const getMapPoint = require('./controllers/controllerGetMap');
+app.post('/getMapPoint', getMapPoint)
+
 
 /*ADMIN*/
-//парсим админа
-const parseAdmin = require('./controllers/admin/controllerIsAdmin');
-// app.post('/getAdmTovar', AdmiGetTovar);
-
-//Получить список товаров
-const AdmiGetTovar = require('./controllers/admin/controllerTovar');
-app.post('/getAdmTovar', AdmiGetTovar);
-//удалить товар
-const delAdmTovar = require('./controllers/admin/controllerTovar');
-app.post('/delAdmTovar', delAdmTovar);
-//создать или отредактировать товар
-const setAdmTovar = require('./controllers/admin/controllerTovar');
-app.post('/setAdmTovar', setAdmTovar);
-//получить список меню
-const getMenu = require('./controllers/admin/controllerMenu');
-app.post('/getMenu', getMenu);
-//обновить логотип сайта
-const updateAva = require('./controllers/admin/controllerUpdateData');
-app.post('/updateAva', updateAva);
-//выбрать другой загрузчик сайта
-const updateLoader = require('./controllers/admin/controllerUpdateData');
-app.post('/updateLoader', updateLoader);
-//Обновить локализацию индекса
-const updateLocal = require('./controllers/admin/controllerUpdateData');
-app.post('/updateLocal', updateLocal);
-//обновить локализацию раздела товар
-const updateLocalTovar = require('./controllers/admin/controllerUpdateData');
-app.post('/updateLocalTovar', updateLocalTovar);
-//обновить заголовок индекса
-const saveTitle = require('./controllers/admin/controllerUpdateData');
-app.post('/saveTitle', saveTitle);
-//управление сайтом (открыт/в разработке)
-const siteStatus = require('./controllers/admin/controllerUpdateData');
-app.post('/siteStatus', saveTitle);
-//получить список посетителей
-const getCounters = require('./controllers/admin/controllerCounters');
-app.post('/getCounters', getCounters);
-//Редактирование соц сетей
-const saveSocials = require('./controllers/admin/controllerSocials');
-app.post('/saveSocials', saveSocials);
-
-const setStatusVisibiles = require('./controllers/admin/controllerTovar');
-app.post('/SetStatusVisibile', setStatusVisibiles);
-
-const maxAImenu = require('./controllers/admin/controllerMenu');
-app.post('/maxAImenu', maxAImenu);
-
-const controllerSetColor = require('./controllers/admin/controllerSetColor');
-app.post('/tovarSetColor', controllerSetColor);
-
-const tovarSetGroup = require('./controllers/admin/controllerGroup');
-app.post('/tovarSetGroup', tovarSetGroup);
-//добавить категорию меню
-
-/** Уплавление меню (категориями) **/
-const MENU_Controll = require('./controllers/admin/controllerMenu');
-app.post('/addCategory', MENU_Controll);
-//Удалить категорию
-app.post('/removecategory', MENU_Controll);
-//Добавить тип
-app.post('/addNewType', MENU_Controll);
-
-const bot = require('./controllers/bot/controllerBot');
-app.post('/to-yuliadMessage', bot);
-
 
 
 
@@ -198,10 +134,10 @@ const nexmo = new Nexmo({
 })
 
 app.listen(4111, function(){
-  global.baseName = 'LM_SHOP';
+  global.baseName = 'SHOP_DB';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
-  require('./controllers/telegram/telegaBOT');
+  // require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
     // //
     // mongoClient.connect(global.baseIP, function(err, client){

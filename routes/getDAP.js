@@ -4,59 +4,42 @@ const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
 router.get('/', function(req, res, next){
-  var languageSystem, langMenu;
-
-  if(req.cookies.pageLang === undefined){
-    languageSystem = "locale";
-    langMenu = "menu";
-  }else{
-    if(req.cookies.pageLang === 'ua'){
-      languageSystem = "locale-ua";
-      langMenu = "menu-ua";
-    }else{
-      languageSystem = "locale";
-      langMenu = "menu";
-    }
+  switch(req.cookies.pageLang){
+    case 'ru': var numLangs = 0 ;break;
+    case 'ua': var numLangs = 1 ;break;
+    case 'en': var numLangs = 2 ;break;
+    default: var numLangs = 0;
   }
-
-
   mongoClient.connect(global.baseIP, function(err, client){
-      const db = client.db(global.baseName);
-      const config = db.collection("config");
-      const locale  = db.collection(languageSystem);
-      const titles_page = db.collection("titles_page");
-      const menu  = db.collection(langMenu);
+    const db = client.db(global.baseName);
+    const locale = db.collection("LOCALE");
+    const users = db.collection("USERS");
+    const menu = db.collection("MENU");
+    const contacts = db.collection("CONTACTS");
+    const discounts = db.collection("DISCOUNTS");
 
-      if(err) return console.log(err);
+    if(err) return console.log(err);
 
-     titles_page.find().toArray(function(err, results_titles_page){
-       config.find().toArray(function(err, results_config){
-         if(results_config[0].opens){
-           menu.find().sort({ index: 1 }).toArray(function(err, results_menu ){
-
-             // locale.find({page:'index'}).toArray(function(err, results_locale ){
-               locale.find({page:'global'}).toArray(function(err, results_global ){
-                 res.render('discounts_and_promotions.ejs',{
-                   conf: results_config[0],
-                   menu: results_menu,
-                   title: results_titles_page[0].contacts,
-                   sessionUser: req.session.user,
-                   isAdm: req.session.admin,
-                   global: results_global[0]
-                 })
-               });
-             // });
-
-             client.close();
-           });
-         }else{
-           res.render('404.ejs',{
-             conf: results_config[0]
-           })
-         }
-
-       });
-     });
+    locale.find().toArray(function(err, resLocale){
+      users.find({login: req.session.login}).toArray(function(err, resUsers){
+        menu.find().toArray(function(err, resMenu){
+          contacts.find().toArray(function(err, resContacts){
+            discounts.find({status: true}).toArray(function(err, resDiscounts){
+              res.render('discounts_and_promotions.ejs',{
+                isAdm: req.session.admin,
+                sessionUser: resUsers[0],
+                locale: resLocale[0][global.parseLanguage(req)].discounts,
+                menu: resMenu[0][global.parseLanguage(req)],
+                globalLocale:  resLocale[0][global.parseLanguage(req)],
+                contacts: resContacts[0],
+                discounts: resDiscounts,
+                numLang: numLangs
+              });
+            });
+          });
+        }); 
+      }); 
+    }); 
   });
 });
 

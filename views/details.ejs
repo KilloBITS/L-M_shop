@@ -447,46 +447,7 @@
     </div>
   </div>
 
-  <div class="siteMap">
-    <div class="mapmap">
-      <div class="LBB">
-        <% for(var i = 0; i < menu.length; i++) { %>
-        <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
-        <% } %>
-        <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
-        <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
-        <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
-      </div>
-      <div class="CBB">
-        <div class="vectorLogo"></div>
-        <div class="copiright"><%= conf.copiright %></div>
-        <div class="socials">
-          <% for(var i = 0; i < conf.socials.length; i++) { %>
-          <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
-          <% } %>
-        </div>
-        <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
-      </div>
-      <div class="RBB">
-        <div class="adressLineMap"><%= conf.phoneTitle %></div>
-        <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
-        <div class="adressLineMap"></div>
-        <div class="adressLineMap"><%= conf.emailTitle %></div>
-        <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
-        <div class="adressLineMap"></div>
-        <div class="adressLineMap">
-          <div class="lang" id="ua" title="Українська версія"></div>
-          <div class="lang" id="ru" title="Русская версия"></div>
-        </div>
-        <div class="certificated">
-          <div class="certificate" id="byVisa"></div>
-          <div class="certificate" id="byMasterCard"></div>
-          <div class="certificate" id="byYandex"></div>
-          <div class="certificate" id="byFondy"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<%- include ./includes/footer.ejs %>
 
 <div id="pageMessages"></div>
 <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>

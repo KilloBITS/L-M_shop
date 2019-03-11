@@ -144,14 +144,16 @@
 }
 
 .Promotion_Rules{
-padding-bottom: 25px;
+    padding-bottom: 50px;
+    max-width: 1024px;
+    margin: auto;
 }
 
 .line{
   max-width: 1024px;
-      margin: auto;
-      width: 100%;
-      font-size: 19px;
+  margin: auto;
+  width: 100%;
+  font-size: 19px;
 }
 
 .center{

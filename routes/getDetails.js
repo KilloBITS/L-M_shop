@@ -27,7 +27,6 @@ router.get('/*', function(req, res, next) {
     const config = db.collection("config");
     const menu = db.collection(langMenu);
     const tovar = db.collection("tovar");
-    const tovar_uk = db.collection("tovar-uk");
     const users_session = db.collection("users");
     const tovar_comments = db.collection("comments");
 
@@ -48,11 +47,8 @@ router.get('/*', function(req, res, next) {
                 tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, results_recTovar) {
 
                   tovar.update({ AI: parseInt(searchData[0]) }, {$set : {visual: parseInt(results_tovar[0].visual) + 1} })
-                  tovar_uk.update({ AI: parseInt(searchData[0]) }, {$set : {visual: parseInt(results_tovar[0].visual) + 1} })
-
 
                   tovar.find({ group: results_tovar[0].group }).toArray(function(err, results_group) {
-
                     if(results_tovar[0].group !== undefined){
                       var TovGroup = results_group;
                     }else{

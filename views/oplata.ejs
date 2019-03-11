@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title><%= title %></title>
+	<title><%= locale.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
@@ -24,15 +24,7 @@
   <% } %>
 </head>
 <body>
-  <div class="spn_hol" style="/* display: none; */">
-      <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-      </div>
-  </div>
-
-
+<%- include ./includes/preloader.ejs %>
 <div class="top">
   <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -52,40 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="topLine twoLine">
-    <div class="menuBlock">
-      <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-          <% }else{%>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-          <% } %>
-        <% } else { %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-          <% }else{%>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-          <% } %>
-        <% } %>
-      <% } %>
-    </div>
-  </div>
-  <div class="opensMenu">
-  <% for(var i = 0; i < menu.length; i++) { %>
-    <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-      <div class="menu_data <%= menu[i].ml %>">
-        <div class="menu_title"><%= menu[i].name %></div>
-        <div class="menuLeft">
-          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-          <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-          <% } %>
-        </div>
-        <div class="menuRight"></div>
-      </div>
-    <% } %>
-  <% } %>
-  </div>
+  <%- include ./includes/menu.ejs %>
 </div>
 
 <div class="content">
@@ -93,33 +52,33 @@
   <img src="../../../data/oplata/PAGE_TITLE.jpg">
 </div>
 <div class="title_head max1024 bigtext">
-  Отправка по Украине осуществляется на протяжении 1-3 дней c момента поступления заказа через сервис доставки "Нова Пошта".
+  <%= locale.theme %>
 </div>
 
-<div class="OPLATA_TITLE  max1024"><%= conf.oplata_title %></div>
+<div class="OPLATA_TITLE  max1024"><%= locale.minTitle1 %></div>
 <ul class="cards  max1024">
-  <% for(var i = 0; i < conf.oplata.length; i++) { %>
+  <% for(var i = 0; i < payment.length; i++) { %>
     <li class="cards__item">
       <div class="card">
-        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= conf.oplata[i].img %>)"></div>
+        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= payment[i].img %>)"></div>
         <div class="card__content">
-          <div class="card__title"><%= conf.oplata[i].title %></div>
-          <p class="card__text"><%= conf.oplata[i].text %></p>
+          <div class="card__title"><%= payment[i].title %></div>
+          <p class="card__text"><%= payment[i].text %></p>
         </div>
       </div>
     </li>
   <% } %>
 </ul>
-<div class="OPLATA_TITLE  max1024"><%= conf.dostavka_title %></div>
+<div class="OPLATA_TITLE  max1024"><%= locale.minTitle2 %></div>
 <ul class="cards  max1024">
-  <% for(var i = 0; i < conf.dostavka.length; i++) { %>
+  <% for(var i = 0; i < delivery.length; i++) { %>
     <li class="cards__item">
       <div class="card">
-        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= conf.dostavka[i].img %>)"></div>
+        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= delivery[i].img %>)"></div>
         <div class="card__content dost" id="dost_<%= i %>">
           <div class="noneDAta"></div>
-          <div class="card__title"><%= conf.dostavka[i].title %></div>
-          <p class="card__text"><%= conf.dostavka[i].text %></p>
+          <div class="card__title"><%= delivery[i].title %></div>
+          <p class="card__text"><%= delivery[i].text %></p>
           <% if(i === 0){ %>
             <div class="NP_modal"></div>
             <div class="searchNPLine">
@@ -160,7 +119,7 @@
 
             <script>
             var CCC = {
-              "apiKey": "<%= conf.NEW_POST_API %>",
+              "apiKey": "<%= config.NP_API.key %>",
               "modelName": "TrackingDocument",
               "calledMethod": "getStatusDocuments",
               "methodProperties": {
@@ -208,51 +167,12 @@
 
 </div>
 
-<div class="siteMap">
-  <div class="mapmap">
-    <div class="LBB">
-      <% for(var i = 0; i < menu.length; i++) { %>
-      <a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
-      <% } %>
-      <a href="/privacy_policy"><div class="punktMapMenu">• Политика конфиденциальности</div></a>
-      <a href="/termsofuse"><div class="punktMapMenu">• Условия пользования</div></a>
-      <a href="/site_of_map"><div class="punktMapMenu">• Карта сайта</div></a>
-    </div>
-    <div class="CBB">
-      <div class="vectorLogo"></div>
-      <div class="copiright"><%= conf.copiright %></div>
-      <div class="socials">
-        <% for(var i = 0; i < conf.socials.length; i++) { %>
-        <a href="<%= conf.socials[i].link %>" target="_blank"><div class="socBtn" style="<%= conf.socials[i].img %>"></div></a>
-        <% } %>
-      </div>
-      <div class="copiright developer">Site created by "<a target="_blank" href="http://kalenyuk.pro" style="color: red;">Kaleniuk Ihor</a>"</div>
-    </div>
-    <div class="RBB">
-      <div class="adressLineMap"><%= conf.phoneTitle %></div>
-      <a href="tel:<%= conf.number %>" class="adressLineMap"><%= conf.number %></a>
-      <div class="adressLineMap"></div>
-      <div class="adressLineMap"><%= conf.emailTitle %></div>
-      <a href="mailto:<%= conf.email %>?subject=SweetWords" class="adressLineMap"><%= conf.email %></a>
-      <div class="adressLineMap"></div>
-      <div class="adressLineMap">
-        <div class="lang" id="ua" title="Українська версія"></div>
-        <div class="lang" id="ru" title="Русская версия"></div>
-      </div>
-      <div class="certificated">
-        <div class="certificate" id="byVisa"></div>
-        <div class="certificate" id="byMasterCard"></div>
-        <div class="certificate" id="byYandex"></div>
-        <div class="certificate" id="byFondy"></div>
-      </div>
-    </div>
-  </div>
-</div>
+<%- include ./includes/footer.ejs %>
 
 <div id="basketDATA">
   <div id="bas">
     <div class="basket_close"></div>
-    <div class="backet_load" style="background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+    <div class="backet_load" style="background-image: url(../../../image/loaders/<%= config.loader %>"></div>
     <div class="basket_tovar">
       <div class="allSum">0.00 ГРН</div>
       <div class="BSK"></div>
