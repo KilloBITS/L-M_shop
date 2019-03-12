@@ -10,16 +10,13 @@
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css">
   <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/index/style.css">
   <link rel="stylesheet" type="text/css" href="/style/index/style.min.css">
 
@@ -37,6 +34,7 @@
   <script type="text/javascript" src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
 	<script type="text/javascript" src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
   <script type="text/javascript" src="/script/global.js"></script>
+  <script type="text/javascript" src="/script/basket.js"></script>
   <script type="text/javascript" src="/script/webflow.js"></script>
 	<script type="text/javascript" src="script/index/index.js"></script>
   <% if(isAdm){ %>
@@ -60,21 +58,7 @@
         <% } else { %>
         <a href="/login" title="<%= locale.signin %>"><div class="logInBlock"></div></a>
         <% } %>
-
-				<div class="searchBlock">
-					<div class="searchLine">
-						<input type="text" name="searchTOP" class="searchBlockVal" id="SEARCH" placeholder="<%= locale.search %>">
-					</div>
-				</div>
-        <div class="search_result">
-          <div class="search_title"><%= locale.found %> 0</div>
-          <div class="search_data">
-            <div class="search_object">
-              <div class="search_min_img"></div>
-              <div class="search_min_title"></div>
-            </div>
-          </div>
-        </div>
+        <%- include ./includes/search.ejs %>				
 			</div>
 		</div>
 		<%- include ./includes/menu.ejs %>
@@ -406,30 +390,35 @@
         <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.newstitle %></div>
       </div>
       <% if(news.length >= 1){ %>
-      <% for(var i = 0; i < news.length; i++) { %>
-      <div class="column post"  data-ix="scale-on-scroll">
-        <div class="post-module">
-          <div class="thumbnail">
-            <div class="date">
-              <div class="day"><%= news[i].date.split('.')[0] %></div>
-              <div class="month"><%= news[i].date.split('.')[1] %></div>
-            </div><img src="../../../data/news/<%= news[i].img %>"/>
-          </div>
-          <div class="post-content">
-            <div class="category"><%= news[i].minName %></div>
-            <h1 class="title"><%= news[i].title %></h1>
-            <p class="description"><%= news[i].text %></p>
-            <div class="post-meta">
-              <span class="comments">
-                <i class="fa fa-comments"></i>
-              </span>
+      <% if(news.length === 1){ var newWidth = '100%' } %>
+      <% if(news.length === 2){ var newWidth = '50%' } %>
+      <% if(news.length >= 3){ var newWidth = '33%' } %>
+        <% for(var i = 0; i < news.length; i++) { %>      
+        <div class="column post" data-ix="scale-on-scroll" style="width: <%= newWidth %>">
+          <div class="post-module">
+            <div class="thumbnail">
+              <div class="date">
+                <div class="day"><%= news[i].date %></div>
+              </div>
+              <img src="../../../data/news/<%= news[i].logo %>"/>
+            </div>
+            <div class="post-content">
+              <h1 class="title"><%= news[i].title[numLang] %></h1>
+              <p class="description"><%= news[i].text[numLang] %></p>
+              <a href="#" class="openNews"><%= locale.readonly %></a>
             </div>
           </div>
         </div>
-      </div>
-      <% } %>
-      <% } %>
+        <% } %>
+      <% } %>     
     </div>
+    <% if(news.length > 6){ %>
+      <a href="#">
+        <div class="mainBTN" data-ix="scale-on-scroll">
+          <%= locale.allnews %>
+        </div>
+      </a>
+    <% } %>
   </div>
   <div class="counters block">
     <div class="counters_conent">

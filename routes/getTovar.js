@@ -35,20 +35,18 @@ router.get('/*', function(req, res, next){
 
     locale.find().toArray(function(err, resLocale){
       users.find({login: req.session.login}).toArray(function(err, resUsers){
-        menu.find().toArray(function(err, resMenu){
+        menu.find().sort({index: 1}).toArray(function(err, resMenu){
+          let FILTER = {
+            category: parseInt(searchData[0]),
+          };
 
-          tovar.find().toArray(function(err, resTovar){
+          if(searchData.length >= 2 ){
+            FILTER.types = searchData[1].split('&')[0];
+          }
+
+          tovar.find(FILTER).toArray(function(err, resTovar){
             news.find().toArray(function(err, resNews){
               contacts.find().toArray(function(err, resContacts){
-
-                let FILTER = {
-                  category: parseInt(searchData[0]),
-                };
-
-                if(searchData.length >= 2 ){
-                  FILTER.types = searchData[1].split('&')[0];
-                }
-
                 var current_page = page;
                 var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: resTovar.length-1});
                 var p = paginator.getPaginationData();
@@ -57,7 +55,7 @@ router.get('/*', function(req, res, next){
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
                   locale: resLocale[0][global.parseLanguage(req)].tovar,
-                  menu: resMenu[0][global.parseLanguage(req)],
+                  menu: resMenu,
                   globalLocale:  resLocale[0][global.parseLanguage(req)],
                   contacts: resContacts[0],
                   numLang: global.parseNumLang(req),

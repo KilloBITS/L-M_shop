@@ -1,9 +1,7 @@
 'use strict';
 var Index = {
-  ML: "",
   getCounters: true,
   DESIGHN: function() {
-
     const updateTimer = (deadline) => {
     // calculates time left until deadline
     const time = deadline - new Date();
@@ -106,7 +104,30 @@ window.onload = () => {
         $.post("/search", {
           name: $("#SEARCH").val()
         }, function(result) {
-          console.log(JSON.parse(result.searchResult));
+          console.log(result.searchResult);
+          var res = result.searchResult;
+          $('.search_data div').remove();
+          $(".search_title span").html(res.length)
+          for(let i = 0; i < res.length; i++){
+            var newObj = document.createElement('div');
+            newObj.className = 'search_object';            
+            $('.search_data').append(newObj);
+
+            var obImg =  document.createElement('div');
+            obImg.className = 'search_min_img';            
+            $(newObj).append(obImg);
+
+            var img =  document.createElement('img');
+            img.id = 'TovImg'+i;   
+            img.setAttribute('src', '../../../data/tovar/'+res[i].image[0]);         
+            $(obImg).append(img);
+
+            var obTitle =  document.createElement('div');
+            obTitle.className = 'search_min_title';
+            obTitle.innerHTML = res[i].title;
+            $(newObj).append(obTitle);
+          }
+          
         });
       } else {
         $(".search_result").fadeOut(150);
@@ -119,26 +140,7 @@ window.onload = () => {
           "width": "0px"
         });
       }
-    });
-
-    $(".menuBTN").hover(function() {
-      try {
-        $("." + Index.ML + ",.opensMenu").hide();
-      } catch (e) {
-        console.warn('Есть небольшой конфликт, но это не критично')
-      }
-        Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
-        if (Index.ML != undefined) {
-          $("." + Index.ML + ",.opensMenu").show();
-        }
-    }, function(e) {
-      Index.ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
-      $(".opensMenu").hover(function() {}, function(e) {
-        $("." + Index.ML + ",.opensMenu").hide();
-      });
-    });
-
-
+    });  
 
     var $slider = $(".slider"),
       $slideBGs = $(".slide__bg"),

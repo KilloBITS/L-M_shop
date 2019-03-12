@@ -1,7 +1,8 @@
 @media screen and (max-width: 800px) {
   .lang {
-      float: initial;
-      margin: auto;
+    float: none;
+    margin: auto;
+    display: inline-block;
   }
 }
 @media (min-width: 1200px){

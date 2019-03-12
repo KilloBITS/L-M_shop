@@ -19,13 +19,13 @@ router.get('/', function(req, res, next){
     config.find().toArray(function(err, resConfig){
       locale.find().toArray(function(err, resLocale){
         users.find({login: req.session.login}).toArray(function(err, resUsers){
-          menu.find().toArray(function(err, resMenu){
+          menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
               res.render('PRIVACY_POLICY.ejs',{
                 isAdm: req.session.admin,
                 sessionUser: resUsers[0],
                 locale: resLocale[0][global.parseLanguage(req)].payment,
-                menu: resMenu[0][global.parseLanguage(req)],
+                menu: resMenu,
                 globalLocale:  resLocale[0][global.parseLanguage(req)],
                 contacts: resContacts[0],
                 numLang: global.parseNumLang(req),

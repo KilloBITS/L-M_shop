@@ -1,4 +1,5 @@
 'use strict';
+var ML = "";
 var Global = {
   changeTypeDost: function(t){
     $("#CityOfDost,#CityOfPostNP,#CityOfPostUl,#CityOfPostD,#CityOfPostK").fadeOut(130)
@@ -82,16 +83,6 @@ var Global = {
     }
   }
 };
-
-$(document).ready(function() {
-  Global.BTN();
-  setTimeout(function() {
-    $(".spn_hol").css({"transform": "scale(3)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
-  }, 1500);
-
-});
-
-
 
 function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {
   var iconMap = {
@@ -200,6 +191,27 @@ $(function() {
 // Back to top button
 (function() {
   $(document).ready(function() {
+
+
+    $(".menuBTN").hover(function() {
+      try {
+        $("." + ML + ",.opensMenu").hide();
+      } catch (e) {
+        console.log('Есть небольшой конфликт, но это не критично');
+      }
+        ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+        if (ML != undefined) {
+          $("." + ML + ",.opensMenu").show();
+        }
+        
+    }, function(e) {
+      ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+      $(".opensMenu").hover(function() {}, function(e) {
+        $("." + ML + ",.opensMenu").hide();
+      });
+    });
+
+
     if($("body").width() > 800){
       return $(window).scroll(function() {
         return $(window).scrollTop() > 300 ? $(".logotype").css({"height":"50px"}) : $(".logotype").css({"height":"100px"}), $(window).scrollTop() > 600 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
@@ -224,6 +236,11 @@ var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
 $(document).ready(function(){
+  Global.BTN();
+  setTimeout(function() {
+    $(".spn_hol").css({"transform": "scale(3)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
+  }, 1500);
+  
   $('.close_chat').click(function(){
     $(".avenue-messenger").hide();
   });

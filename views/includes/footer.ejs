@@ -2,7 +2,7 @@
 		<div class="mapmap">
 			<div class="LBB">
 				<% for(var i = 0; i < menu.length; i++) { %>
-				<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name %></div></a>
+				<a href="<%= menu[i].glink %>"><div class="punktMapMenu">• <%= menu[i].name[numLang] %></div></a>
         <% } %>
         <a href="/privacy_policy"><div class="punktMapMenu">• <%= globalLocale.privacypolicy %></div></a>
         <a href="/termsofuse"><div class="punktMapMenu">• <%= globalLocale.termsofuse %></div></a>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title>≡ Авторизация</title>
+	<title><%= locale.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
@@ -25,6 +25,7 @@
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/auth/auth.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
@@ -39,45 +40,20 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype"></div>
+		<div class="logotype"></div>    
 		<div class="topNavBlockOfBtm">
-			<a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
+			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
+      <% if(sessionUser !== undefined){ %>
+        <a href="/profile"><div class="userAccountInBlock"></div></a>
+      <% } else { %>
+        <a href="/login"><div class="logInBlock"></div></a>
+      <% } %>
+      <div class="basketBlock">
+        <span>0</span>
+      </div>
 		</div>
 	</div>
-  <div class="topLine twoLine">
-    <div class="menuBlock">
-      <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-          <% }else{%>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-          <% } %>
-        <% } else { %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-          <% }else{%>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-          <% } %>
-        <% } %>
-      <% } %>
-    </div>
-  </div>
-  <div class="opensMenu">
-  <% for(var i = 0; i < menu.length; i++) { %>
-    <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-      <div class="menu_data <%= menu[i].ml %>">
-        <div class="menu_title"><%= menu[i].name %></div>
-        <div class="menuLeft">
-          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-          <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-          <% } %>
-        </div>
-        <div class="menuRight"></div>
-      </div>
-    <% } %>
-  <% } %>
-  </div>
+  <%- include ./includes/menu.ejs %>
 </div>
 
 <div class="content">
@@ -93,68 +69,66 @@
     <div class="form-cont">
       <div class="top-buttons">
         <button class="to-signup ">
-          <%= conf.auth_local[4] %>
+          <%= locale.registration %>
         </button>
         <button class="to-signin top-active-button">
-          <%= conf.auth_local[5] %>
+          <%= locale.authification %>
         </button>
       </div>
       <div class="form form-signup">
         <div class="register_socials">
-          <div class="socials_title_log">Регистрация через соц. сеть</div>
+          <div class="socials_title_log"><%= locale.regsoc %></div>
           <div class="socialAccount faceboock"></div>
           <div class="socialAccount google"></div>
           <div class="socialAccount instagram"></div>
         </div>
         <div class="errorUP"></div>
-        <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+        <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>
         <div class="aForm" action="#">
-          <lable><%= conf.auth_local[6] %></lable>
+          <lable><%= locale.FIO %></lable>
           <input type="text"
-                 placeholder="Фамилия Имя Отчество" id="newName">
-          <lable>E-MAIL</lable>
+                 placeholder="<%= locale.FIO %>" id="newName">
+          <lable>EMAIL</lable>
           <input type="text"
-                 placeholder="<%= conf.auth_local[8] %>" id="newEmail">
-          <lable><%= conf.auth_local[1] %></lable>
-          <input type="password" placeholder="<%= conf.auth_local[9] %>" id="newPass">
+                 placeholder="EMAIL" id="newEmail">
+          <lable><%= locale.password %></lable>
+          <input type="password" placeholder="<%= locale.password %>" id="newPass">
           <p class="terms">
 
             <div class="checkedsBlocked" style="font-size:.65em">
               <label class="check-switch"><input id="checkPrav" type="checkbox" /><div class="track"><div class="knob"></div></div></label>
-              <div class="checkText"><%= conf.auth_local[10] %></div>
+              <div class="checkText"><%= locale.rulesSite %></div>
             </div>
 
           </p>
-          <input type="submit" class="form-btn" value="<%= conf.auth_local[11] %>" onclick="AUTH.POST_REGISTER()"/>
-          <a href="#" class="lined-link to-signin-link" style="white-space: pre"><%= conf.auth_local[12] %></a>
+          <input type="submit" class="form-btn" value="<%= locale.btnReg %>" onclick="AUTH.POST_REGISTER()"/>
+          <a href="#" class="lined-link to-signin-link" style="white-space: pre"><%= locale.toSignin %></a>
         </div>
       </div>
 
       <div class="form form-signin">
         <div class="auch_socials">
-          <div class="socials_title_log">Авторизация через соц. сеть</div>
+          <div class="socials_title_log"><%= locale.authSoc %></div>
           <div class="socialAccount faceboock"></div>
           <div class="socialAccount google"></div>
           <div class="socialAccount instagram"></div>
         </div>
         <div class="errorUP"></div>
-        <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= conf.loader %>"></div>
+        <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>
         <div class="aForm">
-          <lable><%= conf.auth_local[0] %></lable>
-          <input type="email" placeholder="<%= conf.auth_local[0] %>" value="" id="login">
-          <lable><%= conf.auth_local[1] %></lable>
-          <input type="password" placeholder="<%= conf.auth_local[1] %>" value="" id="pass">
-          <input type="submit" class="form-btn" value="<%= conf.auth_local[2] %>" onclick="AUTH.POST_AUTH()"/>
-          <a href="#" class="lined-link to-signup-link"><%= conf.auth_local[11] %></a>
+          <lable><%= locale.login %></lable>
+          <input type="email" placeholder="<%= locale.login %>" value="" id="login">
+          <lable><%= locale.pass %></lable>
+          <input type="password" placeholder="<%= locale.pass %>" value="" id="pass">
+          <input type="submit" class="form-btn" value="<%= locale.authification %>" onclick="AUTH.POST_AUTH()"/>
+          <a href="#" class="lined-link to-signup-link"><%= locale.registration %></a>
         </div>
       </div>
     </div>
     <div class="clear-fix"></div>
   </div>
 </div>
-
 <%- include ./includes/footer.ejs %>
-
 <div id="pageMessages"></div>
 </body>
 </html>

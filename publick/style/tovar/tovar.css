@@ -79,6 +79,10 @@ background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiB
   box-shadow: -5px -5px 0px -3px white, -5px -5px 0px 0px rgba(255, 0, 107, 0.4);
   /* outline: 2px solid white; */
   border: 1px solid #ff99c3;
+  background-image: url(../../../image/loaders/load0.gif);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 150px;
 }
 
 .thumbnail .caption {

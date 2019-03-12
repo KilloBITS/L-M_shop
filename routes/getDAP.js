@@ -11,23 +11,28 @@ router.get('/', function(req, res, next){
     const menu = db.collection("MENU");
     const contacts = db.collection("CONTACTS");
     const discounts = db.collection("DISCOUNTS");
+    const config = db.collection("CONFIG");
+
 
     if(err) return console.log(err);
 
     locale.find().toArray(function(err, resLocale){
       users.find({login: req.session.login}).toArray(function(err, resUsers){
-        menu.find().toArray(function(err, resMenu){
+        menu.find().sort({index: 1}).toArray(function(err, resMenu){
           contacts.find().toArray(function(err, resContacts){
             discounts.find({status: true}).toArray(function(err, resDiscounts){
-              res.render('discounts_and_promotions.ejs',{
-                isAdm: req.session.admin,
-                sessionUser: resUsers[0],
-                locale: resLocale[0][global.parseLanguage(req)].discounts,
-                menu: resMenu[0][global.parseLanguage(req)],
-                globalLocale:  resLocale[0][global.parseLanguage(req)],
-                contacts: resContacts[0],
-                discounts: resDiscounts,
-                numLang: global.parseNumLang(req)
+              config.find().toArray(function(err, resConfig){ 
+                res.render('discounts_and_promotions.ejs',{
+                  isAdm: req.session.admin,
+                  sessionUser: resUsers[0],
+                  locale: resLocale[0][global.parseLanguage(req)].discounts,
+                  menu: resMenu,
+                  globalLocale:  resLocale[0][global.parseLanguage(req)],
+                  contacts: resContacts[0],
+                  discounts: resDiscounts,
+                  numLang: global.parseNumLang(req),
+                  config: resConfig[0]
+                });
               });
             });
           });

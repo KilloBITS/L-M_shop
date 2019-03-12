@@ -28,6 +28,7 @@
   <script type="text/javascript" src="/script/maskinput.js"></script>
   <script type="text/javascript" src="script/contacts/contacts.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/basket.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -49,6 +50,9 @@
       <% } else { %>
         <a href="/login"><div class="logInBlock"></div></a>
       <% } %>
+      <div class="basketBlock">
+        <span>0</span>
+      </div>
 			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
 		</div>
 	</div>
@@ -132,6 +136,7 @@
   </div>
 </div>
 <%- include ./includes/footer.ejs %>
+<%- include ./includes/basket.ejs %>
 <div id="pageMessages"></div>
 </body>
 </html>

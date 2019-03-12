@@ -25,6 +25,7 @@
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="/script/TweenMax.min.js"></script>
   <script type="text/javascript" src="/script/global.js"></script>
+  <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/tovar/tovar.js"></script>
 
   <% if(isAdm){ %>
@@ -79,12 +80,7 @@
             <li><i class="fa fa-bolt"></i> По цене (Я-А) </li>
           </ul>
         </div>
-
-
-
-        <div class="filters">
-
-        </div>
+        <div class="filters"></div>
       </div>
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
@@ -122,8 +118,17 @@
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
-
-                  <img class="group list-group-image" src="../../../data/tovar/<%= tovarArr[i].image[0] %>" alt=""/>
+                  <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
+                  <script type="text/javascript">
+                    var image = new Image();
+                    image.onload = function () {
+                        $("#imageOf<%= tovarArr[i].AI %>").attr('src', "../../../data/tovar/<%= tovarArr[i].image[0] %>");                       
+                    }
+                    image.onerror = function () {                       
+                        $("#imageOf<%= tovarArr[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
+                    }
+                    image.src = "../../../data/tovar/<%= tovarArr[i].image[0] %>";
+                  </script>
 
                   <div class="caption">
                     <div class="blockOfNavBtn">

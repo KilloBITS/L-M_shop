@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title><%= title %></title>
+	<title><%= locale.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
@@ -25,6 +25,7 @@
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/account/acc.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
@@ -53,44 +54,11 @@
       <a href="/logout"><div class="userlogoutInBlock" title="Выход"></div></a>
     </div>
 	</div>
-  <div class="topLine twoLine">
-    <div class="menuBlock">
-      <% for(var i = 0; i < menu.length; i++) { %>
-        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-          <% }else{%>
-            <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-          <% } %>
-        <% } else { %>
-          <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-          <% }else{%>
-            <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-          <% } %>
-        <% } %>
-      <% } %>
-    </div>
-  </div>
-  <div class="opensMenu">
-  <% for(var i = 0; i < menu.length; i++) { %>
-    <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-      <div class="menu_data <%= menu[i].ml %>">
-        <div class="menu_title"><%= menu[i].name %></div>
-        <div class="menuLeft">
-          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-          <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-          <% } %>
-        </div>
-        <div class="menuRight"></div>
-      </div>
-    <% } %>
-  <% } %>
-  </div>
+  <%- include ./includes/menu.ejs %>
 </div>
 <!-- -->
 <div class="content">
-  <% if( user.phone_number === null ){ %>
+  <% if( sessionUser.phone_number === null ){ %>
     <div class="noNumMessage">
       У вас не подтвержден номер телефона, некоторые функции ограничены.<br>
       <small>(Пожалуйста подтвердите номер телефона)</small>
@@ -99,23 +67,21 @@
 
   <div class="account_block">
     <div class="top_account">
-      <div class="ava_block <% if( user.phone_number === null ){ %>  disabled  <% } %>">
-        <div class="avatarka" id="ava" style="background-image: url(../../../data/avatars/<%= user.AI %>.jpg)"></div>
+      <div class="ava_block <% if( sessionUser.phone_number === null ){ %>  disabled  <% } %>">
+        <div class="avatarka" id="ava" style="background-image: url(../../../data/avatars/<%= sessionUser.AI %>.jpg)"></div>
         <input type="file" id="tFile" style="display: none;">
         <div class="uploadAva"></div>
       </div>
-
       <div class="user_menu">
         <div class="UserNameAcc">
-          <% if( user.official ){ %>
+          <% if( sessionUser.official ){ %>
             <div class="offocial"></div>
           <% } %>
-          <b><%= user.nick %></b>
-          (<%= user.name %>) <br>
-          <small><%= user.email %></small>
-
+          <b><%= sessionUser.nick %></b>
+          (<%= sessionUser.name %>) <br>
+          <small><%= sessionUser.email %></small>
           <div id="ballance">
-            Ваш баланс: <b style="color: red"> <%= user.LM_COIN %> </b> LM-Coin
+            Ваш баланс: <b style="color: red"> <%= sessionUser.LM_COIN %> </b> LM-Coin
             <div id="ballanceInfo">
               <span>
                 LM-Coin - Бонусная валюта нашего сайта. <br><br>
@@ -125,33 +91,32 @@
               </span>
             </div>
             <div class="progress">
-              <div class="progress-bar" style="width: <%= parseInt(user.LM_COIN) / 10 %>%"></div>
+              <div class="progress-bar" style="width: <%= parseInt(sessionUser.LM_COIN) / 10 %>%"></div>
               <div class="progress_start">0</div>
               <div class="progress_end">1000</div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 
   <div class="data_block">
-    <div class="data_menu <% if( user.phone === null ){ %>  disabled  <% } %>">
+    <div class="data_menu <% if( sessionUser.phone === null ){ %>  disabled  <% } %>">
       <div class="set_btn" opmenu="myPays">Покупки</div>
       <div class="set_btn" opmenu="myDesires">Мои желания</div>
       <div class="set_btn" opmenu="mySetting">Настройки</div>
-      <% if( user.official ){ %>
+      <% if( sessionUser.official ){ %>
         <div class="set_btn myTovars" opmenu="myTovars">Мои товары</div>
       <% } %>
 
-      <% if(user.isAdmin){ %>
+      <% if(sessionUser.isAdmin){ %>
         <a href="/panel" target="_blank"> <div class="set_btn">Панель управления</div> </a>
       <% } %>
 
     </div>
-    <div class="data_user_content <% if( user.phone === null ){ %>  noNumber  <% } %>">
-      <% if( user.phone_number === null ){ %>
+    <div class="data_user_content <% if( sessionUser.phone === null ){ %>  noNumber  <% } %>">
+      <% if( sessionUser.phone_number === null ){ %>
       <div class="number_modal">
         <form action="/setNumbers" method="GET" enctype="application/json">
           <h1>Подтверждение номера телефона</h1>

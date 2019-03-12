@@ -70,18 +70,9 @@ img {
 }
 .cards__item {
   display: flex;
-  padding: 1rem;
-  width: 100%;
-}
-@media (min-width: 40rem) {
-  .cards__item {
-    width: 50%;
-  }
-}
-@media (min-width: 56rem) {
-  .cards__item {
-    width: calc(100% / 2);
-  }
+  padding: 6px;
+  width: calc(100% / 2);
+  text-align: center;
 }
 
 .card {
@@ -144,15 +135,15 @@ img {
   background-image: url(https://unsplash.it/800/600?image=59);
 }
 .card__title {
-  color: #696969;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    color: #696969;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .card__text {
   flex: 1 1 auto;
-  font-size: 0.875rem;
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }

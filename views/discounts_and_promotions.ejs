@@ -27,6 +27,7 @@
   <script type="text/javascript" src="script/jquery.noisy.min.js"></script>
   <script type="text/javascript" src="script/dap/dap.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/basket.js"></script>
 
   <script type="text/javascript" src="/script/swiper.min.js"></script>
   <% if(isAdm){ %>
@@ -56,6 +57,9 @@
       <% } else { %>
         <a href="/login"><div class="logInBlock"></div></a>
       <% } %>
+      <div class="basketBlock">
+        <span>0</span>
+      </div>
 			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
 		</div>
 	</div>
@@ -110,6 +114,7 @@
 </div>
 
 <%- include ./includes/footer.ejs %>
+<%- include ./includes/basket.ejs %>
 <div id="pageMessages"></div>
 </body>
 </html>
