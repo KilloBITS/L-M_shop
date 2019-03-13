@@ -84,7 +84,7 @@
           <div class="noneDAta"></div>
           <div class="card__title"><%= delivery[i].title %></div>
           <p class="card__text"><%= delivery[i].text %></p>
-          <% if(i === 0){ %>
+          <% if(i === 0 && config.NP_API.enabled){ %>
             <div class="NP_modal"></div>
             <div class="searchNPLine">
               <input type="text" id="TTHNP" placeholder="<%= locale.TTN %>">

@@ -33,7 +33,7 @@ app.use(bParser.raw({limit: '50mb'}));
 /* Global methods*/
 require('./controllers/system/controllerLanguage');
 
-//routes pages
+//User routes
 const index = require('./routes/getIndex');
 const tovar = require('./routes/getTovar');
 const getStock = require('./routes/getStock');
@@ -66,13 +66,43 @@ app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
-
 app.get('/logout', function(req, res) {
     req.session.destroy(function(err) {})
     res.redirect('/');
 });
 
-app.get('*', get404);
+//Admin routes
+const admAbout = require('./routes/panel/getAboutPanel');
+const admAPI = require('./routes/panel/getAPIPanel');
+const admCatalog = require('./routes/panel/getCatalogPanel');
+const admDB = require('./routes/panel/getDBPanel');
+const admFaq = require('./routes/panel/getFaqPanel');
+const admIndex = require('./routes/panel/getIndexPanel');
+const admLocal = require('./routes/panel/getLocalPanel');
+const admNews = require('./routes/panel/getNewsPanel');
+const admNewsEdit = require('./routes/panel/getaddfromeditNews');
+const admPaydel = require('./routes/panel/getPaydelPanel');
+const admSystem = require('./routes/panel/getSystemPanel');
+const admUsers = require('./routes/panel/getUsersPanel');
+const admVisual = require('./routes/panel/getVisualPanel');
+
+app.use('/about-panel', admAbout);
+app.use('/API-panel', admAPI);
+app.use('/catalog-panel', admCatalog);
+app.use('/DB-panel', admDB);
+app.use('/index-panel', admIndex);
+app.use('/local-panel', admLocal);
+app.use('/news-panel', admNews);
+app.use('/editNews*', admNewsEdit);
+app.use('/paydel-panel', admPaydel);
+app.use('/system-panel', admSystem);
+app.use('/users-panel', admUsers);
+app.use('/visual-panel', admVisual);
+app.use('/faq-panel', admFaq);
+
+
+
+
 
 const search = require('./controllers/controllerSearch');
 app.post('/search', search);
@@ -118,8 +148,15 @@ app.post('/getMapPoint', getMapPoint)
 
 
 /*ADMIN*/
+const panelNewsController = require('./controllers/panel/panelNews_controller');
+app.post('/setNewNews', panelNewsController);
+app.post('/saveEditNews', panelNewsController);
+app.post('/setRemoveNews', panelNewsController);
 
-
+const usersPanelMethods = require('./controllers/panel/panelUser_controller');
+app.post('/setAdmUser', usersPanelMethods);
+app.post('/deleteUser', usersPanelMethods);
+app.post('/blockUser', usersPanelMethods);
 
 
 var options = {
@@ -133,6 +170,7 @@ const nexmo = new Nexmo({
   apiSecret: 't3KDkf6suo3RQBjV'
 })
 
+app.get('*', get404);
 app.listen(4111, function(){
   global.baseName = 'SHOP_DB';
   global.baseIP = 'mongodb://localhost:27017/';

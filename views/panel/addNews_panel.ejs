@@ -1,0 +1,428 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        <% if(editMode){ %>
+        Редактирование новости
+        <% }else{ %>
+        Создание новости
+        <% } %>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/summernote.min.css" type="text/css" media="all" />
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html"><img src="../../../image/Logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                            <li class="active"><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
+                            <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
+                            <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
+                            <li><a href="/local-panel"><i class="fa fa-font"></i> <span>Локализация</span></a></li>
+                            <li><a href="/visual-panel"><i class="fa fa-image"></i> <span>Визуальные настройки</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-gears"></i><span>Настройки системы</span></a>
+                                <ul class="collapse">
+                                    <li><a href="/DB-panel"><i class="fa fa-database"></i> <span>База данных</span></a></li>
+                                    <li><a href="/API-panel"><i class="fa fa-code"></i> <span>API</span></a></li>
+                                    <li><a href="/system-panel"><i class="fa fa-server"></i> <span>Система</span></a></li>
+                                </ul>
+                            </li>                            
+                            <li><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
+                            <li><a href="/catalog-panel"><i class="fa fa-shopping-cart"></i> <span>Каталог</span></a></li>
+                            <li><a href="/faq-panel" style="color: green"><i class="fa fa-shopping-cart" style="color: green"></i> <span>Помощь</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <%- include ./includes/infoblock.ejs %> 
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <% if(editMode){ %>
+                            <h4 class="page-title pull-left">Редактирование новости</h4>
+                            <% }else{ %>
+                            <h4 class="page-title pull-left">Создание новости</h4>
+                            <% } %>
+                            
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="/">Lady & Man clotring store</a></li>
+                                <li><a href="/index-panel">Панель</a></li>
+                                <li><a href="/news-panel">Управление новостями</a></li>
+                                <li>
+                                    <% if(editMode){ %>
+                                    <span>Редактирование новости</span>
+                                    <% }else{ %>
+                                    <span>Создание новости</span>
+                                    <% } %>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <%- include ./includes/user.ejs %> 
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-lg-6 col-ml-12">
+                        <div class="row">
+                            <!-- Textual inputs start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">                                        
+                                        <% if(editMode){ %>
+                                        <h4 class="header-title">Редактировать новость</h4>
+                                        <% }else{ %>
+                                        <h4 class="header-title">Создать новость</h4>
+                                        <% } %>
+                                        <p class="text-muted font-14 mb-4">Заполните данными пустые поля</p>
+                                        <div class="form-group">
+                                            <label for="example-text-input" class="col-form-label">Заголовок</label>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="card">
+                                                        <!-- <div class="card-body"> -->
+                                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Русский</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Украинский</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Английский</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content mt-3" id="myTabContent">
+                                                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Введите заголовок на Русском языке</label>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-RU" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[0] %><% } %></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Введіть заголовок на Українській мові</label>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-UA" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[1] %><% } %></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Write title for English language</label>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-EN" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[2] %><% } %></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <!-- </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                  
+
+                                        <div class="form-group">
+                                            <label for="example-date-input" class="col-form-label">Дата</label>
+                                            <input class="form-control" type="date" value="<% if(editMode){ %><%= newsData.date %><% } %>" id="example-date-input" readonly>
+                                        </div>
+                                        <% if(!editMode){ %>
+                                        <script type="text/javascript">
+                                            document.getElementById("example-date-input").valueAsDate = new Date();
+                                        </script>
+                                        <% } %>                                      
+                                        <div class="form-group">
+                                            <label class="col-form-label">Введите текст на Русском языке</label>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="card">
+                                                        <!-- <div class="card-body"> -->
+                                                            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#home1" role="tab" aria-controls="home" aria-selected="true">Русский</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" id="profile-tab1" data-toggle="tab" href="#profile1" role="tab" aria-controls="profile" aria-selected="false">Украинский</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" id="contact-tab1" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact" aria-selected="false">Английский</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content mt-3" id="myTabContent">
+                                                                <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Введите текст на Русском языке</label>
+                                                                         <textarea class="form-control" id="code_preview0" name="" style="height: 300px;"><% if(editMode){ %><%= newsData.text[0] %><% } %></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Введіть текст на Українській мові</label>
+                                                                        <textarea class="form-control" id="code_preview1" name="" style="height: 300px;">
+                                                                            <% if(editMode){ %>
+                                                                            <%= newsData.text[1] %>
+                                                                            <% } %>
+                                                                        </textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab">
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea-input" class="col-form-label">Write text for English language</label>
+                                                                        <textarea class="form-control" id="code_preview2" name="" style="height: 300px;">
+                                                                            <% if(editMode){ %>
+                                                                            <%= newsData.text[2] %>
+                                                                            <% } %>
+                                                                        </textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <!-- </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-form-label">Логотип новости</label>
+                                            <div class="custom-file">
+                                                <% if(editMode && newsData.logo !== undefined && newsData.logo !== 'default.jpg'){ %>
+                                                <div class="addEditImage" id="logoOfNews" style="background-image: url(<%= newsData.logo %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= newsData.logo %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01" onchange="NEWS.selectNewsLogo()">
+                                                <label class="custom-file-label" for="inputGroupFile01">Заменить</label>
+                                                <% }else{ %>
+                                                <div class="addEditImage" id="logoOfNews"></div>
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01" onchange="NEWS.selectNewsLogo()">
+                                                <label class="custom-file-label" for="inputGroupFile01">Выбрать файл</label>
+                                                <% } %>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Textual inputs end -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-ml-12">
+                        <div class="row">
+                            <!-- Textual inputs start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Добавить изображения</h4>
+                                        <p class="text-muted font-14 mb-4">Выберите изображения для новости</p>
+                                        <div class="form-group">                                            
+                                            <div class="custom-file">
+                                                <% if(editMode && newsData.images[0] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= newsData.images[0] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= newsData.images[0] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="NEWS.selectNewsContentImage(this,0)">
+                                                <label class="custom-file-label" for="newsImage1">Заменить</label>
+                                                <% }else{ %>
+                                                <div class="addEditImage" id="imgOfNews1"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="NEWS.selectNewsContentImage(this,0)">
+                                                <label class="custom-file-label" for="newsImage1">Выбрать файл</label>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews2"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage2" onchange="NEWS.selectNewsContentImage(this,1)">
+                                                <label class="custom-file-label" for="newsImage2">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews3"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage3" onchange="NEWS.selectNewsContentImage(this,2)">
+                                                <label class="custom-file-label" for="newsImage3">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews4"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage4" onchange="NEWS.selectNewsContentImage(this,3)">
+                                                <label class="custom-file-label" for="newsImage4">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews5"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage5" onchange="NEWS.selectNewsContentImage(this,4)">
+                                                <label class="custom-file-label" for="newsImage5">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews6"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage6" onchange="NEWS.selectNewsContentImage(this,5)">
+                                                <label class="custom-file-label" for="newsImage6">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews7"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage7" onchange="NEWS.selectNewsContentImage(this,6)">
+                                                <label class="custom-file-label" for="newsImage7">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-file">
+                                                <div class="addEditImage" id="imgOfNews8"></div>
+                                                <input type="file" class="custom-file-input" id="newsImage8" onchange="NEWS.selectNewsContentImage(this,7)">
+                                                <label class="custom-file-label" for="newsImage8">Выбрать файл</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Textual inputs end -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-ml-12 mt-5">
+                        <div class="row">
+                            <% if(editMode){ %>
+                            <button type="button" class="btn btn-success mb-2 col-12" onclick="NEWS.savenews('<%= newsData.AI %>')">Сохранить изминения</button>
+                            <% }else{ %>
+                            <button type="button" class="btn btn-success mb-2 col-12" onclick="NEWS.addnews()">Опубликовать новость</button>
+                            <% } %>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <%- include ./includes/footer.ejs %>
+        <!-- footer area end-->
+    </div>
+    <%- include ./includes/offset-area.ejs %> 
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <!-- start amcharts -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- all bar chart -->
+    <script src="assets/js/bar-chart.js"></script>
+    <!-- all map chart -->
+    <script src="assets/js/maps.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/methods.js"></script>
+    <script type="text/javascript" src="assets/js/summernote.min.js"></script>
+    <script type="text/javascript">
+        $('#code_preview0,#code_preview1,#code_preview2').summernote({
+            height: 300,
+            toolbar: [
+                // [groupName, [list of button]]
+                ['header', ['style']],           
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ["fontname"]],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['table',['table']],
+                ['object', ['link', 'picture', 'hr', 'video']],
+                ['undoreedo', ['undo', 'redo']],
+                ['code',['codeview']]
+            ]
+        });      
+    </script>
+    <% if(editMode){ %>
+    <script type="text/javascript">        
+        NEWSFILECONTENTIMAGE = [
+            '<%= newsData.images[0] %>',
+            '<%= newsData.images[1] %>',
+            '<%= newsData.images[2] %>',
+            '<%= newsData.images[3] %>',
+            '<%= newsData.images[4] %>',
+            '<%= newsData.images[5] %>',
+            '<%= newsData.images[6] %>',
+            '<%= newsData.images[7] %>'
+        ];           
+    </script>
+    <% } %>    
+</body>
+
+</html>
