@@ -113,29 +113,107 @@ var NEWS = {
 	}
 }
 
-var USER = {
-	block: function(a, b){
+var ABOUT = {
+	save: function(){
 		$('.preloaderBlock').fadeIn(100);
-		$.post('/blockUser',{a:a, b:b},(res) => {
+		$.post('/saveAboutText', {
+			a: $('#home .note-editable').html(),
+			b: $('#profile .note-editable').html(),
+			c: $('#contact .note-editable').html() 
+		},(res) => {
 			create_alert(res, false)
 		})
+	}
+}
+
+var USER = {
+	updatetable: function(a){
+		var table = $('#dataTable3').DataTable(); 
+		table.clear();
+		for(let i = 0; i < a.length; i++){
+			if(a[i].blocked){ 
+            var dolg = '<td class="redBack">Заблокирован</td>'
+            }else{   
+                if(a[i].isAdmin){ 
+                	var dolg = '<td class="redTable youAdmin"><div class="official"></div>Администратор</td>'
+                }else{    
+                	var dolg = '<td class="greenTable">Пользователь</td>'
+                } 
+            } 
+
+            //parse button
+
+            if(a[i].blocked){ 
+            var blockBtn = '<button type="button" class="btn btn-success btn-xs mb-3" onclick="USER.block('+ a[i].AI +',false)">Разблокировать</button>'
+            }else{
+            var blockBtn = '<button type="button" class="btn btn-danger btn-xs mb-3" onclick="USER.block('+ a[i].AI +',true)">Заблокировать</button>'
+            }
+            
+            var editBtn = '<button type="button" class="btn btn-warning btn-xs mb-3" onclick="USER.edit('+ a[i].AI +')">Редактировать</button>'
+
+            if(a[i].isAdmin){
+            var adminBtn = '<button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('+ a[i].AI +',false)">Разжаловать администратора</button>'
+            }else{
+            var adminBtn = '<button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('+ a[i].AI +',true)">Назначить администратором</button>'
+            }            
+
+            var deleteBtn = '<button type="button" class="btn btn-dark btn-xs mb-3" onclick="USER.delete('+a[i].AI +')">Удалить</button>'
+
+            var resButtonLine = blockBtn + editBtn + adminBtn + deleteBtn;
+
+			table.row.add( [
+	            a[i].AI,
+	            a[i].nick,
+	            '<a href="mailto:'+a[i].email+'?subject=Администрация Lady&Man clothing store" class="adressLineMap">'+a[i].email+'</a>',
+	            '<a href="tel:'+a[i].phone_number+'" class="adressLineMap">'+a[i].phone_number+'</a>',
+	            a[i].LM_COIN,
+	            dolg,
+	            resButtonLine
+	            
+	        ] ).draw( false );
+		}			
+	},
+	block: function(a, b){
+		var checkClick = confirm('Вы действительно хотите заблокировать пользователя ?');
+		if(checkClick){
+			$('.preloaderBlock').fadeIn(100);
+			$.post('/blockUser',{a:a, b:b},(res) => {
+				USER.updatetable(res.data);
+				create_alert(res, false)
+			})
+		}		
 	},
 	edit: function(a){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/editUserData',{a:a},(res) => {
+			USER.updatetable(res.data);
 			create_alert(res, false)
 		})
 	},
 	delete: function(a){
-		$('.preloaderBlock').fadeIn(100);
-		$.post('/deleteUser',{a:a},(res) => {
-			create_alert(res, false)
-		})
+		var checkClick = confirm('Вы действительно хотите УДАЛИТЬ пользователя ?');
+		if(checkClick){
+			$('.preloaderBlock').fadeIn(100);
+			$.post('/deleteUser',{a:a},(res) => {
+				USER.updatetable(res.data);
+				create_alert(res, false)
+			});
+		}
 	},
 	setadmin: function(a, b){
+		var checkClick = confirm('Вы действительно хотите назначить администратором пользователя ?');
+		if(checkClick){
 		$('.preloaderBlock').fadeIn(100);
-		$.post('/setAdmUser',{a:a, b: b},(res) => {
-			create_alert(res, false)
-		})
+			$.post('/setAdmUser',{a:a, b: b},(res) => {
+				USER.updatetable(res.data);
+				create_alert(res, false)
+			})
+		}	
+	}
+}
+
+var CATALOG = {
+	remove: function(a){
+
 	}
 }

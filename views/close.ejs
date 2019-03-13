@@ -14,67 +14,37 @@
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="script/developing/dev.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
+  <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 
 <body>
-
-  <div class="spn_hol" style="/* display: none; */">
-      <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-      </div>
-  </div>
+  <%- include ./includes/preloader.ejs %>
   <div class="container">
     <div class="container__item landing-page-container">
       <div class="content__wrapper">
-
         <header class="header">
           <div class="menu-icon header__item">
             <span class="menu-icon__line"></span>
           </div>
-
           <h1 class="heading header__item">Lady & Man Shop</h1>
-
-
         </header>
-
-
-
         <div class="ellipses-container">
-
           <h2 class="greeting">
             <%= conf.opens_msg %>
           </h2>
-
           <div class="ellipses ellipses__outer--thin">
-
             <div class="ellipses ellipses__orbit"></div>
-
           </div>
-
           <div class="ellipses ellipses__outer--thick"></div>
         </div>
-
-
       </div>
-
     </div>
-
   </div>
-
-
-
-
-
   <div>
-
   </div>
-
 </body>
-
 </html>

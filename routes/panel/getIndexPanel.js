@@ -8,6 +8,10 @@ const geoip = require('geoip-lite');
 router.use(cookieParser());
 
 router.get('/', function(req, res, next){
+  if(!req.session.admin){
+    res.redirect('/');
+    return
+  }
   mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
     const db = client.db(global.baseName);
     const noty = db.collection("NOTIFICATION");

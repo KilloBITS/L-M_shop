@@ -66,15 +66,14 @@ app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
-app.get('/logout', function(req, res) {
-    req.session.destroy(function(err) {})
-    res.redirect('/');
-});
+
+
 
 //Admin routes
 const admAbout = require('./routes/panel/getAboutPanel');
 const admAPI = require('./routes/panel/getAPIPanel');
 const admCatalog = require('./routes/panel/getCatalogPanel');
+const admCatalogEdit = require('./routes/panel/getaddfromeditTovar');
 const admDB = require('./routes/panel/getDBPanel');
 const admFaq = require('./routes/panel/getFaqPanel');
 const admIndex = require('./routes/panel/getIndexPanel');
@@ -89,6 +88,7 @@ const admVisual = require('./routes/panel/getVisualPanel');
 app.use('/about-panel', admAbout);
 app.use('/API-panel', admAPI);
 app.use('/catalog-panel', admCatalog);
+app.use('/editTovar*', admCatalogEdit);
 app.use('/DB-panel', admDB);
 app.use('/index-panel', admIndex);
 app.use('/local-panel', admLocal);
@@ -158,6 +158,9 @@ app.post('/setAdmUser', usersPanelMethods);
 app.post('/deleteUser', usersPanelMethods);
 app.post('/blockUser', usersPanelMethods);
 
+const aboutPanelMethods = require('./controllers/panel/panelAbout_controller');
+app.post('/saveAboutText', aboutPanelMethods);
+
 
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
@@ -169,7 +172,10 @@ const nexmo = new Nexmo({
   apiKey: '8e5f959d',
   apiSecret: 't3KDkf6suo3RQBjV'
 })
-
+app.get('/logout', function(req, res) {
+  req.session.destroy();
+  res.redirect('/');
+});
 app.get('*', get404);
 app.listen(4111, function(){
   global.baseName = 'SHOP_DB';
@@ -177,16 +183,4 @@ app.listen(4111, function(){
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
-    // //
-    // mongoClient.connect(global.baseIP, function(err, client){
-    //   const db = client.db(global.baseName);
-    //   var tovar  = db.collection("tovar");
-    //    tovar.updateMany({}, {$set: {creator : 'admin'}})
-    // });
-  //
-  // const from = 'Lady & Man club'
-  // const to = '+380662377206'
-  // const text = 'потемра)))'
-  //
-  // nexmo.message.sendSms(from, to, text)
 });

@@ -118,6 +118,7 @@ router.post('/create_accaunt', function(req, res, next){
           NEW_USER.LM_COIN = 100;
           NEW_USER.regiter_date = today;
           NEW_USER.official = false;
+          NEW_USER.blocked = false;
           users.insertOne(NEW_USER);
           req.session.user = req.body.newEmail;
           req.session.admin = false;
@@ -129,7 +130,6 @@ router.post('/create_accaunt', function(req, res, next){
       }
     });
   });
-
 });
 
 module.exports = router;

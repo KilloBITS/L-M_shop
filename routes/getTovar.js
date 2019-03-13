@@ -30,11 +30,13 @@ router.get('/*', function(req, res, next){
     const tovar = db.collection("TOVAR");
     const news = db.collection("NEWS");
     const contacts = db.collection("CONTACTS");
+    const config = db.collection("CONFIG");
+
 
     if(err) return console.log(err);
 
     locale.find().toArray(function(err, resLocale){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
+      users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
         menu.find().sort({index: 1}).toArray(function(err, resMenu){
           let FILTER = {
             category: parseInt(searchData[0]),
@@ -45,24 +47,27 @@ router.get('/*', function(req, res, next){
           }
 
           tovar.find(FILTER).toArray(function(err, resTovar){
-            news.find().toArray(function(err, resNews){
-              contacts.find().toArray(function(err, resContacts){
-                var current_page = page;
-                var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: resTovar.length-1});
-                var p = paginator.getPaginationData();
-
-                res.render('tovar.ejs',{
-                  isAdm: req.session.admin,
-                  sessionUser: resUsers[0],
-                  locale: resLocale[0][global.parseLanguage(req)].tovar,
-                  menu: resMenu,
-                  globalLocale:  resLocale[0][global.parseLanguage(req)],
-                  contacts: resContacts[0],
-                  numLang: global.parseNumLang(req),
-                  tovarArr: resTovar.slice(otTovar, doTovar),
-                  offLength: resTovar.length,
-                  isPage: page,
-                  paginate: p
+            config.find().toArray(function(err, resConfig){
+              news.find().toArray(function(err, resNews){
+                contacts.find().toArray(function(err, resContacts){
+                  var current_page = page;
+                  var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: resTovar.length-1});
+                  var p = paginator.getPaginationData();
+                  console.log(resUsers[0])
+                  res.render('tovar.ejs',{
+                    isAdm: req.session.admin,
+                    sessionUser: resUsers[0],
+                    locale: resLocale[0][global.parseLanguage(req)].tovar,
+                    menu: resMenu,
+                    globalLocale:  resLocale[0][global.parseLanguage(req)],
+                    contacts: resContacts[0],
+                    numLang: global.parseNumLang(req),
+                    tovarArr: resTovar.slice(otTovar, doTovar),
+                    offLength: resTovar.length,
+                    isPage: page,
+                    paginate: p,
+                    config: resConfig[0]
+                  });
                 });
               });
             });

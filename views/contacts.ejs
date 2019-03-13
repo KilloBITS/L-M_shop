@@ -29,6 +29,7 @@
   <script type="text/javascript" src="script/contacts/contacts.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
+  <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -43,7 +44,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype"></div>
+		<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
 		<div class="topNavBlockOfBtm">
       <% if(sessionUser !== undefined){ %>
         <a href="/profile"><div class="userAccountInBlock"></div></a>

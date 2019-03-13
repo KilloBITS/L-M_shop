@@ -37,6 +37,7 @@
   <script type="text/javascript" src="/script/basket.js"></script>
   <script type="text/javascript" src="/script/webflow.js"></script>
 	<script type="text/javascript" src="script/index/index.js"></script>
+  <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -51,7 +52,7 @@
           <div class="hamburger-menu"></div>
         </div>
       </div>
-			<div class="logotype"></div>
+			<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
 			<div class="topNavBlockOfBtm">
         <% if(sessionUser !== undefined){ %>
         <a href="/profile" title="<%= locale.profile %>"><div class="userAccountInBlock"></div></a>
@@ -129,9 +130,11 @@
 
 		<div class="mainDLG" style="background: #ffc9df; color: #333333;">
 			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
-			<div class="mainTextDLG post" data-ix="scale-on-scroll">
-        <%= locale.abouttext %>
-      </div>
+      <textarea id="hideareaAbout" style="display: none;"><%= locale.abouttext %></textarea>
+			<div class="mainTextDLG post" id="aboutBlockPaste" data-ix="scale-on-scroll"></div>
+      <script type="text/javascript">
+        $("#aboutBlockPaste").append($("#hideareaAbout").val())
+      </script>
       <div class="ucv-b4-panel">
         <div class="ucv-b4-wrapper">
           <div>
@@ -404,7 +407,11 @@
             </div>
             <div class="post-content">
               <h1 class="title"><%= news[i].title[numLang] %></h1>
-              <p class="description"><%= news[i].text[numLang] %></p>
+              <textarea id="hideareaNews<%= i %>" style="display: none;"><%= news[i].text[numLang] %></textarea>
+              <div class="description" id="descriptionNews<%= i %>"></div>
+              <script type="text/javascript">
+                $("#descriptionNews<%= i %>").append($('#hideareaNews<%= i %>').val());
+              </script>
               <a href="#" class="openNews"><%= locale.readonly %></a>
             </div>
           </div>

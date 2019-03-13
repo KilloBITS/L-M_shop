@@ -8,6 +8,10 @@ const geoip = require('geoip-lite');
 router.use(cookieParser());
 
 router.get('/', function(req, res, next){
+  if(!req.session.admin){
+    res.redirect('/');
+    return
+  }
   mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
     const db = client.db(global.baseName);
     const noty = db.collection("NOTIFICATION");
@@ -17,7 +21,7 @@ router.get('/', function(req, res, next){
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
+      users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
         locale.find({login: req.session.login}).toArray(function(err, resLocale){
           res.render('panel/about_panel.ejs',{                    
               sessionUser: resUsers[0],

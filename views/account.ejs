@@ -27,21 +27,14 @@
 	<script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/account/acc.js"></script>
+  <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 <body>
-
-<div class="spn_hol" style="/* display: none; */">
-    <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-</div>
-
+<%- include ./includes/preloader.ejs %>
 <div class="top">
 	<div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -49,7 +42,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype"></div>
+		<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
     <div class="topNavBlockOfBtm">
       <a href="/logout"><div class="userlogoutInBlock" title="Выход"></div></a>
     </div>
@@ -111,7 +104,7 @@
       <% } %>
 
       <% if(sessionUser.isAdmin){ %>
-        <a href="/panel" target="_blank"> <div class="set_btn">Панель управления</div> </a>
+        <a href="/index-panel" target="_blank"> <div class="set_btn">Панель управления</div> </a>
       <% } %>
 
     </div>
@@ -287,42 +280,25 @@
               У вас нет желаний
             </div>
         <% } %>
-
-
-
-
-
       </div>
       <div class="MyBlock" id="mySetting">
-
+        <h3>Личная информация</h3>
         <div class="setting_line proc50">
           <span>Дата роджения</span>
           <input type="date" name="dateofbirth" id="dateofbirth">
-
-
-          <div class="buttonSetting">Сохранить</div>
         </div>
 
         <div class="setting_line proc50">
           <span>Изменить Номер телефона</span>
           <input type="text" name="number" placeholder="введите новый номер">
-          <div class="buttonSetting">Сохранить</div>
         </div>
-
-
 
         <div class="setting_line proc50">
           <span>Изменить e-mail</span>
           <input type="text" name="email" placeholder="введите новый email адресс">
-          <div class="buttonSetting">Сохранить</div>
         </div>
 
-        <div class="setting_line proc50">
-          <span>Изменить Номер телефона</span>
-          <input type="text" name="number" placeholder="введите новый номер">
-          <div class="buttonSetting">Сохранить</div>
-        </div>
-
+        <h3>Изменить пароль</h3>
         <div class="setting_line">
           <span>Старый пароль</span>
           <input type="password" name="passwordOld"  placeholder="Введите старый пароль">

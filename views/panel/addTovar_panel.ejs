@@ -6,9 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
         <% if(editMode){ %>
-        Редактирование новости
+        Редактирование товара
         <% }else{ %>
-        Создание новости
+        Создание товара
         <% } %>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,20 +95,20 @@
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <% if(editMode){ %>
-                            <h4 class="page-title pull-left">Редактирование новости</h4>
+                            <h4 class="page-title pull-left">Редактирование товара</h4>
                             <% }else{ %>
-                            <h4 class="page-title pull-left">Создание новости</h4>
+                            <h4 class="page-title pull-left">Создание товара</h4>
                             <% } %>
                             
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="/">Lady & Man clotring store</a></li>
                                 <li><a href="/index-panel">Панель</a></li>
-                                <li><a href="/news-panel">Управление новостями</a></li>
+                                <li><a href="/catalog-panel">Управление товарами</a></li>
                                 <li>
                                     <% if(editMode){ %>
-                                    <span>Редактирование новости</span>
+                                    <span>Редактирование товара</span>
                                     <% }else{ %>
-                                    <span>Создание новости</span>
+                                    <span>Создание товара</span>
                                     <% } %>
                                     
                                 </li>
@@ -128,13 +128,13 @@
                                 <div class="card">
                                     <div class="card-body">                                        
                                         <% if(editMode){ %>
-                                        <h4 class="header-title">Редактировать новость</h4>
+                                        <h4 class="header-title">Редактировать товар</h4>
                                         <% }else{ %>
-                                        <h4 class="header-title">Создать новость</h4>
+                                        <h4 class="header-title">Создать товар</h4>
                                         <% } %>
                                         <p class="text-muted font-14 mb-4">Заполните данными пустые поля</p>
                                         <div class="form-group">
-                                            <label for="example-text-input" class="col-form-label">Заголовок</label>
+                                            <label for="example-text-input" class="col-form-label">Название</label>
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="card">
@@ -154,19 +154,19 @@
                                                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                                                     <div class="form-group">
                                                                         <label for="example-textarea-input" class="col-form-label">Введите заголовок на Русском языке</label>
-                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-RU" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[0] %><% } %></textarea>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-RU" placeholder="Введите текст"><% if(editMode){ %><%= tovarData.title[0] %><% } %></textarea>
                                                                     </div>
                                                                 </div>
                                                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                                                     <div class="form-group">
                                                                         <label for="example-textarea-input" class="col-form-label">Введіть заголовок на Українській мові</label>
-                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-UA" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[1] %><% } %></textarea>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-UA" placeholder="Введите текст"><% if(editMode){ %><%= tovarData.title[1] %><% } %></textarea>
                                                                     </div>
                                                                 </div>
                                                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                                                     <div class="form-group">
                                                                         <label for="example-textarea-input" class="col-form-label">Write title for English language</label>
-                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-EN" placeholder="Введите текст"><% if(editMode){ %><%= newsData.title[2] %><% } %></textarea>
+                                                                        <textarea class="form-control" aria-label="With textarea" id="example-text-input-EN" placeholder="Введите текст"><% if(editMode){ %><%= tovarData.title[2] %><% } %></textarea>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -178,7 +178,7 @@
 
                                         <div class="form-group">
                                             <label for="example-date-input" class="col-form-label">Дата</label>
-                                            <input class="form-control" type="date" value="<% if(editMode){ %><%= newsData.date %><% } %>" id="example-date-input" readonly>
+                                            <input class="form-control" type="date" value="<% if(editMode){ %><%= tovarData.date %><% } %>" id="example-date-input" readonly>
                                         </div>
                                         <% if(!editMode){ %>
                                         <script type="text/javascript">
@@ -206,7 +206,7 @@
                                                                 <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
                                                                     <div class="form-group">
                                                                         <label for="example-textarea-input" class="col-form-label">Введите текст на Русском языке</label>
-                                                                         <textarea class="form-control" id="code_preview0" name="" style="height: 300px;"><% if(editMode){ %><%= newsData.text[0] %><% } %></textarea>
+                                                                         <textarea class="form-control" id="code_preview0" name="" style="height: 300px;"><% if(editMode){ %><%= tovarData.text[0] %><% } %></textarea>
                                                                     </div>
                                                                 </div>
                                                                 <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab">
@@ -214,7 +214,7 @@
                                                                         <label for="example-textarea-input" class="col-form-label">Введіть текст на Українській мові</label>
                                                                         <textarea class="form-control" id="code_preview1" name="" style="height: 300px;">
                                                                             <% if(editMode){ %>
-                                                                            <%= newsData.text[1] %>
+                                                                            <%= tovarData.text[1] %>
                                                                             <% } %>
                                                                         </textarea>
                                                                     </div>
@@ -224,7 +224,7 @@
                                                                         <label for="example-textarea-input" class="col-form-label">Write text for English language</label>
                                                                         <textarea class="form-control" id="code_preview2" name="" style="height: 300px;">
                                                                             <% if(editMode){ %>
-                                                                            <%= newsData.text[2] %>
+                                                                            <%= tovarData.text[2] %>
                                                                             <% } %>
                                                                         </textarea>
                                                                     </div>
@@ -234,23 +234,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-form-label">Логотип новости</label>
-                                            <div class="custom-file">
-                                                <% if(editMode && newsData.logo !== undefined && newsData.logo !== 'default.jpg'){ %>
-                                                <div class="addEditImage" id="logoOfNews" style="background-image: url(<%= newsData.logo %>); opacity: 1">
-                                                    <div class="openedImage" style="background-image: url(<%= newsData.logo %>)"></div>
-                                                </div>
-                                                <input type="file" class="custom-file-input" id="inputGroupFile01" onchange="NEWS.selectNewsLogo()">
-                                                <label class="custom-file-label" for="inputGroupFile01">Заменить</label>
-                                                <% }else{ %>
-                                                <div class="addEditImage" id="logoOfNews"></div>
-                                                <input type="file" class="custom-file-input" id="inputGroupFile01" onchange="NEWS.selectNewsLogo()">
-                                                <label class="custom-file-label" for="inputGroupFile01">Выбрать файл</label>
-                                                <% } %>
-                                            </div>
-                                        </div>                                  
+                                        </div>                                                                          
                                     </div>
                                 </div>
                             </div>
@@ -268,15 +252,15 @@
                                         <p class="text-muted font-14 mb-4">Выберите изображения для новости</p>
                                         <div class="form-group">                                            
                                             <div class="custom-file">
-                                                <% if(editMode && newsData.images[0] !== ""){ %>
-                                                <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= newsData.images[0] %>); opacity: 1">
-                                                    <div class="openedImage" style="background-image: url(<%= newsData.images[0] %>)"></div>
+                                                <% if(editMode && tovarData.image[0] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= tovarData.image[0] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.image[0] %>)"></div>
                                                 </div>
-                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="NEWS.selectNewsContentImage(this,0)">
+                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="CATALOG.selectNewsContentImage(this,0)">
                                                 <label class="custom-file-label" for="newsImage1">Заменить</label>
                                                 <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews1"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="NEWS.selectNewsContentImage(this,0)">
+                                                <input type="file" class="custom-file-input" id="newsImage1" onchange="CATALOG.selectNewsContentImage(this,0)">
                                                 <label class="custom-file-label" for="newsImage1">Выбрать файл</label>
                                                 <% } %>
                                             </div>
@@ -284,49 +268,49 @@
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews2"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage2" onchange="NEWS.selectNewsContentImage(this,1)">
+                                                <input type="file" class="custom-file-input" id="newsImage2" onchange="CATALOG.selectNewsContentImage(this,1)">
                                                 <label class="custom-file-label" for="newsImage2">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews3"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage3" onchange="NEWS.selectNewsContentImage(this,2)">
+                                                <input type="file" class="custom-file-input" id="newsImage3" onchange="CATALOG.selectNewsContentImage(this,2)">
                                                 <label class="custom-file-label" for="newsImage3">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews4"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage4" onchange="NEWS.selectNewsContentImage(this,3)">
+                                                <input type="file" class="custom-file-input" id="newsImage4" onchange="CATALOG.selectNewsContentImage(this,3)">
                                                 <label class="custom-file-label" for="newsImage4">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews5"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage5" onchange="NEWS.selectNewsContentImage(this,4)">
+                                                <input type="file" class="custom-file-input" id="newsImage5" onchange="CATALOG.selectNewsContentImage(this,4)">
                                                 <label class="custom-file-label" for="newsImage5">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews6"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage6" onchange="NEWS.selectNewsContentImage(this,5)">
+                                                <input type="file" class="custom-file-input" id="newsImage6" onchange="CATALOG.selectNewsContentImage(this,5)">
                                                 <label class="custom-file-label" for="newsImage6">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews7"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage7" onchange="NEWS.selectNewsContentImage(this,6)">
+                                                <input type="file" class="custom-file-input" id="newsImage7" onchange="CATALOG.selectNewsContentImage(this,6)">
                                                 <label class="custom-file-label" for="newsImage7">Выбрать файл</label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
                                                 <div class="addEditImage" id="imgOfNews8"></div>
-                                                <input type="file" class="custom-file-input" id="newsImage8" onchange="NEWS.selectNewsContentImage(this,7)">
+                                                <input type="file" class="custom-file-input" id="newsImage8" onchange="CATALOG.selectNewsContentImage(this,7)">
                                                 <label class="custom-file-label" for="newsImage8">Выбрать файл</label>
                                             </div>
                                         </div>
@@ -340,19 +324,16 @@
                     <div class="col-lg-12 col-ml-12 mt-5">
                         <div class="row">
                             <% if(editMode){ %>
-                            <button type="button" class="btn btn-success mb-2 col-12" onclick="NEWS.savenews('<%= newsData.AI %>')">Сохранить изминения</button>
+                            <button type="button" class="btn btn-success mb-2 col-12" onclick="CATALOG.save('<%= tovarData.AI %>')">Сохранить изминения</button>
                             <% }else{ %>
-                            <button type="button" class="btn btn-success mb-2 col-12" onclick="NEWS.addnews()">Опубликовать новость</button>
+                            <button type="button" class="btn btn-success mb-2 col-12" onclick="CATALOG.addnew()">Добавить товар</button>
                             <% } %>                          
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
         <%- include ./includes/footer.ejs %>
-        <!-- footer area end-->
     </div>
     <%- include ./includes/offset-area.ejs %> 
     <!-- jquery latest version -->
@@ -391,39 +372,6 @@
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/methods.js"></script>
     <script type="text/javascript" src="assets/js/summernote.min.js"></script>
-    <script type="text/javascript">
-        $('#code_preview0,#code_preview1,#code_preview2').summernote({
-            height: 300,
-            toolbar: [
-                // [groupName, [list of button]]
-                ['header', ['style']],           
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ["fontname"]],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']],
-                ['table',['table']],
-                ['object', ['link', 'picture', 'hr', 'video']],
-                ['undoreedo', ['undo', 'redo']],
-                ['code',['codeview']]
-            ]
-        });      
-    </script>
-    <% if(editMode){ %>
-    <script type="text/javascript">        
-        NEWSFILECONTENTIMAGE = [
-            '<%= newsData.images[0] %>',
-            '<%= newsData.images[1] %>',
-            '<%= newsData.images[2] %>',
-            '<%= newsData.images[3] %>',
-            '<%= newsData.images[4] %>',
-            '<%= newsData.images[5] %>',
-            '<%= newsData.images[6] %>',
-            '<%= newsData.images[7] %>'
-        ];           
-    </script>
-    <% } %>    
 </body>
 
 </html>

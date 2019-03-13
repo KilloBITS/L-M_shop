@@ -28,6 +28,7 @@
   <script type="text/javascript" src="script/dap/dap.js"></script>
 	<script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
+  <script src="assets/js/pace.min.js"></script>
 
   <script type="text/javascript" src="/script/swiper.min.js"></script>
   <% if(isAdm){ %>
@@ -36,13 +37,7 @@
   <% } %>
 </head>
 <body>
-<div class="spn_hol">
-  <div class="spinner">
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
-  </div>
-</div>
+<%- include ./includes/preloader.ejs %>
 <div class="top">
 	<div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -50,7 +45,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype"></div>
+		<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
 		<div class="topNavBlockOfBtm">
       <% if(sessionUser !== undefined){ %>
         <a href="/profile"><div class="userAccountInBlock"></div></a>

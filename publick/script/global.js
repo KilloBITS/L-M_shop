@@ -239,7 +239,7 @@ $(document).ready(function(){
   Global.BTN();
   setTimeout(function() {
     $(".spn_hol").css({"transform": "scale(3)", "opacity": "0.3", "filter":"grayscale(100%)"}).fadeOut(400);
-  }, 1500);
+  }, 1000);
   
   $('.close_chat').click(function(){
     $(".avenue-messenger").hide();

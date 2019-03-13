@@ -17,6 +17,7 @@
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
+  <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
   <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
   <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -32,6 +33,7 @@
 </style>
 </head>
 <body>
+  <%- include ./includes/preloader.ejs %>
   <div class="top">
    <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -39,7 +41,7 @@
         <div class="hamburger-menu"></div>
       </div>
     </div>
-    <div class="logotype"></div>
+    <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
     <div class="topNavBlockOfBtm">
      <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
      <% if(sessionUser !== undefined){ %>
