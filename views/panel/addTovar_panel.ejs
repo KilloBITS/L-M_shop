@@ -47,6 +47,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                            <li><a href="/index-menu"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
                             <li><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
                             <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
                             <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
@@ -168,7 +169,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>         
+                                        </div> 
+                                         <div class="form-row">
+                                            
+                                            <label for="linkData" class="col-form-label">Ссылка на сайте</label>
+                                            <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.link %><% }else{ %>Не указано<% } %>" id="linkData">
+                                                   
+                                        </div>        
 
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
@@ -193,8 +200,7 @@
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
                                                 <label for="example-date-input" class="col-form-label">Цвет</label>
-                                                <select class="custom-select">
-                                                    <option selected="selected" id="colorSelect">Выберите цвет товара</option>
+                                                <select class="custom-select" id="colorSelect">                                                    
                                                     <% for(var i = 0; i < config.colorTable.length; i++){ %>
                                                         <option value="<%= config.colorTable[i].code %>"><%= config.colorTable[i].name %></option>
                                                     <% } %>                                                   
@@ -204,7 +210,6 @@
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Категория</label>
                                                 <select class="custom-select" id="categoriesSelect" onchange="CATALOG.categoriesselect(this)">
-                                                    <option selected="selected">Выберите категорию</option>
                                                     <% for(var i = 0; i < config.categories.length; i++){ %>
                                                         <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
                                                     <% } %>
@@ -353,9 +358,9 @@
                                         <div class="form-group">  
                                             <label for="example-date-input" class="col-form-label">Изображения</label>                                          
                                             <div class="custom-file">
-                                                <% if(editMode && tovarData.image[0] !== ""){ %>
-                                                <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= tovarData.image[0] %>); opacity: 1">
-                                                    <div class="openedImage" style="background-image: url(<%= tovarData.image[0] %>)"></div>
+                                                <% if(editMode && tovarData.images[0] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= tovarData.images[0] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[0] %>)"></div>
                                                 </div>
                                                 <input type="file" class="custom-file-input" id="newsImage1" onchange="CATALOG.selectNewsContentImage(this,0)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage1">Заменить</label>
@@ -368,51 +373,107 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[1] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews2" style="background-image: url(<%= tovarData.images[1] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[1] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage2" onchange="CATALOG.selectNewsContentImage(this,1)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage2">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews2"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage2" onchange="CATALOG.selectNewsContentImage(this,1)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage2">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[2] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews3" style="background-image: url(<%= tovarData.images[2] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[2] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage3" onchange="CATALOG.selectNewsContentImage(this,2)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage3">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews3"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage3" onchange="CATALOG.selectNewsContentImage(this,2)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage3">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[3] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews4" style="background-image: url(<%= tovarData.images[3] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[3] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage4" onchange="CATALOG.selectNewsContentImage(this,3)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage4">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews4"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage4" onchange="CATALOG.selectNewsContentImage(this,3)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage4">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[4] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews5" style="background-image: url(<%= tovarData.images[4] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[4] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage5" onchange="CATALOG.selectNewsContentImage(this,4)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage5">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews5"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage5" onchange="CATALOG.selectNewsContentImage(this,4)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage5">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[5] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews6" style="background-image: url(<%= tovarData.images[5] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[5] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage6" onchange="CATALOG.selectNewsContentImage(this,5)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage1">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews6"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage6" onchange="CATALOG.selectNewsContentImage(this,5)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage6">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[6] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews7" style="background-image: url(<%= tovarData.images[6] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[6] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage7" onchange="CATALOG.selectNewsContentImage(this,6" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage7">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews7"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage7" onchange="CATALOG.selectNewsContentImage(this,6)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage7">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-file">
+                                                <% if(editMode && tovarData.images[7] !== ""){ %>
+                                                <div class="addEditImage" id="imgOfNews8" style="background-image: url(<%= tovarData.images[7] %>); opacity: 1">
+                                                    <div class="openedImage" style="background-image: url(<%= tovarData.images[7] %>)"></div>
+                                                </div>
+                                                <input type="file" class="custom-file-input" id="newsImage8" onchange="CATALOG.selectNewsContentImage(this,7)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
+                                                <label class="custom-file-label" for="newsImage8">Заменить</label>
+                                                <% }else{ %>
                                                 <div class="addEditImage" id="imgOfNews8"></div>
                                                 <input type="file" class="custom-file-input" id="newsImage8" onchange="CATALOG.selectNewsContentImage(this,7)" accept=".jpg,.bmp,.tif,.tga,.png,.jpeg,.gif,.tiff,.ppm,.pgm">
                                                 <label class="custom-file-label" for="newsImage8">Выбрать файл</label>
+                                                <% } %>
                                             </div>
                                         </div>
                                     </div>
@@ -424,7 +485,7 @@
                     <div class="col-lg-12 col-ml-12 mt-5">
                         <div class="row">
                             <% if(editMode){ %>
-                            <button type="button" class="btn btn-success mb-2 col-12" onclick="CATALOG.save('<%= tovarData.AI %>')">Сохранить изминения</button>
+                            <button type="button" class="btn btn-success mb-2 col-12 disabled" id="saveBTN" onclick="CATALOG.save('<%= tovarData.AI %>')">Сохранить изминения</button>
                             <% }else{ %>
                             <button type="button" class="btn btn-success mb-2 col-12" onclick="CATALOG.add()">Добавить товар</button>
                             <% } %>                          
@@ -491,6 +552,30 @@
             ]
         });      
     </script>
+    <% if(editMode){ %>
+    <script type="text/javascript">
+        $("#colorSelect").val("<%= tovarData.color %>");
+        $("#categoriesSelect").val("<%= tovarData.categories %>");
+        CATALOG.categoriesselect($("#categoriesSelect"));        
+        $("#manSelect").val("<%= tovarData.manufacturer %>");
+        $("#tovarCode").val("<%= tovarData.code %>");
+        setTimeout(function(){
+           $("#typeSelect").val("<%= tovarData.type %>");
+           $("#saveBTN").removeClass('disabled')
+        },3000);
+
+        TOVARIMAGE = [
+            '<%= tovarData.images[0] %>',
+            '<%= tovarData.images[1] %>',
+            '<%= tovarData.images[2] %>',
+            '<%= tovarData.images[3] %>',
+            '<%= tovarData.images[4] %>',
+            '<%= tovarData.images[5] %>',
+            '<%= tovarData.images[6] %>',
+            '<%= tovarData.images[7] %>'
+        ];
+    </script>
+    <% } %>
 </body>
 
 </html>

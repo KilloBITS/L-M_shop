@@ -17,16 +17,24 @@ router.get('/', function(req, res, next){
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
     const tovar = db.collection("TOVAR");
+    const manufacturers = db.collection("MANUFACTURERS");
+    const config = db.collection("CONFIG");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
       users.find({login: req.session.login}).toArray(function(err, resUsers){
         tovar.find().toArray(function(err, resTovar){
-          res.render('panel/catalog_panel.ejs',{
-            sessionUser: resUsers[0],
-            noty: resNoty,
-            tovarData: resTovar
+          manufacturers.find().toArray(function(err, resMan){   
+            config.find().toArray(function(err, resConf){   
+              res.render('panel/catalog_panel.ejs',{
+                sessionUser: resUsers[0],
+                noty: resNoty,
+                tovarData: resTovar,
+                manufactures: resMan,
+                config: resConf[0]
+              });
+            });    
           });      
         });      
       });

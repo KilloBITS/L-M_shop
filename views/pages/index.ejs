@@ -95,13 +95,11 @@
       </div>
     </div>
   </div>
-
 	<div class="data block">
 		<div class="mainDLG">
 			<div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.newgoods %></div>
 			<div class="mainTextDLG post" style="color: #f98eb9"><%= locale.newgoods2 %></div>
 		</div>
-
     <div class="carousel-wrapper">
 		  <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <% if(newtovar.length > 0){ %>
@@ -110,7 +108,7 @@
             <div class="carousel-cell w-col w-col-3 feature-pill">
               <div class="newTov"></div>
               <h3> <%= newtovar[i].title[numLang] %> </h3>
-              <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div> <!--../../../data/tovar/-->
+              <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div>
             </div>
           </a>
           <% } %>
@@ -123,11 +121,9 @@
         <% } %>
 		  </div>
 		</div>
-
 		<div class="mainBTN_block" style="background: #ffc9df; padding-top: 20px;">
 			<a href="/shopNews"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div></a>
 		</div>
-
 		<div class="mainDLG" style="background: #ffc9df; color: #333333;">
 			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
       <textarea id="hideareaAbout" style="display: none;"><%= locale.abouttext %></textarea>

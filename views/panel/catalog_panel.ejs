@@ -46,6 +46,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                            <li><a href="/index-menu"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
                             <li><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
                             <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
                             <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
@@ -80,17 +81,14 @@
                         </div>
                         <div class="search-box pull-left">
                             <form action="#">
-                                <input type="text" name="search" placeholder="Search..." required>
+                                <input type="text" name="search" placeholder="Поиск..." required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
                     </div>
-                    <!-- profile info & task notification -->
                     <%- include ./includes/infoblock.ejs %> 
                 </div>
             </div>
-            <!-- header area end -->
-            <!-- page title area start -->
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
@@ -105,31 +103,32 @@
                     <%- include ./includes/user.ejs %> 
                 </div>
             </div>
-            <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
                     <div class="col-12 mt-2">
                         <a class="btn btn-success col-lg-12 mt-2 mb-2" href="/editTovar?mode=new">Добавить товар</a>
                     </div>
-
                     <div class="col-12 mt-2">
-                        <div class="card">
-                            <div class="preloaderBlock" style="display: none;">
-                                <div class="loader"></div>
-                            </div>
+                        <div class="card">                            
                             <div class="card-body">
+                                <div class="preloaderBlock" style="display: none;">
+                                    <div class="loader"></div>
+                                </div>
                                 <h4 class="header-title">Список пользователей</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>№</th>
+                                                <th>Тип</th>
                                                 <th>Миниатюра</th>
                                                 <th>Название</th>
                                                 <th>Цена</th>
                                                 <th>Поставщик</th>                            
                                                 <th>Цвет</th>
                                                 <th>Создатель</th>                                                
+                                                <th>Код товара</th>                                                
+                                                <th>Категория</th>
                                                 <th>Удаление</th>                                                
                                                 <th>Реадктирование</th>                                                
                                             </tr>
@@ -138,12 +137,33 @@
                                             <% for(var i = 0; i < tovarData.length; i++){ %>
                                             <tr>
                                                 <td><%= tovarData[i].AI %></td>
-                                                <td><img src="<%= tovarData[i].image[0] %>" style="max-height: 30px; max-width: 30px;"></td>
-                                                <td><%= tovarData[i].title %></td>
-                                                <td><%= tovarData[i].price %></td>
-                                                <td><%= tovarData[i].postavka %></td>
-                                                <td><%= tovarData[i].color %></td>
-                                                <td><%= tovarData[i].creator %></td>
+                                                <td><div class="iconoftovar <%= tovarData[i].type %>"></div></td>
+                                                <td><img src="<%= tovarData[i].images[0] %>" class="miniimagetable"></td>
+                                                <td><%= tovarData[i].title[0] %></td>
+                                                <td>
+                                                    <% if(tovarData[i].sale[0] === 'true'){ %>
+                                                        <strike><%= tovarData[i].price %> ГРН</strike>
+                                                        <b class="blink" style="color: red"> <%= parseInt(tovarData[i].price - tovarData[i].price / 100 * parseInt(tovarData[i].sale[1])) %> Грн</b>
+                                                    <% }else{ %>
+                                                        <b> <%= tovarData[i].price %> ГРН </b>
+                                                    <% } %>
+                                                </td>
+                                                <td><a href="<%= tovarData[i].link %>" target="_blank"><%= manufactures[parseInt(tovarData[i].manufacturer)-1].title %></a> <div class="url_image"></div></td>
+                                                <td>
+                                                    <div class="dropdown col-lg-6 col-md-4 col-sm-6">
+                                                        <button class="btn btn-light dropdown-toggle" style="background-color: <%= tovarData[i].color %>" type="button" data-toggle="dropdown" aria-expanded="false">
+                                                        <%= tovarData[i].color %>
+                                                        </button>
+                                                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(15px, 43px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                            <% for(var c = 0; c < config.colorTable.length; c++){ %>
+                                                            <a class="dropdown-item" href="#" style="background-color: <%= config.colorTable[c].code %>" onclick="CATALOG.setcolortovar('<%= config.colorTable[c].code %>', <%= tovarData[i].AI %>)"><%= config.colorTable[c].name %></a>
+                                                            <% } %>
+                                                        </div>
+                                                    </div>   
+                                                </td>
+                                                <td><%= tovarData[i].author %></td>
+                                                <td><%= tovarData[i].code %></td>
+                                                <td><%= config.categories.find(x => x.index === tovarData[i].categories.toString()).name %></td>
                                                 <td>
                                                     <button type="button" class="btn btn-danger btn-xs mb-3" onclick="CATALOG.remove('<%= tovarData[i].AI %>')">Удалить</button>
                                                 </td>
@@ -172,7 +192,6 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-
     <!-- Start datatable js -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
@@ -184,5 +203,4 @@
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/methods.js"></script>
 </body>
-
 </html>

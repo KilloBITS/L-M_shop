@@ -165,6 +165,8 @@ app.post('/saveAboutText', aboutPanelMethods);
 const aboutCatalogMethods = require('./controllers/panel/panelCatalog_controller');
 app.post('/getTypesOfCatalog', aboutCatalogMethods);
 app.post('/addTovar', aboutCatalogMethods);
+app.post('/setcolor', aboutCatalogMethods);
+app.post('/saveTovar', aboutCatalogMethods);
 
 
 var options = {

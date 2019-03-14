@@ -1,59 +1,3 @@
-/*--------------------------------------------
-
-    Template Name: srtdash - Bootstrap 4 Admin and Ui Kit
-    Template URI: http://tf.itech-theme.com/srtdash-preview
-    Description: This is Bootstrap 4 Admin Template and Ui Kit
-    Author: cdibrandstudio
-    Author https://themeforest.net/user/cdibrandstudio
-    Version: 1.0
-
-----------------------------------------------
-    
-    CSS INDEX
-    ===================
-  
-    1. Core Css
-    2. Dashboard One
-        2.1 Sidebar Menu
-            2.1.1 Horizontal Menu
-        2.2 Header Area
-        2.3 Page Title Area
-        2.4 Fact Area
-        2.5 Overview
-        2.6 Market value
-        2.7 Live Crypto Price
-        2.8 Trading History
-        2.9 Letest Post
-    3. Dashboard Two
-    4. Dashboard Three
-    5. Bar Chart
-    6. Line Chart
-    7. Pie Chart
-    8. Accroding
-    9. Alert
-   10. Badge
-   11. Button
-   12. Cards
-   13. Dropdown Button
-   14. List Group
-   15. Modal
-   16. Pagination
-   17. Form
-   18. Icons
-   19. Table Basic
-   20. Datatable
-   21. Map
-   22. Invoice
-   23. Login
-   24. Pricing
-   25. 404 Page
-   26. Offset Sidebar
-
------------------------------------------------------------------------------------*/
-
-
-/*------------------------- 1. Core Css -------------------*/
-
 .page-container {
     width: 100%;
     height: 100%;
@@ -2970,4 +2914,64 @@ table.dataTable thead td {
 .miniloader .loader{
     background-image: url(../../../image/loaders/load0.gif);
     background-size: contain;
+}
+
+@-webkit-keyframes blinker {
+  from {
+    color: #ff0000;
+  }
+  to {
+    color: #750000;
+  }
+}
+.blink{
+    text-decoration: blink;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
+.iconoftovar {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    margin: auto;
+}
+
+.platya{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzQxLjEzLDU2LjEwNFYwaC0zMC4wNDZ2NjQuNTRjLTE5LjM4MSw4LjQ5Ni0zNi4yNjgsMjIuNDEyLTQ4LjM1Niw0MC41NDRMMjU2LDExNS4xNzZsLTYuNzI4LTEwLjA5MiAgICBjLTEyLjA4Ny0xOC4xMzEtMjguOTc1LTMyLjA0OC00OC4zNTYtNDAuNTQ0VjBIMTcwLjg3djU2LjEwNGMtNC45NDUtMC42NjctOS45NTktMS4wMi0xNS4wMjMtMS4wMnY2Ni4xMDEgICAgYzAsMzMuMTg4LDI2LjkwNCw2MC4wOTIsNjAuMDkyLDYwLjA5Mmg4MC4xMjJjMzMuMTg4LDAsNjAuMDkyLTI2LjkwNCw2MC4wOTItNjAuMDkyVjU1LjA4NCAgICBDMzUxLjA5LDU1LjA4NCwzNDYuMDc1LDU1LjQzNywzNDEuMTMsNTYuMTA0eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojNzk3ODc4IiBkYXRhLW9sZF9jb2xvcj0iIzdBNzg3OCI+PC9wYXRoPgoJPC9nPgo8L2c+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzI2LjEwNywyMTEuMzIzSDE4NS44OTNMMTYuNjM1LDQ3NS43Mjd2MS4wMDJjMTU2LjExMSw0Ny4wMywzMjIuNjE5LDQ3LjAzLDQ3OC43MzEsMHYtMS4wMDJMMzI2LjEwNywyMTEuMzIzeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojNzk3ODc4IiBkYXRhLW9sZF9jb2xvcj0iIzdBNzg3OCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
+}
+
+.dtr-data{
+    display: block;
+}
+
+.miniimagetable{
+    cursor: pointer;
+    max-height: 30px; 
+    max-width: 30px;
+    transition: 0.2s;
+}
+
+.miniimagetable:hover{
+    cursor: pointer;
+    max-height: 80px; 
+    max-width: 80px;
+}
+
+.url_image{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDQ1Ny4wMyA0NTcuMDMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1Ny4wMyA0NTcuMDM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz4KCTxwYXRoIGQ9Ik00MjEuNTEyLDIwNy4wNzRsLTg1Ljc5NSw4NS43NjdjLTQ3LjM1Miw0Ny4zOC0xMjQuMTY5LDQ3LjM4LTE3MS41MjksMGMtNy40Ni03LjQzOS0xMy4yOTYtMTUuODIxLTE4LjQyMS0yNC40NjUgICBsMzkuODY0LTM5Ljg2MWMxLjg5NS0xLjkxMSw0LjIzNS0zLjAwNiw2LjQ3MS00LjI5NmMyLjc1Niw5LjQxNiw3LjU2NywxOC4zMywxNC45NzIsMjUuNzM2YzIzLjY0OCwyMy42NjcsNjIuMTI4LDIzLjYzNCw4NS43NjIsMCAgIGw4NS43NjgtODUuNzY1YzIzLjY2Ni0yMy42NjQsMjMuNjY2LTYyLjEzNSwwLTg1Ljc4MWMtMjMuNjM1LTIzLjY0Ni02Mi4xMDUtMjMuNjQ2LTg1Ljc2OCwwbC0zMC40OTksMzAuNTMyICAgYy0yNC43NS05LjYzNy01MS40MTUtMTIuMjI4LTc3LjM3My04LjQyNGw2NC45OTEtNjQuOTg5YzQ3LjM4LTQ3LjM3MSwxMjQuMTc3LTQ3LjM3MSwxNzEuNTU3LDAgICBDNDY4Ljg2OSw4Mi44OTcsNDY4Ljg2OSwxNTkuNzA2LDQyMS41MTIsMjA3LjA3NHogTTE5NC43MDgsMzQ4LjEwNGwtMzAuNTIxLDMwLjUzMmMtMjMuNjQ2LDIzLjYzNC02Mi4xMjgsMjMuNjM0LTg1Ljc3OCwwICAgYy0yMy42NDgtMjMuNjY3LTIzLjY0OC02Mi4xMzgsMC04NS43OTVsODUuNzc4LTg1Ljc2N2MyMy42NjUtMjMuNjYyLDYyLjEyMS0yMy42NjIsODUuNzY3LDAgICBjNy4zODgsNy4zOSwxMi4yMDQsMTYuMzAyLDE0Ljk4NiwyNS43MDZjMi4yNDktMS4zMDcsNC41Ni0yLjM2OSw2LjQ1NC00LjI2NmwzOS44NjEtMzkuODQ1ICAgYy01LjA5Mi04LjY3OC0xMC45NTgtMTcuMDMtMTguNDIxLTI0LjQ3N2MtNDcuMzQ4LTQ3LjM3MS0xMjQuMTcyLTQ3LjM3MS0xNzEuNTQzLDBMMzUuNTI2LDI0OS45NiAgIGMtNDcuMzY2LDQ3LjM4NS00Ny4zNjYsMTI0LjE3MiwwLDE3MS41NTNjNDcuMzcxLDQ3LjM1NiwxMjQuMTc3LDQ3LjM1NiwxNzEuNTQ3LDBsNjUuMDA4LTY1LjAwMyAgIEMyNDYuMTA5LDM2MC4zMzYsMjE5LjQzNywzNTcuNzIzLDE5NC43MDgsMzQ4LjEwNHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6IzAwMDBFRSIgZGF0YS1vbGRfY29sb3I9IiMwMTAxRUUiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+);
+    background-size: 12px;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+.disabled{
+    pointer-events: none;
+    filter: grayscale(100%);
+    
 }

@@ -221,6 +221,41 @@ var USER = {
 }
 
 var CATALOG = {
+	setcolortovar: function(a,b){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/setcolor',{a:a, b:b}, (res) => {
+			var table = $('#dataTable3').DataTable(); 
+			table.clear();
+			
+			for(let i = 0; i < res.data.length; i++){
+				if(res.data[i].sale[0] === 'true'){
+	                var btn1 = '<strike>'+res.data[i].price +' ГРН</strike><b class="blink" style="color: red">'+ parseInt(res.data[i].price - res.data[i].price / 100 * parseInt(res.data[i].sale[1]))+' Грн</b>'
+	            }else{
+	                var btn1 = '<b> <%= tovarData[i].price %> ГРН </b>'
+	            }
+	            var colorBtn = '<div class="dropdown col-lg-6 col-md-4 col-sm-6">'+
+	                '<button class="btn btn-light dropdown-toggle" style="background-color:'+res.data[i].color+' " type="button" data-toggle="dropdown" aria-expanded="false">'+
+	                res.data[i].color+
+	                '</button>'+             
+	            '</div>'
+				table.row.add( [
+		            res.data[i].AI,
+		            '<div class="iconoftovar '+ res.data[i].type +'"></div>',
+		            '<img src="'+res.data[i].images[0]+'" style="max-height: 30px; max-width: 30px;">',
+		            res.data[i].title[0],
+		            btn1,
+		            'Данные временно недоступны',
+		            colorBtn,
+		            res.data[i].author,
+		            res.data[i].code,
+		            'Данные временно недоступны',		            
+		           	'<button type="button" class="btn btn-danger btn-xs mb-3" onclick="CATALOG.remove("'+ res.data[i].AI +'")">Удалить</button>',
+		           	'<a href="/editTovar?mode=edit,'+ res.data[i].AI +'" class="btn btn-warning btn-xs mb-3">Редактировать</a>'
+		        ] ).draw( false );
+			};
+			create_alert(res, false)
+		});
+	},
 	selectNewsContentImage: function(e,i){
 		var fullPath = $(e).val();
 		if (fullPath) {
@@ -272,7 +307,8 @@ var CATALOG = {
 				$('#profile1 .note-editable').html(),
 				$('#contact1 .note-editable').html()
 			],
-			images: TOVARIMAGE,
+			link: linkData
+			images: $("#TOVARIMAGE").val(),
 			code: $("#tovarCode").val(),
 			size: CATALOG.sizeclick(),
 			price: parseInt($('#priceData').val()),
@@ -290,10 +326,13 @@ var CATALOG = {
 		$.post('/addTovar',CATALOG.parsedata(), (res) => {
 			create_alert(res, false);
 
-		} )
+		})
 	},
-	save: function(){
-
+	save: function(a){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/saveTovar',{a:CATALOG.parsedata(), b:a}, (res) => {
+			create_alert(res, false);
+		})
 	},	
 	remove: function(a){
 
