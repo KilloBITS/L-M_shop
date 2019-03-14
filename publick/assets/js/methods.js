@@ -1,6 +1,7 @@
 var NEWSFILELOGO = 'default.jpg';
 var NEWSFILECONTENTIMAGE = ['','','','','','','',''];
-
+var SIZESARRAY = [];
+var TOVARIMAGE = ['','','','','','','',''];
 var create_alert = function(a,b){
 	var modalWin = document.createElement('div');
 	modalWin.className = 'modalWin';
@@ -24,7 +25,14 @@ var create_alert = function(a,b){
 		},3000)
 	}
 }
-
+function getBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+}
 var NEWS = {
 	removenews: function(a){
 		$('.preloaderBlock').fadeIn(100);
@@ -213,6 +221,80 @@ var USER = {
 }
 
 var CATALOG = {
+	selectNewsContentImage: function(e,i){
+		var fullPath = $(e).val();
+		if (fullPath) {
+		    var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+		    var filename = fullPath.substring(startIndex);
+		    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+		        filename = filename.substring(1);
+
+		        var file = document.querySelector('#'+$(e).attr('id')).files[0];
+				getBase64(file).then(
+				  function(data){
+				  	TOVARIMAGE[i] = data;
+				  	$(".addEditImage:eq("+(i)+")").css({"background-image":"url("+data+")","opacity":"1"}).html('').append('<div class="openedImage" style="background-image: url('+data+')"></div>')
+				  }
+				);
+		    }
+		    $(e).parent().children()[1].innerHTML = filename
+		}
+	},
+	categoriesselect: function(e){
+		$('.miniloader').show();
+		var value = $(e).val();
+		$.post('/getTypesOfCatalog',{a:value},(res) => {
+			$('#typeSelect').empty()
+			for(let i = 0; i < res.data.length; i++){
+				$('#typeSelect').append(new Option(res.data[i].pname[0], res.data[i].plink.split(',')[1].split('&')[0]));
+			}	
+			$('.miniloader').hide();		
+		});
+	},
+	sizeclick: function(e){
+		SIZESARRAY = [];
+		for(let i = 0; i < $('.sizescheck').size(); i++){
+		    if($('.sizescheck:eq('+i+')').is(":checked")){
+		    	SIZESARRAY.push({a:$('.sizescheck:eq('+i+')').is(":checked"), b:$('.sizescheck:eq('+i+')').attr('id') });
+		    }
+		}
+		return SIZESARRAY
+	},
+	parsedata: function(){
+		var tovardata = {
+			title: [
+				$('#example-text-input-RU').val(),
+				$('#example-text-input-UA').val(),
+				$('#example-text-input-EN').val()
+			],
+			text: [
+				$('#home1 .note-editable').html(),
+				$('#profile1 .note-editable').html(),
+				$('#contact1 .note-editable').html()
+			],
+			images: TOVARIMAGE,
+			code: $("#tovarCode").val(),
+			size: CATALOG.sizeclick(),
+			price: parseInt($('#priceData').val()),
+			categories: parseInt($('#categoriesSelect').val()),
+			type: $('#typeSelect').val(),
+			color: $('#colorSelect').val(),
+			group: 0,
+			sale: [$('#saleEnables').is(":checked"), parseInt($('#saleData').val())],
+			manufacturer: $('#manSelect').val(),
+		}
+		return tovardata
+	},
+	add: function(){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/addTovar',CATALOG.parsedata(), (res) => {
+			create_alert(res, false);
+
+		} )
+	},
+	save: function(){
+
+	},	
 	remove: function(a){
 
 	}

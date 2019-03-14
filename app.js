@@ -162,6 +162,11 @@ const aboutPanelMethods = require('./controllers/panel/panelAbout_controller');
 app.post('/saveAboutText', aboutPanelMethods);
 
 
+const aboutCatalogMethods = require('./controllers/panel/panelCatalog_controller');
+app.post('/getTypesOfCatalog', aboutCatalogMethods);
+app.post('/addTovar', aboutCatalogMethods);
+
+
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')

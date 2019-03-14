@@ -33,7 +33,7 @@ router.get('/', function(req, res, next){
                     payments.find( { id: { $in: resUsers[0].payments } }).toArray(function(err, resPayments ){
                       tovar.find( { AI: { $in: resUsers[0].desires } }).toArray(function(err, resDesires ){
                         config.find().toArray(function(err, resConfig ){
-                          res.render('account.ejs',{
+                          res.render('pages/account.ejs',{
                             isAdm: req.session.admin,
                             sessionUser: resUsers[0],
                             locale: resLocale[0][global.parseLanguage(req)].profile,

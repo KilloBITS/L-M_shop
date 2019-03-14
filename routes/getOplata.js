@@ -22,7 +22,7 @@ router.get('/', function(req, res, next){
           menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
               pad.find().toArray(function(err, resPad){
-                res.render('oplata.ejs',{
+                res.render('pages/oplata.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
                   locale: resLocale[0][global.parseLanguage(req)].payment,
@@ -32,8 +32,7 @@ router.get('/', function(req, res, next){
                   numLang: global.parseNumLang(req),
                   config: resConfig[0],
                   payment: resPad[0][global.parseLanguage(req)].payment,
-                  delivery: resPad[0][global.parseLanguage(req)].delivery,
-
+                  delivery: resPad[0][global.parseLanguage(req)].delivery
                 });
               });
             });

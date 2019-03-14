@@ -109,8 +109,8 @@
           <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>&<%= newtovar[i].types %>" data-ix="scale-on-scroll">
             <div class="carousel-cell w-col w-col-3 feature-pill">
               <div class="newTov"></div>
-              <h3> <%= newtovar[i].title %> </h3>
-              <div class="backCaruselImage" style="background-image: url(../../../data/tovar/<%= newtovar[i].image[0] %>)"></div> <!--../../../data/tovar/-->
+              <h3> <%= newtovar[i].title[numLang] %> </h3>
+              <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div> <!--../../../data/tovar/-->
             </div>
           </a>
           <% } %>

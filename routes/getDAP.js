@@ -22,7 +22,7 @@ router.get('/', function(req, res, next){
           contacts.find().toArray(function(err, resContacts){
             discounts.find({status: true}).toArray(function(err, resDiscounts){
               config.find().toArray(function(err, resConfig){ 
-                res.render('discounts_and_promotions.ejs',{
+                res.render('pages/discounts_and_promotions.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
                   locale: resLocale[0][global.parseLanguage(req)].discounts,

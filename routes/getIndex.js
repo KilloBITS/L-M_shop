@@ -29,7 +29,7 @@ router.get('/', function(req, res, next){
                 contacts.find().toArray(function(err, resContacts){
                   config.find().toArray(function(err, resConfig){
                     
-                    res.render('index.ejs',{
+                    res.render('pages/index.ejs',{
                       isAdm: req.session.admin,
                       sessionUser: resUsers[0],
                       locale: resLocale[0][global.parseLanguage(req)].index,

@@ -136,7 +136,7 @@ router.get('/', function(req, res, next){
              // ZAKAZ_TO_TELEGA = NEW_ZAKAZ;
              res.redirect("/delivery?"+NEW_ZAKAZ.id);
            }else{
-             res.render('close.ejs',{
+             res.render('pages/close.ejs',{
                conf: results_config[languageSystem],
                isAdm: req.session.admin
              })

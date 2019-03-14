@@ -67,7 +67,7 @@ router.get('/*', function(req, res, next){
                         var paginator = new pagination.SearchPaginator({prelink: '/stock?', current: page, rowsPerPage: 24, totalResult: results_tovar.length-1});
                         var p = paginator.getPaginationData();
                         console.log(p)
-                        res.render('stock.ejs',{
+                        res.render('pages/stock.ejs',{
                           conf: results_config[0],
                           menu: results_menu,
                           tovarArr: results_tovar.slice(otTovar, doTovar),
@@ -85,14 +85,14 @@ router.get('/*', function(req, res, next){
                     });
 
                   } catch (e){
-                    res.render('404.ejs',{
+                    res.render('pages/404.ejs',{
                       isAdm: req.session.admin
                     })
                   }
                });
              });
            }else{
-             res.render('close.ejs',{
+             res.render('pages/close.ejs',{
                conf: results_config[languageSystem],
                isAdm: req.session.admin
              })

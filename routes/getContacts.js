@@ -26,7 +26,7 @@ router.get('/', function(req, res, next){
           menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
               parrtners.find().toArray(function(err, resPartners){
-                res.render('contacts.ejs',{
+                res.render('pages/contacts.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
                   locale: resLocale[0][global.parseLanguage(req)].contacts,

@@ -21,7 +21,7 @@ router.get('/', function(req, res, next){
         users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
           menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
-              res.render('PRIVACY_POLICY.ejs',{
+              res.render('pages/PRIVACY_POLICY.ejs',{
                 isAdm: req.session.admin,
                 sessionUser: resUsers[0],
                 locale: resLocale[0][global.parseLanguage(req)].payment,

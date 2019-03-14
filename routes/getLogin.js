@@ -22,7 +22,7 @@ router.get('/', function(req, res, next){
               config.find().toArray(function(err, resConfig){   
                 console.log((req.session.user === undefined)?true:req.session.user)
                 if((req.session.user === undefined)?true:false){
-                  res.render('auth.ejs',{
+                  res.render('pages/auth.ejs',{
                     isAdm: req.session.admin,
                     sessionUser: resUsers[0],
                     locale: resLocale[0][global.parseLanguage(req)].login,
