@@ -25,7 +25,8 @@ var create_alert = function(a,b){
 		},3000)
 	}
 }
-function getBase64(file) {
+
+var getBase64 = function(file){
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -33,6 +34,27 @@ function getBase64(file) {
     reader.onerror = error => reject(error);
   });
 }
+
+var rus_to_latin = function(str){
+    var ru = {
+        'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 
+        'е': 'e', 'ё': 'e', 'ж': 'j', 'з': 'z', 'и': 'i', 
+        'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o', 
+        'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 
+        'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch', 'ш': 'sh', 
+        'щ': 'shch', 'ы': 'y', 'э': 'e', 'ю': 'u', 'я': 'ya'
+    }, n_str = [];    
+    str = str.replace(/[ъь]+/g, '').replace(/й/g, 'i');    
+    for ( var i = 0; i < str.length; ++i ) {
+       n_str.push(
+              ru[ str[i] ]
+           || ru[ str[i].toLowerCase() ] == undefined && str[i]
+           || ru[ str[i].toLowerCase() ].replace(/^(.)/, function ( match ) { return match.toUpperCase() })
+       );
+    }    
+    return n_str.join('');
+}
+
 var NEWS = {
 	removenews: function(a){
 		$('.preloaderBlock').fadeIn(100);
@@ -225,8 +247,7 @@ var CATALOG = {
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/setcolor',{a:a, b:b}, (res) => {
 			var table = $('#dataTable3').DataTable(); 
-			table.clear();
-			
+			table.clear();			
 			for(let i = 0; i < res.data.length; i++){
 				if(res.data[i].sale[0] === 'true'){
 	                var btn1 = '<strike>'+res.data[i].price +' ГРН</strike><b class="blink" style="color: red">'+ parseInt(res.data[i].price - res.data[i].price / 100 * parseInt(res.data[i].sale[1]))+' Грн</b>'
@@ -307,8 +328,8 @@ var CATALOG = {
 				$('#profile1 .note-editable').html(),
 				$('#contact1 .note-editable').html()
 			],
-			link: linkData
-			images: $("#TOVARIMAGE").val(),
+			link: $('#linkData').val(),
+			images: TOVARIMAGE,
 			code: $("#tovarCode").val(),
 			size: CATALOG.sizeclick(),
 			price: parseInt($('#priceData').val()),
@@ -329,6 +350,7 @@ var CATALOG = {
 		})
 	},
 	save: function(a){
+		console.log(CATALOG.parsedata())
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/saveTovar',{a:CATALOG.parsedata(), b:a}, (res) => {
 			create_alert(res, false);
@@ -336,5 +358,104 @@ var CATALOG = {
 	},	
 	remove: function(a){
 
+	}
+}
+
+var MENU = {
+	PODLINK: null,
+	TYPE: null,
+	CATEGORIES: null,
+	clickcategoty: function(a,b,c,d){
+		$(".preloaderBlock,#datatabletype").show();
+		$("#createType").hide();
+		$( ".checkradio" ).prop( "checked", false );
+		$( ".checkradio:eq("+a+")" ).prop( "checked", true );	
+		if(b){
+			$.post('/gettypes',{a:c}, (res) => {
+				MENU.PODLINK = res.data.podlink;
+				MENU.CATEGORIES = res.data.categories;
+				$("#typestable tbody").empty();
+				if(res.data.podlink[0] === '/'){
+					$("#typestable tbody").empty().append('<td class="bg-danger">В данной категории нету типов</td><td class="bg-danger">В данной категории нету типов</td><td class="bg-danger">В данной категории нету типов</td>!');
+					$("#createType").show();
+				}else{
+					for(let i  = 0; i < res.data.podlink.length; i++){
+						$("#typestable tbody").append(
+							'<tr onclick="MENU.clicktype('+i+')">'+
+							'<td class="table-light">'+res.data.podlink[i].pname[0]+'</td>'+
+							'<td class="table-light"><a href="'+res.data.podlink[i].plink+'">'+res.data.podlink[i].plink+'</a></td>'+
+							'<td class="table-light">'+res.data.podlink[i].types+'</td>'+
+							'</tr>'
+						);
+					}
+				}				
+				$("#createType").show();				
+				$(".preloaderBlock").hide();
+			});	
+		}else{
+			$("#typestable tbody").empty().append('<td class="bg-danger">В данной категорие нету типов</td><td class="bg-danger">В данной категорие нету типов</td><td class="bg-danger">В данной категорие нету типов</td>!');
+			$("#createType,#datatabletype").hide();
+			$("#setting").hide(300);
+			$(".preloaderBlock").hide();
+		}			
+	},
+	clicktype: function(a){
+		$("#name-RU").val(MENU.PODLINK[a].pname[0]);
+		$("#name-UA").val(MENU.PODLINK[a].pname[1]);
+		$("#name-EN").val(MENU.PODLINK[a].pname[2]);
+		$("#URL").val(MENU.PODLINK[a].plink);
+		$("#TYPE").val(MENU.PODLINK[a].types);
+		MENU.TYPE = MENU.PODLINK[a].types;
+		$("#setting").fadeIn(300);
+	},
+	keyrusup: function(){
+		$('#types-new').val(rus_to_latin($("#pname-RU-new").val().toLowerCase()));
+		$('#plink-new').val('/shop?c='+MENU.CATEGORIES+','+rus_to_latin($("#pname-RU-new").val().toLowerCase())+'&page=1');
+	},
+	saveeditpodlink: function(){
+		var PL = {
+			pname: [
+				$("#name-RU").val(),
+				$("#name-UA").val(),
+				$("#name-EN").val()
+			],
+			plink: $("#URL").val(),
+			types: $("#TYPE").val()
+		};
+		$.post('/saveeditlink',{a: PL, b: MENU.CATEGORIES} , (res) => {
+			create_alert(res, false)
+		});
+	},
+	savenewcategory: function(){
+		var NC = {
+			name: [
+				$("#name-RU-new").val(),
+				$("#name-UA-new").val(),
+				$("#name-EN-new").val()
+			],
+			glink: $("#link-new").val()
+		};
+		$.post('/addcategory',NC , (res) => {
+			create_alert(res, false)
+		});
+	},
+	savenewtype: function(){
+		var NT = {
+			pname: [
+				$("#pname-RU-new").val(),
+				$("#pname-UA-new").val(),
+				$("#pname-EN-new").val()
+			],
+			plink: $("#plink-new").val(),
+			types: $("#types-new").val()
+		};
+		$.post('/addtype',{a:NT, b: MENU.CATEGORIES }, (res) => {
+			create_alert(res, false)
+		});
+	},
+	removecategory: function(a){
+		$.post('/removecategory',{a:a}, (res) => {
+			create_alert(res, false)
+		});
 	}
 }

@@ -84,6 +84,7 @@ const admPaydel = require('./routes/panel/getPaydelPanel');
 const admSystem = require('./routes/panel/getSystemPanel');
 const admUsers = require('./routes/panel/getUsersPanel');
 const admVisual = require('./routes/panel/getVisualPanel');
+const admMenu = require('./routes/panel/getMenuPanel');
 
 app.use('/about-panel', admAbout);
 app.use('/API-panel', admAPI);
@@ -99,6 +100,7 @@ app.use('/system-panel', admSystem);
 app.use('/users-panel', admUsers);
 app.use('/visual-panel', admVisual);
 app.use('/faq-panel', admFaq);
+app.use('/menu-panel', admMenu);
 
 
 
@@ -168,6 +170,12 @@ app.post('/addTovar', aboutCatalogMethods);
 app.post('/setcolor', aboutCatalogMethods);
 app.post('/saveTovar', aboutCatalogMethods);
 
+const menuPanelMethods = require('./controllers/panel/panelMenu_controller');
+app.post('/gettypes', menuPanelMethods);
+app.post('/saveeditlink', menuPanelMethods);
+app.post('/addcategory', menuPanelMethods);
+app.post('/addtype', menuPanelMethods);
+app.post('/removecategory', menuPanelMethods);
 
 var options = {
   key: fs.readFileSync('./ssl/apache-selfsigned.key'),

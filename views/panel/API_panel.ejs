@@ -40,7 +40,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
-                            <li><a href="/index-menu"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
+                            <li><a href="/menu-panel"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
                             <li><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
                             <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
                             <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
@@ -103,18 +103,41 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-                    <div class="col-lg-4 mt-3">
+                    <div class="col-lg-6 mt-3">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="header-title">Новая почта</h4>
                                 <div class="form-check">
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <% if(conf.NP_API.key){ %>
-                                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing" checked onchange="setApiModule(false)">
+                                        <input type="checkbox" class="custom-control-input" id="NPEnabled" checked onchange="setApiModule(false)">
                                         <% }else{ %>
-                                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing" onchange="setApiModule(true)">
+                                        <input type="checkbox" class="custom-control-input" id="NPEnabled" onchange="setApiModule(true)">
                                         <% } %>
-                                        <label class="custom-control-label" for="customControlAutosizing">Использование модуля</label>
+                                        <label class="custom-control-label" for="NPEnabled">Использование модуля</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">                                    
+                                    <label for="example-text-input" class="col-form-label">API Ключ</label>
+                                    <input class="form-control" type="text" value="<%= conf.NP_API.key %>" id="NP_API_KEY">
+                                </div>
+
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="col-lg-6 mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Укрпочта</h4>
+                                <div class="form-check">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <% if(conf.NP_API.key){ %>
+                                        <input type="checkbox" class="custom-control-input" id="UKREnabled" checked onchange="setApiModule(false)">
+                                        <% }else{ %>
+                                        <input type="checkbox" class="custom-control-input" id="UKREnabled" onchange="setApiModule(true)">
+                                        <% } %>
+                                        <label class="custom-control-label" for="UKREnabled">Использование модуля</label>
                                     </div>
                                 </div>
                                 <div class="form-group">                                    

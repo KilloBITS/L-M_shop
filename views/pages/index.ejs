@@ -100,7 +100,7 @@
 			<div class="mainTitleDLG post" style="color: #f98eb9"><%= locale.newgoods %></div>
 			<div class="mainTextDLG post" style="color: #f98eb9"><%= locale.newgoods2 %></div>
 		</div>
-    <div class="carousel-wrapper">
+    <div class="carousel-wrapper" style="background-image: <%= config.gradient %>">
 		  <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <% if(newtovar.length > 0){ %>
           <% for(var i = 0; i < newtovar.length; i++){ %>
@@ -121,10 +121,10 @@
         <% } %>
 		  </div>
 		</div>
-		<div class="mainBTN_block" style="background: #ffc9df; padding-top: 20px;">
+		<div class="mainBTN_block" style="background-color: <%= config.B_COLOR %>; padding-top: 20px;">
 			<a href="/shopNews"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div></a>
 		</div>
-		<div class="mainDLG" style="background: #ffc9df; color: #333333;">
+		<div class="mainDLG" style="background: <%= config.B_COLOR %>; color: #333333;">
 			<div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
       <textarea id="hideareaAbout" style="display: none;"><%= locale.abouttext %></textarea>
 			<div class="mainTextDLG post" id="aboutBlockPaste" data-ix="scale-on-scroll"></div>
@@ -178,9 +178,9 @@
         </div>
       </div>
 		</div>
-		<div class="mainBTN_block">
+		<div class="mainBTN_block" style="background-color: <%= config.B_COLOR %>;">
 			<a href="#"><div class="mainBTN"  data-ix="scale-on-scroll"><%= locale.details %></div></a>
-      <div class="zub_lineB" style=""></div>
+      <div class="zub_lineB" style="background-image: url(../../image/<%= config.borderbottom %>)"></div>
 		</div>
   </div>
   <div class="videoBlock block">
@@ -379,11 +379,11 @@
     </div>
     <div class="videoFilter"></div>
     <video autoplay muted loop>
-      <source src="../../../video/1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+      <source src="../../../video/<%= config.backvideo %>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
     </video>
   </div>
-	<div class="news block">
-    <div class="white_zub"></div>
+	<div class="news block" style="background-color: <%= config.A_COLOR %>">
+    <div class="white_zub" style="background-image: url(../../image/<%= config.bordertop %>)"></div>
     <div class="container" style="max-width: 1024px;">
       <div class="mainDLG">
         <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.newstitle %></div>
@@ -423,7 +423,7 @@
       </a>
     <% } %>
   </div>
-  <div class="counters block">
+  <div class="counters block" style="background-color: <%= config.A_COLOR %>">
     <div class="counters_conent">
       <div class="countersB post"  data-ix="scale-on-scroll">
         <div class="counters_icon" id="buyers"></div>
@@ -448,8 +448,8 @@
     </div>
   </div>
 
-  <div class="contact block">
-    <div class="zub_line"></div>
+  <div class="contact block" style="background-color: <%= config.B_COLOR %>">
+    <div class="zub_line" style="background-image: url(../../image/<%= config.borderbottom %>)"></div>
     <div class="mainDLG post">
     	<div class="mainTitleDLG" data-ix="scale-on-scroll"><%= locale.mainmessage %></div>
     	<div class="mainTextDLG" data-ix="scale-on-scroll-delay-300"><%= locale.mainmessagetxt %></div>

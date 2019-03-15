@@ -40,7 +40,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
-                            <li><a href="/index-menu"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
+                            <li><a href="/menu-panel"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
                             <li><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
                             <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
                             <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
@@ -103,79 +103,174 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Логотип магазина</h4>                                                           
+                    <div class="col-lg-6 mt-2">                        
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Логотип магазина</h4>                                                           
+                                    <img src="../../../image/<%= config.logotype %>">    
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>
+                         <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Черно-белый логотип</h4>                                                           
+                                    <img src="../../../image/<%= config.footerlogo %>" style="background-color: black;">
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                        
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Анимация загрузки</h4>                                                           
+                                    <img src="../../../image/loaders/<%= config.loader %>">
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Фоновое видео</h4>                                                           
                                     
-                                                         
-                            </div>
-                        </div>                        
+                                    <video autoplay muted loop style="max-width: 100%">
+                                        <source src="../../../video/<%= config.backvideo %>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    </video>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>
                     </div>
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Черно-белый логотип</h4>                                                           
-                                    
-                                                         
-                            </div>
-                        </div>                        
+                    <div class="col-lg-6 mt-2">
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Цвет блоков типа - А</h4>                                                           
+                                        
+                                    <div class="dropdown col-lg-12 col-md-4 col-sm-6">
+                                        <button class="btn btn-primary col-lg-12 dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: <%= config.A_COLOR %>">
+                                            <%= config.A_COLOR %>
+                                        </button>
+                                        <div class="dropdown-menu col-lg-12">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Цвет блоков типа - B</h4>                                                       
+                                    <div class="dropdown col-lg-12 col-md-4 col-sm-6">
+                                        <button class="btn btn-primary col-lg-12 dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: <%= config.B_COLOR %>">
+                                            <%= config.B_COLOR %>
+                                        </button>
+                                        <div class="dropdown-menu col-lg-12">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>                     
+                                </div>
+                            </div>                        
+                        </div> 
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Градиент</h4>                                                       
+                                    <div class="dropdown col-lg-12 col-md-4 col-sm-6">
+                                        <button class="btn btn-primary col-lg-12 dropdown-toggle" type="button" data-toggle="dropdown" style="background-image:<%= config.gradient %>">
+                                            <%= config.gradient %>
+                                        </button>
+                                        <div class="dropdown-menu col-lg-12">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>                     
+                                </div>
+                            </div>                        
+                        </div> 
+                        <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Верхняя граница</h4>                                                           
+                                    <img src="../../../image/<%= config.bordertop %>" style="    background-color: black;">    
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>   
+                         <div class="col-lg-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title">Нижняя граница</h4>                                                           
+                                    <img src="../../../image/<%= config.borderbottom %>">    
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Загрузить</button>
+                                        </div>
+                                    </div>                         
+                                </div>
+                            </div>                        
+                        </div>
                     </div>
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Анимация загрузки</h4>                                                           
-                                    
-                                                         
-                            </div>
-                        </div>                        
-                    </div>
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Цвет блоков типа - А</h4>                                                           
-                                    
-                                                         
-                            </div>
-                        </div>                        
-                    </div>
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Цвет блоков типа - B</h4>                                                           
-                                    
-                                                         
-                            </div>
-                        </div>                        
-                    </div>
-
-                    <div class="col-lg-4 mt-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Фоновое видео</h4>                                                           
-                                    
-                                                         
-                            </div>
-                        </div>                        
-                    </div>
-
                 </div>
             </div>
         </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
         <%- include ./includes/footer.ejs %>
-        <!-- footer area end-->
     </div>
     <%- include ./includes/offset-area.ejs %> 
-    <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
@@ -183,28 +278,20 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- start highcharts js -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <!-- start amcharts -->
     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
     <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/3/serial.js"></script>
     <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <!-- all line chart activation -->
     <script src="assets/js/line-chart.js"></script>
-    <!-- all pie chart -->
     <script src="assets/js/pie-chart.js"></script>
-    <!-- all bar chart -->
     <script src="assets/js/bar-chart.js"></script>
-    <!-- all map chart -->
     <script src="assets/js/maps.js"></script>
-    <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>

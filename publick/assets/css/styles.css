@@ -2975,3 +2975,15 @@ table.dataTable thead td {
     filter: grayscale(100%);
     
 }
+
+#createType{
+    display: none;
+}
+
+#setting{
+    display: none;
+}
+
+#datatabletype{
+    display: none;
+}

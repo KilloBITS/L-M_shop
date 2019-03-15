@@ -49,13 +49,14 @@ router.post('/getTypesOfCatalog', function(req, res, next){
 
 router.post('/saveTovar', function(req, res, next){
 	if(req.session.admin){
-		mongoClient.connect(global.baseIP, function(err, client){
+		mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
 			const db = client.db(global.baseName);
 			const tovar = db.collection("TOVAR");
 
 			if(err) return console.log(err);
-
-			tovar.updateOne({AI: parseInt(req.body.b)},{$set: req.body.a });
+			var saveData = req.body.a
+			saveData.categories = parseInt(req.body.a.categories)
+			tovar.updateOne({AI: parseInt(req.body.b)}, {$set: saveData });
 			res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.a.title[0]+' успешно добавлен!'});				
 				
 		});		
