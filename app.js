@@ -32,7 +32,7 @@ app.use(bParser.json());
 app.use(express.static(__dirname + '/publick/'));
 app.use(cookieParser());
 app.use(bParser.raw({limit: '50mb'}));
-app.use(analytics());
+// app.use(analytics());
 
 
 /* Global methods*/
