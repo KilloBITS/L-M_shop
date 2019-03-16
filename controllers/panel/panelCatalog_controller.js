@@ -82,7 +82,7 @@ router.post('/addTovar', function(req, res, next){
 				DATA.author = req.session.user;
 				DATA.availability = true;
 				DATA.date = global.getDate();
-
+				DATA.popularUser = 1;
 				tovar.insertOne(DATA);	
 				res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.title[0]+' успешно добавлен!'});				
 			});		

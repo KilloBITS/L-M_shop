@@ -24,7 +24,7 @@ router.get('/', function(req, res, next){
               res.render('pages/PRIVACY_POLICY.ejs',{
                 isAdm: req.session.admin,
                 sessionUser: resUsers[0],
-                locale: resLocale[0][global.parseLanguage(req)].payment,
+                locale: resLocale[0][global.parseLanguage(req)].privacepolicy,
                 menu: resMenu,
                 globalLocale:  resLocale[0][global.parseLanguage(req)],
                 contacts: resContacts[0],

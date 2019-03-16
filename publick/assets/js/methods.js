@@ -55,6 +55,15 @@ var rus_to_latin = function(str){
     return n_str.join('');
 }
 
+var INDEX = {
+	init: function(){
+		console.log('index load page');
+
+		$("#wievers").val();
+		$("#buyers").val();
+	}
+}
+
 var NEWS = {
 	removenews: function(a){
 		$('.preloaderBlock').fadeIn(100);
@@ -147,6 +156,32 @@ var ABOUT = {
 	save: function(){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/saveAboutText', {
+			a: $('#home .note-editable').html(),
+			b: $('#profile .note-editable').html(),
+			c: $('#contact .note-editable').html() 
+		},(res) => {
+			create_alert(res, false)
+		})
+	}
+}
+
+var TOF = {
+	save: function(){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/saveTermsOfUseText', {
+			a: $('#home .note-editable').html(),
+			b: $('#profile .note-editable').html(),
+			c: $('#contact .note-editable').html() 
+		},(res) => {
+			create_alert(res, false)
+		})
+	}
+}
+
+var PRIVACEPOLICY = {
+	save: function(){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/savePrivacePolicyText', {
 			a: $('#home .note-editable').html(),
 			b: $('#profile .note-editable').html(),
 			c: $('#contact .note-editable').html() 

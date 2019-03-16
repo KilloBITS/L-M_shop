@@ -174,7 +174,7 @@
                 <input type="radio" id="star3_<%= 0 %>" name="rating_<%= 0 %>" value="2" /><label class = "full" tovid="<%= tovarArr.AI %>" for="star2_<%= 0 %>" title="Kinda bad - 2 stars"></label>
                 <input type="radio" id="star1_<%= 0 %>" name="rating_<%= 0 %>" value="1" /><label class = "full" tovid="<%= tovarArr.AI %>" for="star1_<%= 0 %>" title="Sucks big time - 1 star"></label>
                 <script>
-                  $("#star"+<%= tovarArr.popular %>+"_<%= 0 %>").attr("checked","checked")
+                  $("#star"+<%= Math.round(parseInt(tovarArr.popular) / parseInt(tovarArr.popularUser))  %>+"_<%= 0 %>").attr("checked","checked")
                 </script>
               </fieldset>
             </div>

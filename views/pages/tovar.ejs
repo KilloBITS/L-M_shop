@@ -5,6 +5,7 @@
 	<title>≡ <%= locale.title %> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+   <script src="assets/js/pace.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
@@ -27,8 +28,6 @@
   <script type="text/javascript" src="/script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/tovar/tovar.js"></script>
-  <script src="assets/js/pace.min.js"></script>
-
   <% if(isAdm){ %>
     <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
     <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
@@ -67,12 +66,12 @@
 
         <div class="dropholder">
           <div class="dropdown">
-            <p><i class="fa fa-foursquare"></i> По популярности</p>
+            <p><i class="fa fa-foursquare"></i><%= locale.popularity %></p>
           </div>
           <ul class="menu">
-            <li><i class="fa fa-thumbs-down"></i> По популярности</li>
-            <li><i class="fa fa-thumbs-up"></i> По цене (А-Я)</li>
-            <li><i class="fa fa-bolt"></i> По цене (Я-А) </li>
+            <li><i class="fa fa-thumbs-down"></i><%= locale.popularity %></li>
+            <li><i class="fa fa-thumbs-up"></i><%= locale.byprice %>(↑)</li>
+            <li><i class="fa fa-bolt"></i><%= locale.byprice %>(↓) </li>
           </ul>
         </div>
         <div class="filters"></div>
@@ -86,7 +85,7 @@
                 <div class="vendor"><%= tovarArr[i].vendorCode %></div>
                 <div class="isView"></div>
                 <% if(isAdm){ %>
-                  <div class="visible_length" title="Количевство просмотров">Просмотров: <%= tovarArr[i].views %></div>
+                  <div class="visible_length" title="Количевство просмотров"><%= locale.viewers %>: <%= tovarArr[i].views %></div>
                 <% } %>
 
                 <% if(tovarArr[i].sale[0] === 'true' && tovarArr[i].sale[1] !== ''){ %>
@@ -94,22 +93,22 @@
                     <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 10){ %>
-                    <div class="ribbon ribbon--purple">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon ribbon--purple"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 15){ %>
-                    <div class="ribbon  ribbon--blue">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon  ribbon--blue"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 20){ %>
-                    <div class="ribbon  ribbon--green">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon  ribbon--green"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 30){ %>
-                    <div class="ribbon  ribbon--yellow">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon  ribbon--yellow"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 40){ %>
-                    <div class="ribbon  ribbon--orange">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon  ribbon--orange"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                   <% if(parseInt(tovarArr[i].sale[1]) === 50){ %>
-                    <div class="ribbon  ribbon--red">Скидка <%= tovarArr[i].sale[1] %> %</div>
+                    <div class="ribbon  ribbon--red">Ски<%= locale.discount %>дка <%= tovarArr[i].sale[1] %> %</div>
                   <% } %>
                 <% } %>
                   <div class="water_icon"></div>
@@ -147,21 +146,21 @@
                         <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="2" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star2_<%= i %>" title="Kinda bad - 2 stars"></label>
                         <input type="radio" id="star1_<%= i %>" name="rating_<%= i %>" value="1" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star1_<%= i %>" title="Sucks big time - 1 star"></label>
                         <script>
-                          $("#star"+<%= tovarArr[i].popular %>+"_<%= i %>").attr("checked","checked")
+                          $("#star"+Math.round(parseInt(<%= tovarArr[i].popular %>) / parseInt(<%= tovarArr[i].popularUser %>))+"_<%= i %>").attr("checked","checked")
                         </script>
                     </fieldset>
                       <h4 class="group inner list-group-item-heading"><%= tovarArr[i].title[numLang] %></h4>
                       <div class="row">
                           <div class="col-xs-12 col-md-6">
                             <% if(tovarArr[i].sale[0] === 'true'){ %>
-                              <p class="lead" style="text-decoration: line-through"><%= tovarArr[i].price %> Грн</p>
-                              <p class="lead2" style="color: red"><%= parseInt(tovarArr[i].price - tovarArr[i].price / 100 * parseInt(tovarArr[i].sale[1])) %> Грн</p>
+                              <p class="lead" style="text-decoration: line-through"><%= tovarArr[i].price %> <%= locale.valute %></p>
+                              <p class="lead2" style="color: red"><%= parseInt(tovarArr[i].price - tovarArr[i].price / 100 * parseInt(tovarArr[i].sale[1])) %> <%= locale.valute %></p>
                             <% } else { %>
-                              <p class="lead"><%= tovarArr[i].price %> Грн</p>
+                              <p class="lead"><%= tovarArr[i].price %> <%= locale.valute %></p>
                             <% } %>
                           </div>
                           <div class="col-xs-12 col-md-6">
-                              <a class="btn btn-success" onclick="Index.setBasket('<%= tovarArr[i].AI %>', <%= i %>)">В Корзину</a>
+                              <a class="btn btn-success" onclick="setBasket('<%= tovarArr[i].AI %>', <%= i %>)"><%= locale.tobasket %></a>
                           </div>
                       </div>
                   </div>
@@ -176,10 +175,10 @@
                 	<circle class="circle" cx="49.1" cy="49.1" r="47.1"/>
 
                 </svg>
-                <span>Добавлено</span>
+                <span><%= locale.addedby %></span>
               </div>
               <div class="getError">
-                <span>Товар уже добавлен</span>
+                <span><%= locale.addedby %></span>
               </div>
           </div>
           <% } %>
@@ -189,14 +188,12 @@
 
 
       <% if(tovarArr.length === 0){ %>
-          <div class="NONE_TOVAR">Нет товаров в данной категории :(</div>
+          <div class="NONE_TOVAR"><%= locale.notovar %></div>
       <% } %>
     </div>
 
     <% if(offLength > 18){ %>
-      <div id="pagination">
-
-      </div>
+      <div id="pagination"></div>
       <script type="text/javascript">
         (function() {
             var translations = {
@@ -227,19 +224,20 @@
         <div class="loadersNEW" id="loaderNumber"></div>
         <div class="zub_line"></div>
         <div class="mainDLG" style="color: white;">
-          <div class="mainTitleDLG">Не хотите пропускать скидки ?</div>
-          <div class="mainTextDLG">Подпишитесь на нашу рассілку и вы всегда будете вкурсе всех акций и скидок :)</div>
+          <div class="mainTitleDLG"><%= locale.nopropsales %></div>
+          <div class="mainTextDLG"><%= locale.nopropsalestxt %></div>
         </div>
 
         <div class="number_send_block">
-          <input type="text" class="number_phone" id="inputPodpiska" placeholder="ваш адресс EMAIL">
-          <button id="sendPodpiska">ПОДПИСАТЬСЯ</button>
+          <input type="email" class="number_phone" id="inputPodpiska" placeholder="<%= locale.youemail %>">
+          <button id="sendPodpiska" onclick="TOVAR.sendMyEmail()"><%= locale.SUBSCRIBE %></button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <%- include ./includes/footer.ejs %>
+<%- include ./includes/basket.ejs %>
 <div id="pageMessages"></div>
 <!-- <div class="container">
   <button class="btn btn-danger" onclick="createAlert('Opps!','Something went wrong','Here is a bunch of text about some stuff that happened.','danger',true,false,'pageMessages');">Add Danger Alert</button>

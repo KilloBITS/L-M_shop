@@ -12,7 +12,7 @@ router.post('/getbasket', function(req, res, next){
 
   mongoClient.connect(global.baseIP, function(err, client){
     const db = client.db(global.baseName);
-    const tovar  = db.collection("tovar");
+    const tovar  = db.collection("TOVAR");
 
     if(err) return console.log(err);
 

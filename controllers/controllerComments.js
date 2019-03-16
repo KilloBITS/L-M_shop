@@ -12,7 +12,7 @@ router.post('/newComment', function(req, res, next){
     {
       mongoClient.connect(global.baseIP, function(err, client){
         const db = client.db(global.baseName);
-        const comments = db.collection("comments");
+        const comments = db.collection("COMMENTS");
         if(err) return console.log(err);
 
         // var NEXT_AI = results_users[0].AI + 1;
@@ -33,15 +33,12 @@ router.post('/newComment', function(req, res, next){
         NEW_COMMENT.text = req.body.text;
         NEW_COMMENT.tovar_AI = parseInt(req.body.tovai);
         NEW_COMMENT.created_date = today;
-        // NEW_COMMEN
         comments.insertOne(NEW_COMMENT);
         res.send({code: 500, msg: NEW_COMMENT});
       });
     }else{
       res.send({code: 403});
     }
-
-
 });
 
 module.exports = router;

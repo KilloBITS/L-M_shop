@@ -11,6 +11,7 @@ const request = require("request");
 const app = express();
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
+const analytics = require('node-analytics');
 
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
@@ -23,12 +24,16 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
     }
 }));
+
+
 //project libs use
 app.use(bParser.urlencoded({limit: '50mb'}));
 app.use(bParser.json());
 app.use(express.static(__dirname + '/publick/'));
 app.use(cookieParser());
 app.use(bParser.raw({limit: '50mb'}));
+app.use(analytics());
+
 
 /* Global methods*/
 require('./controllers/system/controllerLanguage');
@@ -68,7 +73,6 @@ app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
 
 
-
 //Admin routes
 const admAbout = require('./routes/panel/getAboutPanel');
 const admAPI = require('./routes/panel/getAPIPanel');
@@ -85,6 +89,8 @@ const admSystem = require('./routes/panel/getSystemPanel');
 const admUsers = require('./routes/panel/getUsersPanel');
 const admVisual = require('./routes/panel/getVisualPanel');
 const admMenu = require('./routes/panel/getMenuPanel');
+const admPrivacePolicy = require('./routes/panel/getPrivacePolicyPanel');
+const admTermsOfUse = require('./routes/panel/getTermsOfUsePAnel');
 
 app.use('/about-panel', admAbout);
 app.use('/API-panel', admAPI);
@@ -101,6 +107,8 @@ app.use('/users-panel', admUsers);
 app.use('/visual-panel', admVisual);
 app.use('/faq-panel', admFaq);
 app.use('/menu-panel', admMenu);
+app.use('/privacepolicy-panel', admPrivacePolicy);
+app.use('/termsofuse-panel', admTermsOfUse);
 
 
 
@@ -163,6 +171,12 @@ app.post('/blockUser', usersPanelMethods);
 const aboutPanelMethods = require('./controllers/panel/panelAbout_controller');
 app.post('/saveAboutText', aboutPanelMethods);
 
+const privacepolicyPanelMethods = require('./controllers/panel/panelPrivacePolicy_controller');
+app.post('/savePrivacePolicyText', privacepolicyPanelMethods);
+
+const termsofusePanelMethods = require('./controllers/panel/panelTermsOfUse_controller');
+app.post('/saveTermsOfUseText', termsofusePanelMethods);
+
 
 const aboutCatalogMethods = require('./controllers/panel/panelCatalog_controller');
 app.post('/getTypesOfCatalog', aboutCatalogMethods);
@@ -191,11 +205,31 @@ app.get('/logout', function(req, res) {
   req.session.destroy();
   res.redirect('/');
 });
+
 app.get('*', get404);
-app.listen(4111, function(){
+app.listen(80, function(){
   global.baseName = 'SHOP_DB';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
-  console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 4111');
+  console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');
+  PARSE_DB()
 });
+//проверка базы
+var DEFAULT_COLLECTION = ['CONFIG','CONTACTS','DISCOUNTS','LOCALE','LOGS','MAINSLIDE','MANUFACTURERS','MENU','NEWS','NOTIFICATION','PARTNERS','PAYMENTANDDELIVERY','PAYMENTS','TOVAR', 'USERS']
+var PARSE_DB = function(){
+  mongoClient.connect(global.baseIP, function(err, database) {
+    const db = database.db(global.baseName);
+    if (err) throw err;
+    // db.listCollections().toArray(function(err, collInfos) {
+    //   for(var i = 0; i < DEFAULT_COLLECTION.length; i++){
+    //     if(collInfos.find(x => x.name === DEFAULT_COLLECTION[i]) === undefined){
+    //       db.createCollection(DEFAULT_COLLECTION[i], function(err, result) {
+    //         if (err) throw err;
+    //         console.log("Collection "+ result.name +" is created!");        
+    //       });
+    //     }
+    //   }
+    // });  
+  });
+};
