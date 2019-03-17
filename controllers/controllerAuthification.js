@@ -119,10 +119,13 @@ router.post('/create_accaunt', function(req, res, next){
           NEW_USER.regiter_date = today;
           NEW_USER.official = false;
           NEW_USER.blocked = false;
+          NEW_USER.isPartner =false;
           users.insertOne(NEW_USER);
           req.session.user = req.body.newEmail;
           req.session.admin = false;
           global.online = global.online + 1;
+
+          global.notification('Новый пользователь: '+req.body.newName, today, 'register');
           res.send({code: 500});
         });
       }else{

@@ -360,14 +360,17 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
 }
 
 .menuLeft{
+  width: 100%;
+  margin-bottom: 15px;
+  float: left;
+}
+.menuLeft a {
+  text-decoration: none;
   width: 50%;
-  max-width: 300px;
-  margin-bottom: 15px;
+  display: inline-block;
+  float: left;
 }
-.menuRight{
-  margin-bottom: 15px;
-  float: right;
-}
+
 .punktMenu{
   width: 100%;
   padding: 5px 0px 3px 10px;
@@ -3360,4 +3363,24 @@ ul.dropdownsession li a:hover {
   100% {
     transform: rotatez(3deg);
   }
+}
+
+
+.SOCIALS_BLOCK{
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 50%;
+}
+
+.SOCIAL_CLOCK_BTN{
+  background-color: #ee534f;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f5635f;
+}
+
+.SOCIAL_CLOCK_BTN:hover{
+  background-color: #e77272;
 }

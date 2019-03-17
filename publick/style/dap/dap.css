@@ -5,15 +5,14 @@
 }
 
 .stock_block{
-  width: calc(50% - 12px);
-  background-size: cover;
+  width: 100%;
   background: #fff5f5;
   display: inline-block;
   margin: 5px;
   border-radius: 3px;
   box-shadow: -5px -5px 0px -3px white, -5px -5px 0px 0px rgba(255, 0, 0, 0.79);
   position: relative;
-  height: 115px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -134,7 +133,7 @@
 }
 
 .bigBonus .stock_name span{
-    font-size: 19px;
+  font-size: 19px;
 }
 
 .stock{
@@ -144,9 +143,9 @@
 }
 
 .Promotion_Rules{
-    padding-bottom: 50px;
-    max-width: 1024px;
-    margin: auto;
+  padding-bottom: 50px;
+  max-width: 1024px;
+  margin: auto;
 }
 
 .line{
@@ -157,10 +156,10 @@
 }
 
 .center{
-font-size: 24px;
+  font-size: 24px;
 }
 .pod{
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 .fancy-btn {
@@ -891,15 +890,15 @@ font-size: 24px;
 
 
 .phone {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: inherit;
-    font-size: 55px;
-    color: #ffffff;
-    animation: none;
-    float: none;
-    display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: inherit;
+  font-size: 55px;
+  color: #ffffff;
+  animation: none;
+  float: none;
+  display: inline-block;
 }
 
 .modealData{
@@ -949,46 +948,46 @@ font-size: 24px;
     width: calc(100% - 10px);
   }
   .siteMap {
-      height: auto;
+    height: auto;
   }
   .mapmap {
-      height: auto;
+    height: auto;
   }
   .LBB, .CBB, .RBB {
-      width: 100%;
-      display: inline-block;
+    width: 100%;
+    display: inline-block;
   }
   .RBB {
-      float: initial;
-      text-align: center;
+    float: initial;
+    text-align: center;
   }
   .LBB {
-      display: none;
+    display: none;
   }
   .mainTextDLG{
     font-size: 16px;
   }
   .punktMapMenu {
-      width: 48%;
-      display: inherit;
-      text-align: center;
-      border-bottom:0;
+    width: 48%;
+    display: inherit;
+    text-align: center;
+    border-bottom:0;
   }
   .adressLineMap {
-      text-align: center;
+    text-align: center;
   }
   .container {
-      max-width: 800px;
-      min-width: 0;
-      margin: 0 auto;
+    max-width: 800px;
+    min-width: 0;
+    margin: 0 auto;
   }
   .container .column {
-      width: 100%;
-      padding: 0 8px;
-      -webkti-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-bottom: 20px;
+    width: 100%;
+    padding: 0 8px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 20px;
   }
 
   .bant,.tag{

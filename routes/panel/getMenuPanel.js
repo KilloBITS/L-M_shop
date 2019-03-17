@@ -17,20 +17,24 @@ router.get('/', function(req, res, next){
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
     const menu = db.collection("MENU");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
-        menu.find({login: req.session.login}).toArray(function(err, resMenu){
-          res.render('panel/menu_panel.ejs',{                    
-            sessionUser: resUsers[0],
-            noty: resNoty,
-            menu: resMenu
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){
+          menu.find({login: req.session.login}).toArray(function(err, resMenu){
+            res.render('panel/menu_panel.ejs',{                    
+              sessionUser: resUsers[0],
+              noty: resNoty,
+              menu: resMenu,
+              msg: resMessage
+            });
           });
-        });
-      }); 
-    });    
+        }); 
+      });
+    });
   });      
 });
 

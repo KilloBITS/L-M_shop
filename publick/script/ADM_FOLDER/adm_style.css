@@ -19,13 +19,14 @@
 
 .visible_length{
   position: absolute;
-  top: calc(100% - 189px);
-  right: 10px;
+  top: 5px;
+  right: 5px;
   color: white;
   text-shadow: 1px 1px 1px black;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2px 10px;
-  border-radius: 4px;
+  border-radius: 2px;
+  z-index: 1;
 }
 
 .setColorBlock{
@@ -74,9 +75,9 @@
 }
 
 .newGroup{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .groupButton{
-    cursor: pointer;
+  cursor: pointer;
 }

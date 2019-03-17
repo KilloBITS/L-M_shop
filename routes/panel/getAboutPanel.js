@@ -16,6 +16,7 @@ router.get('/', function(req, res, next){
     const db = client.db(global.baseName);
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
+    const message = db.collection("MESSAGE");
     const locale = db.collection("LOCALE");
 
     if(err) return console.log(err);
@@ -23,11 +24,14 @@ router.get('/', function(req, res, next){
     noty.find().toArray(function(err, resNoty){
       users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
         locale.find({login: req.session.login}).toArray(function(err, resLocale){
-          res.render('panel/about_panel.ejs',{                    
+          message.find({availability: false}).toArray(function(err, resMessage){
+            res.render('panel/about_panel.ejs',{                    
               sessionUser: resUsers[0],
               noty: resNoty,
-              aboutData: resLocale[0]                  
-          });
+              aboutData: resLocale[0],
+              msg: resMessage
+            });
+          });  
         });  
       }); 
     });    

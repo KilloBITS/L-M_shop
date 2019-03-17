@@ -19,25 +19,29 @@ router.get('/', function(req, res, next){
     const tovar = db.collection("TOVAR");
     const manufacturers = db.collection("MANUFACTURERS");
     const config = db.collection("CONFIG");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
-        tovar.find().toArray(function(err, resTovar){
-          manufacturers.find().toArray(function(err, resMan){   
-            config.find().toArray(function(err, resConf){   
-              res.render('panel/catalog_panel.ejs',{
-                sessionUser: resUsers[0],
-                noty: resNoty,
-                tovarData: resTovar,
-                manufactures: resMan,
-                config: resConf[0]
-              });
-            });    
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){
+          tovar.find().toArray(function(err, resTovar){
+            manufacturers.find().toArray(function(err, resMan){   
+              config.find().toArray(function(err, resConf){   
+                res.render('panel/catalog_panel.ejs',{
+                  sessionUser: resUsers[0],
+                  noty: resNoty,
+                  tovarData: resTovar,
+                  manufactures: resMan,
+                  config: resConf[0],
+                  msg: resMessage
+                });
+              });    
+            });      
           });      
-        });      
-      });
+        });
+      });    
     });    
   });      
 });

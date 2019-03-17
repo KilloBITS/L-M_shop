@@ -19,37 +19,41 @@ router.get('/*', function(req, res, next){
     const tovar = db.collection("TOVAR");
     const config = db.collection("CONFIG");
     const manufacturers = db.collection("MANUFACTURERS");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){  
-        config.find().toArray(function(err, resConf){   
-          manufacturers.find().toArray(function(err, resMan){   
-            if(req.url.split('mode=')[1].split(',')[0] === 'edit'){
-              tovar.find({AI: parseInt(req.url.split('mode=')[1].split(',')[1])}).toArray(function(err, resTovar){              
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){  
+          config.find().toArray(function(err, resConf){   
+            manufacturers.find().toArray(function(err, resMan){   
+              if(req.url.split('mode=')[1].split(',')[0] === 'edit'){
+                tovar.find({AI: parseInt(req.url.split('mode=')[1].split(',')[1])}).toArray(function(err, resTovar){              
+                  res.render('panel/addTovar_panel.ejs',{                    
+                    sessionUser: resUsers[0],
+                    noty: resNoty,
+                    tovarData: resTovar[0],
+                    editMode: true,
+                    config: resConf[0],
+                    man: resMan,
+                    msg: resMessage
+                  });
+                });
+              }else{
                 res.render('panel/addTovar_panel.ejs',{                    
                   sessionUser: resUsers[0],
-                  noty: resNoty,
-                  tovarData: resTovar[0],
-                  editMode: true,
+                  noty: resNoty,              
+                  editMode: false,
                   config: resConf[0],
-                  man: resMan
+                  man: resMan,
+                  msg: resMessage
                 });
-              });  
-                         
-            }else{
-              res.render('panel/addTovar_panel.ejs',{                    
-                sessionUser: resUsers[0],
-                noty: resNoty,              
-                editMode: false,
-                config: resConf[0],
-                man: resMan
-              });
-            }    
-          });   
-        });
-      }); 
+              }    
+            });   
+          });
+        }); 
+      });    
     });    
   });      
 });

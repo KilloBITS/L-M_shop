@@ -22,16 +22,13 @@ router.get('/', function(req, res, next){
 
     noty.find().toArray(function(err, resNoty){
       users.find({login: req.session.login}).toArray(function(err, resUsers){
-
-
         message.find({availability: false}).toArray(function(err, resMessage){
           res.render('panel/index_panel.ejs',{                    
             sessionUser: resUsers[0],
             noty: resNoty,
             msg: resMessage                 
           });
-        });        
-
+        });
       }); 
     });    
   });      

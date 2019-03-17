@@ -18,6 +18,14 @@
 }
 
 @media screen and (max-width: 800px) {
+
+  .menuLeft{
+    overflow-y: auto;
+  }
+
+  .menuLeft a {
+    width: 100%;
+  }
   .menuBTN div{
     display: block;
   }
@@ -152,7 +160,7 @@
   .hamburger-menu {
     position: relative;
     transform: translateY(21px);
-    background: rgb(214, 140, 170);
+    background: rgb(128, 128, 128);
     transition: all 0ms 300ms;
   }
   .hamburger-menu.animate {
@@ -189,7 +197,7 @@
     position: absolute;
     left: 0;
     bottom: 19px;
-    background: rgb(214, 140, 170);
+    background: rgb(128, 128, 128);
     transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -198,7 +206,7 @@
     position: absolute;
     left: 0;
     top: 18px;
-    background: rgb(214, 140, 170);
+    background: rgb(128, 128, 128);
     transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 

@@ -9,12 +9,10 @@
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="/style/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
-
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
-
   <link rel="stylesheet" type="text/css" href="/style/account/style.css">
   <link rel="stylesheet" type="text/css" href="/style/account/style.min.css">
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
@@ -50,7 +48,6 @@
   </div>
   <%- include ./includes/menu.ejs %>
 </div>
-<!-- -->
 <div class="content">
   <% if( sessionUser.phone_number === null ){ %>
   <div class="noNumMessage">
@@ -58,7 +55,6 @@
     <small>(Пожалуйста подтвердите номер телефона)</small>
   </div>
   <% } %>
-
   <div class="account_block">
     <div class="top_account">
       <div class="ava_block <% if( sessionUser.phone_number === null ){ %>  disabled  <% } %>">
@@ -69,7 +65,10 @@
       <div class="user_menu">
         <div class="UserNameAcc">
           <% if( sessionUser.official ){ %>
-          <div class="offocial"></div>
+          <div class="official"></div>
+          <% } %>
+          <% if( sessionUser.isPartner ){ %>
+          <div class="partnericon"></div>
           <% } %>
           <b><%= sessionUser.nick %></b>
           (<%= sessionUser.name %>) <br>
@@ -94,20 +93,17 @@
       </div>
     </div>
   </div>
-
   <div class="data_block">
     <div class="data_menu <% if( sessionUser.phone === null ){ %>  disabled  <% } %>">
       <div class="set_btn" opmenu="myPays">Покупки</div>
       <div class="set_btn" opmenu="myDesires">Мои желания</div>
       <div class="set_btn" opmenu="mySetting">Настройки</div>
-      <% if( sessionUser.official ){ %>
-      <div class="set_btn myTovars" opmenu="myTovars">Мои товары</div>
+      <% if( sessionUser.isPartner ){ %>
+      <div class="set_btn" opmenu="myTovars">Мои товары</div>
       <% } %>
-
       <% if(sessionUser.isAdmin){ %>
       <a href="/index-panel" target="_blank"> <div class="set_btn">Панель управления</div> </a>
       <% } %>
-
     </div>
     <div class="data_user_content <% if( sessionUser.phone === null ){ %>  noNumber  <% } %>">
       <% if( sessionUser.phone_number === null ){ %>
@@ -151,22 +147,18 @@
                   <div class="pointImage5"></div>
                 </div>
               </div>
-
               <div class="cancel_zakaz"></div>
               <% if(payments_user[i].status === 0) { %>
               <div class="placeStatus">Заказ в обработке</div>
               <% } %>
-
               <% if(payments_user[i].status === 0) { %>
               <div class="placeStatus">Товар укомплектован</div>
               <% } %>
-
               <% if(payments_user[i].status === 2) { %>
               <div class="placeStatus">Товар отправлен</div>
               <div class="TTH"><%= payments_user[i].TTH %></div>
               <div class="details_TTH"></div>
               <% } %>
-
               <% if(payments_user[i].status === 3) { %>
               <div class="placeStatus" style="color: red;">заказ отменен</div>
               <% } %>
@@ -191,9 +183,7 @@
                     <% } %>
                     ]
                   }
-
                 };
-
                 $(function() {
                   var settings = {
                     "async": true,
@@ -206,29 +196,21 @@
                     "processData": false,
                     "data": JSON.stringify(CCC)
                   }
-
                   $.ajax(settings).done(function (response) {
                     console.log(response);
                     for(let i = 0; i < response.data.length; i++){
                       if(parseInt(response.data[i].StatusCode) == 1){
                         $(".otpravka_line:eq("+i+") .line_point:eq(1) div").addClass('current');
                       }
-
                       if(parseInt(response.data[i].StatusCode) == 4 && parseInt(response.data[i].StatusCode) == 41 && parseInt(response.data[i].StatusCode) == 5){
                         $(".otpravka_line:eq("+i+") .line_point:eq(2) div").addClass('current');
                       }
-
                       if(parseInt(response.data[i].StatusCode) == 6){
                         $(".otpravka_line:eq("+i+") .line_point:eq(3) div").addClass('current');
                       }
-
                       if(parseInt(response.data[i].StatusCode) == 7 && parseInt(response.data[i].StatusCode) == 8){
                         $(".otpravka_line:eq("+i+") .line_point:eq(4) div").addClass('current');
                       }
-
-
-
-
                       if(parseInt(response.data[i].StatusCode) < 9){
                         $(".details_TTH:eq("+i+")").html('<b>'+response.data[i].Status+'</b>');
                       }else{
@@ -237,9 +219,7 @@
                         zo.className = 'otrimanoData';
                         zo.innerHTML = 'Заказ получен :)';
                         $(".tileline:eq("+i+")").addClass("otrimano").append(zo);
-
                       }
-
                     }
                   });
                 });
@@ -248,7 +228,6 @@
               <div class="noNewsMessage">
                 У вас нет покупок.
                 <div class="goToShop">
-
                   <a href="/stock?page=1">
                     <div class="css-button">
                       <p class="css-button-text">Перейти в каталог</p>
@@ -288,17 +267,14 @@
               <span>Дата роджения</span>
               <input type="date" name="dateofbirth" id="dateofbirth">
             </div>
-
             <div class="setting_line proc50">
               <span>Изменить Номер телефона</span>
               <input type="text" name="number" placeholder="введите новый номер">
             </div>
-
             <div class="setting_line proc50">
               <span>Изменить e-mail</span>
               <input type="text" name="email" placeholder="введите новый email адресс">
             </div>
-
             <h3>Изменить пароль</h3>
             <div class="setting_line">
               <span>Старый пароль</span>
@@ -309,15 +285,12 @@
               <input type="password" name="passwordNew2" placeholder="Повторите пароль">
               <div class="buttonSetting">Сохранить</div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    <!-- -->
   </div>
   <%- include ./includes/footer.ejs %>
-
   <div id="pageMessages"></div>
 </body>
 </html>

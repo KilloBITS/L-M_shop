@@ -26,16 +26,12 @@ var updateAvaUser = (req, res, next) => {
       });
     });
 };
-
 router.post('/updateAvaUser', updateAvaUser, function(req, res, next){});
-
-
 
 var addToJelaniya = (req, res, next) => {
     mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
       var db = client.db(global.baseName);
       var users = db.collection("users");
-
       if(err) return console.log(err);
       users.find({email: req.session.user}).toArray(function(err, results_users){
         if(results_users[0] !== undefined){

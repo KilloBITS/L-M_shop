@@ -17,19 +17,23 @@ router.get('/', function(req, res, next){
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
     const config = db.collection("CONFIG");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){      
-        config.find().toArray(function(err, resConf){      
-          res.render('panel/API_panel.ejs',{                    
-            sessionUser: resUsers[0],
-            noty: resNoty,
-            conf: resConf[0]
-          });
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){      
+          config.find().toArray(function(err, resConf){      
+            res.render('panel/API_panel.ejs',{                    
+              sessionUser: resUsers[0],
+              noty: resNoty,
+              conf: resConf[0],
+              msg: resMessage
+            });
+          }); 
         }); 
-      }); 
+      });    
     });    
   });      
 });

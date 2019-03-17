@@ -51,8 +51,6 @@ var Global = {
     $(".addToSravnenie").click(function(){
 
     });
-
-
     $( ".draggable" ).draggable({
       cursor: "crosshair"
     });
@@ -178,6 +176,9 @@ $(function() {
 // Back to top button
 (function() {
   $(document).ready(function() {
+    if($(window).height() < 800){
+      $('.menuLeft').css({"max-height":$(window).height() - 40 - $(".topLine.twoLine").height() - 60+"px"})
+    }
     $('.dropdown-toggle').click(function(){
       $(this).next('.dropdownsession').toggle();
     });

@@ -17,31 +17,34 @@ router.get('/*', function(req, res, next){
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
     const news = db.collection("NEWS");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
-          
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){          
           if(req.url.split('mode=')[1].split(',')[0] === 'edit'){
             news.find({AI: parseInt(req.url.split('mode=')[1].split(',')[1])}).toArray(function(err, resNews){
               console.log(resNews)
-               res.render('panel/addNews_panel.ejs',{                    
+              res.render('panel/addNews_panel.ejs',{                    
                 sessionUser: resUsers[0],
                 noty: resNoty,
                 newsData: resNews[0],
-                editMode: true            
+                editMode: true,
+                msg: resMessage
               });
             });           
           }else{
             res.render('panel/addNews_panel.ejs',{                    
               sessionUser: resUsers[0],
               noty: resNoty,              
-              editMode: false
+              editMode: false,
+              msg: resMessage
             });
-          }     
-         
-      }); 
+          }              
+        }); 
+      });    
     });    
   });      
 });

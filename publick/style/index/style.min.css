@@ -227,6 +227,7 @@
   }
   .mainTextDLG{
     font-size: 16px;
+    max-width: calc(100% - 30px);
   }
   .punktMapMenu {
     width: 48%;

@@ -37,6 +37,7 @@ app.use(bParser.raw({limit: '50mb'}));
 /* Global methods*/
 require('./controllers/system/controllerLanguage');
 require('./controllers/system/controllerDate');
+require('./controllers/system/controllerNotification');
 
 //User routes
 const index = require('./routes/getIndex');

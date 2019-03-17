@@ -17,20 +17,24 @@ router.get('/', function(req, res, next){
     const noty = db.collection("NOTIFICATION");
     const users = db.collection("USERS");
     const paydel = db.collection("PAYMENTANDDELIVERY");
+    const message = db.collection("MESSAGE");
 
     if(err) return console.log(err);
 
     noty.find().toArray(function(err, resNoty){
-      users.find({login: req.session.login}).toArray(function(err, resUsers){
-        paydel.find({login: req.session.login}).toArray(function(err, resPaydel){
-          res.render('panel/paydel_panel.ejs',{                    
-            sessionUser: resUsers[0],
-            noty: resNoty,
-            paydelData: resPaydel[0]             
+      message.find({availability: false}).toArray(function(err, resMessage){
+        users.find({login: req.session.login}).toArray(function(err, resUsers){
+          paydel.find({login: req.session.login}).toArray(function(err, resPaydel){
+            res.render('panel/paydel_panel.ejs',{                    
+              sessionUser: resUsers[0],
+              noty: resNoty,
+              paydelData: resPaydel[0],
+              msg: resMessage
+            });
           });
-        });
-      }); 
-    });    
+        }); 
+      });
+    });
   });      
 });
 
