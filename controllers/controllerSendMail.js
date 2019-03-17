@@ -3,30 +3,24 @@ const express = require("express");
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
-const nodemailer = require("nodemailer");
-var transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "message.from.the.site.lm@gmail.com",
-        pass: "makaron1488"
-    }
-});
-
-router.post("/sendMessage", function(req, res, next){
+router.post("/sendmessage", function(req, res, next){
   console.log(req.body)
+  mongoClient.connect(global.baseIP, function(err, client){
+    const db = client.db(global.baseName);
+    const msg = db.collection("MESSAGE");
 
-  let mailOptions = {
-        from: "message.from.the.site.lm@gmail.com", // sender address
-        to: "lm.store.shop@gmail.com", // list of receivers
-        subject: req.body.myTheme + "ОТ " + req.body.MyName, // Subject line
-        text:  req.body.message + "["+req.body.myEmail+"]", // plain text body
-        // html: SHABLON_MESSAGE // html body
-    };
+    if(err) return console.log(err);
 
-  // let ml = new mailOptions("message.from.the.site.lm@gmail.com", "lm.store.shop@gmail.com", req.body.myTheme, SHABLON_MESSAGE + "]");
-  transporter.sendMail(mailOptions, function (error, info) {
-    res.send({code:500, msg: "Сообщение отправлено"});
-  });
+    msg.find().sort({AI: -1}).limit(1).toArray(function(err, resTov){
+      var NEW_MESSAGE = req.body;
+      NEW_MESSAGE.AI = (resTov.length === 0)?0:parseInt(resTov[0].AI) + 1;               
+      NEW_MESSAGE.author = req.session.user;
+      NEW_MESSAGE.availability = false;
+      NEW_MESSAGE.date = global.getDate();
+      msg.insertOne(NEW_MESSAGE);  
+      res.send({code: 500, className: 'nSuccess', message: 'Сообщение успешно отправлено'});       
+    });   
+  });   
 });
 
 module.exports = router;

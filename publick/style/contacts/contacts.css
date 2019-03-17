@@ -266,14 +266,36 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0px 2px #e74c3c !important;
 }
 form #input-submit {
-  color: white;
-  background: #e74c3c;
-  cursor: pointer;
+    color: white;
+    background: #e74c3c;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: #c51162;
+    height: 45px;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
 }
 form #input-submit:hover {
   -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
   -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
   box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+
+form #input-submit .text {
+    left: 10px;
+    font-size: 22px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 45px;
+    font-family: 'Didact Gothic', sans-serif;
+    /* font-weight: 400; */
+    color: #f8bbd0;
+    /* text-transform: uppercase; */
+    margin: auto;
 }
 form textarea {
   height: 126px;

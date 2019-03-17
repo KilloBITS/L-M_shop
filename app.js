@@ -36,6 +36,7 @@ app.use(bParser.raw({limit: '50mb'}));
 
 /* Global methods*/
 require('./controllers/system/controllerLanguage');
+require('./controllers/system/controllerDate');
 
 //User routes
 const index = require('./routes/getIndex');
@@ -112,6 +113,9 @@ app.use('/privacepolicy-panel', admPrivacePolicy);
 app.use('/termsofuse-panel', admTermsOfUse);
 
 
+const podpiska = require('./controllers/controllerNewCallUserTovar');
+app.post('/getMessagesFromTovar', podpiska);
+
 const status = require('./controllers/system/controllerGetStatus');
 app.post('/getstatus', status);
 
@@ -125,7 +129,7 @@ const setStars = require('./controllers/controllerTovar');
 app.post('/setStars', setStars);
 
 const SendMail = require('./controllers/controllerSendMail');
-app.post('/sendMessage', SendMail);
+app.post('/sendmessage', SendMail);
 
 const getbasket = require('./controllers/controllerGetBasket');
 app.post('/getbasket', getbasket);

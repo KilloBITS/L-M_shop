@@ -1,91 +1,90 @@
 'use strict';
 var Index = {
   getCounters: true,
-  
   DESIGHN: function() {
     const updateTimer = (deadline) => {
-    const time = deadline - new Date();
-    return {
-      'days': Math.floor(time / (1000 * 60 * 60 * 24)),
-      'hours': Math.floor((time / (1000 * 60 * 60)) % 24),
-      'minutes': Math.floor((time / (1000 * 60)) % 60),
-      'seconds': Math.floor((time / (1000)) % 60),
-      'total': time
-    };
-  }
-
-  const animateClock = (span) => {
-    span.className = 'turn';
-    setTimeout(() => {
-      span.className = '';
-    }, 500);
-  }
-
-  const startTimer = (id, deadline) => {
-    const timeInterval = setInterval(() => {
-      const clock = document.getElementsByClassName(id)[0];
-      let timer = updateTimer(deadline);
-
-      clock.innerHTML =
-      '<span>' + timer.days + '</span>' +
-      '<span>' + timer.hours + '</span>' +
-      '<span>' + timer.minutes + '</span>' +
-      '<span>' + timer.seconds + '</span>';
-
-      const spans = clock.getElementsByTagName("span");
-      animateClock(spans[3]);
-      if (timer.seconds == 59) animateClock(spans[2]);
-      if (timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
-      if (timer.minutes == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
-
-
-        // check if deadline has passed
-        if (timer.total < 1) {
-          clearInterval(timeInterval);
-          clock.innerHTML =
-          '<span>0</span><span>0</span><span>0</span><span>0</span>';
-        }
-
-      }, 1000);
-  }
-
-  window.onload = () => {
-    const deadline = new Date("December 31, 2018 23:59:59");
-    startTimer("clockTimer", deadline)
-  };
-
-  $('#head_arrow').click(function(){
-    $('html,body').animate({
-      scrollTop: $('.content').height()
-    }, 1000);
-  });
-
-  lightGallery(document.getElementById('lightgallery'))
-  $('.buttonGallery').on('click',function(){
-    if($(this).attr('data-click-state') == 1) {
-      $(this).attr('data-click-state', 0);
-      $(this).html('Слайдер')
-      $('.carouselInsta').fadeOut(300);
-      $('.galleryInsta').fadeIn(300);
-    } else {
-      $(this).attr('data-click-state', 1)
-      $(this).html('Галерея')
-      $('.carouselInsta').fadeIn(300);
-      $('.galleryInsta').fadeOut(300);
+      const time = deadline - new Date();
+      return {
+        'days': Math.floor(time / (1000 * 60 * 60 * 24)),
+        'hours': Math.floor((time / (1000 * 60 * 60)) % 24),
+        'minutes': Math.floor((time / (1000 * 60)) % 60),
+        'seconds': Math.floor((time / (1000)) % 60),
+        'total': time
+      };
     }
-  });
 
-  $(window).scroll(function(){
-    $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
-  });
+    const animateClock = (span) => {
+      span.className = 'turn';
+      setTimeout(() => {
+        span.className = '';
+      }, 500);
+    }
+
+    const startTimer = (id, deadline) => {
+      const timeInterval = setInterval(() => {
+        const clock = document.getElementsByClassName(id)[0];
+        let timer = updateTimer(deadline);
+
+        clock.innerHTML =
+        '<span>' + timer.days + '</span>' +
+        '<span>' + timer.hours + '</span>' +
+        '<span>' + timer.minutes + '</span>' +
+        '<span>' + timer.seconds + '</span>';
+
+        const spans = clock.getElementsByTagName("span");
+        animateClock(spans[3]);
+        if (timer.seconds == 59) animateClock(spans[2]);
+        if (timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
+        if (timer.minutes == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
+
+
+          // check if deadline has passed
+          if (timer.total < 1) {
+            clearInterval(timeInterval);
+            clock.innerHTML =
+            '<span>0</span><span>0</span><span>0</span><span>0</span>';
+          }
+
+        }, 1000);
+    }
+
+    window.onload = () => {
+      const deadline = new Date("December 31, 2018 23:59:59");
+      startTimer("clockTimer", deadline)
+    };
+
+    $('#head_arrow').click(function(){
+      $('html,body').animate({
+        scrollTop: $('.content').height()
+      }, 1000);
+    });
+
+    lightGallery(document.getElementById('lightgallery'))
+    $('.buttonGallery').on('click',function(){
+      if($(this).attr('data-click-state') == 1) {
+        $(this).attr('data-click-state', 0);
+        $(this).html('Слайдер')
+        $('.carouselInsta').fadeOut(300);
+        $('.galleryInsta').fadeIn(300);
+      } else {
+        $(this).attr('data-click-state', 1)
+        $(this).html('Галерея')
+        $('.carouselInsta').fadeIn(300);
+        $('.galleryInsta').fadeOut(300);
+      }
+    });
+
+    $(window).scroll(function(){
+      $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
 
   setTimeout(function(){
     if($(window).width() < 800){
-    $(".header").height($(window).height() - 50 + 'px')
-  }else{
-    $(".header").height($(window).height() - 150 + 'px')
-  }
-},1500)
+      $(".header").height($(window).height() - 50 + 'px')
+    }else{
+      $(".header").height($(window).height() - 150 + 'px')
+    }
+  },1500)
 
   $(".searchBlock").hover(function() {
     $(".searchLine").css({
@@ -122,7 +121,6 @@ var Index = {
           obTitle.innerHTML = res[i].title;
           $(newObj).append(obTitle);
         }
-
       });
     } else {
       $(".search_result").fadeOut(150);

@@ -20,35 +20,22 @@ var Global = {
 
     }
   },
-  message: function(e){
+  submitmessage: function(){
     $("#input-submit").val('Отправка сообщения').css({"background-image":"../../../image/loaders/load2.gif"});
-    e.preventDefault(e);
-    var msg_data = {
-      MyName: $("#input-name").val(),
-      myEmail:$("#input-email").val(),
-      myTheme:$("#input-subject").val(),
-      message:$("#input-message").val(),
-    };
-    $.post('/sendMessage',msg_data, function(data){
-      if(
-        ($("#input-name").val().length > 1)||
-        ($("#input-email").val().length > 1)||
-        ($("#input-subject").val().length > 1)||
-        ($("#input-message").val().length > 1)){
-        createAlert('','Сообщение отправленно!','Ваше сообщение было успешно отправлено.','success',true,true,'pageMessages');
+    $.post('/sendmessage',{
+      a: $("#input-name").val(),
+      b: $("#input-email").val(),
+      c: $("#input-subject").val(),
+      d: $("#input-message").val()
+    }, function(res){
+      createAlert('','Сообщение отправленно!','Ваше сообщение было успешно отправлено.','success',true,true,'pageMessages');
       $(".cf input[type='text'],.cf input[type='email'], #input-message").val('');
-    }else{
-      createAlert('','','Сообщение не отправлено!','warning',false,true,'pageMessages');
-      return false
-    }
-
-    $("#input-submit").val('Отправить').attr('style','');
-  });
-  },
+      console.log(res);
+    });
+  },  
   BTN: function(){
     $('.menu-wrapper').on('click', function() {
       $('.hamburger-menu').toggleClass('animate');
-      // $('.twoLine').toggleClass('openMenuClass');
       $(".menu_data").hide();
       $(".twoLine").slideToggle();
     })

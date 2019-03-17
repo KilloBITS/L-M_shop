@@ -71,7 +71,11 @@
       <div class="half right cf">
         <textarea name="message" type="text" id="input-message" placeholder="<%= locale.youtext %>"></textarea>
       </div>
-      <input type="submit" value="<%= locale.sendmessage %>" id="input-submit" onclick="Global.message(event)">
+      <div class="send-button" id="input-submit" onclick="Global.submitmessage()">
+        <span class="text"><%= locale.sendmessage %></span>
+      </div>
+      
+      
     </form>
     <div class="zub_lineB" style=""></div>
   </div>
