@@ -35,15 +35,15 @@ var Global = {
         ($("#input-email").val().length > 1)||
         ($("#input-subject").val().length > 1)||
         ($("#input-message").val().length > 1)){
-          createAlert('','Сообщение отправленно!','Ваше сообщение было успешно отправлено.','success',true,true,'pageMessages');
-          $(".cf input[type='text'],.cf input[type='email'], #input-message").val('');
-      }else{
-        createAlert('','','Сообщение не отправлено!','warning',false,true,'pageMessages');
-        return false
-      }
+        createAlert('','Сообщение отправленно!','Ваше сообщение было успешно отправлено.','success',true,true,'pageMessages');
+      $(".cf input[type='text'],.cf input[type='email'], #input-message").val('');
+    }else{
+      createAlert('','','Сообщение не отправлено!','warning',false,true,'pageMessages');
+      return false
+    }
 
-      $("#input-submit").val('Отправить').attr('style','');
-    });
+    $("#input-submit").val('Отправить').attr('style','');
+  });
   },
   BTN: function(){
     $('.menu-wrapper').on('click', function() {
@@ -77,9 +77,9 @@ var Global = {
       location.reload();
     });
     if($("body").width() > 800){
-        return $(window).scrollTop() > 300 ? $(".logotype").css({"height":"50px"}) : $(".logotype").css({"height":"100px"}), $(window).scrollTop() > 600 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show");
+      return $(window).scrollTop() > 300 ? $(".logotype").css({"height":"50px"}) : $(".logotype").css({"height":"100px"}), $(window).scrollTop() > 600 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show");
     }else{
-        return $(window).scrollTop() > 600 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
+      return $(window).scrollTop() > 600 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
     }
   }
 };
@@ -191,6 +191,16 @@ $(function() {
 // Back to top button
 (function() {
   $(document).ready(function() {
+    $('.dropdown-toggle').click(function(){
+      $(this).next('.dropdownsession').toggle();
+    });
+
+    $(document).click(function(e) {
+      var target = e.target;
+      if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) {
+        $('.dropdownsession').hide();
+      }
+    });
 
 
     $(".menuBTN").hover(function() {
@@ -199,11 +209,11 @@ $(function() {
       } catch (e) {
         console.log('Есть небольшой конфликт, но это не критично');
       }
-        ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
-        if (ML != undefined) {
-          $("." + ML + ",.opensMenu").show();
-        }
-        
+      ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
+      if (ML != undefined) {
+        $("." + ML + ",.opensMenu").show();
+      }
+      
     }, function(e) {
       ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
       $(".opensMenu").hover(function() {}, function(e) {
@@ -233,8 +243,8 @@ $(function() {
   })
 }).call(this);
 var $messages = $('.messages-content'),
-    d, h, m,
-    i = 0;
+d, h, m,
+i = 0;
 $(document).ready(function(){
   Global.BTN();
   setTimeout(function() {

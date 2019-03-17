@@ -39,6 +39,7 @@
 </head>
 <body>
   <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
   <div class="top">
    <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -49,11 +50,7 @@
     <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
     <div class="topNavBlockOfBtm">
      <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
-     <% if(sessionUser !== undefined){ %>
-     <a href="/profile"><div class="userAccountInBlock"></div></a>
-     <% } else { %>
-     <a href="/login"><div class="logInBlock"></div></a>
-     <% } %>
+     <%- include ./includes/session.ejs %>
      <div class="basketBlock">
       <span>0</span>
     </div>
@@ -64,17 +61,17 @@
 
 <div class="col-md-12 col-sm-12">
   <h1 style="text-align: center;"><%= locale.title %></h1>
-    <div class="DATAPP"></div>
-    <textarea id="PPTEXTAREA" style="display: none;"><%= locale.text %></textarea>
-    <script type="text/javascript">
-      $('.DATAPP').append($('#PPTEXTAREA').val())
-    </script>
-    <a href="/documents/TermsOfUse.pdf" target="_black">
-      <div class="downloadPdfFile">
-        <%= locale.download %> PDF
-      </div>
-    </a>
-  </div>
-  <%- include ./includes/footer.ejs %>
+  <div class="DATAPP"></div>
+  <textarea id="PPTEXTAREA" style="display: none;"><%= locale.text %></textarea>
+  <script type="text/javascript">
+    $('.DATAPP').append($('#PPTEXTAREA').val())
+  </script>
+  <a href="/documents/TermsOfUse.pdf" target="_black">
+    <div class="downloadPdfFile">
+      <%= locale.download %> PDF
+    </div>
+  </a>
+</div>
+<%- include ./includes/footer.ejs %>
 </body>
 </html>

@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title>≡ <%= locale.title %> </title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-   <script src="assets/js/pace.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <title>≡ <%= locale.title %> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <script src="assets/js/pace.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="/style/global.css">
-	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
   <link rel="stylesheet" type="text/css" href="/style/tovar/tovar.css">
-	<link rel="stylesheet" type="text/css" href="/style/tovar/tovar.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/tovar/tovar.min.css">
 
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
@@ -29,35 +29,31 @@
   <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/tovar/tovar.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 <body>
-<%- include ./includes/preloader.ejs %>
-<div class="top">
-	<div class="topLine oneLine">
+  <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
+  <div class="top">
+   <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
       <div class="menu-wrapper">
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
-		<div class="topNavBlockOfBtm">
-			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
-      <% if(sessionUser !== undefined){ %>
-        <a href="/profile"><div class="userAccountInBlock"></div></a>
-      <% } else { %>
-        <a href="/login"><div class="logInBlock"></div></a>
-      <% } %>
-			<div class="basketBlock">
-        <span>0</span>
-      </div>
-		</div>
-	</div>
-  <%- include ./includes/menu.ejs %>
+    <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
+    <div class="topNavBlockOfBtm">
+     <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
+     <%- include ./includes/session.ejs %>
+     <div class="basketBlock">
+      <span>0</span>
+    </div>
+  </div>
 </div>
-
+<%- include ./includes/menu.ejs %>
+</div>
 <div class="content tovar">
 	<div class="tovar_data">
     <div class="container">
@@ -78,163 +74,161 @@
       </div>
       <div id="products" class="row list-group">
         <% for(var i = 0; i < tovarArr.length; i++) { %>
-          <% if(tovarArr[i].availability) { %>
-          <a href="/details?tov=<%= tovarArr[i].AI %>&<%= tovarArr[i].type %>">
+        <% if(tovarArr[i].availability) { %>
+        <a href="/details?tov=<%= tovarArr[i].AI %>&<%= tovarArr[i].type %>">
           <div class="item  col-xs-4 col-lg-4 grid-group-item">
-              <div class="thumbnail" data-ix="scale-on-scroll-delay-100">
-                <div class="vendor"><%= tovarArr[i].vendorCode %></div>
-                <div class="isView"></div>
-                <% if(isAdm){ %>
-                  <div class="visible_length" title="Количевство просмотров"><%= locale.viewers %>: <%= tovarArr[i].views %></div>
-                <% } %>
+            <div class="thumbnail" data-ix="scale-on-scroll-delay-100">
+              <div class="vendor"><%= tovarArr[i].vendorCode %></div>
+              <div class="isView"></div>
+              <% if(isAdm){ %>
+              <div class="visible_length" title="Количевство просмотров"><%= locale.viewers %>: <%= tovarArr[i].views %></div>
+              <% } %>
 
-                <% if(tovarArr[i].sale[0] === 'true' && tovarArr[i].sale[1] !== ''){ %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 5){ %>
-                    <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 10){ %>
-                    <div class="ribbon ribbon--purple"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 15){ %>
-                    <div class="ribbon  ribbon--blue"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 20){ %>
-                    <div class="ribbon  ribbon--green"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 30){ %>
-                    <div class="ribbon  ribbon--yellow"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 40){ %>
-                    <div class="ribbon  ribbon--orange"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                  <% if(parseInt(tovarArr[i].sale[1]) === 50){ %>
-                    <div class="ribbon  ribbon--red">Ски<%= locale.discount %>дка <%= tovarArr[i].sale[1] %> %</div>
-                  <% } %>
-                <% } %>
-                  <div class="water_icon"></div>
-                  <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
-                  <script type="text/javascript">
-                    var image = new Image();
-                    image.onload = function () {
-                        $("#imageOf<%= tovarArr[i].AI %>").attr('src', "<%= tovarArr[i].images[0] %>");                       
-                    }
-                    image.onerror = function () {                       
-                        $("#imageOf<%= tovarArr[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
-                    }
-                    image.src = "<%= tovarArr[i].images[0] %>";
-                  </script>
+              <% if(tovarArr[i].sale[0] === 'true' && tovarArr[i].sale[1] !== ''){ %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 5){ %>
+              <div class="ribbon">Скидка <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 10){ %>
+              <div class="ribbon ribbon--purple"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 15){ %>
+              <div class="ribbon  ribbon--blue"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 20){ %>
+              <div class="ribbon  ribbon--green"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 30){ %>
+              <div class="ribbon  ribbon--yellow"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 40){ %>
+              <div class="ribbon  ribbon--orange"><%= locale.discount %> <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% if(parseInt(tovarArr[i].sale[1]) === 50){ %>
+              <div class="ribbon  ribbon--red">Ски<%= locale.discount %>дка <%= tovarArr[i].sale[1] %> %</div>
+              <% } %>
+              <% } %>
+              <div class="water_icon"></div>
+              <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
+              <script type="text/javascript">
+                var image = new Image();
+                image.onload = function () {
+                  $("#imageOf<%= tovarArr[i].AI %>").attr('src', "<%= tovarArr[i].images[0] %>");                       
+                }
+                image.onerror = function () {                       
+                  $("#imageOf<%= tovarArr[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
+                }
+                image.src = "<%= tovarArr[i].images[0] %>";
+              </script>
 
-                  <div class="caption">
-                    <div class="blockOfNavBtn">
-                      <% if(sessionUser !== undefined){ %>
-                        <% if( sessionUser.desires.indexOf(tovarArr[i].AI) === -1){ %>
-                          <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[i].AI %>">
-                        <% } else { %>
-                          <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[i].AI %>" style="background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU3Ljk5OSA1Ny45OTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU3Ljk5OSA1Ny45OTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNTYuNDE3LDIxLjgxNmMtMi4wMzcsMi4wODktMjMuNDc5LDIyLjUxLTIzLjQ3OSwyMi41MUMzMS44NSw0NS40NDEsMzAuNDI0LDQ2LDI4Ljk5OSw0NiAgIGMtMS40MjgsMC0yLjg1NC0wLjU1OS0zLjkzOS0xLjY3NGMwLDAtMjEuNDQxLTIwLjQyMS0yMy40OC0yMi41MWMtMi4wMzctMi4wOS0yLjE3Ni01Ljg0OCwwLTguMDc4ICAgYzIuMTc0LTIuMjI5LDUuMjExLTIuNDA2LDcuODc5LDBsMTkuNTQsMTguNzM1bDE5LjUzOS0xOC43MzVjMi42Ny0yLjQwNiw1LjcwNS0yLjIyOSw3Ljg3OSwwICAgQzU4LjU5NSwxNS45NjksNTguNDU2LDE5LjcyNyw1Ni40MTcsMjEuODE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)">
-                        <% } %>
-                          <span><%= locale.addToJelaniya %></span>
-                        </div>
-                        <div class="BIG_BTN addToSravnenie">
-                          <span><%= locale.addToSravnenie %></span>
-                        </div>
+              <div class="caption">
+                <div class="blockOfNavBtn">
+                  <% if(sessionUser !== undefined){ %>
+                  <% if( sessionUser.desires.indexOf(tovarArr[i].AI) === -1){ %>
+                  <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[i].AI %>">
+                    <% } else { %>
+                    <div class="BIG_BTN addToJelaniya" tovAI="<%= tovarArr[i].AI %>" style="background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU3Ljk5OSA1Ny45OTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU3Ljk5OSA1Ny45OTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNTYuNDE3LDIxLjgxNmMtMi4wMzcsMi4wODktMjMuNDc5LDIyLjUxLTIzLjQ3OSwyMi41MUMzMS44NSw0NS40NDEsMzAuNDI0LDQ2LDI4Ljk5OSw0NiAgIGMtMS40MjgsMC0yLjg1NC0wLjU1OS0zLjkzOS0xLjY3NGMwLDAtMjEuNDQxLTIwLjQyMS0yMy40OC0yMi41MWMtMi4wMzctMi4wOS0yLjE3Ni01Ljg0OCwwLTguMDc4ICAgYzIuMTc0LTIuMjI5LDUuMjExLTIuNDA2LDcuODc5LDBsMTkuNTQsMTguNzM1bDE5LjUzOS0xOC43MzVjMi42Ny0yLjQwNiw1LjcwNS0yLjIyOSw3Ljg3OSwwICAgQzU4LjU5NSwxNS45NjksNTguNDU2LDE5LjcyNyw1Ni40MTcsMjEuODE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)">
+                      <% } %>
+                      <span><%= locale.addToJelaniya %></span>
+                    </div>
+                    <div class="BIG_BTN addToSravnenie">
+                      <span><%= locale.addToSravnenie %></span>
+                    </div>
+                    <% } %>
+                  </div>
+                  <fieldset class="rating">
+                    <input type="radio" id="star5_<%= i %>" name="rating_<%= i %>" value="5" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star5_<%= i %>" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4_<%= i %>" name="rating_<%= i %>" value="4" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star4_<%= i %>" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="3" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star3_<%= i %>" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="2" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star2_<%= i %>" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1_<%= i %>" name="rating_<%= i %>" value="1" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star1_<%= i %>" title="Sucks big time - 1 star"></label>
+                    <script>
+                      $("#star"+Math.round(parseInt(<%= tovarArr[i].popular %>) / parseInt(<%= tovarArr[i].popularUser %>))+"_<%= i %>").attr("checked","checked")
+                    </script>
+                  </fieldset>
+                  <h4 class="group inner list-group-item-heading"><%= tovarArr[i].title[numLang] %></h4>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                      <% if(tovarArr[i].sale[0] === 'true'){ %>
+                      <p class="lead" style="text-decoration: line-through"><%= tovarArr[i].price %> <%= locale.valute %></p>
+                      <p class="lead2" style="color: red"><%= parseInt(tovarArr[i].price - tovarArr[i].price / 100 * parseInt(tovarArr[i].sale[1])) %> <%= locale.valute %></p>
+                      <% } else { %>
+                      <p class="lead"><%= tovarArr[i].price %> <%= locale.valute %></p>
                       <% } %>
                     </div>
-                    <fieldset class="rating">
-                        <input type="radio" id="star5_<%= i %>" name="rating_<%= i %>" value="5" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star5_<%= i %>" title="Awesome - 5 stars"></label>
-                        <input type="radio" id="star4_<%= i %>" name="rating_<%= i %>" value="4" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star4_<%= i %>" title="Pretty good - 4 stars"></label>
-                        <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="3" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star3_<%= i %>" title="Meh - 3 stars"></label>
-                        <input type="radio" id="star3_<%= i %>" name="rating_<%= i %>" value="2" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star2_<%= i %>" title="Kinda bad - 2 stars"></label>
-                        <input type="radio" id="star1_<%= i %>" name="rating_<%= i %>" value="1" /><label class = "full" tovid="<%= tovarArr[i].AI %>" for="star1_<%= i %>" title="Sucks big time - 1 star"></label>
-                        <script>
-                          $("#star"+Math.round(parseInt(<%= tovarArr[i].popular %>) / parseInt(<%= tovarArr[i].popularUser %>))+"_<%= i %>").attr("checked","checked")
-                        </script>
-                    </fieldset>
-                      <h4 class="group inner list-group-item-heading"><%= tovarArr[i].title[numLang] %></h4>
-                      <div class="row">
-                          <div class="col-xs-12 col-md-6">
-                            <% if(tovarArr[i].sale[0] === 'true'){ %>
-                              <p class="lead" style="text-decoration: line-through"><%= tovarArr[i].price %> <%= locale.valute %></p>
-                              <p class="lead2" style="color: red"><%= parseInt(tovarArr[i].price - tovarArr[i].price / 100 * parseInt(tovarArr[i].sale[1])) %> <%= locale.valute %></p>
-                            <% } else { %>
-                              <p class="lead"><%= tovarArr[i].price %> <%= locale.valute %></p>
-                            <% } %>
-                          </div>
-                          <div class="col-xs-12 col-md-6">
-                              <a class="btn btn-success" onclick="setBasket('<%= tovarArr[i].AI %>', <%= i %>)"><%= locale.tobasket %></a>
-                          </div>
-                      </div>
+                    
                   </div>
+                </div>
               </div>
               <div class="getSuccess">
                 <svg width="98" height="98" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                	 viewBox="0 0 98 98" style="enable-background:new 0 0 98 98;" xml:space="preserve">
+                viewBox="0 0 98 98" style="enable-background:new 0 0 98 98;" xml:space="preserve">
 
-                	<line class="line1" x1="32.6" y1="54.5" x2="45.8" y2="71.6"/>
-                	<line class="line2" x1="72.4" y1="29.5" x2="46" y2="71.6"/>
+                <line class="line1" x1="32.6" y1="54.5" x2="45.8" y2="71.6"/>
+                <line class="line2" x1="72.4" y1="29.5" x2="46" y2="71.6"/>
 
-                	<circle class="circle" cx="49.1" cy="49.1" r="47.1"/>
+                <circle class="circle" cx="49.1" cy="49.1" r="47.1"/>
 
-                </svg>
-                <span><%= locale.addedby %></span>
-              </div>
-              <div class="getError">
-                <span><%= locale.addedby %></span>
-              </div>
+              </svg>
+              <span><%= locale.addedby %></span>
+            </div>
+            <div class="getError">
+              <span><%= locale.addedby %></span>
+            </div>
           </div>
           <% } %>
-          </a>
+        </a>
         <% } %>
       </div>
 
 
       <% if(tovarArr.length === 0){ %>
-          <div class="NONE_TOVAR"><%= locale.notovar %></div>
+      <div class="NONE_TOVAR"><%= locale.notovar %></div>
       <% } %>
     </div>
 
     <% if(offLength > 18){ %>
-      <div id="pagination"></div>
-      <script type="text/javascript">
-        (function() {
-            var translations = {
-                'PREVIOUS' : '<',
-                'NEXT' : '>',
-                'FIRST' : '<<',
-                'LAST' : '>>',
-                'CURRENT_PAGE_REPORT' : 'Показано от {FromResult} до {ToResult} из {TotalResult} товаров'
-            };
-            var paginator = new pagination.ItemPaginator({prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: parseInt(<%= paginate.totalResult %>)-1, translator : function(str) {
-                  return translations[str];
-              }
-            });
-            var html = paginator.render();
-            var paginator = pagination.create('search', {prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: parseInt(<%= paginate.totalResult %>)-1, translator : function(str) {
-                  return translations[str];
-              }
-            });
-            console.log(paginator)
-            html += paginator.render();
-            document.getElementById("pagination").innerHTML = html;
-            $("#pagination .paginator:eq(0) a, #pagination .paginator:eq(0) .paginator-first, #pagination .paginator:eq(0) .paginator-previous").remove();
-        })();
-        </script>
+    <div id="pagination"></div>
+    <script type="text/javascript">
+      (function() {
+        var translations = {
+          'PREVIOUS' : '<',
+          'NEXT' : '>',
+          'FIRST' : '<<',
+          'LAST' : '>>',
+          'CURRENT_PAGE_REPORT' : 'Показано от {FromResult} до {ToResult} из {TotalResult} товаров'
+        };
+        var paginator = new pagination.ItemPaginator({prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: parseInt(<%= paginate.totalResult %>)-1, translator : function(str) {
+          return translations[str];
+        }
+      });
+        var html = paginator.render();
+        var paginator = pagination.create('search', {prelink: '<%= paginate.prelink %>', slashSeparator: false, current: <%= paginate.current %>, rowsPerPage: 18, totalResult: parseInt(<%= paginate.totalResult %>)-1, translator : function(str) {
+          return translations[str];
+        }
+      });
+        console.log(paginator)
+        html += paginator.render();
+        document.getElementById("pagination").innerHTML = html;
+        $("#pagination .paginator:eq(0) a, #pagination .paginator:eq(0) .paginator-first, #pagination .paginator:eq(0) .paginator-previous").remove();
+      })();
+    </script>
     <% } %>
 
-      <div class="container_partnersNum">
-        <div class="loadersNEW" id="loaderNumber"></div>
-        <div class="zub_line"></div>
-        <div class="mainDLG" style="color: white;">
-          <div class="mainTitleDLG"><%= locale.nopropsales %></div>
-          <div class="mainTextDLG"><%= locale.nopropsalestxt %></div>
-        </div>
+    <div class="container_partnersNum">
+      <div class="loadersNEW" id="loaderNumber"></div>
+      <div class="zub_line"></div>
+      <div class="mainDLG" style="color: white;">
+        <div class="mainTitleDLG"><%= locale.nopropsales %></div>
+        <div class="mainTextDLG"><%= locale.nopropsalestxt %></div>
+      </div>
 
-        <div class="number_send_block">
-          <input type="email" class="number_phone" id="inputPodpiska" placeholder="<%= locale.youemail %>">
-          <button id="sendPodpiska" onclick="TOVAR.sendMyEmail()"><%= locale.SUBSCRIBE %></button>
-        </div>
+      <div class="number_send_block">
+        <input type="email" class="number_phone" id="inputPodpiska" placeholder="<%= locale.youemail %>">
+        <button id="sendPodpiska" onclick="TOVAR.sendMyEmail()"><%= locale.SUBSCRIBE %></button>
       </div>
     </div>
   </div>
+</div>
 </div>
 <%- include ./includes/footer.ejs %>
 <%- include ./includes/basket.ejs %>
@@ -262,13 +256,13 @@
        <a href="#" title="Minimize">&mdash;</a><br>
        <a href="#" title="End Chat">&#10005;</a>
      </span>
-    </div>
-  </div>
-  <div class="agent-face">
-    <div class="half">
-     <img class="agent circle" src="../../../image/chatbot.jpg" alt=">Юля"></div>
-  </div>
-<div class="chat">
+   </div>
+ </div>
+ <div class="agent-face">
+  <div class="half">
+   <img class="agent circle" src="../../../image/chatbot.jpg" alt=">Юля"></div>
+ </div>
+ <div class="chat">
   <div class="close_chat"></div>
   <div class="chat-title">
     <h1>ЮЛЯ</h1>
@@ -282,10 +276,10 @@
     <button type="submit" class="message-submit">Send</button>
   </div>
 </div>
-  </div>
+</div>
 <!--<div class="bg"></div>-->
 
 
-  <script type="text/javascript" src="/script/webflow.js"></script>
+<script type="text/javascript" src="/script/webflow.js"></script>
 </body>
 </html>

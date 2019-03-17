@@ -1,0 +1,15 @@
+.about_block{
+	padding-top: 50px;
+    max-width: 1024px;
+    margin: auto;
+    padding-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.container_map {
+    background: #ffc9df;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+}

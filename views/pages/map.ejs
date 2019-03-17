@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title>Карта сайта</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <title>Карта сайта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
@@ -14,64 +14,61 @@
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
   <link rel="stylesheet" type="text/css" href="/style/map/style.css">
-	<link rel="stylesheet" type="text/css" href="/style/map/style.min.css">
-	<!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"> -->
-	<script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style/map/style.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"> -->
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 <body>
-<%- include ./includes/preloader.ejs %>
-<div class="top">
-  <div class="topLine oneLine">
-    <div class="topNavMobMenuOfBtm">
-      <div class="menu-wrapper">
-        <div class="hamburger-menu"></div>
+  <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
+  <div class="top">
+    <div class="topLine oneLine">
+      <div class="topNavMobMenuOfBtm">
+        <div class="menu-wrapper">
+          <div class="hamburger-menu"></div>
+        </div>
+      </div>
+      <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
+      <div class="topNavBlockOfBtm">
+        <%- include ./includes/session.ejs %>
+        <div class="basketBlock">
+          <span>0</span>
+        </div>
       </div>
     </div>
-    <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
-    <div class="topNavBlockOfBtm">
-      <% if(sessionUser !== undefined){ %>
-        <a href="/profile"><div class="userAccountInBlock"></div></a>
-      <% } else { %>
-        <a href="/login"><div class="logInBlock"></div></a>
-      <% } %>
-      <div class="basketBlock">
-        <span>0</span>
-      </div>
-    </div>
+    <%- include ./includes/menu.ejs %>
   </div>
-  <%- include ./includes/menu.ejs %>
-</div>
-<div class="content">
-  <div class="map_content">
-    <% for(var i = 0; i < menu.length; i++) { %>
+  <div class="content">
+    <div class="map_content">
+      <% for(var i = 0; i < menu.length; i++) { %>
       <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-          <div class="mapPoint bigLinePoint"><%= menu[i].name[numLang] %></div>
-          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-            <a href="<%= menu[i].podlink[il].plink %>">
-              <% if(menu[i].podlink[il].pname !== undefined){ %>
-              <div class="mapPoint2">• <%= menu[i].podlink[il].pname[numLang] %> </div>
-              <% } %>
-            </a>
-          <% } %>
-      <% } else { %>
-        <a href="<%= menu[i].glink %>" class="bigLinePoint">
-          <div class="mapPoint"><%= menu[i].name[numLang] %></div>
-        </a>
+      <div class="mapPoint bigLinePoint"><%= menu[i].name[numLang] %></div>
+      <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+      <a href="<%= menu[i].podlink[il].plink %>">
+        <% if(menu[i].podlink[il].pname !== undefined){ %>
+        <div class="mapPoint2">• <%= menu[i].podlink[il].pname[numLang] %> </div>
+        <% } %>
+      </a>
       <% } %>
-    <% } %>
+      <% } else { %>
+      <a href="<%= menu[i].glink %>" class="bigLinePoint">
+        <div class="mapPoint"><%= menu[i].name[numLang] %></div>
+      </a>
+      <% } %>
+      <% } %>
+    </div>
   </div>
-</div>
-<%- include ./includes/footer.ejs %>
-<%- include ./includes/basket.ejs %>
-<div id="pageMessages"></div>
+  <%- include ./includes/footer.ejs %>
+  <%- include ./includes/basket.ejs %>
+  <div id="pageMessages"></div>
 </body>
 </html>

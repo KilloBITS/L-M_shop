@@ -2,22 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title><%= locale.title %></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <title><%= locale.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="/style/animate.min.css">
   <link rel="stylesheet" type="text/css" href="/style/leaflet/leaflet.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 
   <link rel="stylesheet" type="text/css" href="/style/global.css">
-	<link rel="stylesheet" type="text/css" href="/style/global.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/global.min.css">
 
   <link rel="stylesheet" type="text/css" href="/style/contacts/contacts.css">
-	<link rel="stylesheet" type="text/css" href="/style/contacts/contacts.min.css">
+  <link rel="stylesheet" type="text/css" href="/style/contacts/contacts.min.css">
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
@@ -27,36 +27,33 @@
   <script type="text/javascript" src="script/jquery.noisy.min.js"></script>
   <script type="text/javascript" src="/script/maskinput.js"></script>
   <script type="text/javascript" src="script/contacts/contacts.js"></script>
-	<script type="text/javascript" src="script/global.js"></script>
+  <script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 <body>
-<%- include ./includes/preloader.ejs %>
-<div class="top">
-	<div class="topLine oneLine">
+  <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
+  <div class="top">
+   <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
       <div class="menu-wrapper">
         <div class="hamburger-menu"></div>
       </div>
     </div>
-		<div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
-		<div class="topNavBlockOfBtm">
-      <% if(sessionUser !== undefined){ %>
-        <a href="/profile"><div class="userAccountInBlock"></div></a>
-      <% } else { %>
-        <a href="/login"><div class="logInBlock"></div></a>
-      <% } %>
+    <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
+    <div class="topNavBlockOfBtm">
+      <%- include ./includes/session.ejs %>
       <div class="basketBlock">
         <span>0</span>
       </div>
-			<a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
-		</div>
-	</div>
+      <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
+    </div>
+  </div>
   <%- include ./includes/menu.ejs %>
 </div>
 <div class="content">

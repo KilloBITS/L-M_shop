@@ -11,7 +11,7 @@ const request = require("request");
 const app = express();
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
-const analytics = require('node-analytics');
+// const analytics = require('node-analytics');
 
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
@@ -24,7 +24,6 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
     }
 }));
-
 
 //project libs use
 app.use(bParser.urlencoded({limit: '50mb'}));
@@ -55,6 +54,7 @@ const termsofuse = require('./routes/getTermsofuse');
 const pp = require('./routes/getPrivacyPolicy');
 const dap = require('./routes/getDAP');
 const map = require('./routes/getSiteOfMap');
+const about = require('./routes/getAbout');
 
 app.use('/', index);
 app.use('/shop*', tovar);
@@ -71,6 +71,7 @@ app.use('/termsofuse', termsofuse);
 app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
+app.use('/about', about);
 
 
 //Admin routes
@@ -111,8 +112,8 @@ app.use('/privacepolicy-panel', admPrivacePolicy);
 app.use('/termsofuse-panel', admTermsOfUse);
 
 
-
-
+const status = require('./controllers/system/controllerGetStatus');
+app.post('/getstatus', status);
 
 const search = require('./controllers/controllerSearch');
 app.post('/search', search);

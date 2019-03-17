@@ -79,11 +79,13 @@ var Index = {
     $(".arrowsss").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
-  if($(window).width() < 800){
+  setTimeout(function(){
+    if($(window).width() < 800){
     $(".header").height($(window).height() - 50 + 'px')
   }else{
     $(".header").height($(window).height() - 150 + 'px')
   }
+},1500)
 
   $(".searchBlock").hover(function() {
     $(".searchLine").css({
@@ -262,19 +264,16 @@ var Index = {
     changeSlides();
   });
   var STC;
-    // $(document).scroll(function (event) {
-    // var scroll = $(document).scrollTop();
-    //     if(scroll >= 1000 && Index.getCounters){
-    //       Index.getCounters = false;
-    $.post('/counters', function(res){
-      $(".counters_length:eq(0)").html(417)
+
+    $.post('/getstatus', function(res){
+      console.log(res)
+      $(".counters_length:eq(0)").html(res.a)
       $(".counters_length:eq(1)").html(res.b)
-      $(".counters_length:eq(3)").html(res.d)
-      $(".counters_length:eq(2)").html(385)
+      $(".counters_length:eq(3)").html(res.c)
+      $(".counters_length:eq(2)").html(res.d)
       $("#products2").html(res.b)
     });
-    //     }
-    // });
+
   },
   INIT: function() {
     Index.DESIGHN();

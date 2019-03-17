@@ -1,0 +1,17 @@
+<% if(sessionUser !== undefined){ %>
+
+<nav>
+	<div class="dropdown-toggle userAccountInBlock"></div>
+	<ul class="dropdownsession">
+		<li>
+			<a href="/profile" title="<%= locale.profile %>">Профиль</a>
+		</li>
+		<li>
+			<a href="/logout" title="<%= locale.profile %>">Выход</a>
+		</li>
+	</ul>
+</nav>	
+
+<% } else { %>
+<a href="/login" title="<%= locale.signin %>"><div class="logInBlock"></div></a>
+<% } %>

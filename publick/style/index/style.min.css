@@ -1,11 +1,26 @@
 @font-face {
-    font-family: 'Didact Gothic';
-    src: url('../DidactGothic.ttf');
+  font-family: 'Didact Gothic';
+  src: url('../DidactGothic.ttf');
+}
+
+@media screen and (min-width: 1580px) {
+  .background::before {
+    width: 1200px;
+    transform: rotate(7deg);
+  }
+
+  .background::after {
+    width: 1200px;
+    transform: rotate(-7deg);
+  }
 }
 
 @media screen and (max-width: 936px) {
   .menuBTN {
     font-size: 14px;
+  }
+  .background {
+    height: 110px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -28,18 +43,18 @@
     background-position: 2px center;
   }
   .demo-gallery > ul > li a > img {
-      width: 120px;
+    width: 120px;
   }
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     max-height: 236px;
   }
   body{
-      margin-top: 60px;
+    margin-top: 60px;
   }
 
   .header {
-      height: 260px;
-      position: relative;
+    height: 260px;
+    position: relative;
   }
 
   .countersB{
@@ -51,7 +66,7 @@
   }
 
   .snow__item{
-      display: none;
+    display: none;
   }
 
   .topNavMobMenuOfBtm{
@@ -97,15 +112,15 @@
     padding: 0px 0px 30px 0px;
   }
   .slide__text-link {
-      z-index: 5;
-      display: inline-block;
-      position: relative;
-      padding: 0.5rem;
-      cursor: pointer;
-      font-family: 'Didact Gothic', sans-serif; "Open Sans", Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      -webkit-perspective: 1000px;
-      perspective: 1000px;
+    z-index: 5;
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: 'Didact Gothic', sans-serif; "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
   }
   .slide__text-heading {
     font-size: 24px;
@@ -148,12 +163,12 @@
     background: rgba(255, 255, 255, 0);
   }
   .mainTitleDLG, .mainTextDLG {
-      width: fit-content;
-      width: -moz-fit-content;
-      margin: 0 auto;
-      font-size: 26px;
-      padding-bottom: 30px;
-      text-align: center;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    font-size: 26px;
+    padding-bottom: 30px;
+    text-align: center;
   }
   .slide__bg {
     background-size: cover;
@@ -197,51 +212,51 @@
     min-height: 0px;
   }
   .siteMap {
-      height: auto;
+    height: auto;
   }
   .mapmap {
-      height: auto;
+    height: auto;
   }
   .LBB, .CBB, .RBB {
-      width: 100%;
-      display: inline-block;
+    width: 100%;
+    display: inline-block;
   }
   .RBB {
-      float: initial;
-      text-align: center;
+    float: initial;
+    text-align: center;
   }
   .mainTextDLG{
     font-size: 16px;
   }
   .punktMapMenu {
-      width: 48%;
-      display: inherit;
-      text-align: center;
-      border-bottom:0;
+    width: 48%;
+    display: inherit;
+    text-align: center;
+    border-bottom:0;
   }
   .adressLineMap {
-      text-align: center;
+    text-align: center;
   }
   .container {
-      max-width: 800px;
-      min-width: 0;
-      margin: 0 auto;
+    max-width: 800px;
+    min-width: 0;
+    margin: 0 auto;
   }
   .container .column {
-      width: 100%;
-      padding: 0 8px;
-      -webkti-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-bottom: 20px;
+    width: 100%;
+    padding: 0 8px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 20px;
   }
   .openMenuClass{
     display: block;
   }
 
   .slide__text {
-      padding-bottom: 50px;
-      height: auto;
+    padding-bottom: 50px;
+    height: auto;
   }
   .prevSliderBtn, .nextSliderBtn{
     display: none;
@@ -251,28 +266,28 @@
     z-index: 1;
   }
   .carousel-wrapper .carousel .carousel-cell {
-      padding: 10px;
-      background-color: #FFFFFF;
-      width: 58%;
-      height: auto;
-      min-width: 140px;
-      margin: 0 20px;
-      transition: transform 500ms ease;
-      border: 1px solid silver;
-      border-radius: 6px;
-      box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57);
-      height: 230px;
-      overflow: hidden;
+    padding: 10px;
+    background-color: #FFFFFF;
+    width: 58%;
+    height: auto;
+    min-width: 140px;
+    margin: 0 20px;
+    transition: transform 500ms ease;
+    border: 1px solid silver;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57);
+    height: 230px;
+    overflow: hidden;
   }
   .flickity-prev-next-button {
-      position: absolute;
-      top: 50%;
-      width: 28px;
-      height: 44px;
-      border: none;
-      cursor: pointer;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   .flickity-prev-next-button.next {
@@ -359,14 +374,14 @@
     position: relative;
   }
   .LBB {
-      display: none;
+    display: none;
   }
   .swiper-button-next, .swiper-button-prev {
-      top: auto;
-      bottom: 50%;
+    top: auto;
+    bottom: 50%;
   }
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-      right: 70px;
-      left: 10px;
+    right: 70px;
+    left: 10px;
   }
 }

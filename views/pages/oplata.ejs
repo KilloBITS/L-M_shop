@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title><%= locale.title %></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
+  <title><%= locale.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic|Fira+Sans+Extra+Condensed|PT+Mono|Yanone+Kaffeesatz" rel="stylesheet">
   
   <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/flickity.min.css">
@@ -14,78 +14,75 @@
   <link rel="stylesheet" type="text/css" href="/style/global.css">
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
   <link rel="stylesheet" type="text/css" href="/style/oplata/oplata.css">
-	<link rel="stylesheet" type="text/css" href="/style/oplata/oplata.min.css">
-	<!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"> -->
-	<script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style/oplata/oplata.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"> -->
+  <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="/script/maskinput.js"></script>
-	<script type="text/javascript" src="script/oplata/oplata.js"></script>
+  <script type="text/javascript" src="script/oplata/oplata.js"></script>
   <script type="text/javascript" src="script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 <body>
-<%- include ./includes/preloader.ejs %>
-<div class="top">
-  <div class="topLine oneLine">
-    <div class="topNavMobMenuOfBtm">
-      <div class="menu-wrapper">
-        <div class="hamburger-menu"></div>
-      </div>
-    </div>
-    <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
-    <div class="topNavBlockOfBtm">
-      <% if(sessionUser !== undefined){ %>
-        <a href="/profile"><div class="userAccountInBlock"></div></a>
-      <% } else { %>
-        <a href="/login"><div class="logInBlock"></div></a>
-      <% } %>
-      <div class="basketBlock">
-        <span>0</span>
-      </div>
-    </div>
-  </div>
-  <%- include ./includes/menu.ejs %>
-</div>
-
-<div class="content">
-<div class="vector_head">
-  <img src="../../../data/oplata/PAGE_TITLE.jpg">
-</div>
-<div class="title_head max1024 bigtext">
-  <%= locale.theme %>
-</div>
-
-<div class="OPLATA_TITLE  max1024"><%= locale.minTitle1 %></div>
-<ul class="cards  max1024">
-  <% for(var i = 0; i < payment.length; i++) { %>
-    <li class="cards__item">
-      <div class="card">
-        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= payment[i].img %>)"></div>
-        <div class="card__content">
-          <div class="card__title"><%= payment[i].title %></div>
-          <p class="card__text"><%= payment[i].text %></p>
+  <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
+  <div class="top">
+    <div class="topLine oneLine">
+      <div class="topNavMobMenuOfBtm">
+        <div class="menu-wrapper">
+          <div class="hamburger-menu"></div>
         </div>
       </div>
-    </li>
-  <% } %>
-</ul>
-<div class="OPLATA_TITLE  max1024"><%= locale.minTitle2 %></div>
-<ul class="cards  max1024">
-  <% for(var i = 0; i < delivery.length; i++) { %>
-    <li class="cards__item">
-      <div class="card">
-        <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= delivery[i].img %>)"></div>
-        <div class="card__content dost" id="dost_<%= i %>">
-          <div class="noneDAta"></div>
-          <div class="card__title"><%= delivery[i].title %></div>
-          <p class="card__text"><%= delivery[i].text %></p>
-          <% if(i === 0 && config.NP_API.enabled){ %>
+      <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
+      <div class="topNavBlockOfBtm">
+        <%- include ./includes/session.ejs %>
+        <div class="basketBlock">
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+    <%- include ./includes/menu.ejs %>
+  </div>
+
+  <div class="content">
+    <div class="vector_head">
+      <img src="../../../data/oplata/PAGE_TITLE.jpg">
+    </div>
+    <div class="title_head max1024 bigtext">
+      <%= locale.theme %>
+    </div>
+
+    <div class="OPLATA_TITLE  max1024"><%= locale.minTitle1 %></div>
+    <ul class="cards  max1024">
+      <% for(var i = 0; i < payment.length; i++) { %>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= payment[i].img %>)"></div>
+          <div class="card__content">
+            <div class="card__title"><%= payment[i].title %></div>
+            <p class="card__text"><%= payment[i].text %></p>
+          </div>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+    <div class="OPLATA_TITLE  max1024"><%= locale.minTitle2 %></div>
+    <ul class="cards  max1024">
+      <% for(var i = 0; i < delivery.length; i++) { %>
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image card__image--fence" style="background-image: url(../../../data/oplata/<%= delivery[i].img %>)"></div>
+          <div class="card__content dost" id="dost_<%= i %>">
+            <div class="noneDAta"></div>
+            <div class="card__title"><%= delivery[i].title %></div>
+            <p class="card__text"><%= delivery[i].text %></p>
+            <% if(i === 0 && config.NP_API.enabled){ %>
             <div class="NP_modal"></div>
             <div class="searchNPLine">
               <input type="text" id="TTHNP" placeholder="<%= locale.TTN %>">
@@ -94,47 +91,47 @@
             </div>
 
             <style type="text/css">
-              .NP_modal{
+            .NP_modal{
 
-              }
-              .searchNPLine{
+            }
+            .searchNPLine{
 
-              }
-              #TTHNP,#TTHPN{
-                width: 100%;
-                height: 30px;
-                padding-left: 10px;
-                border: 1px solid silver;
-                border-radius: 4px;
-                margin-top: 5px;
-              }
-              #TTHPSEND{
-                background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ4NS4yMTMgNDg1LjIxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg1LjIxMyA0ODUuMjEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3MS44ODIsNDA3LjU2N0wzNjAuNTY3LDI5Ni4yNDNjLTE2LjU4NiwyNS43OTUtMzguNTM2LDQ3LjczNC02NC4zMzEsNjQuMzIxbDExMS4zMjQsMTExLjMyNCAgICBjMTcuNzcyLDE3Ljc2OCw0Ni41ODcsMTcuNzY4LDY0LjMyMSwwQzQ4OS42NTQsNDU0LjE0OSw0ODkuNjU0LDQyNS4zMzQsNDcxLjg4Miw0MDcuNTY3eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNjMuOTA5LDE4MS45NTVDMzYzLjkwOSw4MS40NzMsMjgyLjQ0LDAsMTgxLjk1NiwwQzgxLjQ3NCwwLDAuMDAxLDgxLjQ3MywwLjAwMSwxODEuOTU1czgxLjQ3MywxODEuOTUxLDE4MS45NTUsMTgxLjk1MSAgICBDMjgyLjQ0LDM2My45MDYsMzYzLjkwOSwyODIuNDM3LDM2My45MDksMTgxLjk1NXogTTE4MS45NTYsMzE4LjQxNmMtNzUuMjUyLDAtMTM2LjQ2NS02MS4yMDgtMTM2LjQ2NS0xMzYuNDYgICAgYzAtNzUuMjUyLDYxLjIxMy0xMzYuNDY1LDEzNi40NjUtMTM2LjQ2NWM3NS4yNSwwLDEzNi40NjgsNjEuMjEzLDEzNi40NjgsMTM2LjQ2NSAgICBDMzE4LjQyNCwyNTcuMjA4LDI1Ny4yMDYsMzE4LjQxNiwxODEuOTU2LDMxOC40MTZ6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTc1LjgxNywxODEuOTU1aDMwLjMyMmMwLTQxLjgwMywzNC4wMTQtNzUuODE0LDc1LjgxNi03NS44MTRWNzUuODE2QzEyMy40MzgsNzUuODE2LDc1LjgxNywxMjMuNDM3LDc1LjgxNywxODEuOTU1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
-                width: 100%;
-                height: 30px;
-                padding-left: 10px;
-                border: 1px solid #d84731;
-                border-radius: 4px;
-                margin-top: 5px;
-                background-color: #d95449;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 20px;
-              }
-            </style>
+            }
+            #TTHNP,#TTHPN{
+              width: 100%;
+              height: 30px;
+              padding-left: 10px;
+              border: 1px solid silver;
+              border-radius: 4px;
+              margin-top: 5px;
+            }
+            #TTHPSEND{
+              background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ4NS4yMTMgNDg1LjIxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg1LjIxMyA0ODUuMjEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3MS44ODIsNDA3LjU2N0wzNjAuNTY3LDI5Ni4yNDNjLTE2LjU4NiwyNS43OTUtMzguNTM2LDQ3LjczNC02NC4zMzEsNjQuMzIxbDExMS4zMjQsMTExLjMyNCAgICBjMTcuNzcyLDE3Ljc2OCw0Ni41ODcsMTcuNzY4LDY0LjMyMSwwQzQ4OS42NTQsNDU0LjE0OSw0ODkuNjU0LDQyNS4zMzQsNDcxLjg4Miw0MDcuNTY3eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNjMuOTA5LDE4MS45NTVDMzYzLjkwOSw4MS40NzMsMjgyLjQ0LDAsMTgxLjk1NiwwQzgxLjQ3NCwwLDAuMDAxLDgxLjQ3MywwLjAwMSwxODEuOTU1czgxLjQ3MywxODEuOTUxLDE4MS45NTUsMTgxLjk1MSAgICBDMjgyLjQ0LDM2My45MDYsMzYzLjkwOSwyODIuNDM3LDM2My45MDksMTgxLjk1NXogTTE4MS45NTYsMzE4LjQxNmMtNzUuMjUyLDAtMTM2LjQ2NS02MS4yMDgtMTM2LjQ2NS0xMzYuNDYgICAgYzAtNzUuMjUyLDYxLjIxMy0xMzYuNDY1LDEzNi40NjUtMTM2LjQ2NWM3NS4yNSwwLDEzNi40NjgsNjEuMjEzLDEzNi40NjgsMTM2LjQ2NSAgICBDMzE4LjQyNCwyNTcuMjA4LDI1Ny4yMDYsMzE4LjQxNiwxODEuOTU2LDMxOC40MTZ6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTc1LjgxNywxODEuOTU1aDMwLjMyMmMwLTQxLjgwMywzNC4wMTQtNzUuODE0LDc1LjgxNi03NS44MTRWNzUuODE2QzEyMy40MzgsNzUuODE2LDc1LjgxNywxMjMuNDM3LDc1LjgxNywxODEuOTU1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+              width: 100%;
+              height: 30px;
+              padding-left: 10px;
+              border: 1px solid #d84731;
+              border-radius: 4px;
+              margin-top: 5px;
+              background-color: #d95449;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 20px;
+            }
+          </style>
 
-            <script>
+          <script>
             var CCC = {
               "apiKey": "<%= config.NP_API.key %>",
               "modelName": "TrackingDocument",
               "calledMethod": "getStatusDocuments",
               "methodProperties": {
-                  "Documents": [
-                      {
-                          "DocumentNumber": "",
-                          "Phone":""
-                      }
-                  ]
+                "Documents": [
+                {
+                  "DocumentNumber": "",
+                  "Phone":""
+                }
+                ]
               }
             };
             $("#TTHPSEND").click(function(){
@@ -156,20 +153,20 @@
                 $(".NP_modal").html('<b>'+response.data[0].Status+'</b>')
               });
             });
-            </script>
+          </script>
           <% } %>
         </div>
       </div>
     </li>
-  <% } %>
-</ul>
+    <% } %>
+  </ul>
 
-<div class="title_head max1024">
-  <p class="c24to7"><%= locale.paymentParams[0] %></p>
-  <p class="sZ7"><%= locale.paymentParams[1] %></p>
-  <p class="wz"><%= locale.paymentParams[2] %></p>
-  <p class="pz"><%= locale.paymentParams[3] %></p>
-</div>
+  <div class="title_head max1024">
+    <p class="c24to7"><%= locale.paymentParams[0] %></p>
+    <p class="sZ7"><%= locale.paymentParams[1] %></p>
+    <p class="wz"><%= locale.paymentParams[2] %></p>
+    <p class="pz"><%= locale.paymentParams[3] %></p>
+  </div>
 
 </div>
 

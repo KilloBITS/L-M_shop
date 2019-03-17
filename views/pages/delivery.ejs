@@ -11,8 +11,8 @@
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
   <script type="text/javascript">
     localStorage.removeItem('VernissageBasket');
@@ -20,6 +20,7 @@
 </head>
 <body bgcolor="#333D46" id="toCheck">
   <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
   <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td bgcolor="#333D46" height="2" align="center" valign="top" style="color: #333D46; font-size:1px; line-height:1px; font-family: 'Didact Gothic', sans-serif;">Trip Total: $18.34 | Want to leave a tip? |
@@ -128,10 +129,10 @@
                           <table cellpadding="0" cellspacing="0" style="    font-family: 'Didact Gothic', sans-serif; text-align:left" width="100%">
 
                             <% for(var i = 0; i < data.tovars.length; i++){ %>
-                              <tr valign="top">
-                                <td valign="top" width="320" style="color:#2d394f;font-size:14px;line-height:18px;padding:0 0 10px"><%= data.tovars[i].title %> <small>(x1)</small>:</td>
-                                <td valign="top" align="right" style="color:#2d394f;font-size:14px;line-height:18px"><%= data.tovars[i].price %> грн</td>
-                              </tr>
+                            <tr valign="top">
+                              <td valign="top" width="320" style="color:#2d394f;font-size:14px;line-height:18px;padding:0 0 10px"><%= data.tovars[i].title %> <small>(x1)</small>:</td>
+                              <td valign="top" align="right" style="color:#2d394f;font-size:14px;line-height:18px"><%= data.tovars[i].price %> грн</td>
+                            </tr>
                             <% } %>
 
                             <tr valign="top">
@@ -147,56 +148,56 @@
                           </table>
                         </td>
                       </tr>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <tr>
-          <td style="    font-family: 'Didact Gothic', sans-serif; color:#5f6a7c;font-size:14px;line-height:22px;text-align:center; padding: 20px 0 0;">
-            Дякуэмо за покупку!
-          </td>
-        </tr>
-        <table bgcolor="#F4F5F5" width="100%" cellpadding="0" cellspacing="0" style="padding: 10px 0;">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
           <tr>
-            <td>
-              <script type="text/javascript">
-                function savePDF(){
-                  var doc = new jsPDF("p", "mm", "a5");
-                  var width = doc.internal.pageSize.getWidth();
-                  var height = doc.internal.pageSize.getHeight();
-                  html2canvas(document.querySelector("#saveCheck")).then(canvas => {
-                  	canvas.id = "savingCheckToPDF";
-                      document.body.appendChild(canvas);
-                  	doc.addImage(canvas, 'JPEG', 0, 0, width, height);
-                  	doc.save('htmlsss.pdf');
-                      $('#savingCheckToPDF').remove()
-                  });
-                }
-
-                function toMain(){
-                  window.location.href = '/'
-                }
-              </script>
-              <div id="saveCheck" onclick="savePDF()" style="cursor: pointer; position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; right: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Скачать чек</div>
-              <div id="backToShop" onclick="toMain()" style="position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; left: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Назад к покупкам</div>
-
-              <div class="toPostLink">
-                <span>Отправить вам на почту ?</span>
-                <input type="text" name="toMyPost" class="tomypost" placeholder="Введите ваш email адресс">
-                <input type="button" class="tobtnmypost" value="Отправить">
-              </div>
+            <td style="    font-family: 'Didact Gothic', sans-serif; color:#5f6a7c;font-size:14px;line-height:22px;text-align:center; padding: 20px 0 0;">
+              Дякуэмо за покупку!
             </td>
           </tr>
-        </table>
+          <table bgcolor="#F4F5F5" width="100%" cellpadding="0" cellspacing="0" style="padding: 10px 0;">
+            <tr>
+              <td>
+                <script type="text/javascript">
+                  function savePDF(){
+                    var doc = new jsPDF("p", "mm", "a5");
+                    var width = doc.internal.pageSize.getWidth();
+                    var height = doc.internal.pageSize.getHeight();
+                    html2canvas(document.querySelector("#saveCheck")).then(canvas => {
+                     canvas.id = "savingCheckToPDF";
+                     document.body.appendChild(canvas);
+                     doc.addImage(canvas, 'JPEG', 0, 0, width, height);
+                     doc.save('htmlsss.pdf');
+                     $('#savingCheckToPDF').remove()
+                   });
+                  }
+
+                  function toMain(){
+                    window.location.href = '/'
+                  }
+                </script>
+                <div id="saveCheck" onclick="savePDF()" style="cursor: pointer; position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; right: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Скачать чек</div>
+                <div id="backToShop" onclick="toMain()" style="position: fixed; z-index: 9999; background-color: #ec60bc; bottom: 31px; padding: 8px 36px; border-radius: 0px; color: white; font-family: 'Didact Gothic', sans-serif; left: 20px; box-shadow: -6px -7px 0px 1px #a53d81;">Назад к покупкам</div>
+
+                <div class="toPostLink">
+                  <span>Отправить вам на почту ?</span>
+                  <input type="text" name="toMyPost" class="tomypost" placeholder="Введите ваш email адресс">
+                  <input type="button" class="tobtnmypost" value="Отправить">
+                </div>
+              </td>
+            </tr>
+          </table>
 
 
-      </td>
-    </tr>
-  </table>
+        </td>
+      </tr>
+    </table>
 
 
-</body>
+  </body>
 
-</html>ы
+  </html>ы

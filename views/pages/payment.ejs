@@ -28,13 +28,14 @@
   <script type="text/javascript" src="script/payment/payment.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
-    <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
+  <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
 </head>
 
 <body>
-<%- include ./includes/preloader.ejs %>
+  <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
   <div class="top">
     <div class="topLine oneLine">
       <div class="topNavMobMenuOfBtm">
@@ -45,11 +46,7 @@
       <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
       <div class="topNavBlockOfBtm">
         <a href="tel:<%= conf.number %>" class="contact_number"><%= conf.number %></a>
-        <% if(sessionUser !== undefined){ %>
-          <a href="/profile"><div class="userAccountInBlock"></div></a>
-        <% } else { %>
-          <a href="/login"><div class="logInBlock"></div></a>
-        <% } %>
+        <%- include ./includes/session.ejs %>
         <div class="basketBlock">
           <span>0</span>
         </div>
@@ -58,36 +55,36 @@
     <div class="topLine twoLine">
       <div class="menuBlock">
         <% for(var i = 0; i < menu.length; i++) { %>
-          <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
-            <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-              <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
-            <% }else{%>
-              <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
-            <% } %>
-          <% } else { %>
-            <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-              <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
-            <% }else{%>
-              <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
-            <% } %>
-          <% } %>
+        <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
+        <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
+        <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div>
+        <% }else{%>
+        <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name %></div>
+        <% } %>
+        <% } else { %>
+        <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
+        <a href="<%= menu[i].glink %>"><div class="menuBTN"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name %></div></a>
+        <% }else{%>
+        <a href="<%= menu[i].glink %>"><div class="menuBTN"><%= menu[i].name %></div></a>
+        <% } %>
+        <% } %>
         <% } %>
       </div>
     </div>
     <div class="opensMenu">
-    <% for(var i = 0; i < menu.length; i++) { %>
+      <% for(var i = 0; i < menu.length; i++) { %>
       <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-        <div class="menu_data <%= menu[i].ml %>">
-          <div class="menu_title"><%= menu[i].name %></div>
-          <div class="menuLeft">
-            <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
-            <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
-            <% } %>
-          </div>
-          <div class="menuRight"></div>
+      <div class="menu_data <%= menu[i].ml %>">
+        <div class="menu_title"><%= menu[i].name %></div>
+        <div class="menuLeft">
+          <% for(var il = 0; il < menu[i].podlink.length; il++) { %>
+          <a href="<%= menu[i].podlink[il].plink %>"><div class="punktMenu">• <%= menu[i].podlink[il].pname %> </div></a>
+          <% } %>
         </div>
+        <div class="menuRight"></div>
+      </div>
       <% } %>
-    <% } %>
+      <% } %>
     </div>
   </div>
 
@@ -106,7 +103,7 @@
                   <g id="Page-1_1_">
                     <g id="amex_1_">
                       <path id="Rectangle-1_1_" class="lightcolor grey" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
-                           C0,17.9,17.9,0,40,0z" />
+                      C0,17.9,17.9,0,40,0z" />
                     </g>
                   </g>
                   <path class="darkcolor greydark" d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
@@ -125,7 +122,7 @@
                 <g id="cchip">
                   <g>
                     <path class="st2" d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
-                       c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                    c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
                   </g>
                   <g>
                     <g>
@@ -136,10 +133,10 @@
                     </g>
                     <g>
                       <path class="st12" d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
-                           c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
-                           C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
-                           c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
-                           c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                      c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                      C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                      c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                      c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
                     </g>
                     <g>
                       <rect x="82.8" y="82.1" class="st12" width="25.8" height="1.5" />
@@ -169,13 +166,13 @@
                 <g id="Page-1_2_">
                   <g id="amex_2_">
                     <path id="Rectangle-1_2_" class="darkcolor greydark" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
-                       C0,17.9,17.9,0,40,0z" />
+                    C0,17.9,17.9,0,40,0z" />
                   </g>
                 </g>
                 <rect y="61.6" class="st2" width="750" height="78" />
                 <g>
                   <path class="st3" d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
-                   C707.1,246.4,704.4,249.1,701.1,249.1z" />
+                  C707.1,246.4,704.4,249.1,701.1,249.1z" />
                   <rect x="42.9" y="198.6" class="st4" width="664.1" height="10.5" />
                   <rect x="42.9" y="224.5" class="st4" width="664.1" height="10.5" />
                   <path class="st5" d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
@@ -218,36 +215,36 @@
         <div class="btnTITLEPAY">Оплатить</div>
         <div class="loader loader--style2" title="1">
           <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+          width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
           <path fill="#FFF" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
             <animateTransform attributeType="xml"
-              attributeName="transform"
-              type="rotate"
-              from="0 25 25"
-              to="360 25 25"
-              dur="0.6s"
-              repeatCount="indefinite"/>
-            </path>
-          </svg>
-        </div>
-      </button>
-      <!-- <input type="submit" class="button" value="Оплатить"> -->
+            attributeName="transform"
+            type="rotate"
+            from="0 25 25"
+            to="360 25 25"
+            dur="0.6s"
+            repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+    </button>
+    <!-- <input type="submit" class="button" value="Оплатить"> -->
 
-    </form>
+  </form>
 
 
-    <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-     <input type="hidden" name="data" value="<%= datadata %>"/>
-     <input type="hidden" name="signature" value="<%= signaturedata %>"/>
-     <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png"/>
-    </form>
+  <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
+   <input type="hidden" name="data" value="<%= datadata %>"/>
+   <input type="hidden" name="signature" value="<%= signaturedata %>"/>
+   <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png"/>
+ </form>
 
-  </div>
+</div>
 
 <%- include ./includes/footer.ejs %>
 
-  <div id="pageMessages"></div>
-  <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+<div id="pageMessages"></div>
+<div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
 </body>
 
 </html>

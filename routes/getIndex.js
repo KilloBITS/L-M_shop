@@ -18,6 +18,8 @@ router.get('/', function(req, res, next){
     const news = db.collection("NEWS");
     const contacts = db.collection("CONTACTS");
     const config = db.collection("CONFIG");
+    const reviews = db.collection("REVIEWS");
+
 
     if(err) return console.log(err);
     locale.find().toArray(function(err, resLocale){
@@ -29,20 +31,26 @@ router.get('/', function(req, res, next){
                 contacts.find().toArray(function(err, resContacts){
                   config.find().toArray(function(err, resConfig){
                     
-                    res.render('pages/index.ejs',{
-                      isAdm: req.session.admin,
-                      sessionUser: resUsers[0],
-                      locale: resLocale[0][global.parseLanguage(req)].index,
-                      menu: resMenu,
-                      globalLocale:  resLocale[0][global.parseLanguage(req)],
-                      contacts: resContacts[0],
-                      numLang: global.parseNumLang(req),
-                      /*Только для индекса*/
-                      slides: resMainslide,
-                      newtovar: resTovar,
-                      news: resNews,
-                      config: resConfig[0]
+                    reviews.find().limit(20).toArray(function(err, resReviews){
+                    
+                      res.render('pages/index.ejs',{
+                        isAdm: req.session.admin,
+                        sessionUser: resUsers[0],
+                        locale: resLocale[0][global.parseLanguage(req)].index,
+                        menu: resMenu,
+                        globalLocale:  resLocale[0][global.parseLanguage(req)],
+                        contacts: resContacts[0],
+                        numLang: global.parseNumLang(req),
+                        /*Только для индекса*/
+                        slides: resMainslide,
+                        newtovar: resTovar,
+                        news: resNews,
+                        config: resConfig[0],
+                        reviewsSlide: resReviews
+                      });
+                      
                     });
+
                   });
                 });
               });

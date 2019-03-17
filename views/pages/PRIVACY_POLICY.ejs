@@ -35,6 +35,7 @@
 </head>
 <body>
   <%- include ./includes/preloader.ejs %>
+  <%- include ./includes/closed.ejs %>  
   <div class="top">
    <div class="topLine oneLine">
     <div class="topNavMobMenuOfBtm">
@@ -45,15 +46,10 @@
     <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
     <div class="topNavBlockOfBtm">
      <a href="tel:<%= contacts.number %>" class="contact_number"><%= contacts.number %></a>
-     <% if(sessionUser !== undefined){ %>
-     <a href="/profile"><div class="userAccountInBlock"></div></a>
-     <% } else { %>
-     <a href="/login"><div class="logInBlock"></div></a>
-     <% } %>
+     <%- include ./includes/session.ejs %>
      <div class="basketBlock">
       <span>0</span>
     </div>
-
   </div>
 </div>
 <%- include ./includes/menu.ejs %>
@@ -69,11 +65,11 @@
     $('.DATAPP').append($('#PPTEXTAREA').val())
   </script>
   
- <a href="/documents/PrivacePolicy.pdf" target="_black">
+  <a href="/documents/PrivacePolicy.pdf" target="_black">
     <div class="downloadPdfFile">
       <%= locale.download %> PDF 
     </div>
- </a>
+  </a>
   
 </div>
 <%- include ./includes/footer.ejs %>
