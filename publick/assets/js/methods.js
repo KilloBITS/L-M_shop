@@ -57,11 +57,40 @@ var rus_to_latin = function(str){
 
 var INDEX = {
 	init: function(){
-		console.log('index load page');
-
 		$("#wievers").val();
 		$("#buyers").val();
+		//ONLOAD
+		INDEX.tovarststistik();
+	},
+	tovarststistik: function(){
+	    var ctx = document.getElementById("seolinechart8").getContext('2d');
+	    var chart = new Chart(ctx, {
+	        type: 'doughnut',
+	        data: {
+	            labels: ["FB", "TW", "G+", "INS"],
+	            datasets: [{
+	                backgroundColor: [
+	                    "red",
+	                    "#12C498",
+	                    "#F8CB3F",
+	                    "#E36D68"
+	                ],
+	                borderColor: '#fff',
+	                data: [10, 410, 260, 150],
+	            }]
+	        },
+	        // Configuration options go here
+	        options: {
+	            legend: {
+	                display: true
+	            },
+	            animation: {
+	                easing: "easeInOutBack"
+	            }
+	        }
+	    });
 	}
+
 }
 
 var NEWS = {

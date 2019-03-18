@@ -37,7 +37,7 @@ var UPDATE_BASCET = function(){
 			minBasDel.onclick = function(){
 			let index = $(".minBasDel").index(this);
 			BASKET.splice(index, 1);
-			localStorage.setItem("VernissageBasket", BASKET);
+			localStorage.setItem("SHOP_BASKET", BASKET);
 			$(".basketBlock span").html(BASKET.length);
 			$(this).parent().remove();
 
@@ -70,31 +70,10 @@ var UPDATE_BASCET = function(){
 
 
 var setBasket = function(ind, btn){
+
  if(BASKET.indexOf(ind.toString()) === -1){
    BASKET.push(ind);
-   localStorage.setItem("VernissageBasket", BASKET);
-
-   var URL = $(".list-group-image:eq("+btn+")").attr('src');
-   var neAnimation = document.createElement('div');
-   neAnimation.className = 'neAnimation';
-   neAnimation.style.left = $(".list-group-image:eq("+btn+")").offset().left + 'px';
-   neAnimation.style.top = $(".list-group-image:eq("+btn+")").offset().top + 'px';
-   neAnimation.style.width = $(".list-group-image:eq("+btn+")").width() + 'px';
-   neAnimation.style.height = $(".list-group-image:eq("+btn+")").height()  + 'px';
-   neAnimation.style.backgroundImage = 'url('+URL+')';
-   $('body').append(neAnimation);
-
-   setTimeout(function(){
-     neAnimation.style.left = $(".basketBlock").offset().left + 'px';
-     neAnimation.style.top = $(".basketBlock").offset().top + 'px';
-     neAnimation.style.width = '30px';
-     neAnimation.style.height = '30px';
-     setTimeout(function(){
-       $(neAnimation).fadeOut(300)
-     },350);
-   },500);
-
-
+   localStorage.setItem("SHOP_BASKET", BASKET);
    $(".basketBlock span").html(BASKET.length);
    $(".getSuccess:eq("+btn+")").fadeIn(300);
 
@@ -124,8 +103,8 @@ var setBasket = function(ind, btn){
 
 
 $(document).ready(function(){
-	if(localStorage.getItem('VernissageBasket') !== null){
-		let MY = localStorage.getItem("VernissageBasket").split(",");
+	if(localStorage.getItem('SHOP_BASKET') !== null){
+		let MY = localStorage.getItem("SHOP_BASKET").split(",");
 		if(MY[0] !== ""){
 			$(".basketBlock span").html(MY.length);
 			BASKET = MY;
@@ -134,7 +113,6 @@ $(document).ready(function(){
 
 
 	$(".basketBlock").click(function(){
-		console.log('updateBasket')
 		if(BASKET.length >= 1){
 			UPDATE_BASCET();
 		}else{

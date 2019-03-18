@@ -180,29 +180,11 @@ body {
   text-transform: uppercase;
 }
 
-.menuLeft {
-  width: 50%;
-  max-width: 300px;
-  margin-bottom: 15px;
-}
-
-.menuRight {}
-
-.punktMenu {
-  width: 100%;
-  padding: 5px 0px 3px 10px;
-  color: #dd127b;
-  font-family: 'Didact Gothic', sans-serif;
-  'Didact Gothic', sans-serif;
-  cursor: pointer;
-}
-
 .content {
   max-width: 1024px;
   width: 100%;
   margin: auto;
   background: white;
-  /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); */
 }
 
 .block {

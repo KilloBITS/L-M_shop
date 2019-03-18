@@ -255,9 +255,11 @@
 <div class="news block" style="background-color: <%= config.A_COLOR %>">
   <div class="white_zub" style="background-image: url(../../image/<%= config.bordertop %>)"></div>
   <div class="container" style="max-width: 1024px;">
+    <% if(news.length >= 1){ %>
     <div class="mainDLG">
       <div class="mainTitleDLG" style="margin-bottom: 22px;"><%= locale.newstitle %></div>
     </div>
+    <% } %>    
     <% if(news.length >= 1){ %>
     <% if(news.length === 1){ var newWidth = '100%' } %>
     <% if(news.length === 2){ var newWidth = '50%' } %>
