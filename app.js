@@ -216,7 +216,7 @@ app.get('/logout', function(req, res) {
 app.get('*', get404);
 app.listen(80, function(){
   global.baseName = 'SHOP_DB';
-  global.baseIP = 'mongodb://@localhost:27017/';
+  global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');

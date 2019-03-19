@@ -135,16 +135,16 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-
-                    <div class="col-12 mt-3">
+                    <% if(!editMode){ %>
+                    <div class="col-6 mt-3">
                         <div class="card">
                             <div class="card-body">
-                                <div id="accordion1" class="according">                                    
+                                <div id="accordion2" class="according">                                    
                                     <div class="card">
                                         <div class="card-header">
-                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion12">Импортировать с сайта</a>
+                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion13">Импортировать с сайта</a>
                                         </div>
-                                        <div id="accordion12" class="collapse" data-parent="#accordion1">
+                                        <div id="accordion13" class="collapse" data-parent="#accordion2">
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="linkImp"></label>
@@ -159,6 +159,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-6 mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="accordion1" class="according">                                    
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion12">Импортировать с файла</a>
+                                        </div>
+                                        <div id="accordion12" class="collapse" data-parent="#accordion1">
+                                            <div class="card-body">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="inportFile">
+                                                    <label class="custom-file-label" for="inportFile">Выбрать файл</label>
+                                                </div>                                 
+                                                <button type="submit" class="btn btn-primary pr-4 pl-4">Импортировать</button>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% } %>
+                    
 
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">                           
@@ -208,7 +233,7 @@
                                                 </div>
                                             </div>
                                         </div> 
-                                         <div class="form-row">                                            
+                                        <div class="form-row">                                            
                                             <label for="linkData" class="col-form-label">Ссылка на сайте</label>
                                             <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.link %><% }else{ %>Не указано<% } %>" id="linkData">
                                         </div>        
@@ -238,7 +263,7 @@
                                                 <label for="example-date-input" class="col-form-label">Цвет</label>
                                                 <select class="custom-select" id="colorSelect">                                                    
                                                     <% for(var i = 0; i < config.colorTable.length; i++){ %>
-                                                        <option value="<%= config.colorTable[i].code %>"><%= config.colorTable[i].name %></option>
+                                                    <option value="<%= config.colorTable[i].code %>"><%= config.colorTable[i].name %></option>
                                                     <% } %>                                                   
                                                 </select>
                                             </div>
@@ -247,7 +272,7 @@
                                                 <label class="col-form-label">Категория</label>
                                                 <select class="custom-select" id="categoriesSelect" onchange="CATALOG.categoriesselect(this)">
                                                     <% for(var i = 0; i < config.categories.length; i++){ %>
-                                                        <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
+                                                    <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
                                                     <% } %>
                                                 </select>
                                             </div>
@@ -276,7 +301,7 @@
                                                 <select class="custom-select" id="manSelect">
                                                     <option selected="0">Мой товар</option>
                                                     <% for(var i = 0; i < man.length; i++){ %>
-                                                        <option value="<%= man[i].index %>"><%= man[i].title %></option>
+                                                    <option value="<%= man[i].index %>"><%= man[i].title %></option>
                                                     <% } %>
                                                 </select>
                                             </div>  
@@ -349,7 +374,7 @@
                                                             <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
                                                                 <div class="form-group">
                                                                     <label for="example-textarea-input" class="col-form-label">Введите текст на Русском языке</label>
-                                                                     <textarea class="form-control" id="code_preview0" name="" style="height: 300px;"><% if(editMode){ %><%= tovarData.text[0] %><% } %></textarea>
+                                                                    <textarea class="form-control" id="code_preview0" name="" style="height: 300px;"><% if(editMode){ %><%= tovarData.text[0] %><% } %></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab">
@@ -569,7 +594,7 @@
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/methods.js"></script>
     <script type="text/javascript" src="assets/js/summernote.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
         $('#code_preview0,#code_preview1,#code_preview2').summernote({
             height: 300,
             toolbar: [
@@ -585,22 +610,22 @@
                 ['object', ['link', 'picture', 'hr', 'video']],
                 ['undoreedo', ['undo', 'redo']],
                 ['code',['codeview']]
-            ]
-        });      
-    </script>
-    <% if(editMode){ %>
-    <script type="text/javascript">
-        $("#colorSelect").val("<%= tovarData.color %>");
-        $("#categoriesSelect").val("<%= tovarData.categories %>");
-        CATALOG.categoriesselect($("#categoriesSelect"));        
-        $("#manSelect").val("<%= tovarData.manufacturer %>");
-        $("#tovarCode").val("<%= tovarData.code %>");
-        setTimeout(function(){
-           $("#typeSelect").val("<%= tovarData.type %>");
-           $("#saveBTN").removeClass('disabled')
-        },3000);
+                ]
+            });      
+        </script>
+        <% if(editMode){ %>
+        <script type="text/javascript">
+            $("#colorSelect").val("<%= tovarData.color %>");
+            $("#categoriesSelect").val("<%= tovarData.categories %>");
+            CATALOG.categoriesselect($("#categoriesSelect"));        
+            $("#manSelect").val("<%= tovarData.manufacturer %>");
+            $("#tovarCode").val("<%= tovarData.code %>");
+            setTimeout(function(){
+               $("#typeSelect").val("<%= tovarData.type %>");
+               $("#saveBTN").removeClass('disabled')
+           },3000);
 
-        TOVARIMAGE = [
+            TOVARIMAGE = [
             '<%= tovarData.images[0] %>',
             '<%= tovarData.images[1] %>',
             '<%= tovarData.images[2] %>',
@@ -609,9 +634,9 @@
             '<%= tovarData.images[5] %>',
             '<%= tovarData.images[6] %>',
             '<%= tovarData.images[7] %>'
-        ];
-    </script>
-    <% } %>
-</body>
+            ];
+        </script>
+        <% } %>
+    </body>
 
-</html>
+    </html>
