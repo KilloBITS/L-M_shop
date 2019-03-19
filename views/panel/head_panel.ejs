@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Управление новостями</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amcharts css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="assets/js/pace.min.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html"><img src="../../../image/Logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
+                            <li><a href="/menu-panel"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-edit"></i><span>Информация</span></a>
+                                <ul class="collapse">
+                                    <li><a href="/about-panel"><i class="fa fa-file-text-o"></i> <span>О нас</span></a></li>
+                                    <li><a href="/paydel-panel"><i class="fa fa-money"></i> <span>Оплата и доставка</span></a></li>
+                                    <li><a href="/privacepolicy-panel"><i class="fa fa-key"></i> <span>Политика конфиденциальности</span></a></li>
+                                    <li><a href="/termsofuse-panel"><i class="fa fa-book"></i> <span>Условия пользования</span></a></li>
+                                </ul>
+                            </li>    
+                            <li><a href="/catalog-panel"><i class="fa fa-shopping-cart"></i> <span>Каталог</span></a></li> 
+                            <li class="active">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-newspaper-o"></i><span>Новости и объявления</span></a>
+                                <ul class="collapse">
+                                    <li><a href="/news-panel"><i class="fa fa-newspaper-o"></i> <span>Новости</span></a></li>
+                                    <li class="active"><a href="/head-panel"><i class="fa fa-commenting"></i> <span>Объявления</span></a></li>
+                                </ul>
+                            </li>                         
+                            <li><a href="/local-panel"><i class="fa fa-font"></i> <span>Локализация</span></a></li>
+                            <li><a href="/visual-panel"><i class="fa fa-image"></i> <span>Визуальные настройки</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-gears"></i><span>Настройки системы</span></a>
+                                <ul class="collapse">
+                                    <li><a href="/DB-panel"><i class="fa fa-database"></i> <span>База данных</span></a></li>
+                                    <li><a href="/API-panel"><i class="fa fa-code"></i> <span>API</span></a></li>
+                                    <li><a href="/system-panel"><i class="fa fa-server"></i> <span>Система</span></a></li>
+                                </ul>
+                            </li>                            
+                            <li><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>                           
+                            <li><a href="/faq-panel" style="color: green"><i class="fa fa-shopping-cart" style="color: green"></i> <span>Помощь</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search..." required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <%- include ./includes/infoblock.ejs %> 
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Управление новостями</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="/">Lady & Man clotring store</a></li>
+                                <li><span>Управление новостями</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <%- include ./includes/user.ejs %> 
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn btn-success col-lg-12 mt-2 mb-2" href="/editNews?mode=new">Создать новость</a>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="preloaderBlock" style="display: none;">
+                                    <div class="loader"></div>
+                                </div>
+                                <h4 class="header-title">Просмотр</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-2">
+                        <div class="col-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="preloaderBlock" style="display: none;">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <h4 class="header-title">Список объявлений</h4>
+                                    <div class="data-tables datatable-dark">
+                                        <table id="dataTable3" class="text-center">
+                                            <thead class="text-capitalize">
+                                                <tr>                                                
+                                                    <th>Название</th>
+                                                    <th>Изображение</th>                                               
+                                                    <th>Ссылка</th>
+                                                    <th>Действия</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for(var i = 0; i < slides.length; i++){ %>
+                                                <tr>                                                
+                                                    <td><%= slides[i].slideName[0] %></td>
+                                                    <td><%= slides[i].slideImage %></td>                                               
+                                                    <td><%= slides[i].slideLink %></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger btn-xs mb-3" onclick="NEWS.removenews('<%= newsData[i].AI %>')">Удалить</button>
+                                                        <a href="/editNews?mode=edit,<%= newsData[i].AI %>" target="_blank" class="btn btn-warning btn-xs mb-3">Редактировать</a>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mt-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="preloaderBlock" style="display: none;">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <h4 class="header-title">Создать объявление</h4>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <%- include ./includes/footer.ejs %>
+        <!-- footer area end-->
+    </div>
+    <%- include ./includes/offset-area.ejs %> 
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Start datatable js -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <!-- others plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/methods.js"></script>
+</body>
+
+</html>

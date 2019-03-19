@@ -86,6 +86,7 @@ const admFaq = require('./routes/panel/getFaqPanel');
 const admIndex = require('./routes/panel/getIndexPanel');
 const admLocal = require('./routes/panel/getLocalPanel');
 const admNews = require('./routes/panel/getNewsPanel');
+const admHead = require('./routes/panel/getHeadPanel');
 const admNewsEdit = require('./routes/panel/getaddfromeditNews');
 const admPaydel = require('./routes/panel/getPaydelPanel');
 const admSystem = require('./routes/panel/getSystemPanel');
@@ -103,6 +104,7 @@ app.use('/DB-panel', admDB);
 app.use('/index-panel', admIndex);
 app.use('/local-panel', admLocal);
 app.use('/news-panel', admNews);
+app.use('/head-panel', admHead);
 app.use('/editNews*', admNewsEdit);
 app.use('/paydel-panel', admPaydel);
 app.use('/system-panel', admSystem);
@@ -214,7 +216,7 @@ app.get('/logout', function(req, res) {
 app.get('*', get404);
 app.listen(80, function(){
   global.baseName = 'SHOP_DB';
-  global.baseIP = 'mongodb://Guru99:password@localhost:27017/';
+  global.baseIP = 'mongodb://@localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');
