@@ -135,6 +135,31 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
+
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="accordion1" class="according">                                    
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="collapsed card-link" data-toggle="collapse" href="#accordion12">Импортировать с сайта</a>
+                                        </div>
+                                        <div id="accordion12" class="collapse" data-parent="#accordion1">
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                    <label for="linkImp"></label>
+                                                    <input type="text" class="form-control" id="linkInp" aria-describedby="emailHelp" placeholder="Введите ссылку на страницу товара" value="//berezkashop.in.ua/item/plate-kombinacziya-mini-s-kruzhevom-i-baxrom/">
+                                                    <small id="emailHelp" class="form-text text-muted">Введите ссылку на страницу товара.</small>
+                                                </div>                                   
+                                                <button type="submit" class="btn btn-primary pr-4 pl-4" onclick="CATALOG.import()">Импортировать</button>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">                           
                             <div class="col-12 mt-5">
@@ -183,11 +208,9 @@
                                                 </div>
                                             </div>
                                         </div> 
-                                         <div class="form-row">
-                                            
+                                         <div class="form-row">                                            
                                             <label for="linkData" class="col-form-label">Ссылка на сайте</label>
                                             <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.link %><% }else{ %>Не указано<% } %>" id="linkData">
-                                                   
                                         </div>        
 
                                         <div class="form-row">

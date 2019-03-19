@@ -120,9 +120,6 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-                    <div class="col-12">
-                        <a class="btn btn-success col-lg-12 mt-2 mb-2" href="/editNews?mode=new">Создать новость</a>
-                    </div>
                     <div class="col-6 mt-2">
                         <div class="card">
                             <div class="card-body">
@@ -130,7 +127,20 @@
                                     <div class="loader"></div>
                                 </div>
                                 <h4 class="header-title">Просмотр</h4>
-                                
+                                <div class="sliderblock">
+                                    <div class="slider">
+                                    <% for(var i = 0; i < slides.length; i++){ %>
+                                    <a href="#slide-<%= i %>" class="paginate_button page-item active page-link"><%= i %></a>
+                                    <% } %>
+                                    <div class="slides">
+                                        <% for(var ia = 0; ia < slides.length; ia++){ %>
+                                            <div id="slide-<%= ia %>">
+                                                <img src="../../../data/slider/<%= slides[ia].slideImage %>" alt="" />
+                                            </div>
+                                        <% } %>     
+                                      </div>
+                                    </div>
+                                </div>                                                                                              
                             </div>
                         </div>
                     </div>
@@ -160,8 +170,8 @@
                                                     <td><%= slides[i].slideImage %></td>                                               
                                                     <td><%= slides[i].slideLink %></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-danger btn-xs mb-3" onclick="NEWS.removenews('<%= newsData[i].AI %>')">Удалить</button>
-                                                        <a href="/editNews?mode=edit,<%= newsData[i].AI %>" target="_blank" class="btn btn-warning btn-xs mb-3">Редактировать</a>
+                                                        <button type="button" class="btn btn-danger btn-xs mb-3" onclick="NEWS.removenews('<%= slides[i].AI %>')">Удалить</button>
+                                                        <a href="/editNews?mode=edit,<%= slides[i].AI %>" target="_blank" class="btn btn-warning btn-xs mb-3">Редактировать</a>
                                                     </td>
                                                 </tr>
                                                 <% } %>
@@ -179,7 +189,31 @@
                                         <div class="loader"></div>
                                     </div>
                                     <h4 class="header-title">Создать объявление</h4>
-                                
+                                    <div class="form-group">
+                                        <label class="col-form-label">Изображение для ПК</label>
+                                        <div class="custom-file">                                            
+                                            <div class="addEditImage" id="logoOfNews"></div>
+                                            <input type="file" class="custom-file-input" id="PCImage" onchange="">
+                                            <label class="custom-file-label" for="PCImage">Выбрать файл</label>                                            
+                                        </div>
+                                    </div>  
+                                    <div class="form-group">
+                                        <label class="col-form-label">Изображение для смартфонов</label>
+                                        <div class="custom-file">                                            
+                                            <div class="addEditImage" id="logoOfNews"></div>
+                                            <input type="file" class="custom-file-input" id="smartImage" onchange="">
+                                            <label class="custom-file-label" for="smartImage">Выбрать файл</label>                                            
+                                        </div>
+                                    </div>  
+
+                                    <div class="form-group">
+                                        <label for="example-date-input" class="col-form-label">Ссылка на кнопку</label>
+                                        <input class="form-control" type="text" id="example-date-input">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success mb-2 col-12">Сохранить</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
