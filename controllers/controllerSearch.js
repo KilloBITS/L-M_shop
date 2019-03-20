@@ -8,8 +8,7 @@ const bParser = require('body-parser');
 router.use(cookieParser());
  
 function findPartial( a, s )
-{
-  
+{  
 console.log(test);
 }
 
@@ -24,7 +23,7 @@ var searchFunction = (req, res, next) => {
         var resultArray = [];
         results.forEach(function(item, i, arr) {
           
-          if(item.title.toUpperCase().indexOf(req.body.name.toUpperCase()) !== -1){
+          if(item.title[0].toUpperCase().indexOf(req.body.name.toUpperCase()) !== -1){
             resultArray.push(item)
           }
 
