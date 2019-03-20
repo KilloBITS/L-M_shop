@@ -399,9 +399,9 @@ var CATALOG = {
 		$('.miniloader').show();
 		var value = $(e).val();
 		$.post('/getTypesOfCatalog',{a:value},(res) => {
-			$('#typeSelect').empty()
+			$('#typeSelect,#typeSelectImport').empty()
 			for(let i = 0; i < res.data.length; i++){
-				$('#typeSelect').append(new Option(res.data[i].pname[0], res.data[i].plink.split(',')[1].split('&')[0]));
+				$('#typeSelect,#typeSelectImport').append(new Option(res.data[i].pname[0], res.data[i].plink.split(',')[1].split('&')[0]));
 			}	
 			$('.miniloader').hide();		
 		});
@@ -410,7 +410,7 @@ var CATALOG = {
 		SIZESARRAY = [];
 		for(let i = 0; i < $('.sizescheck').size(); i++){
 		    if($('.sizescheck:eq('+i+')').is(":checked")){
-		    	SIZESARRAY.push({a:$('.sizescheck:eq('+i+')').is(":checked"), b:$('.sizescheck:eq('+i+')').attr('id') });
+		    	SIZESARRAY.push($('.sizescheck:eq('+i+')').attr('id'));
 		    }
 		}
 		return SIZESARRAY
@@ -445,7 +445,6 @@ var CATALOG = {
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/addTovar',CATALOG.parsedata(), (res) => {
 			create_alert(res, false);
-
 		})
 	},
 	save: function(a){
@@ -470,6 +469,7 @@ var CATALOG = {
 		  alert( xhr.responseText );
 		}
 	},
+	TOVAR_ARRAY: {ARRAY:[]},
 	fileimport: function(input){
 		var fileTypes = ['xml', 'json'];  
 	 	if (input.files && input.files[0]) {
@@ -478,40 +478,45 @@ var CATALOG = {
 	            console.log(extension);
 	        if (isSuccess) { //yes
 	            var reader = new FileReader();
-	            reader.onload = function (e) {
-	            	
+	            reader.onload = function (e) {	            	
 	            	if(extension === 'xml'){
 	            		var OPENED_XML = new DOMParser().parseFromString(reader.result, 'text/xml');
 	            		JSON_FILE = xmlToJson(OPENED_XML);
 	            		console.log(JSON_FILE)
 	            		if(JSON_FILE.yml_catalog.shop.company === 'Berezkashop'){
-	            			var tovarList = JSON_FILE.yml_catalog.shop.offers.offer
-	            			for(var i = 0; i < tovarList.length; i++){
-	       //      				var tovardata = {
-								// 	title: [
-								// 		tovarList[i].name,
-								// 		tovarList[i].name,
-								// 		tovarList[i].name
-								// 	],
-								// 	text: [
-								// 		tovarList[i].name,
-								// 		tovarList[i].name,
-								// 		tovarList[i].name
-								// 	],
-								// 	link: $('#linkData').val(),
-								// 	images: TOVARIMAGE,
-								// 	code: $("#tovarCode").val(),
-								// 	size: [tovarList[i].param[0]],
-								// 	price: tovarList[i].price,
-								// 	categories: parseInt($('#categoriesSelect').val()),
-								// 	type: $('#typeSelect').val(),
-								// 	color: $('#colorSelect').val(),
-								// 	group: 0,
-								// 	sale: [$('#saleEnables').is(":checked"), parseInt($('#saleData').val())],
-								// 	manufacturer: $('#manSelect').val(),
-								// }
-
-	            				console.log(tovarList[i])
+	            			var tovarList = JSON_FILE.yml_catalog.shop.offers.offer;
+	            			for(var i = 0; i < tovarList.length; i++){	
+	            				if(tovarList[i].vendorCode.length <= 4){
+	            					if(Array.isArray(tovarList[i].picture)){
+		            					var arrayimages = tovarList[i].picture;
+		            				}else{
+		            					var arrayimages = [tovarList[i].picture];
+		            				}           				
+		            				var tovardata = {
+										title: [
+											tovarList[i].name,
+											tovarList[i].name,
+											tovarList[i].name
+										],
+										text: [
+											tovarList[i].name,
+											tovarList[i].name,
+											tovarList[i].name
+										],
+										link: '',
+										images: arrayimages,
+										code: tovarList[i].vendorCode,
+										size: [tovarList[i].param[0].replace('ONE-SIZE ','')],
+										price: tovarList[i].price,
+										categories: parseInt($('#categoriesSelectImport').val()),
+										type: $('#typeSelectImport').val(),
+										color: tovarList[i].param[tovarList[i].param.length -1],
+										group: tovarList[i]['@attributes'].group_id,
+										sale: [false, 0],
+										manufacturer: $('#manSelectImport').val()//tovarList[i].vendor,
+									}
+									CATALOG.TOVAR_ARRAY.ARRAY.push(tovardata);	  
+	            				}	            				          				
 	            			}
 	            		}
 	            	} else if(extension === 'json'){
@@ -527,6 +532,12 @@ var CATALOG = {
 	        	console.warn('Ошибка загрузки файла');
 	        }
 	    }
+	},
+	sentimportedarray: function(){
+		$('.preloaderBlock').fadeIn(100);
+		$.post('addImportFileTovar',{a: JSON.stringify(CATALOG.TOVAR_ARRAY)}, function(res){
+			create_alert(res, false);
+		});
 	}
 }
 

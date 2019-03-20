@@ -168,8 +168,47 @@
                                                 <div class="custom-file">
                                                     <input type="file" class="custom-file-input" id="inportFile" accept=".xml,.json" onchange="CATALOG.fileimport(this)">
                                                     <label class="custom-file-label" for="inportFile">Выбрать файл</label>
-                                                </div>                                 
-                                                <button type="submit" class="btn btn-primary pr-4 pl-4">Импортировать</button>
+                                                </div>        
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="col-form-label">Категория</label>
+                                                    <select class="custom-select" id="categoriesSelectImport" onchange="CATALOG.categoriesselect(this)">
+                                                        <% for(var i = 0; i < config.categories.length; i++){ %>
+                                                        <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
+                                                        <% } %>
+                                                    </select>
+                                                </div>                                            
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="preloaderBlock miniloader" style="display: none;">
+                                                        <div class="loader"></div>
+                                                    </div>
+                                                    <label class="col-form-label">Тип</label>
+                                                    <select class="custom-select" id="typeSelectImport">
+                                                        <option value="kofty">Джемпера / Кардиганы / Гольфы</option>
+                                                        <option value="bluzki">Блузки</option>
+                                                        <option value="futbolki">Футболки</option>
+                                                        <option value="platya">Платья</option>
+                                                        <option value="kombinezoni">Комбинезоны</option>
+                                                        <option value="topy-i-mayki">Топы и Майки</option>
+                                                        <option value="zhenskie-rubashki">Рубашки</option>
+                                                        <option value="kurtki-i-palta">Куртки и пальта</option>
+                                                        <option value="kostyumy">Костюмы</option>
+                                                        <option value="shtany--dzhinsy">Штаны / Джинсы / Лосины</option>
+                                                        <option value="yubki">Юбки</option>
+                                                        <option value="sportivnye-kostyumy">Спортивные костюмы</option>
+                                                        <option value="shapki">Шапки</option>                                                    
+                                                    </select>
+                                                </div>  
+
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="col-form-label">Производитель</label>
+                                                    <select class="custom-select" id="manSelectImport">
+                                                        <option selected="0">Мой товар</option>
+                                                        <% for(var i = 0; i < man.length; i++){ %>
+                                                        <option value="<%= man[i].index %>"><%= man[i].title %></option>
+                                                        <% } %>
+                                                    </select>
+                                                </div>                       
+                                                <button type="submit" class="btn btn-primary pr-4 pl-4" onclick="CATALOG.sentimportedarray()">Импортировать</button>
                                             </div>
                                         </div>
                                     </div>                                    
@@ -177,13 +216,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <% } %>
-                    
+                    <% } %>                   
 
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">                           
-                            <div class="col-12 mt-5">
+                            <div class="col-12 mt-1">
                                 <div class="card">
                                     <div class="preloaderBlock" style="display: none;">
                                         <div class="loader"></div>
@@ -277,7 +314,19 @@
                                                 </div>
                                                 <label class="col-form-label">Тип</label>
                                                 <select class="custom-select" id="typeSelect">
-                                                    <option selected="selected">Выберите тип</option>                                                    
+                                                    <option value="kofty">Джемпера / Кардиганы / Гольфы</option>
+                                                    <option value="bluzki">Блузки</option>
+                                                    <option value="futbolki">Футболки</option>
+                                                    <option value="platya">Платья</option>
+                                                    <option value="kombinezoni">Комбинезоны</option>
+                                                    <option value="topy-i-mayki">Топы и Майки</option>
+                                                    <option value="zhenskie-rubashki">Рубашки</option>
+                                                    <option value="kurtki-i-palta">Куртки и пальта</option>
+                                                    <option value="kostyumy">Костюмы</option>
+                                                    <option value="shtany--dzhinsy">Штаны / Джинсы / Лосины</option>
+                                                    <option value="yubki">Юбки</option>
+                                                    <option value="sportivnye-kostyumy">Спортивные костюмы</option>
+                                                    <option value="shapki">Шапки</option>                                                
                                                 </select>
                                             </div>
                                         </div>
@@ -397,7 +446,7 @@
                     </div>
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">
-                            <div class="col-12 mt-5">
+                            <div class="col-12 mt-1">
                                 <div class="card">
                                     <div class="preloaderBlock" style="display: none;">
                                         <div class="loader"></div>

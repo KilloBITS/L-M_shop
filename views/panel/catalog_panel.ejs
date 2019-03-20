@@ -141,6 +141,7 @@
                                                 <th>Цвет</th>
                                                 <th>Создатель</th>                                                
                                                 <th>Код товара</th>                                                
+                                                <th>Код группы</th>                                                
                                                 <th>Категория</th>
                                                 <th>Удаление</th>                                                
                                                 <th>Реадктирование</th>                                                
@@ -176,6 +177,7 @@
                                                 </td>
                                                 <td><%= tovarData[i].author %></td>
                                                 <td><%= tovarData[i].code %></td>
+                                                <td><%= tovarData[i].group %></td>
                                                 <td><%= config.categories.find(x => x.index === tovarData[i].categories.toString()).name %></td>
                                                 <td>
                                                     <button type="button" class="btn btn-danger btn-xs mb-3" onclick="CATALOG.remove('<%= tovarData[i].AI %>')">Удалить</button>

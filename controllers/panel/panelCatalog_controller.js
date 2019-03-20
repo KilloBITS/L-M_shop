@@ -100,8 +100,42 @@ router.post('/addTovar', function(req, res, next){
 				DATA.availability = true;
 				DATA.date = global.getDate();
 				DATA.popularUser = 1;
+				DATA.popular = 5;
 				tovar.insertOne(DATA);	
 				res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.title[0]+' успешно добавлен!'});				
+			});		
+		});		
+	}else{
+		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
+	}
+});
+
+//Импорт из файла
+router.post('/addImportFileTovar', function(req, res, next){
+	if(req.session.admin){
+		mongoClient.connect(global.baseIP, function(err, client){
+			const db = client.db(global.baseName);
+			const tovar = db.collection("TOVAR");
+
+			if(err) return console.log(err);
+
+			var JSONARRAY = JSON.parse(req.body.a);
+
+			tovar.find().sort({AI: -1}).limit(1).toArray(function(err, resTov){
+				var currentAI = (resTov.length === 0)?0:parseInt(resTov[0].AI) + 1;
+				for(var i = 0; i < JSONARRAY.ARRAY.length; i++){
+					var DATA = JSONARRAY.ARRAY[i];
+					DATA.AI = currentAI;								
+					DATA.views = 0;
+					DATA.author = req.session.user;
+					DATA.availability = true;
+					DATA.date = global.getDate();
+					DATA.popularUser = 1;
+					DATA.popular = 5;
+					tovar.insertOne(DATA);	
+					currentAI = currentAI+1
+				}
+				res.send({code: 500, className: 'nSuccess', message: 'Список успешно импортирован!'});
 			});		
 		});		
 	}else{

@@ -146,8 +146,7 @@
             <img class="active" id="tovarImage" src="<%= tovarArr.images[0] %>">
             <% if(tovarArr.images.length > 1){ %>
             <div class="arrL"><</div>
-            <div class="arrR">></div>
-            <div class="vendor"><%= tovarArr.AI %></div>
+            <div class="arrR">></div>            
             <div class="list_img">
               <% for(var i = 0; i < tovarArr.images.length; i++) { %>
               <% if(tovarArr.images[i] !== ''){ %>
@@ -192,9 +191,9 @@
               <% if(tovarArr.sizes !== null){ %>
               <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
               <% if(iS === 0){ %>
-              <div class="sizeBTN size_a"><%= tovarArr.size[iS].b %></div>
+              <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
               <% }else{%>
-              <div class="sizeBTN"><%= tovarArr.size[iS].b %></div>
+              <div class="sizeBTN"><%= tovarArr.size[iS] %></div>
               <% } %>
 
               <% } %>
@@ -205,19 +204,12 @@
             <div class="btnTableSizes">Таблица размеров</div>
           </div>
           <div class="text_line" id="PROIZVOD">Производитель:<span><%= tovarArr.manufacturer %></span></div>
+          <div class="text_line">Код товара: <%= tovarArr.code %></div>
           <div class="text_line" id="OPISANIE">Описание:</div>
           <div class="noneText"><%= tovarArr.text[numLang] %></div>
           <script type="text/javascript">
             $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
           </script>
-
-          <div class="group_block">
-            <% if(!tovarArr.group){ %>
-
-            <% }else{ %>
-            <%= tovarArr.group %>
-            <% } %>
-          </div>
         </div>
         <div class="LengthOfBalset">
           <div class="number-choice">

@@ -25,6 +25,7 @@ router.get('/*', function(req, res, next){
         menu.find().sort({index: 1}).toArray(function(err, resMenu){
           tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, recomendedTov) {
             tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function(err, resTovar){
+              console.log(resTovar[0])
               config.find().toArray(function(err, resConfig){
                 news.find().toArray(function(err, resNews){
                   contacts.find().toArray(function(err, resContacts){                  

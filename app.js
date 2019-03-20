@@ -26,6 +26,8 @@ app.use(session({
 }));
 
 //project libs use
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb'})); 
 app.use(bParser.urlencoded({limit: '50mb'}));
 app.use(bParser.json());
 app.use(express.static(__dirname + '/publick/'));
@@ -191,6 +193,7 @@ app.post('/addTovar', aboutCatalogMethods);
 app.post('/setcolor', aboutCatalogMethods);
 app.post('/saveTovar', aboutCatalogMethods);
 app.post('/removeTovar', aboutCatalogMethods);
+app.post('/addImportFileTovar', aboutCatalogMethods);
 
 const menuPanelMethods = require('./controllers/panel/panelMenu_controller');
 app.post('/gettypes', menuPanelMethods);

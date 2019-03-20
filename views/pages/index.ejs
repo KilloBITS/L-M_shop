@@ -104,34 +104,29 @@
   </div>
 </div>
 <div class="data block" style="background-color: <%= config.B_COLOR %>">
+  <% if(newtovar.length > 0){ %>
   <div class="mainDLG">
-   <div class="mainTitleDLG post"><%= locale.newgoods %></div>
-   <div class="mainTextDLG post"><%= locale.newgoods2 %></div>
- </div>
+    <div class="mainTitleDLG post"><%= locale.newgoods %></div>
+    <div class="mainTextDLG post"><%= locale.newgoods2 %></div>
+  </div> 
  <div class="carousel-wrapper" style="background-color: <%= config.B_COLOR %>">
-  <div class="carousel" data-flickity='{ "wrapAround": true }'>
-    <% if(newtovar.length > 0){ %>
+  <div class="carousel" data-flickity='{ "wrapAround": true }'>    
     <% for(var i = 0; i < newtovar.length; i++){ %>
-    <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>&<%= newtovar[i].types %>" data-ix="scale-on-scroll">
+    <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>&<%= newtovar[i].type %>" data-ix="scale-on-scroll">
       <div class="carousel-cell w-col w-col-3 feature-pill">
         <div class="newTov"></div>
         <h3> <%= newtovar[i].title[numLang] %> </h3>
         <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div>
       </div>
     </a>
-    <% } %>
-    <% } else { %>
-    <div class="carousel-cell">
-      <h3> <%= locale.notdata %> </h3>
-      <a class="more" href="/"></a>
-      <div class="backCaruselImage" style="background-image: url(../../../image/notTovar.jpg)"></div>
-    </div>
-    <% } %>
+    <% } %>   
   </div>
 </div>
 <div class="mainBTN_block" style="background-color: <%= config.B_COLOR %>; padding-top: 20px;">
  <a href="/shopNews"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div></a>
 </div>
+<% } %>
+
 <div class="mainDLG" style="background: <%= config.B_COLOR %>; color: #333333;">
  <div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
  <textarea id="hideareaAbout" style="display: none;"><%= locale.abouttext %></textarea>

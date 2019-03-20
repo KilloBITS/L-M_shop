@@ -26,7 +26,7 @@ router.get('/', function(req, res, next){
     noty.find().toArray(function(err, resNoty){
       message.find({availability: false}).toArray(function(err, resMessage){
         users.find({login: req.session.login}).toArray(function(err, resUsers){
-          tovar.find().toArray(function(err, resTovar){
+          tovar.find().limit(200).sort({AI: -1}).toArray(function(err, resTovar){
             manufacturers.find().toArray(function(err, resMan){   
               config.find().toArray(function(err, resConf){   
                 res.render('panel/catalog_panel.ejs',{
