@@ -3266,7 +3266,7 @@ ul.dropdownsession li a:hover {
 /* closed */
 .site_closed{
   position: fixed;
-  z-index: 100;
+  z-index: 100000;
   top: 0;
   left: 0;
   width: 100%;
