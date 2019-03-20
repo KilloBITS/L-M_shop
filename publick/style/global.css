@@ -1463,18 +1463,18 @@ input[type=radio]:checked:disabled + .ui-radio-after:after {
   z-index: 11;
 }
 .BIG_BTN{
-  width: 54px;
-  height: 54px;
-  background-color: rgba(0, 0, 0, 0.55);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 34px;
-  margin-top: 12px;
-  border-radius: 32px;
-  cursor: pointer;
-  transition: 0.3s;
-  opacity: 0.3;
-  position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.55);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    margin-top: 10px;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.3;
+    position: relative;
 }
 
 .BIG_BTN:hover{

@@ -977,15 +977,30 @@ p {
 
 }
 
+.visible_length{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 10px;
+    border-radius: 2px;
+    z-index: 1;
+    width: 100%;
+}
+
+
 /****** Style Star Rating Widget *****/
 .rating {
-  border: none;
-  float: left;
-  position: absolute;
-  z-index: 999;
-  right: 5px;
-  top: 0px;
+    border: none;
+    float: left;
+    position: absolute;
+    z-index: 999;
+    right: -7px;
+    top: 20px;
 }
+
 
 .rating > input { display: none; }
 .rating > label:before {
@@ -1218,7 +1233,7 @@ to align it properly */
 
 .blockOfNavBtn {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 12px;
     z-index: 11;
 }
@@ -1342,11 +1357,6 @@ button.close {
   padding-left: 22px;
   background-size: 14px;
   background-position: 3px 3px;
-}
-
-.text_line span{
-  font-weight: bold;
-  padding-left: 10px;
 }
 
 .ribbon{

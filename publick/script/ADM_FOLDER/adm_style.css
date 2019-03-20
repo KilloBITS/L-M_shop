@@ -17,18 +17,6 @@
   opacity: 0.8;
 }
 
-.visible_length{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2px 10px;
-  border-radius: 2px;
-  z-index: 1;
-}
-
 .setColorBlock{
   position: absolute;
   top: 60px;

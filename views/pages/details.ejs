@@ -230,8 +230,8 @@
         </ul>
       </div>
 
-      <a href="/details?tov=<%= parseInt(tovarArr.AI)-1 %>&bluzki"><div class="NextPrewTovar" id="prewTovar"></div></a>
-      <a href="/details?tov=<%= parseInt(tovarArr.AI)+1 %>&bluzki"><div class="NextPrewTovar" id="nextTovar"></div></a>
+      <a href="/details?tov=<%= parseInt(tovarArr.AI)-1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="prewTovar"></div></a>
+      <a href="/details?tov=<%= parseInt(tovarArr.AI)+1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="nextTovar"></div></a>
     </div>
     <div id="product-pd" class="tab-pane fade in active">
       <table border="0" style="margin-left: auto; margin-right: auto; width: 837px; height: 138px;" cellpadding="1">
