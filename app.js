@@ -190,6 +190,7 @@ app.post('/getTypesOfCatalog', aboutCatalogMethods);
 app.post('/addTovar', aboutCatalogMethods);
 app.post('/setcolor', aboutCatalogMethods);
 app.post('/saveTovar', aboutCatalogMethods);
+app.post('/removeTovar', aboutCatalogMethods);
 
 const menuPanelMethods = require('./controllers/panel/panelMenu_controller');
 app.post('/gettypes', menuPanelMethods);

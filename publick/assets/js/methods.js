@@ -55,6 +55,40 @@ var rus_to_latin = function(str){
     return n_str.join('');
 }
 
+function xmlToJson(xml) {
+	var obj = {};
+	if (xml.nodeType == 1) {
+		if (xml.attributes.length > 0) {
+		obj["@attributes"] = {};
+			for (var j = 0; j < xml.attributes.length; j++) {
+				var attribute = xml.attributes.item(j);
+				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+			}
+		}
+	} else if (xml.nodeType == 3) { // text
+		obj = xml.nodeValue;
+	}
+	if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+		obj = xml.childNodes[0].nodeValue;
+	}
+	else if (xml.hasChildNodes()) {
+		for(var i = 0; i < xml.childNodes.length; i++) {
+			var item = xml.childNodes.item(i);
+			var nodeName = item.nodeName;
+			if (typeof(obj[nodeName]) == "undefined") {
+				obj[nodeName] = xmlToJson(item);
+			} else {
+				if (typeof(obj[nodeName].push) == "undefined") {
+					var old = obj[nodeName];
+					obj[nodeName] = [];
+					obj[nodeName].push(old);
+				}
+				obj[nodeName].push(xmlToJson(item));
+			}
+		}
+	}
+	return obj;
+}
 var INDEX = {
 	init: function(){
 		$("#wievers").val();
@@ -307,6 +341,7 @@ var USER = {
 }
 
 var CATALOG = {
+	JSON_FILE: {},
 	setcolortovar: function(a,b){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/setcolor',{a:a, b:b}, (res) => {
@@ -414,24 +449,84 @@ var CATALOG = {
 		})
 	},
 	save: function(a){
-		console.log(CATALOG.parsedata())
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/saveTovar',{a:CATALOG.parsedata(), b:a}, (res) => {
 			create_alert(res, false);
 		})
 	},	
 	remove: function(a){
-
+		$('.preloaderBlock').fadeIn(100);
+		$.post('/removeTovar',{a:a}, (res) => {
+			create_alert(res, false);
+		})
 	},
 	import: function(){
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', $("#linkInp").val(), false);
 		xhr.send();
 		if (xhr.status != 200) {
-		  alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+		  alert( xhr.status + ': ' + xhr.statusText );
 		} else {
-		  alert( xhr.responseText ); // responseText -- текст ответа.
+		  alert( xhr.responseText );
 		}
+	},
+	fileimport: function(input){
+		var fileTypes = ['xml', 'json'];  
+	 	if (input.files && input.files[0]) {
+	        var extension = input.files[0].name.split('.').pop().toLowerCase(),  //file extension from input file
+	            isSuccess = fileTypes.indexOf(extension) > -1;  //is extension in acceptable types
+	            console.log(extension);
+	        if (isSuccess) { //yes
+	            var reader = new FileReader();
+	            reader.onload = function (e) {
+	            	
+	            	if(extension === 'xml'){
+	            		var OPENED_XML = new DOMParser().parseFromString(reader.result, 'text/xml');
+	            		JSON_FILE = xmlToJson(OPENED_XML);
+	            		console.log(JSON_FILE)
+	            		if(JSON_FILE.yml_catalog.shop.company === 'Berezkashop'){
+	            			var tovarList = JSON_FILE.yml_catalog.shop.offers.offer
+	            			for(var i = 0; i < tovarList.length; i++){
+	       //      				var tovardata = {
+								// 	title: [
+								// 		tovarList[i].name,
+								// 		tovarList[i].name,
+								// 		tovarList[i].name
+								// 	],
+								// 	text: [
+								// 		tovarList[i].name,
+								// 		tovarList[i].name,
+								// 		tovarList[i].name
+								// 	],
+								// 	link: $('#linkData').val(),
+								// 	images: TOVARIMAGE,
+								// 	code: $("#tovarCode").val(),
+								// 	size: [tovarList[i].param[0]],
+								// 	price: tovarList[i].price,
+								// 	categories: parseInt($('#categoriesSelect').val()),
+								// 	type: $('#typeSelect').val(),
+								// 	color: $('#colorSelect').val(),
+								// 	group: 0,
+								// 	sale: [$('#saleEnables').is(":checked"), parseInt($('#saleData').val())],
+								// 	manufacturer: $('#manSelect').val(),
+								// }
+
+	            				console.log(tovarList[i])
+	            			}
+	            		}
+	            	} else if(extension === 'json'){
+	            		JSON_FILE === JSON.parse(reader.result)
+	            		console.log(JSON_FILE);
+	            	} else{
+	            		console.warn('неподдерживаемый формат файла')
+	            	}
+	            }
+	            reader.readAsText(input.files[0]);		        
+	        }
+	        else { //no
+	        	console.warn('Ошибка загрузки файла');
+	        }
+	    }
 	}
 }
 

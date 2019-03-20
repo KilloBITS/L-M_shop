@@ -98,12 +98,9 @@
                             </form>
                         </div>
                     </div>
-                    <!-- profile info & task notification -->
                     <%- include ./includes/infoblock.ejs %> 
                 </div>
             </div>
-            <!-- header area end -->
-            <!-- page title area start -->
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
@@ -132,7 +129,6 @@
                     <%- include ./includes/user.ejs %> 
                 </div>
             </div>
-            <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
                     <% if(!editMode){ %>
@@ -170,7 +166,7 @@
                                         <div id="accordion12" class="collapse" data-parent="#accordion1">
                                             <div class="card-body">
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inportFile">
+                                                    <input type="file" class="custom-file-input" id="inportFile" accept=".xml,.json" onchange="CATALOG.fileimport(this)">
                                                     <label class="custom-file-label" for="inportFile">Выбрать файл</label>
                                                 </div>                                 
                                                 <button type="submit" class="btn btn-primary pr-4 pl-4">Импортировать</button>
@@ -267,7 +263,6 @@
                                                     <% } %>                                                   
                                                 </select>
                                             </div>
-
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Категория</label>
                                                 <select class="custom-select" id="categoriesSelect" onchange="CATALOG.categoriesselect(this)">
@@ -275,8 +270,7 @@
                                                     <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
                                                     <% } %>
                                                 </select>
-                                            </div>
-                                            
+                                            </div>                                            
                                             <div class="col-md-4 mb-3">
                                                 <div class="preloaderBlock miniloader" style="display: none;">
                                                     <div class="loader"></div>
@@ -286,8 +280,7 @@
                                                     <option selected="selected">Выберите тип</option>                                                    
                                                 </select>
                                             </div>
-                                        </div>   
-
+                                        </div>
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
                                                 <label for="example-date-input" class="col-form-label">Группа товаров</label>
@@ -295,7 +288,6 @@
                                                     <option selected="selected" id="colorSelect">Выберите группу</option>
                                                 </select>
                                             </div>
-
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Производитель</label>
                                                 <select class="custom-select" id="manSelect">
@@ -304,15 +296,12 @@
                                                     <option value="<%= man[i].index %>"><%= man[i].title %></option>
                                                     <% } %>
                                                 </select>
-                                            </div>  
-
+                                            </div>
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Код товара</label>
                                                 <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.code %><% } %>" id="tovarCode">
-                                            </div>                                         
-                                            
-                                        </div>                                                                               
-
+                                            </div>                                            
+                                        </div>
                                         <div class="form-group">
                                             <label for="example-date-input" class="col-form-label">Размер</label>
                                             <div class="custom-control custom-checkbox custom-control-inline">
@@ -353,7 +342,6 @@
                                                 <label class="custom-control-label" for="M-L">M/L</label>
                                             </div>                                          
                                         </div>
-
                                         <div class="form-group">
                                             <label class="col-form-label">Описание товара</label>
                                             <div class="row">
@@ -407,7 +395,6 @@
                             </div>                          
                         </div>
                     </div>
-
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">
                             <div class="col-12 mt-5">

@@ -65,6 +65,23 @@ router.post('/saveTovar', function(req, res, next){
 	}
 });
 
+router.post('/removeTovar', function(req, res, next){
+	if(req.session.admin){
+		mongoClient.connect(global.baseIP,{ useNewUrlParser: true }, function(err, client){
+			const db = client.db(global.baseName);
+			const tovar = db.collection("TOVAR");
+
+			if(err) return console.log(err);
+			tovar.remove({AI: parseInt(req.body.a)});
+			res.send({code: 500, className: 'nSuccess', message: 'Товар успешно удален!'});				
+				
+		});		
+	}else{
+		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
+	}
+});
+
+
 
 //Добавить новость
 router.post('/addTovar', function(req, res, next){
