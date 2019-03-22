@@ -7,7 +7,7 @@ const bParser = require('body-parser');
 router.post('/getbasket', function(req, res, next){
   var arrayTovar = [];
   for(let i = 0; i < req.body.data.length; i++){
-    arrayTovar.push(req.body.data[i]);
+    arrayTovar.push(req.body.data[i].AI);
   }
 
   mongoClient.connect(global.baseIP, function(err, client){
@@ -16,24 +16,23 @@ router.post('/getbasket', function(req, res, next){
 
     if(err) return console.log(err);
 
-      // console.log(req.body.data)
       var result = arrayTovar.map(function (x) {
         return parseInt(x, 10);
       });
       var integerDataArray = result;
-     tovar.find( { AI: { $in:  integerDataArray } } ).toArray(function(err, results_tovar ){
-       var newArrayPush = [];
+      tovar.find( { AI: { $in:  integerDataArray } } ).toArray(function(err, results_tovar ){
+        var newArrayPush = [];
 
-       for(let id = 0; id < integerDataArray.length; id++){
-         for(let ir = 0; ir < results_tovar.length; ir++){
-           if(parseInt(results_tovar[ir].AI) === integerDataArray[id]){
-             newArrayPush.push(results_tovar[ir]);
-           }
-         }
-       }
+        for(let id = 0; id < integerDataArray.length; id++){
+          for(let ir = 0; ir < results_tovar.length; ir++){
+            if(parseInt(results_tovar[ir].AI) === integerDataArray[id]){
+              newArrayPush.push({data: results_tovar[ir], length: req.body.data[ir].length});
+            }
+          }
+        }
 
-       res.send({code: 500, tovar: newArrayPush});
-       client.close();
+        res.send({code: 500, tovar: newArrayPush});
+        client.close();
      });
   });
 });

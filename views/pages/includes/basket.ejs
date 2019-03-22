@@ -28,15 +28,15 @@
           <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
         </p>
         <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" placeholder="Доставка" required>
+          <option value="1">Доставка Курьером</option>
           <option value="2">Доставка Новой Почтой</option>
-          <option value="3" disabled>Доставка УкрПочтой</option>
+          <option value="3">Доставка УкрПочтой</option>
         </select>
 
-        <select class="selector disabled" name="oplatatype" id="typeOfOplata" required placeholder="Оплата" required>
-          <option value="0" disabled>Оплата наличными</option>
-          <option value="1" selected>Оплата картой</option>
+        <select class="selector" name="oplatatype" id="typeOfOplata" required placeholder="Оплата" required>
+          <option value="0">Оплата наличными</option>
+          <option value="1">Оплата картой</option>
         </select>
-        <div class="warnMsg">(Оплата картой сейчас недоступна, приносим наши извинения, мы работаем над этим).</div>
 
         <p class="input-container" id="CityOfDost">
           <input type="text" name="city" id="input-PaymentCity" class="login-input" >

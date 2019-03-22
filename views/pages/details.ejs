@@ -28,6 +28,22 @@
   <script type="text/javascript" src="script/ADM_FOLDER/adm_script.js"></script>
   <link rel="stylesheet" type="text/css" href="script/ADM_FOLDER/adm_style.css">
   <% } %>
+  <script type="text/javascript">
+    var toBasketObj = {
+      AI: '<%= tovarArr.AI %>',
+      id: '<%= tovarArr.code %>',
+      length: 1,
+      size: 'S'
+    };
+    console.log(toBasketObj);
+
+    var minusLength = function(){
+      toBasketObj.length = toBasketObj.length - 1; 
+    }
+    var plusLength = function(){
+      toBasketObj.length = toBasketObj.length + 1; 
+    }
+  </script>
 </head>
 <body>
   <%- include ./includes/preloader.ejs %>
@@ -41,7 +57,7 @@
     </div>
     <div class="logotype" style="background-image: url(../../../image/<%= config.logotype %>)"></div>
     <div class="topNavBlockOfBtm">
-     <a href="tel:<%= config.number %>" class="contact_number"><%= config.number %></a>
+     <a href="tel:<%= config.number %>" class="contact_number"><%= contacts.number %></a>
      <%- include ./includes/session.ejs %>
      <div class="basketBlock">
       <span>0</span>
@@ -203,22 +219,27 @@
             </div>
             <div class="btnTableSizes">Таблица размеров</div>
           </div>
-          <div class="text_line" id="PROIZVOD">Производитель:<span><%= tovarArr.manufacturer %></span></div>
-          <div class="text_line">Код товара: <%= tovarArr.code %></div>
+          <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact.find(x => x.index === parseInt(tovarArr.manufacturer)).title  %></span></div>
+          <div class="text_line" id="CODETOVAR">Код товара: <%= tovarArr.code %></div>
           <div class="text_line" id="OPISANIE">Описание:</div>
           <div class="noneText"><%= tovarArr.text[numLang] %></div>
           <script type="text/javascript">
             $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
           </script>
+          <div class="text_line" id="BONUS">Дополнительно:</div>
+          <div class="text_line" id="BONUSBLOCK">
+            <img src="../../../image/bonus.png">
+          </div>
+
         </div>
         <div class="LengthOfBalset">
           <div class="number-choice">
-            <button type="button"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" onclick="minusLength()"><i class="fa fa-minus" aria-hidden="true"></i></button>
             <p class="current-amount">1</p>
-            <button type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button type="button" onclick="plusLength()"><i class="fa fa-plus" aria-hidden="true"></i></button>
           </div>
-        </div>        
-        <button class="add-to-cart"onclick="setBasket('<%= tovarArr.AI %>')">Добавить в корзину</button>
+        </div>      
+        <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
       </div>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <div class="wrapper">
@@ -264,8 +285,8 @@
               <h3><span style="font-size: 100%;"><strong style="font-size: 120%; text-align: left;">КОНТАКТЫ</strong></span></h3>
               <h4><img src="../../../image/contact.png" width="40" height="40" style="vertical-align: middle;"></h4>
               <p></p>
-              <div><span style="font-size: 80%;">VIBER: <%= config.number %><a href="tel:<%= config.number %>" style="text-align: left;"><br></a></span></div>
-              <div><span style="font-size: 80%;">Email: <a href="mailto:<%= config.email %>"><%= config.email %></a></span></div>
+              <div><span style="font-size: 80%;">VIBER: <%= contacts.number %><a href="tel:<%= contacts.number %>" style="text-align: left;"><br></a></span></div>
+              <div><span style="font-size: 80%;">Email: <a href="mailto:<%= contacts.email %>"><%= contacts.email %></a></span></div>
               <div><span style="font-size: 80%;">Прием заказов: 24/7</span></div>
               <div><span style="font-size: 80%;">ПН-ВС</span></div>
             </td>
@@ -275,9 +296,28 @@
     </div>
     <div class="grid related-products">
       <div class="column-xs-12">
+        <h3><%= locale.similar %></h3>
+      </div>
+      <% for(var i = 0; i < similars.length; i++) { %>
+      <div class="column-xs-12 column-md-4">
+        <a href="/details?tov=<%= similars[i].AI %>&<%= similars[i].types %>">
+          <img src="<%= similars[i].images[0] %>">
+          <h4><%= similars[i].title[numLang] %></h4>
+          <% if(similars[i].sale[0] === 'true'){ %>
+          <p class="price" style="text-decoration: line-through"><%= similars[i].price %> Грн</p>
+          <p class="price2" style="color: red"><%= parseInt(similars[i].price - similars[i].price / 100 * parseInt(similars[i].sale[1])) %> Грн</p>
+          <% } else { %>
+          <p class="price"><%= similars[i].price %> Грн</p>
+          <% } %>
+        </a>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="grid related-products">
+      <div class="column-xs-12">
         <h3><%= locale.recomended %></h3>
       </div>
-
       <% for(var i = 0; i < rec.length; i++) { %>
       <div class="column-xs-12 column-md-4">
         <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].types %>">
@@ -293,7 +333,6 @@
       </div>
       <% } %>
     </div>
-
   </div>
 
   <div class="comments">

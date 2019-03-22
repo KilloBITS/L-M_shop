@@ -4,6 +4,12 @@ const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 const pagination = require('pagination');
 
+function randomInteger(min, max) {
+  var rand = min - 0.5 + Math.random() * (max - min + 1)
+  rand = Math.round(rand);
+  return rand;
+}
+
 router.get('/*', function(req, res, next){
   var DA = req.url.split('=');
   var searchData = DA[1].split('&');
@@ -17,6 +23,7 @@ router.get('/*', function(req, res, next){
     const news = db.collection("NEWS");
     const contacts = db.collection("CONTACTS");
     const config = db.collection("CONFIG");
+    const manufactures = db.collection("MANUFACTURERS");
     
     if(err) return console.log(err);
 
@@ -25,22 +32,31 @@ router.get('/*', function(req, res, next){
         menu.find().sort({index: 1}).toArray(function(err, resMenu){
           tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, recomendedTov) {
             tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function(err, resTovar){
-              console.log(resTovar[0])
-              config.find().toArray(function(err, resConfig){
-                news.find().toArray(function(err, resNews){
-                  contacts.find().toArray(function(err, resContacts){                  
-                    res.render('pages/details.ejs',{
-                      isAdm: req.session.admin,
-                      sessionUser: resUsers[0],
-                      locale: resLocale[0][global.parseLanguage(req)].details,
-                      menu: resMenu,
-                      globalLocale:  resLocale[0][global.parseLanguage(req)],
-                      contacts: resContacts[0],
-                      numLang: global.parseNumLang(req),
-                      tovarArr: resTovar[0],                    
-                      config: resConfig[0],
-                      rec: recomendedTov,
-                      comment: ''
+              tovar.find({ color: resTovar[0].color, type: resTovar[0].type }).toArray(function(err, similarTov) {
+                var NewSimilar = [];
+                for(var mr = 0; mr < 3; mr++ ){
+                  NewSimilar.push(similarTov[randomInteger(0, similarTov.length)]);
+                }
+                config.find().toArray(function(err, resConfig){
+                  news.find().toArray(function(err, resNews){
+                    contacts.find().toArray(function(err, resContacts){                  
+                      manufactures.find().toArray(function(err, resManufactures){                  
+                        res.render('pages/details.ejs',{
+                          isAdm: req.session.admin,
+                          sessionUser: resUsers[0],
+                          locale: resLocale[0][global.parseLanguage(req)].details,
+                          menu: resMenu,
+                          globalLocale:  resLocale[0][global.parseLanguage(req)],
+                          contacts: resContacts[0],
+                          numLang: global.parseNumLang(req),
+                          tovarArr: resTovar[0],                    
+                          config: resConfig[0],
+                          rec: recomendedTov,
+                          manufact: resManufactures,
+                          similars: NewSimilar,
+                          comment: ''
+                        });
+                      });
                     });
                   });
                 });

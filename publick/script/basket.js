@@ -1,4 +1,11 @@
 var BASKET = [];
+var refreshPrice = function(tovar){
+	for(let i = 0; i < tovar.tovar.length; i++){
+		var summa = summa + (parseFloat(tovar.tovar[i].data.price) * parseInt(tovar.tovar[i].length));
+	}
+	$(".allSum").html(summa + ' ГРН');
+	$(".bubbly-button").html("Оплатить товар на сумму: " + summa + ' ГРН');
+}
 var UPDATE_BASCET = function(){
 	$("#CityOfDost,#CityOfPostNP").fadeIn(300);
 	$("#input-PaymentCity").val("").attr("disabled",false);
@@ -17,17 +24,18 @@ var UPDATE_BASCET = function(){
 			var newDiv = document.createElement("div");
 			newDiv.className = "basket_doc";
 			$(".basket_tovar .BSK").append(newDiv)
-			summa = summa + parseFloat(tovar.tovar[i].price);
+
+			summa = summa + (parseFloat(tovar.tovar[i].data.price) * parseInt(tovar.tovar[i].length));
 			var minBasImg = document.createElement("div");
-			minBasImg.style.backgroundImage = "url("+tovar.tovar[i].images[0]+")";
+			minBasImg.style.backgroundImage = "url("+tovar.tovar[i].data.images[0]+")";
 			minBasImg.className = "minBasImg";
 
 			var minBasTitle = document.createElement("div");
-			minBasTitle.innerHTML = tovar.tovar[i].title[0];
+			minBasTitle.innerHTML = tovar.tovar[i].data.title[0];
 			minBasTitle.className = "minBasTitle";
 
 			var minAllSum = document.createElement("div");
-			minAllSum.innerHTML = tovar.tovar[i].price + " ГРН";
+			minAllSum.innerHTML = tovar.tovar[i].data.price + " ГРН";
 			minAllSum.className = "minAllSum";
 
 			var minBasLength = document.createElement("div");
@@ -58,7 +66,13 @@ var UPDATE_BASCET = function(){
 			var inplen = document.createElement("input");
 			inplen.className = "InputLength";
 			inplen.type = "number"
-			inplen.value = 1;
+			inplen.onchange = function(){
+				refreshPrice(tovar);
+			};
+			inplen.onkeyup = function(){
+				refreshPrice(tovar);
+			};
+			inplen.value = parseInt(tovar.tovar[i].length);
 			$(minBasLength).append(inplen);
 		}
 		$(".allSum").html(summa + ' ГРН');
@@ -69,13 +83,11 @@ var UPDATE_BASCET = function(){
 }
 
 
-var setBasket = function(ind, btn){
-
- if(BASKET.indexOf(ind.toString()) === -1){
-   BASKET.push(ind);
-   localStorage.setItem("SHOP_BASKET", BASKET);
+var setBasket = function(a){
+ if(BASKET.indexOf(JSON.stringify(a)) === -1){
+   BASKET.push(a);
+   localStorage.setItem("SHOP_BASKET", JSON.stringify(BASKET));
    $(".basketBlock span").html(BASKET.length);
-   $(".getSuccess:eq("+btn+")").fadeIn(300);
 
    $(".basketBlock").css({
      "width": "32px",
@@ -88,15 +100,8 @@ var setBasket = function(ind, btn){
        "height": "26px"
      });
    },300);
-
-   setTimeout(function(){
-     $(".getSuccess:eq("+btn+")").fadeOut(300);
-   },2000);
+   createAlert('','','Товар успешно добавлен в вашу корзину!','success',false,true,'pageMessages');
  }else{
-   $(".getError:eq("+btn+")").fadeIn(300);
-   setTimeout(function(){
-     $(".getError:eq("+btn+")").fadeOut(300);
-   },2000);
    createAlert('','','Такой товар уже есть в вашей корзине!','warning',false,true,'pageMessages');
  }
 }
@@ -104,13 +109,10 @@ var setBasket = function(ind, btn){
 
 $(document).ready(function(){
 	if(localStorage.getItem('SHOP_BASKET') !== null){
-		let MY = localStorage.getItem("SHOP_BASKET").split(",");
-		if(MY[0] !== ""){
-			$(".basketBlock span").html(MY.length);
-			BASKET = MY;
-		}
+		let MY = localStorage.getItem("SHOP_BASKET");
+		BASKET = JSON.parse(MY);
+		$(".basketBlock span").html(BASKET.length);
 	}
-
 
 	$(".basketBlock").click(function(){
 		if(BASKET.length >= 1){
