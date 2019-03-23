@@ -192,7 +192,7 @@
           </div>
         </div>
       </div>
-      <div class="column-xs-12 column-md-6">
+      <div class="column-xs-12 column-md-6" id="infooftovar">
         <h1><%= tovarArr.title[numLang] %></h1>
         <% if(tovarArr.sale[0] === 'true'){ %>
         <h2 style="text-decoration: line-through"  class="oldPrice">Старая цена: <%= tovarArr.price %> Грн</h2>
@@ -225,149 +225,168 @@
           <div class="noneText"><%= tovarArr.text[numLang] %></div>
           <script type="text/javascript">
             $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
-          </script>
+          </script>          
+          <% if(tovarArr.unboxbonus && tovarArr.freeshep){ %>
           <div class="text_line" id="BONUS">Дополнительно:</div>
           <div class="text_line" id="BONUSBLOCK">
-            <img src="../../../image/bonus.png">
-          </div>
+            <% if(tovarArr.unboxbonus){ %>
+            <div class="text_line inline">
+              <img src="../../../image/bonus.png" style="max-height: 60px">
+            </div>
+            <% } %>           
 
+            <% if(tovarArr.freeshep){ %>
+            <div class="text_line inline">
+              <img src="../../../image/freeshiping.png" style="max-height: 60px">
+            </div>
+            <% } %>
+          </div>
+          <% } %> 
+          <% if(tovarArr.color.charAt(0) === '#'){ %>
+          <% var currentColor = tovarArr.color %>
+          <% }else{ %>
+          <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
+          <% } %>
+          <div class="TovarColorBlock" style="background-color: <%= currentColor %>">
+            <div class="colorBtn select"></div>
+          </div>          
+          <div class="LengthOfBalset">
+            <div class="number-choice">
+              <button type="button" onclick="minusLength()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+              <p class="current-amount">1</p>
+              <button type="button" onclick="plusLength()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+          </div>      
+          <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
         </div>
-        <div class="LengthOfBalset">
-          <div class="number-choice">
-            <button type="button" onclick="minusLength()"><i class="fa fa-minus" aria-hidden="true"></i></button>
-            <p class="current-amount">1</p>
-            <button type="button" onclick="plusLength()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-          </div>
-        </div>      
-        <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
-      </div>
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      <div class="wrapper">
-        <ul>
-          <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
-          <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
-          <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
-          <a href="https://vk.com/share.php?url=http://ladyman.club/details?tov=<%= tovarArr.AI %>&title=<%= tovarArr.title %>&image=<%= tovarArr.images[0] %>" target="_blank"><li class="whatsapp"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li></a>
-        </ul>
-      </div>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <div class="wrapper">
+          <ul>
+            <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+            <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+            <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
+            <a href="https://vk.com/share.php?url=http://ladyman.club/details?tov=<%= tovarArr.AI %>&title=<%= tovarArr.title %>&image=<%= tovarArr.images[0] %>" target="_blank"><li class="whatsapp"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li></a>
+          </ul>
+        </div>
 
+
+      </div>
       <a href="/details?tov=<%= parseInt(tovarArr.AI)-1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="prewTovar"></div></a>
       <a href="/details?tov=<%= parseInt(tovarArr.AI)+1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="nextTovar"></div></a>
-    </div>
-    <div id="product-pd" class="tab-pane fade in active">
-      <table border="0" style="margin-left: auto; margin-right: auto; width: 837px; height: 138px;" cellpadding="1">
-        <tbody>
-          <tr>
-            <td align="center" valign="top">
-              <h3><span style="font-size: 100%;"><strong>ДОСТАВКА</strong></span></h3>
-              <h4><span style="font-size: 80%;"><strong></strong></span><img src="../../../image/delivery(1).png" width="40" height="40" style="vertical-align: middle;"></h4>
-              <p></p>
-              <div><span style="font-size: 80%;">БЕСПЛАТНАЯ ДОСТАВКА </span></div>
-              <div><span style="font-size: 80%;">при заказе</span></div>
-              <div><span style="font-size: 80%;"></span><span style="font-size: 80%;">на сумму свыше 2000 грн</span></div>
-              <div><span style="font-size: 80%;">(только Украина)</span></div>
-              <div><span style="font-size: 80%;">Срок доставки: от 1 до 7 дней&nbsp;</span></div>
-              <div><span style="font-size: 80%;">в зависимости от региона.</span></div>
-              <div></div>
-              <div></div>
-            </td>
-            <td align="center" valign="top">
-              <h3><strong>ОБМЕН И ВОЗВРАТ</strong></h3>
-              <h4><strong></strong><img src="../../../image/returns.png" width="40" height="40" style="vertical-align: middle;"></h4>
-              <p></p>
-              <div><span style="font-size: 80%;">Обмен и возврат товара</span></div>
-              <div><span style="font-size: 80%;">возможен в течение&nbsp;14&nbsp;дней,</span></div>
-              <div><span style="font-size: 80%;">не считая дня покупки.</span></div>
-              <div><span style="font-size: 80%;">Только при наличии</span></div>
-              <div><span style="font-size: 80%;">производственого брака.</span></div>
-            </td>
-            <td align="center" valign="top">
-              <h3><span style="font-size: 100%;"><strong style="font-size: 120%; text-align: left;">КОНТАКТЫ</strong></span></h3>
-              <h4><img src="../../../image/contact.png" width="40" height="40" style="vertical-align: middle;"></h4>
-              <p></p>
-              <div><span style="font-size: 80%;">VIBER: <%= contacts.number %><a href="tel:<%= contacts.number %>" style="text-align: left;"><br></a></span></div>
-              <div><span style="font-size: 80%;">Email: <a href="mailto:<%= contacts.email %>"><%= contacts.email %></a></span></div>
-              <div><span style="font-size: 80%;">Прием заказов: 24/7</span></div>
-              <div><span style="font-size: 80%;">ПН-ВС</span></div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="grid related-products">
-      <div class="column-xs-12">
-        <h3><%= locale.similar %></h3>
+      <div id="product-pd" class="tab-pane fade in active">
+        <table border="0" style="margin-left: auto; margin-right: auto; width: 837px; height: 138px;" cellpadding="1">
+          <tbody>
+            <tr>
+              <td align="center" valign="top">
+                <h3><span style="font-size: 100%;"><strong>ДОСТАВКА</strong></span></h3>
+                <h4><span style="font-size: 80%;"><strong></strong></span><img src="../../../image/delivery(1).png" width="40" height="40" style="vertical-align: middle;"></h4>
+                <p></p>
+                <div><span style="font-size: 80%;">БЕСПЛАТНАЯ ДОСТАВКА </span></div>
+                <div><span style="font-size: 80%;">при заказе</span></div>
+                <div><span style="font-size: 80%;"></span><span style="font-size: 80%;">на сумму свыше 2000 грн</span></div>
+                <div><span style="font-size: 80%;">(только Украина)</span></div>
+                <div><span style="font-size: 80%;">Срок доставки: от 1 до 7 дней&nbsp;</span></div>
+                <div><span style="font-size: 80%;">в зависимости от региона.</span></div>
+                <div></div>
+                <div></div>
+              </td>
+              <td align="center" valign="top">
+                <h3><strong>ОБМЕН И ВОЗВРАТ</strong></h3>
+                <h4><strong></strong><img src="../../../image/returns.png" width="40" height="40" style="vertical-align: middle;"></h4>
+                <p></p>
+                <div><span style="font-size: 80%;">Обмен и возврат товара</span></div>
+                <div><span style="font-size: 80%;">возможен в течение&nbsp;14&nbsp;дней,</span></div>
+                <div><span style="font-size: 80%;">не считая дня покупки.</span></div>
+                <div><span style="font-size: 80%;">Только при наличии</span></div>
+                <div><span style="font-size: 80%;">производственого брака.</span></div>
+              </td>
+              <td align="center" valign="top">
+                <h3><span style="font-size: 100%;"><strong style="font-size: 120%; text-align: left;">КОНТАКТЫ</strong></span></h3>
+                <h4><img src="../../../image/contact.png" width="40" height="40" style="vertical-align: middle;"></h4>
+                <p></p>
+                <div><span style="font-size: 80%;">VIBER: <%= contacts.number %><a href="tel:<%= contacts.number %>" style="text-align: left;"><br></a></span></div>
+                <div><span style="font-size: 80%;">Email: <a href="mailto:<%= contacts.email %>"><%= contacts.email %></a></span></div>
+                <div><span style="font-size: 80%;">Прием заказов: 24/7</span></div>
+                <div><span style="font-size: 80%;">ПН-ВС</span></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <% for(var i = 0; i < similars.length; i++) { %>
-      <div class="column-xs-12 column-md-4">
-        <a href="/details?tov=<%= similars[i].AI %>&<%= similars[i].types %>">
-          <img src="<%= similars[i].images[0] %>">
-          <h4><%= similars[i].title[numLang] %></h4>
-          <% if(similars[i].sale[0] === 'true'){ %>
-          <p class="price" style="text-decoration: line-through"><%= similars[i].price %> Грн</p>
-          <p class="price2" style="color: red"><%= parseInt(similars[i].price - similars[i].price / 100 * parseInt(similars[i].sale[1])) %> Грн</p>
-          <% } else { %>
-          <p class="price"><%= similars[i].price %> Грн</p>
-          <% } %>
-        </a>
+      <div class="grid related-products">
+        <div class="column-xs-12">
+          <h3><%= locale.similar %></h3>
+        </div>
+        <% for(var i = 0; i < similars.length; i++) { %>
+        <div class="column-xs-12 column-md-4">
+          <a href="/details?tov=<%= similars[i].AI %>&<%= similars[i].types %>">
+            <img src="<%= similars[i].images[0] %>">
+            <h4><%= similars[i].title[numLang] %></h4>
+            <% if(similars[i].sale[0] === 'true'){ %>
+            <p class="price" style="text-decoration: line-through"><%= similars[i].price %> Грн</p>
+            <p class="price2" style="color: red"><%= parseInt(similars[i].price - similars[i].price / 100 * parseInt(similars[i].sale[1])) %> Грн</p>
+            <% } else { %>
+            <p class="price"><%= similars[i].price %> Грн</p>
+            <% } %>
+          </a>
+        </div>
+        <% } %>
       </div>
-      <% } %>
+
+      <div class="grid related-products">
+        <div class="column-xs-12">
+          <h3><%= locale.recomended %></h3>
+        </div>
+        <% for(var i = 0; i < rec.length; i++) { %>
+        <div class="column-xs-12 column-md-4">
+          <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].types %>">
+            <img src="<%= rec[i].images[0] %>">
+            <h4><%= rec[i].title[numLang] %></h4>
+            <% if(rec[i].sale[0] === 'true'){ %>
+            <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>
+            <p class="price2" style="color: red"><%= parseInt(rec[i].price - rec[i].price / 100 * parseInt(rec[i].sale[1])) %> Грн</p>
+            <% } else { %>
+            <p class="price"><%= rec[i].price %> Грн</p>
+            <% } %>
+          </a>
+        </div>
+        <% } %>
+      </div>
     </div>
 
-    <div class="grid related-products">
-      <div class="column-xs-12">
-        <h3><%= locale.recomended %></h3>
+    <div class="comments">
+      <div class="comments_title"><%= locale.comments %></div>
+      <div class="comment-wrap">
+        <% if(sessionUser !== undefined){ %>
+        <div class="comment-block">
+          <textarea name="" id="commentsText" tov_AI="<%= tovarArr.AI %>" cols="30" rows="3" placeholder="Add comment..."></textarea>
+          <div class="setComments"></div>
+        </div>
+        <% } else { %>
+        <div class="comment-block">
+          <div class="no_comment">Для того чтобы вы могли оставлять комментарии вам нужно <a href="/login">зарегистрироватся</a> или <a href="/login">войти</a> в свой аккаунт</div>
+        </div>
+        <% } %>
       </div>
-      <% for(var i = 0; i < rec.length; i++) { %>
-      <div class="column-xs-12 column-md-4">
-        <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].types %>">
-          <img src="<%= rec[i].images[0] %>">
-          <h4><%= rec[i].title[numLang] %></h4>
-          <% if(rec[i].sale[0] === 'true'){ %>
-          <p class="price" style="text-decoration: line-through"><%= rec[i].price %> Грн</p>
-          <p class="price2" style="color: red"><%= parseInt(rec[i].price - rec[i].price / 100 * parseInt(rec[i].sale[1])) %> Грн</p>
-          <% } else { %>
-          <p class="price"><%= rec[i].price %> Грн</p>
-          <% } %>
-        </a>
-      </div>
-      <% } %>
-    </div>
-  </div>
-
-  <div class="comments">
-    <div class="comments_title"><%= locale.comments %></div>
-    <div class="comment-wrap">
-      <% if(sessionUser !== undefined){ %>
-      <div class="comment-block">
-        <textarea name="" id="commentsText" tov_AI="<%= tovarArr.AI %>" cols="30" rows="3" placeholder="Add comment..."></textarea>
-        <div class="setComments"></div>
-      </div>
-      <% } else { %>
-      <div class="comment-block">
-        <div class="no_comment">Для того чтобы вы могли оставлять комментарии вам нужно <a href="/login">зарегистрироватся</a> или <a href="/login">войти</a> в свой аккаунт</div>
-      </div>
-      <% } %>
-    </div>
-    <% if( comment.length > 0 ){ %>
-    <% for(var i = 0; i < comment.length; i++) { %>
-    <div class="comment-wrap">
-      <div class="comment-block">
-        <p class="comment-text"><%= comment[i].text %></p>
-        <div class="bottom-comment">
-          <div class="comment-date"><%= comment[i].author %></div>
+      <% if( comment.length > 0 ){ %>
+      <% for(var i = 0; i < comment.length; i++) { %>
+      <div class="comment-wrap">
+        <div class="comment-block">
+          <p class="comment-text"><%= comment[i].text %></p>
+          <div class="bottom-comment">
+            <div class="comment-date"><%= comment[i].author %></div>
+          </div>
         </div>
       </div>
+      <% } %>
+
+      <% } %>
     </div>
-    <% } %>
-
-    <% } %>
   </div>
-</div>
 
-<%- include ./includes/footer.ejs %>
-<div id="pageMessages"></div>
-<div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
-<%- include ./includes/basket.ejs %>
+  <%- include ./includes/footer.ejs %>
+  <div id="pageMessages"></div>
+  <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
+  <%- include ./includes/basket.ejs %>
 </body>
 </html>

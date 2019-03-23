@@ -101,6 +101,8 @@ router.post('/addTovar', function(req, res, next){
 				DATA.date = global.getDate();
 				DATA.popularUser = 1;
 				DATA.popular = 5;
+				DATA.freeshep = false;
+				DATA.unboxbonus = false;
 				tovar.insertOne(DATA);	
 				res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.title[0]+' успешно добавлен!'});				
 			});		
