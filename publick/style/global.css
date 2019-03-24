@@ -567,24 +567,25 @@ a.adressLineMap:hover{
   background-image: url(http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png);
   background-size: contain;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .search_min_img img{
   max-width: 100%;
-  max-height: 100%;
 }
 
 .searchCancel{
 
 }
 .search_min_title{
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.11);
-  width: 100%;
-  min-height: 55px;
-  line-height: 20px;
-  padding-top: 9px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.78);
+    width: 100%;
+    min-height: 55px;
+    line-height: 20px;
+    padding-top: 9px;
+    bottom: 0;
 }
 
 .NONE_TOVAR{

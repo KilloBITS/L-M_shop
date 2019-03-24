@@ -48,11 +48,6 @@ var Index = {
         }, 1000);
     }
 
-    window.onload = () => {
-      const deadline = new Date("December 31, 2018 23:59:59");
-      startTimer("clockTimer", deadline)
-    };
-
     $('#head_arrow').click(function(){
       $('html,body').animate({
         scrollTop: $('.content').height()
@@ -103,6 +98,7 @@ var Index = {
         $('.search_data div').remove();
         $(".search_title span").html(res.length)
         for(let i = 0; i < res.length; i++){
+          console.log(res[i])
           var newObj = document.createElement('div');
           newObj.className = 'search_object';            
           $('.search_data').append(newObj);
@@ -113,12 +109,12 @@ var Index = {
 
           var img =  document.createElement('img');
           img.id = 'TovImg'+i;   
-          img.setAttribute('src', '../../../data/tovar/'+res[i].image[0]);         
+          img.setAttribute('src', res[i].images[0]);         
           $(obImg).append(img);
 
           var obTitle =  document.createElement('div');
           obTitle.className = 'search_min_title';
-          obTitle.innerHTML = res[i].title;
+          obTitle.innerHTML = res[i].title[pageLang];
           $(newObj).append(obTitle);
         }
       });

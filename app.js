@@ -59,8 +59,10 @@ const pp = require('./routes/getPrivacyPolicy');
 const dap = require('./routes/getDAP');
 const map = require('./routes/getSiteOfMap');
 const about = require('./routes/getAbout');
+const shopNews = require('./routes/getShopNews');
 
 app.use('/', index);
+app.use('/shopNews*', shopNews);
 app.use('/shop*', tovar);
 app.use('/stock*', getStock);
 app.use('/login', login);
@@ -76,6 +78,7 @@ app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
 app.use('/about', about);
+
 
 
 //Admin routes

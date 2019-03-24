@@ -36,6 +36,7 @@
   <script type="text/javascript" src="/script/global.js"></script>
   <script type="text/javascript" src="/script/basket.js"></script>
   <script type="text/javascript" src="/script/webflow.js"></script>
+  <script type="text/javascript">var pageLang = parseInt('<%= numLang %>')</script>
   <script type="text/javascript" src="script/index/index.js"></script>
   <script src="assets/js/pace.min.js"></script>
   <% if(isAdm){ %>
@@ -70,64 +71,83 @@
         <div class="slider-control left inactive"></div>
         <div class="slider-control right"></div>
         <div class="slider">
+          <% if(slides.length > 0){ %>
           <% for(var i = 0; i < slides.length; i++) { %>
-          <% if(i <= 0){ %>
-          <div class="slide slide-<%= i %> active">
-            <% } else { %>
-            <div class="slide slide-<%= i %>">
-              <% } %>
-              <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
-              <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
-              <div class="clockTimer"></div>
-              <a href="<%= slides[i].slideLink %>" target="_blank">
-                <div class="slide-button">
-                  <%= slides[i].slideName[numLang] %>
-                </div>
-              </a>
-            </div>
+          <div class="slide slide-<%= i %> <% if(i <= 0){ %> active <% } %>">              
+            <div class="slide__bg max" style="background-image: url(../../../data/slider/<%= slides[i].slideImage %>)"></div>
+            <div class="slide__bg min" style="background-image: url(../../../data/slider/min/<%= slides[i].slideImage %>)"></div>
+
+            <% if(slides[i].voting){ %>
+            <div class="slide_poll">
+              <% for(var iv = 0; iv < slides[i].options.length; iv++) { %>
+              <div class="poll_option" onclick="clickPoll(<%= iv %>)">
+                <div class="poll_select"><i class="fa fa-circle-o" aria-hidden="true"></i> <%= slides[i].options[iv] %></div>
+              </div>
+              <% } %> 
+              <script type="text/javascript">
+                var clickPoll = function(a){
+                  $.post('/setPoll',{a:a}, function(res){
+                    console.log(res);
+                  });
+                }
+              </script> 
+            </div> 
             <% } %>
+            <% if(slides[i].isBtn){ %>
+            <a href="<%= slides[i].slideLink %>" target="_blank"> 
+              <div class="slide-button">
+                <%= slides[i].slideName[numLang] %>
+              </div>
+            </a>
+            <% } %>            
           </div>
-        </div>
-        <div class="headerArrow">
-          <div class="arrowsss bounce" id="head_arrow"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+          <% } %>
+          <% } %>          
         </div>
       </div>
-      <div class="background"></div>
-      <style type="text/css">
-      .background::before {
-        background-color: <%= config.B_COLOR %>
-      }
-      .background::after {
-        background-color: <%= config.B_COLOR %>
-      }
-    </style>
-  </div>
+      <div class="headerArrow">
+        <div class="arrowsss bounce" id="head_arrow"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    <div class="background"></div>
+    <style type="text/css">
+    .background::before {
+      background-color: <%= config.B_COLOR %>
+    }
+    .background::after {
+      background-color: <%= config.B_COLOR %>
+    }
+  </style>
 </div>
-<div class="data block" style="background-color: <%= config.B_COLOR %>">
+</div>
+<div class="data block" style="background-color: <%= config.A_COLOR %>">
   <% if(newtovar.length > 0){ %>
   <div class="mainDLG">
     <div class="mainTitleDLG post"><%= locale.newgoods %></div>
     <div class="mainTextDLG post"><%= locale.newgoods2 %></div>
   </div> 
- <div class="carousel-wrapper" style="background-color: <%= config.B_COLOR %>">
-  <div class="carousel" data-flickity='{ "wrapAround": true }'>    
-    <% for(var i = 0; i < newtovar.length; i++){ %>
-    <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>&<%= newtovar[i].type %>" data-ix="scale-on-scroll">
-      <div class="carousel-cell w-col w-col-3 feature-pill">
-        <div class="newTov"></div>
-        <h3> <%= newtovar[i].title[numLang] %> </h3>
-        <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div>
-      </div>
-    </a>
-    <% } %>   
+  <div class="carousel-wrapper" style="background-color: <%= config.A_COLOR %>">
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>    
+      <% for(var i = 0; i < newtovar.length; i++){ %>
+      <a class="more carousel-cell" href="/details?tov=<%= newtovar[i].AI %>&<%= newtovar[i].type %>" data-ix="scale-on-scroll">
+        <div class="carousel-cell w-col w-col-3 feature-pill">
+          <div class="newTov"></div>
+          <h3> <%= newtovar[i].title[numLang] %> </h3>
+          <div class="backCaruselImage" style="background-image: url(<%= newtovar[i].images[0] %>)"></div>
+        </div>
+      </a>
+      <% } %>   
+    </div>
   </div>
-</div>
-<div class="mainBTN_block" style="background-color: <%= config.B_COLOR %>; padding-top: 20px;">
- <a href="/shopNews"><div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div></a>
+  <div class="mainBTN_block" style="background-color: <%= config.A_COLOR %>; padding-top: 20px;">
+    <a href="/shopNews?page=1">
+      <div  data-ix="scale-on-scroll" class="mainBTN"><%= locale.moreproducts %></div>
+    </a>
+  <div class="zub_lineB" style="background-image: url(../../image/<%= config.bordertop %>)"></div>
 </div>
 <% } %>
 
-<div class="mainDLG" style="background: <%= config.B_COLOR %>; color: #333333;">
+<div class="mainDLG" style="background: <%= config.B_COLOR %>; color: #333333;padding-top: 30px;">
  <div class="mainTitleDLG post"  data-ix="scale-on-scroll"><%= locale.about %></div>
  <textarea id="hideareaAbout" style="display: none;"><%= locale.abouttext %></textarea>
  <div class="mainTextDLG post" id="aboutBlockPaste" data-ix="scale-on-scroll"></div>

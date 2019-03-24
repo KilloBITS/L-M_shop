@@ -20,7 +20,8 @@
     font-size: 14px;
   }
   .background {
-    height: 110px;
+    /*height: 110px;*/
+    display: none;
   }
 }
 @media screen and (max-width: 800px) {
