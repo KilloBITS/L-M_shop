@@ -50,7 +50,8 @@ router.get('/*', function(req, res, next){
                       offLength: resTovar.length,
                       isPage: page,
                       paginate: p,
-                      config: resConfig[0]
+                      config: resConfig[0],
+                      currentDate: global.getDate()
                     });
                   });
                 });

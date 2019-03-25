@@ -110,6 +110,10 @@
               <% } %>
               <% } %>
               <div class="water_icon"></div>
+              <% if(tovarArr[i].date === currentDate){ %>
+              <div class="newTov"></div>
+              <% } %>
+              
               <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
               <script type="text/javascript">
                 var image = new Image();

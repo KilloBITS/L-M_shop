@@ -42,6 +42,7 @@ var UPDATE_BASCET = function(){
 			minBasLength.className = "minBasLength";
 
 			var minBasDel = document.createElement("div");
+			minBasDel.innerHTML = 'Удалить из корзины';
 			minBasDel.onclick = function(){
 			let index = $(".minBasDel").index(this);
 			BASKET.splice(index, 1);

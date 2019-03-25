@@ -1294,17 +1294,7 @@ a.indexBtnToShop {
   z-index: 2;
 }
 
-.newTov {
-  position: absolute;
-  background-image: url(../../../image/new.png);
-  width: 47px;
-  height: 46px;
-  z-index: 1;
-  background-size: contain;
-  right: -2px;
-  top: 0;
-  background-position: -1px;
-}
+
 
 .flickity-prev-next-button .arrow {
   fill: #fff;

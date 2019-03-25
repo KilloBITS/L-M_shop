@@ -244,11 +244,13 @@
           <% } %> 
           <% if(tovarArr.color.charAt(0) === '#'){ %>
           <% var currentColor = tovarArr.color %>
+          <% }else if(tovarArr.color === 'Звериный'){ %>
+           <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
           <% }else{ %>
-          <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
+            <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
           <% } %>
           <div class="TovarColorBlock">
-            <div class="colorBtn select" style="background-color: <%= currentColor %>"></div>
+            <div class="colorBtn select" style="background: <%= currentColor %>"></div>
           </div>          
           <div class="LengthOfBalset">
             <div class="number-choice">
