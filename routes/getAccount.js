@@ -31,6 +31,7 @@ router.get('/', function(req, res, next){
                 news.find().sort({AI: -1}).limit(6).toArray(function(err, resNews){
                   contacts.find().toArray(function(err, resContacts){
                     payments.find( { id: { $in: resUsers[0].payments } }).toArray(function(err, resPayments ){
+                      console.log(resPayments)
                       tovar.find( { AI: { $in: resUsers[0].desires } }).toArray(function(err, resDesires ){
                         config.find().toArray(function(err, resConfig ){
                           res.render('pages/account.ejs',{
@@ -41,7 +42,7 @@ router.get('/', function(req, res, next){
                             globalLocale:  resLocale[0][global.parseLanguage(req)],
                             contacts: resContacts[0],
                             numLang: global.parseNumLang(req),
-                            payments_user: payments,
+                            payments_user: resPayments,
                             desires_user: resDesires,
                             config: resConfig[0]      
                           });

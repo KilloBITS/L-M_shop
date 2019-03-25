@@ -123,10 +123,25 @@
             <% for(var i = 0; i < payments_user.length; i++) { %>
             <div class="tileline">
               <div class="placeTitle">Заказ № <%= payments_user[i].id %> </div>
-              <div class="placeType">
-                <div class="type<%= user.payments[i].payType %>"></div>
-                <div class="dost<%= user.payments[i].dostType %>"></div>
-              </div>
+              <% if(payments_user[i].status === 0) { %>
+              <div class="placeStatus">Заказ в обработке</div>
+              <% } %>
+              <% if(payments_user[i].status === 1) { %>
+              <div class="placeStatus">Товар укомплектован</div>
+              <% } %>
+              <% if(payments_user[i].status === 2) { %>
+              <div class="placeStatus">Товар отгружен перевозчику</div>
+              <div class="TTH"><%= payments_user[i].TTH %></div>
+              <div class="details_TTH"></div>
+              <% } %>
+              <% if(payments_user[i].status === 3) { %>
+              <div class="placeStatus">Товар направляется в город получателя</div>
+              <div class="TTH"><%= payments_user[i].TTH %></div>
+              <div class="details_TTH"></div>
+              <% } %>
+              <% if(payments_user[i].status === 7) { %>
+              <div class="placeStatus" style="color: red;">Заказ отменен</div>
+              <% } %>
               <a href="/delivery?<%= payments_user[i].id %>" target="_blank"> <div class="placeList">Посмотреть чек</div> </a>
               <div class="placeDate"><%= payments_user[i].today %></div>
               <div class="placePAYS"><%= payments_user[i].PAYS %></div>
@@ -148,27 +163,14 @@
                 </div>
               </div>
               <div class="cancel_zakaz"></div>
-              <% if(payments_user[i].status === 0) { %>
-              <div class="placeStatus">Заказ в обработке</div>
-              <% } %>
-              <% if(payments_user[i].status === 0) { %>
-              <div class="placeStatus">Товар укомплектован</div>
-              <% } %>
-              <% if(payments_user[i].status === 2) { %>
-              <div class="placeStatus">Товар отправлен</div>
-              <div class="TTH"><%= payments_user[i].TTH %></div>
-              <div class="details_TTH"></div>
-              <% } %>
-              <% if(payments_user[i].status === 3) { %>
-              <div class="placeStatus" style="color: red;">заказ отменен</div>
-              <% } %>
+              
             </div>
             <% } %>
           </div>
           <script>
-            const MyPhone = "<%= user.phone_number %>".replace(/[^0-9.]/g,'')
+            const MyPhone = "<%= sessionUser.phone_number %>".replace(/[^0-9.]/g,'')
             var CCC = {
-              "apiKey": "<%= conf.NEW_POST_API %>",
+              "apiKey": "<%= config.NEW_POST_API %>",
               "modelName": "TrackingDocument",
               "calledMethod": "getStatusDocuments",
               "methodProperties": {

@@ -23,204 +23,166 @@ var SendToTelega = function(ZAKAZ_TO_TELEGA){
   var dataTelPay = 'Новый заказ!\n\nНомер телефона: '+ZAKAZ_TO_TELEGA.number+'\nID Заказа: '+ZAKAZ_TO_TELEGA.id+'\nФИО заказчика'+ZAKAZ_TO_TELEGA.FIO+'\nДата заказа: '+ZAKAZ_TO_TELEGA.today+'\nСумма заказа: '+ZAKAZ_TO_TELEGA.summa+'\nПолучено бонусов: '+ZAKAZ_TO_TELEGA.bonus+'\nТип оплаты: '+ZAKAZ_TO_TELEGA.PAYS+'\nСтатус заказа: '+'Новый'+'\nПосмотреть чек заказа: '+ 'http://ladyman.club/delivery?'+ZAKAZ_TO_TELEGA.id;
 
   for(let i = 0; i < adminIDs.length; i++){
-      botTelega.sendMessage(adminIDs[i], dataTelPay);
+    botTelega.sendMessage(adminIDs[i], dataTelPay);
   }
 }
 
 router.get('/', function(req, res, next){
-  var languageSystem, langMenu;
-
-  if(req.cookies.pageLang === undefined){
-    languageSystem = "locale";
-    langMenu = "menu";
-  }else{
-    if(req.cookies.pageLang === 'ua'){
-      languageSystem = "locale-ua";
-      langMenu = "menu-ua";
-    }else{
-      languageSystem = "locale";
-      langMenu = "menu";
-    }
-  }
-
-  //расчет общей суммы
   var sum = 0;
   for(let i = 0; i < JSON.parse(req.query.JSON_Tovar).length; i++){
     sum = sum + parseFloat(JSON.parse(req.query.JSON_Tovar)[i].price);
   }
 
-  //раззчет бонуса
   var lmCoin = (parseInt(sum) / 100);
   if(lmCoin > 1){
-    //обработка бонуса
     if (req.session && req.session.user !== undefined){
       mongoClient.connect(global.baseIP, function(err, client){
         const db = client.db(global.baseName);
-        const users = db.collection("users");
+        const users = db.collection("USERS");
         users.find({email: req.session.user}).toArray(function(err, results_users){
           var curCoin = results_users[0].LM_COIN + parseInt(lmCoin);
           users.update( { email: req.session.user }, { $set : { LM_COIN: curCoin } });
         });
       });
-
     }
   }
 
-  // var ZAKAZ_TO_TELEGA = null;
-  if(parseInt(req.query.oplatatype) === 0)
-  { //если оплата налом
+  if(parseInt(req.query.oplatatype) === 0){
     mongoClient.connect(global.baseIP, function(err, client){
-        const db = client.db(global.baseName);
-        const config = db.collection("config");
-        const menu  = db.collection(langMenu);
-        const titles_page = db.collection("titles_page");
-        const payments = db.collection("payments");
-        const users = db.collection("users");
+      const db = client.db(global.baseName);
+      const config = db.collection("CONFIG");
+      const locale = db.collection("LOCALE");
+      const payments = db.collection("PAYMENTS");
+      const users = db.collection("USERS");
 
-        if(err) return console.log(err);
-        titles_page.find().toArray(function(err, results_titles_page){
-          config.find().toArray(function(err, results_config){
-           if(results_config[languageSystem].opens){
-             var today = new Date();
-             var dd = today.getDate();
-             var mm = today.getMonth()+1; //January is 0!
-             var yyyy = today.getFullYear();
+      if(err) return console.log(err);
+      locale.find().toArray(function(err, resLocale){
+        config.find().toArray(function(err, resConfig){
+          var today = new Date();
+          var dd = today.getDate();
+          var mm = today.getMonth()+1; 
+          var yyyy = today.getFullYear();
 
-             if(dd<10) {
-             dd = '0'+dd
-             }
+          if(dd<10) {
+            dd = '0'+dd
+          }
 
-             if(mm<10) {
-             mm = '0'+mm
-             }
+          if(mm<10) {
+            mm = '0'+mm
+          }
 
-             today = mm + '/' + dd + '/' + yyyy;
+          today = mm + '/' + dd + '/' + yyyy;
 
-             var NEW_ZAKAZ = {};
-             NEW_ZAKAZ.number = req.query.phoneNum;
-             NEW_ZAKAZ.id =  makeid();
-             NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
-             NEW_ZAKAZ.today = today;
-             NEW_ZAKAZ.summa = sum;
-             NEW_ZAKAZ.bonus = lmCoin;
-             NEW_ZAKAZ.PAYS = 'Оплата картой';
-             NEW_ZAKAZ.status = 0;
-             NEW_ZAKAZ.TTH = null;
-             NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
+          var NEW_ZAKAZ = {};
+          NEW_ZAKAZ.number = req.query.phoneNum;
+          NEW_ZAKAZ.id =  makeid();
+          NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
+          NEW_ZAKAZ.today = today;
+          NEW_ZAKAZ.summa = sum;
+          NEW_ZAKAZ.bonus = lmCoin;
+          NEW_ZAKAZ.PAYS = 'Оплата картой';
+          NEW_ZAKAZ.status = 0;
+          NEW_ZAKAZ.TTH = null;
+          NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
 
-             if(parseInt(req.query.dosttype) === 0){ //Самовывоз
-               NEW_ZAKAZ.dostavka = "Самовывоз";
-               NEW_ZAKAZ.adress = "Самовывоз";
-             }
+          if(parseInt(req.query.dosttype) === 0){
+            NEW_ZAKAZ.dostavka = "Самовывоз";
+            NEW_ZAKAZ.adress = "Самовывоз";
+          }
 
-             if(parseInt(req.query.dosttype) === 1){ //Курьером
-               NEW_ZAKAZ.dostavka = "Доставка курьером";
-               NEW_ZAKAZ.adress = 'Город:' + "Львов" + ', Улица:' + req.query.ulica + ', Дом:' + req.query.dom + ', Квартира:' + req.query.kvartira;
-             }
-             if(parseInt(req.query.dosttype) === 2){ //
-               NEW_ZAKAZ.dostavka = "Доставка новой почтой";
-               NEW_ZAKAZ.adress = 'Город:' + req.query.city + ', Отделение:' + req.query.npnum;
-             }
-             if(parseInt(req.query.dosttype) === 3){ //Укр почтой
+          if(parseInt(req.query.dosttype) === 1){
+            NEW_ZAKAZ.dostavka = "Доставка курьером";
+            NEW_ZAKAZ.adress = 'Город:' + "Львов" + ', Улица:' + req.query.ulica + ', Дом:' + req.query.dom + ', Квартира:' + req.query.kvartira;
+          }
+          if(parseInt(req.query.dosttype) === 2){ 
+            NEW_ZAKAZ.dostavka = "Доставка новой почтой";
+            NEW_ZAKAZ.adress = 'Город:' + req.query.city + ', Отделение:' + req.query.npnum;
+          }
+          if(parseInt(req.query.dosttype) === 3){
 
-             }
-             payments.insertOne(NEW_ZAKAZ);
+          }
+          payments.insertOne(NEW_ZAKAZ);
 
-             if (req.session && req.session.user !== undefined){
-               users.find({email: req.session.user}).toArray(function(err, results_users){
-                 results_users[0].payments.push(NEW_ZAKAZ.id);
-                 users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
-               });
-             }
-             SendToTelega(NEW_ZAKAZ);
-             // ZAKAZ_TO_TELEGA = NEW_ZAKAZ;
-             res.redirect("/delivery?"+NEW_ZAKAZ.id);
-           }else{
-             res.render('pages/close.ejs',{
-               conf: results_config[languageSystem],
-               isAdm: req.session.admin
-             })
-           }
-         });
-       });
+          if (req.session && req.session.user !== undefined){
+            users.find({email: req.session.user}).toArray(function(err, results_users){
+              results_users[0].payments.push(NEW_ZAKAZ.id);
+              users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
+            });
+          }
+          SendToTelega(NEW_ZAKAZ);
+          res.redirect("/delivery?"+NEW_ZAKAZ.id);
+        });
+      });
     });
-
-
-  }else{//если оплата переводом на карту
+  }else{
     mongoClient.connect(global.baseIP, function(err, client){
-        const db = client.db(global.baseName);
-        const config = db.collection("config");
-        const menu  = db.collection(langMenu);
-        const titles_page = db.collection("titles_page");
-        const payments = db.collection("payments");
-        const users = db.collection("users");
+      const db = client.db(global.baseName);
+      const config = db.collection("CONFIG");
+      const locale = db.collection("LOVALE");
+      const payments = db.collection("PAYMENTS");
+      const users = db.collection("USERS");
 
-        if(err) return console.log(err);
-        titles_page.find().toArray(function(err, results_titles_page){
-          config.find().toArray(function(err, results_config){
-           if(results_config[languageSystem].opens){
-             var today = new Date();
-             var dd = today.getDate();
-             var mm = today.getMonth()+1; //January is 0!
-             var yyyy = today.getFullYear();
+      if(err) return console.log(err);
+      locale.find().toArray(function(err, results_titles_page){
+        config.find().toArray(function(err, results_config){
 
-             if(dd<10) {
-               dd = '0'+dd
-             }
+         var today = new Date();
+         var dd = today.getDate();
+         var mm = today.getMonth()+1; 
+         var yyyy = today.getFullYear();
 
-             if(mm<10) {
-               mm = '0'+mm
-             }
+         if(dd<10) {
+           dd = '0'+dd
+         }
 
-             today = mm + '/' + dd + '/' + yyyy;
+         if(mm<10) {
+           mm = '0'+mm
+         }
 
-             var NEW_ZAKAZ = {};
-             NEW_ZAKAZ.number = req.query.phoneNum;
-             NEW_ZAKAZ.id =  makeid();
-             NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
-             NEW_ZAKAZ.today = today;
-             NEW_ZAKAZ.summa = sum;
-             NEW_ZAKAZ.bonus = lmCoin;
-             NEW_ZAKAZ.status = 0;
-             NEW_ZAKAZ.TTH = null;
-             NEW_ZAKAZ.PAYS = 'Ожидает оплаты';
-             NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
+         today = mm + '/' + dd + '/' + yyyy;
 
-             if(parseInt(req.query.dosttype) === 0){ //Самовывоз
-               NEW_ZAKAZ.dostavka = "Самовывоз";
-               NEW_ZAKAZ.adress = "Самовывоз";
-             }
+         var NEW_ZAKAZ = {};
+         NEW_ZAKAZ.number = req.query.phoneNum;
+         NEW_ZAKAZ.id =  makeid();
+         NEW_ZAKAZ.FIO = req.query.foname + ' ' + req.query.name + ' ' + req.query.FamName;
+         NEW_ZAKAZ.today = today;
+         NEW_ZAKAZ.summa = sum;
+         NEW_ZAKAZ.bonus = lmCoin;
+         NEW_ZAKAZ.status = 0;
+         NEW_ZAKAZ.TTH = null;
+         NEW_ZAKAZ.PAYS = 'Ожидает оплаты';
+         NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);
 
-             if(parseInt(req.query.dosttype) === 1){ //Курьером
-               NEW_ZAKAZ.dostavka = "Доставка курьером";
-               NEW_ZAKAZ.adress = 'Город:' + "Львов" + ', Улица:' + req.query.ulica + ', Дом:' + req.query.dom + ', Квартира:' + req.query.kvartira;
-             }
-             if(parseInt(req.query.dosttype) === 2){ //
-               NEW_ZAKAZ.dostavka = "Доставка новой почтой";
-               NEW_ZAKAZ.adress = 'Город:' + req.query.city + ', Отделение:' + req.query.npnum;
-             }
-             if(parseInt(req.query.dosttype) === 3){ //Укр почтой
+         if(parseInt(req.query.dosttype) === 0){
+           NEW_ZAKAZ.dostavka = "Самовывоз";
+           NEW_ZAKAZ.adress = "Самовывоз";
+         }
 
-             }
-             payments.insertOne(NEW_ZAKAZ);
+         if(parseInt(req.query.dosttype) === 1){
+           NEW_ZAKAZ.dostavka = "Доставка курьером";
+           NEW_ZAKAZ.adress = 'Город:' + "Львов" + ', Улица:' + req.query.ulica + ', Дом:' + req.query.dom + ', Квартира:' + req.query.kvartira;
+         }
+         if(parseInt(req.query.dosttype) === 2){ 
+           NEW_ZAKAZ.dostavka = "Доставка новой почтой";
+           NEW_ZAKAZ.adress = 'Город:' + req.query.city + ', Отделение:' + req.query.npnum;
+         }
+         if(parseInt(req.query.dosttype) === 3){
 
-             if (req.session && req.session.user !== undefined){
-               users.find({email: req.session.user}).toArray(function(err, results_users){
-                 results_users[0].payments.push(NEW_ZAKAZ.id);
-                 users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
-               });
-             }
+         }
+         payments.insertOne(NEW_ZAKAZ);
 
-             SendToTelega(NEW_ZAKAZ);
-             res.redirect("/delivery?"+NEW_ZAKAZ.id);
-           }else{
-             res.render('close.ejs',{
-               conf: results_config[languageSystem],
-               isAdm: req.session.admin
-             })
-           }
-         });
+         if (req.session && req.session.user !== undefined){
+           users.find({email: req.session.user}).toArray(function(err, results_users){
+             results_users[0].payments.push(NEW_ZAKAZ.id);
+             users.update({email: req.session.user},{ $set : { payments: results_users[0].payments}});
+           });
+         }
+
+         SendToTelega(NEW_ZAKAZ);
+         res.redirect("/delivery?"+NEW_ZAKAZ.id);
+
        });
+      });
     });
 
 

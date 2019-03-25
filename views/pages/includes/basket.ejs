@@ -27,13 +27,16 @@
           <input type="text" name="phoneNum" id="input-PaymentPhone" class="login-input" required>
           <label for="input-PaymentPhone" unselectable="on">Номер телефона</label>
         </p>
+
         <select class="selector" name="dosttype" id="typeOfDostavka" onchange="Global.changeTypeDost($(this).val())" placeholder="Доставка" required>
+          <option value="NaN">Выберите тип доставки</option>
           <option value="1">Доставка Курьером</option>
           <option value="2">Доставка Новой Почтой</option>
           <option value="3">Доставка УкрПочтой</option>
         </select>
 
         <select class="selector" name="oplatatype" id="typeOfOplata" required placeholder="Оплата" required>
+          <option value="NaN">Выберите тип оплаты</option>
           <option value="0">Оплата наличными</option>
           <option value="1">Оплата картой</option>
         </select>
@@ -42,9 +45,79 @@
           <input type="text" name="city" id="input-PaymentCity" class="login-input" >
           <label for="input-PaymentCity" unselectable="on">Город</label>
         </p>
+
+        <script type="text/javascript">
+          // $(document).ready(function(){
+          //   var getCity = {
+          //     "apiKey": "<%= config.NP_API.key %>",
+          //     "modelName": "AddressGeneral",
+          //     "calledMethod": "getSettlements",
+          //     "methodProperties": {
+          //       "Warehouse": "2"
+          //     }
+          //   };
+
+          //   var settingsCity = {
+          //     "async": true,
+          //     "crossDomain": true,
+          //     "url": "https://api.novaposhta.ua/v2.0/json/",
+          //     "method": "POST",
+          //     "headers": {
+          //       "content-type": "application/json",
+          //     },
+          //     "processData": false,
+          //     "data": JSON.stringify(getCity)
+          //   }
+
+          //   $.ajax(settingsCity).done(function (response) {
+          //     $("#input-PaymentCity").empty();
+          //     console.log(response.data)
+          //     for(var i = 0; i < response.data.length; i++){
+          //       $("#input-PaymentCity").append('<option value="'+i+'">'+response.data[i].DescriptionRu+'</option>');
+          //     }
+          //   })
+
+          // });
+          $('#input-PaymentCity').on('keyup', function(){
+            setTimeout(function(){
+              if(parseInt($("#typeOfDostavka").val()) === 2 || $("#input-PaymentCity").val().length >= 3){
+                var CCC = {
+                  "apiKey": "<%= config.NP_API.key %>",
+                  "modelName": "AddressGeneral",
+                  "calledMethod": "getWarehouses",
+                  "methodProperties": {
+                    "Language": "ru",
+                    "CityName": $("#input-PaymentCity").val()
+                  }
+                };
+
+                var settings = {
+                  "async": true,
+                  "crossDomain": true,
+                  "url": "https://api.novaposhta.ua/v2.0/json/",
+                  "method": "POST",
+                  "headers": {
+                    "content-type": "application/json",
+                  },
+                  "processData": false,
+                  "data": JSON.stringify(CCC)
+                }
+
+                $.ajax(settings).done(function (response) {
+                  console.log(response.data);
+                  $("#input-PaymentOtdelNP").empty();
+                  for(var i = 0; i < response.data.length; i++){
+                    $("#input-PaymentOtdelNP").append('<option value="'+i+'">'+response.data[i].DescriptionRu+'</option>');
+
+                  }
+                });
+              }
+            },1000)
+          });
+        </script>
         <p class="input-container" id="CityOfPostNP">
-          <input type="text" name="npnum" id="input-PaymentOtdelNP" class="login-input" >
-          <label for="input-PaymentOtdelNP" unselectable="on">Отделение</label>
+          <select class="selector" name="oplatatype" id="input-PaymentOtdelNP" required placeholder="Отделение" required></select>
+          <label class="updateCity"></label>
         </p>
         <p class="input-container" id="CityOfPostUl">
           <input type="text" name="ulica" id="input-PaymentUlica" class="login-input" >
