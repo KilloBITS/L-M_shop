@@ -21,6 +21,7 @@ router.get('/', function(req, res, next){
         users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
           menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
+              global.visitors(req);
               res.render('pages/terms_of_use.ejs',{
                 isAdm: req.session.admin,
                 sessionUser: resUsers[0],

@@ -32,6 +32,7 @@ router.get('/', function(req, res, next){
                 contacts.find().toArray(function(err, resContacts){
                   config.find().toArray(function(err, resConfig){                    
                     reviews.find().limit(20).toArray(function(err, resReviews){
+                      global.visitors(req);
                       res.render('pages/index.ejs',{
                         isAdm: req.session.admin,
                         sessionUser: resUsers[0],

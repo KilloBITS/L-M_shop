@@ -20,6 +20,7 @@ router.get('/', function(req, res, next){
           menu.find().sort({index: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
               parrtners.find().toArray(function(err, resPartners){
+                global.visitors(req);
                 res.render('pages/about.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],

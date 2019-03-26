@@ -1551,16 +1551,16 @@ form textarea {
   height: 100%;
 }
 .tileline{
-    text-align: center;
-    width: 100%;
-    padding: 10px 10px 0 10px;
-    border: 1px solid #dd127b;
-    color: #03254a;
-    margin: 60px 0;
-    position: relative;
-    background: linear-gradient(-72deg, #ffffff 79%,#0a0a0ade 80%,#a5003d 40%,#f7005e 98%);
-    min-height: 130px;
-    margin-top: 34px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 10px 0 10px;
+  border: 1px solid #dd127b;
+  color: #03254a;
+  margin: 60px 0;
+  position: relative;
+  background: linear-gradient(-19deg, #ffffff 79%,#0a0a0ade 80%,#a5003d 40%,#f7005e 98%);
+  min-height: 130px;
+  margin-top: 34px;
 }
 .tileline:before{
   content: '';
@@ -1625,18 +1625,18 @@ form textarea {
 }
 
 .placeStatus{
-    /* position: absolute; */
-    /* right: -1px; */
-    /* top: -23px; */
-    /* border: 1px solid #dd127b; */
-    border-bottom: 0;
-    /* background-color: white; */
-    padding: 0px 14px;
-    border-radius: 10px 0 0 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #8f8f00;
-    /* text-shadow: 1px 1px 0px black; */
+  /* position: absolute; */
+  /* right: -1px; */
+  /* top: -23px; */
+  /* border: 1px solid #dd127b; */
+  border-bottom: 0;
+  /* background-color: white; */
+  padding: 0px 14px;
+  border-radius: 10px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #8f8f00;
+  /* text-shadow: 1px 1px 0px black; */
 }
 
 .type0{

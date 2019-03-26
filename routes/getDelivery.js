@@ -22,6 +22,7 @@ router.get('/*', function(req, res, next){
           payments.find({id: DA}).toArray(function(err, resPayments){              
             contacts.find().toArray(function(err, resContacts){
               config.find().toArray(function(err, resConfig){
+                global.visitors(req);
                 res.render('pages/delivery.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],

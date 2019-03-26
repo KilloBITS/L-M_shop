@@ -14,16 +14,16 @@ const MongoStore = require('connect-mongo')(session);
 // const analytics = require('node-analytics');
 
 app.use(session({
-    secret: '2C44-4D44-WppQ38S',
-    resave: true,
-    saveUninitialized: true,
-    store: new MongoStore({
-        url: 'mongodb://localhost:27017/SHOP_DB'
-    }),
-    cookie: {
+  secret: '2C44-4D44-WppQ38S',
+  resave: true,
+  saveUninitialized: true,
+  store: new MongoStore({
+    url: 'mongodb://localhost:27017/SHOP_DB'
+  }),
+  cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
-    }
-}));
+      }
+    }));
 
 //project libs use
 app.use(express.json({limit: '50mb'}));
@@ -40,6 +40,8 @@ app.use(bParser.raw({limit: '50mb'}));
 require('./controllers/system/controllerLanguage');
 require('./controllers/system/controllerDate');
 require('./controllers/system/controllerNotification');
+require('./controllers/system/controllerSMS');
+require('./controllers/system/controllerStatistic');
 
 //User routes
 const index = require('./routes/getIndex');
@@ -226,24 +228,6 @@ app.listen(80, function(){
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
+
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');
-  PARSE_DB()
 });
-//проверка базы
-var DEFAULT_COLLECTION = ['CONFIG','CONTACTS','DISCOUNTS','LOCALE','LOGS','MAINSLIDE','MANUFACTURERS','MENU','NEWS','NOTIFICATION','PARTNERS','PAYMENTANDDELIVERY','PAYMENTS','TOVAR', 'USERS']
-var PARSE_DB = function(){
-  mongoClient.connect(global.baseIP, function(err, database) {
-    const db = database.db(global.baseName);
-    if (err) throw err;
-    // db.listCollections().toArray(function(err, collInfos) {
-    //   for(var i = 0; i < DEFAULT_COLLECTION.length; i++){
-    //     if(collInfos.find(x => x.name === DEFAULT_COLLECTION[i]) === undefined){
-    //       db.createCollection(DEFAULT_COLLECTION[i], function(err, result) {
-    //         if (err) throw err;
-    //         console.log("Collection "+ result.name +" is created!");        
-    //       });
-    //     }
-    //   }
-    // });  
-  });
-};

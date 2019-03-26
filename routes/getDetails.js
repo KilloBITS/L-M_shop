@@ -37,11 +37,11 @@ router.get('/*', function(req, res, next){
                 for(var mr = 0; mr < 3; mr++ ){
                   NewSimilar.push(similarTov[randomInteger(0, similarTov.length)]);
                 }
-                console.log(resTovar[0])
                 config.find().toArray(function(err, resConfig){
                   news.find().toArray(function(err, resNews){
                     contacts.find().toArray(function(err, resContacts){                  
-                      manufactures.find().toArray(function(err, resManufactures){                  
+                      manufactures.find().toArray(function(err, resManufactures){  
+                        global.visitors(req);
                         res.render('pages/details.ejs',{
                           isAdm: req.session.admin,
                           sessionUser: resUsers[0],

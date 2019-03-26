@@ -244,7 +244,7 @@
           <% } %> 
           <% if(tovarArr.color.charAt(0) === '#'){ %>
           <% var currentColor = tovarArr.color %>
-          <% }else if(tovarArr.color === 'Звериный'){ %>
+          <% }else if(tovarArr.color === 'Звериный' || tovarArr.color === 'Цветы'){ %>
            <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
           <% }else{ %>
             <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>

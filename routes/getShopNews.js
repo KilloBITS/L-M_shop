@@ -38,6 +38,7 @@ router.get('/*', function(req, res, next){
                     var current_page = page;
                     var paginator = new pagination.SearchPaginator({prelink: '/shopNews?page='+page, current: current_page, rowsPerPage: 18, totalResult: resTovar.length-1});
                     var p = paginator.getPaginationData();
+                    global.visitors(req);
                     res.render('pages/tovar.ejs',{
                       isAdm: req.session.admin,
                       sessionUser: resUsers[0],

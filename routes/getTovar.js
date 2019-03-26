@@ -43,16 +43,15 @@ router.get('/*', function(req, res, next){
             };
             if(searchData.length >= 2 ){
               FILTER.type = searchData[1].split('&')[0];
-            };
-            console.log(FILTER)
+            };            
             tovar.find(FILTER).sort({AI: -1}).toArray(function(err, resTovar){
-              console.log(resTovar)
               config.find().toArray(function(err, resConfig){
                 news.find().toArray(function(err, resNews){
                   contacts.find().toArray(function(err, resContacts){
                     var current_page = page;
                     var paginator = new pagination.SearchPaginator({prelink: '/shop?c='+searchData[0]+','+searchData[1].split('&')[0], current: current_page, rowsPerPage: 18, totalResult: resTovar.length-1});
                     var p = paginator.getPaginationData();
+                    global.visitors(req);
                     res.render('pages/tovar.ejs',{
                       isAdm: req.session.admin,
                       sessionUser: resUsers[0],
