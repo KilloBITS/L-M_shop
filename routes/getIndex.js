@@ -59,6 +59,5 @@ router.get('/', function(req, res, next){
     }); 
   });    
 });      
-//#ffc9df
 
 module.exports = router;

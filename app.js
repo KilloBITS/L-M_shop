@@ -228,6 +228,6 @@ app.listen(80, function(){
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');
-
+  global.clearVisitors();
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');
 });

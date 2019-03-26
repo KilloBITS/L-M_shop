@@ -34,7 +34,12 @@ router.get('/*', function(req, res, next){
             tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function(err, resTovar){
               tovar.find({ color: resTovar[0].color, type: resTovar[0].type }).toArray(function(err, similarTov) {
                 var NewSimilar = [];
-                for(var mr = 0; mr < 3; mr++ ){
+                if(similarTov.length >= 3){
+                  var maxLenSim = 3
+                }else{
+                  var maxLenSim = similarTov.length
+                }
+                for(var mr = 0; mr < maxLenSim; mr++ ){
                   NewSimilar.push(similarTov[randomInteger(0, similarTov.length)]);
                 }
                 config.find().toArray(function(err, resConfig){

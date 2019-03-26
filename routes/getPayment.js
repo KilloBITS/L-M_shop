@@ -116,7 +116,7 @@ router.get('/', function(req, res, next){
           });
         }
         SendToTelega(NEW_ZAKAZ);
-        // global.sendSMS(req.query.phoneNum.replace(/[^-0-9]/gim,''));
+        global.sendSMS(req.query.phoneNum.replace(/[^-0-9]/gim,''));
         res.redirect("/delivery?"+NEW_ZAKAZ.id);
       });
     });

@@ -245,9 +245,9 @@
           <% if(tovarArr.color.charAt(0) === '#'){ %>
           <% var currentColor = tovarArr.color %>
           <% }else if(tovarArr.color === 'Звериный' || tovarArr.color === 'Цветы'){ %>
-           <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
+          <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
           <% }else{ %>
-            <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
+          <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
           <% } %>
           <div class="TovarColorBlock">
             <div class="colorBtn select" style="background: <%= currentColor %>"></div>
@@ -320,8 +320,9 @@
           <h3><%= locale.similar %></h3>
         </div>
         <% for(var i = 0; i < similars.length; i++) { %>
+        <% if(similars[i] !== undefined) { %>
         <div class="column-xs-12 column-md-4">
-          <a href="/details?tov=<%= similars[i].AI %>&<%= similars[i].types %>">
+          <a href="/details?tov=<%= similars[i].AI %>&<%= similars[i].type %>">
             <img src="<%= similars[i].images[0] %>">
             <h4><%= similars[i].title[numLang] %></h4>
             <% if(similars[i].sale[0] === 'true'){ %>
@@ -332,6 +333,7 @@
             <% } %>
           </a>
         </div>
+        <% } %>        
         <% } %>
       </div>
 
@@ -341,7 +343,7 @@
         </div>
         <% for(var i = 0; i < rec.length; i++) { %>
         <div class="column-xs-12 column-md-4">
-          <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].types %>">
+          <a href="/details?tov=<%= rec[i].AI %>&<%= rec[i].type %>">
             <img src="<%= rec[i].images[0] %>">
             <h4><%= rec[i].title[numLang] %></h4>
             <% if(rec[i].sale[0] === 'true'){ %>
