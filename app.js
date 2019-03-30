@@ -156,6 +156,9 @@ app.post('/newComment', newComment);
 const updateAvaUser = require('./controllers/controllerProfile');
 app.post('/updateAvaUser', updateAvaUser);
 
+const cancelPayment = require('./controllers/controllerProfile');
+app.post('/cancelPayment', cancelPayment);
+
 const addToJelaniya = require('./controllers/controllerProfile');
 app.post('/addToJelaniya', addToJelaniya);
 

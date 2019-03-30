@@ -47,4 +47,22 @@ var addToJelaniya = (req, res, next) => {
 };
 router.post('/addToJelaniya', addToJelaniya, function(req, res, next){});
 
+var cancelPayment = (req, res, next) => {
+    mongoClient.connect(global.baseIP, { useNewUrlParser: true } ,function(err, client){
+      var db = client.db(global.baseName);
+      var payments = db.collection("PAYMENTS");
+      if(err) return console.log(err);
+      
+      payments.find({id: req.body.a}).toArray(function(err, resPay){
+        if(resPay[0].status <= 0){
+          payments.remove({id: req.body.a});
+          res.send({code: 500, className: 'nSuccess', message: 'Заказ успешно отменен!'})
+        }else{
+          res.send({code: 500, className: 'nWarning', message: 'Невозможно отменить!'})
+        }        
+      });      
+    });
+};
+router.post('/cancelPayment', cancelPayment, function(req, res, next){});
+
 module.exports = router;

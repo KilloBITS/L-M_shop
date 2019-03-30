@@ -35,15 +35,15 @@ var USER = {
     });
 
     var $slider = $(".slider"),
-      $slideBGs = $(".slide__bg"),
-      diff = 0,
-      curSlide = 0,
-      numOfSlides = $(".slide").length - 1,
-      animating = false,
-      animTime = 500,
-      autoSlideTimeout,
-      autoSlideDelay = 6000,
-      $pagination = $(".slider-pagi");
+    $slideBGs = $(".slide__bg"),
+    diff = 0,
+    curSlide = 0,
+    numOfSlides = $(".slide").length - 1,
+    animating = false,
+    animTime = 500,
+    autoSlideTimeout,
+    autoSlideDelay = 6000,
+    $pagination = $(".slider-pagi");
 
     function createBullets() {
       for (var i = 0; i < numOfSlides + 1; i++) {
@@ -110,7 +110,7 @@ var USER = {
       if (animating) return;
       window.clearTimeout(autoSlideTimeout);
       var startX = e.pageX || e.originalEvent.touches[0].pageX,
-        winW = $(window).width();
+      winW = $(window).width();
       diff = 0;
 
       $(document).on("mousemove touchmove", function(e) {
@@ -153,9 +153,6 @@ var USER = {
       curSlide = $(this).data("page");
       changeSlides();
     });
-
-
-
   },
   NEW_AVA: function(e){
     $.post('/updateAvaUser',{newAva: e}, function(res){
@@ -169,24 +166,24 @@ var USER = {
     file.addEventListener('change', function () {
       console.log("1")
       $("#ava").css({"background-image":"url(../../../image/loaders/load0.gif)"})
-        var fullPath = file.value;
-        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-        var filename = fullPath.substring(startIndex);
-        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-            filename = filename.substring(1);
-        }
-        console.log("2")
-        if (this.files && this.files[0]) {
-          console.log("3")
-            var reader = new FileReader();
-            reader.onload = function (e) {
-              console.log("4")
-                USER.GLOBAL_FILE = e.target.result;
-                console.log("sssdsdsds")
-                USER.NEW_AVA(e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-        }
+      var fullPath = file.value;
+      var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+      var filename = fullPath.substring(startIndex);
+      if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+      }
+      console.log("2")
+      if (this.files && this.files[0]) {
+        console.log("3")
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          console.log("4")
+          USER.GLOBAL_FILE = e.target.result;
+          console.log("sssdsdsds")
+          USER.NEW_AVA(e.target.result);
+        };
+        reader.readAsDataURL(this.files[0]);
+      }
     }, false);
   }
 }
@@ -197,25 +194,50 @@ $(document).ready(() => {
 
 });
 $(document).on('ready', function(){
-    $modal = $('.modal-frame');
-    $overlay = $('.modal-overlay');
+  $modal = $('.modal-frame');
+  $overlay = $('.modal-overlay');
 
-    /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
-    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
-      if($modal.hasClass('state-leave')) {
-        $modal.removeClass('state-leave');
-      }
-    });
-
-    $('.close').on('click', function(){
-      $overlay.removeClass('state-show');
-      $modal.removeClass('state-appear').addClass('state-leave');
-    });
-
-    $('.open').on('click', function(){
-      $overlay.addClass('state-show');
-      $modal.removeClass('state-leave').addClass('state-appear');
-    });
-
-
+  /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+  $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+    if($modal.hasClass('state-leave')) {
+      $modal.removeClass('state-leave');
+    }
   });
+
+  $('.close').on('click', function(){
+    $overlay.removeClass('state-show');
+    $modal.removeClass('state-appear').addClass('state-leave');
+  });
+
+  $('.open').on('click', function(){
+    $overlay.addClass('state-show');
+    $modal.removeClass('state-leave').addClass('state-appear');
+  });
+});
+
+var cancelPayment = function(a){
+  swal({
+    title: 'Отмена заказа',
+    text: "Вы действительно хотите отменить заказ ?",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Да',
+    cancelButtonText: 'Нет',
+  }).then(function() {
+    $("#pay_"+a).fadeOut(300, function(){
+      $("#pay_"+a).remove();
+    })
+    $.post('/cancelPayment', {a:a}, (res) => {
+      console.log(res);
+    })
+    
+    swal(
+      'Ваш заказ успешно удален!',
+      '...',
+      'success'
+      );
+  })
+  
+}

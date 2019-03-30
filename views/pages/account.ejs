@@ -15,9 +15,14 @@
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
   <link rel="stylesheet" type="text/css" href="/style/account/style.css">
   <link rel="stylesheet" type="text/css" href="/style/account/style.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/5.0.7/sweetalert2.min.css">
+
+
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/5.0.7/sweetalert2.min.js"></script>
+
   <script type="text/javascript" src="/script/maskinput.js"></script>
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
@@ -121,7 +126,7 @@
           <% if(payments_user && payments_user.length > 0){ %>
           <div class="line">
             <% for(var i = 0; i < payments_user.length; i++) { %>
-            <div class="tileline">
+            <div class="tileline" id="pay_<%= payments_user[i].id %>">
               <div class="placeTitle">Заказ № <%= payments_user[i].id %> </div>
               <% if(payments_user[i].status === 0) { %>
               <div class="placeStatus">Заказ в обработке</div>
@@ -132,12 +137,14 @@
               <% if(payments_user[i].status === 2) { %>
               <div class="placeStatus">Товар отгружен перевозчику</div>
               <div class="TTH"><%= payments_user[i].TTH %></div>
-              <div class="details_TTH"></div>
               <% } %>
               <% if(payments_user[i].status === 3) { %>
               <div class="placeStatus">Товар направляется в город получателя</div>
               <div class="TTH"><%= payments_user[i].TTH %></div>
-              <div class="details_TTH"></div>
+              <% } %>
+              <% if(payments_user[i].status === 4) { %>
+              <div class="placeStatus" style="color: #00e113;">Товар прибыл в отделение</div>
+              <div class="TTH"><%= payments_user[i].TTH %></div>              
               <% } %>
               <% if(payments_user[i].status === 7) { %>
               <div class="placeStatus" style="color: red;">Заказ отменен</div>
@@ -145,155 +152,107 @@
               <a href="/delivery?<%= payments_user[i].id %>" target="_blank"> <div class="placeList">Посмотреть чек</div> </a>
               <div class="placeDate"><%= payments_user[i].today %></div>
               <div class="placePAYS"><%= payments_user[i].PAYS %></div>
-
-              <div class="otpravka_line">
-                <div class="line_point onePoint">
-                  <div class="pointImage1 current"></div>
-                </div>
-                <div class="line_point twoPoint">
-                  <div class="pointImage2"></div>
-                </div>
-                <div class="line_point threePoint">
-                  <div class="pointImage3"></div>
-                </div>
-                <div class="line_point fourPoint">
-                  <div class="pointImage4"></div>
-                </div>
-                <div class="line_point fivePoint">
-                  <div class="pointImage5"></div>
-                </div>
-              </div>
-              <div class="cancel_zakaz"></div>
-              
-            </div>
-            <% } %>
-          </div>
-          <script>
-            const MyPhone = "<%= sessionUser.phone_number %>".replace(/[^0-9.]/g,'')
-            var CCC = {
-              "apiKey": "<%= config.NEW_POST_API %>",
-              "modelName": "TrackingDocument",
-              "calledMethod": "getStatusDocuments",
-              "methodProperties": {
-                "Documents": [
-                <% for(var it = 0; it < payments_user.length; it++) { %>
-                  <% if(payments_user[it].status === 2) { %>
-                    {
-                      "DocumentNumber": "<%= payments_user[it].TTH %>",
-                      "Phone":MyPhone
-                    },
-                    <% } %>
-                    <% } %>
-                    ]
-                  }
-                };
-                $(function() {
-                  var settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "https://api.novaposhta.ua/v2.0/json/",
-                    "method": "POST",
-                    "headers": {
-                      "content-type": "application/json",
-                    },
-                    "processData": false,
-                    "data": JSON.stringify(CCC)
-                  }
-                  $.ajax(settings).done(function (response) {
-                    console.log(response);
-                    for(let i = 0; i < response.data.length; i++){
-                      if(parseInt(response.data[i].StatusCode) == 1){
-                        $(".otpravka_line:eq("+i+") .line_point:eq(1) div").addClass('current');
-                      }
-                      if(parseInt(response.data[i].StatusCode) == 4 && parseInt(response.data[i].StatusCode) == 41 && parseInt(response.data[i].StatusCode) == 5){
-                        $(".otpravka_line:eq("+i+") .line_point:eq(2) div").addClass('current');
-                      }
-                      if(parseInt(response.data[i].StatusCode) == 6){
-                        $(".otpravka_line:eq("+i+") .line_point:eq(3) div").addClass('current');
-                      }
-                      if(parseInt(response.data[i].StatusCode) == 7 && parseInt(response.data[i].StatusCode) == 8){
-                        $(".otpravka_line:eq("+i+") .line_point:eq(4) div").addClass('current');
-                      }
-                      if(parseInt(response.data[i].StatusCode) < 9){
-                        $(".details_TTH:eq("+i+")").html('<b>'+response.data[i].Status+'</b>');
-                      }else{
-                        $(".details_TTH:eq("+i+")").html('<b>'+response.data[i].Status+'</b>');
-                        var zo = document.createElement('div');
-                        zo.className = 'otrimanoData';
-                        zo.innerHTML = 'Заказ получен :)';
-                        $(".tileline:eq("+i+")").addClass("otrimano").append(zo);
-                      }
-                    }
-                  });
-                });
-              </script>
-              <% } else { %>
-              <div class="noNewsMessage">
-                У вас нет покупок.
-                <div class="goToShop">
-                  <a href="/stock?page=1">
-                    <div class="css-button">
-                      <p class="css-button-text">Перейти в каталог</p>
-                      <div class="css-button-inner">
-                        <div class="reset-skew">
-                          <p class="css-button-inner-text" style="line-height: 31px;">Перейти в каталог</p>
-                        </div>
-                      </div>
-                    </div>
+              <div class="minimTovar">
+                <% for(var itov = 0; itov < payments_user[i].tovars.length; itov++) { %>
+                <div class="miniTovar">
+                  <a href="/details?tov=<%= payments_user[i].tovars[itov].data.AI %>&<%= payments_user[i].tovars[itov].data.type %>  " target="_blank">
+                    <img src="<%= payments_user[i].tovars[itov].data.images[0] %>">
                   </a>
                 </div>
+                <% } %>
+                
+                
+            </div>
+            <div class="otpravka_line">                            
+              <div class="line_point onePoint">
+                <div class="pointImage1 <% if(payments_user[i].status === 0) { %>current<% } %>"></div>
               </div>
-              <% } %>
+              <div class="line_point twoPoint">
+                <div class="pointImage2 <% if(payments_user[i].status === 1) { %>current<% } %>"></div>
+              </div>
+              <div class="line_point threePoint">
+                <div class="pointImage3 <% if(payments_user[i].status === 2) { %>current<% } %>"></div>
+              </div>
+              <div class="line_point fourPoint">
+                <div class="pointImage4 <% if(payments_user[i].status === 3) { %>current<% } %>"></div>
+              </div>
+              <div class="line_point fivePoint">
+                <div class="pointImage5 <% if(payments_user[i].status === 4) { %>current<% } %>"></div>
+              </div>
             </div>
-          </div>
-          <div class="MyBlock" id="myDesires">
-
-            <% if(desires_user && desires_user.length > 0){ %>
-            <% for(var i = 0; i < desires_user.length; i++) { %>
-            <div class="desires_box">
-              <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
-              <div class="desires_title"><%= desires_user[i].title %></div>
-              <img src="../../../data/tovar/<%= desires_user[i].image[0] %>">
-              <!-- <div class="desires_image" style="background-image: url()"></div> -->
-              <a href="/details?tov=<%= desires_user[i].AI %>&<%= desires_user[i].types %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
-            </div>
-            <% } %>
-            <% } else { %>
-            <div class="noNewsMessage">
-              У вас нет желаний
-            </div>
+            <% if(payments_user[i].status === 0) { %>
+            <div class="cancel_zakaz" onclick="cancelPayment('<%= payments_user[i].id %>')"></div>
             <% } %>
           </div>
-          <div class="MyBlock" id="mySetting">
-            <h3>Личная информация</h3>
-            <div class="setting_line proc50">
-              <span>Дата роджения</span>
-              <input type="date" name="dateofbirth" id="dateofbirth">
-            </div>
-            <div class="setting_line proc50">
-              <span>Изменить Номер телефона</span>
-              <input type="text" name="number" placeholder="введите новый номер">
-            </div>
-            <div class="setting_line proc50">
-              <span>Изменить e-mail</span>
-              <input type="text" name="email" placeholder="введите новый email адресс">
-            </div>
-            <h3>Изменить пароль</h3>
-            <div class="setting_line">
-              <span>Старый пароль</span>
-              <input type="password" name="passwordOld"  placeholder="Введите старый пароль">
-              <span>Новый пароль</span>
-              <input type="password" name="passwordNew"  placeholder="Введите новый пароль">
-              <span>Повторите пароль</span>
-              <input type="password" name="passwordNew2" placeholder="Повторите пароль">
-              <div class="buttonSetting">Сохранить</div>
-            </div>
+          <% } %>
+        </div>
+        <% } else { %>
+        <div class="noNewsMessage">
+          У вас нет покупок.
+          <div class="goToShop">
+            <a href="/stock?page=1">
+              <div class="css-button">
+                <p class="css-button-text">Перейти в каталог</p>
+                <div class="css-button-inner">
+                  <div class="reset-skew">
+                    <p class="css-button-inner-text" style="line-height: 31px;">Перейти в каталог</p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="MyBlock" id="myDesires">
+
+      <% if(desires_user && desires_user.length > 0){ %>
+      <% for(var i = 0; i < desires_user.length; i++) { %>
+      <div class="desires_box">
+        <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
+        <div class="desires_title"><%= desires_user[i].title %></div>
+        <img src="../../../data/tovar/<%= desires_user[i].image[0] %>">
+        <!-- <div class="desires_image" style="background-image: url()"></div> -->
+        <a href="/details?tov=<%= desires_user[i].AI %>&<%= desires_user[i].types %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
+      </div>
+      <% } %>
+      <% } else { %>
+      <div class="noNewsMessage">
+        У вас нет желаний
+      </div>
+      <% } %>
+    </div>
+    <div class="MyBlock" id="mySetting">
+      <h3>Личная информация</h3>
+      <div class="setting_line proc50">
+        <span>Дата роджения</span>
+        <input type="date" name="dateofbirth" id="dateofbirth">
+      </div>
+      <div class="setting_line proc50">
+        <span>Изменить Номер телефона</span>
+        <input type="text" name="number" placeholder="введите новый номер">
+      </div>
+      <div class="setting_line proc50">
+        <span>Изменить e-mail</span>
+        <input type="text" name="email" placeholder="введите новый email адресс">
+      </div>
+      <h3>Изменить пароль</h3>
+      <div class="setting_line">
+        <span>Старый пароль</span>
+        <input type="password" name="passwordOld"  placeholder="Введите старый пароль">
+        <span>Новый пароль</span>
+        <input type="password" name="passwordNew"  placeholder="Введите новый пароль">
+        <span>Повторите пароль</span>
+        <input type="password" name="passwordNew2" placeholder="Повторите пароль">
+        <div class="buttonSetting">Сохранить</div>
       </div>
     </div>
   </div>
-  <%- include ./includes/footer.ejs %>
-  <div id="pageMessages"></div>
+</div>
+</div>
+</div>
+<%- include ./includes/footer.ejs %>
+<div id="pageMessages"></div>
 </body>
 </html>
