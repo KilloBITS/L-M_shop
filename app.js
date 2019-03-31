@@ -39,7 +39,7 @@ passport.deserializeUser((user, done) => {
 passport.use(new InstagramStrategy({
   clientID: "89e795eb46f643cf86c51d7cd0b66849",
   clientSecret: "ad15d5e24d5b46c199527e8165683a74",
-  callbackURL: "http://ladyman.club/auth/instagram/callback" 
+  callbackURL: "https://ladyman.club/auth/instagram/callback" 
 }, (accessToken, refreshToken, profile, done) => {
   console.log(profile);
 }));
