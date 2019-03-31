@@ -93,7 +93,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 passport.use(new FacebookStrategy({
     clientID: "331453347719986",
     clientSecret: "aa26a8bf3d9f94463ff8d14610faea90",
-    callbackURL: "http://ladyman.club/auth/facebook/callback"
+    callbackURL: "/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
