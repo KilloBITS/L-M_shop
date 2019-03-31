@@ -94,11 +94,11 @@
         </button>
       </div>
       <div class="form form-signup">
-        <div class="register_socials">
+        <div class="register_socials disabled">
           <div class="socials_title_log"><%= locale.regsoc %></div>
           <a href="/auth/facebook"><div class="socialAccount faceboock"></div></a>
           <div class="socialAccount google"></div>
-          <div class="socialAccount instagram"></div>
+          <a href="/auth/instagram"><div class="socialAccount instagram"></div></a>
         </div>
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>
@@ -125,11 +125,11 @@
       </div>
 
       <div class="form form-signin">
-        <div class="auch_socials">
+        <div class="auch_socials ">
           <div class="socials_title_log"><%= locale.authSoc %></div>
-          <div class="socialAccount faceboock"></div>
+          <a href="/auth/facebook"><div class="socialAccount faceboock"></div></a>
           <div class="socialAccount google"></div>
-          <div class="socialAccount instagram"></div>
+          <a href="/auth/instagram"><div class="socialAccount instagram"></div></a>
         </div>
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>

@@ -13,9 +13,6 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 // const analytics = require('node-analytics');
 
-const passport = require('passport');
-const FacebookStrategy = require('passport-facebook').Strategy;
-
 app.use(session({
   secret: '2C44-4D44-WppQ38S',
   resave: true,
@@ -26,7 +23,36 @@ app.use(session({
   cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
       }
-    }));
+}));
+
+const passport = require('passport');
+var Instagram = require('passport-instagram');
+const InstagramStrategy = Instagram.Strategy;
+
+passport.serializeUser((user, done) => {
+  done(null, user)
+})
+passport.deserializeUser((user, done) => {
+  done(null, user)
+})
+
+passport.use(new InstagramStrategy({
+  clientID: "89e795eb46f643cf86c51d7cd0b66849",
+  clientSecret: "ad15d5e24d5b46c199527e8165683a74",
+  callbackURL: "/auth/instagram/callback" 
+}, (accessToken, refreshToken, profile, done) => {
+  console.log(profile);
+}));
+
+app.get('/auth/instagram', passport.authenticate('instagram'));
+
+app.get(
+  '/auth/instagram/callback',
+  passport.authenticate('instagram', {
+    successRedirect: '/profile',
+    failureRedirect: '/login'
+  })
+);
 
 //project libs use
 app.use(express.json({limit: '50mb'}));
@@ -46,6 +72,7 @@ require('./controllers/system/controllerNotification');
 require('./controllers/system/controllerSMS');
 require('./controllers/system/controllerStatistic');
 require('./controllers/controllerFacebook_auth');
+require('./controllers/controllerInstagram_auth');
 
 
 
@@ -86,41 +113,6 @@ app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
 app.use('/about', about);
-
-
-
-
-
-
-
-passport.use(new FacebookStrategy({
-    clientID: "331453347719986",
-    clientSecret: "aa26a8bf3d9f94463ff8d14610faea90",
-    callbackURL: "/auth/facebook/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    process.nextTick(function () {
-      if(config.use_database==='true')
-      {
-         //Further code of Database.
-      }
-      return done(null, profile);
-    });
-  }
-));
-
-app.get('/auth/facebook',
-  passport.authenticate('facebook'));
-
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
-
-
-
 
 //Admin routes
 const admAbout = require('./routes/panel/getAboutPanel');

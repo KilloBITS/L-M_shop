@@ -3443,3 +3443,9 @@ ul.dropdownsession li a:hover {
   top: 0;
   background-position: -1px;
 }
+
+.disabled{
+  pointer-events: none;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
