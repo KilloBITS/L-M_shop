@@ -13,6 +13,9 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 // const analytics = require('node-analytics');
 
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
+
 app.use(session({
   secret: '2C44-4D44-WppQ38S',
   resave: true,
@@ -87,8 +90,8 @@ app.use('/about', about);
 
 
 
-const passport = require('passport');
-const FacebookStrategy = require('passport-facebook').Strategy;
+
+
 
 passport.use(new FacebookStrategy({
     clientID: "331453347719986",
@@ -106,15 +109,13 @@ passport.use(new FacebookStrategy({
   }
 ));
 
-
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook',
+  passport.authenticate('facebook'));
 
 app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { 
-       successRedirect : '/', 
-       failureRedirect: '/login' 
-  }),
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
+    // Successful authentication, redirect home.
     res.redirect('/');
   });
 
