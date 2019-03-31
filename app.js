@@ -248,22 +248,30 @@ app.post('/addcategory', menuPanelMethods);
 app.post('/addtype', menuPanelMethods);
 app.post('/removecategory', menuPanelMethods);
 
-var options = {
-  key: fs.readFileSync('./ssl/apache-selfsigned.key'),
-  cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
-};
+
 
 const Nexmo = require('nexmo')
 const nexmo = new Nexmo({
   apiKey: '8e5f959d',
   apiSecret: 't3KDkf6suo3RQBjV'
 })
+
 app.get('/logout', function(req, res) {
   req.session.destroy();
   res.redirect('/');
 });
 
 app.get('*', get404);
+
+
+var options = {
+  key: fs.readFileSync('./ssl/apache-selfsigned.key'),
+  cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
+};
+
+https.createServer(options, app).listen(443);
+
+
 app.listen(80, function(){
   global.baseName = 'SHOP_DB';
   global.baseIP = 'mongodb://localhost:27017/';
