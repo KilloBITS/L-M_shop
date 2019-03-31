@@ -51,6 +51,8 @@
     "nodemailer": "^4.6.8",
     "os": "^0.1.1",
     "pagination": "^0.4.6",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
     "request": "^2.88.0",
     "sha1": "^1.1.1",
     "socket.io": "^2.1.1",

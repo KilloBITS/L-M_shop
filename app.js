@@ -42,6 +42,9 @@ require('./controllers/system/controllerDate');
 require('./controllers/system/controllerNotification');
 require('./controllers/system/controllerSMS');
 require('./controllers/system/controllerStatistic');
+require('./controllers/controllerFacebook_auth');
+
+
 
 //User routes
 const index = require('./routes/getIndex');
@@ -80,6 +83,41 @@ app.use('/privacy_policy', pp);
 app.use('/discounts-and-promotions', dap);
 app.use('/site_of_map', map);
 app.use('/about', about);
+
+
+
+
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
+
+passport.use(new FacebookStrategy({
+    clientID: "331453347719986",
+    clientSecret: "aa26a8bf3d9f94463ff8d14610faea90",
+    callbackURL: "http://localhost:3000/auth/facebook/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    process.nextTick(function () {
+      if(config.use_database==='true')
+      {
+         //Further code of Database.
+      }
+      return done(null, profile);
+    });
+  }
+));
+
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { 
+       successRedirect : '/', 
+       failureRedirect: '/login' 
+  }),
+  function(req, res) {
+    res.redirect('/');
+  });
+
 
 
 
