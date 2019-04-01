@@ -211,7 +211,7 @@
           <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
           <div class="desires_title"><%= desires_user[i].title %></div>
           
-          <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
+          <img class="group list-group-image" id="imageOf<%= desires_user[i].AI %>" alt=""/>
           <script type="text/javascript">
             var image = new Image();
             image.onload = function () {
