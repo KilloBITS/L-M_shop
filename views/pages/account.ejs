@@ -205,13 +205,12 @@
       </div>
     </div>
     <div class="MyBlock" id="myDesires">
-
       <% if(desires_user && desires_user.length > 0){ %>
       <% for(var i = 0; i < desires_user.length; i++) { %>
       <div class="desires_box">
         <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
         <div class="desires_title"><%= desires_user[i].title %></div>
-        <img src="../../../data/tovar/<%= desires_user[i].image[0] %>">
+        <img src="../../../data/tovar/<%= desires_user[i].images[0] %>">
         <a href="/details?tov=<%= desires_user[i].AI %>&<%= desires_user[i].types %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
       </div>
       <% } %>
