@@ -215,10 +215,10 @@
           <script type="text/javascript">
             var image = new Image();
             image.onload = function () {
-              $("#imageOf<%= tovarArr[i].AI %>").attr('src', "<%= desires_user[i].images[0] %>");                       
+              $("#imageOf<%= desires_user[i].AI %>").attr('src', "<%= desires_user[i].images[0] %>");                       
             }
             image.onerror = function () {                       
-              $("#imageOf<%= tovarArr[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
+              $("#imageOf<%= desires_user[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
             }
             image.src = "<%= desires_user[i].images[0] %>";
           </script>
