@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Пользователи</title>
+    <title>Заказы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -45,7 +45,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="/index-panel"><i class="fa fa-dashboard"></i> <span>Главная</span></a></li>
-                            <li><a href="/payments-panel"><i class="fa fa-dollar"></i> <span>Заказы</span></a></li>
+                            <li class="active"><a href="/payments-panel"><i class="fa fa-dollar"></i> <span>Заказы</span></a></li>
                             <li><a href="/menu-panel"><i class="fa fa-navicon"></i> <span>Категории/Типы</span></a></li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-edit"></i><span>Информация</span></a>
@@ -74,7 +74,7 @@
                                     <li><a href="/system-panel"><i class="fa fa-server"></i> <span>Система</span></a></li>
                                 </ul>
                             </li>                            
-                            <li class="active"><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>                           
+                            <li><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>                           
                             <li><a href="/faq-panel" style="color: green"><i class="fa fa-shopping-cart" style="color: green"></i> <span>Помощь</span></a></li>
                         </ul>
                     </nav>
@@ -98,19 +98,21 @@
                                 <i class="ti-search"></i>
                             </form>
                         </div>
-                    </div>                
+                    </div>
+                    <!-- profile info & task notification -->
                     <%- include ./includes/infoblock.ejs %> 
                 </div>
             </div>
+            <!-- header area end -->
+            <!-- page title area start -->
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Пользователи</h4>
+                            <h4 class="page-title pull-left">Заказы</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="/">Lady & Man clotring store</a></li>
-                                <li><a href="/index-panel">Панель управления</a></li>
-                                <li><span>Пользователи</span></li>
+                                <li><span>Заказы</span></li>
                             </ul>
                         </div>
                     </div>
@@ -126,60 +128,40 @@
                                 <div class="loader"></div>
                             </div>
                             <div class="card-body">
-                                <h4 class="header-title">Список пользователей</h4>
+                                <h4 class="header-title">Список заказов</h4>
                                 <div class="data-tables datatable-dark">
                                     <table id="dataTable3" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
                                                 <th>№</th>
-                                                <th>Ник</th>
-                                                <th>email</th>
-                                                <th>Номер</th>                            
-                                                <th>LM_COIN</th>
-                                                <th>Должность</th>
-                                                <th>Пароль</th>
-                                                <th>Действия</th>
+                                                <th>Дата</th>
+                                                <th>Сумма</th>
+                                                <th>ФИО</th>                            
+                                                <th>Оплата</th>
+                                                <th>Статус оплаты</th>
+                                                <th>Доставка</th>
+                                                <th>Бонус</th>
+                                                <th>Товары</th>
+                                                <th>Номер</th>
+                                                <th>ТТН</th>
+                                                <th>Адрес</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <% for(var i = 0; i < userData.length; i++){ %>
+                                            <% for(var i = 0; i < payData.length; i++){ %>
                                             <tr>
-                                                <td><%= userData[i].AI %></td>
-                                                <td><b><%= userData[i].nick %></b></td>
-                                                <td><a href="mailto:<%= userData[i].email %>?subject=Администрация Lady&Man clothing store" class="adressLineMap"><%= userData[i].email %></a></td>
-                                                <td>
-                                                    <% if(userData[i].phone_number !== null){ %>
-                                                    <a href="tel:<%= userData[i].phone_number %>" class="adressLineMap"><%= userData[i].phone_number %></a>
-                                                    <% }else{ %>   
-                                                    <a href="#" class="adressLineMap redBack" style="color: red">Номер не указан</a> 
-                                                    <% } %>                                                    
-                                                </td>
-                                                <td><%= userData[i].LM_COIN %></td>
-
-                                                <% if(userData[i].blocked){ %>
-                                                <td class="redBack">Заблокирован</td>
-                                                <% }else{ %>    
-                                                <% if(userData[i].isAdmin){ %>
-                                                <td class="redTable youAdmin"><div class="official"></div>Администратор</td>
-                                                <% }else{ %>    
-                                                <td class="greenTable">Пользователь</td>
-                                                <% } %> 
-                                                <% } %>
-                                                <td hide-data="<%= userData[i].password %>" class="cpoionter" onclick="USER.showPassword(this)"><i class="fa fa-key" aria-hidden="true"></i></td>
-                                                <td>
-                                                    <% if(userData[i].blocked){ %>
-                                                    <button type="button" class="btn btn-success btn-xs mb-3" onclick="USER.block('<%= userData[i].AI %>',false)">Разблокировать</button>
-                                                    <% }else{ %>
-                                                    <button type="button" class="btn btn-danger btn-xs mb-3" onclick="USER.block('<%= userData[i].AI %>',true)">Заблокировать</button>
-                                                    <% } %>                                                     
-                                                    <button type="button" class="btn btn-warning btn-xs mb-3" onclick="USER.edit('<%= userData[i].AI %>')">Редактировать</button>
-                                                    <% if(userData[i].isAdmin){ %>
-                                                    <button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('<%= userData[i].AI %>',false)">Разжаловать администратора</button>
-                                                    <% }else{ %>
-                                                    <button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('<%= userData[i].AI %>',true)">Назначить администратором</button>
-                                                    <% } %> 
-                                                    <button type="button" class="btn btn-dark btn-xs mb-3" onclick="USER.delete('<%= userData[i].AI %>')">Удалить</button>
-                                                </td>
+                                                <td><%= payData[i].id %></td>
+                                                <td><b><%= payData[i].today %></b></td>
+                                                <td><%= payData[i].summa %></td>
+                                                <td><%= payData[i].FIO %></td>
+                                                <td><%= payData[i].PAYS %></td>
+                                                <td><%= payData[i].PAYS_S %></td>
+                                                <td><%= payData[i].dostavka %></td>
+                                                <td><%= payData[i].bonus %></td>
+                                                <td>ПОКАЗАТЬ ТОВАРЫ</td>
+                                                <td><%= payData[i].number %></td>
+                                                <td><%= payData[i].TTH %></td>
+                                                <td><%= payData[i].adress %></td>
                                             </tr>
                                             <% } %>
                                         </tbody>
@@ -191,10 +173,7 @@
                 </div>
             </div>
         </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
         <%- include ./includes/footer.ejs %>
-        <!-- footer area end-->
     </div>
     <%- include ./includes/offset-area.ejs %> 
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>

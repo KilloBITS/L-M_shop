@@ -255,6 +255,9 @@ var PRIVACEPOLICY = {
 }
 
 var USER = {
+	showPassword: function(e){
+		alert($(e).attr('hide-data'))
+	},
 	updatetable: function(a){
 		var table = $('#dataTable3').DataTable(); 
 		table.clear();
@@ -616,7 +619,8 @@ var MENU = {
 			glink: $("#link-new").val()
 		};
 		$.post('/addcategory',NC , (res) => {
-			create_alert(res, false)
+			create_alert(res, false);
+			$('.single-table:eq(0)').load(document.URL +  ' .single-table:eq(0)');
 		});
 	},
 	savenewtype: function(){
@@ -630,7 +634,7 @@ var MENU = {
 			types: $("#types-new").val()
 		};
 		$.post('/addtype',{a:NT, b: MENU.CATEGORIES }, (res) => {
-			create_alert(res, false)
+			create_alert(res, false);
 		});
 	},
 	removecategory: function(a){

@@ -3164,3 +3164,11 @@ table.dataTable thead td {
   align-items: center;
   justify-content: center;
 }
+
+.cpoionter{
+    cursor: pointer;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 5px 0px;
+}

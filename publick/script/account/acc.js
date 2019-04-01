@@ -10,7 +10,7 @@ var USER = {
       if(atribut !== undefined){
         console.log(atribut);
         $(".MyBlock").hide(0);
-        $("#"+atribut).show(300);
+        $("#"+atribut).show(0);
       }
     });
     $("#phoneNumMask").mask("+38(099) 999-9999");

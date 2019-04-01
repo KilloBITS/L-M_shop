@@ -86,7 +86,7 @@ router.get('/', function(req, res, next){
         if(parseInt(req.query.oplatatype) === 1){
           NEW_ZAKAZ.PAYS = 'Оплата картой';
         }      
-        
+        NEW_ZAKAZ.PAYS_S = 'Не оплачено';
         NEW_ZAKAZ.status = 0;
         NEW_ZAKAZ.TTH = null;
         NEW_ZAKAZ.tovars = JSON.parse(req.query.JSON_Tovar);

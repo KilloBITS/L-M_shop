@@ -67,8 +67,7 @@ router.post('/addcategory', function(req, res, next){
 						DATA.edited = true;
 						DATA.categories = (resMenu2.length === 0)?0:parseInt(resMenu2[0].categories) + 1;
 						DATA.podlink = ['/'];
-						DATA.glink = '/shop?c='+DATA.categories+'&page=1'// /shop?c=6&page=1
-
+						DATA.glink = '/shop?c='+DATA.categories+'&page=1';
 
 						var CONF = resConfig[0].categories;
 						CONF.push({ name: DATA.name[0], index: DATA.index.toString() });
@@ -76,7 +75,7 @@ router.post('/addcategory', function(req, res, next){
 						config.updateOne({AI: 0},{$set: {categories:  CONF }})
 						menu.insertOne(DATA);
 						menu.find().toArray(function(err, resMenuData){	
-							res.send({code: 500, className: 'nSuccess', message: 'атегория успешно добавлена!', data: resMenuData});
+							res.send({code: 500, className: 'nSuccess', message: 'Категория успешно добавлена!', data: resMenuData});
 						});
 					});					
 				});

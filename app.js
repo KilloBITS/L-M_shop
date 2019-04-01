@@ -133,6 +133,7 @@ const admVisual = require('./routes/panel/getVisualPanel');
 const admMenu = require('./routes/panel/getMenuPanel');
 const admPrivacePolicy = require('./routes/panel/getPrivacePolicyPanel');
 const admTermsOfUse = require('./routes/panel/getTermsOfUsePAnel');
+const admPayments = require('./routes/panel/getPaymentsPanel');
 
 app.use('/about-panel', admAbout);
 app.use('/API-panel', admAPI);
@@ -152,6 +153,7 @@ app.use('/faq-panel', admFaq);
 app.use('/menu-panel', admMenu);
 app.use('/privacepolicy-panel', admPrivacePolicy);
 app.use('/termsofuse-panel', admTermsOfUse);
+app.use('/payments-panel', admPayments);
 
 
 const podpiska = require('./controllers/controllerNewCallUserTovar');

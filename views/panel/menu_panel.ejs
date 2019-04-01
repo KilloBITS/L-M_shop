@@ -110,7 +110,6 @@
             </div>
             <div class="main-content-inner">
                 <div class="row">
-
                     <!-- Modal -->
                     <div class="modal fade" id="newTypeModal">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -171,9 +170,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <div class="col-lg-6 mt-5">
                         <div class="col-lg-12">
                             <div class="card">
@@ -191,11 +187,11 @@
                                                 </thead>
                                                 <tbody>
                                                     <% for(let i = 0; i < menu.length; i++){ %>
-                                                        <% if(menu[i].edited){ %>
-                                                        <tr class="table-success" onclick="MENU.clickcategoty(<%= i %>, true,<%= menu[i].index %>, this)">
+                                                    <% if(menu[i].edited){ %>
+                                                    <tr class="table-success" onclick="MENU.clickcategoty(<%= i %>, true,<%= menu[i].index %>, this)">
                                                         <% }else{ %>
                                                         <tr class="table-dark" onclick="MENU.clickcategoty(<%= i %>, false,<%= menu[i].index %>, this)">
-                                                        <% } %>                                                        
+                                                            <% } %>                                                        
                                                             <th scope="row">
                                                                 <input type="radio" name="checkmenu" class="checkradio">
                                                             </th>
@@ -209,109 +205,109 @@
                                                                 <% } %>                                                                
                                                             </td>
                                                         </tr>
-                                                    <% } %>
+                                                        <% } %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mt-1">
+                                        <button type="button" class="btn btn-primary mb-3 col-lg-12" data-toggle="modal" data-target="#newCategoryModal">Создать категорию</button>
+                                    </div>
+                                </div>                        
+                            </div>
+
+                            <div class="col-lg-12 mt-3" id="setting">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Настройки</h4>
+                                        <label for="name-RU" class="col-form-label">Название на Русском</label>
+                                        <input class="form-control" type="text" id="name-RU">
+
+                                        <label for="name-UA" class="col-form-label">Название на Украинском</label>
+                                        <input class="form-control" type="text" id="name-UA">
+
+                                        <label for="name-EN" class="col-form-label">Название на Английском</label>
+                                        <input class="form-control" type="text" id="name-EN">
+
+                                        <label for="URL" class="col-form-label">URL</label>
+                                        <input class="form-control" type="text" id="URL" readonly>
+
+                                        <label for="TYPE" class="col-form-label">Тип</label>
+                                        <input class="form-control" type="text" id="TYPE" readonly>
+                                    </div>
+                                    <div class="col-lg-12 mt-1">
+                                        <button type="button" class="btn btn-success mb-3 col-lg-12" onclick="MENU.saveeditpodlink()">Сохранить</button>
+                                    </div>
+                                </div>                        
+                            </div>                    
+                        </div>
+
+                        <div class="col-lg-6 mt-5" id="datatabletype">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="preloaderBlock" style="display: none;">
+                                        <div class="loader"></div>
+                                    </div>
+                                    <h4 class="header-title">Типы </h4>
+                                    <div class="single-table">
+                                        <div class="table-responsive" id="typestable">
+                                            <table class="table text-center">
+                                                <thead class="text-uppercase bg-dark">
+                                                    <tr class="text-white">
+                                                        <th scope="col">Название</th>
+                                                        <th scope="col">URL</th>
+                                                        <th scope="col">Тип</th>                                                   
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mt-1">
-                                    <button type="button" class="btn btn-primary mb-3 col-lg-12" data-toggle="modal" data-target="#newCategoryModal">Создать категорию</button>
-                                </div>
-                            </div>                        
-                        </div>
-
-                        <div class="col-lg-12 mt-3" id="setting">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="header-title">Настройки</h4>
-                                    <label for="name-RU" class="col-form-label">Название на Русском</label>
-                                    <input class="form-control" type="text" id="name-RU">
-
-                                    <label for="name-UA" class="col-form-label">Название на Украинском</label>
-                                    <input class="form-control" type="text" id="name-UA">
-
-                                    <label for="name-EN" class="col-form-label">Название на Английском</label>
-                                    <input class="form-control" type="text" id="name-EN">
-
-                                    <label for="URL" class="col-form-label">URL</label>
-                                    <input class="form-control" type="text" id="URL" readonly>
-
-                                    <label for="TYPE" class="col-form-label">Тип</label>
-                                    <input class="form-control" type="text" id="TYPE" readonly>
-                                </div>
-                                <div class="col-lg-12 mt-1">
-                                    <button type="button" class="btn btn-success mb-3 col-lg-12" onclick="MENU.saveeditpodlink()">Сохранить</button>
-                                </div>
-                            </div>                        
-                        </div>                    
-                    </div>
-
-                    <div class="col-lg-6 mt-5" id="datatabletype">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="preloaderBlock" style="display: none;">
-                                        <div class="loader"></div>
-                                </div>
-                                <h4 class="header-title">Типы </h4>
-                                <div class="single-table">
-                                    <div class="table-responsive" id="typestable">
-                                        <table class="table text-center">
-                                            <thead class="text-uppercase bg-dark">
-                                                <tr class="text-white">
-                                                    <th scope="col">Название</th>
-                                                    <th scope="col">URL</th>
-                                                    <th scope="col">Тип</th>                                                   
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <button type="button" class="btn btn-primary mb-3 col-lg-12" id="createType" data-toggle="modal" data-target="#newTypeModal">Создать тип</button>
                                 </div>
                             </div>
-                            <div class="col-lg-12 mt-1">
-                                <button type="button" class="btn btn-primary mb-3 col-lg-12" id="createType" data-toggle="modal" data-target="#newTypeModal">Создать тип</button>
-                            </div>
+
                         </div>
-                        
                     </div>
                 </div>
             </div>
+            <%- include ./includes/footer.ejs %>
         </div>
-        <%- include ./includes/footer.ejs %>
-    </div>
-    <%- include ./includes/offset-area.ejs %> 
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
-    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
-    <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
-    <!-- all bar chart -->
-    <script src="assets/js/bar-chart.js"></script>
-    <!-- all map chart -->
-    <script src="assets/js/maps.js"></script>
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/methods.js"></script>
-</body>
+        <%- include ./includes/offset-area.ejs %> 
+        <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/metisMenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+        <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+        <!-- all line chart activation -->
+        <script src="assets/js/line-chart.js"></script>
+        <!-- all pie chart -->
+        <script src="assets/js/pie-chart.js"></script>
+        <!-- all bar chart -->
+        <script src="assets/js/bar-chart.js"></script>
+        <!-- all map chart -->
+        <script src="assets/js/maps.js"></script>
+        <!-- others plugins -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/methods.js"></script>
+    </body>
 
-</html>
+    </html>

@@ -29,7 +29,7 @@ router.get('/*', function(req, res, next){
 
     locale.find().toArray(function(err, resLocale){
       users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
-        menu.find().sort({index: 1}).toArray(function(err, resMenu){
+        menu.find().sort({isEnded: 1}).toArray(function(err, resMenu){
           tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, recomendedTov) {
             tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function(err, resTovar){
               tovar.find({ color: resTovar[0].color, type: resTovar[0].type }).toArray(function(err, similarTov) {
