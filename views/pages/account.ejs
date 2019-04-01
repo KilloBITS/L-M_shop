@@ -161,92 +161,105 @@
                 <% } %>
                 
                 
+              </div>
+              <div class="otpravka_line">                            
+                <div class="line_point onePoint">
+                  <div class="pointImage1 <% if(payments_user[i].status === 0) { %>current<% } %>"></div>
+                </div>
+                <div class="line_point twoPoint">
+                  <div class="pointImage2 <% if(payments_user[i].status === 1) { %>current<% } %>"></div>
+                </div>
+                <div class="line_point threePoint">
+                  <div class="pointImage3 <% if(payments_user[i].status === 2) { %>current<% } %>"></div>
+                </div>
+                <div class="line_point fourPoint">
+                  <div class="pointImage4 <% if(payments_user[i].status === 3) { %>current<% } %>"></div>
+                </div>
+                <div class="line_point fivePoint">
+                  <div class="pointImage5 <% if(payments_user[i].status === 4) { %>current<% } %>"></div>
+                </div>
+              </div>
+              <% if(payments_user[i].status === 0) { %>
+              <div class="cancel_zakaz" onclick="cancelPayment('<%= payments_user[i].id %>')"></div>
+              <% } %>
             </div>
-            <div class="otpravka_line">                            
-              <div class="line_point onePoint">
-                <div class="pointImage1 <% if(payments_user[i].status === 0) { %>current<% } %>"></div>
-              </div>
-              <div class="line_point twoPoint">
-                <div class="pointImage2 <% if(payments_user[i].status === 1) { %>current<% } %>"></div>
-              </div>
-              <div class="line_point threePoint">
-                <div class="pointImage3 <% if(payments_user[i].status === 2) { %>current<% } %>"></div>
-              </div>
-              <div class="line_point fourPoint">
-                <div class="pointImage4 <% if(payments_user[i].status === 3) { %>current<% } %>"></div>
-              </div>
-              <div class="line_point fivePoint">
-                <div class="pointImage5 <% if(payments_user[i].status === 4) { %>current<% } %>"></div>
-              </div>
-            </div>
-            <% if(payments_user[i].status === 0) { %>
-            <div class="cancel_zakaz" onclick="cancelPayment('<%= payments_user[i].id %>')"></div>
             <% } %>
+          </div>
+          <% } else { %>
+          <div class="noNewsMessage">
+            У вас нет покупок.
+            <div class="goToShop">
+              <a href="/stock?page=1">
+                <div class="css-button">
+                  <p class="css-button-text">Перейти в каталог</p>
+                  <div class="css-button-inner">
+                    <div class="reset-skew">
+                      <p class="css-button-inner-text" style="line-height: 31px;">Перейти в каталог</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
           <% } %>
         </div>
+      </div>
+      <div class="MyBlock" id="myDesires">
+        <% if(desires_user && desires_user.length > 0){ %>
+        <% for(var i = 0; i < desires_user.length; i++) { %>
+        <div class="desires_box">
+          <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
+          <div class="desires_title"><%= desires_user[i].title %></div>
+          
+          <img class="group list-group-image" id="imageOf<%= tovarArr[i].AI %>" alt=""/>
+          <script type="text/javascript">
+            var image = new Image();
+            image.onload = function () {
+              $("#imageOf<%= tovarArr[i].AI %>").attr('src', "<%= desires_user[i].images[0] %>");                       
+            }
+            image.onerror = function () {                       
+              $("#imageOf<%= tovarArr[i].AI %>").attr('src', 'http://bldng.info/assets/default_image-a61228fe406c941a065163a232688948cb0e1186d2bc2b2727c073bb20728c67.png');                       
+            }
+            image.src = "<%= desires_user[i].images[0] %>";
+          </script>
+
+
+          <a href="/details?tov=<%= desires_user[i].AI %>&<%= desires_user[i].types %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
+        </div>
+        <% } %>
         <% } else { %>
         <div class="noNewsMessage">
-          У вас нет покупок.
-          <div class="goToShop">
-            <a href="/stock?page=1">
-              <div class="css-button">
-                <p class="css-button-text">Перейти в каталог</p>
-                <div class="css-button-inner">
-                  <div class="reset-skew">
-                    <p class="css-button-inner-text" style="line-height: 31px;">Перейти в каталог</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+          У вас нет желаний
         </div>
         <% } %>
       </div>
-    </div>
-    <div class="MyBlock" id="myDesires">
-      <% if(desires_user && desires_user.length > 0){ %>
-      <% for(var i = 0; i < desires_user.length; i++) { %>
-      <div class="desires_box">
-        <div class="desires_remove" onclick="removeDesires(<%= desires_user[i].AI %>&<%= desires_user[i].types %>)"></div>
-        <div class="desires_title"><%= desires_user[i].title %></div>
-        <img src="../../../data/tovar/<%= desires_user[i].images[0] %>">
-        <a href="/details?tov=<%= desires_user[i].AI %>&<%= desires_user[i].types %>" target="_blank"> <div class="desires_more"> Открыть товар </div> </a>
-      </div>
-      <% } %>
-      <% } else { %>
-      <div class="noNewsMessage">
-        У вас нет желаний
-      </div>
-      <% } %>
-    </div>
-    <div class="MyBlock" id="mySetting">
-      <h3>Личная информация</h3>
-      <div class="setting_line proc50">
-        <span>Дата роджения</span>
-        <input type="date" name="dateofbirth" id="dateofbirth">
-      </div>
-      <div class="setting_line proc50">
-        <span>Изменить Номер телефона</span>
-        <input type="text" name="number" placeholder="введите новый номер">
-      </div>
-      <div class="setting_line proc50">
-        <span>Изменить e-mail</span>
-        <input type="text" name="email" placeholder="введите новый email адресс">
-      </div>
-      <h3>Изменить пароль</h3>
-      <div class="setting_line">
-        <span>Старый пароль</span>
-        <input type="password" name="passwordOld"  placeholder="Введите старый пароль">
-        <span>Новый пароль</span>
-        <input type="password" name="passwordNew"  placeholder="Введите новый пароль">
-        <span>Повторите пароль</span>
-        <input type="password" name="passwordNew2" placeholder="Повторите пароль">
-        <div class="buttonSetting">Сохранить</div>
+      <div class="MyBlock" id="mySetting">
+        <h3>Личная информация</h3>
+        <div class="setting_line proc50">
+          <span>Дата роджения</span>
+          <input type="date" name="dateofbirth" id="dateofbirth">
+        </div>
+        <div class="setting_line proc50">
+          <span>Изменить Номер телефона</span>
+          <input type="text" name="number" placeholder="введите новый номер">
+        </div>
+        <div class="setting_line proc50">
+          <span>Изменить e-mail</span>
+          <input type="text" name="email" placeholder="введите новый email адресс">
+        </div>
+        <h3>Изменить пароль</h3>
+        <div class="setting_line">
+          <span>Старый пароль</span>
+          <input type="password" name="passwordOld"  placeholder="Введите старый пароль">
+          <span>Новый пароль</span>
+          <input type="password" name="passwordNew"  placeholder="Введите новый пароль">
+          <span>Повторите пароль</span>
+          <input type="password" name="passwordNew2" placeholder="Повторите пароль">
+          <div class="buttonSetting">Сохранить</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 </div>
 <%- include ./includes/footer.ejs %>
