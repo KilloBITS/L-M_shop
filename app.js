@@ -11,7 +11,6 @@ const request = require("request");
 const app = express();
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
-// const analytics = require('node-analytics');
 
 app.use(session({
   secret: '2C44-4D44-WppQ38S',
@@ -265,7 +264,6 @@ var options = {
 };
 
 https.createServer(options, app).listen(443);
-
 
 app.listen(80, function(){
   global.baseName = 'SHOP_DB';

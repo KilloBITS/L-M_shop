@@ -513,13 +513,27 @@ a.adressLineMap:hover{
   position: absolute;
   background: white;
   width: 100%;
-  height: 270px;
   z-index: 0;
   right: 0;
   top: calc(100% + 51px);
   border-bottom: 1px solid silver;
   display: none;
 }
+
+.closeSearch{
+    position: absolute;
+    right: 15px;
+    width: 100px;
+    height: 26px;
+    background-color: #ff4a4a;
+    top: 5px;
+    text-align: center;
+    line-height: 26px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
 .search_title{
   width: 100%;
   text-align: center;
