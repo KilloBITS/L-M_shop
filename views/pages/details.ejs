@@ -204,7 +204,7 @@
         <div class="description">
           <div class="sizeOfTovar">
             <div class="selectSize">
-              <% if(tovarArr.sizes !== null){ %>
+              <% if(tovarArr.sizes !== undefined && tovarArr.sizes !== null){ %>
               <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
               <% if(iS === 0){ %>
               <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
