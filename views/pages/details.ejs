@@ -219,7 +219,11 @@
             </div>
             <div class="btnTableSizes">Таблица размеров</div>
           </div>
+          <% if(tovarArr.manufacturer !== 'Мой товар'){ %>
           <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact.find(x => x.index === parseInt(tovarArr.manufacturer)).title  %></span></div>
+          <% }else{ %>
+
+          <% } %>
           <div class="text_line" id="CODETOVAR">Код товара: <%= tovarArr.code %></div>
           <div class="text_line" id="OPISANIE">Описание:</div>
           <div class="noneText"><%= tovarArr.text[numLang] %></div>
