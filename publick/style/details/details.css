@@ -1102,9 +1102,10 @@ p {
 /* Let's style the wrapper in such away that,
 it should always be at the center of the browser */
 .wrapper {
-  position: absolute;
-  bottom: 16px;
-  right: 8px;
+    bottom: 16px;
+    right: 8px;
+    width: 100%;
+    float: right;
 }
 
 /* Style the Un-order list by setting its list-style to none */
