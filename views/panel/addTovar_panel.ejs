@@ -57,8 +57,8 @@
                                     <li><a href="/privacepolicy-panel"><i class="fa fa-key"></i> <span>Политика конфиденциальности</span></a></li>
                                     <li><a href="/termsofuse-panel"><i class="fa fa-book"></i> <span>Условия пользования</span></a></li>
                                 </ul>
-                            </li>    
-                            <li class="active"><a href="/catalog-panel"><i class="fa fa-shopping-cart"></i> <span>Каталог</span></a></li> 
+                            </li>
+                            <li class="active"><a href="/catalog-panel"><i class="fa fa-shopping-cart"></i> <span>Каталог</span></a></li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-newspaper-o"></i><span>Новости и объявления</span></a>
                                 <ul class="collapse">
@@ -75,8 +75,8 @@
                                     <li><a href="/API-panel"><i class="fa fa-code"></i> <span>API</span></a></li>
                                     <li><a href="/system-panel"><i class="fa fa-server"></i> <span>Система</span></a></li>
                                 </ul>
-                            </li>                            
-                            <li><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>                           
+                            </li>
+                            <li><a href="/users-panel"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
                             <li><a href="/faq-panel" style="color: green"><i class="fa fa-shopping-cart" style="color: green"></i> <span>Помощь</span></a></li>
                         </ul>
                     </nav>
@@ -99,7 +99,7 @@
                             </form>
                         </div>
                     </div>
-                    <%- include ./includes/infoblock.ejs %> 
+                    <%- include ./includes/infoblock.ejs %>
                 </div>
             </div>
             <div class="page-title-area">
@@ -111,7 +111,7 @@
                             <% }else{ %>
                             <h4 class="page-title pull-left">Создание товара</h4>
                             <% } %>
-                            
+
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="/">Lady & Man clotring store</a></li>
                                 <li><a href="/index-panel">Панель</a></li>
@@ -122,12 +122,12 @@
                                     <% }else{ %>
                                     <span>Создание товара</span>
                                     <% } %>
-                                    
+
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <%- include ./includes/user.ejs %> 
+                    <%- include ./includes/user.ejs %>
                 </div>
             </div>
             <div class="main-content-inner">
@@ -136,7 +136,7 @@
                     <div class="col-6 mt-3">
                         <div class="card">
                             <div class="card-body">
-                                <div id="accordion2" class="according">                                    
+                                <div id="accordion2" class="according">
                                     <div class="card">
                                         <div class="card-header">
                                             <a class="collapsed card-link" data-toggle="collapse" href="#accordion13">Импортировать с сайта</a>
@@ -147,11 +147,11 @@
                                                     <label for="linkImp"></label>
                                                     <input type="text" class="form-control" id="linkInp" aria-describedby="emailHelp" placeholder="Введите ссылку на страницу товара" value="//berezkashop.in.ua/item/plate-kombinacziya-mini-s-kruzhevom-i-baxrom/">
                                                     <small id="emailHelp" class="form-text text-muted">Введите ссылку на страницу товара.</small>
-                                                </div>                                   
+                                                </div>
                                                 <button type="submit" class="btn btn-primary pr-4 pl-4" onclick="CATALOG.import()">Импортировать</button>
                                             </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                     <div class="col-6 mt-3">
                         <div class="card">
                             <div class="card-body">
-                                <div id="accordion1" class="according">                                    
+                                <div id="accordion1" class="according">
                                     <div class="card">
                                         <div class="card-header">
                                             <a class="collapsed card-link" data-toggle="collapse" href="#accordion12">Импортировать с файла</a>
@@ -169,36 +169,25 @@
                                                 <div class="custom-file">
                                                     <input type="file" class="custom-file-input" id="inportFile" accept=".xml,.json" onchange="CATALOG.fileimport(this)">
                                                     <label class="custom-file-label" for="inportFile">Выбрать файл</label>
-                                                </div>        
+                                                </div>
                                                 <div class="col-md-12 mb-3">
                                                     <label class="col-form-label">Категория</label>
                                                     <select class="custom-select" id="categoriesSelectImport" onchange="CATALOG.categoriesselect(this)">
+                                                        <option value="null" selected>Не выбрано</option>
                                                         <% for(var i = 0; i < config.categories.length; i++){ %>
-                                                        <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
+                                                          <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
                                                         <% } %>
                                                     </select>
-                                                </div>                                            
+                                                </div>
                                                 <div class="col-md-12 mb-3">
                                                     <div class="preloaderBlock miniloader" style="display: none;">
                                                         <div class="loader"></div>
                                                     </div>
                                                     <label class="col-form-label">Тип</label>
                                                     <select class="custom-select" id="typeSelectImport">
-                                                        <option value="kofty">Джемпера / Кардиганы / Гольфы</option>
-                                                        <option value="bluzki">Блузки</option>
-                                                        <option value="futbolki">Футболки</option>
-                                                        <option value="platya">Платья</option>
-                                                        <option value="kombinezoni">Комбинезоны</option>
-                                                        <option value="topy-i-mayki">Топы и Майки</option>
-                                                        <option value="zhenskie-rubashki">Рубашки</option>
-                                                        <option value="kurtki-i-palta">Куртки и пальта</option>
-                                                        <option value="kostyumy">Костюмы</option>
-                                                        <option value="shtany--dzhinsy">Штаны / Джинсы / Лосины</option>
-                                                        <option value="yubki">Юбки</option>
-                                                        <option value="sportivnye-kostyumy">Спортивные костюмы</option>
-                                                        <option value="shapki">Шапки</option>                                                    
+
                                                     </select>
-                                                </div>  
+                                                </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label class="col-form-label">Производитель</label>
@@ -208,19 +197,19 @@
                                                         <option value="<%= man[i].index %>"><%= man[i].title %></option>
                                                         <% } %>
                                                     </select>
-                                                </div>                       
+                                                </div>
                                                 <button type="submit" class="btn btn-primary pr-4 pl-4" onclick="CATALOG.sentimportedarray()">Импортировать</button>
                                             </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <% } %>                   
+                    <% } %>
 
                     <div class="col-lg-6 col-ml-12">
-                        <div class="row">                           
+                        <div class="row">
                             <div class="col-12 mt-1">
                                 <div class="card">
                                     <div class="preloaderBlock" style="display: none;">
@@ -231,7 +220,7 @@
                                             <label for="example-text-input" class="col-form-label">Название</label>
                                             <div class="row">
                                                 <div class="col-lg-12">
-                                                    <div class="card">                                                        
+                                                    <div class="card">
                                                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Русский</a>
@@ -262,15 +251,15 @@
                                                                     <textarea class="form-control" aria-label="With textarea" id="example-text-input-EN" placeholder="Введите текст"><% if(editMode){ %><%= tovarData.title[2] %><% } %></textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                    
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> 
-                                        <div class="form-row">                                            
+                                        </div>
+                                        <div class="form-row">
                                             <label for="linkData" class="col-form-label">Ссылка на сайте</label>
                                             <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.link %><% }else{ %>Не указано<% } %>" id="linkData">
-                                        </div>        
+                                        </div>
 
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
@@ -288,46 +277,35 @@
                                                 <script type="text/javascript">
                                                     document.getElementById("example-date-input").valueAsDate = new Date();
                                                 </script>
-                                                <% } %> 
+                                                <% } %>
                                             </div>
-                                        </div>     
+                                        </div>
 
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3">
                                                 <label for="example-date-input" class="col-form-label">Цвет</label>
-                                                <select class="custom-select" id="colorSelect">                                                    
+                                                <select class="custom-select" id="colorSelect">
                                                     <% for(var i = 0; i < config.colorTable.length; i++){ %>
                                                     <option value="<%= config.colorTable[i].code %>"><%= config.colorTable[i].name %></option>
-                                                    <% } %>                                                   
+                                                    <% } %>
                                                 </select>
                                             </div>
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Категория</label>
                                                 <select class="custom-select" id="categoriesSelect" onchange="CATALOG.categoriesselect(this)">
+                                                    <option value="null" selected>Не выбрано</option>
                                                     <% for(var i = 0; i < config.categories.length; i++){ %>
                                                     <option value="<%= config.categories[i].index %>"><%= config.categories[i].name %></option>
                                                     <% } %>
                                                 </select>
-                                            </div>                                            
+                                            </div>
                                             <div class="col-md-4 mb-3">
                                                 <div class="preloaderBlock miniloader" style="display: none;">
                                                     <div class="loader"></div>
                                                 </div>
                                                 <label class="col-form-label">Тип</label>
                                                 <select class="custom-select" id="typeSelect">
-                                                    <option value="kofty">Джемпера / Кардиганы / Гольфы</option>
-                                                    <option value="bluzki">Блузки</option>
-                                                    <option value="futbolki">Футболки</option>
-                                                    <option value="platya">Платья</option>
-                                                    <option value="kombinezoni">Комбинезоны</option>
-                                                    <option value="topy-i-mayki">Топы и Майки</option>
-                                                    <option value="zhenskie-rubashki">Рубашки</option>
-                                                    <option value="kurtki-i-palta">Куртки и пальта</option>
-                                                    <option value="kostyumy">Костюмы</option>
-                                                    <option value="shtany--dzhinsy">Штаны / Джинсы / Лосины</option>
-                                                    <option value="yubki">Юбки</option>
-                                                    <option value="sportivnye-kostyumy">Спортивные костюмы</option>
-                                                    <option value="shapki">Шапки</option>                                                
+
                                                 </select>
                                             </div>
                                         </div>
@@ -350,7 +328,7 @@
                                             <div class="col-md-4 mb-3">
                                                 <label class="col-form-label">Код товара</label>
                                                 <input class="form-control" type="text" value="<% if(editMode){ %><%= tovarData.code %><% } %>" id="tovarCode">
-                                            </div>                                            
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="example-date-input" class="col-form-label">Размер</label>
@@ -381,7 +359,7 @@
                                             <div class="custom-control custom-checkbox custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input sizescheck" id="XXXL">
                                                 <label class="custom-control-label" for="XXXL">XXXL</label>
-                                            </div>   
+                                            </div>
 
                                             <div class="custom-control custom-checkbox custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input sizescheck" id="S-M">
@@ -390,13 +368,13 @@
                                             <div class="custom-control custom-checkbox custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input sizescheck" id="M-L">
                                                 <label class="custom-control-label" for="M-L">M/L</label>
-                                            </div>                                          
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-form-label">Описание товара</label>
                                             <div class="row">
                                                 <div class="col-lg-12">
-                                                    <div class="card">                                                        
+                                                    <div class="card">
                                                         <ul class="nav nav-tabs" id="myTab2" role="tablist">
                                                             <li class="nav-item">
                                                                 <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#home1" role="tab" aria-controls="home" aria-selected="true">Русский</a>
@@ -435,14 +413,14 @@
                                                                     </textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>                                                                          
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                          
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-ml-12">
@@ -453,8 +431,8 @@
                                         <div class="loader"></div>
                                     </div>
                                     <div class="card-body">
-                                        <div class="form-group">  
-                                            <label for="example-date-input" class="col-form-label">Изображения</label>                                          
+                                        <div class="form-group">
+                                            <label for="example-date-input" class="col-form-label">Изображения</label>
                                             <div class="custom-file">
                                                 <% if(editMode && tovarData.images[0] !== ""){ %>
                                                 <div class="addEditImage" id="imgOfNews1" style="background-image: url(<%= tovarData.images[0] %>); opacity: 1">
@@ -576,7 +554,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
 
@@ -586,7 +564,7 @@
                             <button type="button" class="btn btn-success mb-2 col-12 disabled" id="saveBTN" onclick="CATALOG.save('<%= tovarData.AI %>')">Сохранить изминения</button>
                             <% }else{ %>
                             <button type="button" class="btn btn-success mb-2 col-12" onclick="CATALOG.add()">Добавить товар</button>
-                            <% } %>                          
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -594,7 +572,7 @@
         </div>
         <%- include ./includes/footer.ejs %>
     </div>
-    <%- include ./includes/offset-area.ejs %> 
+    <%- include ./includes/offset-area.ejs %>
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -636,7 +614,7 @@
             height: 300,
             toolbar: [
                 // [groupName, [list of button]]
-                ['header', ['style']],           
+                ['header', ['style']],
                 ['style', ['bold', 'italic', 'underline', 'clear']],
                 ['font', ["fontname"]],
                 ['fontsize', ['fontsize']],
@@ -648,13 +626,13 @@
                 ['undoreedo', ['undo', 'redo']],
                 ['code',['codeview']]
                 ]
-            });      
+            });
         </script>
         <% if(editMode){ %>
         <script type="text/javascript">
             $("#colorSelect").val("<%= tovarData.color %>");
             $("#categoriesSelect").val("<%= tovarData.categories %>");
-            CATALOG.categoriesselect($("#categoriesSelect"));        
+            CATALOG.categoriesselect($("#categoriesSelect"));
             $("#manSelect").val("<%= tovarData.manufacturer %>");
             $("#tovarCode").val("<%= tovarData.code %>");
             setTimeout(function(){

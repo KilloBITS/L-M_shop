@@ -19,8 +19,8 @@ router.post('/setcolor', function(req, res, next){
 
 			tovar.find().toArray(function(err, resTovar){
 				res.send({code: 500, className: 'nSuccess', message: 'Цвет успешно присвоен!', data: resTovar});
-			});								
-		});	
+			});
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}
@@ -33,12 +33,13 @@ router.post('/getTypesOfCatalog', function(req, res, next){
 			const db = client.db(global.baseName);
 			const menu = db.collection("MENU");
 
-			if(err) return console.log(err);	
+			if(err) return console.log(err);
 
-			menu.find({categories: parseInt(req.body.a)}).toArray(function(err, resMenu){
-				res.send({code: 500, className: 'nSuccess', data:resMenu[0].podlink});
-			});								
-		});	
+			menu.find({index: parseInt(req.body.a)}).toArray(function(err, resMenu){
+				console.log(resMenu)
+				res.send({code: 500, className: 'nSuccess', data: resMenu[0].podlink });
+			});
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}
@@ -57,9 +58,9 @@ router.post('/saveTovar', function(req, res, next){
 			var saveData = req.body.a
 			saveData.categories = parseInt(req.body.a.categories)
 			tovar.updateOne({AI: parseInt(req.body.b)}, {$set: saveData });
-			res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.a.title[0]+' успешно добавлен!'});				
-				
-		});		
+			res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.a.title[0]+' успешно добавлен!'});
+
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}
@@ -73,9 +74,9 @@ router.post('/removeTovar', function(req, res, next){
 
 			if(err) return console.log(err);
 			tovar.remove({AI: parseInt(req.body.a)});
-			res.send({code: 500, className: 'nSuccess', message: 'Товар успешно удален!'});				
-				
-		});		
+			res.send({code: 500, className: 'nSuccess', message: 'Товар успешно удален!'});
+
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}
@@ -94,7 +95,7 @@ router.post('/addTovar', function(req, res, next){
 
 			tovar.find().sort({AI: -1}).limit(1).toArray(function(err, resTov){
 				var DATA = req.body;
-				DATA.AI = (resTov.length === 0)?0:parseInt(resTov[0].AI) + 1;								
+				DATA.AI = (resTov.length === 0)?0:parseInt(resTov[0].AI) + 1;
 				DATA.views = 0;
 				DATA.author = req.session.user;
 				DATA.availability = true;
@@ -103,10 +104,10 @@ router.post('/addTovar', function(req, res, next){
 				DATA.popular = 5;
 				DATA.freeshep = false;
 				DATA.unboxbonus = false;
-				tovar.insertOne(DATA);	
-				res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.title[0]+' успешно добавлен!'});				
-			});		
-		});		
+				tovar.insertOne(DATA);
+				res.send({code: 500, className: 'nSuccess', message: 'Товар '+req.body.title[0]+' успешно добавлен!'});
+			});
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}
@@ -127,19 +128,19 @@ router.post('/addImportFileTovar', function(req, res, next){
 				var currentAI = (resTov.length === 0)?0:parseInt(resTov[0].AI) + 1;
 				for(var i = 0; i < JSONARRAY.ARRAY.length; i++){
 					var DATA = JSONARRAY.ARRAY[i];
-					DATA.AI = currentAI;								
+					DATA.AI = currentAI;
 					DATA.views = 0;
 					DATA.author = req.session.user;
 					DATA.availability = true;
 					DATA.date = global.getDate();
 					DATA.popularUser = 1;
 					DATA.popular = 5;
-					tovar.insertOne(DATA);	
+					tovar.insertOne(DATA);
 					currentAI = currentAI+1
 				}
 				res.send({code: 500, className: 'nSuccess', message: 'Список успешно импортирован!'});
-			});		
-		});		
+			});
+		});
 	}else{
 		res.send({code: 403, className: 'nError', message: 'У вас нет доступа!'})
 	}

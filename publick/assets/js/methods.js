@@ -37,21 +37,21 @@ var getBase64 = function(file){
 
 var rus_to_latin = function(str){
     var ru = {
-        'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 
-        'е': 'e', 'ё': 'e', 'ж': 'j', 'з': 'z', 'и': 'i', 
-        'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o', 
-        'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 
-        'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch', 'ш': 'sh', 
+        'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
+        'е': 'e', 'ё': 'e', 'ж': 'j', 'з': 'z', 'и': 'i',
+        'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o',
+        'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+        'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch', 'ш': 'sh',
         'щ': 'shch', 'ы': 'y', 'э': 'e', 'ю': 'u', 'я': 'ya'
-    }, n_str = [];    
-    str = str.replace(/[ъь]+/g, '').replace(/й/g, 'i');    
+    }, n_str = [];
+    str = str.replace(/[ъь]+/g, '').replace(/й/g, 'i');
     for ( var i = 0; i < str.length; ++i ) {
        n_str.push(
               ru[ str[i] ]
            || ru[ str[i].toLowerCase() ] == undefined && str[i]
            || ru[ str[i].toLowerCase() ].replace(/^(.)/, function ( match ) { return match.toUpperCase() })
        );
-    }    
+    }
     return n_str.join('');
 }
 
@@ -131,7 +131,7 @@ var NEWS = {
 	removenews: function(a){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/setRemoveNews',{a:parseInt(a)}, (res) => {
-			var table = $('#dataTable3').DataTable(); 
+			var table = $('#dataTable3').DataTable();
 			table.clear();
 			for(let i = 0; i < res.data.length; i++){
 				table.row.add( [
@@ -142,7 +142,7 @@ var NEWS = {
 		            '<button type="button" class="btn btn-danger btn-xs mb-3" onclick="NEWS.removenews('+res.data[i].AI+')">Удалить</button>'+
 		            '<a href="/editNews?mode=edit,'+res.data[i].AI+'" target="_blank" class="btn btn-warning btn-xs mb-3">Редактировать</a>'
 		        ] ).draw( false );
-			}			
+			}
 			create_alert(res, false)
 		});
 	},
@@ -221,7 +221,7 @@ var ABOUT = {
 		$.post('/saveAboutText', {
 			a: $('#home .note-editable').html(),
 			b: $('#profile .note-editable').html(),
-			c: $('#contact .note-editable').html() 
+			c: $('#contact .note-editable').html()
 		},(res) => {
 			create_alert(res, false)
 		})
@@ -234,7 +234,7 @@ var TOF = {
 		$.post('/saveTermsOfUseText', {
 			a: $('#home .note-editable').html(),
 			b: $('#profile .note-editable').html(),
-			c: $('#contact .note-editable').html() 
+			c: $('#contact .note-editable').html()
 		},(res) => {
 			create_alert(res, false)
 		})
@@ -247,7 +247,7 @@ var PRIVACEPOLICY = {
 		$.post('/savePrivacePolicyText', {
 			a: $('#home .note-editable').html(),
 			b: $('#profile .note-editable').html(),
-			c: $('#contact .note-editable').html() 
+			c: $('#contact .note-editable').html()
 		},(res) => {
 			create_alert(res, false)
 		})
@@ -259,34 +259,34 @@ var USER = {
 		alert($(e).attr('hide-data'))
 	},
 	updatetable: function(a){
-		var table = $('#dataTable3').DataTable(); 
+		var table = $('#dataTable3').DataTable();
 		table.clear();
 		for(let i = 0; i < a.length; i++){
-			if(a[i].blocked){ 
+			if(a[i].blocked){
             var dolg = '<td class="redBack">Заблокирован</td>'
-            }else{   
-                if(a[i].isAdmin){ 
+            }else{
+                if(a[i].isAdmin){
                 	var dolg = '<td class="redTable youAdmin"><div class="official"></div>Администратор</td>'
-                }else{    
+                }else{
                 	var dolg = '<td class="greenTable">Пользователь</td>'
-                } 
-            } 
+                }
+            }
 
             //parse button
 
-            if(a[i].blocked){ 
+            if(a[i].blocked){
             var blockBtn = '<button type="button" class="btn btn-success btn-xs mb-3" onclick="USER.block('+ a[i].AI +',false)">Разблокировать</button>'
             }else{
             var blockBtn = '<button type="button" class="btn btn-danger btn-xs mb-3" onclick="USER.block('+ a[i].AI +',true)">Заблокировать</button>'
             }
-            
+
             var editBtn = '<button type="button" class="btn btn-warning btn-xs mb-3" onclick="USER.edit('+ a[i].AI +')">Редактировать</button>'
 
             if(a[i].isAdmin){
             var adminBtn = '<button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('+ a[i].AI +',false)">Разжаловать администратора</button>'
             }else{
             var adminBtn = '<button type="button" class="btn btn-secondary btn-xs mb-3" onclick="USER.setadmin('+ a[i].AI +',true)">Назначить администратором</button>'
-            }            
+            }
 
             var deleteBtn = '<button type="button" class="btn btn-dark btn-xs mb-3" onclick="USER.delete('+a[i].AI +')">Удалить</button>'
 
@@ -300,9 +300,9 @@ var USER = {
 	            a[i].LM_COIN,
 	            dolg,
 	            resButtonLine
-	            
+
 	        ] ).draw( false );
-		}			
+		}
 	},
 	block: function(a, b){
 		var checkClick = confirm('Вы действительно хотите заблокировать пользователя ?');
@@ -312,7 +312,7 @@ var USER = {
 				USER.updatetable(res.data);
 				create_alert(res, false)
 			})
-		}		
+		}
 	},
 	edit: function(a){
 		$('.preloaderBlock').fadeIn(100);
@@ -339,7 +339,7 @@ var USER = {
 				USER.updatetable(res.data);
 				create_alert(res, false)
 			})
-		}	
+		}
 	}
 }
 
@@ -348,8 +348,8 @@ var CATALOG = {
 	setcolortovar: function(a,b){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/setcolor',{a:a, b:b}, (res) => {
-			var table = $('#dataTable3').DataTable(); 
-			table.clear();			
+			var table = $('#dataTable3').DataTable();
+			table.clear();
 			for(let i = 0; i < res.data.length; i++){
 				if(res.data[i].sale[0] === 'true'){
 	                var btn1 = '<strike>'+res.data[i].price +' ГРН</strike><b class="blink" style="color: red">'+ parseInt(res.data[i].price - res.data[i].price / 100 * parseInt(res.data[i].sale[1]))+' Грн</b>'
@@ -359,7 +359,7 @@ var CATALOG = {
 	            var colorBtn = '<div class="dropdown col-lg-6 col-md-4 col-sm-6">'+
 	                '<button class="btn btn-light dropdown-toggle" style="background-color:'+res.data[i].color+' " type="button" data-toggle="dropdown" aria-expanded="false">'+
 	                res.data[i].color+
-	                '</button>'+             
+	                '</button>'+
 	            '</div>'
 				table.row.add( [
 		            res.data[i].AI,
@@ -371,7 +371,7 @@ var CATALOG = {
 		            colorBtn,
 		            res.data[i].author,
 		            res.data[i].code,
-		            'Данные временно недоступны',		            
+		            'Данные временно недоступны',
 		           	'<button type="button" class="btn btn-danger btn-xs mb-3" onclick="CATALOG.remove("'+ res.data[i].AI +'")">Удалить</button>',
 		           	'<a href="/editTovar?mode=edit,'+ res.data[i].AI +'" class="btn btn-warning btn-xs mb-3">Редактировать</a>'
 		        ] ).draw( false );
@@ -401,13 +401,18 @@ var CATALOG = {
 	categoriesselect: function(e){
 		$('.miniloader').show();
 		var value = $(e).val();
-		$.post('/getTypesOfCatalog',{a:value},(res) => {
+		if(value !== null){
+			$.post('/getTypesOfCatalog',{a:value},(res) => {
+				$('#typeSelect,#typeSelectImport').empty()
+				for(let i = 0; i < res.data.length; i++){
+					$('#typeSelect, #typeSelectImport').append(new Option(res.data[i].pname[0], res.data[i].plink.split(',')[1].split('&')[0]));
+				}
+				$('.miniloader').hide();
+			});
+		}else{
 			$('#typeSelect,#typeSelectImport').empty()
-			for(let i = 0; i < res.data.length; i++){
-				$('#typeSelect,#typeSelectImport').append(new Option(res.data[i].pname[0], res.data[i].plink.split(',')[1].split('&')[0]));
-			}	
-			$('.miniloader').hide();		
-		});
+		}
+
 	},
 	sizeclick: function(e){
 		SIZESARRAY = [];
@@ -455,7 +460,7 @@ var CATALOG = {
 		$.post('/saveTovar',{a:CATALOG.parsedata(), b:a}, (res) => {
 			create_alert(res, false);
 		})
-	},	
+	},
 	remove: function(a){
 		$('.preloaderBlock').fadeIn(100);
 		$.post('/removeTovar',{a:a}, (res) => {
@@ -474,27 +479,27 @@ var CATALOG = {
 	},
 	TOVAR_ARRAY: {ARRAY:[]},
 	fileimport: function(input){
-		var fileTypes = ['xml', 'json'];  
+		var fileTypes = ['xml', 'json'];
 	 	if (input.files && input.files[0]) {
 	        var extension = input.files[0].name.split('.').pop().toLowerCase(),  //file extension from input file
 	            isSuccess = fileTypes.indexOf(extension) > -1;  //is extension in acceptable types
 	            console.log(extension);
 	        if (isSuccess) { //yes
 	            var reader = new FileReader();
-	            reader.onload = function (e) {	            	
+	            reader.onload = function (e) {
 	            	if(extension === 'xml'){
 	            		var OPENED_XML = new DOMParser().parseFromString(reader.result, 'text/xml');
 	            		JSON_FILE = xmlToJson(OPENED_XML);
 	            		console.log(JSON_FILE)
 	            		if(JSON_FILE.yml_catalog.shop.company === 'Berezkashop'){
 	            			var tovarList = JSON_FILE.yml_catalog.shop.offers.offer;
-	            			for(var i = 0; i < tovarList.length; i++){	
+	            			for(var i = 0; i < tovarList.length; i++){
 	            				if(tovarList[i].vendorCode.length <= 4){
 	            					if(Array.isArray(tovarList[i].picture)){
 		            					var arrayimages = tovarList[i].picture;
 		            				}else{
 		            					var arrayimages = [tovarList[i].picture];
-		            				}           				
+		            				}
 		            				var tovardata = {
 										title: [
 											tovarList[i].name,
@@ -518,8 +523,8 @@ var CATALOG = {
 										sale: [false, 0],
 										manufacturer: $('#manSelectImport').val()//tovarList[i].vendor,
 									}
-									CATALOG.TOVAR_ARRAY.ARRAY.push(tovardata);	  
-	            				}	            				          				
+									CATALOG.TOVAR_ARRAY.ARRAY.push(tovardata);
+	            				}
 	            			}
 	            		}
 	            	} else if(extension === 'json'){
@@ -529,7 +534,7 @@ var CATALOG = {
 	            		console.warn('неподдерживаемый формат файла')
 	            	}
 	            }
-	            reader.readAsText(input.files[0]);		        
+	            reader.readAsText(input.files[0]);
 	        }
 	        else { //no
 	        	console.warn('Ошибка загрузки файла');
@@ -552,11 +557,12 @@ var MENU = {
 		$(".preloaderBlock,#datatabletype").show();
 		$("#createType").hide();
 		$( ".checkradio" ).prop( "checked", false );
-		$( ".checkradio:eq("+a+")" ).prop( "checked", true );	
+		$( ".checkradio:eq("+a+")" ).prop( "checked", true );
 		if(b){
 			$.post('/gettypes',{a:c}, (res) => {
 				MENU.PODLINK = res.data.podlink;
 				MENU.CATEGORIES = res.data.categories;
+				MENU.INDEX = res.data.index;
 				$("#typestable tbody").empty();
 				if(res.data.podlink[0] === '/'){
 					$("#typestable tbody").empty().append('<td class="bg-danger">В данной категории нету типов</td><td class="bg-danger">В данной категории нету типов</td><td class="bg-danger">В данной категории нету типов</td>!');
@@ -571,16 +577,16 @@ var MENU = {
 							'</tr>'
 						);
 					}
-				}				
-				$("#createType").show();				
+				}
+				$("#createType").show();
 				$(".preloaderBlock").hide();
-			});	
+			});
 		}else{
 			$("#typestable tbody").empty().append('<td class="bg-danger">В данной категорие нету типов</td><td class="bg-danger">В данной категорие нету типов</td><td class="bg-danger">В данной категорие нету типов</td>!');
 			$("#createType,#datatabletype").hide();
 			$("#setting").hide(300);
 			$(".preloaderBlock").hide();
-		}			
+		}
 	},
 	clicktype: function(a){
 		$("#name-RU").val(MENU.PODLINK[a].pname[0]);
@@ -593,7 +599,7 @@ var MENU = {
 	},
 	keyrusup: function(){
 		$('#types-new').val(rus_to_latin($("#pname-RU-new").val().toLowerCase()));
-		$('#plink-new').val('/shop?c='+MENU.CATEGORIES+','+rus_to_latin($("#pname-RU-new").val().toLowerCase())+'&page=1');
+		$('#plink-new').val('/shop?c='+MENU.INDEX+','+rus_to_latin($("#pname-RU-new").val().toLowerCase())+'&page=1');
 	},
 	saveeditpodlink: function(){
 		var PL = {
