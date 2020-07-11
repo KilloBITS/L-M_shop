@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
-router.get('/', function(req, res, next){
-  mongoClient.connect(global.baseIP, function(err, client){
+router.get('/', function (req, res, next) {
+  mongoClient.connect(global.baseIP, function (err, client) {
     const db = client.db(global.baseName);
     const config = db.collection("CONFIG");
     const locale = db.collection("LOCALE");
@@ -14,30 +14,30 @@ router.get('/', function(req, res, next){
     const discounts = db.collection("DISCOUNTS");
     const pad = db.collection("PAYMENTANDDELIVERY");
 
-    if(err) return console.log(err);
+    if (err) return console.log(err);
 
-    config.find().toArray(function(err, resConfig){
-      locale.find().toArray(function(err, resLocale){
-        users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
-          menu.find().sort({isEnded: 1}).toArray(function(err, resMenu){
-            contacts.find().toArray(function(err, resContacts){
-              pad.find().toArray(function(err, resPad){
-                global.visitors(req);
-                res.render('pages/map.ejs',{
+    config.find().toArray(function (err, resConfig) {
+      locale.find().toArray(function (err, resLocale) {
+        users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
+          menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+            contacts.find().toArray(function (err, resContacts) {
+              pad.find().toArray(function (err, resPad) {
+                let languageNumber = global.parseNumLang(req);
+                res.render('pages/map.ejs', {
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
-                  locale: resLocale[0][global.parseLanguage(req)].payment,
+                  locale: resLocale[languageNumber].payment,
                   menu: resMenu,
-                  globalLocale:  resLocale[0][global.parseLanguage(req)],
+                  globalLocale: resLocale[languageNumber],
                   contacts: resContacts[0],
-                  numLang: global.parseNumLang(req),
+                  numLang: languageNumber,
                   config: resConfig[0]
                 });
               });
             });
-          }); 
-        }); 
-      }); 
+          });
+        });
+      });
     });
   });
 });

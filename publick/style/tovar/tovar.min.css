@@ -12,6 +12,18 @@
     display: none;
   }
 
+  .filters{
+    position: fixed;
+    z-index: 21;
+    left: 0;
+    background-color: white;
+    padding: 10px 5px;
+    top: 61px;
+    overflow-y: scroll;
+    height: calc(100% - 61px);
+    max-width: 260px;
+  }
+
   .topNavMobMenuOfBtm{
     display: block;
     position: absolute;

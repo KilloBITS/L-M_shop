@@ -34,15 +34,15 @@ router.get('/', function(req, res, next){
                       console.log(resPayments)
                       tovar.find( { AI: { $in: resUsers[0].desires } }).toArray(function(err, resDesires ){
                         config.find().toArray(function(err, resConfig ){
-                          global.visitors(req);
+                          let languageNumber = global.parseNumLang(req);
                           res.render('pages/account.ejs',{
                             isAdm: req.session.admin,
                             sessionUser: resUsers[0],
-                            locale: resLocale[0][global.parseLanguage(req)].profile,
+                            locale: resLocale[languageNumber].profile,
                             menu: resMenu,
-                            globalLocale:  resLocale[0][global.parseLanguage(req)],
+                            globalLocale:  resLocale[languageNumber],
                             contacts: resContacts[0],
-                            numLang: global.parseNumLang(req),
+                            numLang: languageNumber,
                             payments_user: resPayments,
                             desires_user: resDesires,
                             config: resConfig[0]      

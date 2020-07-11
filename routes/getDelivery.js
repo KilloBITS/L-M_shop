@@ -17,20 +17,20 @@ router.get('/*', function(req, res, next){
     if(err) return console.log(err);
 
     locale.find().toArray(function(err, resLocale){
-      users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
+      users.find({email: (req.session.user === undefined)?null:req.session.user}).toArray(function(err, resUsers){
         menu.find().sort({isEnded: 1}).toArray(function(err, resMenu){
           payments.find({id: DA}).toArray(function(err, resPayments){              
             contacts.find().toArray(function(err, resContacts){
               config.find().toArray(function(err, resConfig){
-                global.visitors(req);
+                let languageNumber = global.parseNumLang(req);
                 res.render('pages/delivery.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
-                  locale: resLocale[0][global.parseLanguage(req)].index,
+                  locale: resLocale[languageNumber].index,
                   menu: resMenu,
-                  globalLocale:  resLocale[0][global.parseLanguage(req)],
+                  globalLocale:  resLocale[languageNumber],
                   contacts: resContacts[0],
-                  numLang: global.parseNumLang(req),
+                  numLang: languageNumber,
                   data: resPayments[0],
                   config: resConfig[0],
                 });                    

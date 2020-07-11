@@ -214,7 +214,6 @@
     <div class="insta_logo"  data-ix="scale-on-scroll">
       <span><%= locale.myinsta %></span>
     </div>
-    <h3><%= locale.reviews %></h3>
     <div class="carouselInsta">
       <div class="carousel__nav">
        <span id="moveLeft" class="carousel__arrow">
@@ -276,17 +275,14 @@
     </div>
     <% } %>    
     <% if(news.length >= 1){ %>
-    <% if(news.length === 1){ var newWidth = '100%' } %>
-    <% if(news.length === 2){ var newWidth = '50%' } %>
-    <% if(news.length >= 3){ var newWidth = '33%' } %>
     <% for(var i = 0; i < news.length; i++) { %>      
-    <div class="column post" data-ix="scale-on-scroll" style="width: <%= newWidth %>">
+    <div class="column post" data-ix="scale-on-scroll">
       <div class="post-module">
         <div class="thumbnail">
           <div class="date">
             <div class="day"><%= news[i].date %></div>
           </div>
-          <img src="../../../data/news/<%= news[i].logo %>"/>
+          <img src="<%= news[i].logo %>"/>
         </div>
         <div class="post-content">
           <h1 class="title"><%= news[i].title[numLang] %></h1>

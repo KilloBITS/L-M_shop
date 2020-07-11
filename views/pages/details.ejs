@@ -193,78 +193,87 @@
         </div>
       </div>
       <div class="column-xs-12 column-md-6" id="infooftovar">
-        <h1><%= tovarArr.title[numLang] %></h1>
-        <% if(tovarArr.sale[0] === 'true'){ %>
-        <h2 style="text-decoration: line-through"  class="oldPrice">Старая цена: <%= tovarArr.price %> Грн</h2>
-        <h3 style="color: red" class="salePrice">Новая цена: <%= parseInt(tovarArr.price - tovarArr.price / 100 * parseInt(tovarArr.sale[1])) %> Грн</h3>
-        <% } else { %>
-        <h2><%= tovarArr.price %> Грн</h2>
-        <% } %>
-
-        <div class="description">
-          <div class="sizeOfTovar">
-            <div class="selectSize">
-              <% if(tovarArr.sizes !== undefined && tovarArr.sizes !== null){ %>
-              <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
-              <% if(iS === 0){ %>
-              <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
-              <% }else{%>
-              <div class="sizeBTN"><%= tovarArr.size[iS] %></div>
-              <% } %>
-
-              <% } %>
+          <div class="tovat-column-block-data">
+            <div class="info-tovar-title">
+              <h1><%= tovarArr.title[numLang] %></h1>
+              <% if(tovarArr.sale[0] === 'true'){ %>
+              <h2 style="text-decoration: line-through"  class="oldPrice">Старая цена: <%= tovarArr.price %> Грн</h2>
+              <h3 style="color: red" class="salePrice">Новая цена: <%= parseInt(tovarArr.price - tovarArr.price / 100 * parseInt(tovarArr.sale[1])) %> Грн</h3>
               <% } else { %>
-              <div class="sizeBTN size_a">Все размеры</div>
+              <h2><%= tovarArr.price %> Грн</h2>
               <% } %>
             </div>
-            <div class="btnTableSizes">Таблица размеров</div>
+    
+            <div class="description">
+              <div class="sizeOfTovar">
+                <div class="selectSize">
+                  <% if(tovarArr.sizes !== undefined && tovarArr.sizes !== null){ %>
+                  <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
+                  <% if(iS === 0){ %>
+                  <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
+                  <% }else{%>
+                  <div class="sizeBTN"><%= tovarArr.size[iS] %></div>
+                  <% } %>
+    
+                  <% } %>
+                  <% } else { %>
+                  <div class="sizeBTN size_a">Все размеры</div>
+                  <% } %>
+                </div>
+                <div class="btnTableSizes">Таблица размеров</div>
+              </div>
+              <% if(tovarArr.manufacturer !== 'Мой товар'){ %>
+              <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact.find(x => x.index === parseInt(tovarArr.manufacturer)).title  %></span></div>
+              <% }else{ %>
+    
+              <% } %>
+              <div class="text_line" id="CODETOVAR">Код товара: <%= tovarArr.code %></div>
+              <div class="text_line" id="OPISANIE">Описание:</div>
+              <div class="noneText"><%= tovarArr.text[numLang] %></div>
+              <script type="text/javascript">
+                $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
+              </script>
           </div>
-          <% if(tovarArr.manufacturer !== 'Мой товар'){ %>
-          <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact.find(x => x.index === parseInt(tovarArr.manufacturer)).title  %></span></div>
-          <% }else{ %>
-
-          <% } %>
-          <div class="text_line" id="CODETOVAR">Код товара: <%= tovarArr.code %></div>
-          <div class="text_line" id="OPISANIE">Описание:</div>
-          <div class="noneText"><%= tovarArr.text[numLang] %></div>
-          <script type="text/javascript">
-            $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
-          </script>          
-          <% if(tovarArr.unboxbonus && tovarArr.freeshep){ %>
-          <div class="text_line" id="BONUS">Дополнительно:</div>
-          <div class="text_line" id="BONUSBLOCK">
-            <% if(tovarArr.unboxbonus){ %>
-            <div class="text_line inline">
-              <img src="../../../image/bonus.png" style="max-height: 60px">
-            </div>
-            <% } %>           
-
-            <% if(tovarArr.freeshep){ %>
-            <div class="text_line inline">
-              <img src="../../../image/freeshiping.png" style="max-height: 60px">
-            </div>
-            <% } %>
-          </div>
-          <% } %> 
-          <% if(tovarArr.color.charAt(0) === '#'){ %>
-          <% var currentColor = tovarArr.color %>
-          <% }else if(tovarArr.color === 'Звериный' || tovarArr.color === 'Цветы'){ %>
-          <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
-          <% }else{ %>
-          <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
-          <% } %>
-          <div class="TovarColorBlock">
-            <div class="colorBtn select" style="background: <%= currentColor %>"></div>
-          </div>          
-          <div class="LengthOfBalset">
-            <div class="number-choice">
-              <button type="button" onclick="minusLength()"><i class="fa fa-minus" aria-hidden="true"></i></button>
-              <p class="current-amount">1</p>
-              <button type="button" onclick="plusLength()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            </div>
-          </div>      
-          <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
+          
         </div>
+
+        <div class="tovat-column-block-data">
+          <% if(tovarArr.unboxbonus && tovarArr.freeshep){ %>
+            <div class="text_line" id="BONUS">Дополнительно:</div>
+            <div class="text_line" id="BONUSBLOCK">
+              <% if(tovarArr.unboxbonus){ %>
+              <div class="text_line inline">
+                <img src="../../../image/bonus.png" style="max-height: 60px">
+              </div>
+              <% } %>           
+  
+              <% if(tovarArr.freeshep){ %>
+              <div class="text_line inline">
+                <img src="../../../image/freeshiping.png" style="max-height: 60px">
+              </div>
+              <% } %>
+            </div>
+            <% } %> 
+            <% if(tovarArr.color.charAt(0) === '#'){ %>
+            <% var currentColor = tovarArr.color %>
+            <% }else if(tovarArr.color === 'Звериный' || tovarArr.color === 'Цветы'){ %>
+            <% var currentColor = 'url(' + config.colorTable.find(x => x.name === tovarArr.color).code + ')' %>          
+            <% }else{ %>
+            <% var currentColor = config.colorTable.find(x => x.name === tovarArr.color).code %>
+            <% } %>
+            <div class="TovarColorBlock">
+              <div class="colorBtn select" style="background: <%= currentColor %>"></div>
+            </div>          
+            <div class="LengthOfBalset">
+              <div class="number-choice">
+                <button type="button" onclick="minusLength()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <p class="current-amount">1</p>
+                <button type="button" onclick="plusLength()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+              </div>
+            </div>      
+            <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
+        </div>
+
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <div class="wrapper">
           <ul style="float: right;">

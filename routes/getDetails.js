@@ -10,11 +10,11 @@ function randomInteger(min, max) {
   return rand;
 }
 
-router.get('/*', function(req, res, next){
+router.get('/*', function (req, res, next) {
   var DA = req.url.split('=');
   var searchData = DA[1].split('&');
 
-  mongoClient.connect(global.baseIP, function(err, client){
+  mongoClient.connect(global.baseIP, function (err, client) {
     const db = client.db(global.baseName);
     const locale = db.collection("LOCALE");
     const users = db.collection("USERS");
@@ -24,38 +24,38 @@ router.get('/*', function(req, res, next){
     const contacts = db.collection("CONTACTS");
     const config = db.collection("CONFIG");
     const manufactures = db.collection("MANUFACTURERS");
-    
-    if(err) return console.log(err);
 
-    locale.find().toArray(function(err, resLocale){
-      users.find({email: (req.session.user === undefined)?false:req.session.user}).toArray(function(err, resUsers){
-        menu.find().sort({isEnded: 1}).toArray(function(err, resMenu){
-          tovar.aggregate([{$sample: {size: 3}}]).toArray(function(err, recomendedTov) {
-            tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function(err, resTovar){
-              tovar.find({ color: resTovar[0].color, type: resTovar[0].type }).toArray(function(err, similarTov) {
+    if (err) return console.log(err);
+
+    locale.find().toArray(function (err, resLocale) {
+      users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
+        menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+          tovar.aggregate([{ $sample: { size: 3 } }]).toArray(function (err, recomendedTov) {
+            tovar.find({ AI: parseInt(searchData[0]), type: searchData[1] }).toArray(function (err, resTovar) {
+              tovar.find({ color: resTovar[0].color, type: resTovar[0].type }).toArray(function (err, similarTov) {
                 var NewSimilar = [];
-                if(similarTov.length >= 3){
+                if (similarTov.length >= 3) {
                   var maxLenSim = 3
-                }else{
+                } else {
                   var maxLenSim = similarTov.length
                 }
-                for(var mr = 0; mr < maxLenSim; mr++ ){
+                for (var mr = 0; mr < maxLenSim; mr++) {
                   NewSimilar.push(similarTov[randomInteger(0, similarTov.length)]);
                 }
-                config.find().toArray(function(err, resConfig){
-                  news.find().toArray(function(err, resNews){
-                    contacts.find().toArray(function(err, resContacts){                  
-                      manufactures.find().toArray(function(err, resManufactures){  
-                        global.visitors(req);
-                        res.render('pages/details.ejs',{
+                config.find().toArray(function (err, resConfig) {
+                  news.find().toArray(function (err, resNews) {
+                    contacts.find().toArray(function (err, resContacts) {
+                      manufactures.find().toArray(function (err, resManufactures) {
+                        let languageNumber = global.parseNumLang(req);
+                        res.render('pages/details.ejs', {
                           isAdm: req.session.admin,
                           sessionUser: resUsers[0],
-                          locale: resLocale[0][global.parseLanguage(req)].details,
+                          locale: resLocale[languageNumber].details,
                           menu: resMenu,
-                          globalLocale:  resLocale[0][global.parseLanguage(req)],
+                          globalLocale: resLocale[languageNumber],
                           contacts: resContacts[0],
-                          numLang: global.parseNumLang(req),
-                          tovarArr: resTovar[0],                    
+                          numLang: languageNumber,
+                          tovarArr: resTovar[0],
                           config: resConfig[0],
                           rec: recomendedTov,
                           manufact: resManufactures,
@@ -69,8 +69,8 @@ router.get('/*', function(req, res, next){
               });
             });
           });
-        }); 
-      }); 
+        });
+      });
     });
   });
 });

@@ -17,7 +17,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true,
   store: new MongoStore({
-    url: 'mongodb://localhost:27017/SHOP_DB'
+    url: 'mongodb://localhost:27017/SHOP'
   }),
   cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
@@ -258,15 +258,15 @@ app.get('/logout', function(req, res) {
 app.get('*', get404);
 
 
-var options = {
-  key: fs.readFileSync('./ssl/apache-selfsigned.key'),
-  cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
-};
+// var options = {
+//   key: fs.readFileSync('./ssl/apache-selfsigned.key'),
+//   cert: fs.readFileSync('./ssl/apache-selfsigned.crt')
+// };
 
-https.createServer(options, app).listen(443);
+// https.createServer(options, app).listen(443);
 
 app.listen(80, function(){
-  global.baseName = 'SHOP_DB';
+  global.baseName = 'SHOP';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
   // require('./controllers/telegram/telegaBOT');

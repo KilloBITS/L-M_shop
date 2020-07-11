@@ -626,6 +626,7 @@ var MENU = {
 		};
 		$.post('/addcategory',NC , (res) => {
 			create_alert(res, false);
+			$('#newCategoryModal').modal('hide');
 			$('.single-table:eq(0)').load(document.URL +  ' .single-table:eq(0)');
 		});
 	},
@@ -641,6 +642,9 @@ var MENU = {
 		};
 		$.post('/addtype',{a:NT, b: MENU.CATEGORIES }, (res) => {
 			create_alert(res, false);
+			$('#newTypeModal').modal('hide');
+			$('.single-table:eq(1)').load(document.URL +  ' .single-table:eq(1)');
+			
 		});
 	},
 	removecategory: function(a){

@@ -1,1 +1,73 @@
-{"_id":{"$oid":"5bbf6af459b2ab09dc96789b"},"slideName":["Сделать предзаказ","зробити попереднє замовлення","Pre-order"],"slideImage":"1.jpg","slideLink":"https://www.instagram.com/ladyman_store/","voting":false,"isBtn":true,"options":["Хочу","Не уверен","Не хочу"],"results":["0","0","0"]}
+[{
+  "_id": {
+    "$oid": "5bbf6af459b2ab09dc96789b"
+  },
+  "slideName": [
+    "Сделать предзаказ",
+    "зробити попереднє замовлення",
+    "Pre-order"
+  ],
+  "slideImage": "1.png",
+  "slideLink": "https://www.instagram.com/ladyman_store/",
+  "voting": false,
+  "isBtn": true,
+  "options": [
+    "Хочу",
+    "Не уверен",
+    "Не хочу"
+  ],
+  "results": [
+    "0",
+    "0",
+    "0"
+  ],
+  "AI": 0
+},{
+  "_id": {
+    "$oid": "5f006ca838aa8714f02c2b94"
+  },
+  "slideName": [
+    "Сделать предзаказ",
+    "зробити попереднє замовлення",
+    "Pre-order"
+  ],
+  "slideImage": "2.png",
+  "slideLink": "https://www.instagram.com/ladyman_store/",
+  "voting": false,
+  "isBtn": true,
+  "options": [
+    "Хочу",
+    "Не уверен",
+    "Не хочу"
+  ],
+  "results": [
+    "0",
+    "0",
+    "0"
+  ],
+  "AI": 1
+},{
+  "_id": {
+    "$oid": "5f006cb838aa8714f02c2b95"
+  },
+  "slideName": [
+    "Сделать предзаказ",
+    "зробити попереднє замовлення",
+    "Pre-order"
+  ],
+  "slideImage": "3.png",
+  "slideLink": "https://www.instagram.com/ladyman_store/",
+  "voting": false,
+  "isBtn": true,
+  "options": [
+    "Хочу",
+    "Не уверен",
+    "Не хочу"
+  ],
+  "results": [
+    "0",
+    "0",
+    "0"
+  ],
+  "AI": 2
+}]

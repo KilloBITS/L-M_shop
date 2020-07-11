@@ -821,6 +821,10 @@ form textarea {
   transition: all 0.3s linear 0s;
 }
 
+.post-module .thumbnail{
+  border: none;
+}
+
 .post-module:hover, .hover {
   -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
@@ -837,7 +841,7 @@ form textarea {
 .post-module .thumbnail {
   background: #ffffff;
   overflow: hidden;
-  height: 245px;
+  height: 250px;
 }
 
 .post-module .thumbnail .date {
@@ -846,12 +850,12 @@ form textarea {
   right: 1px;
   z-index: 1;
   background: rgba(255, 0, 0, 0.76);
-  width: 55px;
-  height: 55px;
+  width: 100px;
+  height: 32px;
   padding: 5.5px 0;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  border-radius: 0px 3px 0px 20px;
+  border-radius: 0px 3px 0px 3px;
   color: #FFFFFF;
   font-weight: 700;
   text-align: center;
@@ -871,7 +875,7 @@ form textarea {
 
 .post-module .thumbnail img {
   display: block;
-  width: 120%;
+  width: 100%;
   -webkit-transition: all 0.3s linear 0s;
   -moz-transition: all 0.3s linear 0s;
   -ms-transition: all 0.3s linear 0s;
@@ -979,10 +983,12 @@ form textarea {
 
 .container {
   max-width: 800px;
-  /* min-width: 640px; */
   margin: 0 auto;
   width: fit-content;
   width: -webkit-fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container:before, .container:after {

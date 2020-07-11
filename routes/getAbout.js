@@ -20,16 +20,16 @@ router.get('/', function(req, res, next){
           menu.find().sort({isEnded: 1}).toArray(function(err, resMenu){
             contacts.find().toArray(function(err, resContacts){
               parrtners.find().toArray(function(err, resPartners){
-                global.visitors(req);
+                let languageNumber = global.parseNumLang(req);
                 res.render('pages/about.ejs',{
                   isAdm: req.session.admin,
                   sessionUser: resUsers[0],
-                  locale: resLocale[0][global.parseLanguage(req)].about,
+                  locale: resLocale[languageNumber].about,
                   menu: resMenu,
-                  globalLocale:  resLocale[0][global.parseLanguage(req)],
+                  globalLocale:  resLocale[languageNumber],
                   contacts: resContacts[0],
                   partners: resPartners,
-                  numLang: global.parseNumLang(req),
+                  numLang: languageNumber,
                   config: resConfig[0],
                 });
               });

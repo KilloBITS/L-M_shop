@@ -488,11 +488,9 @@
 }
 
 .notify-title a {
-    float: right;
     display: inline-block;
     color: #ffee1d;
     font-size: 13px;
-    text-decoration: underline;
 }
 
 .nofity-list {

@@ -4,7 +4,6 @@ const router = express.Router();
 const mongoClient = require("mongodb").MongoClient;
 
 router.get('*', function(req, res, next){
-	global.visitors();
 	res.render('pages/404.ejs',{
 		isAdm: req.session.admin
 	})

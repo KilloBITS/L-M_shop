@@ -5,6 +5,11 @@
 		<li>
 			<a href="/profile" title="<%= locale.profile %>">Профиль</a>
 		</li>
+		<% if(sessionUser !== undefined){ %>
+		<li>
+			<a href="/index-panel" title="<%= locale.profile %>">Панель управления</a>
+		</li>
+		<% } %>
 		<li>
 			<a href="/logout" title="<%= locale.profile %>">Выход</a>
 		</li>
