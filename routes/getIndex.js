@@ -23,6 +23,7 @@ router.get('/', function (req, res, next) {
 
     if (err) return console.log(err);
     locale.find().toArray(function (err, resLocale) {
+
       users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
         menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
           mainslide.find().toArray(function (err, resMainslide) {
@@ -32,15 +33,14 @@ router.get('/', function (req, res, next) {
                   config.find().toArray(function (err, resConfig) {
                     reviews.find().limit(20).toArray(function (err, resReviews) {
                       let languageNumber = global.parseNumLang(req);
-                      console.log(languageNumber)
                       res.render('pages/index.ejs', {
                         isAdm: req.session.admin,
                         sessionUser: resUsers[0],
-                        locale: resLocale[0].index,
+                        locale: resLocale[languageNumber].index,
                         menu: resMenu,
-                        globalLocale: resLocale[0],
+                        globalLocale: resLocale[languageNumber],
                         contacts: resContacts[0],
-                        numLang: 0,
+                        numLang: languageNumber,
                         /*Только для индекса*/
                         slides: resMainslide,
                         newtovar: resTovar,
