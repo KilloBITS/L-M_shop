@@ -179,6 +179,10 @@ app.post('/getbasket', getbasket);
 const auth = require('./controllers/controllerAuthification');
 app.post('/auth', auth);
 
+const login_google = require('./controllers/controllerGoogle');
+app.get('/get/login/google', login_google);
+
+
 const create_accaunt = require('./controllers/controllerAuthification');
 app.post('/create_accaunt', create_accaunt);
 

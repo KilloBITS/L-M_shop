@@ -1,1 +1,15 @@
-{"_id":{"$oid":"5c8a5bb71a769e415c9e386a"},"index":{"$numberInt":"1"},"title":"BEREZKA","site":"https://berezkashop.in.ua/"}
+[{
+  "_id": {
+    "$oid": "5c8a5bb71a769e415c9e386a"
+  },
+  "index": 1,
+  "title": "BEREZKA",
+  "site": "https://berezkashop.in.ua/"
+},{
+  "_id": {
+    "$oid": "5f0d9a86634f8a16d8e13648"
+  },
+  "index": 2,
+  "title": "AGER",
+  "site": "https://ager.ua/login/"
+}]

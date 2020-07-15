@@ -34,6 +34,36 @@
   "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4MS44IDQ4MS44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0ODEuOCA0ODEuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBkPSJNMzg0Ljc1OSwyMTMuNmMtNC43LTMuNy00Ni4yLTQ5LjQtNjkuNy03MC43Yy0wLjEtMC4xLTAuMS0wLjEtMC4xLTAuMlY0NC4zYzAtMjQuNC0xOS45LTQ0LjMtNDQuMy00NC4zaC0xNDUuMSAgICAgYy0yMi43LDAtNDEuMiwxOC42LTQxLjIsNDEuMlYyNzJjMCwyNC40LDE5LjksNDQuMyw0NC4zLDQ0LjNoNDIuMmgxMC43YzEuOCwwLDMuMy0xLjYsMy4xLTMuNGwtMi4zLTE5LjYgICAgIGMtMC4yLTEuNi0xLjUtMi43LTMuMS0yLjdoLTMuOWgtMi40Yy0xLjcsMC0zLjEtMS40LTMuMS0zLjFWMjUuM2MwLTEuNywxLjQtMy4xLDMuMS0zLjFoOThjOS45LDAsMTgsOC4xLDE4LDE4djIxNC4ydjIxLjEgICAgIGMwLDYuOC00LjcsMTIuNi0xMSwxNC40Yy0wLjEsMC0wLjEsMC0wLjIsMGMtMTAuNy01LjgtMjMuMy0zMC42LTI1LjItMzQuNWMtMC4yLTAuMy0wLjMtMC43LTAuMy0xYy0wLjctNi4zLTcuOC02Ny4zLTQwLjMtNjcuMyAgICAgYy0wLjksMC0xLjgsMC0yLjcsMC4xYzAsMC0yNiwyLjItNC41LDc2LjNjMCwwLjIsMC4xLDAuMywwLjEsMC41bDkuNSw4Mi4xYzAsMC4xLDAsMC4yLDAuMSwwLjRjMC44LDMuMSwxMS42LDQ1LDM5LjUsNzQuNyAgICAgYzAuNSwwLjYsMC44LDEuMywwLjgsMi4xdjcuMWMwLDAuMi0wLjEsMC4zLTAuMywwLjNoLTIuNWMtNi4xLDAtMTEuMSw1LTExLjEsMTEuMXYyOC45YzAsNi4xLDUsMTEuMSwxMS4xLDExLjFoMTE3LjcgICAgIGM2LjEsMCwxMS4xLTUsMTEuMS0xMS4xVjQ0MmMwLTYuMS01LTExLjEtMTEuMS0xMS4xYy0wLjIsMC0wLjMtMC4xLTAuMy0wLjNjMy45LTM2LjIsMTcuOS0xNjAsMjUuNC0xNjkuN2MwLjItMC4zLDAuNC0wLjYsMC41LTEgICAgIEMzOTYuNTU5LDI1NS40LDQwMy4wNTksMjI3LjksMzg0Ljc1OSwyMTMuNnogTTEzMC42NTksMjg3LjdjMCwxLjYtMS4zLDIuOC0yLjgsMi44Yy05LjgsMC0xNy44LTgtMTcuOC0xNy44VjQwICAgICBjMC05LjgsOC0xNy44LDE3LjgtMTcuOGMxLjYsMCwyLjgsMS4zLDIuOCwyLjhWMjg3Ljd6IiBmaWxsPSIjZWJiMWM5Ii8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
 },{
   "_id": {
+    "$oid": "5f0d96d2fbc53763193074f7"
+  },
+  "name": [
+    "ЖЕНСКАЯ ОДЕЖДА",
+    "ЖІНОЧИЙ ОДЯГ"
+  ],
+  "glink": "/shop?c=7&page=1",
+  "index": 7,
+  "edited": true,
+  "categories": 1,
+  "podlink": [
+    {
+      "pname": [
+        "Верхняя одежда",
+        "Верхній одяг"
+      ],
+      "plink": "/shop?c=7,verhnyaya_odejda&page=1",
+      "types": "verhnyaya_odejda"
+    },
+    {
+      "pname": [
+        "Женские блузы",
+        "Жіночі блузи"
+      ],
+      "plink": "/shop?c=7,jenskie bluzy&page=1",
+      "types": "jenskie bluzy"
+    }
+  ]
+},{
+  "_id": {
     "$oid": "5bbf2447ca83c509dcc8cd35"
   },
   "name": [

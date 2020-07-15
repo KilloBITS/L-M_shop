@@ -1,4 +1,3 @@
-'use strict';
 var ML = "";
 var Global = {
   changeTypeDost: function(t){

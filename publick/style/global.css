@@ -3068,12 +3068,18 @@ a:focus, a:hover {
   display: none;
 }
 
+.DLG-data-block{
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+}
 
 .mainDLG {
   width: 100%;
   font-family: 'Didact Gothic', sans-serif;
-  'Didact Gothic', sans-serif;
 }
+
 
 .mainTitleDLG, .mainTextDLG {
   width: fit-content;
@@ -3158,13 +3164,17 @@ a:focus, a:hover {
   position: relative;
 }
 
+#lottie{
+  max-height: 360px;
+  width: 100%;
+}
+
 
 
 .container_partnersNum{
-  background: #ffc9df;
-  padding-top: 15px;
-  padding-bottom: 64px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container_map{
@@ -3213,7 +3223,7 @@ a:focus, a:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   height: 40px;
-  background-color: red;
+  background-color: #21b5af;
   color: white;
   cursor: pointer;
   border: 0;

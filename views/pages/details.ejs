@@ -207,23 +207,22 @@
             <div class="description">
               <div class="sizeOfTovar">
                 <div class="selectSize">
-                  <% if(tovarArr.sizes !== undefined && tovarArr.sizes !== null){ %>
-                  <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
-                  <% if(iS === 0){ %>
-                  <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
-                  <% }else{%>
-                  <div class="sizeBTN"><%= tovarArr.size[iS] %></div>
-                  <% } %>
-    
-                  <% } %>
+                  <% if(tovarArr.size){ %>
+                    <% for(var iS = 0; iS < tovarArr.size.length; iS++){ %>
+                      <% if(iS === 0){ %>
+                        <div class="sizeBTN size_a"><%= tovarArr.size[iS] %></div>
+                      <% }else{%>
+                        <div class="sizeBTN"><%= tovarArr.size[iS] %></div>
+                      <% } %>
+                    <% } %>
                   <% } else { %>
                   <div class="sizeBTN size_a">Все размеры</div>
                   <% } %>
                 </div>
                 <div class="btnTableSizes">Таблица размеров</div>
               </div>
-              <% if(tovarArr.manufacturer !== 'Мой товар'){ %>
-              <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact.find(x => x.index === parseInt(tovarArr.manufacturer)).title  %></span></div>
+              <% if(tovarArr.manufacturer !== 'Мой товар' && manufact !== null){ %>
+              <div class="text_line" id="PROIZVOD">Производитель:<span> <%= manufact %></span></div>
               <% }else{ %>
     
               <% } %>
@@ -234,7 +233,6 @@
                 $('.description').append('<div class="text_line">' + $('.noneText').text()+'</div>')
               </script>
           </div>
-          
         </div>
 
         <div class="tovat-column-block-data">
@@ -246,7 +244,6 @@
                 <img src="../../../image/bonus.png" style="max-height: 60px">
               </div>
               <% } %>           
-  
               <% if(tovarArr.freeshep){ %>
               <div class="text_line inline">
                 <img src="../../../image/freeshiping.png" style="max-height: 60px">
@@ -273,19 +270,19 @@
             </div>      
             <button class="add-to-cart"onclick="setBasket(toBasketObj)">Добавить в корзину</button>
         </div>
-
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <div class="wrapper">
-          <ul style="float: right;">
-            <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
-            <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
-            <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
-            <a href="https://vk.com/share.php?url=http://ladyman.club/details?tov=<%= tovarArr.AI %>&title=<%= tovarArr.title %>&image=<%= tovarArr.images[0] %>" target="_blank"><li class="whatsapp"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li></a>
-          </ul>
-        </div>
-
-
       </div>
+    </div>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <div class="wrapper socials-container">
+        <ul>
+          <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+          <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+          <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
+          <a href="https://vk.com/share.php?url=http://ladyman.club/details?tov=<%= tovarArr.AI %>&title=<%= tovarArr.title %>&image=<%= tovarArr.images[0] %>" target="_blank"><li class="whatsapp"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li></a>
+        </ul>
+      </div>
+
       <a href="/details?tov=<%= parseInt(tovarArr.AI)-1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="prewTovar"></div></a>
       <a href="/details?tov=<%= parseInt(tovarArr.AI)+1 %>&<%= tovarArr.type %>"><div class="NextPrewTovar" id="nextTovar"></div></a>
       <div id="product-pd" class="tab-pane fade in active">
@@ -369,8 +366,7 @@
         </div>
         <% } %>
       </div>
-    </div>
-
+      
     <div class="comments">
       <div class="comments_title"><%= locale.comments %></div>
       <div class="comment-wrap">

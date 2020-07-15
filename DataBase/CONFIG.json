@@ -95,11 +95,31 @@
     {
       "name": "Клетка",
       "code": "../../../image/color/kletka.jpg"
+    },
+    {
+      "name": "Оливковый",
+      "code": "#808000"
+    },
+    {
+      "name": "Коричневий",
+      "code": "#FFF8DC"
+    },
+    {
+      "name": "Зелений",
+      "code": "#00ff00"
+    },
+    {
+      "name": "Бежевый",
+      "code": "#ffb2d0"
     }
   ],
   "categories": [
     {
       "name": "aaaaaa",
+      "index": "7"
+    },
+    {
+      "name": "ЖЕНСКАЯ ОДЕЖДА",
       "index": "7"
     }
   ],

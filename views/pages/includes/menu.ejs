@@ -4,9 +4,9 @@
     <% for(var i = 0; i < menu.length; i++) { %>
     <% if(menu[i].podlink.length > 0 && menu[i].podlink[0] !== "/"){ %>
     <% if(menu[i].icon !== 'null' && menu[i].icon !==undefined){ %>
-    <div class="menuBTN" menu-link="<%= menu[i].ml %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name[numLang] %> <div class="pLinkIcon"></div></div>
+    <div class="menuBTN" menu-link="ml_<%= menu[i].index %>"><div style="background-image: url(<%= menu[i].icon %>)"></div><%= menu[i].name[numLang] %> <div class="pLinkIcon"></div></div>
     <% }else{%>
-    <div class="menuBTN" menu-link="<%= menu[i].ml %>"><%= menu[i].name[numLang] %> <div class="pLinkIcon"></div></div>
+    <div class="menuBTN" menu-link="ml_<%= menu[i].index %>"><%= menu[i].name[numLang] %> <div class="pLinkIcon"></div></div>
     <% } %>
 
     <% } else { %>
@@ -26,7 +26,7 @@
 <div class="opensMenu">
   <% for(var i = 0; i < menu.length; i++) { %>
   <% if(menu[i].podlink.length >= 1 || menu[i].podlink[0] !== "/"){ %>
-  <div class="menu_data <%= menu[i].ml %>">
+  <div class="menu_data ml_<%= menu[i].index %>">
     <div class="menu_title"><%= menu[i].name[numLang]  %></div>
     <div class="menuLeft">   
       <% for(var il = 0; il < menu[i].podlink.length; il++) { %>

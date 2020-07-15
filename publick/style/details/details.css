@@ -700,22 +700,20 @@ nav li {
 
 .add-to-cart {
   position: relative;
-  display: inline-block;
   background: #43db57;
   color: #fff;
   border: none;
-  border-radius: 0;
   padding: 14px 30px;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   transition: color 0.3s ease;
   letter-spacing: 0.0625rem;
   margin: auto;
   display: inherit;
   border-radius: 3px;
+  width: 100%;
 }
 
 #infooftovar{
@@ -723,6 +721,7 @@ nav li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 10px;
 }
 
 .container {
@@ -744,8 +743,6 @@ nav li {
 .grid.product {
   padding: 0 0 1.5rem 0;
   position: relative;
-  /* overflow: hidden; */
-  margin-top: 20px;
 }
 .grid.second-nav > [class*="column-"] {
   padding: 0.5rem 1rem;
@@ -982,11 +979,10 @@ p {
 /****** Style Star Rating Widget *****/
 .rating {
   border: none;
-  float: left;
   position: absolute;
   z-index: 999;
-  right: -7px;
-  top: 20px;
+  right: 0;
+  top: 0;
 }
 
 
@@ -1076,6 +1072,7 @@ p {
   position: absolute;
   bottom: 5px;
   width: 100%;
+  display: flex;
 }
 
 .imageTov{
@@ -1104,13 +1101,6 @@ p {
 
 /* Let's style the wrapper in such away that,
 it should always be at the center of the browser */
-.wrapper {
-    bottom: 16px;
-    right: 8px;
-    width: 100%;
-    float: right;
-}
-
 /* Style the Un-order list by setting its list-style to none */
 .wrapper ul {
   list-style: none;
@@ -1359,7 +1349,7 @@ button.close {
 
 .LengthOfBalset{
   height: 40px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 @media (max-width: 500px) {
@@ -1587,10 +1577,11 @@ canvas{
 }
 
 .TovarColorBlock{
-  width: fit-content;
   height: 40px;
   margin: auto;
-  margin-top: 30px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 .colorBtn{
@@ -1615,4 +1606,11 @@ canvas{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 2px;
+}
+
+.socials-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 0;
 }

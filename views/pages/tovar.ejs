@@ -19,8 +19,6 @@
   <link rel="stylesheet" type="text/css" href="/style/global.min.css">
   <link rel="stylesheet" type="text/css" href="/style/tovar/tovar.css">
   <link rel="stylesheet" type="text/css" href="/style/tovar/tovar.min.css">
-
-
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
@@ -30,6 +28,26 @@
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="/script/TweenMax.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(() => {
+      var animation = bodymovin.loadAnimation({
+      container: document.getElementById('lottie'),
+      renderer:'svg',
+      loop:!0,
+      prerender:!0,
+      autoplay:!0,
+      rendererSettings:{
+          progressiveLoad:!1,
+          preserveAspectRatio:'xMaxYMax slice'
+      },
+      path: `${window.location.origin}/data/animation.json`
+    })
+    });
+  </script>
+
   <script type="text/javascript" src="/script/global.js"></script>
   <script type="text/javascript" src="script/basket.js"></script>
   <script type="text/javascript" src="script/tovar/tovar.js"></script>
@@ -315,16 +333,19 @@
       </script>
       <% } %>
 
+     
       <div class="container_partnersNum">
-        <div class="loadersNEW" id="loaderNumber"></div>
-        <div class="zub_line"></div>
-        <div class="mainDLG" style="color: white;">
-          <div class="mainTitleDLG"><%= locale.nopropsales %></div>
-          <div class="mainTextDLG"><%= locale.nopropsalestxt %></div>
-        </div>
-        <div class="number_send_block">
-          <input type="email" class="number_phone" id="inputPodpiska" placeholder="<%= locale.youemail %>">
-          <button id="sendPodpiska" onclick="TOVAR.sendMyEmail()"><%= locale.SUBSCRIBE %></button>
+        <div id="lottie"></div>
+        <div class="DLG-data-block">
+          <div class="loadersNEW" id="loaderNumber"></div>
+          <div class="mainDLG" style="color: white;">
+            <div class="mainTitleDLG"><%= locale.nopropsales %></div>
+            <div class="mainTextDLG"><%= locale.nopropsalestxt %></div>
+          </div>
+          <div class="number_send_block">
+            <input type="email" class="number_phone" id="inputPodpiska" placeholder="<%= locale.youemail %>">
+            <button id="sendPodpiska" onclick="TOVAR.sendMyEmail()"><%= locale.SUBSCRIBE %></button>
+          </div>
         </div>
       </div>
     </div>

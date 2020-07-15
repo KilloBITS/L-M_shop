@@ -43,25 +43,24 @@ router.get('/*', function (req, res, next) {
                   NewSimilar.push(similarTov[randomInteger(0, similarTov.length)]);
                 }
                 config.find().toArray(function (err, resConfig) {
-                  news.find().toArray(function (err, resNews) {
-                    contacts.find().toArray(function (err, resContacts) {
-                      manufactures.find().toArray(function (err, resManufactures) {
-                        let languageNumber = global.parseNumLang(req);
-                        res.render('pages/details.ejs', {
-                          isAdm: req.session.admin,
-                          sessionUser: resUsers[0],
-                          locale: resLocale[languageNumber].details,
-                          menu: resMenu,
-                          globalLocale: resLocale[languageNumber],
-                          contacts: resContacts[0],
-                          numLang: languageNumber,
-                          tovarArr: resTovar[0],
-                          config: resConfig[0],
-                          rec: recomendedTov || [],
-                          manufact: resManufactures,
-                          similars: NewSimilar,
-                          comment: ''
-                        });
+                  contacts.find().toArray(function (err, resContacts) {
+                    manufactures.find().toArray(function (err, resManufactures) {
+                      let languageNumber = global.parseNumLang(req);
+                      let isManufact = resManufactures.find(x => x.index === parseInt(resTovar[0].manufacturer)) ? resManufactures.find(x => x.index === parseInt(resTovar[0].manufacturer)).title : null
+                      res.render('pages/details.ejs', {
+                        isAdm: req.session.admin,
+                        sessionUser: resUsers[0],
+                        locale: resLocale[languageNumber].details,
+                        menu: resMenu,
+                        globalLocale: resLocale[languageNumber],
+                        contacts: resContacts[0],
+                        numLang: languageNumber,
+                        tovarArr: resTovar[0],
+                        config: resConfig[0],
+                        rec: recomendedTov || [],
+                        manufact: isManufact,
+                        similars: NewSimilar,
+                        comment: ''
                       });
                     });
                   });

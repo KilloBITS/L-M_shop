@@ -493,20 +493,18 @@ fieldset, label { margin: 0; padding: 0; }
   flex-wrap: wrap;
 }
 
-
-
 .filter-block-content{
   width: 100%;
   margin-bottom: 10px;
-  background-color: #f5f5f5;
+  background-color: rgba(245, 245, 245, 0.10);
   overflow: hidden;
   border-radius: 3px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #ffc9df;
 }
 
 .filter-block-title{
   padding: 5px 10px;
-  background-color: rgba(216, 216, 216, 0.51);
+  background-color: rgb(255, 201, 223);
   font-weight: bold;
 }
 
@@ -824,12 +822,13 @@ i{
 
 
 
-svg {  position: absolute;
+/* svg {  
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: block;
-}
+} */
 
 .line1, .line2 {
   stroke:#FFFFFF;

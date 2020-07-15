@@ -94,12 +94,22 @@
         </button>
       </div>
       <div class="form form-signup">
-        <div class="register_socials disabled">
+
+        <div class="register_socials">
           <div class="socials_title_log"><%= locale.regsoc %></div>
-          <a href="/auth/facebook"><div class="socialAccount faceboock"></div></a>
-          <div class="socialAccount google"></div>
-          <a href="/auth/instagram"><div class="socialAccount instagram"></div></a>
+          <a href="/auth/facebook">
+            <div class="socialAccount faceboock">
+              Facebook
+            </div>
+          </a>
+          <a href="/get/login/google">
+            <div class="socialAccount google">
+              Google
+            </div>
+          </a>
         </div>
+
+
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>
         <div class="aForm" action="#">
@@ -127,9 +137,16 @@
       <div class="form form-signin">
         <div class="auch_socials ">
           <div class="socials_title_log"><%= locale.authSoc %></div>
-          <a href="/auth/facebook"><div class="socialAccount faceboock"></div></a>
-          <div class="socialAccount google"></div>
-          <a href="/auth/instagram"><div class="socialAccount instagram"></div></a>
+          <a href="/auth/facebook">
+            <div class="socialAccount faceboock">
+              Facebook
+            </div>
+          </a>
+          <a href="/get/login/google">
+            <div class="socialAccount google">
+              Google
+            </div>
+          </a>
         </div>
         <div class="errorUP"></div>
         <div class="backet_load" style="display: none; background-image: url(../../../image/loaders/<%= config.loader %>"></div>
