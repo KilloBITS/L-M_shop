@@ -57,7 +57,7 @@ router.get('/*', function (req, res, next) {
                           numLang: languageNumber,
                           tovarArr: resTovar[0],
                           config: resConfig[0],
-                          rec: recomendedTov,
+                          rec: recomendedTov || [],
                           manufact: resManufactures,
                           similars: NewSimilar,
                           comment: ''

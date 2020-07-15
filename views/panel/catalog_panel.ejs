@@ -163,7 +163,7 @@
                                                         <b> <%= tovarData[i].price %> ГРН </b>
                                                     <% } %>
                                                 </td>
-                                                <td><a href="<%= tovarData[i].link %>" target="_blank"><%= manufactures[parseInt(tovarData[i].manufacturer)-1].title %></a> <div class="url_image"></div></td>
+                                                <td><a href="<%= tovarData[i].link %>" target="_blank"><%= (tovarData[i].manufacturer === 'Мой товар')?tovarData[i].manufacturer :manufactures[parseInt(tovarData[i].manufacturer)-1].title %></a> <div class="url_image"></div></td>
                                                 <td>
                                                     <div class="dropdown col-lg-6 col-md-4 col-sm-6">
                                                         <button class="btn btn-light dropdown-toggle" style="background-color: <%= tovarData[i].color %>" type="button" data-toggle="dropdown" aria-expanded="false">
