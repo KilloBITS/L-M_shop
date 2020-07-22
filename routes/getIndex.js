@@ -23,11 +23,10 @@ router.get('/', function (req, res, next) {
 
     if (err) return console.log(err);
     locale.find().toArray(function (err, resLocale) {
-
       users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
         menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
           mainslide.find().toArray(function (err, resMainslide) {
-            tovar.find().sort({ AI: -1 }).limit(18).toArray(function (err, resTovar) {
+            tovar.find().sort({ AI: -1 }).limit(10).toArray(function (err, resTovar) {
               news.find().sort({ AI: -1 }).limit(6).toArray(function (err, resNews) {
                 contacts.find().toArray(function (err, resContacts) {
                   config.find().toArray(function (err, resConfig) {
@@ -35,7 +34,7 @@ router.get('/', function (req, res, next) {
                       let languageNumber = global.parseNumLang(req);
                       res.render('pages/index.ejs', {
                         isAdm: req.session.admin,
-                        sessionUser: resUsers[0],
+                        sessionUser: req.user,
                         locale: resLocale[languageNumber].index,
                         menu: resMenu,
                         globalLocale: resLocale[languageNumber],

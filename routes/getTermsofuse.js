@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
               let languageNumber = global.parseNumLang(req);
               res.render('pages/terms_of_use.ejs', {
                 isAdm: req.session.admin,
-                sessionUser: resUsers[0],
+                sessionUser: req.user,
                 locale: resLocale[languageNumber].termsofusepage,
                 menu: resMenu,
                 globalLocale: resLocale[languageNumber],

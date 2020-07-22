@@ -20,10 +20,11 @@
     font-size: 14px;
   }
   .background {
-    /*height: 110px;*/
     display: none;
   }
 }
+
+
 @media screen and (max-width: 800px) {
   .demo-gallery > ul > li {
     width: auto;
@@ -43,12 +44,15 @@
     border: 1px dashed rgba(0, 0, 0, 0.19);
     background-position: 2px center;
   }
+
   .demo-gallery > ul > li a > img {
     width: 120px;
   }
+
   .img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     max-height: 236px;
   }
+
   body{
     margin-top: 60px;
   }
@@ -60,9 +64,7 @@
 
   .countersB{
     display: inline-block;
-    float: left;
     margin: 6px;
-    color: #f98eb9;
     text-align: center;
   }
 
@@ -105,7 +107,7 @@
   }
 
   .carousel-wrapper {
-    height: 290px;
+    height: 400px;
   }
 
   .mainBTN_block {
@@ -187,9 +189,6 @@
     padding: 4px 10px;
   }
 
-
-
-
   .hamburger-menu.animate:before {
     bottom: 0;
     transform: rotate(-45deg);
@@ -264,13 +263,12 @@
     display: none;
   }
   .carousel-wrapper .carousel .carousel-cell.is-selected{
-    transform: scale(1.2);
     z-index: 1;
   }
   .carousel-wrapper .carousel .carousel-cell {
     padding: 10px;
     background-color: #FFFFFF;
-    width: 58%;
+    width: 100%;
     height: auto;
     min-width: 140px;
     margin: 0 20px;
@@ -278,7 +276,7 @@
     border: 1px solid silver;
     border-radius: 6px;
     box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.57);
-    height: 230px;
+    height: 380px;
     overflow: hidden;
   }
   .flickity-prev-next-button {
@@ -314,7 +312,7 @@
     display: none;
   }
   .counters_conent{
-    width: fit-content;
+    width: 100%;
     margin: auto;
   }
 
@@ -385,5 +383,36 @@
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
     right: 70px;
     left: 10px;
+  }
+
+  #lottie {
+    position: relative;
+    z-index: 10;
+    height: 160px;
+  }
+
+  #lottie svg {
+    position: absolute;
+    top: -72px;
+  }
+
+  .svg-border svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .svg-border {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 78px);
+  }
+
+  .videoBlock {
+    overflow: hidden;
+    padding: 52px 0 205px 0;
+  }
+
+  .videoBlock .container {
+    height: 500px;
   }
 }

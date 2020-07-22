@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
               if ((req.session.user === undefined) ? true : false) {
                 res.render('pages/auth.ejs', {
                   isAdm: req.session.admin,
-                  sessionUser: resUsers[0],
+                  sessionUser: req.user,
                   locale: resLocale[languageNumber].login,
                   menu: resMenu,
                   globalLocale: resLocale[languageNumber],

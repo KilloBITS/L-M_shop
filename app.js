@@ -11,6 +11,7 @@ const request = require("request");
 const app = express();
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
+const passport = require('passport');
 
 app.use(session({
   secret: '2C44-4D44-WppQ38S',
@@ -20,47 +21,21 @@ app.use(session({
     url: 'mongodb://localhost:27017/SHOP'
   }),
   cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
-      }
+    maxAge: 1000 * 60 * 60 * 24 * 7 * 2 // two weeks
+  }
 }));
-
-const passport = require('passport');
-var Instagram = require('passport-instagram');
-const InstagramStrategy = Instagram.Strategy;
-
-passport.serializeUser((user, done) => {
-  done(null, user)
-})
-passport.deserializeUser((user, done) => {
-  done(null, user)
-})
-
-passport.use(new InstagramStrategy({
-  clientID: "89e795eb46f643cf86c51d7cd0b66849",
-  clientSecret: "ad15d5e24d5b46c199527e8165683a74",
-  callbackURL: "http://ladyman.club/auth/instagram/callback" 
-}, (accessToken, refreshToken, profile, done) => {
-  console.log(profile);
-}));
-
-app.get('/auth/instagram', passport.authenticate('instagram'));
-
-app.get(
-  '/auth/instagram/callback',
-  passport.authenticate('instagram', {
-    successRedirect: '/profile',
-    failureRedirect: '/login'
-  })
-);
 
 //project libs use
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb'})); 
-app.use(bParser.urlencoded({limit: '50mb'}));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb' }));
+app.use(bParser.urlencoded({ limit: '50mb' }));
 app.use(bParser.json());
 app.use(express.static(__dirname + '/publick/'));
 app.use(cookieParser());
-app.use(bParser.raw({limit: '50mb'}));
+app.use(bParser.raw({ limit: '50mb' }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 // app.use(analytics());
 
 
@@ -155,6 +130,7 @@ app.use('/termsofuse-panel', admTermsOfUse);
 app.use('/payments-panel', admPayments);
 
 
+
 const podpiska = require('./controllers/controllerNewCallUserTovar');
 app.post('/getMessagesFromTovar', podpiska);
 
@@ -181,6 +157,12 @@ app.post('/auth', auth);
 
 const login_google = require('./controllers/controllerGoogle');
 app.get('/get/login/google', login_google);
+app.get('/auth/google/callback',
+  passport.authenticate('google', {
+    successRedirect: '/',
+    failureRedirect: '/'
+  }));
+
 
 
 const create_accaunt = require('./controllers/controllerAuthification');
@@ -204,7 +186,7 @@ app.post('/counters', counters);
 const stock = require('./controllers/controllerStock');
 app.post('/getStock', stock);
 
-const newPartnersNumber =  require('./controllers/controllerPartners');
+const newPartnersNumber = require('./controllers/controllerPartners');
 app.post('/newPartnersNumber', newPartnersNumber);
 
 const getMapPoint = require('./controllers/controllerGetMap');
@@ -254,7 +236,7 @@ const nexmo = new Nexmo({
   apiSecret: 't3KDkf6suo3RQBjV'
 })
 
-app.get('/logout', function(req, res) {
+app.get('/logout', function (req, res) {
   req.session.destroy();
   res.redirect('/');
 });
@@ -269,10 +251,12 @@ app.get('*', get404);
 
 // https.createServer(options, app).listen(443);
 
-app.listen(80, function(){
+app.listen(80, function () {
   global.baseName = 'SHOP';
   global.baseIP = 'mongodb://localhost:27017/';
   global.online = 0;
+
+
   // require('./controllers/telegram/telegaBOT');
   global.clearVisitors();
   console.warn('STARTED HTTP LM_SHOP SERVER ON PORT: 80');

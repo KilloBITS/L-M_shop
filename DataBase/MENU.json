@@ -47,8 +47,8 @@
   "podlink": [
     {
       "pname": [
-        "Верхняя одежда",
-        "Верхній одяг"
+        "Верхняя женская одежда",
+        "Верхній жіночий одяг"
       ],
       "plink": "/shop?c=7,verhnyaya_odejda&page=1",
       "types": "verhnyaya_odejda"
@@ -58,8 +58,24 @@
         "Женские блузы",
         "Жіночі блузи"
       ],
-      "plink": "/shop?c=7,jenskie bluzy&page=1",
-      "types": "jenskie bluzy"
+      "plink": "/shop?c=7,jenskie_bluzy&page=1",
+      "types": "jenskie_bluzy"
+    },
+    {
+      "pname": [
+        "Женские платья",
+        "Жіночі сукні"
+      ],
+      "plink": "/shop?c=7,jenskie_platya&page=1",
+      "types": "jenskie_platya"
+    },
+    {
+      "pname": [
+        "Женские брюки",
+        "Жіночі брюки"
+      ],
+      "plink": "/shop?c=7,jenskie_bruki&page=1",
+      "types": "jenskie_bruki"
     }
   ]
 },{

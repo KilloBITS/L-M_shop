@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
                 let languageNumber = global.parseNumLang(req);
                 res.render('pages/contacts.ejs', {
                   isAdm: req.session.admin,
-                  sessionUser: resUsers[0],
+                  sessionUser: req.user,
                   locale: resLocale[languageNumber].contacts,
                   menu: resMenu,
                   globalLocale: resLocale[languageNumber],

@@ -1,59 +1,25 @@
-var GOOGLE_CLIENT_ID = "193091724219-6ievuo02hn4lm640f4kl9t9l04bc4n93.apps.googleusercontent.com";
-var GOOGLE_CLIENT_SECRET = "DpzekjaDjggfz-QX6iYirYgo";
+
+var GOOGLE_CLIENT_ID = "193091724219-24mqhp9nmoht3hnc3qes610qapjf1q8v.apps.googleusercontent.com";
+var GOOGLE_CLIENT_SECRET = "JLlg3oU_2kjrxjKrxrr_ncbL";
 
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 mongoose.connect(
-    'mongodb://' + global.baseIP + ':' + 27017 + '/' + global.baseName,
+    'mongodb://localhost:27017/SHOP',
     {
         useUnifiedTopology: true,
         useNewUrlParser: true
     }
 );
 
-const GoogleStrategy = require('passport-google-oauth2').Strategy;
-const UsersSchema = mongoose.Schema({
-    nick: String,
-    name: String,
-    email: String,
-    secret: String,
-    password: String,
-    rank: Number,
-    stars: Number,
-    AI: Number,
-    isAdmin: Boolean,
-    ava: String,
-    phone: String,
-    desires: [Number],
-    payments: [{
-        tov: [String],
-        date: String,
-        payType: Number,
-        dostType: Number,
-        status: Number
-    }],
-    LM_COIN: Number,
-    official: Boolean,
-    phone_number: String
-});
-const UserModel = mongoose.model('users', UsersSchema);
 
-const newID = () => {
-    const aa = "id_" + Array(32).fill("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").map(function (x) {
-        return x[Math.floor(Math.random() * x.length)]
-    }).join('');
-    return aa
-}
-const newToken = () => {
-    const aa = "t_" + Array(32).fill("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").map(function (x) {
-        return x[Math.floor(Math.random() * x.length)]
-    }).join('');
-    return aa
-}
+const UsersSchema = require('./models/user');
 
+const UserModel = mongoose.model('USERS', UsersSchema);
 
 passport.serializeUser(function (user, done) {
     done(null, user);
@@ -77,15 +43,25 @@ passport.use(new GoogleStrategy({
         UserModel.findOne({
             email: profile.email
         }, function (err, user) {
+
+            console.log(user)
             if (err) {
                 return done(err, null, null);
             }
             if (!user) { //Если пользователя нет,
-                const createToken = newToken();
-                const createID = newID();
                 UserModel.countDocuments(function (err, c) {
                     var NEXT_AI = c + 1;
-
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+                    if (dd < 10) {
+                        dd = '0' + dd
+                    }
+                    if (mm < 10) {
+                        mm = '0' + mm
+                    }
+                    today = mm + '-' + dd + '-' + yyyy;
                     user = new UserModel({
                         nick: profile.email.split('@')[0],
                         name: `${profile.given_name} ${profile.family_name}`,
@@ -110,7 +86,6 @@ passport.use(new GoogleStrategy({
 
                     user.save(function (err) {
                         if (err) console.log(err);
-                        new CreateSystemLog(2, `Новый пользователь!`, c + 1);
                         return done(err, user, null);
                     });
                 });
@@ -129,5 +104,7 @@ router.get('/get/login/google', passport.authenticate('google', {
             'https://www.googleapis.com/auth/plus.profile.emails.read']
 }
 ));
+
+
 
 module.exports = router;

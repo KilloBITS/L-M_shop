@@ -49,7 +49,7 @@ router.get('/*', function (req, res, next) {
                       let isManufact = resManufactures.find(x => x.index === parseInt(resTovar[0].manufacturer)) ? resManufactures.find(x => x.index === parseInt(resTovar[0].manufacturer)).title : null
                       res.render('pages/details.ejs', {
                         isAdm: req.session.admin,
-                        sessionUser: resUsers[0],
+                        sessionUser: req.user,
                         locale: resLocale[languageNumber].details,
                         menu: resMenu,
                         globalLocale: resLocale[languageNumber],

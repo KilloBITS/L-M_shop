@@ -5,6 +5,8 @@ const mongoClient = require("mongodb").MongoClient;
 const pagination = require('pagination');
 
 router.get('/*', function (req, res, next) {
+
+  
   try {
     var searchData;
     var DA = req.url.split('=');
@@ -15,9 +17,12 @@ router.get('/*', function (req, res, next) {
 
     var page = req.url.split('page=')[1];
 
+    // let FILTER = { $or: [ { categories: parseInt(searchData[0]) }, { categories: searchData[0] } ] }
+
     let FILTER = {
-      categories: parseInt(searchData[0]),
+      categories: parseInt(searchData[0])
     };
+
     if (searchData.length >= 2) {
       FILTER.type = searchData[1].split('&')[0];
     };
@@ -44,6 +49,11 @@ router.get('/*', function (req, res, next) {
           var doTovar = otTovar + 18;
         }
 
+        // tovar.find().forEach( function (x) {   
+        //   x.categories = parseInt(x.categories); // convert field to string
+        //   tovar.save(x);
+        // });
+
         locale.find().toArray(function (err, resLocale) {
           users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
             menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
@@ -58,7 +68,7 @@ router.get('/*', function (req, res, next) {
                       res.render('pages/tovar.ejs', {
                         filter: FILTER,
                         isAdm: req.session.admin,
-                        sessionUser: resUsers[0],
+                        sessionUser: req.user,
                         locale: resLocale[languageNumber].tovar,
                         menu: resMenu,
                         globalLocale: resLocale[languageNumber],

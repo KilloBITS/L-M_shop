@@ -665,10 +665,6 @@ h3 {
   position: absolute;
 }
 
-.carousel-wrapper .carousel .carousel-cell.is-selected {
-  transform: scale(1.2);
-}
-
 .carousel-wrapper .carousel .carousel-cell.is-selected .line {
   height: 35px;
 }
@@ -689,7 +685,6 @@ h3 {
   width: 100%;
   padding: 10px 0px 30px 0px;
   background: white;
-  background: #f1c8dd;
 }
 
 .mainBTN {
