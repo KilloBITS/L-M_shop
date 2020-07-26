@@ -60,33 +60,6 @@ body {
   box-shadow: 0px 0px 14px 0px rgba(123, 11, 69, 0.38);
 }
 
-/*font-family: 'Didact Gothic', sans-serif; 'Comfortaa', cursive;
-font-family: 'Didact Gothic', sans-serif; 'Yanone Kaffeesatz', sans-serif;
-font-family: 'Didact Gothic', sans-serif; 'PT Mono', monospace;
-font-family: 'Didact Gothic', sans-serif; 'Fira Sans Extra Condensed', sans-serif;
-font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
-
-.menuBlock {
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: auto;
-}
-
-.menuBTN {
-  display: inline-block;
-  padding: 14px 10px;
-  cursor: pointer;
-  font-family: 'Didact Gothic', sans-serif;
-  transition: 0.3s;
-  float: left;
-  color: black;
-  font-size: 18px;
-}
-
-.menuBTN:hover {
-  color: #dd127b;
-  transition: 0.3s;
-}
 
 .logInBlock {
   position: absolute;
@@ -115,30 +88,6 @@ font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;*/
   box-shadow: 0px 6px 14px -6px rgba(123, 11, 69, 0.38);
   display: none;
 }
-
-.menu_data {
-  width: 100%;
-  max-width: 1024px;
-  margin: auto;
-  /*height: 150px;*/
-  display: none;
-}
-
-.menu_title {
-  text-align: center;
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: auto;
-  padding: 4px 40px;
-  font-size: 18px;
-  color: #dd127b;
-  font-family: 'Didact Gothic', sans-serif;
-  'Didact Gothic', sans-serif;
-  border-bottom: 1px solid #dd127b26;
-  text-transform: uppercase;
-}
-
-.menuRight {}
 
 .block {
   display: inline-block;
@@ -518,10 +467,6 @@ svg {
   margin: auto;
   width: calc(100% - 15px);
   text-align: center;
-}
-a:focus, a:hover {
-  color: #000000;
-  text-decoration: underline;
 }
 
 @media (max-width: 991px) {
@@ -1536,7 +1481,7 @@ i {
   margin: auto;
   max-width: 41px;
   max-height: 41px;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .ucv-b4-title {
@@ -1546,8 +1491,9 @@ i {
 
 .ucv-b4-wrapper {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
+  font-weight: bold;
 }
 
 .ucv-b4-arrow-wrapper {
@@ -1633,22 +1579,30 @@ i {
 }
 
 .ucv-b4-text, .ucv-b4-image {
-  display: table;
+  display: flex;
   width: 100%;
   height: 86px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+}
+
+.ucv-b4-image.end-image{
+  align-items: flex-end;
+}
+
+.ucv-b4-image.top-image{
+  align-items: flex-start;
+}
+
+
+.ucv-b4-text span{
+  font-size: 24px;
+  width: 100%;
 }
 
 .ucv-b4-image-inner, .ucv-b4-text-inner {
-  display: table-cell;
-  text-align: center
-}
-
-.ucv-b4-image-inner {
-  vertical-align: top;
-}
-
-.ucv-b4-image-inner.ucv-b4-image-inner-bot {
-  vertical-align: bottom;
+  width: 100%;
 }
 
 .ucv-b4-text-inner {
@@ -3011,12 +2965,8 @@ i {
 
 .svg-border{
   position: absolute;
-  top: calc(100% + 36px);
+  top: calc(100% + 30px);
   z-index: 1;
-}
-
-.svg-border svg{
-
 }
 
 .svg-border.reverse{

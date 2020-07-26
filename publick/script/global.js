@@ -198,7 +198,7 @@ $(function() {
       }
       ML = $(".menuBTN:eq(" + $(".menuBTN").index(this) + ")").attr('menu-link');
       if (ML != undefined) {
-        $("." + ML + ",.opensMenu").show();
+        $("." + ML + ",.opensMenu").css({display: 'flex'});
       }
       
     }, function(e) {

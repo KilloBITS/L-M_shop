@@ -74,28 +74,6 @@ body {
   box-shadow: 0px 0px 14px 0px rgba(123, 11, 69, 0.38);
 }
 
-.menuBlock {
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: auto;
-}
-
-.menuBTN {
-  display: inline-block;
-  padding: 14px 10px;
-  cursor: pointer;
-  font-family: 'Didact Gothic', sans-serif;
-  transition: 0.3s;
-  float: left;
-  color: black;
-  font-size: 18px;
-}
-
-.menuBTN:hover {
-  color: #dd127b;
-  transition: 0.3s;
-}
-
 .logInBlock {
   position: absolute;
   width: 26px;
@@ -156,28 +134,6 @@ body {
   box-shadow: 0px 6px 14px -6px rgba(123, 11, 69, 0.38);
   z-index: 100;
   display: none;
-}
-
-.menu_data {
-  width: 100%;
-  max-width: 1024px;
-  margin: auto;
-  /*height: 150px;*/
-  display: none;
-}
-
-.menu_title {
-  text-align: center;
-  width: fit-content;
-  width: -moz-fit-content;
-  margin: auto;
-  padding: 4px 40px;
-  font-size: 18px;
-  color: #dd127b;
-  font-family: 'Didact Gothic', sans-serif;
-  'Didact Gothic', sans-serif;
-  border-bottom: 1px solid #dd127b26;
-  text-transform: uppercase;
 }
 
 .content {

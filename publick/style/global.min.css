@@ -19,8 +19,23 @@
 
 @media screen and (max-width: 800px) {
 
+  .menuBlock{
+    flex-wrap: wrap;
+  }
+  .menuBlock a {
+    width: 100%;
+  }
+
+  .menuBTN::after {
+    display: none;
+  }
+
   .menuLeft{
-    overflow-y: auto;
+    width: 100%;
+  }
+
+  .menuRight{
+    display: none;
   }
 
   .menuLeft a {

@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
     if (err) return console.log(err);
     locale.find().toArray(function (err, resLocale) {
       users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
-        menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+        menu.find().sort({ position: 1 }).toArray(function (err, resMenu) {
           mainslide.find().toArray(function (err, resMainslide) {
             tovar.find().sort({ AI: -1 }).limit(10).toArray(function (err, resTovar) {
               news.find().sort({ AI: -1 }).limit(6).toArray(function (err, resNews) {
