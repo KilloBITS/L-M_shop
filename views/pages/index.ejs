@@ -25,12 +25,15 @@
   <link rel="stylesheet" type="text/css" href="/style/index/style.css">
   <link rel="stylesheet" type="text/css" href="/style/index/style.min.css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
   <script type="text/javascript" src="/script/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="/script/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/script/jquery-ui.js"></script>
   <script type="text/javascript" src="/script/bootstrap.min.js"></script>
   <script type="text/javascript" src="/script/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="/script/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script type="text/javascript"
     src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
   <script type="text/javascript"
@@ -351,7 +354,40 @@
     </a>
     <% } %>
   </div>
-  <div class="counters block" style="background-color: <%= config.B_COLOR %>">
+  <div class="counters" style="background-color: <%= config.B_COLOR %>">
+    <div class="couters_info">
+      <script>
+        $(document).ready(function () {
+          $('.slider-from-text').bxSlider({
+            auto: true,
+            controls: false,
+            autoControls: false,
+            touchEnabled: false,
+            stopAutoOnClick: false,
+            pager: false
+          });
+        });
+      </script>
+      <div class="slider-from-text">
+        <div>
+          Ми працюємо тільки з перевіреними постачальниками. Вас потішить хороше співвідношення ціни і якості!
+        </div>
+        <div>
+          Одяг в Kreatiw представлений ​​в різноманітних стилях: повсякденні вбрання, ділові, або на свято. Також у нас
+          є вироби на всі сезони: на весну, літо, осінь і зиму. Стильно одягатися цілий рік — бажання кожного.
+        </div>
+        <div>
+          У нас завжди надана актуальна інформація про наявність товарів, розмірів, кольорів.
+        </div>
+        <div>
+          Щоб знайти потрібний товар можна просто вбити потрібне слово в пошук. Додаткові фільтри стануть помічниками
+          для вас у сортуванні товарів по вашому особистому смаку.
+        </div>
+        <div>
+          Якісні товари у нашому магазині здивують вас приємними цінами
+        </div>
+      </div>
+    </div>
     <div class="counters_conent">
       <div class="countersB post" data-ix="scale-on-scroll">
         <div class="counters_icon" id="buyers">

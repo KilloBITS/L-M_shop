@@ -1086,15 +1086,18 @@ a.indexBtnToShop {
 }
 
 .counters {
-  background-attachment: fixed;
-  background-size: 200px;
-  background-position: center;
   padding: 0;
   margin: 0;
   margin-bottom: 0px;
   background-color: #ffffff;
   padding-bottom: 20px;
-  height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.couters_info{
+  max-width: 800px;
 }
 
 .counters_conent {
@@ -2975,4 +2978,16 @@ i {
 
 .icon--white {
   fill: #fff;
+}
+
+.bx-wrapper{
+  box-shadow: none!important;
+  border: none!important;
+  background: transparent!important;
+}
+
+.slider-from-text{
+  color: white;
+  text-align: center;
+  font-size: 24px;
 }
