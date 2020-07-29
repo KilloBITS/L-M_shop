@@ -481,7 +481,6 @@ fieldset, label { margin: 0; padding: 0; }
   width: 100%;
   padding: 0;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .filters{
@@ -491,6 +490,7 @@ fieldset, label { margin: 0; padding: 0; }
   margin-right: 10px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .filter-block-content{
@@ -881,4 +881,19 @@ i{
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   z-index: 2;
+}
+
+.products-filters{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 15px;
+}
+
+.products-filters .product-filter-btn{
+  display: none;
+  padding: 5px 14px;
+  background-color: #c3bcff;
+  color: white;
+  border-radius: 5px;
 }

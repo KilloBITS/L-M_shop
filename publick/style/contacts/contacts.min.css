@@ -129,21 +129,6 @@
   .slide__bg {
     background-size: cover;
   }
-  .menuBTN {
-    display: inline-block;
-    cursor: pointer;
-    font-family: 'Didact Gothic', sans-serif;
-    transition: 0.3s;
-    color: black;
-    font-size: 18px;
-    float: initial;
-    width: 100%;
-    text-align: left;
-    padding: 4px 10px;
-  }
-
-
-
 
   .hamburger-menu.animate:before {
     bottom: 0;

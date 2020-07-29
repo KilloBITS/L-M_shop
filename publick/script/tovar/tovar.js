@@ -2,6 +2,9 @@
 var BASKET = [];
 var toPage;
 var TOVAR = {
+  openFilters: function() {
+    $('#filters_container').toggleClass('show-filters')
+  },
   sendMyEmail: function () {
     $("#input-submit").val('Отправка сообщения').css({ "background-image": "../../../image/loaders/load2.gif" });
     $.post('/getMessagesFromTovar', {

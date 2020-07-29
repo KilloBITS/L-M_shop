@@ -81,8 +81,7 @@
   <div class="content tovar">
     <div class="tovar_data">
       <div class="container">
-        <div class="filters">
-
+        <div class="filters" id="filters_container">
           <div class="filter-block-content">
             <div class="filter-block-title">Категория</div>
             <div class="filter-block-data">
@@ -176,6 +175,11 @@
         </div>
 
         <div id="products" class="row list-group">
+          <div class="products-filters">
+            <div class="product-filter-btn" onclick="TOVAR.openFilters()">
+              Фільтр
+            </div>
+          </div>
           <% for(var i = 0; i < tovarArr.length; i++) { %>
           <% if(tovarArr[i].availability) { %>
           <a href="/details?tov=<%= tovarArr[i].AI %>&<%= tovarArr[i].type %>">

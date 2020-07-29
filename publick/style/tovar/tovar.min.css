@@ -1,14 +1,30 @@
-@media screen and (max-width: 936px) {
-  .menuBTN {
-    font-size: 14px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   body{
     margin-top: 60px;
   }
   .contact_number{
+    display: none;
+  }
+
+  .NONE_TOVAR{
+    height: 300px;
+    background-size: contain;
+  }
+
+  .tovar {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .DLG-data-block{
+    position: relative;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    width: 100%;
+  }
+
+  #lottie{
     display: none;
   }
 
@@ -22,6 +38,35 @@
     overflow-y: scroll;
     height: calc(100% - 61px);
     max-width: 260px;
+    transition: .3s;
+    width: 0;
+    overflow-x: hidden;
+    opacity: 0;
+  }
+
+  .products-filters{
+    padding: 10px 15px;
+  }
+  
+  .products-filters .product-filter-btn{
+    display: block;
+  }
+
+  .filters.show-filters{
+    width: 100%;
+    opacity: 1;
+    overflow-x: auto;
+  }
+
+  .filters.show-filters::after{
+    content: '';
+    position: fixed;
+    width: calc(100% - 260px);
+    height: 100%;
+    background-color: rgb(0 0 0 / 62%);
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 
   .topNavMobMenuOfBtm{
@@ -99,22 +144,7 @@
     padding-bottom: 30px;
     text-align: center;
   }
-  .menuBTN {
-    display: inline-block;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-family: 'Didact Gothic', sans-serif; 'Didact Gothic', sans-serif;
-    transition: 0.3s;
-    /* float: left; */
-    color: black;
-    font-size: 18px;
-  }
-  .menuBTN{
-    float: initial;
-    width: 100%;
-    text-align: left;
-  }
-
+ 
   .logotype {
     width: 200px;
     height: 60px;
