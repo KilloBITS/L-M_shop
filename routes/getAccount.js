@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
 
     locale.find().toArray(function (err, resLocale) {
       if (req.isAuthenticated()) {
-        menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+        menu.find().sort({ position: 1 }).toArray(function (err, resMenu) {
           mainslide.find().toArray(function (err, resMainslide) {
             tovar.find().sort({ AI: -1 }).limit(18).toArray(function (err, resTovar) {
               news.find().sort({ AI: -1 }).limit(6).toArray(function (err, resNews) {

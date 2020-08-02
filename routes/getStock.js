@@ -29,7 +29,7 @@ router.get('/*', function (req, res, next) {
     titles_page.find().toArray(function (err, results_titles_page) {
       config.find().toArray(function (err, results_config) {
         if (results_config[0].opens) {
-          menu.find().sort({ isEnded: 1 }).toArray(function (err, results_menu) {
+          menu.find().sort({ position: 1 }).toArray(function (err, results_menu) {
             users_session.find({ email: req.session.user }).toArray(function (err, results_users_session) {
               if (results_users_session.length > 0) {
                 var uSession = results_users_session;

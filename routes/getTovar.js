@@ -56,7 +56,7 @@ router.get('/*', function (req, res, next) {
 
         locale.find().toArray(function (err, resLocale) {
           users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
-            menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+            menu.find().sort({ position: 1 }).toArray(function (err, resMenu) {
               tovar.find(FILTER).sort({ AI: -1 }).skip((counts >= 18) ? doTovar : 0).limit(18).toArray(function (err, resTovar) {
                 config.find().toArray(function (err, resConfig) {
                   manufacturers.find().toArray(function (err, resManufacturers) {

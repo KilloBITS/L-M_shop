@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 
     locale.find().toArray(function (err, resLocale) {
       users.find({ email: (req.session.user === undefined) ? false : req.session.user }).toArray(function (err, resUsers) {
-        menu.find().sort({ isEnded: 1 }).toArray(function (err, resMenu) {
+        menu.find().sort({ position: 1 }).toArray(function (err, resMenu) {
           contacts.find().toArray(function (err, resContacts) {
             config.find().toArray(function (err, resConfig) {
               let languageNumber = global.parseNumLang(req);
